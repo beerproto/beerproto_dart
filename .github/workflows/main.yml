@@ -25,7 +25,7 @@ jobs:
         run: buf generate beerprotoapis --template=buf.gen.dart.yaml
         working-directory: ./proto
       - name: Move beer file
-        run: mv ./proto/gen/proto/dart/* ./
+        run: mv ./proto/gen/proto/dart/beerproto/v1/* ./lib
       - run: rm -R ./proto
       - name: Push
         uses: actions-x/commit@v6
