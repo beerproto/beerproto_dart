@@ -1,5 +1,5 @@
 # beerproto_dart
-Go generated version of the BeerProto spec
+Dart generated version of the BeerProto spec
 
 [![CI](https://github.com/beerproto/beerproto_dart/workflows/CI/badge.svg)](https://github.com/beerproto/beerproto_dart/actions?query=workflow%3ACI)
 
