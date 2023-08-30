@@ -1,5 +1,5 @@
 name: beerproto_dart
-description: A starting point for Dart libraries or applications.
+description: A implementation of the BeerProto Specification in Dart
 version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
