@@ -18,6 +18,128 @@ import 'measureable_units.pbenum.dart';
 
 export 'measureable_units.pbenum.dart';
 
+class ConversionVolumeUnit_ConversionVolumeUnitRate extends $pb.GeneratedMessage {
+  factory ConversionVolumeUnit_ConversionVolumeUnitRate({
+    VolumeUnit? target,
+    ArithmeticOperators? operator,
+    $core.double? value,
+  }) {
+    final $result = create();
+    if (target != null) {
+      $result.target = target;
+    }
+    if (operator != null) {
+      $result.operator = operator;
+    }
+    if (value != null) {
+      $result.value = value;
+    }
+    return $result;
+  }
+  ConversionVolumeUnit_ConversionVolumeUnitRate._() : super();
+  factory ConversionVolumeUnit_ConversionVolumeUnitRate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversionVolumeUnit_ConversionVolumeUnitRate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionVolumeUnit.ConversionVolumeUnitRate', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..e<VolumeUnit>(1, _omitFieldNames ? '' : 'target', $pb.PbFieldType.OE, defaultOrMaker: VolumeUnit.VOLUME_UNIT_UNSPECIFIED, valueOf: VolumeUnit.valueOf, enumValues: VolumeUnit.values)
+    ..e<ArithmeticOperators>(2, _omitFieldNames ? '' : 'operator', $pb.PbFieldType.OE, defaultOrMaker: ArithmeticOperators.ARITHMETIC_OPERATORS_UNSPECIFIED, valueOf: ArithmeticOperators.valueOf, enumValues: ArithmeticOperators.values)
+    ..a<$core.double>(3, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversionVolumeUnit_ConversionVolumeUnitRate clone() => ConversionVolumeUnit_ConversionVolumeUnitRate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversionVolumeUnit_ConversionVolumeUnitRate copyWith(void Function(ConversionVolumeUnit_ConversionVolumeUnitRate) updates) => super.copyWith((message) => updates(message as ConversionVolumeUnit_ConversionVolumeUnitRate)) as ConversionVolumeUnit_ConversionVolumeUnitRate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversionVolumeUnit_ConversionVolumeUnitRate create() => ConversionVolumeUnit_ConversionVolumeUnitRate._();
+  ConversionVolumeUnit_ConversionVolumeUnitRate createEmptyInstance() => create();
+  static $pb.PbList<ConversionVolumeUnit_ConversionVolumeUnitRate> createRepeated() => $pb.PbList<ConversionVolumeUnit_ConversionVolumeUnitRate>();
+  @$core.pragma('dart2js:noInline')
+  static ConversionVolumeUnit_ConversionVolumeUnitRate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversionVolumeUnit_ConversionVolumeUnitRate>(create);
+  static ConversionVolumeUnit_ConversionVolumeUnitRate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  VolumeUnit get target => $_getN(0);
+  @$pb.TagNumber(1)
+  set target(VolumeUnit v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTarget() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTarget() => clearField(1);
+
+  @$pb.TagNumber(2)
+  ArithmeticOperators get operator => $_getN(1);
+  @$pb.TagNumber(2)
+  set operator(ArithmeticOperators v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasOperator() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearOperator() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.double get value => $_getN(2);
+  @$pb.TagNumber(3)
+  set value($core.double v) { $_setDouble(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasValue() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearValue() => clearField(3);
+}
+
+class ConversionVolumeUnit extends $pb.GeneratedMessage {
+  factory ConversionVolumeUnit({
+    $core.Iterable<ConversionVolumeUnit_ConversionVolumeUnitRate>? rates,
+  }) {
+    final $result = create();
+    if (rates != null) {
+      $result.rates.addAll(rates);
+    }
+    return $result;
+  }
+  ConversionVolumeUnit._() : super();
+  factory ConversionVolumeUnit.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversionVolumeUnit.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionVolumeUnit', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..pc<ConversionVolumeUnit_ConversionVolumeUnitRate>(1, _omitFieldNames ? '' : 'rates', $pb.PbFieldType.PM, subBuilder: ConversionVolumeUnit_ConversionVolumeUnitRate.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversionVolumeUnit clone() => ConversionVolumeUnit()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversionVolumeUnit copyWith(void Function(ConversionVolumeUnit) updates) => super.copyWith((message) => updates(message as ConversionVolumeUnit)) as ConversionVolumeUnit;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversionVolumeUnit create() => ConversionVolumeUnit._();
+  ConversionVolumeUnit createEmptyInstance() => create();
+  static $pb.PbList<ConversionVolumeUnit> createRepeated() => $pb.PbList<ConversionVolumeUnit>();
+  @$core.pragma('dart2js:noInline')
+  static ConversionVolumeUnit getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversionVolumeUnit>(create);
+  static ConversionVolumeUnit? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<ConversionVolumeUnit_ConversionVolumeUnitRate> get rates => $_getList(0);
+}
+
 class VolumeType extends $pb.GeneratedMessage {
   factory VolumeType({
     $core.double? value,
@@ -1865,9 +1987,11 @@ class ConcentrationRangeType extends $pb.GeneratedMessage {
 class Measureable_units {
   static final stringName = $pb.Extension<$core.String>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'stringName', 123456789, $pb.PbFieldType.OS);
   static final displayName = $pb.Extension<$core.String>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'displayName', 123456788, $pb.PbFieldType.OS);
+  static final conversionVolumeUnit = $pb.Extension<ConversionVolumeUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionVolumeUnit', 123456787, $pb.PbFieldType.OM, defaultOrMaker: ConversionVolumeUnit.getDefault, subBuilder: ConversionVolumeUnit.create);
   static void registerAllExtensions($pb.ExtensionRegistry registry) {
     registry.add(stringName);
     registry.add(displayName);
+    registry.add(conversionVolumeUnit);
   }
 }
 

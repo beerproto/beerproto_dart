@@ -13,6 +13,27 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class ArithmeticOperators extends $pb.ProtobufEnum {
+  static const ArithmeticOperators ARITHMETIC_OPERATORS_UNSPECIFIED = ArithmeticOperators._(0, _omitEnumNames ? '' : 'ARITHMETIC_OPERATORS_UNSPECIFIED');
+  static const ArithmeticOperators ARITHMETIC_OPERATORS_ADDITION = ArithmeticOperators._(1, _omitEnumNames ? '' : 'ARITHMETIC_OPERATORS_ADDITION');
+  static const ArithmeticOperators ARITHMETIC_OPERATORS_SUBTRACTION = ArithmeticOperators._(2, _omitEnumNames ? '' : 'ARITHMETIC_OPERATORS_SUBTRACTION');
+  static const ArithmeticOperators ARITHMETIC_OPERATORS_MULTIPLICATION = ArithmeticOperators._(3, _omitEnumNames ? '' : 'ARITHMETIC_OPERATORS_MULTIPLICATION');
+  static const ArithmeticOperators ARITHMETIC_OPERATORS_DIVISION = ArithmeticOperators._(4, _omitEnumNames ? '' : 'ARITHMETIC_OPERATORS_DIVISION');
+
+  static const $core.List<ArithmeticOperators> values = <ArithmeticOperators> [
+    ARITHMETIC_OPERATORS_UNSPECIFIED,
+    ARITHMETIC_OPERATORS_ADDITION,
+    ARITHMETIC_OPERATORS_SUBTRACTION,
+    ARITHMETIC_OPERATORS_MULTIPLICATION,
+    ARITHMETIC_OPERATORS_DIVISION,
+  ];
+
+  static final $core.Map<$core.int, ArithmeticOperators> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ArithmeticOperators? valueOf($core.int value) => _byValue[value];
+
+  const ArithmeticOperators._($core.int v, $core.String n) : super(v, n);
+}
+
 class VolumeUnit extends $pb.ProtobufEnum {
   static const VolumeUnit VOLUME_UNIT_UNSPECIFIED = VolumeUnit._(0, _omitEnumNames ? '' : 'VOLUME_UNIT_UNSPECIFIED');
   static const VolumeUnit VOLUME_UNIT_ML = VolumeUnit._(1, _omitEnumNames ? '' : 'VOLUME_UNIT_ML');

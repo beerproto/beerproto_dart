@@ -13,6 +13,25 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use arithmeticOperatorsDescriptor instead')
+const ArithmeticOperators$json = {
+  '1': 'ArithmeticOperators',
+  '2': [
+    {'1': 'ARITHMETIC_OPERATORS_UNSPECIFIED', '2': 0},
+    {'1': 'ARITHMETIC_OPERATORS_ADDITION', '2': 1},
+    {'1': 'ARITHMETIC_OPERATORS_SUBTRACTION', '2': 2},
+    {'1': 'ARITHMETIC_OPERATORS_MULTIPLICATION', '2': 3},
+    {'1': 'ARITHMETIC_OPERATORS_DIVISION', '2': 4},
+  ],
+};
+
+/// Descriptor for `ArithmeticOperators`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List arithmeticOperatorsDescriptor = $convert.base64Decode(
+    'ChNBcml0aG1ldGljT3BlcmF0b3JzEiQKIEFSSVRITUVUSUNfT1BFUkFUT1JTX1VOU1BFQ0lGSU'
+    'VEEAASIQodQVJJVEhNRVRJQ19PUEVSQVRPUlNfQURESVRJT04QARIkCiBBUklUSE1FVElDX09Q'
+    'RVJBVE9SU19TVUJUUkFDVElPThACEicKI0FSSVRITUVUSUNfT1BFUkFUT1JTX01VTFRJUExJQ0'
+    'FUSU9OEAMSIQodQVJJVEhNRVRJQ19PUEVSQVRPUlNfRElWSVNJT04QBA==');
+
 @$core.Deprecated('Use volumeUnitDescriptor instead')
 const VolumeUnit$json = {
   '1': 'VolumeUnit',
@@ -38,19 +57,19 @@ const VolumeUnit$json = {
 
 /// Descriptor for `VolumeUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List volumeUnitDescriptor = $convert.base64Decode(
-    'CgpWb2x1bWVVbml0Ej8KF1ZPTFVNRV9VTklUX1VOU1BFQ0lGSUVEEAAaIqLR+dYDC1VOU1BFQ0'
-    'lGSUVEqtH51gMLVU5TUEVDSUZJRUQSJAoOVk9MVU1FX1VOSVRfTUwQARoQotH51gMCbUyq0fnW'
-    'AwJtbBIhCg1WT0xVTUVfVU5JVF9MEAIaDqLR+dYDAUyq0fnWAwFsEicKD1ZPTFVNRV9VTklUX1'
-    'RTUBADGhKi0fnWAwN0c3Cq0fnWAwN0c3ASKgoQVk9MVU1FX1VOSVRfVEJTUBAEGhSi0fnWAwRU'
-    'YnNwqtH51gMEdGJzcBIrChBWT0xVTUVfVU5JVF9GTE9aEAUaFaLR+dYDBWZsIG96qtH51gMEZm'
-    'xvehInCg9WT0xVTUVfVU5JVF9DVVAQBhoSotH51gMDY3VwqtH51gMDY3VwEiQKDlZPTFVNRV9V'
-    'TklUX1BUEAcaEKLR+dYDAnB0qtH51gMCcHQSJAoOVk9MVU1FX1VOSVRfUVQQCBoQotH51gMCcX'
-    'Sq0fnWAwJxdBInCg9WT0xVTUVfVU5JVF9HQUwQCRoSotH51gMDZ2FsqtH51gMDZ2FsEicKD1ZP'
-    'TFVNRV9VTklUX0JCTBAKGhKi0fnWAwNiYmyq0fnWAwNiYmwSLwoQVk9MVU1FX1VOSVRfSUZPWh'
-    'ALGhmi0fnWAwlpbXAgZmwgb3qq0fnWAwRpZm94EioKD1ZPTFVNRV9VTklUX0lQVBAMGhWi0fnW'
-    'AwZpbXAgcHSq0fnWAwNpcHQSKgoPVk9MVU1FX1VOSVRfSVFUEA0aFaLR+dYDBmltcCBxdKrR+d'
-    'YDA2lxdBItChBWT0xVTUVfVU5JVF9JR0FMEA4aF6LR+dYDB2ltcCBnYWyq0fnWAwRpZ2FsEi0K'
-    'EFZPTFVNRV9VTklUX0lCQkwQDxoXotH51gMHaW1wIGJibKrR+dYDBGliYmw=');
+    'CgpWb2x1bWVVbml0EkkKF1ZPTFVNRV9VTklUX1VOU1BFQ0lGSUVEEAAaLJrR+dYDBAoCCAGi0f'
+    'nWAwtVTlNQRUNJRklFRKrR+dYDC1VOU1BFQ0lGSUVEEiQKDlZPTFVNRV9VTklUX01MEAEaEKLR'
+    '+dYDAm1MqtH51gMCbWwSIQoNVk9MVU1FX1VOSVRfTBACGg6i0fnWAwFMqtH51gMBbBInCg9WT0'
+    'xVTUVfVU5JVF9UU1AQAxoSotH51gMDdHNwqtH51gMDdHNwEioKEFZPTFVNRV9VTklUX1RCU1AQ'
+    'BBoUotH51gMEVGJzcKrR+dYDBHRic3ASKwoQVk9MVU1FX1VOSVRfRkxPWhAFGhWi0fnWAwVmbC'
+    'BveqrR+dYDBGZsb3oSJwoPVk9MVU1FX1VOSVRfQ1VQEAYaEqLR+dYDA2N1cKrR+dYDA2N1cBIk'
+    'Cg5WT0xVTUVfVU5JVF9QVBAHGhCi0fnWAwJwdKrR+dYDAnB0EiQKDlZPTFVNRV9VTklUX1FUEA'
+    'gaEKLR+dYDAnF0qtH51gMCcXQSJwoPVk9MVU1FX1VOSVRfR0FMEAkaEqLR+dYDA2dhbKrR+dYD'
+    'A2dhbBInCg9WT0xVTUVfVU5JVF9CQkwQChoSotH51gMDYmJsqtH51gMDYmJsEi8KEFZPTFVNRV'
+    '9VTklUX0lGT1oQCxoZotH51gMJaW1wIGZsIG96qtH51gMEaWZveBIqCg9WT0xVTUVfVU5JVF9J'
+    'UFQQDBoVotH51gMGaW1wIHB0qtH51gMDaXB0EioKD1ZPTFVNRV9VTklUX0lRVBANGhWi0fnWAw'
+    'ZpbXAgcXSq0fnWAwNpcXQSLQoQVk9MVU1FX1VOSVRfSUdBTBAOGhei0fnWAwdpbXAgZ2FsqtH5'
+    '1gMEaWdhbBItChBWT0xVTUVfVU5JVF9JQkJMEA8aF6LR+dYDB2ltcCBiYmyq0fnWAwRpYmJs');
 
 @$core.Deprecated('Use massUnitDescriptor instead')
 const MassUnit$json = {
@@ -333,6 +352,33 @@ final $typed_data.Uint8List viscosityUnitDescriptor = $convert.base64Decode(
     'VOU1BFQ0lGSUVEqtH51gMLVU5TUEVDSUZJRUQSJwoRVklTQ09TSVRZX1VOSVRfQ1AQARoQotH5'
     '1gMCY1Cq0fnWAwJjUBIvChNWSVNDT1NJVFlfVU5JVF9NUEFTEAIaFqLR+dYDBW1QYS1zqtH51g'
     'MFbVBhLXM=');
+
+@$core.Deprecated('Use conversionVolumeUnitDescriptor instead')
+const ConversionVolumeUnit$json = {
+  '1': 'ConversionVolumeUnit',
+  '2': [
+    {'1': 'rates', '3': 1, '4': 3, '5': 11, '6': '.beerproto.v1.ConversionVolumeUnit.ConversionVolumeUnitRate', '10': 'rates'},
+  ],
+  '3': [ConversionVolumeUnit_ConversionVolumeUnitRate$json],
+};
+
+@$core.Deprecated('Use conversionVolumeUnitDescriptor instead')
+const ConversionVolumeUnit_ConversionVolumeUnitRate$json = {
+  '1': 'ConversionVolumeUnitRate',
+  '2': [
+    {'1': 'target', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.VolumeUnit', '10': 'target'},
+    {'1': 'operator', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.ArithmeticOperators', '10': 'operator'},
+    {'1': 'value', '3': 3, '4': 1, '5': 1, '10': 'value'},
+  ],
+};
+
+/// Descriptor for `ConversionVolumeUnit`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List conversionVolumeUnitDescriptor = $convert.base64Decode(
+    'ChRDb252ZXJzaW9uVm9sdW1lVW5pdBJRCgVyYXRlcxgBIAMoCzI7LmJlZXJwcm90by52MS5Db2'
+    '52ZXJzaW9uVm9sdW1lVW5pdC5Db252ZXJzaW9uVm9sdW1lVW5pdFJhdGVSBXJhdGVzGqEBChhD'
+    'b252ZXJzaW9uVm9sdW1lVW5pdFJhdGUSMAoGdGFyZ2V0GAEgASgOMhguYmVlcnByb3RvLnYxLl'
+    'ZvbHVtZVVuaXRSBnRhcmdldBI9CghvcGVyYXRvchgCIAEoDjIhLmJlZXJwcm90by52MS5Bcml0'
+    'aG1ldGljT3BlcmF0b3JzUghvcGVyYXRvchIUCgV2YWx1ZRgDIAEoAVIFdmFsdWU=');
 
 @$core.Deprecated('Use volumeTypeDescriptor instead')
 const VolumeType$json = {
