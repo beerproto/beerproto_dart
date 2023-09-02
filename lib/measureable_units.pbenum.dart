@@ -46,7 +46,7 @@ class VolumeUnit extends $pb.ProtobufEnum {
   static const VolumeUnit VOLUME_UNIT_QT = VolumeUnit._(8, _omitEnumNames ? '' : 'VOLUME_UNIT_QT');
   static const VolumeUnit VOLUME_UNIT_GAL = VolumeUnit._(9, _omitEnumNames ? '' : 'VOLUME_UNIT_GAL');
   static const VolumeUnit VOLUME_UNIT_BBL = VolumeUnit._(10, _omitEnumNames ? '' : 'VOLUME_UNIT_BBL');
-  static const VolumeUnit VOLUME_UNIT_IFOZ = VolumeUnit._(11, _omitEnumNames ? '' : 'VOLUME_UNIT_IFOZ');
+  static const VolumeUnit VOLUME_UNIT_IFLOZ = VolumeUnit._(11, _omitEnumNames ? '' : 'VOLUME_UNIT_IFLOZ');
   static const VolumeUnit VOLUME_UNIT_IPT = VolumeUnit._(12, _omitEnumNames ? '' : 'VOLUME_UNIT_IPT');
   static const VolumeUnit VOLUME_UNIT_IQT = VolumeUnit._(13, _omitEnumNames ? '' : 'VOLUME_UNIT_IQT');
   static const VolumeUnit VOLUME_UNIT_IGAL = VolumeUnit._(14, _omitEnumNames ? '' : 'VOLUME_UNIT_IGAL');
@@ -64,7 +64,7 @@ class VolumeUnit extends $pb.ProtobufEnum {
     VOLUME_UNIT_QT,
     VOLUME_UNIT_GAL,
     VOLUME_UNIT_BBL,
-    VOLUME_UNIT_IFOZ,
+    VOLUME_UNIT_IFLOZ,
     VOLUME_UNIT_IPT,
     VOLUME_UNIT_IQT,
     VOLUME_UNIT_IGAL,
