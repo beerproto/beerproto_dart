@@ -147,11 +147,18 @@ const MassUnit$json = {
 
 /// Descriptor for `MassUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List massUnitDescriptor = $convert.base64Decode(
-    'CghNYXNzVW5pdBI9ChVNQVNTX1VOSVRfVU5TUEVDSUZJRUQQABoiotH51gMLVU5TUEVDSUZJRU'
-    'Sq0fnWAwtVTlNQRUNJRklFRBIiCgxNQVNTX1VOSVRfTUcQARoQotH51gMCbWeq0fnWAwJtZxIf'
-    'CgtNQVNTX1VOSVRfRxACGg6i0fnWAwFnqtH51gMBZxIiCgxNQVNTX1VOSVRfS0cQAxoQotH51g'
-    'MCa2eq0fnWAwJrZxIiCgxNQVNTX1VOSVRfTEIQBBoQotH51gMCbGKq0fnWAwJsYhIiCgxNQVNT'
-    'X1VOSVRfT1oQBRoQotH51gMCb3qq0fnWAwJveg==');
+    'CghNYXNzVW5pdBJFChVNQVNTX1VOSVRfVU5TUEVDSUZJRUQQABoqktH51gMCCgCi0fnWAwtVTl'
+    'NQRUNJRklFRKrR+dYDC1VOU1BFQ0lGSUVEEmoKDE1BU1NfVU5JVF9NRxABGliS0fnWA0IKBAgB'
+    'EAMKDQgCEAQZAAAAAABAj0AKDQgDEAQZAAAAAICELkEKDQgEEAQZAAAAAGCvG0EKDQgFEAQZAA'
+    'AAAGCv20Ci0fnWAwJtZ6rR+dYDAm1nEmcKC01BU1NfVU5JVF9HEAIaVpLR+dYDQgoNCAEQAxkA'
+    'AAAAAECPQAoECAIQAwoNCAMQBBkAAAAAAECPQAoNCAQQBBm28/3UeFl8QAoNCAUQBBm28/3UeF'
+    'k8QKLR+dYDAWeq0fnWAwFnEmoKDE1BU1NfVU5JVF9LRxADGliS0fnWA0IKDQgBEAMZje21oPfG'
+    'sD4KDQgCEAMZAAAAAABAj0AKBAgDEAMKDQgEEAMZM9yAzw+jAUAKDQgFEAMZUI2XbhKjQUCi0f'
+    'nWAwJrZ6rR+dYDAmtnEmoKDE1BU1NfVU5JVF9MQhAEGliS0fnWA0IKDQgBEAMZAAAAAGCvG0EK'
+    'DQgCEAMZtvP91HhZfEAKDQgDEAQZM9yAzw+jAUAKBAgEEAMKDQgFEAMZAAAAAAAAMECi0fnWAw'
+    'JsYqrR+dYDAmxiEmoKDE1BU1NfVU5JVF9PWhAFGliS0fnWA0IKDQgBEAMZAAAAAGCv20AKDQgC'
+    'EAMZtvP91HhZPEAKDQgDEAQZUI2XbhKjQUAKDQgEEAQZAAAAAAAAMEAKBAgFEAOi0fnWAwJveq'
+    'rR+dYDAm96');
 
 @$core.Deprecated('Use diastaticPowerUnitDescriptor instead')
 const DiastaticPowerUnit$json = {
@@ -468,6 +475,33 @@ const MassType$json = {
 final $typed_data.Uint8List massTypeDescriptor = $convert.base64Decode(
     'CghNYXNzVHlwZRIUCgV2YWx1ZRgBIAEoAVIFdmFsdWUSKgoEdW5pdBgCIAEoDjIWLmJlZXJwcm'
     '90by52MS5NYXNzVW5pdFIEdW5pdA==');
+
+@$core.Deprecated('Use conversionMassUnitDescriptor instead')
+const ConversionMassUnit$json = {
+  '1': 'ConversionMassUnit',
+  '2': [
+    {'1': 'rates', '3': 1, '4': 3, '5': 11, '6': '.beerproto.v1.ConversionMassUnit.ConversionMassUnitRate', '10': 'rates'},
+  ],
+  '3': [ConversionMassUnit_ConversionMassUnitRate$json],
+};
+
+@$core.Deprecated('Use conversionMassUnitDescriptor instead')
+const ConversionMassUnit_ConversionMassUnitRate$json = {
+  '1': 'ConversionMassUnitRate',
+  '2': [
+    {'1': 'target', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.MassUnit', '10': 'target'},
+    {'1': 'operator', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.ArithmeticOperators', '10': 'operator'},
+    {'1': 'value', '3': 3, '4': 1, '5': 1, '10': 'value'},
+  ],
+};
+
+/// Descriptor for `ConversionMassUnit`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List conversionMassUnitDescriptor = $convert.base64Decode(
+    'ChJDb252ZXJzaW9uTWFzc1VuaXQSTQoFcmF0ZXMYASADKAsyNy5iZWVycHJvdG8udjEuQ29udm'
+    'Vyc2lvbk1hc3NVbml0LkNvbnZlcnNpb25NYXNzVW5pdFJhdGVSBXJhdGVzGp0BChZDb252ZXJz'
+    'aW9uTWFzc1VuaXRSYXRlEi4KBnRhcmdldBgBIAEoDjIWLmJlZXJwcm90by52MS5NYXNzVW5pdF'
+    'IGdGFyZ2V0Ej0KCG9wZXJhdG9yGAIgASgOMiEuYmVlcnByb3RvLnYxLkFyaXRobWV0aWNPcGVy'
+    'YXRvcnNSCG9wZXJhdG9yEhQKBXZhbHVlGAMgASgBUgV2YWx1ZQ==');
 
 @$core.Deprecated('Use diastaticPowerTypeDescriptor instead')
 const DiastaticPowerType$json = {
