@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'measureable_units.pb.dart' as $0;
-import 'packaging_graphic.pb.dart' as $4;
+import 'measureable_units.pb.dart' as $1;
+import 'packaging_graphic.pb.dart' as $5;
 import 'packaging_vessel.pbenum.dart';
 
 export 'packaging_vessel.pbenum.dart';
@@ -24,20 +24,20 @@ class PackagingVesselType extends $pb.GeneratedMessage {
   factory PackagingVesselType({
     $core.String? id,
     PackagingVesselUnit? type,
-    $0.GravityType? startGravity,
+    $1.GravityType? startGravity,
     $core.String? name,
     $core.String? packageDate,
-    $0.TimeType? stepTime,
-    $0.GravityType? endGravity,
-    $0.VolumeType? vesselVolume,
+    $1.TimeType? stepTime,
+    $1.GravityType? endGravity,
+    $1.VolumeType? vesselVolume,
     $core.double? vesselQuantity,
     $core.String? description,
-    $0.AcidityType? startPh,
+    $1.AcidityType? startPh,
     $core.double? carbonation,
-    $0.TemperatureType? startTemperature,
-    $0.AcidityType? endPh,
-    $0.TemperatureType? endTemperature,
-    $core.Iterable<$4.PackagingGraphicType>? graphics,
+    $1.TemperatureType? startTemperature,
+    $1.AcidityType? endPh,
+    $1.TemperatureType? endTemperature,
+    $core.Iterable<$5.PackagingGraphicType>? graphics,
   }) {
     final $result = create();
     if (id != null) {
@@ -97,20 +97,20 @@ class PackagingVesselType extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PackagingVesselType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..e<PackagingVesselUnit>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: PackagingVesselUnit.PACKAGING_VESSEL_UNIT_UNSPECIFIED, valueOf: PackagingVesselUnit.valueOf, enumValues: PackagingVesselUnit.values)
-    ..aOM<$0.GravityType>(3, _omitFieldNames ? '' : 'startGravity', subBuilder: $0.GravityType.create)
+    ..aOM<$1.GravityType>(3, _omitFieldNames ? '' : 'startGravity', subBuilder: $1.GravityType.create)
     ..aOS(4, _omitFieldNames ? '' : 'name')
     ..aOS(5, _omitFieldNames ? '' : 'packageDate')
-    ..aOM<$0.TimeType>(6, _omitFieldNames ? '' : 'stepTime', subBuilder: $0.TimeType.create)
-    ..aOM<$0.GravityType>(7, _omitFieldNames ? '' : 'endGravity', subBuilder: $0.GravityType.create)
-    ..aOM<$0.VolumeType>(8, _omitFieldNames ? '' : 'vesselVolume', subBuilder: $0.VolumeType.create)
+    ..aOM<$1.TimeType>(6, _omitFieldNames ? '' : 'stepTime', subBuilder: $1.TimeType.create)
+    ..aOM<$1.GravityType>(7, _omitFieldNames ? '' : 'endGravity', subBuilder: $1.GravityType.create)
+    ..aOM<$1.VolumeType>(8, _omitFieldNames ? '' : 'vesselVolume', subBuilder: $1.VolumeType.create)
     ..a<$core.double>(9, _omitFieldNames ? '' : 'vesselQuantity', $pb.PbFieldType.OD)
     ..aOS(10, _omitFieldNames ? '' : 'description')
-    ..aOM<$0.AcidityType>(11, _omitFieldNames ? '' : 'startPh', subBuilder: $0.AcidityType.create)
+    ..aOM<$1.AcidityType>(11, _omitFieldNames ? '' : 'startPh', subBuilder: $1.AcidityType.create)
     ..a<$core.double>(12, _omitFieldNames ? '' : 'carbonation', $pb.PbFieldType.OD)
-    ..aOM<$0.TemperatureType>(13, _omitFieldNames ? '' : 'startTemperature', subBuilder: $0.TemperatureType.create)
-    ..aOM<$0.AcidityType>(14, _omitFieldNames ? '' : 'endPh', subBuilder: $0.AcidityType.create)
-    ..aOM<$0.TemperatureType>(15, _omitFieldNames ? '' : 'endTemperature', subBuilder: $0.TemperatureType.create)
-    ..pc<$4.PackagingGraphicType>(16, _omitFieldNames ? '' : 'graphics', $pb.PbFieldType.PM, subBuilder: $4.PackagingGraphicType.create)
+    ..aOM<$1.TemperatureType>(13, _omitFieldNames ? '' : 'startTemperature', subBuilder: $1.TemperatureType.create)
+    ..aOM<$1.AcidityType>(14, _omitFieldNames ? '' : 'endPh', subBuilder: $1.AcidityType.create)
+    ..aOM<$1.TemperatureType>(15, _omitFieldNames ? '' : 'endTemperature', subBuilder: $1.TemperatureType.create)
+    ..pc<$5.PackagingGraphicType>(16, _omitFieldNames ? '' : 'graphics', $pb.PbFieldType.PM, subBuilder: $5.PackagingGraphicType.create)
     ..hasRequiredFields = false
   ;
 
@@ -154,15 +154,15 @@ class PackagingVesselType extends $pb.GeneratedMessage {
   void clearType() => clearField(2);
 
   @$pb.TagNumber(3)
-  $0.GravityType get startGravity => $_getN(2);
+  $1.GravityType get startGravity => $_getN(2);
   @$pb.TagNumber(3)
-  set startGravity($0.GravityType v) { setField(3, v); }
+  set startGravity($1.GravityType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStartGravity() => $_has(2);
   @$pb.TagNumber(3)
   void clearStartGravity() => clearField(3);
   @$pb.TagNumber(3)
-  $0.GravityType ensureStartGravity() => $_ensure(2);
+  $1.GravityType ensureStartGravity() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.String get name => $_getSZ(3);
@@ -183,37 +183,37 @@ class PackagingVesselType extends $pb.GeneratedMessage {
   void clearPackageDate() => clearField(5);
 
   @$pb.TagNumber(6)
-  $0.TimeType get stepTime => $_getN(5);
+  $1.TimeType get stepTime => $_getN(5);
   @$pb.TagNumber(6)
-  set stepTime($0.TimeType v) { setField(6, v); }
+  set stepTime($1.TimeType v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasStepTime() => $_has(5);
   @$pb.TagNumber(6)
   void clearStepTime() => clearField(6);
   @$pb.TagNumber(6)
-  $0.TimeType ensureStepTime() => $_ensure(5);
+  $1.TimeType ensureStepTime() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $0.GravityType get endGravity => $_getN(6);
+  $1.GravityType get endGravity => $_getN(6);
   @$pb.TagNumber(7)
-  set endGravity($0.GravityType v) { setField(7, v); }
+  set endGravity($1.GravityType v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasEndGravity() => $_has(6);
   @$pb.TagNumber(7)
   void clearEndGravity() => clearField(7);
   @$pb.TagNumber(7)
-  $0.GravityType ensureEndGravity() => $_ensure(6);
+  $1.GravityType ensureEndGravity() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $0.VolumeType get vesselVolume => $_getN(7);
+  $1.VolumeType get vesselVolume => $_getN(7);
   @$pb.TagNumber(8)
-  set vesselVolume($0.VolumeType v) { setField(8, v); }
+  set vesselVolume($1.VolumeType v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasVesselVolume() => $_has(7);
   @$pb.TagNumber(8)
   void clearVesselVolume() => clearField(8);
   @$pb.TagNumber(8)
-  $0.VolumeType ensureVesselVolume() => $_ensure(7);
+  $1.VolumeType ensureVesselVolume() => $_ensure(7);
 
   @$pb.TagNumber(9)
   $core.double get vesselQuantity => $_getN(8);
@@ -234,15 +234,15 @@ class PackagingVesselType extends $pb.GeneratedMessage {
   void clearDescription() => clearField(10);
 
   @$pb.TagNumber(11)
-  $0.AcidityType get startPh => $_getN(10);
+  $1.AcidityType get startPh => $_getN(10);
   @$pb.TagNumber(11)
-  set startPh($0.AcidityType v) { setField(11, v); }
+  set startPh($1.AcidityType v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasStartPh() => $_has(10);
   @$pb.TagNumber(11)
   void clearStartPh() => clearField(11);
   @$pb.TagNumber(11)
-  $0.AcidityType ensureStartPh() => $_ensure(10);
+  $1.AcidityType ensureStartPh() => $_ensure(10);
 
   @$pb.TagNumber(12)
   $core.double get carbonation => $_getN(11);
@@ -254,40 +254,40 @@ class PackagingVesselType extends $pb.GeneratedMessage {
   void clearCarbonation() => clearField(12);
 
   @$pb.TagNumber(13)
-  $0.TemperatureType get startTemperature => $_getN(12);
+  $1.TemperatureType get startTemperature => $_getN(12);
   @$pb.TagNumber(13)
-  set startTemperature($0.TemperatureType v) { setField(13, v); }
+  set startTemperature($1.TemperatureType v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasStartTemperature() => $_has(12);
   @$pb.TagNumber(13)
   void clearStartTemperature() => clearField(13);
   @$pb.TagNumber(13)
-  $0.TemperatureType ensureStartTemperature() => $_ensure(12);
+  $1.TemperatureType ensureStartTemperature() => $_ensure(12);
 
   @$pb.TagNumber(14)
-  $0.AcidityType get endPh => $_getN(13);
+  $1.AcidityType get endPh => $_getN(13);
   @$pb.TagNumber(14)
-  set endPh($0.AcidityType v) { setField(14, v); }
+  set endPh($1.AcidityType v) { setField(14, v); }
   @$pb.TagNumber(14)
   $core.bool hasEndPh() => $_has(13);
   @$pb.TagNumber(14)
   void clearEndPh() => clearField(14);
   @$pb.TagNumber(14)
-  $0.AcidityType ensureEndPh() => $_ensure(13);
+  $1.AcidityType ensureEndPh() => $_ensure(13);
 
   @$pb.TagNumber(15)
-  $0.TemperatureType get endTemperature => $_getN(14);
+  $1.TemperatureType get endTemperature => $_getN(14);
   @$pb.TagNumber(15)
-  set endTemperature($0.TemperatureType v) { setField(15, v); }
+  set endTemperature($1.TemperatureType v) { setField(15, v); }
   @$pb.TagNumber(15)
   $core.bool hasEndTemperature() => $_has(14);
   @$pb.TagNumber(15)
   void clearEndTemperature() => clearField(15);
   @$pb.TagNumber(15)
-  $0.TemperatureType ensureEndTemperature() => $_ensure(14);
+  $1.TemperatureType ensureEndTemperature() => $_ensure(14);
 
   @$pb.TagNumber(16)
-  $core.List<$4.PackagingGraphicType> get graphics => $_getList(15);
+  $core.List<$5.PackagingGraphicType> get graphics => $_getList(15);
 }
 
 

@@ -13,9 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'measureable_units.pb.dart' as $0;
+import 'measureable_units.pb.dart' as $1;
 import 'misc.pbenum.dart';
-import 'timing.pb.dart' as $3;
+import 'timing.pb.dart' as $4;
 
 export 'misc.pbenum.dart';
 
@@ -184,12 +184,12 @@ class MiscellaneousAdditionType extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? name,
     $core.String? producer,
-    $3.TimingType? timing,
+    $4.TimingType? timing,
     $core.String? productId,
     MiscellaneousBaseType? type,
-    $0.MassType? mass,
-    $0.UnitType? unit,
-    $0.VolumeType? volume,
+    $1.MassType? mass,
+    $1.UnitType? unit,
+    $1.VolumeType? volume,
   }) {
     final $result = create();
     if (id != null) {
@@ -236,12 +236,12 @@ class MiscellaneousAdditionType extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'name')
     ..aOS(3, _omitFieldNames ? '' : 'producer')
-    ..aOM<$3.TimingType>(4, _omitFieldNames ? '' : 'timing', subBuilder: $3.TimingType.create)
+    ..aOM<$4.TimingType>(4, _omitFieldNames ? '' : 'timing', subBuilder: $4.TimingType.create)
     ..aOS(5, _omitFieldNames ? '' : 'productId')
     ..e<MiscellaneousBaseType>(6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: MiscellaneousBaseType.MISCELLANEOUS_BASE_TYPE_UNSPECIFIED, valueOf: MiscellaneousBaseType.valueOf, enumValues: MiscellaneousBaseType.values)
-    ..aOM<$0.MassType>(7, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
-    ..aOM<$0.UnitType>(8, _omitFieldNames ? '' : 'unit', subBuilder: $0.UnitType.create)
-    ..aOM<$0.VolumeType>(9, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
+    ..aOM<$1.MassType>(7, _omitFieldNames ? '' : 'mass', subBuilder: $1.MassType.create)
+    ..aOM<$1.UnitType>(8, _omitFieldNames ? '' : 'unit', subBuilder: $1.UnitType.create)
+    ..aOM<$1.VolumeType>(9, _omitFieldNames ? '' : 'volume', subBuilder: $1.VolumeType.create)
     ..hasRequiredFields = false
   ;
 
@@ -298,15 +298,15 @@ class MiscellaneousAdditionType extends $pb.GeneratedMessage {
 
   /// The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.
   @$pb.TagNumber(4)
-  $3.TimingType get timing => $_getN(3);
+  $4.TimingType get timing => $_getN(3);
   @$pb.TagNumber(4)
-  set timing($3.TimingType v) { setField(4, v); }
+  set timing($4.TimingType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasTiming() => $_has(3);
   @$pb.TagNumber(4)
   void clearTiming() => clearField(4);
   @$pb.TagNumber(4)
-  $3.TimingType ensureTiming() => $_ensure(3);
+  $4.TimingType ensureTiming() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $core.String get productId => $_getSZ(4);
@@ -327,37 +327,37 @@ class MiscellaneousAdditionType extends $pb.GeneratedMessage {
   void clearType() => clearField(6);
 
   @$pb.TagNumber(7)
-  $0.MassType get mass => $_getN(6);
+  $1.MassType get mass => $_getN(6);
   @$pb.TagNumber(7)
-  set mass($0.MassType v) { setField(7, v); }
+  set mass($1.MassType v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasMass() => $_has(6);
   @$pb.TagNumber(7)
   void clearMass() => clearField(7);
   @$pb.TagNumber(7)
-  $0.MassType ensureMass() => $_ensure(6);
+  $1.MassType ensureMass() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $0.UnitType get unit => $_getN(7);
+  $1.UnitType get unit => $_getN(7);
   @$pb.TagNumber(8)
-  set unit($0.UnitType v) { setField(8, v); }
+  set unit($1.UnitType v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasUnit() => $_has(7);
   @$pb.TagNumber(8)
   void clearUnit() => clearField(8);
   @$pb.TagNumber(8)
-  $0.UnitType ensureUnit() => $_ensure(7);
+  $1.UnitType ensureUnit() => $_ensure(7);
 
   @$pb.TagNumber(9)
-  $0.VolumeType get volume => $_getN(8);
+  $1.VolumeType get volume => $_getN(8);
   @$pb.TagNumber(9)
-  set volume($0.VolumeType v) { setField(9, v); }
+  set volume($1.VolumeType v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasVolume() => $_has(8);
   @$pb.TagNumber(9)
   void clearVolume() => clearField(9);
   @$pb.TagNumber(9)
-  $0.VolumeType ensureVolume() => $_ensure(8);
+  $1.VolumeType ensureVolume() => $_ensure(8);
 }
 
 enum MiscellaneousInventoryType_Amount {
@@ -369,9 +369,9 @@ enum MiscellaneousInventoryType_Amount {
 
 class MiscellaneousInventoryType extends $pb.GeneratedMessage {
   factory MiscellaneousInventoryType({
-    $0.MassType? mass,
-    $0.UnitType? unit,
-    $0.VolumeType? volume,
+    $1.MassType? mass,
+    $1.UnitType? unit,
+    $1.VolumeType? volume,
   }) {
     final $result = create();
     if (mass != null) {
@@ -397,9 +397,9 @@ class MiscellaneousInventoryType extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MiscellaneousInventoryType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..aOM<$0.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
-    ..aOM<$0.UnitType>(2, _omitFieldNames ? '' : 'unit', subBuilder: $0.UnitType.create)
-    ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
+    ..aOM<$1.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $1.MassType.create)
+    ..aOM<$1.UnitType>(2, _omitFieldNames ? '' : 'unit', subBuilder: $1.UnitType.create)
+    ..aOM<$1.VolumeType>(3, _omitFieldNames ? '' : 'volume', subBuilder: $1.VolumeType.create)
     ..hasRequiredFields = false
   ;
 
@@ -428,37 +428,37 @@ class MiscellaneousInventoryType extends $pb.GeneratedMessage {
   void clearAmount() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $0.MassType get mass => $_getN(0);
+  $1.MassType get mass => $_getN(0);
   @$pb.TagNumber(1)
-  set mass($0.MassType v) { setField(1, v); }
+  set mass($1.MassType v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMass() => $_has(0);
   @$pb.TagNumber(1)
   void clearMass() => clearField(1);
   @$pb.TagNumber(1)
-  $0.MassType ensureMass() => $_ensure(0);
+  $1.MassType ensureMass() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $0.UnitType get unit => $_getN(1);
+  $1.UnitType get unit => $_getN(1);
   @$pb.TagNumber(2)
-  set unit($0.UnitType v) { setField(2, v); }
+  set unit($1.UnitType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasUnit() => $_has(1);
   @$pb.TagNumber(2)
   void clearUnit() => clearField(2);
   @$pb.TagNumber(2)
-  $0.UnitType ensureUnit() => $_ensure(1);
+  $1.UnitType ensureUnit() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $0.VolumeType get volume => $_getN(2);
+  $1.VolumeType get volume => $_getN(2);
   @$pb.TagNumber(3)
-  set volume($0.VolumeType v) { setField(3, v); }
+  set volume($1.VolumeType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasVolume() => $_has(2);
   @$pb.TagNumber(3)
   void clearVolume() => clearField(3);
   @$pb.TagNumber(3)
-  $0.VolumeType ensureVolume() => $_ensure(2);
+  $1.VolumeType ensureVolume() => $_ensure(2);
 }
 
 

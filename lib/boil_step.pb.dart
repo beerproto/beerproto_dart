@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'boil_step.pbenum.dart';
-import 'measureable_units.pb.dart' as $0;
+import 'measureable_units.pb.dart' as $1;
 
 export 'boil_step.pbenum.dart';
 
@@ -22,17 +22,17 @@ export 'boil_step.pbenum.dart';
 class BoilStepType extends $pb.GeneratedMessage {
   factory BoilStepType({
     $core.String? id,
-    $0.GravityType? endGravity,
+    $1.GravityType? endGravity,
     BoilStepTypeChillingType? chillingType,
     $core.String? description,
-    $0.TemperatureType? endTemperature,
-    $0.TimeType? rampTime,
-    $0.TimeType? stepTime,
-    $0.GravityType? startGravity,
-    $0.AcidityType? startPh,
-    $0.AcidityType? endPh,
+    $1.TemperatureType? endTemperature,
+    $1.TimeType? rampTime,
+    $1.TimeType? stepTime,
+    $1.GravityType? startGravity,
+    $1.AcidityType? startPh,
+    $1.AcidityType? endPh,
     $core.String? name,
-    $0.TemperatureType? startTemperature,
+    $1.TemperatureType? startTemperature,
   }) {
     final $result = create();
     if (id != null) {
@@ -79,17 +79,17 @@ class BoilStepType extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BoilStepType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.GravityType>(2, _omitFieldNames ? '' : 'endGravity', subBuilder: $0.GravityType.create)
+    ..aOM<$1.GravityType>(2, _omitFieldNames ? '' : 'endGravity', subBuilder: $1.GravityType.create)
     ..e<BoilStepTypeChillingType>(3, _omitFieldNames ? '' : 'chillingType', $pb.PbFieldType.OE, defaultOrMaker: BoilStepTypeChillingType.BOIL_STEP_TYPE_CHILLING_TYPE_UNSPECIFIED, valueOf: BoilStepTypeChillingType.valueOf, enumValues: BoilStepTypeChillingType.values)
     ..aOS(4, _omitFieldNames ? '' : 'description')
-    ..aOM<$0.TemperatureType>(5, _omitFieldNames ? '' : 'endTemperature', subBuilder: $0.TemperatureType.create)
-    ..aOM<$0.TimeType>(6, _omitFieldNames ? '' : 'rampTime', subBuilder: $0.TimeType.create)
-    ..aOM<$0.TimeType>(7, _omitFieldNames ? '' : 'stepTime', subBuilder: $0.TimeType.create)
-    ..aOM<$0.GravityType>(8, _omitFieldNames ? '' : 'startGravity', subBuilder: $0.GravityType.create)
-    ..aOM<$0.AcidityType>(9, _omitFieldNames ? '' : 'startPh', subBuilder: $0.AcidityType.create)
-    ..aOM<$0.AcidityType>(10, _omitFieldNames ? '' : 'endPh', subBuilder: $0.AcidityType.create)
+    ..aOM<$1.TemperatureType>(5, _omitFieldNames ? '' : 'endTemperature', subBuilder: $1.TemperatureType.create)
+    ..aOM<$1.TimeType>(6, _omitFieldNames ? '' : 'rampTime', subBuilder: $1.TimeType.create)
+    ..aOM<$1.TimeType>(7, _omitFieldNames ? '' : 'stepTime', subBuilder: $1.TimeType.create)
+    ..aOM<$1.GravityType>(8, _omitFieldNames ? '' : 'startGravity', subBuilder: $1.GravityType.create)
+    ..aOM<$1.AcidityType>(9, _omitFieldNames ? '' : 'startPh', subBuilder: $1.AcidityType.create)
+    ..aOM<$1.AcidityType>(10, _omitFieldNames ? '' : 'endPh', subBuilder: $1.AcidityType.create)
     ..aOS(11, _omitFieldNames ? '' : 'name')
-    ..aOM<$0.TemperatureType>(12, _omitFieldNames ? '' : 'startTemperature', subBuilder: $0.TemperatureType.create)
+    ..aOM<$1.TemperatureType>(12, _omitFieldNames ? '' : 'startTemperature', subBuilder: $1.TemperatureType.create)
     ..hasRequiredFields = false
   ;
 
@@ -124,15 +124,15 @@ class BoilStepType extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $0.GravityType get endGravity => $_getN(1);
+  $1.GravityType get endGravity => $_getN(1);
   @$pb.TagNumber(2)
-  set endGravity($0.GravityType v) { setField(2, v); }
+  set endGravity($1.GravityType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasEndGravity() => $_has(1);
   @$pb.TagNumber(2)
   void clearEndGravity() => clearField(2);
   @$pb.TagNumber(2)
-  $0.GravityType ensureEndGravity() => $_ensure(1);
+  $1.GravityType ensureEndGravity() => $_ensure(1);
 
   @$pb.TagNumber(3)
   BoilStepTypeChillingType get chillingType => $_getN(2);
@@ -153,71 +153,71 @@ class BoilStepType extends $pb.GeneratedMessage {
   void clearDescription() => clearField(4);
 
   @$pb.TagNumber(5)
-  $0.TemperatureType get endTemperature => $_getN(4);
+  $1.TemperatureType get endTemperature => $_getN(4);
   @$pb.TagNumber(5)
-  set endTemperature($0.TemperatureType v) { setField(5, v); }
+  set endTemperature($1.TemperatureType v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasEndTemperature() => $_has(4);
   @$pb.TagNumber(5)
   void clearEndTemperature() => clearField(5);
   @$pb.TagNumber(5)
-  $0.TemperatureType ensureEndTemperature() => $_ensure(4);
+  $1.TemperatureType ensureEndTemperature() => $_ensure(4);
 
   /// The amount of time that passes before this step begins. eg moving from a boiling step (step 1) to a whirlpool step (step 2) may take 5 minutes. Step 2 would have a ramp time of 5 minutes, hop isomerization and bitterness calculations will need to account for this accordingly.
   @$pb.TagNumber(6)
-  $0.TimeType get rampTime => $_getN(5);
+  $1.TimeType get rampTime => $_getN(5);
   @$pb.TagNumber(6)
-  set rampTime($0.TimeType v) { setField(6, v); }
+  set rampTime($1.TimeType v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasRampTime() => $_has(5);
   @$pb.TagNumber(6)
   void clearRampTime() => clearField(6);
   @$pb.TagNumber(6)
-  $0.TimeType ensureRampTime() => $_ensure(5);
+  $1.TimeType ensureRampTime() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $0.TimeType get stepTime => $_getN(6);
+  $1.TimeType get stepTime => $_getN(6);
   @$pb.TagNumber(7)
-  set stepTime($0.TimeType v) { setField(7, v); }
+  set stepTime($1.TimeType v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasStepTime() => $_has(6);
   @$pb.TagNumber(7)
   void clearStepTime() => clearField(7);
   @$pb.TagNumber(7)
-  $0.TimeType ensureStepTime() => $_ensure(6);
+  $1.TimeType ensureStepTime() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $0.GravityType get startGravity => $_getN(7);
+  $1.GravityType get startGravity => $_getN(7);
   @$pb.TagNumber(8)
-  set startGravity($0.GravityType v) { setField(8, v); }
+  set startGravity($1.GravityType v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasStartGravity() => $_has(7);
   @$pb.TagNumber(8)
   void clearStartGravity() => clearField(8);
   @$pb.TagNumber(8)
-  $0.GravityType ensureStartGravity() => $_ensure(7);
+  $1.GravityType ensureStartGravity() => $_ensure(7);
 
   @$pb.TagNumber(9)
-  $0.AcidityType get startPh => $_getN(8);
+  $1.AcidityType get startPh => $_getN(8);
   @$pb.TagNumber(9)
-  set startPh($0.AcidityType v) { setField(9, v); }
+  set startPh($1.AcidityType v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasStartPh() => $_has(8);
   @$pb.TagNumber(9)
   void clearStartPh() => clearField(9);
   @$pb.TagNumber(9)
-  $0.AcidityType ensureStartPh() => $_ensure(8);
+  $1.AcidityType ensureStartPh() => $_ensure(8);
 
   @$pb.TagNumber(10)
-  $0.AcidityType get endPh => $_getN(9);
+  $1.AcidityType get endPh => $_getN(9);
   @$pb.TagNumber(10)
-  set endPh($0.AcidityType v) { setField(10, v); }
+  set endPh($1.AcidityType v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasEndPh() => $_has(9);
   @$pb.TagNumber(10)
   void clearEndPh() => clearField(10);
   @$pb.TagNumber(10)
-  $0.AcidityType ensureEndPh() => $_ensure(9);
+  $1.AcidityType ensureEndPh() => $_ensure(9);
 
   @$pb.TagNumber(11)
   $core.String get name => $_getSZ(10);
@@ -229,15 +229,15 @@ class BoilStepType extends $pb.GeneratedMessage {
   void clearName() => clearField(11);
 
   @$pb.TagNumber(12)
-  $0.TemperatureType get startTemperature => $_getN(11);
+  $1.TemperatureType get startTemperature => $_getN(11);
   @$pb.TagNumber(12)
-  set startTemperature($0.TemperatureType v) { setField(12, v); }
+  set startTemperature($1.TemperatureType v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasStartTemperature() => $_has(11);
   @$pb.TagNumber(12)
   void clearStartTemperature() => clearField(12);
   @$pb.TagNumber(12)
-  $0.TemperatureType ensureStartTemperature() => $_ensure(11);
+  $1.TemperatureType ensureStartTemperature() => $_ensure(11);
 }
 
 

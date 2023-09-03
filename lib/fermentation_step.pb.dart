@@ -13,24 +13,24 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'measureable_units.pb.dart' as $0;
+import 'measureable_units.pb.dart' as $1;
 
 /// FermentationStepType - a per step representation of a fermentation action
 class FermentationStepType extends $pb.GeneratedMessage {
   factory FermentationStepType({
     $core.String? id,
     $core.String? name,
-    $0.TemperatureType? endTemperature,
-    $0.TimeType? stepTime,
+    $1.TemperatureType? endTemperature,
+    $1.TimeType? stepTime,
     $core.bool? freeRise,
-    $0.GravityType? startGravity,
-    $0.GravityType? endGravity,
-    $0.AcidityType? startPh,
+    $1.GravityType? startGravity,
+    $1.GravityType? endGravity,
+    $1.AcidityType? startPh,
     $core.String? description,
-    $0.TemperatureType? startTemperature,
-    $0.AcidityType? endPh,
+    $1.TemperatureType? startTemperature,
+    $1.AcidityType? endPh,
     $core.String? vessel,
-    $0.PercentType? vesselPressure,
+    $1.PercentType? vesselPressure,
   }) {
     final $result = create();
     if (id != null) {
@@ -81,17 +81,17 @@ class FermentationStepType extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FermentationStepType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'name')
-    ..aOM<$0.TemperatureType>(3, _omitFieldNames ? '' : 'endTemperature', subBuilder: $0.TemperatureType.create)
-    ..aOM<$0.TimeType>(4, _omitFieldNames ? '' : 'stepTime', subBuilder: $0.TimeType.create)
+    ..aOM<$1.TemperatureType>(3, _omitFieldNames ? '' : 'endTemperature', subBuilder: $1.TemperatureType.create)
+    ..aOM<$1.TimeType>(4, _omitFieldNames ? '' : 'stepTime', subBuilder: $1.TimeType.create)
     ..aOB(5, _omitFieldNames ? '' : 'freeRise')
-    ..aOM<$0.GravityType>(6, _omitFieldNames ? '' : 'startGravity', subBuilder: $0.GravityType.create)
-    ..aOM<$0.GravityType>(7, _omitFieldNames ? '' : 'endGravity', subBuilder: $0.GravityType.create)
-    ..aOM<$0.AcidityType>(8, _omitFieldNames ? '' : 'startPh', subBuilder: $0.AcidityType.create)
+    ..aOM<$1.GravityType>(6, _omitFieldNames ? '' : 'startGravity', subBuilder: $1.GravityType.create)
+    ..aOM<$1.GravityType>(7, _omitFieldNames ? '' : 'endGravity', subBuilder: $1.GravityType.create)
+    ..aOM<$1.AcidityType>(8, _omitFieldNames ? '' : 'startPh', subBuilder: $1.AcidityType.create)
     ..aOS(9, _omitFieldNames ? '' : 'description')
-    ..aOM<$0.TemperatureType>(10, _omitFieldNames ? '' : 'startTemperature', subBuilder: $0.TemperatureType.create)
-    ..aOM<$0.AcidityType>(11, _omitFieldNames ? '' : 'endPh', subBuilder: $0.AcidityType.create)
+    ..aOM<$1.TemperatureType>(10, _omitFieldNames ? '' : 'startTemperature', subBuilder: $1.TemperatureType.create)
+    ..aOM<$1.AcidityType>(11, _omitFieldNames ? '' : 'endPh', subBuilder: $1.AcidityType.create)
     ..aOS(12, _omitFieldNames ? '' : 'vessel')
-    ..aOM<$0.PercentType>(13, _omitFieldNames ? '' : 'vesselPressure', subBuilder: $0.PercentType.create)
+    ..aOM<$1.PercentType>(13, _omitFieldNames ? '' : 'vesselPressure', subBuilder: $1.PercentType.create)
     ..hasRequiredFields = false
   ;
 
@@ -135,26 +135,26 @@ class FermentationStepType extends $pb.GeneratedMessage {
   void clearName() => clearField(2);
 
   @$pb.TagNumber(3)
-  $0.TemperatureType get endTemperature => $_getN(2);
+  $1.TemperatureType get endTemperature => $_getN(2);
   @$pb.TagNumber(3)
-  set endTemperature($0.TemperatureType v) { setField(3, v); }
+  set endTemperature($1.TemperatureType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasEndTemperature() => $_has(2);
   @$pb.TagNumber(3)
   void clearEndTemperature() => clearField(3);
   @$pb.TagNumber(3)
-  $0.TemperatureType ensureEndTemperature() => $_ensure(2);
+  $1.TemperatureType ensureEndTemperature() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $0.TimeType get stepTime => $_getN(3);
+  $1.TimeType get stepTime => $_getN(3);
   @$pb.TagNumber(4)
-  set stepTime($0.TimeType v) { setField(4, v); }
+  set stepTime($1.TimeType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasStepTime() => $_has(3);
   @$pb.TagNumber(4)
   void clearStepTime() => clearField(4);
   @$pb.TagNumber(4)
-  $0.TimeType ensureStepTime() => $_ensure(3);
+  $1.TimeType ensureStepTime() => $_ensure(3);
 
   /// Free rise is used to indicate a fermentation step where the exothermic fermentation is allowed to raise the temperature without restriction This is either True or false.
   @$pb.TagNumber(5)
@@ -167,37 +167,37 @@ class FermentationStepType extends $pb.GeneratedMessage {
   void clearFreeRise() => clearField(5);
 
   @$pb.TagNumber(6)
-  $0.GravityType get startGravity => $_getN(5);
+  $1.GravityType get startGravity => $_getN(5);
   @$pb.TagNumber(6)
-  set startGravity($0.GravityType v) { setField(6, v); }
+  set startGravity($1.GravityType v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasStartGravity() => $_has(5);
   @$pb.TagNumber(6)
   void clearStartGravity() => clearField(6);
   @$pb.TagNumber(6)
-  $0.GravityType ensureStartGravity() => $_ensure(5);
+  $1.GravityType ensureStartGravity() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $0.GravityType get endGravity => $_getN(6);
+  $1.GravityType get endGravity => $_getN(6);
   @$pb.TagNumber(7)
-  set endGravity($0.GravityType v) { setField(7, v); }
+  set endGravity($1.GravityType v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasEndGravity() => $_has(6);
   @$pb.TagNumber(7)
   void clearEndGravity() => clearField(7);
   @$pb.TagNumber(7)
-  $0.GravityType ensureEndGravity() => $_ensure(6);
+  $1.GravityType ensureEndGravity() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $0.AcidityType get startPh => $_getN(7);
+  $1.AcidityType get startPh => $_getN(7);
   @$pb.TagNumber(8)
-  set startPh($0.AcidityType v) { setField(8, v); }
+  set startPh($1.AcidityType v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasStartPh() => $_has(7);
   @$pb.TagNumber(8)
   void clearStartPh() => clearField(8);
   @$pb.TagNumber(8)
-  $0.AcidityType ensureStartPh() => $_ensure(7);
+  $1.AcidityType ensureStartPh() => $_ensure(7);
 
   @$pb.TagNumber(9)
   $core.String get description => $_getSZ(8);
@@ -209,26 +209,26 @@ class FermentationStepType extends $pb.GeneratedMessage {
   void clearDescription() => clearField(9);
 
   @$pb.TagNumber(10)
-  $0.TemperatureType get startTemperature => $_getN(9);
+  $1.TemperatureType get startTemperature => $_getN(9);
   @$pb.TagNumber(10)
-  set startTemperature($0.TemperatureType v) { setField(10, v); }
+  set startTemperature($1.TemperatureType v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasStartTemperature() => $_has(9);
   @$pb.TagNumber(10)
   void clearStartTemperature() => clearField(10);
   @$pb.TagNumber(10)
-  $0.TemperatureType ensureStartTemperature() => $_ensure(9);
+  $1.TemperatureType ensureStartTemperature() => $_ensure(9);
 
   @$pb.TagNumber(11)
-  $0.AcidityType get endPh => $_getN(10);
+  $1.AcidityType get endPh => $_getN(10);
   @$pb.TagNumber(11)
-  set endPh($0.AcidityType v) { setField(11, v); }
+  set endPh($1.AcidityType v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasEndPh() => $_has(10);
   @$pb.TagNumber(11)
   void clearEndPh() => clearField(11);
   @$pb.TagNumber(11)
-  $0.AcidityType ensureEndPh() => $_ensure(10);
+  $1.AcidityType ensureEndPh() => $_ensure(10);
 
   @$pb.TagNumber(12)
   $core.String get vessel => $_getSZ(11);
@@ -241,15 +241,15 @@ class FermentationStepType extends $pb.GeneratedMessage {
 
   /// Vessel pressure indicates the pressure applied within the fermentation vessel.
   @$pb.TagNumber(13)
-  $0.PercentType get vesselPressure => $_getN(12);
+  $1.PercentType get vesselPressure => $_getN(12);
   @$pb.TagNumber(13)
-  set vesselPressure($0.PercentType v) { setField(13, v); }
+  set vesselPressure($1.PercentType v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasVesselPressure() => $_has(12);
   @$pb.TagNumber(13)
   void clearVesselPressure() => clearField(13);
   @$pb.TagNumber(13)
-  $0.PercentType ensureVesselPressure() => $_ensure(12);
+  $1.PercentType ensureVesselPressure() => $_ensure(12);
 }
 
 

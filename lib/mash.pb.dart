@@ -13,16 +13,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'mash_step.pb.dart' as $1;
-import 'measureable_units.pb.dart' as $0;
+import 'mash_step.pb.dart' as $2;
+import 'measureable_units.pb.dart' as $1;
 
 /// This defines the procedure for performing unique mashing processes
 class MashProcedureType extends $pb.GeneratedMessage {
   factory MashProcedureType({
     $core.String? id,
-    $0.TemperatureType? grainTemperature,
+    $1.TemperatureType? grainTemperature,
     $core.String? notes,
-    $core.Iterable<$1.MashStepType>? mashSteps,
+    $core.Iterable<$2.MashStepType>? mashSteps,
     $core.String? name,
   }) {
     final $result = create();
@@ -49,9 +49,9 @@ class MashProcedureType extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MashProcedureType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.TemperatureType>(2, _omitFieldNames ? '' : 'grainTemperature', subBuilder: $0.TemperatureType.create)
+    ..aOM<$1.TemperatureType>(2, _omitFieldNames ? '' : 'grainTemperature', subBuilder: $1.TemperatureType.create)
     ..aOS(3, _omitFieldNames ? '' : 'notes')
-    ..pc<$1.MashStepType>(4, _omitFieldNames ? '' : 'mashSteps', $pb.PbFieldType.PM, subBuilder: $1.MashStepType.create)
+    ..pc<$2.MashStepType>(4, _omitFieldNames ? '' : 'mashSteps', $pb.PbFieldType.PM, subBuilder: $2.MashStepType.create)
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false
   ;
@@ -88,15 +88,15 @@ class MashProcedureType extends $pb.GeneratedMessage {
 
   /// Initial grain temperature prior to the start of the mash
   @$pb.TagNumber(2)
-  $0.TemperatureType get grainTemperature => $_getN(1);
+  $1.TemperatureType get grainTemperature => $_getN(1);
   @$pb.TagNumber(2)
-  set grainTemperature($0.TemperatureType v) { setField(2, v); }
+  set grainTemperature($1.TemperatureType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasGrainTemperature() => $_has(1);
   @$pb.TagNumber(2)
   void clearGrainTemperature() => clearField(2);
   @$pb.TagNumber(2)
-  $0.TemperatureType ensureGrainTemperature() => $_ensure(1);
+  $1.TemperatureType ensureGrainTemperature() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get notes => $_getSZ(2);
@@ -108,7 +108,7 @@ class MashProcedureType extends $pb.GeneratedMessage {
   void clearNotes() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.List<$1.MashStepType> get mashSteps => $_getList(3);
+  $core.List<$2.MashStepType> get mashSteps => $_getList(3);
 
   @$pb.TagNumber(5)
   $core.String get name => $_getSZ(4);

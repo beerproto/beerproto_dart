@@ -13,16 +13,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'boil_step.pb.dart' as $6;
-import 'measureable_units.pb.dart' as $0;
+import 'boil_step.pb.dart' as $7;
+import 'measureable_units.pb.dart' as $1;
 
 /// BoilProcedureType defines the procedure for performing a boil. A boil procedure with no steps is the same as a standard single step boil
 class BoilProcedureType extends $pb.GeneratedMessage {
   factory BoilProcedureType({
     $core.String? id,
-    $0.VolumeType? preBoilSize,
-    $0.TimeType? boilTime,
-    $core.Iterable<$6.BoilStepType>? boilSteps,
+    $1.VolumeType? preBoilSize,
+    $1.TimeType? boilTime,
+    $core.Iterable<$7.BoilStepType>? boilSteps,
     $core.String? name,
     $core.String? description,
     $core.String? notes,
@@ -57,9 +57,9 @@ class BoilProcedureType extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BoilProcedureType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'preBoilSize', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.TimeType>(3, _omitFieldNames ? '' : 'boilTime', subBuilder: $0.TimeType.create)
-    ..pc<$6.BoilStepType>(4, _omitFieldNames ? '' : 'boilSteps', $pb.PbFieldType.PM, subBuilder: $6.BoilStepType.create)
+    ..aOM<$1.VolumeType>(2, _omitFieldNames ? '' : 'preBoilSize', subBuilder: $1.VolumeType.create)
+    ..aOM<$1.TimeType>(3, _omitFieldNames ? '' : 'boilTime', subBuilder: $1.TimeType.create)
+    ..pc<$7.BoilStepType>(4, _omitFieldNames ? '' : 'boilSteps', $pb.PbFieldType.PM, subBuilder: $7.BoilStepType.create)
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..aOS(6, _omitFieldNames ? '' : 'description')
     ..aOS(7, _omitFieldNames ? '' : 'notes')
@@ -97,29 +97,29 @@ class BoilProcedureType extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $0.VolumeType get preBoilSize => $_getN(1);
+  $1.VolumeType get preBoilSize => $_getN(1);
   @$pb.TagNumber(2)
-  set preBoilSize($0.VolumeType v) { setField(2, v); }
+  set preBoilSize($1.VolumeType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasPreBoilSize() => $_has(1);
   @$pb.TagNumber(2)
   void clearPreBoilSize() => clearField(2);
   @$pb.TagNumber(2)
-  $0.VolumeType ensurePreBoilSize() => $_ensure(1);
+  $1.VolumeType ensurePreBoilSize() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $0.TimeType get boilTime => $_getN(2);
+  $1.TimeType get boilTime => $_getN(2);
   @$pb.TagNumber(3)
-  set boilTime($0.TimeType v) { setField(3, v); }
+  set boilTime($1.TimeType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasBoilTime() => $_has(2);
   @$pb.TagNumber(3)
   void clearBoilTime() => clearField(3);
   @$pb.TagNumber(3)
-  $0.TimeType ensureBoilTime() => $_ensure(2);
+  $1.TimeType ensureBoilTime() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $core.List<$6.BoilStepType> get boilSteps => $_getList(3);
+  $core.List<$7.BoilStepType> get boilSteps => $_getList(3);
 
   @$pb.TagNumber(5)
   $core.String get name => $_getSZ(4);

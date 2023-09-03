@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'hop.pbenum.dart';
-import 'measureable_units.pb.dart' as $0;
-import 'timing.pb.dart' as $3;
+import 'measureable_units.pb.dart' as $1;
+import 'timing.pb.dart' as $4;
 
 export 'hop.pbenum.dart';
 
@@ -26,10 +26,10 @@ class VarietyInformation extends $pb.GeneratedMessage {
     HopInventoryType? inventory,
     VarietyInformationType? type,
     OilContentType? oilContent,
-    $0.PercentType? percentLost,
+    $1.PercentType? percentLost,
     $core.String? productId,
-    $0.PercentType? alphaAcid,
-    $0.PercentType? betaAcid,
+    $1.PercentType? alphaAcid,
+    $1.PercentType? betaAcid,
     $core.String? name,
     $core.String? origin,
     $core.String? substitutes,
@@ -95,10 +95,10 @@ class VarietyInformation extends $pb.GeneratedMessage {
     ..aOM<HopInventoryType>(2, _omitFieldNames ? '' : 'inventory', subBuilder: HopInventoryType.create)
     ..e<VarietyInformationType>(3, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: VarietyInformationType.VARIETY_INFORMATION_TYPE_UNSPECIFIED, valueOf: VarietyInformationType.valueOf, enumValues: VarietyInformationType.values)
     ..aOM<OilContentType>(4, _omitFieldNames ? '' : 'oilContent', subBuilder: OilContentType.create)
-    ..aOM<$0.PercentType>(5, _omitFieldNames ? '' : 'percentLost', subBuilder: $0.PercentType.create)
+    ..aOM<$1.PercentType>(5, _omitFieldNames ? '' : 'percentLost', subBuilder: $1.PercentType.create)
     ..aOS(6, _omitFieldNames ? '' : 'productId')
-    ..aOM<$0.PercentType>(7, _omitFieldNames ? '' : 'alphaAcid', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(8, _omitFieldNames ? '' : 'betaAcid', subBuilder: $0.PercentType.create)
+    ..aOM<$1.PercentType>(7, _omitFieldNames ? '' : 'alphaAcid', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(8, _omitFieldNames ? '' : 'betaAcid', subBuilder: $1.PercentType.create)
     ..aOS(9, _omitFieldNames ? '' : 'name')
     ..aOS(10, _omitFieldNames ? '' : 'origin')
     ..aOS(11, _omitFieldNames ? '' : 'substitutes')
@@ -173,15 +173,15 @@ class VarietyInformation extends $pb.GeneratedMessage {
 
   /// Defined as the percentage of hop alpha lost in 6 months of storage.
   @$pb.TagNumber(5)
-  $0.PercentType get percentLost => $_getN(4);
+  $1.PercentType get percentLost => $_getN(4);
   @$pb.TagNumber(5)
-  set percentLost($0.PercentType v) { setField(5, v); }
+  set percentLost($1.PercentType v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasPercentLost() => $_has(4);
   @$pb.TagNumber(5)
   void clearPercentLost() => clearField(5);
   @$pb.TagNumber(5)
-  $0.PercentType ensurePercentLost() => $_ensure(4);
+  $1.PercentType ensurePercentLost() => $_ensure(4);
 
   @$pb.TagNumber(6)
   $core.String get productId => $_getSZ(5);
@@ -193,26 +193,26 @@ class VarietyInformation extends $pb.GeneratedMessage {
   void clearProductId() => clearField(6);
 
   @$pb.TagNumber(7)
-  $0.PercentType get alphaAcid => $_getN(6);
+  $1.PercentType get alphaAcid => $_getN(6);
   @$pb.TagNumber(7)
-  set alphaAcid($0.PercentType v) { setField(7, v); }
+  set alphaAcid($1.PercentType v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasAlphaAcid() => $_has(6);
   @$pb.TagNumber(7)
   void clearAlphaAcid() => clearField(7);
   @$pb.TagNumber(7)
-  $0.PercentType ensureAlphaAcid() => $_ensure(6);
+  $1.PercentType ensureAlphaAcid() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $0.PercentType get betaAcid => $_getN(7);
+  $1.PercentType get betaAcid => $_getN(7);
   @$pb.TagNumber(8)
-  set betaAcid($0.PercentType v) { setField(8, v); }
+  set betaAcid($1.PercentType v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasBetaAcid() => $_has(7);
   @$pb.TagNumber(8)
   void clearBetaAcid() => clearField(8);
   @$pb.TagNumber(8)
-  $0.PercentType ensureBetaAcid() => $_ensure(7);
+  $1.PercentType ensureBetaAcid() => $_ensure(7);
 
   @$pb.TagNumber(9)
   $core.String get name => $_getSZ(8);
@@ -288,17 +288,17 @@ enum HopAdditionType_Amount {
 class HopAdditionType extends $pb.GeneratedMessage {
   factory HopAdditionType({
     $core.String? id,
-    $0.PercentType? betaAcid,
+    $1.PercentType? betaAcid,
     $core.String? producer,
     $core.String? origin,
     $core.String? year,
     HopVarietyBaseForm? form,
-    $3.TimingType? timing,
+    $4.TimingType? timing,
     $core.String? name,
     $core.String? productId,
-    $0.PercentType? alphaAcid,
-    $0.MassType? mass,
-    $0.VolumeType? volume,
+    $1.PercentType? alphaAcid,
+    $1.MassType? mass,
+    $1.VolumeType? volume,
   }) {
     final $result = create();
     if (id != null) {
@@ -351,17 +351,17 @@ class HopAdditionType extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HopAdditionType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..oo(0, [11, 12])
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.PercentType>(2, _omitFieldNames ? '' : 'betaAcid', subBuilder: $0.PercentType.create)
+    ..aOM<$1.PercentType>(2, _omitFieldNames ? '' : 'betaAcid', subBuilder: $1.PercentType.create)
     ..aOS(3, _omitFieldNames ? '' : 'producer')
     ..aOS(4, _omitFieldNames ? '' : 'origin')
     ..aOS(5, _omitFieldNames ? '' : 'year')
     ..e<HopVarietyBaseForm>(6, _omitFieldNames ? '' : 'form', $pb.PbFieldType.OE, defaultOrMaker: HopVarietyBaseForm.HOP_VARIETY_BASE_FORM_UNSPECIFIED, valueOf: HopVarietyBaseForm.valueOf, enumValues: HopVarietyBaseForm.values)
-    ..aOM<$3.TimingType>(7, _omitFieldNames ? '' : 'timing', subBuilder: $3.TimingType.create)
+    ..aOM<$4.TimingType>(7, _omitFieldNames ? '' : 'timing', subBuilder: $4.TimingType.create)
     ..aOS(8, _omitFieldNames ? '' : 'name')
     ..aOS(9, _omitFieldNames ? '' : 'productId')
-    ..aOM<$0.PercentType>(10, _omitFieldNames ? '' : 'alphaAcid', subBuilder: $0.PercentType.create)
-    ..aOM<$0.MassType>(11, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
-    ..aOM<$0.VolumeType>(12, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
+    ..aOM<$1.PercentType>(10, _omitFieldNames ? '' : 'alphaAcid', subBuilder: $1.PercentType.create)
+    ..aOM<$1.MassType>(11, _omitFieldNames ? '' : 'mass', subBuilder: $1.MassType.create)
+    ..aOM<$1.VolumeType>(12, _omitFieldNames ? '' : 'volume', subBuilder: $1.VolumeType.create)
     ..hasRequiredFields = false
   ;
 
@@ -399,15 +399,15 @@ class HopAdditionType extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $0.PercentType get betaAcid => $_getN(1);
+  $1.PercentType get betaAcid => $_getN(1);
   @$pb.TagNumber(2)
-  set betaAcid($0.PercentType v) { setField(2, v); }
+  set betaAcid($1.PercentType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasBetaAcid() => $_has(1);
   @$pb.TagNumber(2)
   void clearBetaAcid() => clearField(2);
   @$pb.TagNumber(2)
-  $0.PercentType ensureBetaAcid() => $_ensure(1);
+  $1.PercentType ensureBetaAcid() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $core.String get producer => $_getSZ(2);
@@ -447,15 +447,15 @@ class HopAdditionType extends $pb.GeneratedMessage {
 
   /// The timing object fully describes the timing of an addition with options for a basis on time, gravity, or pH at any process step
   @$pb.TagNumber(7)
-  $3.TimingType get timing => $_getN(6);
+  $4.TimingType get timing => $_getN(6);
   @$pb.TagNumber(7)
-  set timing($3.TimingType v) { setField(7, v); }
+  set timing($4.TimingType v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasTiming() => $_has(6);
   @$pb.TagNumber(7)
   void clearTiming() => clearField(7);
   @$pb.TagNumber(7)
-  $3.TimingType ensureTiming() => $_ensure(6);
+  $4.TimingType ensureTiming() => $_ensure(6);
 
   @$pb.TagNumber(8)
   $core.String get name => $_getSZ(7);
@@ -476,37 +476,37 @@ class HopAdditionType extends $pb.GeneratedMessage {
   void clearProductId() => clearField(9);
 
   @$pb.TagNumber(10)
-  $0.PercentType get alphaAcid => $_getN(9);
+  $1.PercentType get alphaAcid => $_getN(9);
   @$pb.TagNumber(10)
-  set alphaAcid($0.PercentType v) { setField(10, v); }
+  set alphaAcid($1.PercentType v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasAlphaAcid() => $_has(9);
   @$pb.TagNumber(10)
   void clearAlphaAcid() => clearField(10);
   @$pb.TagNumber(10)
-  $0.PercentType ensureAlphaAcid() => $_ensure(9);
+  $1.PercentType ensureAlphaAcid() => $_ensure(9);
 
   @$pb.TagNumber(11)
-  $0.MassType get mass => $_getN(10);
+  $1.MassType get mass => $_getN(10);
   @$pb.TagNumber(11)
-  set mass($0.MassType v) { setField(11, v); }
+  set mass($1.MassType v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasMass() => $_has(10);
   @$pb.TagNumber(11)
   void clearMass() => clearField(11);
   @$pb.TagNumber(11)
-  $0.MassType ensureMass() => $_ensure(10);
+  $1.MassType ensureMass() => $_ensure(10);
 
   @$pb.TagNumber(12)
-  $0.VolumeType get volume => $_getN(11);
+  $1.VolumeType get volume => $_getN(11);
   @$pb.TagNumber(12)
-  set volume($0.VolumeType v) { setField(12, v); }
+  set volume($1.VolumeType v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasVolume() => $_has(11);
   @$pb.TagNumber(12)
   void clearVolume() => clearField(12);
   @$pb.TagNumber(12)
-  $0.VolumeType ensureVolume() => $_ensure(11);
+  $1.VolumeType ensureVolume() => $_ensure(11);
 }
 
 /// Used to differentiate which IBU formula is being used in a recipe. If formula is modified in any way, eg to support whirlpool/flameout additions etc etc, please use `Other` for transparency
@@ -563,20 +563,20 @@ class IBUEstimateType extends $pb.GeneratedMessage {
 /// oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols. Each individual compound is expressed as a percent of the total oil measurement
 class OilContentType extends $pb.GeneratedMessage {
   factory OilContentType({
-    $0.PercentType? polyphenols,
+    $1.PercentType? polyphenols,
     $core.double? totalOilMlPer100g,
-    $0.PercentType? farnesene,
-    $0.PercentType? limonene,
-    $0.PercentType? nerol,
-    $0.PercentType? geraniol,
-    $0.PercentType? bPinene,
-    $0.PercentType? linalool,
-    $0.PercentType? caryophyllene,
-    $0.PercentType? cohumulone,
-    $0.PercentType? xanthohumol,
-    $0.PercentType? humulene,
-    $0.PercentType? myrcene,
-    $0.PercentType? pinene,
+    $1.PercentType? farnesene,
+    $1.PercentType? limonene,
+    $1.PercentType? nerol,
+    $1.PercentType? geraniol,
+    $1.PercentType? bPinene,
+    $1.PercentType? linalool,
+    $1.PercentType? caryophyllene,
+    $1.PercentType? cohumulone,
+    $1.PercentType? xanthohumol,
+    $1.PercentType? humulene,
+    $1.PercentType? myrcene,
+    $1.PercentType? pinene,
   }) {
     final $result = create();
     if (polyphenols != null) {
@@ -628,20 +628,20 @@ class OilContentType extends $pb.GeneratedMessage {
   factory OilContentType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OilContentType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<$0.PercentType>(1, _omitFieldNames ? '' : 'polyphenols', subBuilder: $0.PercentType.create)
+    ..aOM<$1.PercentType>(1, _omitFieldNames ? '' : 'polyphenols', subBuilder: $1.PercentType.create)
     ..a<$core.double>(2, _omitFieldNames ? '' : 'totalOilMlPer100g', $pb.PbFieldType.OD, protoName: 'total_oil_ml_per_100g')
-    ..aOM<$0.PercentType>(3, _omitFieldNames ? '' : 'farnesene', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(4, _omitFieldNames ? '' : 'limonene', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(5, _omitFieldNames ? '' : 'nerol', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(6, _omitFieldNames ? '' : 'geraniol', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(7, _omitFieldNames ? '' : 'bPinene', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(8, _omitFieldNames ? '' : 'linalool', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(9, _omitFieldNames ? '' : 'caryophyllene', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(10, _omitFieldNames ? '' : 'cohumulone', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(11, _omitFieldNames ? '' : 'xanthohumol', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(12, _omitFieldNames ? '' : 'humulene', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(13, _omitFieldNames ? '' : 'myrcene', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(14, _omitFieldNames ? '' : 'pinene', subBuilder: $0.PercentType.create)
+    ..aOM<$1.PercentType>(3, _omitFieldNames ? '' : 'farnesene', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(4, _omitFieldNames ? '' : 'limonene', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(5, _omitFieldNames ? '' : 'nerol', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(6, _omitFieldNames ? '' : 'geraniol', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(7, _omitFieldNames ? '' : 'bPinene', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(8, _omitFieldNames ? '' : 'linalool', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(9, _omitFieldNames ? '' : 'caryophyllene', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(10, _omitFieldNames ? '' : 'cohumulone', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(11, _omitFieldNames ? '' : 'xanthohumol', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(12, _omitFieldNames ? '' : 'humulene', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(13, _omitFieldNames ? '' : 'myrcene', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(14, _omitFieldNames ? '' : 'pinene', subBuilder: $1.PercentType.create)
     ..hasRequiredFields = false
   ;
 
@@ -667,15 +667,15 @@ class OilContentType extends $pb.GeneratedMessage {
   static OilContentType? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.PercentType get polyphenols => $_getN(0);
+  $1.PercentType get polyphenols => $_getN(0);
   @$pb.TagNumber(1)
-  set polyphenols($0.PercentType v) { setField(1, v); }
+  set polyphenols($1.PercentType v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPolyphenols() => $_has(0);
   @$pb.TagNumber(1)
   void clearPolyphenols() => clearField(1);
   @$pb.TagNumber(1)
-  $0.PercentType ensurePolyphenols() => $_ensure(0);
+  $1.PercentType ensurePolyphenols() => $_ensure(0);
 
   /// The total amount of oil, including hydrocarbons, esters, and terpene alcohols in units of ml of oil per 100g of hop mass.
   @$pb.TagNumber(2)
@@ -688,136 +688,136 @@ class OilContentType extends $pb.GeneratedMessage {
   void clearTotalOilMlPer100g() => clearField(2);
 
   @$pb.TagNumber(3)
-  $0.PercentType get farnesene => $_getN(2);
+  $1.PercentType get farnesene => $_getN(2);
   @$pb.TagNumber(3)
-  set farnesene($0.PercentType v) { setField(3, v); }
+  set farnesene($1.PercentType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasFarnesene() => $_has(2);
   @$pb.TagNumber(3)
   void clearFarnesene() => clearField(3);
   @$pb.TagNumber(3)
-  $0.PercentType ensureFarnesene() => $_ensure(2);
+  $1.PercentType ensureFarnesene() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $0.PercentType get limonene => $_getN(3);
+  $1.PercentType get limonene => $_getN(3);
   @$pb.TagNumber(4)
-  set limonene($0.PercentType v) { setField(4, v); }
+  set limonene($1.PercentType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasLimonene() => $_has(3);
   @$pb.TagNumber(4)
   void clearLimonene() => clearField(4);
   @$pb.TagNumber(4)
-  $0.PercentType ensureLimonene() => $_ensure(3);
+  $1.PercentType ensureLimonene() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $0.PercentType get nerol => $_getN(4);
+  $1.PercentType get nerol => $_getN(4);
   @$pb.TagNumber(5)
-  set nerol($0.PercentType v) { setField(5, v); }
+  set nerol($1.PercentType v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasNerol() => $_has(4);
   @$pb.TagNumber(5)
   void clearNerol() => clearField(5);
   @$pb.TagNumber(5)
-  $0.PercentType ensureNerol() => $_ensure(4);
+  $1.PercentType ensureNerol() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $0.PercentType get geraniol => $_getN(5);
+  $1.PercentType get geraniol => $_getN(5);
   @$pb.TagNumber(6)
-  set geraniol($0.PercentType v) { setField(6, v); }
+  set geraniol($1.PercentType v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasGeraniol() => $_has(5);
   @$pb.TagNumber(6)
   void clearGeraniol() => clearField(6);
   @$pb.TagNumber(6)
-  $0.PercentType ensureGeraniol() => $_ensure(5);
+  $1.PercentType ensureGeraniol() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $0.PercentType get bPinene => $_getN(6);
+  $1.PercentType get bPinene => $_getN(6);
   @$pb.TagNumber(7)
-  set bPinene($0.PercentType v) { setField(7, v); }
+  set bPinene($1.PercentType v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasBPinene() => $_has(6);
   @$pb.TagNumber(7)
   void clearBPinene() => clearField(7);
   @$pb.TagNumber(7)
-  $0.PercentType ensureBPinene() => $_ensure(6);
+  $1.PercentType ensureBPinene() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  $0.PercentType get linalool => $_getN(7);
+  $1.PercentType get linalool => $_getN(7);
   @$pb.TagNumber(8)
-  set linalool($0.PercentType v) { setField(8, v); }
+  set linalool($1.PercentType v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasLinalool() => $_has(7);
   @$pb.TagNumber(8)
   void clearLinalool() => clearField(8);
   @$pb.TagNumber(8)
-  $0.PercentType ensureLinalool() => $_ensure(7);
+  $1.PercentType ensureLinalool() => $_ensure(7);
 
   @$pb.TagNumber(9)
-  $0.PercentType get caryophyllene => $_getN(8);
+  $1.PercentType get caryophyllene => $_getN(8);
   @$pb.TagNumber(9)
-  set caryophyllene($0.PercentType v) { setField(9, v); }
+  set caryophyllene($1.PercentType v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasCaryophyllene() => $_has(8);
   @$pb.TagNumber(9)
   void clearCaryophyllene() => clearField(9);
   @$pb.TagNumber(9)
-  $0.PercentType ensureCaryophyllene() => $_ensure(8);
+  $1.PercentType ensureCaryophyllene() => $_ensure(8);
 
   @$pb.TagNumber(10)
-  $0.PercentType get cohumulone => $_getN(9);
+  $1.PercentType get cohumulone => $_getN(9);
   @$pb.TagNumber(10)
-  set cohumulone($0.PercentType v) { setField(10, v); }
+  set cohumulone($1.PercentType v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasCohumulone() => $_has(9);
   @$pb.TagNumber(10)
   void clearCohumulone() => clearField(10);
   @$pb.TagNumber(10)
-  $0.PercentType ensureCohumulone() => $_ensure(9);
+  $1.PercentType ensureCohumulone() => $_ensure(9);
 
   @$pb.TagNumber(11)
-  $0.PercentType get xanthohumol => $_getN(10);
+  $1.PercentType get xanthohumol => $_getN(10);
   @$pb.TagNumber(11)
-  set xanthohumol($0.PercentType v) { setField(11, v); }
+  set xanthohumol($1.PercentType v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasXanthohumol() => $_has(10);
   @$pb.TagNumber(11)
   void clearXanthohumol() => clearField(11);
   @$pb.TagNumber(11)
-  $0.PercentType ensureXanthohumol() => $_ensure(10);
+  $1.PercentType ensureXanthohumol() => $_ensure(10);
 
   @$pb.TagNumber(12)
-  $0.PercentType get humulene => $_getN(11);
+  $1.PercentType get humulene => $_getN(11);
   @$pb.TagNumber(12)
-  set humulene($0.PercentType v) { setField(12, v); }
+  set humulene($1.PercentType v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasHumulene() => $_has(11);
   @$pb.TagNumber(12)
   void clearHumulene() => clearField(12);
   @$pb.TagNumber(12)
-  $0.PercentType ensureHumulene() => $_ensure(11);
+  $1.PercentType ensureHumulene() => $_ensure(11);
 
   @$pb.TagNumber(13)
-  $0.PercentType get myrcene => $_getN(12);
+  $1.PercentType get myrcene => $_getN(12);
   @$pb.TagNumber(13)
-  set myrcene($0.PercentType v) { setField(13, v); }
+  set myrcene($1.PercentType v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasMyrcene() => $_has(12);
   @$pb.TagNumber(13)
   void clearMyrcene() => clearField(13);
   @$pb.TagNumber(13)
-  $0.PercentType ensureMyrcene() => $_ensure(12);
+  $1.PercentType ensureMyrcene() => $_ensure(12);
 
   @$pb.TagNumber(14)
-  $0.PercentType get pinene => $_getN(13);
+  $1.PercentType get pinene => $_getN(13);
   @$pb.TagNumber(14)
-  set pinene($0.PercentType v) { setField(14, v); }
+  set pinene($1.PercentType v) { setField(14, v); }
   @$pb.TagNumber(14)
   $core.bool hasPinene() => $_has(13);
   @$pb.TagNumber(14)
   void clearPinene() => clearField(14);
   @$pb.TagNumber(14)
-  $0.PercentType ensurePinene() => $_ensure(13);
+  $1.PercentType ensurePinene() => $_ensure(13);
 }
 
 enum HopInventoryType_Amount {
@@ -828,8 +828,8 @@ enum HopInventoryType_Amount {
 
 class HopInventoryType extends $pb.GeneratedMessage {
   factory HopInventoryType({
-    $0.MassType? mass,
-    $0.VolumeType? volume,
+    $1.MassType? mass,
+    $1.VolumeType? volume,
   }) {
     final $result = create();
     if (mass != null) {
@@ -851,8 +851,8 @@ class HopInventoryType extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HopInventoryType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<$0.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
-    ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
+    ..aOM<$1.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $1.MassType.create)
+    ..aOM<$1.VolumeType>(2, _omitFieldNames ? '' : 'volume', subBuilder: $1.VolumeType.create)
     ..hasRequiredFields = false
   ;
 
@@ -881,26 +881,26 @@ class HopInventoryType extends $pb.GeneratedMessage {
   void clearAmount() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
-  $0.MassType get mass => $_getN(0);
+  $1.MassType get mass => $_getN(0);
   @$pb.TagNumber(1)
-  set mass($0.MassType v) { setField(1, v); }
+  set mass($1.MassType v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMass() => $_has(0);
   @$pb.TagNumber(1)
   void clearMass() => clearField(1);
   @$pb.TagNumber(1)
-  $0.MassType ensureMass() => $_ensure(0);
+  $1.MassType ensureMass() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $0.VolumeType get volume => $_getN(1);
+  $1.VolumeType get volume => $_getN(1);
   @$pb.TagNumber(2)
-  set volume($0.VolumeType v) { setField(2, v); }
+  set volume($1.VolumeType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasVolume() => $_has(1);
   @$pb.TagNumber(2)
   void clearVolume() => clearField(2);
   @$pb.TagNumber(2)
-  $0.VolumeType ensureVolume() => $_ensure(1);
+  $1.VolumeType ensureVolume() => $_ensure(1);
 }
 
 

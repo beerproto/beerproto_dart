@@ -172,10 +172,11 @@ const DiastaticPowerUnit$json = {
 
 /// Descriptor for `DiastaticPowerUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List diastaticPowerUnitDescriptor = $convert.base64Decode(
-    'ChJEaWFzdGF0aWNQb3dlclVuaXQSSAogRElBU1RBVElDX1BPV0VSX1VOSVRfVU5TUEVDSUZJRU'
-    'QQABoiotH51gMLVU5TUEVDSUZJRUSq0fnWAwtVTlNQRUNJRklFRBI6ChxESUFTVEFUSUNfUE9X'
-    'RVJfVU5JVF9MSU5UTkVSEAEaGKLR+dYDBkxpbnRlcqrR+dYDBkxpbnRlchI9ChdESUFTVEFUSU'
-    'NfUE9XRVJfVU5JVF9XSxACGiCi0fnWAxJXaW5kaXNjaOKAk0tvbGJhY2iq0fnWAwJXSw==');
+    'ChJEaWFzdGF0aWNQb3dlclVuaXQSTgogRElBU1RBVElDX1BPV0VSX1VOSVRfVU5TUEVDSUZJRU'
+    'QQABooitH51gMAotH51gMLVU5TUEVDSUZJRUSq0fnWAwtVTlNQRUNJRklFRBJeChxESUFTVEFU'
+    'SUNfUE9XRVJfVU5JVF9MSU5UTkVSEAEaPIrR+dYDHgocCAISGAgDWgUVAABgQKIBDAgEYgCqAQ'
+    'UVAACIQaLR+dYDBkxpbnRlcqrR+dYDBkxpbnRlchI9ChdESUFTVEFUSUNfUE9XRVJfVU5JVF9X'
+    'SxACGiCi0fnWAxJXaW5kaXNjaOKAk0tvbGJhY2iq0fnWAwJXSw==');
 
 @$core.Deprecated('Use temperatureUnitDescriptor instead')
 const TemperatureUnit$json = {
@@ -516,6 +517,33 @@ const DiastaticPowerType$json = {
 final $typed_data.Uint8List diastaticPowerTypeDescriptor = $convert.base64Decode(
     'ChJEaWFzdGF0aWNQb3dlclR5cGUSFAoFdmFsdWUYASABKAFSBXZhbHVlEjQKBHVuaXQYAiABKA'
     '4yIC5iZWVycHJvdG8udjEuRGlhc3RhdGljUG93ZXJVbml0UgR1bml0');
+
+@$core.Deprecated('Use conversionDiastaticPowerUnitDescriptor instead')
+const ConversionDiastaticPowerUnit$json = {
+  '1': 'ConversionDiastaticPowerUnit',
+  '2': [
+    {'1': 'rates', '3': 1, '4': 3, '5': 11, '6': '.beerproto.v1.ConversionDiastaticPowerUnit.ConversionDiastaticPowerUnitRate', '10': 'rates'},
+  ],
+  '3': [ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate$json],
+};
+
+@$core.Deprecated('Use conversionDiastaticPowerUnitDescriptor instead')
+const ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate$json = {
+  '1': 'ConversionDiastaticPowerUnitRate',
+  '2': [
+    {'1': 'target', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.DiastaticPowerUnit', '10': 'target'},
+    {'1': 'expression', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.BinaryExpression', '10': 'expression'},
+  ],
+};
+
+/// Descriptor for `ConversionDiastaticPowerUnit`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List conversionDiastaticPowerUnitDescriptor = $convert.base64Decode(
+    'ChxDb252ZXJzaW9uRGlhc3RhdGljUG93ZXJVbml0EmEKBXJhdGVzGAEgAygLMksuYmVlcnByb3'
+    'RvLnYxLkNvbnZlcnNpb25EaWFzdGF0aWNQb3dlclVuaXQuQ29udmVyc2lvbkRpYXN0YXRpY1Bv'
+    'd2VyVW5pdFJhdGVSBXJhdGVzGpwBCiBDb252ZXJzaW9uRGlhc3RhdGljUG93ZXJVbml0UmF0ZR'
+    'I4CgZ0YXJnZXQYASABKA4yIC5iZWVycHJvdG8udjEuRGlhc3RhdGljUG93ZXJVbml0UgZ0YXJn'
+    'ZXQSPgoKZXhwcmVzc2lvbhgCIAEoCzIeLmJlZXJwcm90by52MS5CaW5hcnlFeHByZXNzaW9uUg'
+    'pleHByZXNzaW9u');
 
 @$core.Deprecated('Use temperatureTypeDescriptor instead')
 const TemperatureType$json = {

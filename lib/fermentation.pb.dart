@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'fermentation_step.pb.dart' as $2;
+import 'fermentation_step.pb.dart' as $3;
 
 /// FermentationProcedureType defines the procedure for performing fermentation
 class FermentationProcedureType extends $pb.GeneratedMessage {
@@ -21,7 +21,7 @@ class FermentationProcedureType extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? description,
     $core.String? notes,
-    $core.Iterable<$2.FermentationStepType>? fermentationSteps,
+    $core.Iterable<$3.FermentationStepType>? fermentationSteps,
     $core.String? name,
   }) {
     final $result = create();
@@ -50,7 +50,7 @@ class FermentationProcedureType extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'description')
     ..aOS(3, _omitFieldNames ? '' : 'notes')
-    ..pc<$2.FermentationStepType>(4, _omitFieldNames ? '' : 'fermentationSteps', $pb.PbFieldType.PM, subBuilder: $2.FermentationStepType.create)
+    ..pc<$3.FermentationStepType>(4, _omitFieldNames ? '' : 'fermentationSteps', $pb.PbFieldType.PM, subBuilder: $3.FermentationStepType.create)
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false
   ;
@@ -104,7 +104,7 @@ class FermentationProcedureType extends $pb.GeneratedMessage {
   void clearNotes() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.List<$2.FermentationStepType> get fermentationSteps => $_getList(3);
+  $core.List<$3.FermentationStepType> get fermentationSteps => $_getList(3);
 
   @$pb.TagNumber(5)
   $core.String get name => $_getSZ(4);

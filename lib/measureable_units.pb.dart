@@ -14,6 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'expression.pb.dart' as $0;
 import 'measureable_units.pbenum.dart';
 
 export 'measureable_units.pbenum.dart';
@@ -453,6 +454,116 @@ class DiastaticPowerType extends $pb.GeneratedMessage {
   $core.bool hasUnit() => $_has(1);
   @$pb.TagNumber(2)
   void clearUnit() => clearField(2);
+}
+
+class ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate extends $pb.GeneratedMessage {
+  factory ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate({
+    DiastaticPowerUnit? target,
+    $0.BinaryExpression? expression,
+  }) {
+    final $result = create();
+    if (target != null) {
+      $result.target = target;
+    }
+    if (expression != null) {
+      $result.expression = expression;
+    }
+    return $result;
+  }
+  ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate._() : super();
+  factory ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionDiastaticPowerUnit.ConversionDiastaticPowerUnitRate', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..e<DiastaticPowerUnit>(1, _omitFieldNames ? '' : 'target', $pb.PbFieldType.OE, defaultOrMaker: DiastaticPowerUnit.DIASTATIC_POWER_UNIT_UNSPECIFIED, valueOf: DiastaticPowerUnit.valueOf, enumValues: DiastaticPowerUnit.values)
+    ..aOM<$0.BinaryExpression>(2, _omitFieldNames ? '' : 'expression', subBuilder: $0.BinaryExpression.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate clone() => ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate copyWith(void Function(ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate) updates) => super.copyWith((message) => updates(message as ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate)) as ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate create() => ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate._();
+  ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate createEmptyInstance() => create();
+  static $pb.PbList<ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate> createRepeated() => $pb.PbList<ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate>();
+  @$core.pragma('dart2js:noInline')
+  static ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate>(create);
+  static ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  DiastaticPowerUnit get target => $_getN(0);
+  @$pb.TagNumber(1)
+  set target(DiastaticPowerUnit v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTarget() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTarget() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.BinaryExpression get expression => $_getN(1);
+  @$pb.TagNumber(2)
+  set expression($0.BinaryExpression v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasExpression() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearExpression() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.BinaryExpression ensureExpression() => $_ensure(1);
+}
+
+class ConversionDiastaticPowerUnit extends $pb.GeneratedMessage {
+  factory ConversionDiastaticPowerUnit({
+    $core.Iterable<ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate>? rates,
+  }) {
+    final $result = create();
+    if (rates != null) {
+      $result.rates.addAll(rates);
+    }
+    return $result;
+  }
+  ConversionDiastaticPowerUnit._() : super();
+  factory ConversionDiastaticPowerUnit.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversionDiastaticPowerUnit.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionDiastaticPowerUnit', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..pc<ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate>(1, _omitFieldNames ? '' : 'rates', $pb.PbFieldType.PM, subBuilder: ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversionDiastaticPowerUnit clone() => ConversionDiastaticPowerUnit()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversionDiastaticPowerUnit copyWith(void Function(ConversionDiastaticPowerUnit) updates) => super.copyWith((message) => updates(message as ConversionDiastaticPowerUnit)) as ConversionDiastaticPowerUnit;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversionDiastaticPowerUnit create() => ConversionDiastaticPowerUnit._();
+  ConversionDiastaticPowerUnit createEmptyInstance() => create();
+  static $pb.PbList<ConversionDiastaticPowerUnit> createRepeated() => $pb.PbList<ConversionDiastaticPowerUnit>();
+  @$core.pragma('dart2js:noInline')
+  static ConversionDiastaticPowerUnit getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversionDiastaticPowerUnit>(create);
+  static ConversionDiastaticPowerUnit? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate> get rates => $_getList(0);
 }
 
 class TemperatureType extends $pb.GeneratedMessage {
@@ -2111,11 +2222,13 @@ class Measureable_units {
   static final displayName = $pb.Extension<$core.String>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'displayName', 123456788, $pb.PbFieldType.OS);
   static final conversionVolumeUnit = $pb.Extension<ConversionVolumeUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionVolumeUnit', 123456787, $pb.PbFieldType.OM, defaultOrMaker: ConversionVolumeUnit.getDefault, subBuilder: ConversionVolumeUnit.create);
   static final conversionMassUnit = $pb.Extension<ConversionMassUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionMassUnit', 123456786, $pb.PbFieldType.OM, defaultOrMaker: ConversionMassUnit.getDefault, subBuilder: ConversionMassUnit.create);
+  static final conversionDiastaticPowerUnit = $pb.Extension<ConversionDiastaticPowerUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionDiastaticPowerUnit', 123456785, $pb.PbFieldType.OM, defaultOrMaker: ConversionDiastaticPowerUnit.getDefault, subBuilder: ConversionDiastaticPowerUnit.create);
   static void registerAllExtensions($pb.ExtensionRegistry registry) {
     registry.add(stringName);
     registry.add(displayName);
     registry.add(conversionVolumeUnit);
     registry.add(conversionMassUnit);
+    registry.add(conversionDiastaticPowerUnit);
   }
 }
 

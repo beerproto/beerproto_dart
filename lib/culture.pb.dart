@@ -14,8 +14,8 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'culture.pbenum.dart';
-import 'measureable_units.pb.dart' as $0;
-import 'timing.pb.dart' as $3;
+import 'measureable_units.pb.dart' as $1;
+import 'timing.pb.dart' as $4;
 
 export 'culture.pbenum.dart';
 
@@ -25,17 +25,17 @@ class CultureInformation extends $pb.GeneratedMessage {
     $core.String? id,
     CultureBaseForm? form,
     $core.String? producer,
-    $0.TemperatureRangeType? temperatureRange,
+    $1.TemperatureRangeType? temperatureRange,
     $core.String? notes,
     $core.String? bestFor,
     CultureInventoryType? inventory,
     $core.String? productId,
     $core.String? name,
-    $0.PercentType? alcoholTolerance,
+    $1.PercentType? alcoholTolerance,
     $core.bool? glucoamylase,
     CultureBaseType? type,
     QualitativeRangeUnit? flocculation,
-    $0.PercentRangeType? attenuationRange,
+    $1.PercentRangeType? attenuationRange,
     $core.int? maxReuse,
     $core.bool? pof,
     Zymocide? zymocide,
@@ -102,17 +102,17 @@ class CultureInformation extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..e<CultureBaseForm>(2, _omitFieldNames ? '' : 'form', $pb.PbFieldType.OE, defaultOrMaker: CultureBaseForm.CULTURE_BASE_FORM_UNSPECIFIED, valueOf: CultureBaseForm.valueOf, enumValues: CultureBaseForm.values)
     ..aOS(3, _omitFieldNames ? '' : 'producer')
-    ..aOM<$0.TemperatureRangeType>(4, _omitFieldNames ? '' : 'temperatureRange', subBuilder: $0.TemperatureRangeType.create)
+    ..aOM<$1.TemperatureRangeType>(4, _omitFieldNames ? '' : 'temperatureRange', subBuilder: $1.TemperatureRangeType.create)
     ..aOS(5, _omitFieldNames ? '' : 'notes')
     ..aOS(6, _omitFieldNames ? '' : 'bestFor')
     ..aOM<CultureInventoryType>(7, _omitFieldNames ? '' : 'inventory', subBuilder: CultureInventoryType.create)
     ..aOS(8, _omitFieldNames ? '' : 'productId')
     ..aOS(9, _omitFieldNames ? '' : 'name')
-    ..aOM<$0.PercentType>(10, _omitFieldNames ? '' : 'alcoholTolerance', subBuilder: $0.PercentType.create)
+    ..aOM<$1.PercentType>(10, _omitFieldNames ? '' : 'alcoholTolerance', subBuilder: $1.PercentType.create)
     ..aOB(11, _omitFieldNames ? '' : 'glucoamylase')
     ..e<CultureBaseType>(12, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: CultureBaseType.CULTURE_BASE_TYPE_UNSPECIFIED, valueOf: CultureBaseType.valueOf, enumValues: CultureBaseType.values)
     ..e<QualitativeRangeUnit>(13, _omitFieldNames ? '' : 'flocculation', $pb.PbFieldType.OE, defaultOrMaker: QualitativeRangeUnit.QUALITATIVE_RANGE_UNIT_UNSPECIFIED, valueOf: QualitativeRangeUnit.valueOf, enumValues: QualitativeRangeUnit.values)
-    ..aOM<$0.PercentRangeType>(14, _omitFieldNames ? '' : 'attenuationRange', subBuilder: $0.PercentRangeType.create)
+    ..aOM<$1.PercentRangeType>(14, _omitFieldNames ? '' : 'attenuationRange', subBuilder: $1.PercentRangeType.create)
     ..a<$core.int>(15, _omitFieldNames ? '' : 'maxReuse', $pb.PbFieldType.O3)
     ..aOB(16, _omitFieldNames ? '' : 'pof')
     ..aOM<Zymocide>(17, _omitFieldNames ? '' : 'zymocide', subBuilder: Zymocide.create)
@@ -169,15 +169,15 @@ class CultureInformation extends $pb.GeneratedMessage {
 
   /// The recommended temperature range of fermentation by the culture producer.
   @$pb.TagNumber(4)
-  $0.TemperatureRangeType get temperatureRange => $_getN(3);
+  $1.TemperatureRangeType get temperatureRange => $_getN(3);
   @$pb.TagNumber(4)
-  set temperatureRange($0.TemperatureRangeType v) { setField(4, v); }
+  set temperatureRange($1.TemperatureRangeType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasTemperatureRange() => $_has(3);
   @$pb.TagNumber(4)
   void clearTemperatureRange() => clearField(4);
   @$pb.TagNumber(4)
-  $0.TemperatureRangeType ensureTemperatureRange() => $_ensure(3);
+  $1.TemperatureRangeType ensureTemperatureRange() => $_ensure(3);
 
   @$pb.TagNumber(5)
   $core.String get notes => $_getSZ(4);
@@ -229,15 +229,15 @@ class CultureInformation extends $pb.GeneratedMessage {
 
   /// The recommended limit of abv by the culture producer before attenuation stops.
   @$pb.TagNumber(10)
-  $0.PercentType get alcoholTolerance => $_getN(9);
+  $1.PercentType get alcoholTolerance => $_getN(9);
   @$pb.TagNumber(10)
-  set alcoholTolerance($0.PercentType v) { setField(10, v); }
+  set alcoholTolerance($1.PercentType v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasAlcoholTolerance() => $_has(9);
   @$pb.TagNumber(10)
   void clearAlcoholTolerance() => clearField(10);
   @$pb.TagNumber(10)
-  $0.PercentType ensureAlcoholTolerance() => $_ensure(9);
+  $1.PercentType ensureAlcoholTolerance() => $_ensure(9);
 
   /// A glucoamylase positive culture is capable of producing glucoamylase, the enzyme produced through expression of the diastatic gene, which allows yeast to attenuate dextrins and starches leading to a very low FG. This is positive in some saison/brett yeasts as well as the new gulo hybrid by Omega yeast labs.
   @$pb.TagNumber(11)
@@ -269,15 +269,15 @@ class CultureInformation extends $pb.GeneratedMessage {
   void clearFlocculation() => clearField(13);
 
   @$pb.TagNumber(14)
-  $0.PercentRangeType get attenuationRange => $_getN(13);
+  $1.PercentRangeType get attenuationRange => $_getN(13);
   @$pb.TagNumber(14)
-  set attenuationRange($0.PercentRangeType v) { setField(14, v); }
+  set attenuationRange($1.PercentRangeType v) { setField(14, v); }
   @$pb.TagNumber(14)
   $core.bool hasAttenuationRange() => $_has(13);
   @$pb.TagNumber(14)
   void clearAttenuationRange() => clearField(14);
   @$pb.TagNumber(14)
-  $0.PercentRangeType ensureAttenuationRange() => $_ensure(13);
+  $1.PercentRangeType ensureAttenuationRange() => $_ensure(13);
 
   /// Maximum number of times to reuse a culture before a new lab source is recommended.
   @$pb.TagNumber(15)
@@ -329,11 +329,11 @@ class CultureAdditionType extends $pb.GeneratedMessage {
     $core.int? timesCultured,
     $core.String? producer,
     CultureBaseType? type,
-    $0.PercentType? attenuation,
-    $3.TimingType? timing,
-    $0.MassType? mass,
-    $0.UnitType? unit,
-    $0.VolumeType? volume,
+    $1.PercentType? attenuation,
+    $4.TimingType? timing,
+    $1.MassType? mass,
+    $1.UnitType? unit,
+    $1.VolumeType? volume,
   }) {
     final $result = create();
     if (id != null) {
@@ -397,11 +397,11 @@ class CultureAdditionType extends $pb.GeneratedMessage {
     ..a<$core.int>(6, _omitFieldNames ? '' : 'timesCultured', $pb.PbFieldType.O3)
     ..aOS(7, _omitFieldNames ? '' : 'producer')
     ..e<CultureBaseType>(8, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: CultureBaseType.CULTURE_BASE_TYPE_UNSPECIFIED, valueOf: CultureBaseType.valueOf, enumValues: CultureBaseType.values)
-    ..aOM<$0.PercentType>(9, _omitFieldNames ? '' : 'attenuation', subBuilder: $0.PercentType.create)
-    ..aOM<$3.TimingType>(10, _omitFieldNames ? '' : 'timing', subBuilder: $3.TimingType.create)
-    ..aOM<$0.MassType>(11, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
-    ..aOM<$0.UnitType>(12, _omitFieldNames ? '' : 'unit', subBuilder: $0.UnitType.create)
-    ..aOM<$0.VolumeType>(13, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
+    ..aOM<$1.PercentType>(9, _omitFieldNames ? '' : 'attenuation', subBuilder: $1.PercentType.create)
+    ..aOM<$4.TimingType>(10, _omitFieldNames ? '' : 'timing', subBuilder: $4.TimingType.create)
+    ..aOM<$1.MassType>(11, _omitFieldNames ? '' : 'mass', subBuilder: $1.MassType.create)
+    ..aOM<$1.UnitType>(12, _omitFieldNames ? '' : 'unit', subBuilder: $1.UnitType.create)
+    ..aOM<$1.VolumeType>(13, _omitFieldNames ? '' : 'volume', subBuilder: $1.VolumeType.create)
     ..hasRequiredFields = false
   ;
 
@@ -503,68 +503,68 @@ class CultureAdditionType extends $pb.GeneratedMessage {
 
   /// The expected, or measured apparent attenuation for a given culture in a given recipe. In comparison to attenuation range, this is a single value.
   @$pb.TagNumber(9)
-  $0.PercentType get attenuation => $_getN(8);
+  $1.PercentType get attenuation => $_getN(8);
   @$pb.TagNumber(9)
-  set attenuation($0.PercentType v) { setField(9, v); }
+  set attenuation($1.PercentType v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasAttenuation() => $_has(8);
   @$pb.TagNumber(9)
   void clearAttenuation() => clearField(9);
   @$pb.TagNumber(9)
-  $0.PercentType ensureAttenuation() => $_ensure(8);
+  $1.PercentType ensureAttenuation() => $_ensure(8);
 
   /// The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.
   @$pb.TagNumber(10)
-  $3.TimingType get timing => $_getN(9);
+  $4.TimingType get timing => $_getN(9);
   @$pb.TagNumber(10)
-  set timing($3.TimingType v) { setField(10, v); }
+  set timing($4.TimingType v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasTiming() => $_has(9);
   @$pb.TagNumber(10)
   void clearTiming() => clearField(10);
   @$pb.TagNumber(10)
-  $3.TimingType ensureTiming() => $_ensure(9);
+  $4.TimingType ensureTiming() => $_ensure(9);
 
   @$pb.TagNumber(11)
-  $0.MassType get mass => $_getN(10);
+  $1.MassType get mass => $_getN(10);
   @$pb.TagNumber(11)
-  set mass($0.MassType v) { setField(11, v); }
+  set mass($1.MassType v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasMass() => $_has(10);
   @$pb.TagNumber(11)
   void clearMass() => clearField(11);
   @$pb.TagNumber(11)
-  $0.MassType ensureMass() => $_ensure(10);
+  $1.MassType ensureMass() => $_ensure(10);
 
   @$pb.TagNumber(12)
-  $0.UnitType get unit => $_getN(11);
+  $1.UnitType get unit => $_getN(11);
   @$pb.TagNumber(12)
-  set unit($0.UnitType v) { setField(12, v); }
+  set unit($1.UnitType v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasUnit() => $_has(11);
   @$pb.TagNumber(12)
   void clearUnit() => clearField(12);
   @$pb.TagNumber(12)
-  $0.UnitType ensureUnit() => $_ensure(11);
+  $1.UnitType ensureUnit() => $_ensure(11);
 
   @$pb.TagNumber(13)
-  $0.VolumeType get volume => $_getN(12);
+  $1.VolumeType get volume => $_getN(12);
   @$pb.TagNumber(13)
-  set volume($0.VolumeType v) { setField(13, v); }
+  set volume($1.VolumeType v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasVolume() => $_has(12);
   @$pb.TagNumber(13)
   void clearVolume() => clearField(13);
   @$pb.TagNumber(13)
-  $0.VolumeType ensureVolume() => $_ensure(12);
+  $1.VolumeType ensureVolume() => $_ensure(12);
 }
 
 class CultureInventoryType extends $pb.GeneratedMessage {
   factory CultureInventoryType({
-    $0.VolumeType? liquid,
-    $0.MassType? dry,
-    $0.VolumeType? slant,
-    $0.VolumeType? culture,
+    $1.VolumeType? liquid,
+    $1.MassType? dry,
+    $1.VolumeType? slant,
+    $1.VolumeType? culture,
   }) {
     final $result = create();
     if (liquid != null) {
@@ -586,10 +586,10 @@ class CultureInventoryType extends $pb.GeneratedMessage {
   factory CultureInventoryType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CultureInventoryType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<$0.VolumeType>(1, _omitFieldNames ? '' : 'liquid', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.MassType>(2, _omitFieldNames ? '' : 'dry', subBuilder: $0.MassType.create)
-    ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'slant', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.VolumeType>(4, _omitFieldNames ? '' : 'culture', subBuilder: $0.VolumeType.create)
+    ..aOM<$1.VolumeType>(1, _omitFieldNames ? '' : 'liquid', subBuilder: $1.VolumeType.create)
+    ..aOM<$1.MassType>(2, _omitFieldNames ? '' : 'dry', subBuilder: $1.MassType.create)
+    ..aOM<$1.VolumeType>(3, _omitFieldNames ? '' : 'slant', subBuilder: $1.VolumeType.create)
+    ..aOM<$1.VolumeType>(4, _omitFieldNames ? '' : 'culture', subBuilder: $1.VolumeType.create)
     ..hasRequiredFields = false
   ;
 
@@ -615,48 +615,48 @@ class CultureInventoryType extends $pb.GeneratedMessage {
   static CultureInventoryType? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $0.VolumeType get liquid => $_getN(0);
+  $1.VolumeType get liquid => $_getN(0);
   @$pb.TagNumber(1)
-  set liquid($0.VolumeType v) { setField(1, v); }
+  set liquid($1.VolumeType v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLiquid() => $_has(0);
   @$pb.TagNumber(1)
   void clearLiquid() => clearField(1);
   @$pb.TagNumber(1)
-  $0.VolumeType ensureLiquid() => $_ensure(0);
+  $1.VolumeType ensureLiquid() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $0.MassType get dry => $_getN(1);
+  $1.MassType get dry => $_getN(1);
   @$pb.TagNumber(2)
-  set dry($0.MassType v) { setField(2, v); }
+  set dry($1.MassType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasDry() => $_has(1);
   @$pb.TagNumber(2)
   void clearDry() => clearField(2);
   @$pb.TagNumber(2)
-  $0.MassType ensureDry() => $_ensure(1);
+  $1.MassType ensureDry() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $0.VolumeType get slant => $_getN(2);
+  $1.VolumeType get slant => $_getN(2);
   @$pb.TagNumber(3)
-  set slant($0.VolumeType v) { setField(3, v); }
+  set slant($1.VolumeType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasSlant() => $_has(2);
   @$pb.TagNumber(3)
   void clearSlant() => clearField(3);
   @$pb.TagNumber(3)
-  $0.VolumeType ensureSlant() => $_ensure(2);
+  $1.VolumeType ensureSlant() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $0.VolumeType get culture => $_getN(3);
+  $1.VolumeType get culture => $_getN(3);
   @$pb.TagNumber(4)
-  set culture($0.VolumeType v) { setField(4, v); }
+  set culture($1.VolumeType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasCulture() => $_has(3);
   @$pb.TagNumber(4)
   void clearCulture() => clearField(4);
   @$pb.TagNumber(4)
-  $0.VolumeType ensureCulture() => $_ensure(3);
+  $1.VolumeType ensureCulture() => $_ensure(3);
 }
 
 /// Zymocide, also known as killer yeast properties, is common among wine yeast. There are also some ale and brett yeasts that are immune to some zymocidic properties, these are known as killer neutral

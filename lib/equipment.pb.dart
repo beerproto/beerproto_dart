@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'equipment.pbenum.dart';
-import 'measureable_units.pb.dart' as $0;
+import 'measureable_units.pb.dart' as $1;
 
 export 'equipment.pbenum.dart';
 
@@ -23,17 +23,17 @@ class EquipmentItemType extends $pb.GeneratedMessage {
   factory EquipmentItemType({
     $core.String? id,
     $core.String? notes,
-    $0.VolumeType? boilRatePerHour,
+    $1.VolumeType? boilRatePerHour,
     $core.String? type,
     EquipmentBaseForm? form,
-    $0.VolumeType? drainRatePerMinute,
-    $0.SpecificHeatType? specificHeat,
-    $0.SpecificVolumeType? grainAbsorptionRate,
+    $1.VolumeType? drainRatePerMinute,
+    $1.SpecificHeatType? specificHeat,
+    $1.SpecificVolumeType? grainAbsorptionRate,
     $core.String? name,
-    $0.VolumeType? maximumVolume,
-    $0.MassType? weight,
-    $0.VolumeType? loss,
-    $0.PercentType? efficiency,
+    $1.VolumeType? maximumVolume,
+    $1.MassType? weight,
+    $1.VolumeType? loss,
+    $1.PercentType? efficiency,
   }) {
     final $result = create();
     if (id != null) {
@@ -84,17 +84,17 @@ class EquipmentItemType extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EquipmentItemType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'notes')
-    ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'boilRatePerHour', subBuilder: $0.VolumeType.create)
+    ..aOM<$1.VolumeType>(3, _omitFieldNames ? '' : 'boilRatePerHour', subBuilder: $1.VolumeType.create)
     ..aOS(4, _omitFieldNames ? '' : 'type')
     ..e<EquipmentBaseForm>(5, _omitFieldNames ? '' : 'form', $pb.PbFieldType.OE, defaultOrMaker: EquipmentBaseForm.EQUIPMENT_BASE_FORM_UNSPECIFIED, valueOf: EquipmentBaseForm.valueOf, enumValues: EquipmentBaseForm.values)
-    ..aOM<$0.VolumeType>(6, _omitFieldNames ? '' : 'drainRatePerMinute', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.SpecificHeatType>(7, _omitFieldNames ? '' : 'specificHeat', subBuilder: $0.SpecificHeatType.create)
-    ..aOM<$0.SpecificVolumeType>(8, _omitFieldNames ? '' : 'grainAbsorptionRate', subBuilder: $0.SpecificVolumeType.create)
+    ..aOM<$1.VolumeType>(6, _omitFieldNames ? '' : 'drainRatePerMinute', subBuilder: $1.VolumeType.create)
+    ..aOM<$1.SpecificHeatType>(7, _omitFieldNames ? '' : 'specificHeat', subBuilder: $1.SpecificHeatType.create)
+    ..aOM<$1.SpecificVolumeType>(8, _omitFieldNames ? '' : 'grainAbsorptionRate', subBuilder: $1.SpecificVolumeType.create)
     ..aOS(9, _omitFieldNames ? '' : 'name')
-    ..aOM<$0.VolumeType>(10, _omitFieldNames ? '' : 'maximumVolume', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.MassType>(11, _omitFieldNames ? '' : 'weight', subBuilder: $0.MassType.create)
-    ..aOM<$0.VolumeType>(12, _omitFieldNames ? '' : 'loss', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.PercentType>(13, _omitFieldNames ? '' : 'efficiency', subBuilder: $0.PercentType.create)
+    ..aOM<$1.VolumeType>(10, _omitFieldNames ? '' : 'maximumVolume', subBuilder: $1.VolumeType.create)
+    ..aOM<$1.MassType>(11, _omitFieldNames ? '' : 'weight', subBuilder: $1.MassType.create)
+    ..aOM<$1.VolumeType>(12, _omitFieldNames ? '' : 'loss', subBuilder: $1.VolumeType.create)
+    ..aOM<$1.PercentType>(13, _omitFieldNames ? '' : 'efficiency', subBuilder: $1.PercentType.create)
     ..hasRequiredFields = false
   ;
 
@@ -139,15 +139,15 @@ class EquipmentItemType extends $pb.GeneratedMessage {
 
   /// The volume boiled off during 1 hour, measured before and after at room temperature.
   @$pb.TagNumber(3)
-  $0.VolumeType get boilRatePerHour => $_getN(2);
+  $1.VolumeType get boilRatePerHour => $_getN(2);
   @$pb.TagNumber(3)
-  set boilRatePerHour($0.VolumeType v) { setField(3, v); }
+  set boilRatePerHour($1.VolumeType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasBoilRatePerHour() => $_has(2);
   @$pb.TagNumber(3)
   void clearBoilRatePerHour() => clearField(3);
   @$pb.TagNumber(3)
-  $0.VolumeType ensureBoilRatePerHour() => $_ensure(2);
+  $1.VolumeType ensureBoilRatePerHour() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.String get type => $_getSZ(3);
@@ -169,39 +169,39 @@ class EquipmentItemType extends $pb.GeneratedMessage {
 
   /// The volume that leaves the kettle, especially important for non-immersion chillers that cool the wort as it leaves the kettle.
   @$pb.TagNumber(6)
-  $0.VolumeType get drainRatePerMinute => $_getN(5);
+  $1.VolumeType get drainRatePerMinute => $_getN(5);
   @$pb.TagNumber(6)
-  set drainRatePerMinute($0.VolumeType v) { setField(6, v); }
+  set drainRatePerMinute($1.VolumeType v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasDrainRatePerMinute() => $_has(5);
   @$pb.TagNumber(6)
   void clearDrainRatePerMinute() => clearField(6);
   @$pb.TagNumber(6)
-  $0.VolumeType ensureDrainRatePerMinute() => $_ensure(5);
+  $1.VolumeType ensureDrainRatePerMinute() => $_ensure(5);
 
   /// The specific heat of the piece of equipment, expressed in Cal/(g*C), especially important for when the mashtun is not preheated.
   @$pb.TagNumber(7)
-  $0.SpecificHeatType get specificHeat => $_getN(6);
+  $1.SpecificHeatType get specificHeat => $_getN(6);
   @$pb.TagNumber(7)
-  set specificHeat($0.SpecificHeatType v) { setField(7, v); }
+  set specificHeat($1.SpecificHeatType v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasSpecificHeat() => $_has(6);
   @$pb.TagNumber(7)
   void clearSpecificHeat() => clearField(7);
   @$pb.TagNumber(7)
-  $0.SpecificHeatType ensureSpecificHeat() => $_ensure(6);
+  $1.SpecificHeatType ensureSpecificHeat() => $_ensure(6);
 
   /// The apparent volume absorbed by grain, typical values are 0.125 qt/lb (1.04 L/kg) for a mashtun, 0.08 gal/lb (0.66 L/kg) for BIAB.
   @$pb.TagNumber(8)
-  $0.SpecificVolumeType get grainAbsorptionRate => $_getN(7);
+  $1.SpecificVolumeType get grainAbsorptionRate => $_getN(7);
   @$pb.TagNumber(8)
-  set grainAbsorptionRate($0.SpecificVolumeType v) { setField(8, v); }
+  set grainAbsorptionRate($1.SpecificVolumeType v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasGrainAbsorptionRate() => $_has(7);
   @$pb.TagNumber(8)
   void clearGrainAbsorptionRate() => clearField(8);
   @$pb.TagNumber(8)
-  $0.SpecificVolumeType ensureGrainAbsorptionRate() => $_ensure(7);
+  $1.SpecificVolumeType ensureGrainAbsorptionRate() => $_ensure(7);
 
   @$pb.TagNumber(9)
   $core.String get name => $_getSZ(8);
@@ -213,49 +213,49 @@ class EquipmentItemType extends $pb.GeneratedMessage {
   void clearName() => clearField(9);
 
   @$pb.TagNumber(10)
-  $0.VolumeType get maximumVolume => $_getN(9);
+  $1.VolumeType get maximumVolume => $_getN(9);
   @$pb.TagNumber(10)
-  set maximumVolume($0.VolumeType v) { setField(10, v); }
+  set maximumVolume($1.VolumeType v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasMaximumVolume() => $_has(9);
   @$pb.TagNumber(10)
   void clearMaximumVolume() => clearField(10);
   @$pb.TagNumber(10)
-  $0.VolumeType ensureMaximumVolume() => $_ensure(9);
+  $1.VolumeType ensureMaximumVolume() => $_ensure(9);
 
   /// The weight of the piece of equipment, especially important for when the mashtun is not preheated.
   @$pb.TagNumber(11)
-  $0.MassType get weight => $_getN(10);
+  $1.MassType get weight => $_getN(10);
   @$pb.TagNumber(11)
-  set weight($0.MassType v) { setField(11, v); }
+  set weight($1.MassType v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasWeight() => $_has(10);
   @$pb.TagNumber(11)
   void clearWeight() => clearField(11);
   @$pb.TagNumber(11)
-  $0.MassType ensureWeight() => $_ensure(10);
+  $1.MassType ensureWeight() => $_ensure(10);
 
   @$pb.TagNumber(12)
-  $0.VolumeType get loss => $_getN(11);
+  $1.VolumeType get loss => $_getN(11);
   @$pb.TagNumber(12)
-  set loss($0.VolumeType v) { setField(12, v); }
+  set loss($1.VolumeType v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasLoss() => $_has(11);
   @$pb.TagNumber(12)
   void clearLoss() => clearField(12);
   @$pb.TagNumber(12)
-  $0.VolumeType ensureLoss() => $_ensure(11);
+  $1.VolumeType ensureLoss() => $_ensure(11);
 
   @$pb.TagNumber(13)
-  $0.PercentType get efficiency => $_getN(12);
+  $1.PercentType get efficiency => $_getN(12);
   @$pb.TagNumber(13)
-  set efficiency($0.PercentType v) { setField(13, v); }
+  set efficiency($1.PercentType v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasEfficiency() => $_has(12);
   @$pb.TagNumber(13)
   void clearEfficiency() => clearField(13);
   @$pb.TagNumber(13)
-  $0.PercentType ensureEfficiency() => $_ensure(12);
+  $1.PercentType ensureEfficiency() => $_ensure(12);
 }
 
 /// Provides necessary information for brewing equipment set
@@ -264,7 +264,7 @@ class EquipmentType extends $pb.GeneratedMessage {
     $core.String? id,
     $core.String? name,
     $core.Iterable<EquipmentItemType>? equipmentItems,
-    $0.PercentType? brewhouseEfficiency,
+    $1.PercentType? brewhouseEfficiency,
   }) {
     final $result = create();
     if (id != null) {
@@ -289,7 +289,7 @@ class EquipmentType extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'name')
     ..pc<EquipmentItemType>(3, _omitFieldNames ? '' : 'equipmentItems', $pb.PbFieldType.PM, subBuilder: EquipmentItemType.create)
-    ..aOM<$0.PercentType>(4, _omitFieldNames ? '' : 'brewhouseEfficiency', subBuilder: $0.PercentType.create)
+    ..aOM<$1.PercentType>(4, _omitFieldNames ? '' : 'brewhouseEfficiency', subBuilder: $1.PercentType.create)
     ..hasRequiredFields = false
   ;
 
@@ -336,15 +336,15 @@ class EquipmentType extends $pb.GeneratedMessage {
   $core.List<EquipmentItemType> get equipmentItems => $_getList(2);
 
   @$pb.TagNumber(4)
-  $0.PercentType get brewhouseEfficiency => $_getN(3);
+  $1.PercentType get brewhouseEfficiency => $_getN(3);
   @$pb.TagNumber(4)
-  set brewhouseEfficiency($0.PercentType v) { setField(4, v); }
+  set brewhouseEfficiency($1.PercentType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasBrewhouseEfficiency() => $_has(3);
   @$pb.TagNumber(4)
   void clearBrewhouseEfficiency() => clearField(4);
   @$pb.TagNumber(4)
-  $0.PercentType ensureBrewhouseEfficiency() => $_ensure(3);
+  $1.PercentType ensureBrewhouseEfficiency() => $_ensure(3);
 }
 
 

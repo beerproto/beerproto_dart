@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'measureable_units.pb.dart' as $0;
+import 'measureable_units.pb.dart' as $1;
 import 'style.pbenum.dart';
 
 export 'style.pbenum.dart';
@@ -28,15 +28,15 @@ class StyleType extends $pb.GeneratedMessage {
     $core.String? notes,
     $core.String? flavor,
     $core.String? mouthfeel,
-    $0.GravityRangeType? finalGravity,
+    $1.GravityRangeType? finalGravity,
     $core.String? styleGuide,
-    $0.ColorRangeType? color,
-    $0.GravityRangeType? originalGravity,
+    $1.ColorRangeType? color,
+    $1.GravityRangeType? originalGravity,
     $core.String? examples,
     $core.String? name,
-    $0.CarbonationRangeType? carbonation,
-    $0.PercentRangeType? alcoholByVolume,
-    $0.BitternessRangeType? internationalBitternessUnits,
+    $1.CarbonationRangeType? carbonation,
+    $1.PercentRangeType? alcoholByVolume,
+    $1.BitternessRangeType? internationalBitternessUnits,
     $core.String? appearance,
     $core.String? category,
     $core.String? styleLetter,
@@ -121,15 +121,15 @@ class StyleType extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'notes')
     ..aOS(6, _omitFieldNames ? '' : 'flavor')
     ..aOS(7, _omitFieldNames ? '' : 'mouthfeel')
-    ..aOM<$0.GravityRangeType>(8, _omitFieldNames ? '' : 'finalGravity', subBuilder: $0.GravityRangeType.create)
+    ..aOM<$1.GravityRangeType>(8, _omitFieldNames ? '' : 'finalGravity', subBuilder: $1.GravityRangeType.create)
     ..aOS(9, _omitFieldNames ? '' : 'styleGuide')
-    ..aOM<$0.ColorRangeType>(10, _omitFieldNames ? '' : 'color', subBuilder: $0.ColorRangeType.create)
-    ..aOM<$0.GravityRangeType>(11, _omitFieldNames ? '' : 'originalGravity', subBuilder: $0.GravityRangeType.create)
+    ..aOM<$1.ColorRangeType>(10, _omitFieldNames ? '' : 'color', subBuilder: $1.ColorRangeType.create)
+    ..aOM<$1.GravityRangeType>(11, _omitFieldNames ? '' : 'originalGravity', subBuilder: $1.GravityRangeType.create)
     ..aOS(12, _omitFieldNames ? '' : 'examples')
     ..aOS(13, _omitFieldNames ? '' : 'name')
-    ..aOM<$0.CarbonationRangeType>(14, _omitFieldNames ? '' : 'carbonation', subBuilder: $0.CarbonationRangeType.create)
-    ..aOM<$0.PercentRangeType>(15, _omitFieldNames ? '' : 'alcoholByVolume', subBuilder: $0.PercentRangeType.create)
-    ..aOM<$0.BitternessRangeType>(16, _omitFieldNames ? '' : 'internationalBitternessUnits', subBuilder: $0.BitternessRangeType.create)
+    ..aOM<$1.CarbonationRangeType>(14, _omitFieldNames ? '' : 'carbonation', subBuilder: $1.CarbonationRangeType.create)
+    ..aOM<$1.PercentRangeType>(15, _omitFieldNames ? '' : 'alcoholByVolume', subBuilder: $1.PercentRangeType.create)
+    ..aOM<$1.BitternessRangeType>(16, _omitFieldNames ? '' : 'internationalBitternessUnits', subBuilder: $1.BitternessRangeType.create)
     ..aOS(17, _omitFieldNames ? '' : 'appearance')
     ..aOS(18, _omitFieldNames ? '' : 'category')
     ..aOS(19, _omitFieldNames ? '' : 'styleLetter')
@@ -223,15 +223,15 @@ class StyleType extends $pb.GeneratedMessage {
   void clearMouthfeel() => clearField(7);
 
   @$pb.TagNumber(8)
-  $0.GravityRangeType get finalGravity => $_getN(7);
+  $1.GravityRangeType get finalGravity => $_getN(7);
   @$pb.TagNumber(8)
-  set finalGravity($0.GravityRangeType v) { setField(8, v); }
+  set finalGravity($1.GravityRangeType v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasFinalGravity() => $_has(7);
   @$pb.TagNumber(8)
   void clearFinalGravity() => clearField(8);
   @$pb.TagNumber(8)
-  $0.GravityRangeType ensureFinalGravity() => $_ensure(7);
+  $1.GravityRangeType ensureFinalGravity() => $_ensure(7);
 
   @$pb.TagNumber(9)
   $core.String get styleGuide => $_getSZ(8);
@@ -243,26 +243,26 @@ class StyleType extends $pb.GeneratedMessage {
   void clearStyleGuide() => clearField(9);
 
   @$pb.TagNumber(10)
-  $0.ColorRangeType get color => $_getN(9);
+  $1.ColorRangeType get color => $_getN(9);
   @$pb.TagNumber(10)
-  set color($0.ColorRangeType v) { setField(10, v); }
+  set color($1.ColorRangeType v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasColor() => $_has(9);
   @$pb.TagNumber(10)
   void clearColor() => clearField(10);
   @$pb.TagNumber(10)
-  $0.ColorRangeType ensureColor() => $_ensure(9);
+  $1.ColorRangeType ensureColor() => $_ensure(9);
 
   @$pb.TagNumber(11)
-  $0.GravityRangeType get originalGravity => $_getN(10);
+  $1.GravityRangeType get originalGravity => $_getN(10);
   @$pb.TagNumber(11)
-  set originalGravity($0.GravityRangeType v) { setField(11, v); }
+  set originalGravity($1.GravityRangeType v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasOriginalGravity() => $_has(10);
   @$pb.TagNumber(11)
   void clearOriginalGravity() => clearField(11);
   @$pb.TagNumber(11)
-  $0.GravityRangeType ensureOriginalGravity() => $_ensure(10);
+  $1.GravityRangeType ensureOriginalGravity() => $_ensure(10);
 
   @$pb.TagNumber(12)
   $core.String get examples => $_getSZ(11);
@@ -283,37 +283,37 @@ class StyleType extends $pb.GeneratedMessage {
   void clearName() => clearField(13);
 
   @$pb.TagNumber(14)
-  $0.CarbonationRangeType get carbonation => $_getN(13);
+  $1.CarbonationRangeType get carbonation => $_getN(13);
   @$pb.TagNumber(14)
-  set carbonation($0.CarbonationRangeType v) { setField(14, v); }
+  set carbonation($1.CarbonationRangeType v) { setField(14, v); }
   @$pb.TagNumber(14)
   $core.bool hasCarbonation() => $_has(13);
   @$pb.TagNumber(14)
   void clearCarbonation() => clearField(14);
   @$pb.TagNumber(14)
-  $0.CarbonationRangeType ensureCarbonation() => $_ensure(13);
+  $1.CarbonationRangeType ensureCarbonation() => $_ensure(13);
 
   @$pb.TagNumber(15)
-  $0.PercentRangeType get alcoholByVolume => $_getN(14);
+  $1.PercentRangeType get alcoholByVolume => $_getN(14);
   @$pb.TagNumber(15)
-  set alcoholByVolume($0.PercentRangeType v) { setField(15, v); }
+  set alcoholByVolume($1.PercentRangeType v) { setField(15, v); }
   @$pb.TagNumber(15)
   $core.bool hasAlcoholByVolume() => $_has(14);
   @$pb.TagNumber(15)
   void clearAlcoholByVolume() => clearField(15);
   @$pb.TagNumber(15)
-  $0.PercentRangeType ensureAlcoholByVolume() => $_ensure(14);
+  $1.PercentRangeType ensureAlcoholByVolume() => $_ensure(14);
 
   @$pb.TagNumber(16)
-  $0.BitternessRangeType get internationalBitternessUnits => $_getN(15);
+  $1.BitternessRangeType get internationalBitternessUnits => $_getN(15);
   @$pb.TagNumber(16)
-  set internationalBitternessUnits($0.BitternessRangeType v) { setField(16, v); }
+  set internationalBitternessUnits($1.BitternessRangeType v) { setField(16, v); }
   @$pb.TagNumber(16)
   $core.bool hasInternationalBitternessUnits() => $_has(15);
   @$pb.TagNumber(16)
   void clearInternationalBitternessUnits() => clearField(16);
   @$pb.TagNumber(16)
-  $0.BitternessRangeType ensureInternationalBitternessUnits() => $_ensure(15);
+  $1.BitternessRangeType ensureInternationalBitternessUnits() => $_ensure(15);
 
   @$pb.TagNumber(17)
   $core.String get appearance => $_getSZ(16);

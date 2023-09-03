@@ -13,18 +13,18 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'boil.pb.dart' as $12;
-import 'culture.pb.dart' as $14;
-import 'fermentable.pb.dart' as $16;
-import 'fermentation.pb.dart' as $9;
-import 'hop.pb.dart' as $8;
-import 'mash.pb.dart' as $10;
-import 'measureable_units.pb.dart' as $0;
-import 'misc.pb.dart' as $13;
-import 'packaging.pb.dart' as $11;
+import 'boil.pb.dart' as $13;
+import 'culture.pb.dart' as $15;
+import 'fermentable.pb.dart' as $17;
+import 'fermentation.pb.dart' as $10;
+import 'hop.pb.dart' as $9;
+import 'mash.pb.dart' as $11;
+import 'measureable_units.pb.dart' as $1;
+import 'misc.pb.dart' as $14;
+import 'packaging.pb.dart' as $12;
 import 'recipe.pbenum.dart';
-import 'style.pb.dart' as $7;
-import 'water.pb.dart' as $15;
+import 'style.pb.dart' as $8;
+import 'water.pb.dart' as $16;
 
 export 'recipe.pbenum.dart';
 
@@ -33,29 +33,29 @@ class RecipeType extends $pb.GeneratedMessage {
   factory RecipeType({
     $core.String? id,
     EfficiencyType? efficiency,
-    $7.RecipeStyleType? style,
-    $8.IBUEstimateType? ibuEstimate,
-    $0.ColorType? colorEstimate,
-    $0.AcidityType? beerPh,
+    $8.RecipeStyleType? style,
+    $9.IBUEstimateType? ibuEstimate,
+    $1.ColorType? colorEstimate,
+    $1.AcidityType? beerPh,
     $core.String? name,
     RecipeUnit? type,
     $core.String? coauthor,
-    $0.GravityType? originalGravity,
-    $0.GravityType? finalGravity,
+    $1.GravityType? originalGravity,
+    $1.GravityType? finalGravity,
     $core.double? carbonation,
-    $9.FermentationProcedureType? fermentation,
+    $10.FermentationProcedureType? fermentation,
     $core.String? author,
     IngredientsType? ingredients,
-    $10.MashProcedureType? mash,
-    $11.PackagingProcedureType? packaging,
-    $12.BoilProcedureType? boil,
+    $11.MashProcedureType? mash,
+    $12.PackagingProcedureType? packaging,
+    $13.BoilProcedureType? boil,
     TasteType? taste,
     $core.double? caloriesPerPint,
     $core.String? created,
-    $0.VolumeType? batchSize,
+    $1.VolumeType? batchSize,
     $core.String? notes,
-    $0.PercentType? alcoholByVolume,
-    $0.PercentType? apparentAttenuation,
+    $1.PercentType? alcoholByVolume,
+    $1.PercentType? apparentAttenuation,
   }) {
     final $result = create();
     if (id != null) {
@@ -142,29 +142,29 @@ class RecipeType extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RecipeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOM<EfficiencyType>(2, _omitFieldNames ? '' : 'efficiency', subBuilder: EfficiencyType.create)
-    ..aOM<$7.RecipeStyleType>(3, _omitFieldNames ? '' : 'style', subBuilder: $7.RecipeStyleType.create)
-    ..aOM<$8.IBUEstimateType>(4, _omitFieldNames ? '' : 'ibuEstimate', subBuilder: $8.IBUEstimateType.create)
-    ..aOM<$0.ColorType>(5, _omitFieldNames ? '' : 'colorEstimate', subBuilder: $0.ColorType.create)
-    ..aOM<$0.AcidityType>(6, _omitFieldNames ? '' : 'beerPh', subBuilder: $0.AcidityType.create)
+    ..aOM<$8.RecipeStyleType>(3, _omitFieldNames ? '' : 'style', subBuilder: $8.RecipeStyleType.create)
+    ..aOM<$9.IBUEstimateType>(4, _omitFieldNames ? '' : 'ibuEstimate', subBuilder: $9.IBUEstimateType.create)
+    ..aOM<$1.ColorType>(5, _omitFieldNames ? '' : 'colorEstimate', subBuilder: $1.ColorType.create)
+    ..aOM<$1.AcidityType>(6, _omitFieldNames ? '' : 'beerPh', subBuilder: $1.AcidityType.create)
     ..aOS(7, _omitFieldNames ? '' : 'name')
     ..e<RecipeUnit>(8, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: RecipeUnit.RECIPE_UNIT_UNSPECIFIED, valueOf: RecipeUnit.valueOf, enumValues: RecipeUnit.values)
     ..aOS(9, _omitFieldNames ? '' : 'coauthor')
-    ..aOM<$0.GravityType>(10, _omitFieldNames ? '' : 'originalGravity', subBuilder: $0.GravityType.create)
-    ..aOM<$0.GravityType>(11, _omitFieldNames ? '' : 'finalGravity', subBuilder: $0.GravityType.create)
+    ..aOM<$1.GravityType>(10, _omitFieldNames ? '' : 'originalGravity', subBuilder: $1.GravityType.create)
+    ..aOM<$1.GravityType>(11, _omitFieldNames ? '' : 'finalGravity', subBuilder: $1.GravityType.create)
     ..a<$core.double>(12, _omitFieldNames ? '' : 'carbonation', $pb.PbFieldType.OD)
-    ..aOM<$9.FermentationProcedureType>(13, _omitFieldNames ? '' : 'fermentation', subBuilder: $9.FermentationProcedureType.create)
+    ..aOM<$10.FermentationProcedureType>(13, _omitFieldNames ? '' : 'fermentation', subBuilder: $10.FermentationProcedureType.create)
     ..aOS(14, _omitFieldNames ? '' : 'author')
     ..aOM<IngredientsType>(15, _omitFieldNames ? '' : 'ingredients', subBuilder: IngredientsType.create)
-    ..aOM<$10.MashProcedureType>(16, _omitFieldNames ? '' : 'mash', subBuilder: $10.MashProcedureType.create)
-    ..aOM<$11.PackagingProcedureType>(17, _omitFieldNames ? '' : 'packaging', subBuilder: $11.PackagingProcedureType.create)
-    ..aOM<$12.BoilProcedureType>(18, _omitFieldNames ? '' : 'boil', subBuilder: $12.BoilProcedureType.create)
+    ..aOM<$11.MashProcedureType>(16, _omitFieldNames ? '' : 'mash', subBuilder: $11.MashProcedureType.create)
+    ..aOM<$12.PackagingProcedureType>(17, _omitFieldNames ? '' : 'packaging', subBuilder: $12.PackagingProcedureType.create)
+    ..aOM<$13.BoilProcedureType>(18, _omitFieldNames ? '' : 'boil', subBuilder: $13.BoilProcedureType.create)
     ..aOM<TasteType>(19, _omitFieldNames ? '' : 'taste', subBuilder: TasteType.create)
     ..a<$core.double>(20, _omitFieldNames ? '' : 'caloriesPerPint', $pb.PbFieldType.OD)
     ..aOS(21, _omitFieldNames ? '' : 'created')
-    ..aOM<$0.VolumeType>(22, _omitFieldNames ? '' : 'batchSize', subBuilder: $0.VolumeType.create)
+    ..aOM<$1.VolumeType>(22, _omitFieldNames ? '' : 'batchSize', subBuilder: $1.VolumeType.create)
     ..aOS(23, _omitFieldNames ? '' : 'notes')
-    ..aOM<$0.PercentType>(24, _omitFieldNames ? '' : 'alcoholByVolume', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(25, _omitFieldNames ? '' : 'apparentAttenuation', subBuilder: $0.PercentType.create)
+    ..aOM<$1.PercentType>(24, _omitFieldNames ? '' : 'alcoholByVolume', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(25, _omitFieldNames ? '' : 'apparentAttenuation', subBuilder: $1.PercentType.create)
     ..hasRequiredFields = false
   ;
 
@@ -211,51 +211,51 @@ class RecipeType extends $pb.GeneratedMessage {
   EfficiencyType ensureEfficiency() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $7.RecipeStyleType get style => $_getN(2);
+  $8.RecipeStyleType get style => $_getN(2);
   @$pb.TagNumber(3)
-  set style($7.RecipeStyleType v) { setField(3, v); }
+  set style($8.RecipeStyleType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStyle() => $_has(2);
   @$pb.TagNumber(3)
   void clearStyle() => clearField(3);
   @$pb.TagNumber(3)
-  $7.RecipeStyleType ensureStyle() => $_ensure(2);
+  $8.RecipeStyleType ensureStyle() => $_ensure(2);
 
   /// Used to differentiate the which IBU formula is being used in a recipe. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, then please use `Other` for transparency
   @$pb.TagNumber(4)
-  $8.IBUEstimateType get ibuEstimate => $_getN(3);
+  $9.IBUEstimateType get ibuEstimate => $_getN(3);
   @$pb.TagNumber(4)
-  set ibuEstimate($8.IBUEstimateType v) { setField(4, v); }
+  set ibuEstimate($9.IBUEstimateType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasIbuEstimate() => $_has(3);
   @$pb.TagNumber(4)
   void clearIbuEstimate() => clearField(4);
   @$pb.TagNumber(4)
-  $8.IBUEstimateType ensureIbuEstimate() => $_ensure(3);
+  $9.IBUEstimateType ensureIbuEstimate() => $_ensure(3);
 
   /// The color of the finished beer, using SRM or EBC
   @$pb.TagNumber(5)
-  $0.ColorType get colorEstimate => $_getN(4);
+  $1.ColorType get colorEstimate => $_getN(4);
   @$pb.TagNumber(5)
-  set colorEstimate($0.ColorType v) { setField(5, v); }
+  set colorEstimate($1.ColorType v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasColorEstimate() => $_has(4);
   @$pb.TagNumber(5)
   void clearColorEstimate() => clearField(5);
   @$pb.TagNumber(5)
-  $0.ColorType ensureColorEstimate() => $_ensure(4);
+  $1.ColorType ensureColorEstimate() => $_ensure(4);
 
   /// The final beer pH at the end of fermentation
   @$pb.TagNumber(6)
-  $0.AcidityType get beerPh => $_getN(5);
+  $1.AcidityType get beerPh => $_getN(5);
   @$pb.TagNumber(6)
-  set beerPh($0.AcidityType v) { setField(6, v); }
+  set beerPh($1.AcidityType v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasBeerPh() => $_has(5);
   @$pb.TagNumber(6)
   void clearBeerPh() => clearField(6);
   @$pb.TagNumber(6)
-  $0.AcidityType ensureBeerPh() => $_ensure(5);
+  $1.AcidityType ensureBeerPh() => $_ensure(5);
 
   @$pb.TagNumber(7)
   $core.String get name => $_getSZ(6);
@@ -286,27 +286,27 @@ class RecipeType extends $pb.GeneratedMessage {
 
   /// The gravity of wort when transffered to the fermenter
   @$pb.TagNumber(10)
-  $0.GravityType get originalGravity => $_getN(9);
+  $1.GravityType get originalGravity => $_getN(9);
   @$pb.TagNumber(10)
-  set originalGravity($0.GravityType v) { setField(10, v); }
+  set originalGravity($1.GravityType v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasOriginalGravity() => $_has(9);
   @$pb.TagNumber(10)
   void clearOriginalGravity() => clearField(10);
   @$pb.TagNumber(10)
-  $0.GravityType ensureOriginalGravity() => $_ensure(9);
+  $1.GravityType ensureOriginalGravity() => $_ensure(9);
 
   /// The gravity of beer at the end of fermentation
   @$pb.TagNumber(11)
-  $0.GravityType get finalGravity => $_getN(10);
+  $1.GravityType get finalGravity => $_getN(10);
   @$pb.TagNumber(11)
-  set finalGravity($0.GravityType v) { setField(11, v); }
+  set finalGravity($1.GravityType v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasFinalGravity() => $_has(10);
   @$pb.TagNumber(11)
   void clearFinalGravity() => clearField(11);
   @$pb.TagNumber(11)
-  $0.GravityType ensureFinalGravity() => $_ensure(10);
+  $1.GravityType ensureFinalGravity() => $_ensure(10);
 
   /// The final carbonation of the beer when packaged or served
   @$pb.TagNumber(12)
@@ -320,15 +320,15 @@ class RecipeType extends $pb.GeneratedMessage {
 
   /// FermentationProcedureType defines the procedure for performing fermentation
   @$pb.TagNumber(13)
-  $9.FermentationProcedureType get fermentation => $_getN(12);
+  $10.FermentationProcedureType get fermentation => $_getN(12);
   @$pb.TagNumber(13)
-  set fermentation($9.FermentationProcedureType v) { setField(13, v); }
+  set fermentation($10.FermentationProcedureType v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasFermentation() => $_has(12);
   @$pb.TagNumber(13)
   void clearFermentation() => clearField(13);
   @$pb.TagNumber(13)
-  $9.FermentationProcedureType ensureFermentation() => $_ensure(12);
+  $10.FermentationProcedureType ensureFermentation() => $_ensure(12);
 
   @$pb.TagNumber(14)
   $core.String get author => $_getSZ(13);
@@ -353,39 +353,39 @@ class RecipeType extends $pb.GeneratedMessage {
 
   /// This defines the procedure for performing unique mashing processes
   @$pb.TagNumber(16)
-  $10.MashProcedureType get mash => $_getN(15);
+  $11.MashProcedureType get mash => $_getN(15);
   @$pb.TagNumber(16)
-  set mash($10.MashProcedureType v) { setField(16, v); }
+  set mash($11.MashProcedureType v) { setField(16, v); }
   @$pb.TagNumber(16)
   $core.bool hasMash() => $_has(15);
   @$pb.TagNumber(16)
   void clearMash() => clearField(16);
   @$pb.TagNumber(16)
-  $10.MashProcedureType ensureMash() => $_ensure(15);
+  $11.MashProcedureType ensureMash() => $_ensure(15);
 
   /// Describes the procedure for packaging your beverage
   @$pb.TagNumber(17)
-  $11.PackagingProcedureType get packaging => $_getN(16);
+  $12.PackagingProcedureType get packaging => $_getN(16);
   @$pb.TagNumber(17)
-  set packaging($11.PackagingProcedureType v) { setField(17, v); }
+  set packaging($12.PackagingProcedureType v) { setField(17, v); }
   @$pb.TagNumber(17)
   $core.bool hasPackaging() => $_has(16);
   @$pb.TagNumber(17)
   void clearPackaging() => clearField(17);
   @$pb.TagNumber(17)
-  $11.PackagingProcedureType ensurePackaging() => $_ensure(16);
+  $12.PackagingProcedureType ensurePackaging() => $_ensure(16);
 
   /// Defines the procedure for performing a boil. A boil procedure with no steps is the same as a standard single step boil
   @$pb.TagNumber(18)
-  $12.BoilProcedureType get boil => $_getN(17);
+  $13.BoilProcedureType get boil => $_getN(17);
   @$pb.TagNumber(18)
-  set boil($12.BoilProcedureType v) { setField(18, v); }
+  set boil($13.BoilProcedureType v) { setField(18, v); }
   @$pb.TagNumber(18)
   $core.bool hasBoil() => $_has(17);
   @$pb.TagNumber(18)
   void clearBoil() => clearField(18);
   @$pb.TagNumber(18)
-  $12.BoilProcedureType ensureBoil() => $_ensure(17);
+  $13.BoilProcedureType ensureBoil() => $_ensure(17);
 
   /// Used to store subjective tasting notes, and rating
   @$pb.TagNumber(19)
@@ -419,15 +419,15 @@ class RecipeType extends $pb.GeneratedMessage {
 
   /// The volume into the fermenter
   @$pb.TagNumber(22)
-  $0.VolumeType get batchSize => $_getN(21);
+  $1.VolumeType get batchSize => $_getN(21);
   @$pb.TagNumber(22)
-  set batchSize($0.VolumeType v) { setField(22, v); }
+  set batchSize($1.VolumeType v) { setField(22, v); }
   @$pb.TagNumber(22)
   $core.bool hasBatchSize() => $_has(21);
   @$pb.TagNumber(22)
   void clearBatchSize() => clearField(22);
   @$pb.TagNumber(22)
-  $0.VolumeType ensureBatchSize() => $_ensure(21);
+  $1.VolumeType ensureBatchSize() => $_ensure(21);
 
   @$pb.TagNumber(23)
   $core.String get notes => $_getSZ(22);
@@ -439,36 +439,36 @@ class RecipeType extends $pb.GeneratedMessage {
   void clearNotes() => clearField(23);
 
   @$pb.TagNumber(24)
-  $0.PercentType get alcoholByVolume => $_getN(23);
+  $1.PercentType get alcoholByVolume => $_getN(23);
   @$pb.TagNumber(24)
-  set alcoholByVolume($0.PercentType v) { setField(24, v); }
+  set alcoholByVolume($1.PercentType v) { setField(24, v); }
   @$pb.TagNumber(24)
   $core.bool hasAlcoholByVolume() => $_has(23);
   @$pb.TagNumber(24)
   void clearAlcoholByVolume() => clearField(24);
   @$pb.TagNumber(24)
-  $0.PercentType ensureAlcoholByVolume() => $_ensure(23);
+  $1.PercentType ensureAlcoholByVolume() => $_ensure(23);
 
   /// The total apparent attenuation of the finished beer after fermentation
   @$pb.TagNumber(25)
-  $0.PercentType get apparentAttenuation => $_getN(24);
+  $1.PercentType get apparentAttenuation => $_getN(24);
   @$pb.TagNumber(25)
-  set apparentAttenuation($0.PercentType v) { setField(25, v); }
+  set apparentAttenuation($1.PercentType v) { setField(25, v); }
   @$pb.TagNumber(25)
   $core.bool hasApparentAttenuation() => $_has(24);
   @$pb.TagNumber(25)
   void clearApparentAttenuation() => clearField(25);
   @$pb.TagNumber(25)
-  $0.PercentType ensureApparentAttenuation() => $_ensure(24);
+  $1.PercentType ensureApparentAttenuation() => $_ensure(24);
 }
 
 /// The efficiencyType stores each efficiency component
 class EfficiencyType extends $pb.GeneratedMessage {
   factory EfficiencyType({
-    $0.PercentType? conversion,
-    $0.PercentType? lauter,
-    $0.PercentType? mash,
-    $0.PercentType? brewhouse,
+    $1.PercentType? conversion,
+    $1.PercentType? lauter,
+    $1.PercentType? mash,
+    $1.PercentType? brewhouse,
   }) {
     final $result = create();
     if (conversion != null) {
@@ -490,10 +490,10 @@ class EfficiencyType extends $pb.GeneratedMessage {
   factory EfficiencyType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EfficiencyType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<$0.PercentType>(1, _omitFieldNames ? '' : 'conversion', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(2, _omitFieldNames ? '' : 'lauter', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(3, _omitFieldNames ? '' : 'mash', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(4, _omitFieldNames ? '' : 'brewhouse', subBuilder: $0.PercentType.create)
+    ..aOM<$1.PercentType>(1, _omitFieldNames ? '' : 'conversion', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(2, _omitFieldNames ? '' : 'lauter', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(3, _omitFieldNames ? '' : 'mash', subBuilder: $1.PercentType.create)
+    ..aOM<$1.PercentType>(4, _omitFieldNames ? '' : 'brewhouse', subBuilder: $1.PercentType.create)
     ..hasRequiredFields = false
   ;
 
@@ -520,60 +520,60 @@ class EfficiencyType extends $pb.GeneratedMessage {
 
   /// The percentage of sugar from the grain yield that is extracted and converted during the mash
   @$pb.TagNumber(1)
-  $0.PercentType get conversion => $_getN(0);
+  $1.PercentType get conversion => $_getN(0);
   @$pb.TagNumber(1)
-  set conversion($0.PercentType v) { setField(1, v); }
+  set conversion($1.PercentType v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasConversion() => $_has(0);
   @$pb.TagNumber(1)
   void clearConversion() => clearField(1);
   @$pb.TagNumber(1)
-  $0.PercentType ensureConversion() => $_ensure(0);
+  $1.PercentType ensureConversion() => $_ensure(0);
 
   /// The percentage of sugar that makes it from the mash tun to the kettle
   @$pb.TagNumber(2)
-  $0.PercentType get lauter => $_getN(1);
+  $1.PercentType get lauter => $_getN(1);
   @$pb.TagNumber(2)
-  set lauter($0.PercentType v) { setField(2, v); }
+  set lauter($1.PercentType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasLauter() => $_has(1);
   @$pb.TagNumber(2)
   void clearLauter() => clearField(2);
   @$pb.TagNumber(2)
-  $0.PercentType ensureLauter() => $_ensure(1);
+  $1.PercentType ensureLauter() => $_ensure(1);
 
   /// The percentage of sugar that makes it from the grain to the kettle
   @$pb.TagNumber(3)
-  $0.PercentType get mash => $_getN(2);
+  $1.PercentType get mash => $_getN(2);
   @$pb.TagNumber(3)
-  set mash($0.PercentType v) { setField(3, v); }
+  set mash($1.PercentType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasMash() => $_has(2);
   @$pb.TagNumber(3)
   void clearMash() => clearField(3);
   @$pb.TagNumber(3)
-  $0.PercentType ensureMash() => $_ensure(2);
+  $1.PercentType ensureMash() => $_ensure(2);
 
   /// The percentage of sugar that makes it from the grain to the fermenter
   @$pb.TagNumber(4)
-  $0.PercentType get brewhouse => $_getN(3);
+  $1.PercentType get brewhouse => $_getN(3);
   @$pb.TagNumber(4)
-  set brewhouse($0.PercentType v) { setField(4, v); }
+  set brewhouse($1.PercentType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasBrewhouse() => $_has(3);
   @$pb.TagNumber(4)
   void clearBrewhouse() => clearField(4);
   @$pb.TagNumber(4)
-  $0.PercentType ensureBrewhouse() => $_ensure(3);
+  $1.PercentType ensureBrewhouse() => $_ensure(3);
 }
 
 class IngredientsType extends $pb.GeneratedMessage {
   factory IngredientsType({
-    $core.Iterable<$13.MiscellaneousAdditionType>? miscellaneousAdditions,
-    $core.Iterable<$14.CultureAdditionType>? cultureAdditions,
-    $core.Iterable<$15.WaterAdditionType>? waterAdditions,
-    $core.Iterable<$16.FermentableAdditionType>? fermentableAdditions,
-    $core.Iterable<$8.HopAdditionType>? hopAdditions,
+    $core.Iterable<$14.MiscellaneousAdditionType>? miscellaneousAdditions,
+    $core.Iterable<$15.CultureAdditionType>? cultureAdditions,
+    $core.Iterable<$16.WaterAdditionType>? waterAdditions,
+    $core.Iterable<$17.FermentableAdditionType>? fermentableAdditions,
+    $core.Iterable<$9.HopAdditionType>? hopAdditions,
   }) {
     final $result = create();
     if (miscellaneousAdditions != null) {
@@ -598,11 +598,11 @@ class IngredientsType extends $pb.GeneratedMessage {
   factory IngredientsType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IngredientsType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..pc<$13.MiscellaneousAdditionType>(1, _omitFieldNames ? '' : 'miscellaneousAdditions', $pb.PbFieldType.PM, subBuilder: $13.MiscellaneousAdditionType.create)
-    ..pc<$14.CultureAdditionType>(2, _omitFieldNames ? '' : 'cultureAdditions', $pb.PbFieldType.PM, subBuilder: $14.CultureAdditionType.create)
-    ..pc<$15.WaterAdditionType>(3, _omitFieldNames ? '' : 'waterAdditions', $pb.PbFieldType.PM, subBuilder: $15.WaterAdditionType.create)
-    ..pc<$16.FermentableAdditionType>(4, _omitFieldNames ? '' : 'fermentableAdditions', $pb.PbFieldType.PM, subBuilder: $16.FermentableAdditionType.create)
-    ..pc<$8.HopAdditionType>(5, _omitFieldNames ? '' : 'hopAdditions', $pb.PbFieldType.PM, subBuilder: $8.HopAdditionType.create)
+    ..pc<$14.MiscellaneousAdditionType>(1, _omitFieldNames ? '' : 'miscellaneousAdditions', $pb.PbFieldType.PM, subBuilder: $14.MiscellaneousAdditionType.create)
+    ..pc<$15.CultureAdditionType>(2, _omitFieldNames ? '' : 'cultureAdditions', $pb.PbFieldType.PM, subBuilder: $15.CultureAdditionType.create)
+    ..pc<$16.WaterAdditionType>(3, _omitFieldNames ? '' : 'waterAdditions', $pb.PbFieldType.PM, subBuilder: $16.WaterAdditionType.create)
+    ..pc<$17.FermentableAdditionType>(4, _omitFieldNames ? '' : 'fermentableAdditions', $pb.PbFieldType.PM, subBuilder: $17.FermentableAdditionType.create)
+    ..pc<$9.HopAdditionType>(5, _omitFieldNames ? '' : 'hopAdditions', $pb.PbFieldType.PM, subBuilder: $9.HopAdditionType.create)
     ..hasRequiredFields = false
   ;
 
@@ -629,23 +629,23 @@ class IngredientsType extends $pb.GeneratedMessage {
 
   /// miscellaneous_additions collects all the miscellaneous items for use in a recipe
   @$pb.TagNumber(1)
-  $core.List<$13.MiscellaneousAdditionType> get miscellaneousAdditions => $_getList(0);
+  $core.List<$14.MiscellaneousAdditionType> get miscellaneousAdditions => $_getList(0);
 
   /// culture_additions collects all the culture items for use in a recipe
   @$pb.TagNumber(2)
-  $core.List<$14.CultureAdditionType> get cultureAdditions => $_getList(1);
+  $core.List<$15.CultureAdditionType> get cultureAdditions => $_getList(1);
 
   /// water_additions collects all the water items for use in a recipe
   @$pb.TagNumber(3)
-  $core.List<$15.WaterAdditionType> get waterAdditions => $_getList(2);
+  $core.List<$16.WaterAdditionType> get waterAdditions => $_getList(2);
 
   /// fermentable_additions collects all the fermentable ingredients for use in a recipe
   @$pb.TagNumber(4)
-  $core.List<$16.FermentableAdditionType> get fermentableAdditions => $_getList(3);
+  $core.List<$17.FermentableAdditionType> get fermentableAdditions => $_getList(3);
 
   /// hop_additions collects all the hops for use in a recipe
   @$pb.TagNumber(5)
-  $core.List<$8.HopAdditionType> get hopAdditions => $_getList(4);
+  $core.List<$9.HopAdditionType> get hopAdditions => $_getList(4);
 }
 
 class TasteType extends $pb.GeneratedMessage {

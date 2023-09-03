@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'measureable_units.pb.dart' as $0;
+import 'measureable_units.pb.dart' as $1;
 import 'timing.pbenum.dart';
 
 export 'timing.pbenum.dart';
@@ -21,11 +21,11 @@ export 'timing.pbenum.dart';
 /// The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step
 class TimingType extends $pb.GeneratedMessage {
   factory TimingType({
-    $0.TimeType? time,
-    $0.TimeType? duration,
+    $1.TimeType? time,
+    $1.TimeType? duration,
     $core.bool? continuous,
-    $0.GravityType? specificGravity,
-    $0.AcidityType? ph,
+    $1.GravityType? specificGravity,
+    $1.AcidityType? ph,
     $core.int? step,
     UseType? use,
   }) {
@@ -58,11 +58,11 @@ class TimingType extends $pb.GeneratedMessage {
   factory TimingType.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TimingType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<$0.TimeType>(1, _omitFieldNames ? '' : 'time', subBuilder: $0.TimeType.create)
-    ..aOM<$0.TimeType>(2, _omitFieldNames ? '' : 'duration', subBuilder: $0.TimeType.create)
+    ..aOM<$1.TimeType>(1, _omitFieldNames ? '' : 'time', subBuilder: $1.TimeType.create)
+    ..aOM<$1.TimeType>(2, _omitFieldNames ? '' : 'duration', subBuilder: $1.TimeType.create)
     ..aOB(3, _omitFieldNames ? '' : 'continuous')
-    ..aOM<$0.GravityType>(4, _omitFieldNames ? '' : 'specificGravity', subBuilder: $0.GravityType.create)
-    ..aOM<$0.AcidityType>(5, _omitFieldNames ? '' : 'ph', subBuilder: $0.AcidityType.create)
+    ..aOM<$1.GravityType>(4, _omitFieldNames ? '' : 'specificGravity', subBuilder: $1.GravityType.create)
+    ..aOM<$1.AcidityType>(5, _omitFieldNames ? '' : 'ph', subBuilder: $1.AcidityType.create)
     ..a<$core.int>(6, _omitFieldNames ? '' : 'step', $pb.PbFieldType.O3)
     ..e<UseType>(7, _omitFieldNames ? '' : 'use', $pb.PbFieldType.OE, defaultOrMaker: UseType.USE_TYPE_UNSPECIFIED, valueOf: UseType.valueOf, enumValues: UseType.values)
     ..hasRequiredFields = false
@@ -91,27 +91,27 @@ class TimingType extends $pb.GeneratedMessage {
 
   /// What time during a process step is added, eg a value of 2 days for a dry hop addition would be added 2 days into the fermentation step.
   @$pb.TagNumber(1)
-  $0.TimeType get time => $_getN(0);
+  $1.TimeType get time => $_getN(0);
   @$pb.TagNumber(1)
-  set time($0.TimeType v) { setField(1, v); }
+  set time($1.TimeType v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTime() => $_has(0);
   @$pb.TagNumber(1)
   void clearTime() => clearField(1);
   @$pb.TagNumber(1)
-  $0.TimeType ensureTime() => $_ensure(0);
+  $1.TimeType ensureTime() => $_ensure(0);
 
   /// How long an ingredient addition remains, this was referred to as time in the BeerXML standard. E.G. A 40 minute hop boil additions means to boil for 40 minutes, and a 2 day duration for a dry hop means to remove it after 2 days.
   @$pb.TagNumber(2)
-  $0.TimeType get duration => $_getN(1);
+  $1.TimeType get duration => $_getN(1);
   @$pb.TagNumber(2)
-  set duration($0.TimeType v) { setField(2, v); }
+  set duration($1.TimeType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasDuration() => $_has(1);
   @$pb.TagNumber(2)
   void clearDuration() => clearField(2);
   @$pb.TagNumber(2)
-  $0.TimeType ensureDuration() => $_ensure(1);
+  $1.TimeType ensureDuration() => $_ensure(1);
 
   /// A continuous addition is spread out evenly and added during the entire process step, eg 60 minute IPA by dogfish head takes all ofthe hop additions and adds them throughout the entire boil.
   @$pb.TagNumber(3)
@@ -125,27 +125,27 @@ class TimingType extends $pb.GeneratedMessage {
 
   /// Used to indicate when an addition is added based on a desired specific gravity. E.G. Add dry hop at when SG is 1.018.
   @$pb.TagNumber(4)
-  $0.GravityType get specificGravity => $_getN(3);
+  $1.GravityType get specificGravity => $_getN(3);
   @$pb.TagNumber(4)
-  set specificGravity($0.GravityType v) { setField(4, v); }
+  set specificGravity($1.GravityType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasSpecificGravity() => $_has(3);
   @$pb.TagNumber(4)
   void clearSpecificGravity() => clearField(4);
   @$pb.TagNumber(4)
-  $0.GravityType ensureSpecificGravity() => $_ensure(3);
+  $1.GravityType ensureSpecificGravity() => $_ensure(3);
 
   /// Used to indicate when an addition is added based on a desired specific pH. eg Add brett when pH is 3.4.
   @$pb.TagNumber(5)
-  $0.AcidityType get ph => $_getN(4);
+  $1.AcidityType get ph => $_getN(4);
   @$pb.TagNumber(5)
-  set ph($0.AcidityType v) { setField(5, v); }
+  set ph($1.AcidityType v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasPh() => $_has(4);
   @$pb.TagNumber(5)
   void clearPh() => clearField(5);
   @$pb.TagNumber(5)
-  $0.AcidityType ensurePh() => $_ensure(4);
+  $1.AcidityType ensurePh() => $_ensure(4);
 
   /// Used to indicate what step this ingredient timing addition is referencing. EG A value of 2 for add_to_fermentation would mean to add during the second fermentation step.
   @$pb.TagNumber(6)

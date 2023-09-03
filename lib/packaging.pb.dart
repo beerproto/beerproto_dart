@@ -13,18 +13,18 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'measureable_units.pb.dart' as $0;
-import 'packaging_vessel.pb.dart' as $5;
+import 'measureable_units.pb.dart' as $1;
+import 'packaging_vessel.pb.dart' as $6;
 
 /// Describes the procedure for packaging your beverage
 class PackagingProcedureType extends $pb.GeneratedMessage {
   factory PackagingProcedureType({
     $core.String? id,
     $core.String? name,
-    $0.VolumeType? packagedVolume,
+    $1.VolumeType? packagedVolume,
     $core.String? description,
     $core.String? notes,
-    $core.Iterable<$5.PackagingVesselType>? packagingVessels,
+    $core.Iterable<$6.PackagingVesselType>? packagingVessels,
   }) {
     final $result = create();
     if (id != null) {
@@ -54,10 +54,10 @@ class PackagingProcedureType extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PackagingProcedureType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'name')
-    ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'packagedVolume', subBuilder: $0.VolumeType.create)
+    ..aOM<$1.VolumeType>(3, _omitFieldNames ? '' : 'packagedVolume', subBuilder: $1.VolumeType.create)
     ..aOS(4, _omitFieldNames ? '' : 'description')
     ..aOS(5, _omitFieldNames ? '' : 'notes')
-    ..pc<$5.PackagingVesselType>(6, _omitFieldNames ? '' : 'packagingVessels', $pb.PbFieldType.PM, subBuilder: $5.PackagingVesselType.create)
+    ..pc<$6.PackagingVesselType>(6, _omitFieldNames ? '' : 'packagingVessels', $pb.PbFieldType.PM, subBuilder: $6.PackagingVesselType.create)
     ..hasRequiredFields = false
   ;
 
@@ -101,15 +101,15 @@ class PackagingProcedureType extends $pb.GeneratedMessage {
   void clearName() => clearField(2);
 
   @$pb.TagNumber(3)
-  $0.VolumeType get packagedVolume => $_getN(2);
+  $1.VolumeType get packagedVolume => $_getN(2);
   @$pb.TagNumber(3)
-  set packagedVolume($0.VolumeType v) { setField(3, v); }
+  set packagedVolume($1.VolumeType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasPackagedVolume() => $_has(2);
   @$pb.TagNumber(3)
   void clearPackagedVolume() => clearField(3);
   @$pb.TagNumber(3)
-  $0.VolumeType ensurePackagedVolume() => $_ensure(2);
+  $1.VolumeType ensurePackagedVolume() => $_ensure(2);
 
   @$pb.TagNumber(4)
   $core.String get description => $_getSZ(3);
@@ -130,7 +130,7 @@ class PackagingProcedureType extends $pb.GeneratedMessage {
   void clearNotes() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.List<$5.PackagingVesselType> get packagingVessels => $_getList(5);
+  $core.List<$6.PackagingVesselType> get packagingVessels => $_getList(5);
 }
 
 
