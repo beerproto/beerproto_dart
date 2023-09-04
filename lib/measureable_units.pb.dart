@@ -631,6 +631,116 @@ class TemperatureType extends $pb.GeneratedMessage {
   void clearUnit() => clearField(2);
 }
 
+class ConversionTemperatureUnit_ConversionTemperatureUnitRate extends $pb.GeneratedMessage {
+  factory ConversionTemperatureUnit_ConversionTemperatureUnitRate({
+    TemperatureUnit? target,
+    $0.ExpressionTree? tree,
+  }) {
+    final $result = create();
+    if (target != null) {
+      $result.target = target;
+    }
+    if (tree != null) {
+      $result.tree = tree;
+    }
+    return $result;
+  }
+  ConversionTemperatureUnit_ConversionTemperatureUnitRate._() : super();
+  factory ConversionTemperatureUnit_ConversionTemperatureUnitRate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversionTemperatureUnit_ConversionTemperatureUnitRate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionTemperatureUnit.ConversionTemperatureUnitRate', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..e<TemperatureUnit>(1, _omitFieldNames ? '' : 'target', $pb.PbFieldType.OE, defaultOrMaker: TemperatureUnit.TEMPERATURE_UNIT_UNSPECIFIED, valueOf: TemperatureUnit.valueOf, enumValues: TemperatureUnit.values)
+    ..aOM<$0.ExpressionTree>(2, _omitFieldNames ? '' : 'tree', subBuilder: $0.ExpressionTree.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversionTemperatureUnit_ConversionTemperatureUnitRate clone() => ConversionTemperatureUnit_ConversionTemperatureUnitRate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversionTemperatureUnit_ConversionTemperatureUnitRate copyWith(void Function(ConversionTemperatureUnit_ConversionTemperatureUnitRate) updates) => super.copyWith((message) => updates(message as ConversionTemperatureUnit_ConversionTemperatureUnitRate)) as ConversionTemperatureUnit_ConversionTemperatureUnitRate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversionTemperatureUnit_ConversionTemperatureUnitRate create() => ConversionTemperatureUnit_ConversionTemperatureUnitRate._();
+  ConversionTemperatureUnit_ConversionTemperatureUnitRate createEmptyInstance() => create();
+  static $pb.PbList<ConversionTemperatureUnit_ConversionTemperatureUnitRate> createRepeated() => $pb.PbList<ConversionTemperatureUnit_ConversionTemperatureUnitRate>();
+  @$core.pragma('dart2js:noInline')
+  static ConversionTemperatureUnit_ConversionTemperatureUnitRate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversionTemperatureUnit_ConversionTemperatureUnitRate>(create);
+  static ConversionTemperatureUnit_ConversionTemperatureUnitRate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  TemperatureUnit get target => $_getN(0);
+  @$pb.TagNumber(1)
+  set target(TemperatureUnit v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTarget() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTarget() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.ExpressionTree get tree => $_getN(1);
+  @$pb.TagNumber(2)
+  set tree($0.ExpressionTree v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTree() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTree() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.ExpressionTree ensureTree() => $_ensure(1);
+}
+
+class ConversionTemperatureUnit extends $pb.GeneratedMessage {
+  factory ConversionTemperatureUnit({
+    $core.Iterable<ConversionTemperatureUnit_ConversionTemperatureUnitRate>? rates,
+  }) {
+    final $result = create();
+    if (rates != null) {
+      $result.rates.addAll(rates);
+    }
+    return $result;
+  }
+  ConversionTemperatureUnit._() : super();
+  factory ConversionTemperatureUnit.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversionTemperatureUnit.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionTemperatureUnit', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..pc<ConversionTemperatureUnit_ConversionTemperatureUnitRate>(1, _omitFieldNames ? '' : 'rates', $pb.PbFieldType.PM, subBuilder: ConversionTemperatureUnit_ConversionTemperatureUnitRate.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversionTemperatureUnit clone() => ConversionTemperatureUnit()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversionTemperatureUnit copyWith(void Function(ConversionTemperatureUnit) updates) => super.copyWith((message) => updates(message as ConversionTemperatureUnit)) as ConversionTemperatureUnit;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversionTemperatureUnit create() => ConversionTemperatureUnit._();
+  ConversionTemperatureUnit createEmptyInstance() => create();
+  static $pb.PbList<ConversionTemperatureUnit> createRepeated() => $pb.PbList<ConversionTemperatureUnit>();
+  @$core.pragma('dart2js:noInline')
+  static ConversionTemperatureUnit getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversionTemperatureUnit>(create);
+  static ConversionTemperatureUnit? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<ConversionTemperatureUnit_ConversionTemperatureUnitRate> get rates => $_getList(0);
+}
+
 class AcidityType extends $pb.GeneratedMessage {
   factory AcidityType({
     $core.double? value,
@@ -2224,12 +2334,14 @@ class Measureable_units {
   static final conversionVolumeUnit = $pb.Extension<ConversionVolumeUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionVolumeUnit', 123456787, $pb.PbFieldType.OM, defaultOrMaker: ConversionVolumeUnit.getDefault, subBuilder: ConversionVolumeUnit.create);
   static final conversionMassUnit = $pb.Extension<ConversionMassUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionMassUnit', 123456786, $pb.PbFieldType.OM, defaultOrMaker: ConversionMassUnit.getDefault, subBuilder: ConversionMassUnit.create);
   static final conversionDiastaticPowerUnit = $pb.Extension<ConversionDiastaticPowerUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionDiastaticPowerUnit', 123456785, $pb.PbFieldType.OM, defaultOrMaker: ConversionDiastaticPowerUnit.getDefault, subBuilder: ConversionDiastaticPowerUnit.create);
+  static final conversionTemperatureUnit = $pb.Extension<ConversionTemperatureUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionTemperatureUnit', 123456784, $pb.PbFieldType.OM, defaultOrMaker: ConversionTemperatureUnit.getDefault, subBuilder: ConversionTemperatureUnit.create);
   static void registerAllExtensions($pb.ExtensionRegistry registry) {
     registry.add(stringName);
     registry.add(displayName);
     registry.add(conversionVolumeUnit);
     registry.add(conversionMassUnit);
     registry.add(conversionDiastaticPowerUnit);
+    registry.add(conversionTemperatureUnit);
   }
 }
 

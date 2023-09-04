@@ -172,10 +172,12 @@ const TemperatureUnit$json = {
 
 /// Descriptor for `TemperatureUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List temperatureUnitDescriptor = $convert.base64Decode(
-    'Cg9UZW1wZXJhdHVyZVVuaXQSRAocVEVNUEVSQVRVUkVfVU5JVF9VTlNQRUNJRklFRBAAGiKi0f'
-    'nWAwtVTlNQRUNJRklFRKrR+dYDC1VOU1BFQ0lGSUVEEiYKElRFTVBFUkFUVVJFX1VOSVRfQxAB'
-    'Gg6i0fnWAwFDqtH51gMBQxImChJURU1QRVJBVFVSRV9VTklUX0YQAhoOotH51gMBRqrR+dYDAU'
-    'Y=');
+    'Cg9UZW1wZXJhdHVyZVVuaXQSSgocVEVNUEVSQVRVUkVfVU5JVF9VTlNQRUNJRklFRBAAGiiC0f'
+    'nWAwCi0fnWAwtVTlNQRUNJRklFRKrR+dYDC1VOU1BFQ0lGSUVEEmcKElRFTVBFUkFUVVJFX1VO'
+    'SVRfQxABGk+C0fnWAzsKOQgCEjUKMwgBUiMIBFITCANiAwoBeKoBCQkAAAAAAAAiQKoBCQkAAA'
+    'AAAAAUQKoBCQkAAAAAAABAQKLR+dYDAUOq0fnWAwFDEmcKElRFTVBFUkFUVVJFX1VOSVRfRhAC'
+    'Gk+C0fnWAzsKOQgBEjUKMwgEUiMIA1ITCAJiAwoBeKoBCQkAAAAAAABAQKoBCQkAAAAAAAAUQK'
+    'oBCQkAAAAAAAAiQKLR+dYDAUaq0fnWAwFG');
 
 @$core.Deprecated('Use acidityUnitDescriptor instead')
 const AcidityUnit$json = {
@@ -539,6 +541,32 @@ const TemperatureType$json = {
 final $typed_data.Uint8List temperatureTypeDescriptor = $convert.base64Decode(
     'Cg9UZW1wZXJhdHVyZVR5cGUSFAoFdmFsdWUYASABKAFSBXZhbHVlEjEKBHVuaXQYAiABKA4yHS'
     '5iZWVycHJvdG8udjEuVGVtcGVyYXR1cmVVbml0UgR1bml0');
+
+@$core.Deprecated('Use conversionTemperatureUnitDescriptor instead')
+const ConversionTemperatureUnit$json = {
+  '1': 'ConversionTemperatureUnit',
+  '2': [
+    {'1': 'rates', '3': 1, '4': 3, '5': 11, '6': '.beerproto.v1.ConversionTemperatureUnit.ConversionTemperatureUnitRate', '10': 'rates'},
+  ],
+  '3': [ConversionTemperatureUnit_ConversionTemperatureUnitRate$json],
+};
+
+@$core.Deprecated('Use conversionTemperatureUnitDescriptor instead')
+const ConversionTemperatureUnit_ConversionTemperatureUnitRate$json = {
+  '1': 'ConversionTemperatureUnitRate',
+  '2': [
+    {'1': 'target', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.TemperatureUnit', '10': 'target'},
+    {'1': 'tree', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.ExpressionTree', '10': 'tree'},
+  ],
+};
+
+/// Descriptor for `ConversionTemperatureUnit`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List conversionTemperatureUnitDescriptor = $convert.base64Decode(
+    'ChlDb252ZXJzaW9uVGVtcGVyYXR1cmVVbml0ElsKBXJhdGVzGAEgAygLMkUuYmVlcnByb3RvLn'
+    'YxLkNvbnZlcnNpb25UZW1wZXJhdHVyZVVuaXQuQ29udmVyc2lvblRlbXBlcmF0dXJlVW5pdFJh'
+    'dGVSBXJhdGVzGogBCh1Db252ZXJzaW9uVGVtcGVyYXR1cmVVbml0UmF0ZRI1CgZ0YXJnZXQYAS'
+    'ABKA4yHS5iZWVycHJvdG8udjEuVGVtcGVyYXR1cmVVbml0UgZ0YXJnZXQSMAoEdHJlZRgCIAEo'
+    'CzIcLmJlZXJwcm90by52MS5FeHByZXNzaW9uVHJlZVIEdHJlZQ==');
 
 @$core.Deprecated('Use acidityTypeDescriptor instead')
 const AcidityType$json = {
