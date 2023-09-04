@@ -173,10 +173,10 @@ const DiastaticPowerUnit$json = {
 /// Descriptor for `DiastaticPowerUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List diastaticPowerUnitDescriptor = $convert.base64Decode(
     'ChJEaWFzdGF0aWNQb3dlclVuaXQSTgogRElBU1RBVElDX1BPV0VSX1VOSVRfVU5TUEVDSUZJRU'
-    'QQABooitH51gMAotH51gMLVU5TUEVDSUZJRUSq0fnWAwtVTlNQRUNJRklFRBJeChxESUFTVEFU'
-    'SUNfUE9XRVJfVU5JVF9MSU5UTkVSEAEaPIrR+dYDHgocCAISGAgDWgUVAABgQKIBDAgEYgCqAQ'
-    'UVAACIQaLR+dYDBkxpbnRlcqrR+dYDBkxpbnRlchI9ChdESUFTVEFUSUNfUE9XRVJfVU5JVF9X'
-    'SxACGiCi0fnWAxJXaW5kaXNjaOKAk0tvbGJhY2iq0fnWAwJXSw==');
+    'QQABooitH51gMAotH51gMLVU5TUEVDSUZJRUSq0fnWAwtVTlNQRUNJRklFRBJmChxESUFTVEFU'
+    'SUNfUE9XRVJfVU5JVF9MSU5UTkVSEAEaRIrR+dYDJgokCAISIAgDWgkJAAAAAAAADECiARAIBG'
+    'IAqgEJCQAAAAAAADFAotH51gMGTGludGVyqtH51gMGTGludGVyEj0KF0RJQVNUQVRJQ19QT1dF'
+    'Ul9VTklUX1dLEAIaIKLR+dYDEldpbmRpc2No4oCTS29sYmFjaKrR+dYDAldL');
 
 @$core.Deprecated('Use temperatureUnitDescriptor instead')
 const TemperatureUnit$json = {

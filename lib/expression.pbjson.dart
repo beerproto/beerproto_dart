@@ -36,28 +36,13 @@ final $typed_data.Uint8List binaryArithmeticDescriptor = $convert.base64Decode(
 const UnaryExpression$json = {
   '1': 'UnaryExpression',
   '2': [
-    {'1': 'double', '3': 1, '4': 1, '5': 1, '9': 0, '10': 'double'},
-    {'1': 'float', '3': 2, '4': 1, '5': 2, '9': 0, '10': 'float'},
-    {'1': 'int32', '3': 3, '4': 1, '5': 5, '9': 0, '10': 'int32'},
-    {'1': 'int64', '3': 4, '4': 1, '5': 3, '9': 0, '10': 'int64'},
-    {'1': 'uint32', '3': 5, '4': 1, '5': 13, '9': 0, '10': 'uint32'},
-    {'1': 'uint64', '3': 6, '4': 1, '5': 4, '9': 0, '10': 'uint64'},
-    {'1': 'bool', '3': 7, '4': 1, '5': 8, '9': 0, '10': 'bool'},
-    {'1': 'string', '3': 8, '4': 1, '5': 9, '9': 0, '10': 'string'},
-    {'1': 'bytes', '3': 9, '4': 1, '5': 12, '9': 0, '10': 'bytes'},
-  ],
-  '8': [
-    {'1': 'value'},
+    {'1': 'double', '3': 1, '4': 1, '5': 1, '10': 'double'},
   ],
 };
 
 /// Descriptor for `UnaryExpression`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List unaryExpressionDescriptor = $convert.base64Decode(
-    'Cg9VbmFyeUV4cHJlc3Npb24SGAoGZG91YmxlGAEgASgBSABSBmRvdWJsZRIWCgVmbG9hdBgCIA'
-    'EoAkgAUgVmbG9hdBIWCgVpbnQzMhgDIAEoBUgAUgVpbnQzMhIWCgVpbnQ2NBgEIAEoA0gAUgVp'
-    'bnQ2NBIYCgZ1aW50MzIYBSABKA1IAFIGdWludDMyEhgKBnVpbnQ2NBgGIAEoBEgAUgZ1aW50Nj'
-    'QSFAoEYm9vbBgHIAEoCEgAUgRib29sEhgKBnN0cmluZxgIIAEoCUgAUgZzdHJpbmcSFgoFYnl0'
-    'ZXMYCSABKAxIAFIFYnl0ZXNCBwoFdmFsdWU=');
+    'Cg9VbmFyeUV4cHJlc3Npb24SFgoGZG91YmxlGAEgASgBUgZkb3VibGU=');
 
 @$core.Deprecated('Use binaryExpressionDescriptor instead')
 const BinaryExpression$json = {
@@ -66,10 +51,10 @@ const BinaryExpression$json = {
     {'1': 'operator', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.BinaryArithmetic', '10': 'operator'},
     {'1': 'binary_left', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.BinaryExpression', '9': 0, '10': 'binaryLeft'},
     {'1': 'unary_left', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.UnaryExpression', '9': 0, '10': 'unaryLeft'},
-    {'1': 'value_left', '3': 12, '4': 1, '5': 11, '6': '.beerproto.v1.ValueExpression', '9': 0, '10': 'valueLeft'},
+    {'1': 'parameter_left', '3': 12, '4': 1, '5': 11, '6': '.beerproto.v1.ParameterExpression', '9': 0, '10': 'parameterLeft'},
     {'1': 'binary_right', '3': 20, '4': 1, '5': 11, '6': '.beerproto.v1.BinaryExpression', '9': 1, '10': 'binaryRight'},
     {'1': 'unary_right', '3': 21, '4': 1, '5': 11, '6': '.beerproto.v1.UnaryExpression', '9': 1, '10': 'unaryRight'},
-    {'1': 'value_right', '3': 22, '4': 1, '5': 11, '6': '.beerproto.v1.ValueExpression', '9': 1, '10': 'valueRight'},
+    {'1': 'parameter_right', '3': 22, '4': 1, '5': 11, '6': '.beerproto.v1.ParameterExpression', '9': 1, '10': 'parameterRight'},
   ],
   '8': [
     {'1': 'left'},
@@ -82,19 +67,20 @@ final $typed_data.Uint8List binaryExpressionDescriptor = $convert.base64Decode(
     'ChBCaW5hcnlFeHByZXNzaW9uEjoKCG9wZXJhdG9yGAEgASgOMh4uYmVlcnByb3RvLnYxLkJpbm'
     'FyeUFyaXRobWV0aWNSCG9wZXJhdG9yEkEKC2JpbmFyeV9sZWZ0GAogASgLMh4uYmVlcnByb3Rv'
     'LnYxLkJpbmFyeUV4cHJlc3Npb25IAFIKYmluYXJ5TGVmdBI+Cgp1bmFyeV9sZWZ0GAsgASgLMh'
-    '0uYmVlcnByb3RvLnYxLlVuYXJ5RXhwcmVzc2lvbkgAUgl1bmFyeUxlZnQSPgoKdmFsdWVfbGVm'
-    'dBgMIAEoCzIdLmJlZXJwcm90by52MS5WYWx1ZUV4cHJlc3Npb25IAFIJdmFsdWVMZWZ0EkMKDG'
-    'JpbmFyeV9yaWdodBgUIAEoCzIeLmJlZXJwcm90by52MS5CaW5hcnlFeHByZXNzaW9uSAFSC2Jp'
-    'bmFyeVJpZ2h0EkAKC3VuYXJ5X3JpZ2h0GBUgASgLMh0uYmVlcnByb3RvLnYxLlVuYXJ5RXhwcm'
-    'Vzc2lvbkgBUgp1bmFyeVJpZ2h0EkAKC3ZhbHVlX3JpZ2h0GBYgASgLMh0uYmVlcnByb3RvLnYx'
-    'LlZhbHVlRXhwcmVzc2lvbkgBUgp2YWx1ZVJpZ2h0QgYKBGxlZnRCBwoFcmlnaHQ=');
+    '0uYmVlcnByb3RvLnYxLlVuYXJ5RXhwcmVzc2lvbkgAUgl1bmFyeUxlZnQSSgoOcGFyYW1ldGVy'
+    'X2xlZnQYDCABKAsyIS5iZWVycHJvdG8udjEuUGFyYW1ldGVyRXhwcmVzc2lvbkgAUg1wYXJhbW'
+    'V0ZXJMZWZ0EkMKDGJpbmFyeV9yaWdodBgUIAEoCzIeLmJlZXJwcm90by52MS5CaW5hcnlFeHBy'
+    'ZXNzaW9uSAFSC2JpbmFyeVJpZ2h0EkAKC3VuYXJ5X3JpZ2h0GBUgASgLMh0uYmVlcnByb3RvLn'
+    'YxLlVuYXJ5RXhwcmVzc2lvbkgBUgp1bmFyeVJpZ2h0EkwKD3BhcmFtZXRlcl9yaWdodBgWIAEo'
+    'CzIhLmJlZXJwcm90by52MS5QYXJhbWV0ZXJFeHByZXNzaW9uSAFSDnBhcmFtZXRlclJpZ2h0Qg'
+    'YKBGxlZnRCBwoFcmlnaHQ=');
 
-@$core.Deprecated('Use valueExpressionDescriptor instead')
-const ValueExpression$json = {
-  '1': 'ValueExpression',
+@$core.Deprecated('Use parameterExpressionDescriptor instead')
+const ParameterExpression$json = {
+  '1': 'ParameterExpression',
 };
 
-/// Descriptor for `ValueExpression`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List valueExpressionDescriptor = $convert.base64Decode(
-    'Cg9WYWx1ZUV4cHJlc3Npb24=');
+/// Descriptor for `ParameterExpression`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List parameterExpressionDescriptor = $convert.base64Decode(
+    'ChNQYXJhbWV0ZXJFeHByZXNzaW9u');
 
