@@ -934,6 +934,116 @@ class ColorType extends $pb.GeneratedMessage {
   void clearUnit() => clearField(2);
 }
 
+class ConversionColorUnit_ConversionColorUnitRate extends $pb.GeneratedMessage {
+  factory ConversionColorUnit_ConversionColorUnitRate({
+    ColorUnit? target,
+    $0.ExpressionTree? tree,
+  }) {
+    final $result = create();
+    if (target != null) {
+      $result.target = target;
+    }
+    if (tree != null) {
+      $result.tree = tree;
+    }
+    return $result;
+  }
+  ConversionColorUnit_ConversionColorUnitRate._() : super();
+  factory ConversionColorUnit_ConversionColorUnitRate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversionColorUnit_ConversionColorUnitRate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionColorUnit.ConversionColorUnitRate', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..e<ColorUnit>(1, _omitFieldNames ? '' : 'target', $pb.PbFieldType.OE, defaultOrMaker: ColorUnit.COLOR_UNIT_UNSPECIFIED, valueOf: ColorUnit.valueOf, enumValues: ColorUnit.values)
+    ..aOM<$0.ExpressionTree>(2, _omitFieldNames ? '' : 'tree', subBuilder: $0.ExpressionTree.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversionColorUnit_ConversionColorUnitRate clone() => ConversionColorUnit_ConversionColorUnitRate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversionColorUnit_ConversionColorUnitRate copyWith(void Function(ConversionColorUnit_ConversionColorUnitRate) updates) => super.copyWith((message) => updates(message as ConversionColorUnit_ConversionColorUnitRate)) as ConversionColorUnit_ConversionColorUnitRate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversionColorUnit_ConversionColorUnitRate create() => ConversionColorUnit_ConversionColorUnitRate._();
+  ConversionColorUnit_ConversionColorUnitRate createEmptyInstance() => create();
+  static $pb.PbList<ConversionColorUnit_ConversionColorUnitRate> createRepeated() => $pb.PbList<ConversionColorUnit_ConversionColorUnitRate>();
+  @$core.pragma('dart2js:noInline')
+  static ConversionColorUnit_ConversionColorUnitRate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversionColorUnit_ConversionColorUnitRate>(create);
+  static ConversionColorUnit_ConversionColorUnitRate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  ColorUnit get target => $_getN(0);
+  @$pb.TagNumber(1)
+  set target(ColorUnit v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTarget() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTarget() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.ExpressionTree get tree => $_getN(1);
+  @$pb.TagNumber(2)
+  set tree($0.ExpressionTree v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTree() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTree() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.ExpressionTree ensureTree() => $_ensure(1);
+}
+
+class ConversionColorUnit extends $pb.GeneratedMessage {
+  factory ConversionColorUnit({
+    $core.Iterable<ConversionColorUnit_ConversionColorUnitRate>? rates,
+  }) {
+    final $result = create();
+    if (rates != null) {
+      $result.rates.addAll(rates);
+    }
+    return $result;
+  }
+  ConversionColorUnit._() : super();
+  factory ConversionColorUnit.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversionColorUnit.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionColorUnit', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..pc<ConversionColorUnit_ConversionColorUnitRate>(1, _omitFieldNames ? '' : 'rates', $pb.PbFieldType.PM, subBuilder: ConversionColorUnit_ConversionColorUnitRate.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversionColorUnit clone() => ConversionColorUnit()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversionColorUnit copyWith(void Function(ConversionColorUnit) updates) => super.copyWith((message) => updates(message as ConversionColorUnit)) as ConversionColorUnit;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversionColorUnit create() => ConversionColorUnit._();
+  ConversionColorUnit createEmptyInstance() => create();
+  static $pb.PbList<ConversionColorUnit> createRepeated() => $pb.PbList<ConversionColorUnit>();
+  @$core.pragma('dart2js:noInline')
+  static ConversionColorUnit getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversionColorUnit>(create);
+  static ConversionColorUnit? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<ConversionColorUnit_ConversionColorUnitRate> get rates => $_getList(0);
+}
+
 class CarbonationType extends $pb.GeneratedMessage {
   factory CarbonationType({
     $core.double? value,
@@ -2335,6 +2445,7 @@ class Measureable_units {
   static final conversionMassUnit = $pb.Extension<ConversionMassUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionMassUnit', 123456786, $pb.PbFieldType.OM, defaultOrMaker: ConversionMassUnit.getDefault, subBuilder: ConversionMassUnit.create);
   static final conversionDiastaticPowerUnit = $pb.Extension<ConversionDiastaticPowerUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionDiastaticPowerUnit', 123456785, $pb.PbFieldType.OM, defaultOrMaker: ConversionDiastaticPowerUnit.getDefault, subBuilder: ConversionDiastaticPowerUnit.create);
   static final conversionTemperatureUnit = $pb.Extension<ConversionTemperatureUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionTemperatureUnit', 123456784, $pb.PbFieldType.OM, defaultOrMaker: ConversionTemperatureUnit.getDefault, subBuilder: ConversionTemperatureUnit.create);
+  static final conversionColorUnit = $pb.Extension<ConversionColorUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionColorUnit', 123456782, $pb.PbFieldType.OM, defaultOrMaker: ConversionColorUnit.getDefault, subBuilder: ConversionColorUnit.create);
   static void registerAllExtensions($pb.ExtensionRegistry registry) {
     registry.add(stringName);
     registry.add(displayName);
@@ -2342,6 +2453,7 @@ class Measureable_units {
     registry.add(conversionMassUnit);
     registry.add(conversionDiastaticPowerUnit);
     registry.add(conversionTemperatureUnit);
+    registry.add(conversionColorUnit);
   }
 }
 

@@ -228,10 +228,15 @@ const ColorUnit$json = {
 
 /// Descriptor for `ColorUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List colorUnitDescriptor = $convert.base64Decode(
-    'CglDb2xvclVuaXQSPgoWQ09MT1JfVU5JVF9VTlNQRUNJRklFRBAAGiKi0fnWAwtVTlNQRUNJRk'
-    'lFRKrR+dYDC1VOU1BFQ0lGSUVEEiYKDkNPTE9SX1VOSVRfRUJDEAEaEqLR+dYDA0VCQ6rR+dYD'
-    'A0VCQxIpCg9DT0xPUl9VTklUX0xPVkkQAhoUotH51gMETG92aarR+dYDBExvdmkSJgoOQ09MT1'
-    'JfVU5JVF9TUk0QAxoSotH51gMDU1JNqtH51gMDU1JN');
+    'CglDb2xvclVuaXQSRAoWQ09MT1JfVU5JVF9VTlNQRUNJRklFRBAAGijy0PnWAwCi0fnWAwtVTl'
+    'NQRUNJRklFRKrR+dYDC1VOU1BFQ0lGSUVEEoIBCg5DT0xPUl9VTklUX0VCQxABGm7y0PnWA1YK'
+    'OQgCEjUKMwgEUiMIAVITCARiAwoBeKoBCQmF61G4HoX/P6oBCQlSuB6F61HoP6oBCQnqlbIMca'
+    'z1PwoZCAMSFQoTCANiAwoBeKoBCQmoxks3iUHgP6LR+dYDA0VCQ6rR+dYDA0VCQxKWAQoPQ09M'
+    'T1JfVU5JVF9MT1ZJEAIagAHy0PnWA2YKOQgBEjUKMwgDUiMIAlITCANaCQnqlbIMcaz1P7IBAw'
+    'oBeKoBCQlSuB6F61HoP6oBCQmF61G4HoX/PwopCAMSJQojCAJSEwgDWgkJ6pWyDHGs9T+yAQMK'
+    'AXiqAQkJUrgehetR6D+i0fnWAwRMb3ZpqtH51gMETG92aRJyCg5DT0xPUl9VTklUX1NSTRADGl'
+    '7y0PnWA0YKGQgBEhUKEwgDYgMKAXiqAQkJhetRuB6F/z8KKQgCEiUKIwgEUhMIAWIDCgF4qgEJ'
+    'CVK4HoXrUeg/qgEJCeqVsgxxrPU/otH51gMDU1JNqtH51gMDU1JN');
 
 @$core.Deprecated('Use carbonationUnitDescriptor instead')
 const CarbonationUnit$json = {
@@ -609,6 +614,32 @@ const ColorType$json = {
 final $typed_data.Uint8List colorTypeDescriptor = $convert.base64Decode(
     'CglDb2xvclR5cGUSFAoFdmFsdWUYASABKAFSBXZhbHVlEisKBHVuaXQYAiABKA4yFy5iZWVycH'
     'JvdG8udjEuQ29sb3JVbml0UgR1bml0');
+
+@$core.Deprecated('Use conversionColorUnitDescriptor instead')
+const ConversionColorUnit$json = {
+  '1': 'ConversionColorUnit',
+  '2': [
+    {'1': 'rates', '3': 1, '4': 3, '5': 11, '6': '.beerproto.v1.ConversionColorUnit.ConversionColorUnitRate', '10': 'rates'},
+  ],
+  '3': [ConversionColorUnit_ConversionColorUnitRate$json],
+};
+
+@$core.Deprecated('Use conversionColorUnitDescriptor instead')
+const ConversionColorUnit_ConversionColorUnitRate$json = {
+  '1': 'ConversionColorUnitRate',
+  '2': [
+    {'1': 'target', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.ColorUnit', '10': 'target'},
+    {'1': 'tree', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.ExpressionTree', '10': 'tree'},
+  ],
+};
+
+/// Descriptor for `ConversionColorUnit`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List conversionColorUnitDescriptor = $convert.base64Decode(
+    'ChNDb252ZXJzaW9uQ29sb3JVbml0Ek8KBXJhdGVzGAEgAygLMjkuYmVlcnByb3RvLnYxLkNvbn'
+    'ZlcnNpb25Db2xvclVuaXQuQ29udmVyc2lvbkNvbG9yVW5pdFJhdGVSBXJhdGVzGnwKF0NvbnZl'
+    'cnNpb25Db2xvclVuaXRSYXRlEi8KBnRhcmdldBgBIAEoDjIXLmJlZXJwcm90by52MS5Db2xvcl'
+    'VuaXRSBnRhcmdldBIwCgR0cmVlGAIgASgLMhwuYmVlcnByb3RvLnYxLkV4cHJlc3Npb25UcmVl'
+    'UgR0cmVl');
 
 @$core.Deprecated('Use carbonationTypeDescriptor instead')
 const CarbonationType$json = {
