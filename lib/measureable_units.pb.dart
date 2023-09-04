@@ -15,6 +15,7 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'expression.pb.dart' as $0;
+import 'expression.pbenum.dart' as $0;
 import 'measureable_units.pbenum.dart';
 
 export 'measureable_units.pbenum.dart';
@@ -22,7 +23,7 @@ export 'measureable_units.pbenum.dart';
 class ConversionVolumeUnit_ConversionVolumeUnitRate extends $pb.GeneratedMessage {
   factory ConversionVolumeUnit_ConversionVolumeUnitRate({
     VolumeUnit? target,
-    ArithmeticOperators? operator,
+    $0.BinaryArithmetic? operator,
     $core.double? value,
   }) {
     final $result = create();
@@ -43,7 +44,7 @@ class ConversionVolumeUnit_ConversionVolumeUnitRate extends $pb.GeneratedMessage
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionVolumeUnit.ConversionVolumeUnitRate', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..e<VolumeUnit>(1, _omitFieldNames ? '' : 'target', $pb.PbFieldType.OE, defaultOrMaker: VolumeUnit.VOLUME_UNIT_UNSPECIFIED, valueOf: VolumeUnit.valueOf, enumValues: VolumeUnit.values)
-    ..e<ArithmeticOperators>(2, _omitFieldNames ? '' : 'operator', $pb.PbFieldType.OE, defaultOrMaker: ArithmeticOperators.ARITHMETIC_OPERATORS_UNSPECIFIED, valueOf: ArithmeticOperators.valueOf, enumValues: ArithmeticOperators.values)
+    ..e<$0.BinaryArithmetic>(2, _omitFieldNames ? '' : 'operator', $pb.PbFieldType.OE, defaultOrMaker: $0.BinaryArithmetic.BINARY_ARITHMETIC_UNSPECIFIED, valueOf: $0.BinaryArithmetic.valueOf, enumValues: $0.BinaryArithmetic.values)
     ..a<$core.double>(3, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
     ..hasRequiredFields = false
   ;
@@ -79,9 +80,9 @@ class ConversionVolumeUnit_ConversionVolumeUnitRate extends $pb.GeneratedMessage
   void clearTarget() => clearField(1);
 
   @$pb.TagNumber(2)
-  ArithmeticOperators get operator => $_getN(1);
+  $0.BinaryArithmetic get operator => $_getN(1);
   @$pb.TagNumber(2)
-  set operator(ArithmeticOperators v) { setField(2, v); }
+  set operator($0.BinaryArithmetic v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasOperator() => $_has(1);
   @$pb.TagNumber(2)
@@ -272,7 +273,7 @@ class MassType extends $pb.GeneratedMessage {
 class ConversionMassUnit_ConversionMassUnitRate extends $pb.GeneratedMessage {
   factory ConversionMassUnit_ConversionMassUnitRate({
     MassUnit? target,
-    ArithmeticOperators? operator,
+    $0.BinaryArithmetic? operator,
     $core.double? value,
   }) {
     final $result = create();
@@ -293,7 +294,7 @@ class ConversionMassUnit_ConversionMassUnitRate extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionMassUnit.ConversionMassUnitRate', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..e<MassUnit>(1, _omitFieldNames ? '' : 'target', $pb.PbFieldType.OE, defaultOrMaker: MassUnit.MASS_UNIT_UNSPECIFIED, valueOf: MassUnit.valueOf, enumValues: MassUnit.values)
-    ..e<ArithmeticOperators>(2, _omitFieldNames ? '' : 'operator', $pb.PbFieldType.OE, defaultOrMaker: ArithmeticOperators.ARITHMETIC_OPERATORS_UNSPECIFIED, valueOf: ArithmeticOperators.valueOf, enumValues: ArithmeticOperators.values)
+    ..e<$0.BinaryArithmetic>(2, _omitFieldNames ? '' : 'operator', $pb.PbFieldType.OE, defaultOrMaker: $0.BinaryArithmetic.BINARY_ARITHMETIC_UNSPECIFIED, valueOf: $0.BinaryArithmetic.valueOf, enumValues: $0.BinaryArithmetic.values)
     ..a<$core.double>(3, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
     ..hasRequiredFields = false
   ;
@@ -329,9 +330,9 @@ class ConversionMassUnit_ConversionMassUnitRate extends $pb.GeneratedMessage {
   void clearTarget() => clearField(1);
 
   @$pb.TagNumber(2)
-  ArithmeticOperators get operator => $_getN(1);
+  $0.BinaryArithmetic get operator => $_getN(1);
   @$pb.TagNumber(2)
-  set operator(ArithmeticOperators v) { setField(2, v); }
+  set operator($0.BinaryArithmetic v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasOperator() => $_has(1);
   @$pb.TagNumber(2)

@@ -13,25 +13,6 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use arithmeticOperatorsDescriptor instead')
-const ArithmeticOperators$json = {
-  '1': 'ArithmeticOperators',
-  '2': [
-    {'1': 'ARITHMETIC_OPERATORS_UNSPECIFIED', '2': 0},
-    {'1': 'ARITHMETIC_OPERATORS_ADDITION', '2': 1},
-    {'1': 'ARITHMETIC_OPERATORS_SUBTRACTION', '2': 2},
-    {'1': 'ARITHMETIC_OPERATORS_MULTIPLICATION', '2': 3},
-    {'1': 'ARITHMETIC_OPERATORS_DIVISION', '2': 4},
-  ],
-};
-
-/// Descriptor for `ArithmeticOperators`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List arithmeticOperatorsDescriptor = $convert.base64Decode(
-    'ChNBcml0aG1ldGljT3BlcmF0b3JzEiQKIEFSSVRITUVUSUNfT1BFUkFUT1JTX1VOU1BFQ0lGSU'
-    'VEEAASIQodQVJJVEhNRVRJQ19PUEVSQVRPUlNfQURESVRJT04QARIkCiBBUklUSE1FVElDX09Q'
-    'RVJBVE9SU19TVUJUUkFDVElPThACEicKI0FSSVRITUVUSUNfT1BFUkFUT1JTX01VTFRJUExJQ0'
-    'FUSU9OEAMSIQodQVJJVEhNRVRJQ19PUEVSQVRPUlNfRElWSVNJT04QBA==');
-
 @$core.Deprecated('Use volumeUnitDescriptor instead')
 const VolumeUnit$json = {
   '1': 'VolumeUnit',
@@ -437,7 +418,7 @@ const ConversionVolumeUnit_ConversionVolumeUnitRate$json = {
   '1': 'ConversionVolumeUnitRate',
   '2': [
     {'1': 'target', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.VolumeUnit', '10': 'target'},
-    {'1': 'operator', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.ArithmeticOperators', '10': 'operator'},
+    {'1': 'operator', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.BinaryArithmetic', '10': 'operator'},
     {'1': 'value', '3': 3, '4': 1, '5': 1, '10': 'value'},
   ],
 };
@@ -445,10 +426,10 @@ const ConversionVolumeUnit_ConversionVolumeUnitRate$json = {
 /// Descriptor for `ConversionVolumeUnit`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List conversionVolumeUnitDescriptor = $convert.base64Decode(
     'ChRDb252ZXJzaW9uVm9sdW1lVW5pdBJRCgVyYXRlcxgBIAMoCzI7LmJlZXJwcm90by52MS5Db2'
-    '52ZXJzaW9uVm9sdW1lVW5pdC5Db252ZXJzaW9uVm9sdW1lVW5pdFJhdGVSBXJhdGVzGqEBChhD'
+    '52ZXJzaW9uVm9sdW1lVW5pdC5Db252ZXJzaW9uVm9sdW1lVW5pdFJhdGVSBXJhdGVzGp4BChhD'
     'b252ZXJzaW9uVm9sdW1lVW5pdFJhdGUSMAoGdGFyZ2V0GAEgASgOMhguYmVlcnByb3RvLnYxLl'
-    'ZvbHVtZVVuaXRSBnRhcmdldBI9CghvcGVyYXRvchgCIAEoDjIhLmJlZXJwcm90by52MS5Bcml0'
-    'aG1ldGljT3BlcmF0b3JzUghvcGVyYXRvchIUCgV2YWx1ZRgDIAEoAVIFdmFsdWU=');
+    'ZvbHVtZVVuaXRSBnRhcmdldBI6CghvcGVyYXRvchgCIAEoDjIeLmJlZXJwcm90by52MS5CaW5h'
+    'cnlBcml0aG1ldGljUghvcGVyYXRvchIUCgV2YWx1ZRgDIAEoAVIFdmFsdWU=');
 
 @$core.Deprecated('Use volumeTypeDescriptor instead')
 const VolumeType$json = {
@@ -492,7 +473,7 @@ const ConversionMassUnit_ConversionMassUnitRate$json = {
   '1': 'ConversionMassUnitRate',
   '2': [
     {'1': 'target', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.MassUnit', '10': 'target'},
-    {'1': 'operator', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.ArithmeticOperators', '10': 'operator'},
+    {'1': 'operator', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.BinaryArithmetic', '10': 'operator'},
     {'1': 'value', '3': 3, '4': 1, '5': 1, '10': 'value'},
   ],
 };
@@ -500,10 +481,10 @@ const ConversionMassUnit_ConversionMassUnitRate$json = {
 /// Descriptor for `ConversionMassUnit`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List conversionMassUnitDescriptor = $convert.base64Decode(
     'ChJDb252ZXJzaW9uTWFzc1VuaXQSTQoFcmF0ZXMYASADKAsyNy5iZWVycHJvdG8udjEuQ29udm'
-    'Vyc2lvbk1hc3NVbml0LkNvbnZlcnNpb25NYXNzVW5pdFJhdGVSBXJhdGVzGp0BChZDb252ZXJz'
+    'Vyc2lvbk1hc3NVbml0LkNvbnZlcnNpb25NYXNzVW5pdFJhdGVSBXJhdGVzGpoBChZDb252ZXJz'
     'aW9uTWFzc1VuaXRSYXRlEi4KBnRhcmdldBgBIAEoDjIWLmJlZXJwcm90by52MS5NYXNzVW5pdF'
-    'IGdGFyZ2V0Ej0KCG9wZXJhdG9yGAIgASgOMiEuYmVlcnByb3RvLnYxLkFyaXRobWV0aWNPcGVy'
-    'YXRvcnNSCG9wZXJhdG9yEhQKBXZhbHVlGAMgASgBUgV2YWx1ZQ==');
+    'IGdGFyZ2V0EjoKCG9wZXJhdG9yGAIgASgOMh4uYmVlcnByb3RvLnYxLkJpbmFyeUFyaXRobWV0'
+    'aWNSCG9wZXJhdG9yEhQKBXZhbHVlGAMgASgBUgV2YWx1ZQ==');
 
 @$core.Deprecated('Use diastaticPowerTypeDescriptor instead')
 const DiastaticPowerType$json = {
