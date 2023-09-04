@@ -32,6 +32,19 @@ final $typed_data.Uint8List binaryArithmeticDescriptor = $convert.base64Decode(
     'UkFDVElPThACEiQKIEJJTkFSWV9BUklUSE1FVElDX01VTFRJUExJQ0FUSU9OEAMSHgoaQklOQV'
     'JZX0FSSVRITUVUSUNfRElWSVNJT04QBA==');
 
+@$core.Deprecated('Use expressionTreeDescriptor instead')
+const ExpressionTree$json = {
+  '1': 'ExpressionTree',
+  '2': [
+    {'1': 'expression', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.BinaryExpression', '10': 'expression'},
+  ],
+};
+
+/// Descriptor for `ExpressionTree`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List expressionTreeDescriptor = $convert.base64Decode(
+    'Cg5FeHByZXNzaW9uVHJlZRI+CgpleHByZXNzaW9uGAEgASgLMh4uYmVlcnByb3RvLnYxLkJpbm'
+    'FyeUV4cHJlc3Npb25SCmV4cHJlc3Npb24=');
+
 @$core.Deprecated('Use unaryExpressionDescriptor instead')
 const UnaryExpression$json = {
   '1': 'UnaryExpression',
@@ -80,15 +93,10 @@ const ParameterExpression$json = {
   '1': 'ParameterExpression',
   '2': [
     {'1': 'parameter', '3': 1, '4': 1, '5': 9, '10': 'parameter'},
-    {'1': 'double', '3': 2, '4': 1, '5': 1, '9': 0, '10': 'double', '17': true},
-  ],
-  '8': [
-    {'1': '_double'},
   ],
 };
 
 /// Descriptor for `ParameterExpression`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List parameterExpressionDescriptor = $convert.base64Decode(
-    'ChNQYXJhbWV0ZXJFeHByZXNzaW9uEhwKCXBhcmFtZXRlchgBIAEoCVIJcGFyYW1ldGVyEhsKBm'
-    'RvdWJsZRgCIAEoAUgAUgZkb3VibGWIAQFCCQoHX2RvdWJsZQ==');
+    'ChNQYXJhbWV0ZXJFeHByZXNzaW9uEhwKCXBhcmFtZXRlchgBIAEoCVIJcGFyYW1ldGVy');
 

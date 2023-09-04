@@ -17,6 +17,58 @@ import 'expression.pbenum.dart';
 
 export 'expression.pbenum.dart';
 
+class ExpressionTree extends $pb.GeneratedMessage {
+  factory ExpressionTree({
+    BinaryExpression? expression,
+  }) {
+    final $result = create();
+    if (expression != null) {
+      $result.expression = expression;
+    }
+    return $result;
+  }
+  ExpressionTree._() : super();
+  factory ExpressionTree.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ExpressionTree.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ExpressionTree', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<BinaryExpression>(1, _omitFieldNames ? '' : 'expression', subBuilder: BinaryExpression.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ExpressionTree clone() => ExpressionTree()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ExpressionTree copyWith(void Function(ExpressionTree) updates) => super.copyWith((message) => updates(message as ExpressionTree)) as ExpressionTree;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ExpressionTree create() => ExpressionTree._();
+  ExpressionTree createEmptyInstance() => create();
+  static $pb.PbList<ExpressionTree> createRepeated() => $pb.PbList<ExpressionTree>();
+  @$core.pragma('dart2js:noInline')
+  static ExpressionTree getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ExpressionTree>(create);
+  static ExpressionTree? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  BinaryExpression get expression => $_getN(0);
+  @$pb.TagNumber(1)
+  set expression(BinaryExpression v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasExpression() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearExpression() => clearField(1);
+  @$pb.TagNumber(1)
+  BinaryExpression ensureExpression() => $_ensure(0);
+}
+
 class UnaryExpression extends $pb.GeneratedMessage {
   factory UnaryExpression({
     $core.double? double_1,
@@ -250,14 +302,10 @@ class BinaryExpression extends $pb.GeneratedMessage {
 class ParameterExpression extends $pb.GeneratedMessage {
   factory ParameterExpression({
     $core.String? parameter,
-    $core.double? double_2,
   }) {
     final $result = create();
     if (parameter != null) {
       $result.parameter = parameter;
-    }
-    if (double_2 != null) {
-      $result.double_2 = double_2;
     }
     return $result;
   }
@@ -267,7 +315,6 @@ class ParameterExpression extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ParameterExpression', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'parameter')
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'double', $pb.PbFieldType.OD)
     ..hasRequiredFields = false
   ;
 
@@ -300,15 +347,6 @@ class ParameterExpression extends $pb.GeneratedMessage {
   $core.bool hasParameter() => $_has(0);
   @$pb.TagNumber(1)
   void clearParameter() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.double get double_2 => $_getN(1);
-  @$pb.TagNumber(2)
-  set double_2($core.double v) { $_setDouble(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasDouble_2() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearDouble_2() => clearField(2);
 }
 
 

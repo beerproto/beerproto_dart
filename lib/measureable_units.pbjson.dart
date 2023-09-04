@@ -173,10 +173,10 @@ const DiastaticPowerUnit$json = {
 /// Descriptor for `DiastaticPowerUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List diastaticPowerUnitDescriptor = $convert.base64Decode(
     'ChJEaWFzdGF0aWNQb3dlclVuaXQSTgogRElBU1RBVElDX1BPV0VSX1VOSVRfVU5TUEVDSUZJRU'
-    'QQABooitH51gMAotH51gMLVU5TUEVDSUZJRUSq0fnWAwtVTlNQRUNJRklFRBJpChxESUFTVEFU'
-    'SUNfUE9XRVJfVU5JVF9MSU5UTkVSEAEaR4rR+dYDKQonCAISIwgDWgkJAAAAAAAADECiARMIBG'
-    'IDCgF4qgEJCQAAAAAAADFAotH51gMGTGludGVyqtH51gMGTGludGVyEj0KF0RJQVNUQVRJQ19Q'
-    'T1dFUl9VTklUX1dLEAIaIKLR+dYDEldpbmRpc2No4oCTS29sYmFjaKrR+dYDAldL');
+    'QQABooitH51gMAotH51gMLVU5TUEVDSUZJRUSq0fnWAwtVTlNQRUNJRklFRBJrChxESUFTVEFU'
+    'SUNfUE9XRVJfVU5JVF9MSU5UTkVSEAEaSYrR+dYDKwopCAISJQojCANaCQkAAAAAAAAMQKIBEw'
+    'gEYgMKAXiqAQkJAAAAAAAAMUCi0fnWAwZMaW50ZXKq0fnWAwZMaW50ZXISPQoXRElBU1RBVElD'
+    'X1BPV0VSX1VOSVRfV0sQAhogotH51gMSV2luZGlzY2jigJNLb2xiYWNoqtH51gMCV0s=');
 
 @$core.Deprecated('Use temperatureUnitDescriptor instead')
 const TemperatureUnit$json = {
@@ -532,7 +532,7 @@ const ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate$json = {
   '1': 'ConversionDiastaticPowerUnitRate',
   '2': [
     {'1': 'target', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.DiastaticPowerUnit', '10': 'target'},
-    {'1': 'expression', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.BinaryExpression', '10': 'expression'},
+    {'1': 'tree', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.ExpressionTree', '10': 'tree'},
   ],
 };
 
@@ -540,10 +540,9 @@ const ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate$json = {
 final $typed_data.Uint8List conversionDiastaticPowerUnitDescriptor = $convert.base64Decode(
     'ChxDb252ZXJzaW9uRGlhc3RhdGljUG93ZXJVbml0EmEKBXJhdGVzGAEgAygLMksuYmVlcnByb3'
     'RvLnYxLkNvbnZlcnNpb25EaWFzdGF0aWNQb3dlclVuaXQuQ29udmVyc2lvbkRpYXN0YXRpY1Bv'
-    'd2VyVW5pdFJhdGVSBXJhdGVzGpwBCiBDb252ZXJzaW9uRGlhc3RhdGljUG93ZXJVbml0UmF0ZR'
+    'd2VyVW5pdFJhdGVSBXJhdGVzGo4BCiBDb252ZXJzaW9uRGlhc3RhdGljUG93ZXJVbml0UmF0ZR'
     'I4CgZ0YXJnZXQYASABKA4yIC5iZWVycHJvdG8udjEuRGlhc3RhdGljUG93ZXJVbml0UgZ0YXJn'
-    'ZXQSPgoKZXhwcmVzc2lvbhgCIAEoCzIeLmJlZXJwcm90by52MS5CaW5hcnlFeHByZXNzaW9uUg'
-    'pleHByZXNzaW9u');
+    'ZXQSMAoEdHJlZRgCIAEoCzIcLmJlZXJwcm90by52MS5FeHByZXNzaW9uVHJlZVIEdHJlZQ==');
 
 @$core.Deprecated('Use temperatureTypeDescriptor instead')
 const TemperatureType$json = {

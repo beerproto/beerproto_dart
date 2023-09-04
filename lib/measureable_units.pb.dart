@@ -459,14 +459,14 @@ class DiastaticPowerType extends $pb.GeneratedMessage {
 class ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate extends $pb.GeneratedMessage {
   factory ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate({
     DiastaticPowerUnit? target,
-    $0.BinaryExpression? expression,
+    $0.ExpressionTree? tree,
   }) {
     final $result = create();
     if (target != null) {
       $result.target = target;
     }
-    if (expression != null) {
-      $result.expression = expression;
+    if (tree != null) {
+      $result.tree = tree;
     }
     return $result;
   }
@@ -476,7 +476,7 @@ class ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate extends $pb.
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionDiastaticPowerUnit.ConversionDiastaticPowerUnitRate', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..e<DiastaticPowerUnit>(1, _omitFieldNames ? '' : 'target', $pb.PbFieldType.OE, defaultOrMaker: DiastaticPowerUnit.DIASTATIC_POWER_UNIT_UNSPECIFIED, valueOf: DiastaticPowerUnit.valueOf, enumValues: DiastaticPowerUnit.values)
-    ..aOM<$0.BinaryExpression>(2, _omitFieldNames ? '' : 'expression', subBuilder: $0.BinaryExpression.create)
+    ..aOM<$0.ExpressionTree>(2, _omitFieldNames ? '' : 'tree', subBuilder: $0.ExpressionTree.create)
     ..hasRequiredFields = false
   ;
 
@@ -511,15 +511,15 @@ class ConversionDiastaticPowerUnit_ConversionDiastaticPowerUnitRate extends $pb.
   void clearTarget() => clearField(1);
 
   @$pb.TagNumber(2)
-  $0.BinaryExpression get expression => $_getN(1);
+  $0.ExpressionTree get tree => $_getN(1);
   @$pb.TagNumber(2)
-  set expression($0.BinaryExpression v) { setField(2, v); }
+  set tree($0.ExpressionTree v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasExpression() => $_has(1);
+  $core.bool hasTree() => $_has(1);
   @$pb.TagNumber(2)
-  void clearExpression() => clearField(2);
+  void clearTree() => clearField(2);
   @$pb.TagNumber(2)
-  $0.BinaryExpression ensureExpression() => $_ensure(1);
+  $0.ExpressionTree ensureTree() => $_ensure(1);
 }
 
 class ConversionDiastaticPowerUnit extends $pb.GeneratedMessage {
