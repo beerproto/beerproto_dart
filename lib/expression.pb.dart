@@ -248,12 +248,26 @@ class BinaryExpression extends $pb.GeneratedMessage {
 }
 
 class ParameterExpression extends $pb.GeneratedMessage {
-  factory ParameterExpression() => create();
+  factory ParameterExpression({
+    $core.String? parameter,
+    $core.double? double_2,
+  }) {
+    final $result = create();
+    if (parameter != null) {
+      $result.parameter = parameter;
+    }
+    if (double_2 != null) {
+      $result.double_2 = double_2;
+    }
+    return $result;
+  }
   ParameterExpression._() : super();
   factory ParameterExpression.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ParameterExpression.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ParameterExpression', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parameter')
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'double', $pb.PbFieldType.OD)
     ..hasRequiredFields = false
   ;
 
@@ -277,6 +291,24 @@ class ParameterExpression extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static ParameterExpression getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ParameterExpression>(create);
   static ParameterExpression? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get parameter => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set parameter($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasParameter() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearParameter() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get double_2 => $_getN(1);
+  @$pb.TagNumber(2)
+  set double_2($core.double v) { $_setDouble(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDouble_2() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDouble_2() => clearField(2);
 }
 
 

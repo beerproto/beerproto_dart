@@ -78,9 +78,17 @@ final $typed_data.Uint8List binaryExpressionDescriptor = $convert.base64Decode(
 @$core.Deprecated('Use parameterExpressionDescriptor instead')
 const ParameterExpression$json = {
   '1': 'ParameterExpression',
+  '2': [
+    {'1': 'parameter', '3': 1, '4': 1, '5': 9, '10': 'parameter'},
+    {'1': 'double', '3': 2, '4': 1, '5': 1, '9': 0, '10': 'double', '17': true},
+  ],
+  '8': [
+    {'1': '_double'},
+  ],
 };
 
 /// Descriptor for `ParameterExpression`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List parameterExpressionDescriptor = $convert.base64Decode(
-    'ChNQYXJhbWV0ZXJFeHByZXNzaW9u');
+    'ChNQYXJhbWV0ZXJFeHByZXNzaW9uEhwKCXBhcmFtZXRlchgBIAEoCVIJcGFyYW1ldGVyEhsKBm'
+    'RvdWJsZRgCIAEoAUgAUgZkb3VibGWIAQFCCQoHX2RvdWJsZQ==');
 
