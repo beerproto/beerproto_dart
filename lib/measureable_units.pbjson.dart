@@ -283,10 +283,13 @@ const GravityUnit$json = {
 
 /// Descriptor for `GravityUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List gravityUnitDescriptor = $convert.base64Decode(
-    'CgtHcmF2aXR5VW5pdBJAChhHUkFWSVRZX1VOSVRfVU5TUEVDSUZJRUQQABoiotH51gMLVU5TUE'
-    'VDSUZJRUSq0fnWAwtVTlNQRUNJRklFRBIlCg9HUkFWSVRZX1VOSVRfU0cQARoQotH51gMCU0eq'
-    '0fnWAwJzZxIuChJHUkFWSVRZX1VOSVRfUExBVE8QAhoWotH51gMFUGxhdG+q0fnWAwVwbGF0bx'
-    'IrChFHUkFWSVRZX1VOSVRfQlJJWBADGhSi0fnWAwRCUklYqtH51gMEYnJpeA==');
+    'CgtHcmF2aXR5VW5pdBJGChhHUkFWSVRZX1VOSVRfVU5TUEVDSUZJRUQQABoo6tD51gMAotH51g'
+    'MLVU5TUEVDSUZJRUSq0fnWAwtVTlNQRUNJRklFRBKrAQoPR1JBVklUWV9VTklUX1NHEAEalQHq'
+    '0PnWA38KfQgCEnkKdwgCUmcIAVJNCAJSIwgDWgkJlkOLbOf/YECiARMIBWIDCgF4qgEJCQAAAA'
+    'AAAAhAogEjCANaCQkZBFYOLbKDQKIBEwgFYgMKAXiqAQkJAAAAAAAAAECiARMIA1oJCcP1KFyP'
+    'XJFAsgEDCgF4qgEJCW3n+6nxRoNAotH51gMCU0eq0fnWAwJzZxIuChJHUkFWSVRZX1VOSVRfUE'
+    'xBVE8QAhoWotH51gMFUGxhdG+q0fnWAwVwbGF0bxIrChFHUkFWSVRZX1VOSVRfQlJJWBADGhSi'
+    '0fnWAwRCUklYqtH51gMEYnJpeA==');
 
 @$core.Deprecated('Use specificHeatUnitDescriptor instead')
 const SpecificHeatUnit$json = {
@@ -682,6 +685,32 @@ const GravityType$json = {
 final $typed_data.Uint8List gravityTypeDescriptor = $convert.base64Decode(
     'CgtHcmF2aXR5VHlwZRIUCgV2YWx1ZRgBIAEoAVIFdmFsdWUSLQoEdW5pdBgCIAEoDjIZLmJlZX'
     'Jwcm90by52MS5HcmF2aXR5VW5pdFIEdW5pdA==');
+
+@$core.Deprecated('Use conversionGravityUnitDescriptor instead')
+const ConversionGravityUnit$json = {
+  '1': 'ConversionGravityUnit',
+  '2': [
+    {'1': 'rates', '3': 1, '4': 3, '5': 11, '6': '.beerproto.v1.ConversionGravityUnit.ConversionGravityUnitRate', '10': 'rates'},
+  ],
+  '3': [ConversionGravityUnit_ConversionGravityUnitRate$json],
+};
+
+@$core.Deprecated('Use conversionGravityUnitDescriptor instead')
+const ConversionGravityUnit_ConversionGravityUnitRate$json = {
+  '1': 'ConversionGravityUnitRate',
+  '2': [
+    {'1': 'target', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.GravityUnit', '10': 'target'},
+    {'1': 'tree', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.ExpressionTree', '10': 'tree'},
+  ],
+};
+
+/// Descriptor for `ConversionGravityUnit`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List conversionGravityUnitDescriptor = $convert.base64Decode(
+    'ChVDb252ZXJzaW9uR3Jhdml0eVVuaXQSUwoFcmF0ZXMYASADKAsyPS5iZWVycHJvdG8udjEuQ2'
+    '9udmVyc2lvbkdyYXZpdHlVbml0LkNvbnZlcnNpb25HcmF2aXR5VW5pdFJhdGVSBXJhdGVzGoAB'
+    'ChlDb252ZXJzaW9uR3Jhdml0eVVuaXRSYXRlEjEKBnRhcmdldBgBIAEoDjIZLmJlZXJwcm90by'
+    '52MS5HcmF2aXR5VW5pdFIGdGFyZ2V0EjAKBHRyZWUYAiABKAsyHC5iZWVycHJvdG8udjEuRXhw'
+    'cmVzc2lvblRyZWVSBHRyZWU=');
 
 @$core.Deprecated('Use specificHeatTypeDescriptor instead')
 const SpecificHeatType$json = {

@@ -19,6 +19,7 @@ class BinaryArithmetic extends $pb.ProtobufEnum {
   static const BinaryArithmetic BINARY_ARITHMETIC_SUBTRACTION = BinaryArithmetic._(2, _omitEnumNames ? '' : 'BINARY_ARITHMETIC_SUBTRACTION');
   static const BinaryArithmetic BINARY_ARITHMETIC_MULTIPLICATION = BinaryArithmetic._(3, _omitEnumNames ? '' : 'BINARY_ARITHMETIC_MULTIPLICATION');
   static const BinaryArithmetic BINARY_ARITHMETIC_DIVISION = BinaryArithmetic._(4, _omitEnumNames ? '' : 'BINARY_ARITHMETIC_DIVISION');
+  static const BinaryArithmetic BINARY_ARITHMETIC_POWER = BinaryArithmetic._(5, _omitEnumNames ? '' : 'BINARY_ARITHMETIC_POWER');
 
   static const $core.List<BinaryArithmetic> values = <BinaryArithmetic> [
     BINARY_ARITHMETIC_UNSPECIFIED,
@@ -26,6 +27,7 @@ class BinaryArithmetic extends $pb.ProtobufEnum {
     BINARY_ARITHMETIC_SUBTRACTION,
     BINARY_ARITHMETIC_MULTIPLICATION,
     BINARY_ARITHMETIC_DIVISION,
+    BINARY_ARITHMETIC_POWER,
   ];
 
   static final $core.Map<$core.int, BinaryArithmetic> _byValue = $pb.ProtobufEnum.initByValue(values);

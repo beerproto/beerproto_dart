@@ -1237,6 +1237,116 @@ class GravityType extends $pb.GeneratedMessage {
   void clearUnit() => clearField(2);
 }
 
+class ConversionGravityUnit_ConversionGravityUnitRate extends $pb.GeneratedMessage {
+  factory ConversionGravityUnit_ConversionGravityUnitRate({
+    GravityUnit? target,
+    $0.ExpressionTree? tree,
+  }) {
+    final $result = create();
+    if (target != null) {
+      $result.target = target;
+    }
+    if (tree != null) {
+      $result.tree = tree;
+    }
+    return $result;
+  }
+  ConversionGravityUnit_ConversionGravityUnitRate._() : super();
+  factory ConversionGravityUnit_ConversionGravityUnitRate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversionGravityUnit_ConversionGravityUnitRate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionGravityUnit.ConversionGravityUnitRate', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..e<GravityUnit>(1, _omitFieldNames ? '' : 'target', $pb.PbFieldType.OE, defaultOrMaker: GravityUnit.GRAVITY_UNIT_UNSPECIFIED, valueOf: GravityUnit.valueOf, enumValues: GravityUnit.values)
+    ..aOM<$0.ExpressionTree>(2, _omitFieldNames ? '' : 'tree', subBuilder: $0.ExpressionTree.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversionGravityUnit_ConversionGravityUnitRate clone() => ConversionGravityUnit_ConversionGravityUnitRate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversionGravityUnit_ConversionGravityUnitRate copyWith(void Function(ConversionGravityUnit_ConversionGravityUnitRate) updates) => super.copyWith((message) => updates(message as ConversionGravityUnit_ConversionGravityUnitRate)) as ConversionGravityUnit_ConversionGravityUnitRate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversionGravityUnit_ConversionGravityUnitRate create() => ConversionGravityUnit_ConversionGravityUnitRate._();
+  ConversionGravityUnit_ConversionGravityUnitRate createEmptyInstance() => create();
+  static $pb.PbList<ConversionGravityUnit_ConversionGravityUnitRate> createRepeated() => $pb.PbList<ConversionGravityUnit_ConversionGravityUnitRate>();
+  @$core.pragma('dart2js:noInline')
+  static ConversionGravityUnit_ConversionGravityUnitRate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversionGravityUnit_ConversionGravityUnitRate>(create);
+  static ConversionGravityUnit_ConversionGravityUnitRate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  GravityUnit get target => $_getN(0);
+  @$pb.TagNumber(1)
+  set target(GravityUnit v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTarget() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTarget() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.ExpressionTree get tree => $_getN(1);
+  @$pb.TagNumber(2)
+  set tree($0.ExpressionTree v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTree() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTree() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.ExpressionTree ensureTree() => $_ensure(1);
+}
+
+class ConversionGravityUnit extends $pb.GeneratedMessage {
+  factory ConversionGravityUnit({
+    $core.Iterable<ConversionGravityUnit_ConversionGravityUnitRate>? rates,
+  }) {
+    final $result = create();
+    if (rates != null) {
+      $result.rates.addAll(rates);
+    }
+    return $result;
+  }
+  ConversionGravityUnit._() : super();
+  factory ConversionGravityUnit.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversionGravityUnit.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionGravityUnit', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..pc<ConversionGravityUnit_ConversionGravityUnitRate>(1, _omitFieldNames ? '' : 'rates', $pb.PbFieldType.PM, subBuilder: ConversionGravityUnit_ConversionGravityUnitRate.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversionGravityUnit clone() => ConversionGravityUnit()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversionGravityUnit copyWith(void Function(ConversionGravityUnit) updates) => super.copyWith((message) => updates(message as ConversionGravityUnit)) as ConversionGravityUnit;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversionGravityUnit create() => ConversionGravityUnit._();
+  ConversionGravityUnit createEmptyInstance() => create();
+  static $pb.PbList<ConversionGravityUnit> createRepeated() => $pb.PbList<ConversionGravityUnit>();
+  @$core.pragma('dart2js:noInline')
+  static ConversionGravityUnit getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversionGravityUnit>(create);
+  static ConversionGravityUnit? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<ConversionGravityUnit_ConversionGravityUnitRate> get rates => $_getList(0);
+}
+
 class SpecificHeatType extends $pb.GeneratedMessage {
   factory SpecificHeatType({
     $core.double? value,
@@ -2446,6 +2556,7 @@ class Measureable_units {
   static final conversionDiastaticPowerUnit = $pb.Extension<ConversionDiastaticPowerUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionDiastaticPowerUnit', 123456785, $pb.PbFieldType.OM, defaultOrMaker: ConversionDiastaticPowerUnit.getDefault, subBuilder: ConversionDiastaticPowerUnit.create);
   static final conversionTemperatureUnit = $pb.Extension<ConversionTemperatureUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionTemperatureUnit', 123456784, $pb.PbFieldType.OM, defaultOrMaker: ConversionTemperatureUnit.getDefault, subBuilder: ConversionTemperatureUnit.create);
   static final conversionColorUnit = $pb.Extension<ConversionColorUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionColorUnit', 123456782, $pb.PbFieldType.OM, defaultOrMaker: ConversionColorUnit.getDefault, subBuilder: ConversionColorUnit.create);
+  static final conversionGravityUnit = $pb.Extension<ConversionGravityUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionGravityUnit', 123456781, $pb.PbFieldType.OM, defaultOrMaker: ConversionGravityUnit.getDefault, subBuilder: ConversionGravityUnit.create);
   static void registerAllExtensions($pb.ExtensionRegistry registry) {
     registry.add(stringName);
     registry.add(displayName);
@@ -2454,6 +2565,7 @@ class Measureable_units {
     registry.add(conversionDiastaticPowerUnit);
     registry.add(conversionTemperatureUnit);
     registry.add(conversionColorUnit);
+    registry.add(conversionGravityUnit);
   }
 }
 

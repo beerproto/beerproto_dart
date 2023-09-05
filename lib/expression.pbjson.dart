@@ -22,6 +22,7 @@ const BinaryArithmetic$json = {
     {'1': 'BINARY_ARITHMETIC_SUBTRACTION', '2': 2},
     {'1': 'BINARY_ARITHMETIC_MULTIPLICATION', '2': 3},
     {'1': 'BINARY_ARITHMETIC_DIVISION', '2': 4},
+    {'1': 'BINARY_ARITHMETIC_POWER', '2': 5},
   ],
 };
 
@@ -30,7 +31,7 @@ final $typed_data.Uint8List binaryArithmeticDescriptor = $convert.base64Decode(
     'ChBCaW5hcnlBcml0aG1ldGljEiEKHUJJTkFSWV9BUklUSE1FVElDX1VOU1BFQ0lGSUVEEAASHg'
     'oaQklOQVJZX0FSSVRITUVUSUNfQURESVRJT04QARIhCh1CSU5BUllfQVJJVEhNRVRJQ19TVUJU'
     'UkFDVElPThACEiQKIEJJTkFSWV9BUklUSE1FVElDX01VTFRJUExJQ0FUSU9OEAMSHgoaQklOQV'
-    'JZX0FSSVRITUVUSUNfRElWSVNJT04QBA==');
+    'JZX0FSSVRITUVUSUNfRElWSVNJT04QBBIbChdCSU5BUllfQVJJVEhNRVRJQ19QT1dFUhAF');
 
 @$core.Deprecated('Use expressionTreeDescriptor instead')
 const ExpressionTree$json = {
