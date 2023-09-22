@@ -284,12 +284,18 @@ const GravityUnit$json = {
 /// Descriptor for `GravityUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List gravityUnitDescriptor = $convert.base64Decode(
     'CgtHcmF2aXR5VW5pdBJGChhHUkFWSVRZX1VOSVRfVU5TUEVDSUZJRUQQABoo6tD51gMAotH51g'
-    'MLVU5TUEVDSUZJRUSq0fnWAwtVTlNQRUNJRklFRBKrAQoPR1JBVklUWV9VTklUX1NHEAEalQHq'
-    '0PnWA38KfQgCEnkKdwgCUmcIAVJNCAJSIwgDWgkJlkOLbOf/YECiARMIBWIDCgF4qgEJCQAAAA'
-    'AAAAhAogEjCANaCQkZBFYOLbKDQKIBEwgFYgMKAXiqAQkJAAAAAAAAAECiARMIA1oJCcP1KFyP'
-    'XJFAsgEDCgF4qgEJCW3n+6nxRoNAotH51gMCU0eq0fnWAwJzZxIuChJHUkFWSVRZX1VOSVRfUE'
-    'xBVE8QAhoWotH51gMFUGxhdG+q0fnWAwVwbGF0bxIrChFHUkFWSVRZX1VOSVRfQlJJWBADGhSi'
-    '0fnWAwRCUklYqtH51gMEYnJpeA==');
+    'MLVU5TUEVDSUZJRUSq0fnWAwtVTlNQRUNJRklFRBKLAgoPR1JBVklUWV9VTklUX1NHEAEa9QHq'
+    '0PnWA94BCn0IAhJ5CncIAlJnCAFSTQgCUiMIA1oJCZZDi2zn/2BAogETCAViAwoBeKoBCQkAAA'
+    'AAAAAIQKIBIwgDWgkJGQRWDi2yg0CiARMIBWIDCgF4qgEJCQAAAAAAAABAogETCANaCQnD9Shc'
+    'j1yRQLIBAwoBeKoBCQlt5/up8UaDQApdCAMSWQpXCAJSRwgDUj0IAVItCANSIwgCUhMIA1oJCX'
+    'icoiO5zmZAsgEDCgF4qgEJCdBE2PB0PYhAsgEDCgF4qgEJCQKaCBseu5NAsgEDCgF4qgEJCX2u'
+    'tmJ/7IRAotH51gMCU0eq0fnWAwJzZxKlAQoSR1JBVklUWV9VTklUX1BMQVRPEAIajAHq0PnWA3'
+    'AKUwgBEk8KTQgBUj0IBGIDCgF4ogEzCAJaCQmamZmZmSlwQKIBIwgDUhMIBGIDCgF4qgEJCTMz'
+    'MzMzI3BAqgEJCTMzMzMzY2xAqgEJCQAAAAAAAPA/ChkIAxIVChMIBFoJCWIQWDm0yO4/sgEDCg'
+    'F4otH51gMFUGxhdG+q0fnWAwVwbGF0bxKiAQoRR1JBVklUWV9VTklUX0JSSVgQAxqKAerQ+dYD'
+    'cAoZCAISFQoTCANaCQliEFg5tMjuP7IBAwoBeApTCAESTwpNCAFSPQgEYgMKAXiiATMIAloJCZ'
+    'qZmZmZKXBAogEjCANSEwgEYgMKAXiqAQkJMzMzMzMjcECqAQkJMzMzMzNjbECqAQkJAAAAAAAA'
+    '8D+i0fnWAwRCUklYqtH51gMEYnJpeA==');
 
 @$core.Deprecated('Use specificHeatUnitDescriptor instead')
 const SpecificHeatUnit$json = {
@@ -349,16 +355,16 @@ const SpecificVolumeUnit$json = {
 
 /// Descriptor for `SpecificVolumeUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List specificVolumeUnitDescriptor = $convert.base64Decode(
-    'ChJTcGVjaWZpY1ZvbHVtZVVuaXQSSAogU1BFQ0lGSUNfVk9MVU1FX1VOSVRfVU5TUEVDSUZJRU'
-    'QQABoiotH51gMLVU5TUEVDSUZJRUSq0fnWAwtVTlNQRUNJRklFRBI1ChlTUEVDSUZJQ19WT0xV'
-    'TUVfVU5JVF9RVExCEAEaFqLR+dYDBXF0L2xiqtH51gMFcXQvbGISOAoaU1BFQ0lGSUNfVk9MVU'
-    '1FX1VOSVRfR0FMTEIQAhoYotH51gMGZ2FsL2xiqtH51gMGZ2FsL2xiEjgKGlNQRUNJRklDX1ZP'
-    'TFVNRV9VTklUX0dBTE9aEAMaGKLR+dYDBmdhbC9veqrR+dYDBmdhbC9vehIvChdTUEVDSUZJQ1'
-    '9WT0xVTUVfVU5JVF9MRxAEGhKi0fnWAwNsL2eq0fnWAwNsL2cSMgoYU1BFQ0lGSUNfVk9MVU1F'
-    'X1VOSVRfTEtHEAUaFKLR+dYDBGwva2eq0fnWAwRsL2tnEjsKG1NQRUNJRklDX1ZPTFVNRV9VTk'
-    'lUX0ZMT1pPWhAGGhqi0fnWAwdmbG96L296qtH51gMHZmxvei9vehI3ChlTUEVDSUZJQ19WT0xV'
-    'TUVfVU5JVF9NM0tHEAcaGKLR+dYDBm1eMy9rZ6rR+dYDBm1eMy9rZxI6ChpTUEVDSUZJQ19WT0'
-    'xVTUVfVU5JVF9GVDNMQhAIGhqi0fnWAwdmdF4zL2xiqtH51gMHZnReMy9sYg==');
+    'ChJTcGVjaWZpY1ZvbHVtZVVuaXQSTgogU1BFQ0lGSUNfVk9MVU1FX1VOSVRfVU5TUEVDSUZJRU'
+    'QQABoo4tD51gMAotH51gMLVU5TUEVDSUZJRUSq0fnWAwtVTlNQRUNJRklFRBI1ChlTUEVDSUZJ'
+    'Q19WT0xVTUVfVU5JVF9RVExCEAEaFqLR+dYDBXF0L2xiqtH51gMFcXQvbGISOAoaU1BFQ0lGSU'
+    'NfVk9MVU1FX1VOSVRfR0FMTEIQAhoYotH51gMGZ2FsL2xiqtH51gMGZ2FsL2xiEjgKGlNQRUNJ'
+    'RklDX1ZPTFVNRV9VTklUX0dBTE9aEAMaGKLR+dYDBmdhbC9veqrR+dYDBmdhbC9vehIvChdTUE'
+    'VDSUZJQ19WT0xVTUVfVU5JVF9MRxAEGhKi0fnWAwNsL2eq0fnWAwNsL2cSMgoYU1BFQ0lGSUNf'
+    'Vk9MVU1FX1VOSVRfTEtHEAUaFKLR+dYDBGwva2eq0fnWAwRsL2tnEjsKG1NQRUNJRklDX1ZPTF'
+    'VNRV9VTklUX0ZMT1pPWhAGGhqi0fnWAwdmbG96L296qtH51gMHZmxvei9vehI3ChlTUEVDSUZJ'
+    'Q19WT0xVTUVfVU5JVF9NM0tHEAcaGKLR+dYDBm1eMy9rZ6rR+dYDBm1eMy9rZxI6ChpTUEVDSU'
+    'ZJQ19WT0xVTUVfVU5JVF9GVDNMQhAIGhqi0fnWAwdmdF4zL2xiqtH51gMHZnReMy9sYg==');
 
 @$core.Deprecated('Use unitUnitDescriptor instead')
 const UnitUnit$json = {
@@ -739,6 +745,34 @@ const ConcentrationType$json = {
 final $typed_data.Uint8List concentrationTypeDescriptor = $convert.base64Decode(
     'ChFDb25jZW50cmF0aW9uVHlwZRIUCgV2YWx1ZRgBIAEoAVIFdmFsdWUSMwoEdW5pdBgCIAEoDj'
     'IfLmJlZXJwcm90by52MS5Db25jZW50cmF0aW9uVW5pdFIEdW5pdA==');
+
+@$core.Deprecated('Use conversionSpecificVolumeUnitDescriptor instead')
+const ConversionSpecificVolumeUnit$json = {
+  '1': 'ConversionSpecificVolumeUnit',
+  '2': [
+    {'1': 'rates', '3': 1, '4': 3, '5': 11, '6': '.beerproto.v1.ConversionSpecificVolumeUnit.ConversionSpecificVolumeUnitRate', '10': 'rates'},
+  ],
+  '3': [ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate$json],
+};
+
+@$core.Deprecated('Use conversionSpecificVolumeUnitDescriptor instead')
+const ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate$json = {
+  '1': 'ConversionSpecificVolumeUnitRate',
+  '2': [
+    {'1': 'target', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.VolumeUnit', '10': 'target'},
+    {'1': 'operator', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.BinaryArithmetic', '10': 'operator'},
+    {'1': 'value', '3': 3, '4': 1, '5': 1, '10': 'value'},
+  ],
+};
+
+/// Descriptor for `ConversionSpecificVolumeUnit`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List conversionSpecificVolumeUnitDescriptor = $convert.base64Decode(
+    'ChxDb252ZXJzaW9uU3BlY2lmaWNWb2x1bWVVbml0EmEKBXJhdGVzGAEgAygLMksuYmVlcnByb3'
+    'RvLnYxLkNvbnZlcnNpb25TcGVjaWZpY1ZvbHVtZVVuaXQuQ29udmVyc2lvblNwZWNpZmljVm9s'
+    'dW1lVW5pdFJhdGVSBXJhdGVzGqYBCiBDb252ZXJzaW9uU3BlY2lmaWNWb2x1bWVVbml0UmF0ZR'
+    'IwCgZ0YXJnZXQYASABKA4yGC5iZWVycHJvdG8udjEuVm9sdW1lVW5pdFIGdGFyZ2V0EjoKCG9w'
+    'ZXJhdG9yGAIgASgOMh4uYmVlcnByb3RvLnYxLkJpbmFyeUFyaXRobWV0aWNSCG9wZXJhdG9yEh'
+    'QKBXZhbHVlGAMgASgBUgV2YWx1ZQ==');
 
 @$core.Deprecated('Use specificVolumeTypeDescriptor instead')
 const SpecificVolumeType$json = {
