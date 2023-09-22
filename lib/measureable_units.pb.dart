@@ -1477,7 +1477,7 @@ class ConcentrationType extends $pb.GeneratedMessage {
 
 class ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate extends $pb.GeneratedMessage {
   factory ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate({
-    VolumeUnit? target,
+    SpecificVolumeUnit? target,
     $0.BinaryArithmetic? operator,
     $core.double? value,
   }) {
@@ -1498,7 +1498,7 @@ class ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate extends $pb.
   factory ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionSpecificVolumeUnit.ConversionSpecificVolumeUnitRate', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..e<VolumeUnit>(1, _omitFieldNames ? '' : 'target', $pb.PbFieldType.OE, defaultOrMaker: VolumeUnit.VOLUME_UNIT_UNSPECIFIED, valueOf: VolumeUnit.valueOf, enumValues: VolumeUnit.values)
+    ..e<SpecificVolumeUnit>(1, _omitFieldNames ? '' : 'target', $pb.PbFieldType.OE, defaultOrMaker: SpecificVolumeUnit.SPECIFIC_VOLUME_UNIT_UNSPECIFIED, valueOf: SpecificVolumeUnit.valueOf, enumValues: SpecificVolumeUnit.values)
     ..e<$0.BinaryArithmetic>(2, _omitFieldNames ? '' : 'operator', $pb.PbFieldType.OE, defaultOrMaker: $0.BinaryArithmetic.BINARY_ARITHMETIC_UNSPECIFIED, valueOf: $0.BinaryArithmetic.valueOf, enumValues: $0.BinaryArithmetic.values)
     ..a<$core.double>(3, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
     ..hasRequiredFields = false
@@ -1526,9 +1526,9 @@ class ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate extends $pb.
   static ConversionSpecificVolumeUnit_ConversionSpecificVolumeUnitRate? _defaultInstance;
 
   @$pb.TagNumber(1)
-  VolumeUnit get target => $_getN(0);
+  SpecificVolumeUnit get target => $_getN(0);
   @$pb.TagNumber(1)
-  set target(VolumeUnit v) { setField(1, v); }
+  set target(SpecificVolumeUnit v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTarget() => $_has(0);
   @$pb.TagNumber(1)
@@ -2680,6 +2680,7 @@ class Measureable_units {
   static final conversionColorUnit = $pb.Extension<ConversionColorUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionColorUnit', 123456782, $pb.PbFieldType.OM, defaultOrMaker: ConversionColorUnit.getDefault, subBuilder: ConversionColorUnit.create);
   static final conversionGravityUnit = $pb.Extension<ConversionGravityUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionGravityUnit', 123456781, $pb.PbFieldType.OM, defaultOrMaker: ConversionGravityUnit.getDefault, subBuilder: ConversionGravityUnit.create);
   static final conversionSpecificVolumeUnit = $pb.Extension<ConversionSpecificVolumeUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionSpecificVolumeUnit', 123456780, $pb.PbFieldType.OM, defaultOrMaker: ConversionSpecificVolumeUnit.getDefault, subBuilder: ConversionSpecificVolumeUnit.create);
+  static final fullName = $pb.Extension<$core.String>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'fullName', 123456779, $pb.PbFieldType.OS);
   static void registerAllExtensions($pb.ExtensionRegistry registry) {
     registry.add(stringName);
     registry.add(displayName);
@@ -2690,6 +2691,7 @@ class Measureable_units {
     registry.add(conversionColorUnit);
     registry.add(conversionGravityUnit);
     registry.add(conversionSpecificVolumeUnit);
+    registry.add(fullName);
   }
 }
 
