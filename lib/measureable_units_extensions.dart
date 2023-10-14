@@ -321,16 +321,21 @@ extension VolumeTypeExtension on VolumeType {
   static EnumDescriptorProto enumDescriptor =
       EnumDescriptorProto.fromBuffer(volumeUnitDescriptor, reg);
 
-  VolumeType convert(VolumeUnit unit) {
-    var e =
-        enumDescriptor.value.firstWhere((element) => element.number == value);
+  VolumeType to(VolumeUnit target) {
+    var e = enumDescriptor.value
+        .firstWhere((element) => element.number == unit.value);
     ConversionVolumeUnit tt =
         e.options.getExtension(Measureable_units.conversionVolumeUnit);
     var response = VolumeType()
       ..value = value
-      ..unit = unit;
+      ..unit = target;
+
+    if (unit == target) {
+      return response;
+    }
+
     for (var r in tt.rates) {
-      if (r.target == unit) {
+      if (r.target == target) {
         switch (r.operator) {
           case BinaryArithmetic.BINARY_ARITHMETIC_ADDITION:
             response.value = value + r.value;
@@ -354,5 +359,17 @@ extension VolumeTypeExtension on VolumeType {
       }
     }
     return response;
+  }
+
+  String _toStringAsValue() {
+    if (!value.isFinite) {
+      return "";
+    }
+
+    return value.toStringAsFixed(2);
+  }
+
+  String displayName() {
+    return "${_toStringAsValue()} ${unit.displayName()}";
   }
 }
