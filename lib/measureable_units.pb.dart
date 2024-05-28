@@ -869,6 +869,128 @@ class TimeType extends $pb.GeneratedMessage {
   void clearUnit() => clearField(2);
 }
 
+class ConversionTimeUnit_ConversionTimeUnitRate extends $pb.GeneratedMessage {
+  factory ConversionTimeUnit_ConversionTimeUnitRate({
+    TimeUnit? target,
+    $0.BinaryArithmetic? operator,
+    $core.double? value,
+  }) {
+    final $result = create();
+    if (target != null) {
+      $result.target = target;
+    }
+    if (operator != null) {
+      $result.operator = operator;
+    }
+    if (value != null) {
+      $result.value = value;
+    }
+    return $result;
+  }
+  ConversionTimeUnit_ConversionTimeUnitRate._() : super();
+  factory ConversionTimeUnit_ConversionTimeUnitRate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversionTimeUnit_ConversionTimeUnitRate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionTimeUnit.ConversionTimeUnitRate', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..e<TimeUnit>(1, _omitFieldNames ? '' : 'target', $pb.PbFieldType.OE, defaultOrMaker: TimeUnit.TIME_UNIT_UNSPECIFIED, valueOf: TimeUnit.valueOf, enumValues: TimeUnit.values)
+    ..e<$0.BinaryArithmetic>(2, _omitFieldNames ? '' : 'operator', $pb.PbFieldType.OE, defaultOrMaker: $0.BinaryArithmetic.BINARY_ARITHMETIC_UNSPECIFIED, valueOf: $0.BinaryArithmetic.valueOf, enumValues: $0.BinaryArithmetic.values)
+    ..a<$core.double>(3, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversionTimeUnit_ConversionTimeUnitRate clone() => ConversionTimeUnit_ConversionTimeUnitRate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversionTimeUnit_ConversionTimeUnitRate copyWith(void Function(ConversionTimeUnit_ConversionTimeUnitRate) updates) => super.copyWith((message) => updates(message as ConversionTimeUnit_ConversionTimeUnitRate)) as ConversionTimeUnit_ConversionTimeUnitRate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversionTimeUnit_ConversionTimeUnitRate create() => ConversionTimeUnit_ConversionTimeUnitRate._();
+  ConversionTimeUnit_ConversionTimeUnitRate createEmptyInstance() => create();
+  static $pb.PbList<ConversionTimeUnit_ConversionTimeUnitRate> createRepeated() => $pb.PbList<ConversionTimeUnit_ConversionTimeUnitRate>();
+  @$core.pragma('dart2js:noInline')
+  static ConversionTimeUnit_ConversionTimeUnitRate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversionTimeUnit_ConversionTimeUnitRate>(create);
+  static ConversionTimeUnit_ConversionTimeUnitRate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  TimeUnit get target => $_getN(0);
+  @$pb.TagNumber(1)
+  set target(TimeUnit v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTarget() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTarget() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.BinaryArithmetic get operator => $_getN(1);
+  @$pb.TagNumber(2)
+  set operator($0.BinaryArithmetic v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasOperator() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearOperator() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.double get value => $_getN(2);
+  @$pb.TagNumber(3)
+  set value($core.double v) { $_setDouble(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasValue() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearValue() => clearField(3);
+}
+
+class ConversionTimeUnit extends $pb.GeneratedMessage {
+  factory ConversionTimeUnit({
+    $core.Iterable<ConversionTimeUnit_ConversionTimeUnitRate>? rates,
+  }) {
+    final $result = create();
+    if (rates != null) {
+      $result.rates.addAll(rates);
+    }
+    return $result;
+  }
+  ConversionTimeUnit._() : super();
+  factory ConversionTimeUnit.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversionTimeUnit.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversionTimeUnit', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..pc<ConversionTimeUnit_ConversionTimeUnitRate>(1, _omitFieldNames ? '' : 'rates', $pb.PbFieldType.PM, subBuilder: ConversionTimeUnit_ConversionTimeUnitRate.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversionTimeUnit clone() => ConversionTimeUnit()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversionTimeUnit copyWith(void Function(ConversionTimeUnit) updates) => super.copyWith((message) => updates(message as ConversionTimeUnit)) as ConversionTimeUnit;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversionTimeUnit create() => ConversionTimeUnit._();
+  ConversionTimeUnit createEmptyInstance() => create();
+  static $pb.PbList<ConversionTimeUnit> createRepeated() => $pb.PbList<ConversionTimeUnit>();
+  @$core.pragma('dart2js:noInline')
+  static ConversionTimeUnit getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversionTimeUnit>(create);
+  static ConversionTimeUnit? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<ConversionTimeUnit_ConversionTimeUnitRate> get rates => $_getList(0);
+}
+
 /// ColorType supports both grain color properties, such as Lovibond, and wort color properties such as SRM and EBC
 class ColorType extends $pb.GeneratedMessage {
   factory ColorType({
@@ -2680,7 +2802,8 @@ class Measureable_units {
   static final conversionColorUnit = $pb.Extension<ConversionColorUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionColorUnit', 123456782, $pb.PbFieldType.OM, defaultOrMaker: ConversionColorUnit.getDefault, subBuilder: ConversionColorUnit.create);
   static final conversionGravityUnit = $pb.Extension<ConversionGravityUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionGravityUnit', 123456781, $pb.PbFieldType.OM, defaultOrMaker: ConversionGravityUnit.getDefault, subBuilder: ConversionGravityUnit.create);
   static final conversionSpecificVolumeUnit = $pb.Extension<ConversionSpecificVolumeUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionSpecificVolumeUnit', 123456780, $pb.PbFieldType.OM, defaultOrMaker: ConversionSpecificVolumeUnit.getDefault, subBuilder: ConversionSpecificVolumeUnit.create);
-  static final fullName = $pb.Extension<$core.String>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'fullName', 123456779, $pb.PbFieldType.OS);
+  static final conversionTimeUnit = $pb.Extension<ConversionTimeUnit>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'conversionTimeUnit', 123456779, $pb.PbFieldType.OM, defaultOrMaker: ConversionTimeUnit.getDefault, subBuilder: ConversionTimeUnit.create);
+  static final fullName = $pb.Extension<$core.String>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'fullName', 123456778, $pb.PbFieldType.OS);
   static void registerAllExtensions($pb.ExtensionRegistry registry) {
     registry.add(stringName);
     registry.add(displayName);
@@ -2691,6 +2814,7 @@ class Measureable_units {
     registry.add(conversionColorUnit);
     registry.add(conversionGravityUnit);
     registry.add(conversionSpecificVolumeUnit);
+    registry.add(conversionTimeUnit);
     registry.add(fullName);
   }
 }
