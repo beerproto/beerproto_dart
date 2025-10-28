@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: beerproto/v1/culture.proto
-//
-// @dart = 2.12
+// Generated from beerproto/v1/culture.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -90,92 +91,266 @@ final $typed_data.Uint8List cultureBaseTypeDescriptor = $convert.base64Decode(
     'sSIQodQ1VMVFVSRV9CQVNFX1RZUEVfU1BPTlRBTkVPVVMQDBIaChZDVUxUVVJFX0JBU0VfVFlQ'
     'RV9XSU5FEA0=');
 
+@$core.Deprecated('Use cultureBaseDescriptor instead')
+const CultureBase$json = {
+  '1': 'CultureBase',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {
+      '1': 'type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.CultureBaseType',
+      '8': {},
+      '10': 'type'
+    },
+    {
+      '1': 'form',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.CultureBaseForm',
+      '8': {},
+      '10': 'form'
+    },
+    {'1': 'producer', '3': 4, '4': 1, '5': 9, '10': 'producer'},
+    {'1': 'product_id', '3': 5, '4': 1, '5': 9, '10': 'productId'},
+  ],
+};
+
+/// Descriptor for `CultureBase`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cultureBaseDescriptor = $convert.base64Decode(
+    'CgtDdWx0dXJlQmFzZRIeCgRuYW1lGAEgASgJQgq6SAfIAQFyAhADUgRuYW1lEj4KBHR5cGUYAi'
+    'ABKA4yHS5iZWVycHJvdG8udjEuQ3VsdHVyZUJhc2VUeXBlQgu6SAjIAQGCAQIgAFIEdHlwZRI+'
+    'CgRmb3JtGAMgASgOMh0uYmVlcnByb3RvLnYxLkN1bHR1cmVCYXNlRm9ybUILukgIyAEBggECIA'
+    'BSBGZvcm0SGgoIcHJvZHVjZXIYBCABKAlSCHByb2R1Y2VyEh0KCnByb2R1Y3RfaWQYBSABKAlS'
+    'CXByb2R1Y3RJZA==');
+
 @$core.Deprecated('Use cultureInformationDescriptor instead')
 const CultureInformation$json = {
   '1': 'CultureInformation',
   '2': [
-    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    {'1': 'form', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.CultureBaseForm', '10': 'form'},
-    {'1': 'producer', '3': 3, '4': 1, '5': 9, '10': 'producer'},
-    {'1': 'temperature_range', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureRangeType', '10': 'temperatureRange'},
-    {'1': 'notes', '3': 5, '4': 1, '5': 9, '10': 'notes'},
-    {'1': 'best_for', '3': 6, '4': 1, '5': 9, '10': 'bestFor'},
-    {'1': 'inventory', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.CultureInventoryType', '10': 'inventory'},
-    {'1': 'product_id', '3': 8, '4': 1, '5': 9, '10': 'productId'},
-    {'1': 'name', '3': 9, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'alcohol_tolerance', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'alcoholTolerance'},
-    {'1': 'glucoamylase', '3': 11, '4': 1, '5': 8, '10': 'glucoamylase'},
-    {'1': 'type', '3': 12, '4': 1, '5': 14, '6': '.beerproto.v1.CultureBaseType', '10': 'type'},
-    {'1': 'flocculation', '3': 13, '4': 1, '5': 14, '6': '.beerproto.v1.QualitativeRangeUnit', '10': 'flocculation'},
-    {'1': 'attenuation_range', '3': 14, '4': 1, '5': 11, '6': '.beerproto.v1.PercentRangeType', '10': 'attenuationRange'},
-    {'1': 'max_reuse', '3': 15, '4': 1, '5': 5, '10': 'maxReuse'},
-    {'1': 'pof', '3': 16, '4': 1, '5': 8, '10': 'pof'},
-    {'1': 'zymocide', '3': 17, '4': 1, '5': 11, '6': '.beerproto.v1.Zymocide', '10': 'zymocide'},
+    {
+      '1': 'base',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.CultureBase',
+      '8': {},
+      '10': 'base'
+    },
+    {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
+    {
+      '1': 'temperature_range',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TemperatureRangeType',
+      '10': 'temperatureRange'
+    },
+    {'1': 'notes', '3': 4, '4': 1, '5': 9, '10': 'notes'},
+    {'1': 'best_for', '3': 5, '4': 1, '5': 9, '10': 'bestFor'},
+    {
+      '1': 'inventory',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.CultureInventoryType',
+      '10': 'inventory'
+    },
+    {'1': 'name', '3': 7, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'alcohol_tolerance',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'alcoholTolerance'
+    },
+    {'1': 'glucoamylase', '3': 9, '4': 1, '5': 8, '10': 'glucoamylase'},
+    {
+      '1': 'type',
+      '3': 10,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.CultureBaseType',
+      '10': 'type'
+    },
+    {
+      '1': 'flocculation',
+      '3': 11,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.QualitativeRangeUnit',
+      '10': 'flocculation'
+    },
+    {
+      '1': 'attenuation_range',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentRangeType',
+      '10': 'attenuationRange'
+    },
+    {'1': 'max_reuse', '3': 13, '4': 1, '5': 5, '10': 'maxReuse'},
+    {'1': 'pof', '3': 14, '4': 1, '5': 8, '10': 'pof'},
+    {
+      '1': 'zymocide',
+      '3': 15,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.Zymocide',
+      '10': 'zymocide'
+    },
   ],
 };
 
 /// Descriptor for `CultureInformation`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List cultureInformationDescriptor = $convert.base64Decode(
-    'ChJDdWx0dXJlSW5mb3JtYXRpb24SDgoCaWQYASABKAlSAmlkEjEKBGZvcm0YAiABKA4yHS5iZW'
-    'VycHJvdG8udjEuQ3VsdHVyZUJhc2VGb3JtUgRmb3JtEhoKCHByb2R1Y2VyGAMgASgJUghwcm9k'
-    'dWNlchJPChF0ZW1wZXJhdHVyZV9yYW5nZRgEIAEoCzIiLmJlZXJwcm90by52MS5UZW1wZXJhdH'
-    'VyZVJhbmdlVHlwZVIQdGVtcGVyYXR1cmVSYW5nZRIUCgVub3RlcxgFIAEoCVIFbm90ZXMSGQoI'
-    'YmVzdF9mb3IYBiABKAlSB2Jlc3RGb3ISQAoJaW52ZW50b3J5GAcgASgLMiIuYmVlcnByb3RvLn'
-    'YxLkN1bHR1cmVJbnZlbnRvcnlUeXBlUglpbnZlbnRvcnkSHQoKcHJvZHVjdF9pZBgIIAEoCVIJ'
-    'cHJvZHVjdElkEhIKBG5hbWUYCSABKAlSBG5hbWUSRgoRYWxjb2hvbF90b2xlcmFuY2UYCiABKA'
-    'syGS5iZWVycHJvdG8udjEuUGVyY2VudFR5cGVSEGFsY29ob2xUb2xlcmFuY2USIgoMZ2x1Y29h'
-    'bXlsYXNlGAsgASgIUgxnbHVjb2FteWxhc2USMQoEdHlwZRgMIAEoDjIdLmJlZXJwcm90by52MS'
-    '5DdWx0dXJlQmFzZVR5cGVSBHR5cGUSRgoMZmxvY2N1bGF0aW9uGA0gASgOMiIuYmVlcnByb3Rv'
-    'LnYxLlF1YWxpdGF0aXZlUmFuZ2VVbml0UgxmbG9jY3VsYXRpb24SSwoRYXR0ZW51YXRpb25fcm'
-    'FuZ2UYDiABKAsyHi5iZWVycHJvdG8udjEuUGVyY2VudFJhbmdlVHlwZVIQYXR0ZW51YXRpb25S'
-    'YW5nZRIbCgltYXhfcmV1c2UYDyABKAVSCG1heFJldXNlEhAKA3BvZhgQIAEoCFIDcG9mEjIKCH'
-    'p5bW9jaWRlGBEgASgLMhYuYmVlcnByb3RvLnYxLlp5bW9jaWRlUgh6eW1vY2lkZQ==');
+    'ChJDdWx0dXJlSW5mb3JtYXRpb24SNQoEYmFzZRgBIAEoCzIZLmJlZXJwcm90by52MS5DdWx0dX'
+    'JlQmFzZUIGukgDyAEBUgRiYXNlEhsKAmlkGAIgASgJQgu6SAjIAQFyA7ABAVICaWQSTwoRdGVt'
+    'cGVyYXR1cmVfcmFuZ2UYAyABKAsyIi5iZWVycHJvdG8udjEuVGVtcGVyYXR1cmVSYW5nZVR5cG'
+    'VSEHRlbXBlcmF0dXJlUmFuZ2USFAoFbm90ZXMYBCABKAlSBW5vdGVzEhkKCGJlc3RfZm9yGAUg'
+    'ASgJUgdiZXN0Rm9yEkAKCWludmVudG9yeRgGIAEoCzIiLmJlZXJwcm90by52MS5DdWx0dXJlSW'
+    '52ZW50b3J5VHlwZVIJaW52ZW50b3J5EhIKBG5hbWUYByABKAlSBG5hbWUSRgoRYWxjb2hvbF90'
+    'b2xlcmFuY2UYCCABKAsyGS5iZWVycHJvdG8udjEuUGVyY2VudFR5cGVSEGFsY29ob2xUb2xlcm'
+    'FuY2USIgoMZ2x1Y29hbXlsYXNlGAkgASgIUgxnbHVjb2FteWxhc2USMQoEdHlwZRgKIAEoDjId'
+    'LmJlZXJwcm90by52MS5DdWx0dXJlQmFzZVR5cGVSBHR5cGUSRgoMZmxvY2N1bGF0aW9uGAsgAS'
+    'gOMiIuYmVlcnByb3RvLnYxLlF1YWxpdGF0aXZlUmFuZ2VVbml0UgxmbG9jY3VsYXRpb24SSwoR'
+    'YXR0ZW51YXRpb25fcmFuZ2UYDCABKAsyHi5iZWVycHJvdG8udjEuUGVyY2VudFJhbmdlVHlwZV'
+    'IQYXR0ZW51YXRpb25SYW5nZRIbCgltYXhfcmV1c2UYDSABKAVSCG1heFJldXNlEhAKA3BvZhgO'
+    'IAEoCFIDcG9mEjIKCHp5bW9jaWRlGA8gASgLMhYuYmVlcnByb3RvLnYxLlp5bW9jaWRlUgh6eW'
+    '1vY2lkZQ==');
 
 @$core.Deprecated('Use cultureAdditionTypeDescriptor instead')
 const CultureAdditionType$json = {
   '1': 'CultureAdditionType',
   '2': [
-    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    {'1': 'form', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.CultureBaseForm', '10': 'form'},
-    {'1': 'product_id', '3': 3, '4': 1, '5': 9, '10': 'productId'},
-    {'1': 'name', '3': 4, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'cell_count_billions', '3': 5, '4': 1, '5': 5, '10': 'cellCountBillions'},
-    {'1': 'times_cultured', '3': 6, '4': 1, '5': 5, '10': 'timesCultured'},
-    {'1': 'producer', '3': 7, '4': 1, '5': 9, '10': 'producer'},
-    {'1': 'type', '3': 8, '4': 1, '5': 14, '6': '.beerproto.v1.CultureBaseType', '10': 'type'},
-    {'1': 'attenuation', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'attenuation'},
-    {'1': 'timing', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.TimingType', '10': 'timing'},
-    {'1': 'mass', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
-    {'1': 'unit', '3': 12, '4': 1, '5': 11, '6': '.beerproto.v1.UnitType', '9': 0, '10': 'unit'},
-    {'1': 'volume', '3': 13, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
+    {
+      '1': 'base',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.CultureBase',
+      '8': {},
+      '10': 'base'
+    },
+    {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
+    {
+      '1': 'cell_count_billions',
+      '3': 3,
+      '4': 1,
+      '5': 5,
+      '10': 'cellCountBillions'
+    },
+    {'1': 'times_cultured', '3': 4, '4': 1, '5': 5, '10': 'timesCultured'},
+    {
+      '1': 'type',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.CultureBaseType',
+      '10': 'type'
+    },
+    {
+      '1': 'attenuation',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'attenuation'
+    },
+    {
+      '1': 'timing',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TimingType',
+      '10': 'timing'
+    },
+    {
+      '1': 'mass',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.MassType',
+      '9': 0,
+      '10': 'mass'
+    },
+    {
+      '1': 'unit',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.UnitType',
+      '9': 0,
+      '10': 'unit'
+    },
+    {
+      '1': 'volume',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '9': 0,
+      '10': 'volume'
+    },
   ],
   '8': [
-    {'1': 'amount'},
+    {'1': 'amount', '2': {}},
   ],
 };
 
 /// Descriptor for `CultureAdditionType`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List cultureAdditionTypeDescriptor = $convert.base64Decode(
-    'ChNDdWx0dXJlQWRkaXRpb25UeXBlEg4KAmlkGAEgASgJUgJpZBIxCgRmb3JtGAIgASgOMh0uYm'
-    'VlcnByb3RvLnYxLkN1bHR1cmVCYXNlRm9ybVIEZm9ybRIdCgpwcm9kdWN0X2lkGAMgASgJUglw'
-    'cm9kdWN0SWQSEgoEbmFtZRgEIAEoCVIEbmFtZRIuChNjZWxsX2NvdW50X2JpbGxpb25zGAUgAS'
-    'gFUhFjZWxsQ291bnRCaWxsaW9ucxIlCg50aW1lc19jdWx0dXJlZBgGIAEoBVINdGltZXNDdWx0'
-    'dXJlZBIaCghwcm9kdWNlchgHIAEoCVIIcHJvZHVjZXISMQoEdHlwZRgIIAEoDjIdLmJlZXJwcm'
-    '90by52MS5DdWx0dXJlQmFzZVR5cGVSBHR5cGUSOwoLYXR0ZW51YXRpb24YCSABKAsyGS5iZWVy'
-    'cHJvdG8udjEuUGVyY2VudFR5cGVSC2F0dGVudWF0aW9uEjAKBnRpbWluZxgKIAEoCzIYLmJlZX'
-    'Jwcm90by52MS5UaW1pbmdUeXBlUgZ0aW1pbmcSLAoEbWFzcxgLIAEoCzIWLmJlZXJwcm90by52'
-    'MS5NYXNzVHlwZUgAUgRtYXNzEiwKBHVuaXQYDCABKAsyFi5iZWVycHJvdG8udjEuVW5pdFR5cG'
-    'VIAFIEdW5pdBIyCgZ2b2x1bWUYDSABKAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVHlwZUgAUgZ2'
-    'b2x1bWVCCAoGYW1vdW50');
+    'ChNDdWx0dXJlQWRkaXRpb25UeXBlEjUKBGJhc2UYASABKAsyGS5iZWVycHJvdG8udjEuQ3VsdH'
+    'VyZUJhc2VCBrpIA8gBAVIEYmFzZRIbCgJpZBgCIAEoCUILukgIyAEBcgOwAQFSAmlkEi4KE2Nl'
+    'bGxfY291bnRfYmlsbGlvbnMYAyABKAVSEWNlbGxDb3VudEJpbGxpb25zEiUKDnRpbWVzX2N1bH'
+    'R1cmVkGAQgASgFUg10aW1lc0N1bHR1cmVkEjEKBHR5cGUYBSABKA4yHS5iZWVycHJvdG8udjEu'
+    'Q3VsdHVyZUJhc2VUeXBlUgR0eXBlEjsKC2F0dGVudWF0aW9uGAYgASgLMhkuYmVlcnByb3RvLn'
+    'YxLlBlcmNlbnRUeXBlUgthdHRlbnVhdGlvbhIwCgZ0aW1pbmcYByABKAsyGC5iZWVycHJvdG8u'
+    'djEuVGltaW5nVHlwZVIGdGltaW5nEiwKBG1hc3MYCCABKAsyFi5iZWVycHJvdG8udjEuTWFzc1'
+    'R5cGVIAFIEbWFzcxIsCgR1bml0GAkgASgLMhYuYmVlcnByb3RvLnYxLlVuaXRUeXBlSABSBHVu'
+    'aXQSMgoGdm9sdW1lGAogASgLMhguYmVlcnByb3RvLnYxLlZvbHVtZVR5cGVIAFIGdm9sdW1lQg'
+    '8KBmFtb3VudBIFukgCCAE=');
 
 @$core.Deprecated('Use cultureInventoryTypeDescriptor instead')
 const CultureInventoryType$json = {
   '1': 'CultureInventoryType',
   '2': [
-    {'1': 'liquid', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'liquid'},
-    {'1': 'dry', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '10': 'dry'},
-    {'1': 'slant', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'slant'},
-    {'1': 'culture', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'culture'},
+    {
+      '1': 'liquid',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '10': 'liquid'
+    },
+    {
+      '1': 'dry',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.MassType',
+      '10': 'dry'
+    },
+    {
+      '1': 'slant',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '10': 'slant'
+    },
+    {
+      '1': 'culture',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '10': 'culture'
+    },
   ],
 };
 
@@ -203,4 +378,3 @@ final $typed_data.Uint8List zymocideDescriptor = $convert.base64Decode(
     'CghaeW1vY2lkZRIQCgNubzEYASABKAhSA25vMRIQCgNubzIYAiABKAhSA25vMhISCgRubzI4GA'
     'MgASgIUgRubzI4EhIKBGtsdXMYBCABKAhSBGtsdXMSGAoHbmV1dHJhbBgFIAEoCFIHbmV1dHJh'
     'bA==');
-

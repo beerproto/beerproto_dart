@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: beerproto/v1/boil_step.proto
-//
-// @dart = 2.12
+// Generated from beerproto/v1/boil_step.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -33,33 +34,95 @@ final $typed_data.Uint8List boilStepTypeChillingTypeDescriptor = $convert.base64
 const BoilStepType$json = {
   '1': 'BoilStepType',
   '2': [
-    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    {'1': 'end_gravity', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'endGravity'},
-    {'1': 'chilling_type', '3': 3, '4': 1, '5': 14, '6': '.beerproto.v1.BoilStepTypeChillingType', '10': 'chillingType'},
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
+    {
+      '1': 'end_gravity',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.GravityType',
+      '10': 'endGravity'
+    },
+    {
+      '1': 'chilling_type',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.BoilStepTypeChillingType',
+      '10': 'chillingType'
+    },
     {'1': 'description', '3': 4, '4': 1, '5': 9, '10': 'description'},
-    {'1': 'end_temperature', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'endTemperature'},
-    {'1': 'ramp_time', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '10': 'rampTime'},
-    {'1': 'step_time', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '10': 'stepTime'},
-    {'1': 'start_gravity', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'startGravity'},
-    {'1': 'start_ph', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'startPh'},
-    {'1': 'end_ph', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'endPh'},
+    {
+      '1': 'end_temperature',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TemperatureType',
+      '10': 'endTemperature'
+    },
+    {
+      '1': 'ramp_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TimeType',
+      '10': 'rampTime'
+    },
+    {
+      '1': 'step_time',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TimeType',
+      '10': 'stepTime'
+    },
+    {
+      '1': 'start_gravity',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.GravityType',
+      '10': 'startGravity'
+    },
+    {
+      '1': 'start_ph',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.AcidityType',
+      '10': 'startPh'
+    },
+    {
+      '1': 'end_ph',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.AcidityType',
+      '10': 'endPh'
+    },
     {'1': 'name', '3': 11, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'start_temperature', '3': 12, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'startTemperature'},
+    {
+      '1': 'start_temperature',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TemperatureType',
+      '10': 'startTemperature'
+    },
   ],
 };
 
 /// Descriptor for `BoilStepType`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List boilStepTypeDescriptor = $convert.base64Decode(
-    'CgxCb2lsU3RlcFR5cGUSDgoCaWQYASABKAlSAmlkEjoKC2VuZF9ncmF2aXR5GAIgASgLMhkuYm'
-    'VlcnByb3RvLnYxLkdyYXZpdHlUeXBlUgplbmRHcmF2aXR5EksKDWNoaWxsaW5nX3R5cGUYAyAB'
-    'KA4yJi5iZWVycHJvdG8udjEuQm9pbFN0ZXBUeXBlQ2hpbGxpbmdUeXBlUgxjaGlsbGluZ1R5cG'
-    'USIAoLZGVzY3JpcHRpb24YBCABKAlSC2Rlc2NyaXB0aW9uEkYKD2VuZF90ZW1wZXJhdHVyZRgF'
-    'IAEoCzIdLmJlZXJwcm90by52MS5UZW1wZXJhdHVyZVR5cGVSDmVuZFRlbXBlcmF0dXJlEjMKCX'
-    'JhbXBfdGltZRgGIAEoCzIWLmJlZXJwcm90by52MS5UaW1lVHlwZVIIcmFtcFRpbWUSMwoJc3Rl'
-    'cF90aW1lGAcgASgLMhYuYmVlcnByb3RvLnYxLlRpbWVUeXBlUghzdGVwVGltZRI+Cg1zdGFydF'
-    '9ncmF2aXR5GAggASgLMhkuYmVlcnByb3RvLnYxLkdyYXZpdHlUeXBlUgxzdGFydEdyYXZpdHkS'
-    'NAoIc3RhcnRfcGgYCSABKAsyGS5iZWVycHJvdG8udjEuQWNpZGl0eVR5cGVSB3N0YXJ0UGgSMA'
-    'oGZW5kX3BoGAogASgLMhkuYmVlcnByb3RvLnYxLkFjaWRpdHlUeXBlUgVlbmRQaBISCgRuYW1l'
-    'GAsgASgJUgRuYW1lEkoKEXN0YXJ0X3RlbXBlcmF0dXJlGAwgASgLMh0uYmVlcnByb3RvLnYxLl'
-    'RlbXBlcmF0dXJlVHlwZVIQc3RhcnRUZW1wZXJhdHVyZQ==');
-
+    'CgxCb2lsU3RlcFR5cGUSGwoCaWQYASABKAlCC7pICMgBAXIDsAEBUgJpZBI6CgtlbmRfZ3Jhdm'
+    'l0eRgCIAEoCzIZLmJlZXJwcm90by52MS5HcmF2aXR5VHlwZVIKZW5kR3Jhdml0eRJLCg1jaGls'
+    'bGluZ190eXBlGAMgASgOMiYuYmVlcnByb3RvLnYxLkJvaWxTdGVwVHlwZUNoaWxsaW5nVHlwZV'
+    'IMY2hpbGxpbmdUeXBlEiAKC2Rlc2NyaXB0aW9uGAQgASgJUgtkZXNjcmlwdGlvbhJGCg9lbmRf'
+    'dGVtcGVyYXR1cmUYBSABKAsyHS5iZWVycHJvdG8udjEuVGVtcGVyYXR1cmVUeXBlUg5lbmRUZW'
+    '1wZXJhdHVyZRIzCglyYW1wX3RpbWUYBiABKAsyFi5iZWVycHJvdG8udjEuVGltZVR5cGVSCHJh'
+    'bXBUaW1lEjMKCXN0ZXBfdGltZRgHIAEoCzIWLmJlZXJwcm90by52MS5UaW1lVHlwZVIIc3RlcF'
+    'RpbWUSPgoNc3RhcnRfZ3Jhdml0eRgIIAEoCzIZLmJlZXJwcm90by52MS5HcmF2aXR5VHlwZVIM'
+    'c3RhcnRHcmF2aXR5EjQKCHN0YXJ0X3BoGAkgASgLMhkuYmVlcnByb3RvLnYxLkFjaWRpdHlUeX'
+    'BlUgdzdGFydFBoEjAKBmVuZF9waBgKIAEoCzIZLmJlZXJwcm90by52MS5BY2lkaXR5VHlwZVIF'
+    'ZW5kUGgSEgoEbmFtZRgLIAEoCVIEbmFtZRJKChFzdGFydF90ZW1wZXJhdHVyZRgMIAEoCzIdLm'
+    'JlZXJwcm90by52MS5UZW1wZXJhdHVyZVR5cGVSEHN0YXJ0VGVtcGVyYXR1cmU=');

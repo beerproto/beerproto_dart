@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: beerproto/v1/packaging_graphic.proto
-//
-// @dart = 2.12
+// Generated from beerproto/v1/packaging_graphic.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -17,16 +18,41 @@ import 'dart:typed_data' as $typed_data;
 const PackagingGraphicType$json = {
   '1': 'PackagingGraphicType',
   '2': [
-    {'1': 'position', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.PackagingGraphicType.PositionUnit', '10': 'position'},
-    {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.PackagingGraphicType.GraphicType', '10': 'type'},
+    {
+      '1': 'position',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.PackagingGraphicType.PositionUnit',
+      '10': 'position'
+    },
+    {
+      '1': 'type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.PackagingGraphicType.GraphicType',
+      '10': 'type'
+    },
     {'1': 'base64_data', '3': 3, '4': 1, '5': 9, '10': 'base64Data'},
     {'1': 'urls', '3': 4, '4': 3, '5': 9, '10': 'urls'},
     {'1': 'dpi', '3': 5, '4': 1, '5': 5, '10': 'dpi'},
     {'1': 'width', '3': 6, '4': 1, '5': 3, '10': 'width'},
     {'1': 'height', '3': 7, '4': 1, '5': 3, '10': 'height'},
-    {'1': 'units', '3': 8, '4': 1, '5': 14, '6': '.beerproto.v1.PackagingGraphicType.UnitsType', '10': 'units'},
+    {
+      '1': 'units',
+      '3': 8,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.PackagingGraphicType.UnitsType',
+      '10': 'units'
+    },
   ],
-  '4': [PackagingGraphicType_PositionUnit$json, PackagingGraphicType_GraphicType$json, PackagingGraphicType_UnitsType$json],
+  '4': [
+    PackagingGraphicType_PositionUnit$json,
+    PackagingGraphicType_GraphicType$json,
+    PackagingGraphicType_UnitsType$json
+  ],
 };
 
 @$core.Deprecated('Use packagingGraphicTypeDescriptor instead')
@@ -95,4 +121,3 @@ final $typed_data.Uint8List packagingGraphicTypeDescriptor = $convert.base64Deco
     'R1JBUEhJQ19UWVBFX0pQRxAKEhQKEEdSQVBISUNfVFlQRV9HSUYQCyJNCglVbml0c1R5cGUSGg'
     'oWVU5JVFNfVFlQRV9VTlNQRUNJRklFRBAAEhEKDVVOSVRTX1RZUEVfTU0QARIRCg1VTklUU19U'
     'WVBFX0lOEAI=');
-

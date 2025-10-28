@@ -1,20 +1,22 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: beerproto/v1/srm.proto
-//
-// @dart = 2.12
+// Generated from beerproto/v1/srm.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class SRM extends $pb.ProtobufEnum {
-  static const SRM SRM_UNSPECIFIED = SRM._(0, _omitEnumNames ? '' : 'SRM_UNSPECIFIED');
+  static const SRM SRM_UNSPECIFIED =
+      SRM._(0, _omitEnumNames ? '' : 'SRM_UNSPECIFIED');
   static const SRM SRM_1 = SRM._(1, _omitEnumNames ? '' : 'SRM_1');
   static const SRM SRM_2 = SRM._(2, _omitEnumNames ? '' : 'SRM_2');
   static const SRM SRM_3 = SRM._(3, _omitEnumNames ? '' : 'SRM_3');
@@ -46,7 +48,7 @@ class SRM extends $pb.ProtobufEnum {
   static const SRM SRM_29 = SRM._(29, _omitEnumNames ? '' : 'SRM_29');
   static const SRM SRM_30 = SRM._(30, _omitEnumNames ? '' : 'SRM_30');
 
-  static const $core.List<SRM> values = <SRM> [
+  static const $core.List<SRM> values = <SRM>[
     SRM_UNSPECIFIED,
     SRM_1,
     SRM_2,
@@ -80,11 +82,13 @@ class SRM extends $pb.ProtobufEnum {
     SRM_30,
   ];
 
-  static final $core.Map<$core.int, SRM> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static SRM? valueOf($core.int value) => _byValue[value];
+  static final $core.List<SRM?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 30);
+  static SRM? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const SRM._($core.int v, $core.String n) : super(v, n);
+  const SRM._(super.value, super.name);
 }
 
-
-const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');
+const $core.bool _omitEnumNames =
+    $core.bool.fromEnvironment('protobuf.omit_enum_names');
