@@ -20,12 +20,14 @@ jobs:
           path: proto
       - uses: dart-lang/setup-dart@v1
       - run: dart pub global activate protoc_plugin
-      - uses: bufbuild/buf-setup-action@v1
+      - uses: bufbuild/buf-action@v1
+        with:
+          setup_only: true      
       - name: Buf generate
         run: buf generate beerprotoapis --template=buf.gen.dart.yaml
         working-directory: ./proto
       - name: Move beer file
-        run: mv ./proto/gen/proto/dart/beerproto/v1/* ./lib
+        run: mv ./proto/gen/beerproto/v1/* ./lib
       - run: rm -R ./proto
       - name: Push
         uses: actions-x/commit@v6
