@@ -19,7 +19,6 @@ jobs:
           repository: beerproto/beerproto
           path: proto
       - uses: dart-lang/setup-dart@v1
-      - run: dart pub global activate protoc_plugin
       - uses: bufbuild/buf-action@v1
         with:
           setup_only: true      
