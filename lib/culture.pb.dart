@@ -137,7 +137,6 @@ class CultureInformation extends $pb.GeneratedMessage {
     $core.String? notes,
     $core.String? bestFor,
     CultureInventoryType? inventory,
-    $core.String? name,
     $0.PercentType? alcoholTolerance,
     $core.bool? glucoamylase,
     CultureBaseType? type,
@@ -154,7 +153,6 @@ class CultureInformation extends $pb.GeneratedMessage {
     if (notes != null) result.notes = notes;
     if (bestFor != null) result.bestFor = bestFor;
     if (inventory != null) result.inventory = inventory;
-    if (name != null) result.name = name;
     if (alcoholTolerance != null) result.alcoholTolerance = alcoholTolerance;
     if (glucoamylase != null) result.glucoamylase = glucoamylase;
     if (type != null) result.type = type;
@@ -188,7 +186,6 @@ class CultureInformation extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'bestFor')
     ..aOM<CultureInventoryType>(6, _omitFieldNames ? '' : 'inventory',
         subBuilder: CultureInventoryType.create)
-    ..aOS(7, _omitFieldNames ? '' : 'name')
     ..aOM<$0.PercentType>(8, _omitFieldNames ? '' : 'alcoholTolerance',
         subBuilder: $0.PercentType.create)
     ..aOB(9, _omitFieldNames ? '' : 'glucoamylase')
@@ -287,97 +284,88 @@ class CultureInformation extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   CultureInventoryType ensureInventory() => $_ensure(5);
 
-  @$pb.TagNumber(7)
-  $core.String get name => $_getSZ(6);
-  @$pb.TagNumber(7)
-  set name($core.String value) => $_setString(6, value);
-  @$pb.TagNumber(7)
-  $core.bool hasName() => $_has(6);
-  @$pb.TagNumber(7)
-  void clearName() => $_clearField(7);
-
   /// The recommended limit of abv by the culture producer before attenuation stops.
   @$pb.TagNumber(8)
-  $0.PercentType get alcoholTolerance => $_getN(7);
+  $0.PercentType get alcoholTolerance => $_getN(6);
   @$pb.TagNumber(8)
   set alcoholTolerance($0.PercentType value) => $_setField(8, value);
   @$pb.TagNumber(8)
-  $core.bool hasAlcoholTolerance() => $_has(7);
+  $core.bool hasAlcoholTolerance() => $_has(6);
   @$pb.TagNumber(8)
   void clearAlcoholTolerance() => $_clearField(8);
   @$pb.TagNumber(8)
-  $0.PercentType ensureAlcoholTolerance() => $_ensure(7);
+  $0.PercentType ensureAlcoholTolerance() => $_ensure(6);
 
   /// A glucoamylase positive culture is capable of producing glucoamylase, the enzyme produced through expression of the diastatic gene, which allows yeast to attenuate dextrins and starches leading to a very low FG. This is positive in some saison/brett yeasts as well as the new gulo hybrid by Omega yeast labs.
   @$pb.TagNumber(9)
-  $core.bool get glucoamylase => $_getBF(8);
+  $core.bool get glucoamylase => $_getBF(7);
   @$pb.TagNumber(9)
-  set glucoamylase($core.bool value) => $_setBool(8, value);
+  set glucoamylase($core.bool value) => $_setBool(7, value);
   @$pb.TagNumber(9)
-  $core.bool hasGlucoamylase() => $_has(8);
+  $core.bool hasGlucoamylase() => $_has(7);
   @$pb.TagNumber(9)
   void clearGlucoamylase() => $_clearField(9);
 
   @$pb.TagNumber(10)
-  CultureBaseType get type => $_getN(9);
+  CultureBaseType get type => $_getN(8);
   @$pb.TagNumber(10)
   set type(CultureBaseType value) => $_setField(10, value);
   @$pb.TagNumber(10)
-  $core.bool hasType() => $_has(9);
+  $core.bool hasType() => $_has(8);
   @$pb.TagNumber(10)
   void clearType() => $_clearField(10);
 
   /// Floculation refers to the ability of yeast to aggregate to form large flocs which drop out of suspension.
   @$pb.TagNumber(11)
-  QualitativeRangeUnit get flocculation => $_getN(10);
+  QualitativeRangeUnit get flocculation => $_getN(9);
   @$pb.TagNumber(11)
   set flocculation(QualitativeRangeUnit value) => $_setField(11, value);
   @$pb.TagNumber(11)
-  $core.bool hasFlocculation() => $_has(10);
+  $core.bool hasFlocculation() => $_has(9);
   @$pb.TagNumber(11)
   void clearFlocculation() => $_clearField(11);
 
   @$pb.TagNumber(12)
-  $0.PercentRangeType get attenuationRange => $_getN(11);
+  $0.PercentRangeType get attenuationRange => $_getN(10);
   @$pb.TagNumber(12)
   set attenuationRange($0.PercentRangeType value) => $_setField(12, value);
   @$pb.TagNumber(12)
-  $core.bool hasAttenuationRange() => $_has(11);
+  $core.bool hasAttenuationRange() => $_has(10);
   @$pb.TagNumber(12)
   void clearAttenuationRange() => $_clearField(12);
   @$pb.TagNumber(12)
-  $0.PercentRangeType ensureAttenuationRange() => $_ensure(11);
+  $0.PercentRangeType ensureAttenuationRange() => $_ensure(10);
 
   /// Maximum number of times to reuse a culture before a new lab source is recommended.
   @$pb.TagNumber(13)
-  $core.int get maxReuse => $_getIZ(12);
+  $core.int get maxReuse => $_getIZ(11);
   @$pb.TagNumber(13)
-  set maxReuse($core.int value) => $_setSignedInt32(12, value);
+  set maxReuse($core.int value) => $_setSignedInt32(11, value);
   @$pb.TagNumber(13)
-  $core.bool hasMaxReuse() => $_has(12);
+  $core.bool hasMaxReuse() => $_has(11);
   @$pb.TagNumber(13)
   void clearMaxReuse() => $_clearField(13);
 
   /// A POF+ culture is capable of producing phenols, which is a common distinctive property of saison, and brett yeasts.
   @$pb.TagNumber(14)
-  $core.bool get pof => $_getBF(13);
+  $core.bool get pof => $_getBF(12);
   @$pb.TagNumber(14)
-  set pof($core.bool value) => $_setBool(13, value);
+  set pof($core.bool value) => $_setBool(12, value);
   @$pb.TagNumber(14)
-  $core.bool hasPof() => $_has(13);
+  $core.bool hasPof() => $_has(12);
   @$pb.TagNumber(14)
   void clearPof() => $_clearField(14);
 
   @$pb.TagNumber(15)
-  Zymocide get zymocide => $_getN(14);
+  Zymocide get zymocide => $_getN(13);
   @$pb.TagNumber(15)
   set zymocide(Zymocide value) => $_setField(15, value);
   @$pb.TagNumber(15)
-  $core.bool hasZymocide() => $_has(14);
+  $core.bool hasZymocide() => $_has(13);
   @$pb.TagNumber(15)
   void clearZymocide() => $_clearField(15);
   @$pb.TagNumber(15)
-  Zymocide ensureZymocide() => $_ensure(14);
+  Zymocide ensureZymocide() => $_ensure(13);
 }
 
 enum CultureAdditionType_Amount { mass, unit, volume, notSet }

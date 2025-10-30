@@ -159,7 +159,6 @@ const CultureInformation$json = {
       '6': '.beerproto.v1.CultureInventoryType',
       '10': 'inventory'
     },
-    {'1': 'name', '3': 7, '4': 1, '5': 9, '10': 'name'},
     {
       '1': 'alcohol_tolerance',
       '3': 8,
@@ -213,15 +212,14 @@ final $typed_data.Uint8List cultureInformationDescriptor = $convert.base64Decode
     'cGVyYXR1cmVfcmFuZ2UYAyABKAsyIi5iZWVycHJvdG8udjEuVGVtcGVyYXR1cmVSYW5nZVR5cG'
     'VSEHRlbXBlcmF0dXJlUmFuZ2USFAoFbm90ZXMYBCABKAlSBW5vdGVzEhkKCGJlc3RfZm9yGAUg'
     'ASgJUgdiZXN0Rm9yEkAKCWludmVudG9yeRgGIAEoCzIiLmJlZXJwcm90by52MS5DdWx0dXJlSW'
-    '52ZW50b3J5VHlwZVIJaW52ZW50b3J5EhIKBG5hbWUYByABKAlSBG5hbWUSRgoRYWxjb2hvbF90'
-    'b2xlcmFuY2UYCCABKAsyGS5iZWVycHJvdG8udjEuUGVyY2VudFR5cGVSEGFsY29ob2xUb2xlcm'
-    'FuY2USIgoMZ2x1Y29hbXlsYXNlGAkgASgIUgxnbHVjb2FteWxhc2USMQoEdHlwZRgKIAEoDjId'
-    'LmJlZXJwcm90by52MS5DdWx0dXJlQmFzZVR5cGVSBHR5cGUSRgoMZmxvY2N1bGF0aW9uGAsgAS'
-    'gOMiIuYmVlcnByb3RvLnYxLlF1YWxpdGF0aXZlUmFuZ2VVbml0UgxmbG9jY3VsYXRpb24SSwoR'
-    'YXR0ZW51YXRpb25fcmFuZ2UYDCABKAsyHi5iZWVycHJvdG8udjEuUGVyY2VudFJhbmdlVHlwZV'
-    'IQYXR0ZW51YXRpb25SYW5nZRIbCgltYXhfcmV1c2UYDSABKAVSCG1heFJldXNlEhAKA3BvZhgO'
-    'IAEoCFIDcG9mEjIKCHp5bW9jaWRlGA8gASgLMhYuYmVlcnByb3RvLnYxLlp5bW9jaWRlUgh6eW'
-    '1vY2lkZQ==');
+    '52ZW50b3J5VHlwZVIJaW52ZW50b3J5EkYKEWFsY29ob2xfdG9sZXJhbmNlGAggASgLMhkuYmVl'
+    'cnByb3RvLnYxLlBlcmNlbnRUeXBlUhBhbGNvaG9sVG9sZXJhbmNlEiIKDGdsdWNvYW15bGFzZR'
+    'gJIAEoCFIMZ2x1Y29hbXlsYXNlEjEKBHR5cGUYCiABKA4yHS5iZWVycHJvdG8udjEuQ3VsdHVy'
+    'ZUJhc2VUeXBlUgR0eXBlEkYKDGZsb2NjdWxhdGlvbhgLIAEoDjIiLmJlZXJwcm90by52MS5RdW'
+    'FsaXRhdGl2ZVJhbmdlVW5pdFIMZmxvY2N1bGF0aW9uEksKEWF0dGVudWF0aW9uX3JhbmdlGAwg'
+    'ASgLMh4uYmVlcnByb3RvLnYxLlBlcmNlbnRSYW5nZVR5cGVSEGF0dGVudWF0aW9uUmFuZ2USGw'
+    'oJbWF4X3JldXNlGA0gASgFUghtYXhSZXVzZRIQCgNwb2YYDiABKAhSA3BvZhIyCgh6eW1vY2lk'
+    'ZRgPIAEoCzIWLmJlZXJwcm90by52MS5aeW1vY2lkZVIIenltb2NpZGU=');
 
 @$core.Deprecated('Use cultureAdditionTypeDescriptor instead')
 const CultureAdditionType$json = {
