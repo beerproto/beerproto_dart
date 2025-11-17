@@ -2007,6 +2007,7 @@ class ConcentrationRangeType extends $pb.GeneratedMessage {
   ConcentrationType ensureMaximum() => $_ensure(1);
 }
 
+/// use for things like evaporation rate, grain absorption rate, lauter flow rate, etc.
 class RateType extends $pb.GeneratedMessage {
   factory RateType({
     $core.double? value,
