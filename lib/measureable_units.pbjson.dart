@@ -300,6 +300,30 @@ final $typed_data.Uint8List viscosityUnitDescriptor = $convert.base64Decode(
     'Cg1WaXNjb3NpdHlVbml0Eh4KGlZJU0NPU0lUWV9VTklUX1VOU1BFQ0lGSUVEEAASFQoRVklTQ0'
     '9TSVRZX1VOSVRfQ1AQARIXChNWSVNDT1NJVFlfVU5JVF9NUEFTEAI=');
 
+@$core.Deprecated('Use rateUnitDescriptor instead')
+const RateUnit$json = {
+  '1': 'RateUnit',
+  '2': [
+    {'1': 'RATE_UNIT_UNSPECIFIED', '2': 0},
+    {'1': 'RATE_UNIT_L_PER_HOUR', '2': 1},
+    {'1': 'RATE_UNIT_L_PER_MINUTE', '2': 2},
+    {'1': 'RATE_UNIT_GAL_PER_HOUR', '2': 3},
+    {'1': 'RATE_UNIT_PERCENT_PER_HOUR', '2': 4},
+    {'1': 'RATE_UNIT_L_PER_KG', '2': 5},
+    {'1': 'RATE_UNIT_GAL_PER_LB', '2': 6},
+    {'1': 'RATE_UNIT_C_PER_MINUTE', '2': 7},
+    {'1': 'RATE_UNIT_F_PER_MINUTE', '2': 8},
+  ],
+};
+
+/// Descriptor for `RateUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List rateUnitDescriptor = $convert.base64Decode(
+    'CghSYXRlVW5pdBIZChVSQVRFX1VOSVRfVU5TUEVDSUZJRUQQABIYChRSQVRFX1VOSVRfTF9QRV'
+    'JfSE9VUhABEhoKFlJBVEVfVU5JVF9MX1BFUl9NSU5VVEUQAhIaChZSQVRFX1VOSVRfR0FMX1BF'
+    'Ul9IT1VSEAMSHgoaUkFURV9VTklUX1BFUkNFTlRfUEVSX0hPVVIQBBIWChJSQVRFX1VOSVRfTF'
+    '9QRVJfS0cQBRIYChRSQVRFX1VOSVRfR0FMX1BFUl9MQhAGEhoKFlJBVEVfVU5JVF9DX1BFUl9N'
+    'SU5VVEUQBxIaChZSQVRFX1VOSVRfRl9QRVJfTUlOVVRFEAg=');
+
 @$core.Deprecated('Use volumeTypeDescriptor instead')
 const VolumeType$json = {
   '1': 'VolumeType',
@@ -983,3 +1007,24 @@ final $typed_data.Uint8List concentrationRangeTypeDescriptor = $convert.base64De
     'ChZDb25jZW50cmF0aW9uUmFuZ2VUeXBlEjkKB21pbmltdW0YASABKAsyHy5iZWVycHJvdG8udj'
     'EuQ29uY2VudHJhdGlvblR5cGVSB21pbmltdW0SOQoHbWF4aW11bRgCIAEoCzIfLmJlZXJwcm90'
     'by52MS5Db25jZW50cmF0aW9uVHlwZVIHbWF4aW11bQ==');
+
+@$core.Deprecated('Use rateTypeDescriptor instead')
+const RateType$json = {
+  '1': 'RateType',
+  '2': [
+    {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
+    {
+      '1': 'unit',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.RateUnit',
+      '10': 'unit'
+    },
+  ],
+};
+
+/// Descriptor for `RateType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List rateTypeDescriptor = $convert.base64Decode(
+    'CghSYXRlVHlwZRIUCgV2YWx1ZRgBIAEoAVIFdmFsdWUSKgoEdW5pdBgCIAEoDjIWLmJlZXJwcm'
+    '90by52MS5SYXRlVW5pdFIEdW5pdA==');

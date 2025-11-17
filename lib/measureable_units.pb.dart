@@ -2007,6 +2007,73 @@ class ConcentrationRangeType extends $pb.GeneratedMessage {
   ConcentrationType ensureMaximum() => $_ensure(1);
 }
 
+class RateType extends $pb.GeneratedMessage {
+  factory RateType({
+    $core.double? value,
+    RateUnit? unit,
+  }) {
+    final result = create();
+    if (value != null) result.value = value;
+    if (unit != null) result.unit = unit;
+    return result;
+  }
+
+  RateType._();
+
+  factory RateType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RateType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RateType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: create)
+    ..aD(1, _omitFieldNames ? '' : 'value')
+    ..aE<RateUnit>(2, _omitFieldNames ? '' : 'unit',
+        enumValues: RateUnit.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RateType clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RateType copyWith(void Function(RateType) updates) =>
+      super.copyWith((message) => updates(message as RateType)) as RateType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RateType create() => RateType._();
+  @$core.override
+  RateType createEmptyInstance() => create();
+  static $pb.PbList<RateType> createRepeated() => $pb.PbList<RateType>();
+  @$core.pragma('dart2js:noInline')
+  static RateType getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RateType>(create);
+  static RateType? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get value => $_getN(0);
+  @$pb.TagNumber(1)
+  set value($core.double value) => $_setDouble(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  RateUnit get unit => $_getN(1);
+  @$pb.TagNumber(2)
+  set unit(RateUnit value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUnit() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUnit() => $_clearField(2);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

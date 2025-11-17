@@ -585,5 +585,53 @@ class ViscosityUnit extends $pb.ProtobufEnum {
   const ViscosityUnit._(super.value, super.name);
 }
 
+class RateUnit extends $pb.ProtobufEnum {
+  static const RateUnit RATE_UNIT_UNSPECIFIED =
+      RateUnit._(0, _omitEnumNames ? '' : 'RATE_UNIT_UNSPECIFIED');
+
+  /// Volume-based rates
+  static const RateUnit RATE_UNIT_L_PER_HOUR =
+      RateUnit._(1, _omitEnumNames ? '' : 'RATE_UNIT_L_PER_HOUR');
+  static const RateUnit RATE_UNIT_L_PER_MINUTE =
+      RateUnit._(2, _omitEnumNames ? '' : 'RATE_UNIT_L_PER_MINUTE');
+  static const RateUnit RATE_UNIT_GAL_PER_HOUR =
+      RateUnit._(3, _omitEnumNames ? '' : 'RATE_UNIT_GAL_PER_HOUR');
+
+  /// Percent-based rates (useful for boil-off)
+  static const RateUnit RATE_UNIT_PERCENT_PER_HOUR =
+      RateUnit._(4, _omitEnumNames ? '' : 'RATE_UNIT_PERCENT_PER_HOUR');
+
+  /// Mass absorption (common in brewing calculations)
+  static const RateUnit RATE_UNIT_L_PER_KG =
+      RateUnit._(5, _omitEnumNames ? '' : 'RATE_UNIT_L_PER_KG');
+  static const RateUnit RATE_UNIT_GAL_PER_LB =
+      RateUnit._(6, _omitEnumNames ? '' : 'RATE_UNIT_GAL_PER_LB');
+
+  /// Temperature change rates (useful for step mashes)
+  static const RateUnit RATE_UNIT_C_PER_MINUTE =
+      RateUnit._(7, _omitEnumNames ? '' : 'RATE_UNIT_C_PER_MINUTE');
+  static const RateUnit RATE_UNIT_F_PER_MINUTE =
+      RateUnit._(8, _omitEnumNames ? '' : 'RATE_UNIT_F_PER_MINUTE');
+
+  static const $core.List<RateUnit> values = <RateUnit>[
+    RATE_UNIT_UNSPECIFIED,
+    RATE_UNIT_L_PER_HOUR,
+    RATE_UNIT_L_PER_MINUTE,
+    RATE_UNIT_GAL_PER_HOUR,
+    RATE_UNIT_PERCENT_PER_HOUR,
+    RATE_UNIT_L_PER_KG,
+    RATE_UNIT_GAL_PER_LB,
+    RATE_UNIT_C_PER_MINUTE,
+    RATE_UNIT_F_PER_MINUTE,
+  ];
+
+  static final $core.List<RateUnit?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 8);
+  static RateUnit? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const RateUnit._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');
