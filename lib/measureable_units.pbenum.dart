@@ -571,14 +571,19 @@ class ViscosityUnit extends $pb.ProtobufEnum {
   static const ViscosityUnit VISCOSITY_UNIT_MPAS =
       ViscosityUnit._(2, _omitEnumNames ? '' : 'VISCOSITY_UNIT_MPAS');
 
+  /// P
+  static const ViscosityUnit VISCOSITY_UNIT_POISE =
+      ViscosityUnit._(3, _omitEnumNames ? '' : 'VISCOSITY_UNIT_POISE');
+
   static const $core.List<ViscosityUnit> values = <ViscosityUnit>[
     VISCOSITY_UNIT_UNSPECIFIED,
     VISCOSITY_UNIT_CP,
     VISCOSITY_UNIT_MPAS,
+    VISCOSITY_UNIT_POISE,
   ];
 
   static final $core.List<ViscosityUnit?> _byValue =
-      $pb.ProtobufEnum.$_initByValueList(values, 2);
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
   static ViscosityUnit? valueOf($core.int value) =>
       value < 0 || value >= _byValue.length ? null : _byValue[value];
 

@@ -292,13 +292,15 @@ const ViscosityUnit$json = {
     {'1': 'VISCOSITY_UNIT_UNSPECIFIED', '2': 0},
     {'1': 'VISCOSITY_UNIT_CP', '2': 1},
     {'1': 'VISCOSITY_UNIT_MPAS', '2': 2},
+    {'1': 'VISCOSITY_UNIT_POISE', '2': 3},
   ],
 };
 
 /// Descriptor for `ViscosityUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List viscosityUnitDescriptor = $convert.base64Decode(
     'Cg1WaXNjb3NpdHlVbml0Eh4KGlZJU0NPU0lUWV9VTklUX1VOU1BFQ0lGSUVEEAASFQoRVklTQ0'
-    '9TSVRZX1VOSVRfQ1AQARIXChNWSVNDT1NJVFlfVU5JVF9NUEFTEAI=');
+    '9TSVRZX1VOSVRfQ1AQARIXChNWSVNDT1NJVFlfVU5JVF9NUEFTEAISGAoUVklTQ09TSVRZX1VO'
+    'SVRfUE9JU0UQAw==');
 
 @$core.Deprecated('Use rateUnitDescriptor instead')
 const RateUnit$json = {
