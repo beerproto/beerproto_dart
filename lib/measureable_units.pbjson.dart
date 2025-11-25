@@ -344,6 +344,23 @@ final $typed_data.Uint8List carbonationMethodDescriptor = $convert.base64Decode(
     'X1BSSU1JTkdfU1VHQVIQAhIrCidDQVJCT05BVElPTl9NRVRIT0RfTkFUVVJBTF9DT05ESVRJT0'
     '5JTkcQAw==');
 
+@$core.Deprecated('Use pressureUnitDescriptor instead')
+const PressureUnit$json = {
+  '1': 'PressureUnit',
+  '2': [
+    {'1': 'PRESSURE_UNIT_UNSPECIFIED', '2': 0},
+    {'1': 'PRESSURE_UNIT_BAR', '2': 1},
+    {'1': 'PRESSURE_UNIT_PSI', '2': 2},
+    {'1': 'PRESSURE_UNIT_KPA', '2': 3},
+  ],
+};
+
+/// Descriptor for `PressureUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List pressureUnitDescriptor = $convert.base64Decode(
+    'CgxQcmVzc3VyZVVuaXQSHQoZUFJFU1NVUkVfVU5JVF9VTlNQRUNJRklFRBAAEhUKEVBSRVNTVV'
+    'JFX1VOSVRfQkFSEAESFQoRUFJFU1NVUkVfVU5JVF9QU0kQAhIVChFQUkVTU1VSRV9VTklUX0tQ'
+    'QRAD');
+
 @$core.Deprecated('Use volumeTypeDescriptor instead')
 const VolumeType$json = {
   '1': 'VolumeType',
@@ -1048,3 +1065,24 @@ const RateType$json = {
 final $typed_data.Uint8List rateTypeDescriptor = $convert.base64Decode(
     'CghSYXRlVHlwZRIUCgV2YWx1ZRgBIAEoAVIFdmFsdWUSKgoEdW5pdBgCIAEoDjIWLmJlZXJwcm'
     '90by52MS5SYXRlVW5pdFIEdW5pdA==');
+
+@$core.Deprecated('Use pressureTypeDescriptor instead')
+const PressureType$json = {
+  '1': 'PressureType',
+  '2': [
+    {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
+    {
+      '1': 'unit',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.PressureUnit',
+      '10': 'unit'
+    },
+  ],
+};
+
+/// Descriptor for `PressureType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List pressureTypeDescriptor = $convert.base64Decode(
+    'CgxQcmVzc3VyZVR5cGUSFAoFdmFsdWUYASABKAFSBXZhbHVlEi4KBHVuaXQYAiABKA4yGi5iZW'
+    'VycHJvdG8udjEuUHJlc3N1cmVVbml0UgR1bml0');

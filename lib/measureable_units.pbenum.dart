@@ -667,5 +667,30 @@ class CarbonationMethod extends $pb.ProtobufEnum {
   const CarbonationMethod._(super.value, super.name);
 }
 
+class PressureUnit extends $pb.ProtobufEnum {
+  static const PressureUnit PRESSURE_UNIT_UNSPECIFIED =
+      PressureUnit._(0, _omitEnumNames ? '' : 'PRESSURE_UNIT_UNSPECIFIED');
+  static const PressureUnit PRESSURE_UNIT_BAR =
+      PressureUnit._(1, _omitEnumNames ? '' : 'PRESSURE_UNIT_BAR');
+  static const PressureUnit PRESSURE_UNIT_PSI =
+      PressureUnit._(2, _omitEnumNames ? '' : 'PRESSURE_UNIT_PSI');
+  static const PressureUnit PRESSURE_UNIT_KPA =
+      PressureUnit._(3, _omitEnumNames ? '' : 'PRESSURE_UNIT_KPA');
+
+  static const $core.List<PressureUnit> values = <PressureUnit>[
+    PRESSURE_UNIT_UNSPECIFIED,
+    PRESSURE_UNIT_BAR,
+    PRESSURE_UNIT_PSI,
+    PRESSURE_UNIT_KPA,
+  ];
+
+  static final $core.List<PressureUnit?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static PressureUnit? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const PressureUnit._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');

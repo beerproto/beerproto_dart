@@ -2075,6 +2075,75 @@ class RateType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+class PressureType extends $pb.GeneratedMessage {
+  factory PressureType({
+    $core.double? value,
+    PressureUnit? unit,
+  }) {
+    final result = create();
+    if (value != null) result.value = value;
+    if (unit != null) result.unit = unit;
+    return result;
+  }
+
+  PressureType._();
+
+  factory PressureType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory PressureType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PressureType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: create)
+    ..aD(1, _omitFieldNames ? '' : 'value')
+    ..aE<PressureUnit>(2, _omitFieldNames ? '' : 'unit',
+        enumValues: PressureUnit.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PressureType clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PressureType copyWith(void Function(PressureType) updates) =>
+      super.copyWith((message) => updates(message as PressureType))
+          as PressureType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static PressureType create() => PressureType._();
+  @$core.override
+  PressureType createEmptyInstance() => create();
+  static $pb.PbList<PressureType> createRepeated() =>
+      $pb.PbList<PressureType>();
+  @$core.pragma('dart2js:noInline')
+  static PressureType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PressureType>(create);
+  static PressureType? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get value => $_getN(0);
+  @$pb.TagNumber(1)
+  set value($core.double value) => $_setDouble(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  PressureUnit get unit => $_getN(1);
+  @$pb.TagNumber(2)
+  set unit(PressureUnit value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUnit() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUnit() => $_clearField(2);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =
