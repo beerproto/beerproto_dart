@@ -33,7 +33,7 @@ class PackagingVesselType extends $pb.GeneratedMessage {
     $0.TimeType? stepTime,
     $0.GravityType? endGravity,
     $0.VolumeType? vesselVolume,
-    $core.double? vesselQuantity,
+    $core.int? vesselQuantity,
     $core.String? description,
     $0.AcidityType? startPh,
     $0.CarbonationType? carbonation,
@@ -90,7 +90,7 @@ class PackagingVesselType extends $pb.GeneratedMessage {
         subBuilder: $0.GravityType.create)
     ..aOM<$0.VolumeType>(8, _omitFieldNames ? '' : 'vesselVolume',
         subBuilder: $0.VolumeType.create)
-    ..aD(9, _omitFieldNames ? '' : 'vesselQuantity')
+    ..aI(9, _omitFieldNames ? '' : 'vesselQuantity')
     ..aOS(10, _omitFieldNames ? '' : 'description')
     ..aOM<$0.AcidityType>(11, _omitFieldNames ? '' : 'startPh',
         subBuilder: $0.AcidityType.create)
@@ -210,9 +210,9 @@ class PackagingVesselType extends $pb.GeneratedMessage {
   $0.VolumeType ensureVesselVolume() => $_ensure(7);
 
   @$pb.TagNumber(9)
-  $core.double get vesselQuantity => $_getN(8);
+  $core.int get vesselQuantity => $_getIZ(8);
   @$pb.TagNumber(9)
-  set vesselQuantity($core.double value) => $_setDouble(8, value);
+  set vesselQuantity($core.int value) => $_setSignedInt32(8, value);
   @$pb.TagNumber(9)
   $core.bool hasVesselQuantity() => $_has(8);
   @$pb.TagNumber(9)

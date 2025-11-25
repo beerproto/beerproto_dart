@@ -85,7 +85,7 @@ const PackagingVesselType$json = {
       '6': '.beerproto.v1.VolumeType',
       '10': 'vesselVolume'
     },
-    {'1': 'vessel_quantity', '3': 9, '4': 1, '5': 1, '10': 'vesselQuantity'},
+    {'1': 'vessel_quantity', '3': 9, '4': 1, '5': 5, '10': 'vesselQuantity'},
     {'1': 'description', '3': 10, '4': 1, '5': 9, '10': 'description'},
     {
       '1': 'start_ph',
@@ -155,7 +155,7 @@ final $typed_data.Uint8List packagingVesselTypeDescriptor = $convert.base64Decod
     'CVILcGFja2FnZURhdGUSMwoJc3RlcF90aW1lGAYgASgLMhYuYmVlcnByb3RvLnYxLlRpbWVUeX'
     'BlUghzdGVwVGltZRI6CgtlbmRfZ3Jhdml0eRgHIAEoCzIZLmJlZXJwcm90by52MS5HcmF2aXR5'
     'VHlwZVIKZW5kR3Jhdml0eRI9Cg12ZXNzZWxfdm9sdW1lGAggASgLMhguYmVlcnByb3RvLnYxLl'
-    'ZvbHVtZVR5cGVSDHZlc3NlbFZvbHVtZRInCg92ZXNzZWxfcXVhbnRpdHkYCSABKAFSDnZlc3Nl'
+    'ZvbHVtZVR5cGVSDHZlc3NlbFZvbHVtZRInCg92ZXNzZWxfcXVhbnRpdHkYCSABKAVSDnZlc3Nl'
     'bFF1YW50aXR5EiAKC2Rlc2NyaXB0aW9uGAogASgJUgtkZXNjcmlwdGlvbhI0CghzdGFydF9waB'
     'gLIAEoCzIZLmJlZXJwcm90by52MS5BY2lkaXR5VHlwZVIHc3RhcnRQaBI/CgtjYXJib25hdGlv'
     'bhgMIAEoCzIdLmJlZXJwcm90by52MS5DYXJib25hdGlvblR5cGVSC2NhcmJvbmF0aW9uEkoKEX'
