@@ -35,7 +35,7 @@ const PackagingProcedureType$json = {
       '3': 6,
       '4': 3,
       '5': 11,
-      '6': '.beerproto.v1.PackagingVesselType',
+      '6': '.beerproto.v1.PackagingVesselStepType',
       '10': 'packagingVessels'
     },
   ],
@@ -46,6 +46,6 @@ final $typed_data.Uint8List packagingProcedureTypeDescriptor = $convert.base64De
     'ChZQYWNrYWdpbmdQcm9jZWR1cmVUeXBlEhsKAmlkGAEgASgJQgu6SAjIAQFyA7ABAVICaWQSHg'
     'oEbmFtZRgCIAEoCUIKukgHyAEBcgIQA1IEbmFtZRJBCg9wYWNrYWdlZF92b2x1bWUYAyABKAsy'
     'GC5iZWVycHJvdG8udjEuVm9sdW1lVHlwZVIOcGFja2FnZWRWb2x1bWUSIAoLZGVzY3JpcHRpb2'
-    '4YBCABKAlSC2Rlc2NyaXB0aW9uEhQKBW5vdGVzGAUgASgJUgVub3RlcxJOChFwYWNrYWdpbmdf'
-    'dmVzc2VscxgGIAMoCzIhLmJlZXJwcm90by52MS5QYWNrYWdpbmdWZXNzZWxUeXBlUhBwYWNrYW'
-    'dpbmdWZXNzZWxz');
+    '4YBCABKAlSC2Rlc2NyaXB0aW9uEhQKBW5vdGVzGAUgASgJUgVub3RlcxJSChFwYWNrYWdpbmdf'
+    'dmVzc2VscxgGIAMoCzIlLmJlZXJwcm90by52MS5QYWNrYWdpbmdWZXNzZWxTdGVwVHlwZVIQcG'
+    'Fja2FnaW5nVmVzc2Vscw==');
