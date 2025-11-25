@@ -670,22 +670,25 @@ class CarbonationMethod extends $pb.ProtobufEnum {
 class PressureUnit extends $pb.ProtobufEnum {
   static const PressureUnit PRESSURE_UNIT_UNSPECIFIED =
       PressureUnit._(0, _omitEnumNames ? '' : 'PRESSURE_UNIT_UNSPECIFIED');
+  static const PressureUnit PRESSURE_UNIT_PASCAL =
+      PressureUnit._(1, _omitEnumNames ? '' : 'PRESSURE_UNIT_PASCAL');
   static const PressureUnit PRESSURE_UNIT_BAR =
-      PressureUnit._(1, _omitEnumNames ? '' : 'PRESSURE_UNIT_BAR');
+      PressureUnit._(2, _omitEnumNames ? '' : 'PRESSURE_UNIT_BAR');
   static const PressureUnit PRESSURE_UNIT_PSI =
-      PressureUnit._(2, _omitEnumNames ? '' : 'PRESSURE_UNIT_PSI');
+      PressureUnit._(3, _omitEnumNames ? '' : 'PRESSURE_UNIT_PSI');
   static const PressureUnit PRESSURE_UNIT_KPA =
-      PressureUnit._(3, _omitEnumNames ? '' : 'PRESSURE_UNIT_KPA');
+      PressureUnit._(4, _omitEnumNames ? '' : 'PRESSURE_UNIT_KPA');
 
   static const $core.List<PressureUnit> values = <PressureUnit>[
     PRESSURE_UNIT_UNSPECIFIED,
+    PRESSURE_UNIT_PASCAL,
     PRESSURE_UNIT_BAR,
     PRESSURE_UNIT_PSI,
     PRESSURE_UNIT_KPA,
   ];
 
   static final $core.List<PressureUnit?> _byValue =
-      $pb.ProtobufEnum.$_initByValueList(values, 3);
+      $pb.ProtobufEnum.$_initByValueList(values, 4);
   static PressureUnit? valueOf($core.int value) =>
       value < 0 || value >= _byValue.length ? null : _byValue[value];
 

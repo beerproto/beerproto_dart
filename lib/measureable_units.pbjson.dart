@@ -349,17 +349,18 @@ const PressureUnit$json = {
   '1': 'PressureUnit',
   '2': [
     {'1': 'PRESSURE_UNIT_UNSPECIFIED', '2': 0},
-    {'1': 'PRESSURE_UNIT_BAR', '2': 1},
-    {'1': 'PRESSURE_UNIT_PSI', '2': 2},
-    {'1': 'PRESSURE_UNIT_KPA', '2': 3},
+    {'1': 'PRESSURE_UNIT_PASCAL', '2': 1},
+    {'1': 'PRESSURE_UNIT_BAR', '2': 2},
+    {'1': 'PRESSURE_UNIT_PSI', '2': 3},
+    {'1': 'PRESSURE_UNIT_KPA', '2': 4},
   ],
 };
 
 /// Descriptor for `PressureUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List pressureUnitDescriptor = $convert.base64Decode(
-    'CgxQcmVzc3VyZVVuaXQSHQoZUFJFU1NVUkVfVU5JVF9VTlNQRUNJRklFRBAAEhUKEVBSRVNTVV'
-    'JFX1VOSVRfQkFSEAESFQoRUFJFU1NVUkVfVU5JVF9QU0kQAhIVChFQUkVTU1VSRV9VTklUX0tQ'
-    'QRAD');
+    'CgxQcmVzc3VyZVVuaXQSHQoZUFJFU1NVUkVfVU5JVF9VTlNQRUNJRklFRBAAEhgKFFBSRVNTVV'
+    'JFX1VOSVRfUEFTQ0FMEAESFQoRUFJFU1NVUkVfVU5JVF9CQVIQAhIVChFQUkVTU1VSRV9VTklU'
+    'X1BTSRADEhUKEVBSRVNTVVJFX1VOSVRfS1BBEAQ=');
 
 @$core.Deprecated('Use volumeTypeDescriptor instead')
 const VolumeType$json = {
