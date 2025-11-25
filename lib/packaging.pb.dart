@@ -27,7 +27,7 @@ class PackagingProcedureType extends $pb.GeneratedMessage {
     $0.VolumeType? packagedVolume,
     $core.String? description,
     $core.String? notes,
-    $core.Iterable<$1.PackagingVesselStepType>? packagingVessels,
+    $core.Iterable<$1.PackagingVesselType>? packagingVessels,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -59,9 +59,8 @@ class PackagingProcedureType extends $pb.GeneratedMessage {
         subBuilder: $0.VolumeType.create)
     ..aOS(4, _omitFieldNames ? '' : 'description')
     ..aOS(5, _omitFieldNames ? '' : 'notes')
-    ..pPM<$1.PackagingVesselStepType>(
-        6, _omitFieldNames ? '' : 'packagingVessels',
-        subBuilder: $1.PackagingVesselStepType.create)
+    ..pPM<$1.PackagingVesselType>(6, _omitFieldNames ? '' : 'packagingVessels',
+        subBuilder: $1.PackagingVesselType.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -134,7 +133,7 @@ class PackagingProcedureType extends $pb.GeneratedMessage {
   void clearNotes() => $_clearField(5);
 
   @$pb.TagNumber(6)
-  $pb.PbList<$1.PackagingVesselStepType> get packagingVessels => $_getList(5);
+  $pb.PbList<$1.PackagingVesselType> get packagingVessels => $_getList(5);
 }
 
 const $core.bool _omitFieldNames =

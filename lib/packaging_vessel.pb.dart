@@ -137,79 +137,7 @@ class PackagingVesselBase extends $pb.GeneratedMessage {
   $pb.PbList<$1.PackagingGraphicType> get graphics => $_getList(5);
 }
 
-/// PackagingVesselType - a per vessel representation of a packaging process
-class PackagingVesselType extends $pb.GeneratedMessage {
-  factory PackagingVesselType({
-    PackagingVesselBase? base,
-    $core.String? id,
-  }) {
-    final result = create();
-    if (base != null) result.base = base;
-    if (id != null) result.id = id;
-    return result;
-  }
-
-  PackagingVesselType._();
-
-  factory PackagingVesselType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory PackagingVesselType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'PackagingVesselType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<PackagingVesselBase>(1, _omitFieldNames ? '' : 'base',
-        subBuilder: PackagingVesselBase.create)
-    ..aOS(2, _omitFieldNames ? '' : 'id')
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingVesselType clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingVesselType copyWith(void Function(PackagingVesselType) updates) =>
-      super.copyWith((message) => updates(message as PackagingVesselType))
-          as PackagingVesselType;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static PackagingVesselType create() => PackagingVesselType._();
-  @$core.override
-  PackagingVesselType createEmptyInstance() => create();
-  static $pb.PbList<PackagingVesselType> createRepeated() =>
-      $pb.PbList<PackagingVesselType>();
-  @$core.pragma('dart2js:noInline')
-  static PackagingVesselType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<PackagingVesselType>(create);
-  static PackagingVesselType? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  PackagingVesselBase get base => $_getN(0);
-  @$pb.TagNumber(1)
-  set base(PackagingVesselBase value) => $_setField(1, value);
-  @$pb.TagNumber(1)
-  $core.bool hasBase() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearBase() => $_clearField(1);
-  @$pb.TagNumber(1)
-  PackagingVesselBase ensureBase() => $_ensure(0);
-
-  @$pb.TagNumber(2)
-  $core.String get id => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set id($core.String value) => $_setString(1, value);
-  @$pb.TagNumber(2)
-  $core.bool hasId() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearId() => $_clearField(2);
-}
-
-enum PackagingVesselStepType_CarbonationStep {
+enum PackagingVesselType_CarbonationStep {
   forceCarbonation,
   priming,
   spunding,
@@ -217,8 +145,9 @@ enum PackagingVesselStepType_CarbonationStep {
   notSet
 }
 
-class PackagingVesselStepType extends $pb.GeneratedMessage {
-  factory PackagingVesselStepType({
+/// PackagingVesselType - a per vessel representation of a packaging process
+class PackagingVesselType extends $pb.GeneratedMessage {
+  factory PackagingVesselType({
     PackagingVesselBase? base,
     $core.String? id,
     $core.String? packageDate,
@@ -257,25 +186,25 @@ class PackagingVesselStepType extends $pb.GeneratedMessage {
     return result;
   }
 
-  PackagingVesselStepType._();
+  PackagingVesselType._();
 
-  factory PackagingVesselStepType.fromBuffer($core.List<$core.int> data,
+  factory PackagingVesselType.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory PackagingVesselStepType.fromJson($core.String json,
+  factory PackagingVesselType.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
-  static const $core.Map<$core.int, PackagingVesselStepType_CarbonationStep>
-      _PackagingVesselStepType_CarbonationStepByTag = {
-    13: PackagingVesselStepType_CarbonationStep.forceCarbonation,
-    14: PackagingVesselStepType_CarbonationStep.priming,
-    15: PackagingVesselStepType_CarbonationStep.spunding,
-    16: PackagingVesselStepType_CarbonationStep.naturalConditioning,
-    0: PackagingVesselStepType_CarbonationStep.notSet
+  static const $core.Map<$core.int, PackagingVesselType_CarbonationStep>
+      _PackagingVesselType_CarbonationStepByTag = {
+    13: PackagingVesselType_CarbonationStep.forceCarbonation,
+    14: PackagingVesselType_CarbonationStep.priming,
+    15: PackagingVesselType_CarbonationStep.spunding,
+    16: PackagingVesselType_CarbonationStep.naturalConditioning,
+    0: PackagingVesselType_CarbonationStep.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'PackagingVesselStepType',
+      _omitMessageNames ? '' : 'PackagingVesselType',
       package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
       createEmptyInstance: create)
     ..oo(0, [13, 14, 15, 16])
@@ -313,33 +242,32 @@ class PackagingVesselStepType extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingVesselStepType clone() => deepCopy();
+  PackagingVesselType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingVesselStepType copyWith(
-          void Function(PackagingVesselStepType) updates) =>
-      super.copyWith((message) => updates(message as PackagingVesselStepType))
-          as PackagingVesselStepType;
+  PackagingVesselType copyWith(void Function(PackagingVesselType) updates) =>
+      super.copyWith((message) => updates(message as PackagingVesselType))
+          as PackagingVesselType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static PackagingVesselStepType create() => PackagingVesselStepType._();
+  static PackagingVesselType create() => PackagingVesselType._();
   @$core.override
-  PackagingVesselStepType createEmptyInstance() => create();
-  static $pb.PbList<PackagingVesselStepType> createRepeated() =>
-      $pb.PbList<PackagingVesselStepType>();
+  PackagingVesselType createEmptyInstance() => create();
+  static $pb.PbList<PackagingVesselType> createRepeated() =>
+      $pb.PbList<PackagingVesselType>();
   @$core.pragma('dart2js:noInline')
-  static PackagingVesselStepType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<PackagingVesselStepType>(create);
-  static PackagingVesselStepType? _defaultInstance;
+  static PackagingVesselType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PackagingVesselType>(create);
+  static PackagingVesselType? _defaultInstance;
 
   @$pb.TagNumber(13)
   @$pb.TagNumber(14)
   @$pb.TagNumber(15)
   @$pb.TagNumber(16)
-  PackagingVesselStepType_CarbonationStep whichCarbonationStep() =>
-      _PackagingVesselStepType_CarbonationStepByTag[$_whichOneof(0)]!;
+  PackagingVesselType_CarbonationStep whichCarbonationStep() =>
+      _PackagingVesselType_CarbonationStepByTag[$_whichOneof(0)]!;
   @$pb.TagNumber(13)
   @$pb.TagNumber(14)
   @$pb.TagNumber(15)
@@ -357,7 +285,6 @@ class PackagingVesselStepType extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   PackagingVesselBase ensureBase() => $_ensure(0);
 
-  /// Unique within the recipe
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)

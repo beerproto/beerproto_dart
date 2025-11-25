@@ -117,27 +117,6 @@ const PackagingVesselType$json = {
       '10': 'base'
     },
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
-  ],
-};
-
-/// Descriptor for `PackagingVesselType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List packagingVesselTypeDescriptor = $convert.base64Decode(
-    'ChNQYWNrYWdpbmdWZXNzZWxUeXBlEjUKBGJhc2UYASABKAsyIS5iZWVycHJvdG8udjEuUGFja2'
-    'FnaW5nVmVzc2VsQmFzZVIEYmFzZRIbCgJpZBgCIAEoCUILukgIyAEBcgOwAQFSAmlk');
-
-@$core.Deprecated('Use packagingVesselStepTypeDescriptor instead')
-const PackagingVesselStepType$json = {
-  '1': 'PackagingVesselStepType',
-  '2': [
-    {
-      '1': 'base',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PackagingVesselBase',
-      '10': 'base'
-    },
-    {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
     {'1': 'package_date', '3': 3, '4': 1, '5': 9, '10': 'packageDate'},
     {
       '1': 'step_time',
@@ -246,26 +225,26 @@ const PackagingVesselStepType$json = {
   ],
 };
 
-/// Descriptor for `PackagingVesselStepType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List packagingVesselStepTypeDescriptor = $convert.base64Decode(
-    'ChdQYWNrYWdpbmdWZXNzZWxTdGVwVHlwZRI1CgRiYXNlGAEgASgLMiEuYmVlcnByb3RvLnYxLl'
-    'BhY2thZ2luZ1Zlc3NlbEJhc2VSBGJhc2USGwoCaWQYAiABKAlCC7pICMgBAXIDsAEBUgJpZBIh'
-    'CgxwYWNrYWdlX2RhdGUYAyABKAlSC3BhY2thZ2VEYXRlEjMKCXN0ZXBfdGltZRgEIAEoCzIWLm'
-    'JlZXJwcm90by52MS5UaW1lVHlwZVIIc3RlcFRpbWUSPgoNc3RhcnRfZ3Jhdml0eRgFIAEoCzIZ'
-    'LmJlZXJwcm90by52MS5HcmF2aXR5VHlwZVIMc3RhcnRHcmF2aXR5EjoKC2VuZF9ncmF2aXR5GA'
-    'YgASgLMhkuYmVlcnByb3RvLnYxLkdyYXZpdHlUeXBlUgplbmRHcmF2aXR5EjQKCHN0YXJ0X3Bo'
-    'GAcgASgLMhkuYmVlcnByb3RvLnYxLkFjaWRpdHlUeXBlUgdzdGFydFBoEjAKBmVuZF9waBgIIA'
-    'EoCzIZLmJlZXJwcm90by52MS5BY2lkaXR5VHlwZVIFZW5kUGgSSgoRc3RhcnRfdGVtcGVyYXR1'
-    'cmUYCSABKAsyHS5iZWVycHJvdG8udjEuVGVtcGVyYXR1cmVUeXBlUhBzdGFydFRlbXBlcmF0dX'
-    'JlEkYKD2VuZF90ZW1wZXJhdHVyZRgKIAEoCzIdLmJlZXJwcm90by52MS5UZW1wZXJhdHVyZVR5'
-    'cGVSDmVuZFRlbXBlcmF0dXJlEkwKEnRhcmdldF9jYXJib25hdGlvbhgLIAEoCzIdLmJlZXJwcm'
-    '90by52MS5DYXJib25hdGlvblR5cGVSEXRhcmdldENhcmJvbmF0aW9uEhQKBW5vdGVzGAwgASgJ'
-    'UgVub3RlcxJVChFmb3JjZV9jYXJib25hdGlvbhgNIAEoCzImLmJlZXJwcm90by52MS5Gb3JjZU'
-    'NhcmJvbmF0aW9uU3RlcFR5cGVIAFIQZm9yY2VDYXJib25hdGlvbhI5CgdwcmltaW5nGA4gASgL'
-    'Mh0uYmVlcnByb3RvLnYxLlByaW1pbmdTdGVwVHlwZUgAUgdwcmltaW5nEjwKCHNwdW5kaW5nGA'
-    '8gASgLMh4uYmVlcnByb3RvLnYxLlNwdW5kaW5nU3RlcFR5cGVIAFIIc3B1bmRpbmcSXgoUbmF0'
-    'dXJhbF9jb25kaXRpb25pbmcYECABKAsyKS5iZWVycHJvdG8udjEuTmF0dXJhbENvbmRpdGlvbm'
-    'luZ1N0ZXBUeXBlSABSE25hdHVyYWxDb25kaXRpb25pbmdCEgoQY2FyYm9uYXRpb25fc3RlcA==');
+/// Descriptor for `PackagingVesselType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List packagingVesselTypeDescriptor = $convert.base64Decode(
+    'ChNQYWNrYWdpbmdWZXNzZWxUeXBlEjUKBGJhc2UYASABKAsyIS5iZWVycHJvdG8udjEuUGFja2'
+    'FnaW5nVmVzc2VsQmFzZVIEYmFzZRIbCgJpZBgCIAEoCUILukgIyAEBcgOwAQFSAmlkEiEKDHBh'
+    'Y2thZ2VfZGF0ZRgDIAEoCVILcGFja2FnZURhdGUSMwoJc3RlcF90aW1lGAQgASgLMhYuYmVlcn'
+    'Byb3RvLnYxLlRpbWVUeXBlUghzdGVwVGltZRI+Cg1zdGFydF9ncmF2aXR5GAUgASgLMhkuYmVl'
+    'cnByb3RvLnYxLkdyYXZpdHlUeXBlUgxzdGFydEdyYXZpdHkSOgoLZW5kX2dyYXZpdHkYBiABKA'
+    'syGS5iZWVycHJvdG8udjEuR3Jhdml0eVR5cGVSCmVuZEdyYXZpdHkSNAoIc3RhcnRfcGgYByAB'
+    'KAsyGS5iZWVycHJvdG8udjEuQWNpZGl0eVR5cGVSB3N0YXJ0UGgSMAoGZW5kX3BoGAggASgLMh'
+    'kuYmVlcnByb3RvLnYxLkFjaWRpdHlUeXBlUgVlbmRQaBJKChFzdGFydF90ZW1wZXJhdHVyZRgJ'
+    'IAEoCzIdLmJlZXJwcm90by52MS5UZW1wZXJhdHVyZVR5cGVSEHN0YXJ0VGVtcGVyYXR1cmUSRg'
+    'oPZW5kX3RlbXBlcmF0dXJlGAogASgLMh0uYmVlcnByb3RvLnYxLlRlbXBlcmF0dXJlVHlwZVIO'
+    'ZW5kVGVtcGVyYXR1cmUSTAoSdGFyZ2V0X2NhcmJvbmF0aW9uGAsgASgLMh0uYmVlcnByb3RvLn'
+    'YxLkNhcmJvbmF0aW9uVHlwZVIRdGFyZ2V0Q2FyYm9uYXRpb24SFAoFbm90ZXMYDCABKAlSBW5v'
+    'dGVzElUKEWZvcmNlX2NhcmJvbmF0aW9uGA0gASgLMiYuYmVlcnByb3RvLnYxLkZvcmNlQ2FyYm'
+    '9uYXRpb25TdGVwVHlwZUgAUhBmb3JjZUNhcmJvbmF0aW9uEjkKB3ByaW1pbmcYDiABKAsyHS5i'
+    'ZWVycHJvdG8udjEuUHJpbWluZ1N0ZXBUeXBlSABSB3ByaW1pbmcSPAoIc3B1bmRpbmcYDyABKA'
+    'syHi5iZWVycHJvdG8udjEuU3B1bmRpbmdTdGVwVHlwZUgAUghzcHVuZGluZxJeChRuYXR1cmFs'
+    'X2NvbmRpdGlvbmluZxgQIAEoCzIpLmJlZXJwcm90by52MS5OYXR1cmFsQ29uZGl0aW9uaW5nU3'
+    'RlcFR5cGVIAFITbmF0dXJhbENvbmRpdGlvbmluZ0ISChBjYXJib25hdGlvbl9zdGVw');
 
 @$core.Deprecated('Use forceCarbonationStepTypeDescriptor instead')
 const ForceCarbonationStepType$json = {
