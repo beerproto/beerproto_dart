@@ -638,5 +638,34 @@ class RateUnit extends $pb.ProtobufEnum {
   const RateUnit._(super.value, super.name);
 }
 
+class CarbonationMethod extends $pb.ProtobufEnum {
+  static const CarbonationMethod CARBONATION_METHOD_UNSPECIFIED =
+      CarbonationMethod._(
+          0, _omitEnumNames ? '' : 'CARBONATION_METHOD_UNSPECIFIED');
+  static const CarbonationMethod CARBONATION_METHOD_FORCE_CO2 =
+      CarbonationMethod._(
+          1, _omitEnumNames ? '' : 'CARBONATION_METHOD_FORCE_CO2');
+  static const CarbonationMethod CARBONATION_METHOD_PRIMING_SUGAR =
+      CarbonationMethod._(
+          2, _omitEnumNames ? '' : 'CARBONATION_METHOD_PRIMING_SUGAR');
+  static const CarbonationMethod CARBONATION_METHOD_NATURAL_CONDITIONING =
+      CarbonationMethod._(
+          3, _omitEnumNames ? '' : 'CARBONATION_METHOD_NATURAL_CONDITIONING');
+
+  static const $core.List<CarbonationMethod> values = <CarbonationMethod>[
+    CARBONATION_METHOD_UNSPECIFIED,
+    CARBONATION_METHOD_FORCE_CO2,
+    CARBONATION_METHOD_PRIMING_SUGAR,
+    CARBONATION_METHOD_NATURAL_CONDITIONING,
+  ];
+
+  static final $core.List<CarbonationMethod?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static CarbonationMethod? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const CarbonationMethod._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');

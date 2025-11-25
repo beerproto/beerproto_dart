@@ -95,7 +95,14 @@ const PackagingVesselType$json = {
       '6': '.beerproto.v1.AcidityType',
       '10': 'startPh'
     },
-    {'1': 'carbonation', '3': 12, '4': 1, '5': 1, '10': 'carbonation'},
+    {
+      '1': 'carbonation',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.CarbonationType',
+      '10': 'carbonation'
+    },
     {
       '1': 'start_temperature',
       '3': 13,
@@ -128,6 +135,14 @@ const PackagingVesselType$json = {
       '6': '.beerproto.v1.PackagingGraphicType',
       '10': 'graphics'
     },
+    {
+      '1': 'carbonation_method',
+      '3': 17,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.CarbonationMethod',
+      '10': 'carbonationMethod'
+    },
   ],
 };
 
@@ -142,10 +157,12 @@ final $typed_data.Uint8List packagingVesselTypeDescriptor = $convert.base64Decod
     'VHlwZVIKZW5kR3Jhdml0eRI9Cg12ZXNzZWxfdm9sdW1lGAggASgLMhguYmVlcnByb3RvLnYxLl'
     'ZvbHVtZVR5cGVSDHZlc3NlbFZvbHVtZRInCg92ZXNzZWxfcXVhbnRpdHkYCSABKAFSDnZlc3Nl'
     'bFF1YW50aXR5EiAKC2Rlc2NyaXB0aW9uGAogASgJUgtkZXNjcmlwdGlvbhI0CghzdGFydF9waB'
-    'gLIAEoCzIZLmJlZXJwcm90by52MS5BY2lkaXR5VHlwZVIHc3RhcnRQaBIgCgtjYXJib25hdGlv'
-    'bhgMIAEoAVILY2FyYm9uYXRpb24SSgoRc3RhcnRfdGVtcGVyYXR1cmUYDSABKAsyHS5iZWVycH'
-    'JvdG8udjEuVGVtcGVyYXR1cmVUeXBlUhBzdGFydFRlbXBlcmF0dXJlEjAKBmVuZF9waBgOIAEo'
-    'CzIZLmJlZXJwcm90by52MS5BY2lkaXR5VHlwZVIFZW5kUGgSRgoPZW5kX3RlbXBlcmF0dXJlGA'
-    '8gASgLMh0uYmVlcnByb3RvLnYxLlRlbXBlcmF0dXJlVHlwZVIOZW5kVGVtcGVyYXR1cmUSPgoI'
-    'Z3JhcGhpY3MYECADKAsyIi5iZWVycHJvdG8udjEuUGFja2FnaW5nR3JhcGhpY1R5cGVSCGdyYX'
-    'BoaWNz');
+    'gLIAEoCzIZLmJlZXJwcm90by52MS5BY2lkaXR5VHlwZVIHc3RhcnRQaBI/CgtjYXJib25hdGlv'
+    'bhgMIAEoCzIdLmJlZXJwcm90by52MS5DYXJib25hdGlvblR5cGVSC2NhcmJvbmF0aW9uEkoKEX'
+    'N0YXJ0X3RlbXBlcmF0dXJlGA0gASgLMh0uYmVlcnByb3RvLnYxLlRlbXBlcmF0dXJlVHlwZVIQ'
+    'c3RhcnRUZW1wZXJhdHVyZRIwCgZlbmRfcGgYDiABKAsyGS5iZWVycHJvdG8udjEuQWNpZGl0eV'
+    'R5cGVSBWVuZFBoEkYKD2VuZF90ZW1wZXJhdHVyZRgPIAEoCzIdLmJlZXJwcm90by52MS5UZW1w'
+    'ZXJhdHVyZVR5cGVSDmVuZFRlbXBlcmF0dXJlEj4KCGdyYXBoaWNzGBAgAygLMiIuYmVlcnByb3'
+    'RvLnYxLlBhY2thZ2luZ0dyYXBoaWNUeXBlUghncmFwaGljcxJOChJjYXJib25hdGlvbl9tZXRo'
+    'b2QYESABKA4yHy5iZWVycHJvdG8udjEuQ2FyYm9uYXRpb25NZXRob2RSEWNhcmJvbmF0aW9uTW'
+    'V0aG9k');

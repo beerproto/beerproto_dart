@@ -112,7 +112,14 @@ const RecipeType$json = {
       '6': '.beerproto.v1.GravityType',
       '10': 'finalGravity'
     },
-    {'1': 'carbonation', '3': 12, '4': 1, '5': 1, '10': 'carbonation'},
+    {
+      '1': 'carbonation',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.CarbonationType',
+      '10': 'carbonation'
+    },
     {
       '1': 'fermentation',
       '3': 13,
@@ -212,21 +219,21 @@ final $typed_data.Uint8List recipeTypeDescriptor = $convert.base64Decode(
     'ABKA4yGC5iZWVycHJvdG8udjEuUmVjaXBlVW5pdEILukgIyAEBggECIABSBHR5cGUSGgoIY29h'
     'dXRob3IYCSABKAlSCGNvYXV0aG9yEkQKEG9yaWdpbmFsX2dyYXZpdHkYCiABKAsyGS5iZWVycH'
     'JvdG8udjEuR3Jhdml0eVR5cGVSD29yaWdpbmFsR3Jhdml0eRI+Cg1maW5hbF9ncmF2aXR5GAsg'
-    'ASgLMhkuYmVlcnByb3RvLnYxLkdyYXZpdHlUeXBlUgxmaW5hbEdyYXZpdHkSIAoLY2FyYm9uYX'
-    'Rpb24YDCABKAFSC2NhcmJvbmF0aW9uEksKDGZlcm1lbnRhdGlvbhgNIAEoCzInLmJlZXJwcm90'
-    'by52MS5GZXJtZW50YXRpb25Qcm9jZWR1cmVUeXBlUgxmZXJtZW50YXRpb24SHgoGYXV0aG9yGA'
-    '4gASgJQga6SAPIAQFSBmF1dGhvchJHCgtpbmdyZWRpZW50cxgPIAEoCzIdLmJlZXJwcm90by52'
-    'MS5JbmdyZWRpZW50c1R5cGVCBrpIA8gBAVILaW5ncmVkaWVudHMSMwoEbWFzaBgQIAEoCzIfLm'
-    'JlZXJwcm90by52MS5NYXNoUHJvY2VkdXJlVHlwZVIEbWFzaBJCCglwYWNrYWdpbmcYESABKAsy'
-    'JC5iZWVycHJvdG8udjEuUGFja2FnaW5nUHJvY2VkdXJlVHlwZVIJcGFja2FnaW5nEjMKBGJvaW'
-    'wYEiABKAsyHy5iZWVycHJvdG8udjEuQm9pbFByb2NlZHVyZVR5cGVSBGJvaWwSLQoFdGFzdGUY'
-    'EyABKAsyFy5iZWVycHJvdG8udjEuVGFzdGVUeXBlUgV0YXN0ZRIqChFjYWxvcmllc19wZXJfcG'
-    'ludBgUIAEoAVIPY2Fsb3JpZXNQZXJQaW50EhgKB2NyZWF0ZWQYFSABKAlSB2NyZWF0ZWQSPwoK'
-    'YmF0Y2hfc2l6ZRgWIAEoCzIYLmJlZXJwcm90by52MS5Wb2x1bWVUeXBlQga6SAPIAQFSCWJhdG'
-    'NoU2l6ZRIUCgVub3RlcxgXIAEoCVIFbm90ZXMSRQoRYWxjb2hvbF9ieV92b2x1bWUYGCABKAsy'
-    'GS5iZWVycHJvdG8udjEuUGVyY2VudFR5cGVSD2FsY29ob2xCeVZvbHVtZRJMChRhcHBhcmVudF'
-    '9hdHRlbnVhdGlvbhgZIAEoCzIZLmJlZXJwcm90by52MS5QZXJjZW50VHlwZVITYXBwYXJlbnRB'
-    'dHRlbnVhdGlvbg==');
+    'ASgLMhkuYmVlcnByb3RvLnYxLkdyYXZpdHlUeXBlUgxmaW5hbEdyYXZpdHkSPwoLY2FyYm9uYX'
+    'Rpb24YDCABKAsyHS5iZWVycHJvdG8udjEuQ2FyYm9uYXRpb25UeXBlUgtjYXJib25hdGlvbhJL'
+    'CgxmZXJtZW50YXRpb24YDSABKAsyJy5iZWVycHJvdG8udjEuRmVybWVudGF0aW9uUHJvY2VkdX'
+    'JlVHlwZVIMZmVybWVudGF0aW9uEh4KBmF1dGhvchgOIAEoCUIGukgDyAEBUgZhdXRob3ISRwoL'
+    'aW5ncmVkaWVudHMYDyABKAsyHS5iZWVycHJvdG8udjEuSW5ncmVkaWVudHNUeXBlQga6SAPIAQ'
+    'FSC2luZ3JlZGllbnRzEjMKBG1hc2gYECABKAsyHy5iZWVycHJvdG8udjEuTWFzaFByb2NlZHVy'
+    'ZVR5cGVSBG1hc2gSQgoJcGFja2FnaW5nGBEgASgLMiQuYmVlcnByb3RvLnYxLlBhY2thZ2luZ1'
+    'Byb2NlZHVyZVR5cGVSCXBhY2thZ2luZxIzCgRib2lsGBIgASgLMh8uYmVlcnByb3RvLnYxLkJv'
+    'aWxQcm9jZWR1cmVUeXBlUgRib2lsEi0KBXRhc3RlGBMgASgLMhcuYmVlcnByb3RvLnYxLlRhc3'
+    'RlVHlwZVIFdGFzdGUSKgoRY2Fsb3JpZXNfcGVyX3BpbnQYFCABKAFSD2NhbG9yaWVzUGVyUGlu'
+    'dBIYCgdjcmVhdGVkGBUgASgJUgdjcmVhdGVkEj8KCmJhdGNoX3NpemUYFiABKAsyGC5iZWVycH'
+    'JvdG8udjEuVm9sdW1lVHlwZUIGukgDyAEBUgliYXRjaFNpemUSFAoFbm90ZXMYFyABKAlSBW5v'
+    'dGVzEkUKEWFsY29ob2xfYnlfdm9sdW1lGBggASgLMhkuYmVlcnByb3RvLnYxLlBlcmNlbnRUeX'
+    'BlUg9hbGNvaG9sQnlWb2x1bWUSTAoUYXBwYXJlbnRfYXR0ZW51YXRpb24YGSABKAsyGS5iZWVy'
+    'cHJvdG8udjEuUGVyY2VudFR5cGVSE2FwcGFyZW50QXR0ZW51YXRpb24=');
 
 @$core.Deprecated('Use efficiencyTypeDescriptor instead')
 const EfficiencyType$json = {

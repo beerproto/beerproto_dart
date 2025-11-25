@@ -326,6 +326,24 @@ final $typed_data.Uint8List rateUnitDescriptor = $convert.base64Decode(
     '9QRVJfS0cQBRIYChRSQVRFX1VOSVRfR0FMX1BFUl9MQhAGEhoKFlJBVEVfVU5JVF9DX1BFUl9N'
     'SU5VVEUQBxIaChZSQVRFX1VOSVRfRl9QRVJfTUlOVVRFEAg=');
 
+@$core.Deprecated('Use carbonationMethodDescriptor instead')
+const CarbonationMethod$json = {
+  '1': 'CarbonationMethod',
+  '2': [
+    {'1': 'CARBONATION_METHOD_UNSPECIFIED', '2': 0},
+    {'1': 'CARBONATION_METHOD_FORCE_CO2', '2': 1},
+    {'1': 'CARBONATION_METHOD_PRIMING_SUGAR', '2': 2},
+    {'1': 'CARBONATION_METHOD_NATURAL_CONDITIONING', '2': 3},
+  ],
+};
+
+/// Descriptor for `CarbonationMethod`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List carbonationMethodDescriptor = $convert.base64Decode(
+    'ChFDYXJib25hdGlvbk1ldGhvZBIiCh5DQVJCT05BVElPTl9NRVRIT0RfVU5TUEVDSUZJRUQQAB'
+    'IgChxDQVJCT05BVElPTl9NRVRIT0RfRk9SQ0VfQ08yEAESJAogQ0FSQk9OQVRJT05fTUVUSE9E'
+    'X1BSSU1JTkdfU1VHQVIQAhIrCidDQVJCT05BVElPTl9NRVRIT0RfTkFUVVJBTF9DT05ESVRJT0'
+    '5JTkcQAw==');
+
 @$core.Deprecated('Use volumeTypeDescriptor instead')
 const VolumeType$json = {
   '1': 'VolumeType',

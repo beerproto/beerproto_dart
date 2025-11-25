@@ -45,7 +45,7 @@ class RecipeType extends $pb.GeneratedMessage {
     $core.String? coauthor,
     $2.GravityType? originalGravity,
     $2.GravityType? finalGravity,
-    $core.double? carbonation,
+    $2.CarbonationType? carbonation,
     $3.FermentationProcedureType? fermentation,
     $core.String? author,
     IngredientsType? ingredients,
@@ -122,7 +122,8 @@ class RecipeType extends $pb.GeneratedMessage {
         subBuilder: $2.GravityType.create)
     ..aOM<$2.GravityType>(11, _omitFieldNames ? '' : 'finalGravity',
         subBuilder: $2.GravityType.create)
-    ..aD(12, _omitFieldNames ? '' : 'carbonation')
+    ..aOM<$2.CarbonationType>(12, _omitFieldNames ? '' : 'carbonation',
+        subBuilder: $2.CarbonationType.create)
     ..aOM<$3.FermentationProcedureType>(
         13, _omitFieldNames ? '' : 'fermentation',
         subBuilder: $3.FermentationProcedureType.create)
@@ -288,13 +289,15 @@ class RecipeType extends $pb.GeneratedMessage {
 
   /// The final carbonation of the beer when packaged or served
   @$pb.TagNumber(12)
-  $core.double get carbonation => $_getN(11);
+  $2.CarbonationType get carbonation => $_getN(11);
   @$pb.TagNumber(12)
-  set carbonation($core.double value) => $_setDouble(11, value);
+  set carbonation($2.CarbonationType value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasCarbonation() => $_has(11);
   @$pb.TagNumber(12)
   void clearCarbonation() => $_clearField(12);
+  @$pb.TagNumber(12)
+  $2.CarbonationType ensureCarbonation() => $_ensure(11);
 
   /// FermentationProcedureType defines the procedure for performing fermentation
   @$pb.TagNumber(13)

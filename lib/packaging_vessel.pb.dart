@@ -36,11 +36,12 @@ class PackagingVesselType extends $pb.GeneratedMessage {
     $core.double? vesselQuantity,
     $core.String? description,
     $0.AcidityType? startPh,
-    $core.double? carbonation,
+    $0.CarbonationType? carbonation,
     $0.TemperatureType? startTemperature,
     $0.AcidityType? endPh,
     $0.TemperatureType? endTemperature,
     $core.Iterable<$1.PackagingGraphicType>? graphics,
+    $0.CarbonationMethod? carbonationMethod,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -59,6 +60,7 @@ class PackagingVesselType extends $pb.GeneratedMessage {
     if (endPh != null) result.endPh = endPh;
     if (endTemperature != null) result.endTemperature = endTemperature;
     if (graphics != null) result.graphics.addAll(graphics);
+    if (carbonationMethod != null) result.carbonationMethod = carbonationMethod;
     return result;
   }
 
@@ -92,7 +94,8 @@ class PackagingVesselType extends $pb.GeneratedMessage {
     ..aOS(10, _omitFieldNames ? '' : 'description')
     ..aOM<$0.AcidityType>(11, _omitFieldNames ? '' : 'startPh',
         subBuilder: $0.AcidityType.create)
-    ..aD(12, _omitFieldNames ? '' : 'carbonation')
+    ..aOM<$0.CarbonationType>(12, _omitFieldNames ? '' : 'carbonation',
+        subBuilder: $0.CarbonationType.create)
     ..aOM<$0.TemperatureType>(13, _omitFieldNames ? '' : 'startTemperature',
         subBuilder: $0.TemperatureType.create)
     ..aOM<$0.AcidityType>(14, _omitFieldNames ? '' : 'endPh',
@@ -101,6 +104,8 @@ class PackagingVesselType extends $pb.GeneratedMessage {
         subBuilder: $0.TemperatureType.create)
     ..pPM<$1.PackagingGraphicType>(16, _omitFieldNames ? '' : 'graphics',
         subBuilder: $1.PackagingGraphicType.create)
+    ..aE<$0.CarbonationMethod>(17, _omitFieldNames ? '' : 'carbonationMethod',
+        enumValues: $0.CarbonationMethod.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -234,13 +239,15 @@ class PackagingVesselType extends $pb.GeneratedMessage {
   $0.AcidityType ensureStartPh() => $_ensure(10);
 
   @$pb.TagNumber(12)
-  $core.double get carbonation => $_getN(11);
+  $0.CarbonationType get carbonation => $_getN(11);
   @$pb.TagNumber(12)
-  set carbonation($core.double value) => $_setDouble(11, value);
+  set carbonation($0.CarbonationType value) => $_setField(12, value);
   @$pb.TagNumber(12)
   $core.bool hasCarbonation() => $_has(11);
   @$pb.TagNumber(12)
   void clearCarbonation() => $_clearField(12);
+  @$pb.TagNumber(12)
+  $0.CarbonationType ensureCarbonation() => $_ensure(11);
 
   @$pb.TagNumber(13)
   $0.TemperatureType get startTemperature => $_getN(12);
@@ -277,6 +284,15 @@ class PackagingVesselType extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(16)
   $pb.PbList<$1.PackagingGraphicType> get graphics => $_getList(15);
+
+  @$pb.TagNumber(17)
+  $0.CarbonationMethod get carbonationMethod => $_getN(16);
+  @$pb.TagNumber(17)
+  set carbonationMethod($0.CarbonationMethod value) => $_setField(17, value);
+  @$pb.TagNumber(17)
+  $core.bool hasCarbonationMethod() => $_has(16);
+  @$pb.TagNumber(17)
+  void clearCarbonationMethod() => $_clearField(17);
 }
 
 const $core.bool _omitFieldNames =
