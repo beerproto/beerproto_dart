@@ -73,43 +73,42 @@ class PackagingVesselUnit extends $pb.ProtobufEnum {
   const PackagingVesselUnit._(super.value, super.name);
 }
 
-class PrimingSugarKind extends $pb.ProtobufEnum {
-  static const PrimingSugarKind PRIMING_SUGAR_KIND_UNSPECIFIED =
-      PrimingSugarKind._(
-          0, _omitEnumNames ? '' : 'PRIMING_SUGAR_KIND_UNSPECIFIED');
-  static const PrimingSugarKind PRIMING_SUGAR_KIND_SUCROSE =
-      PrimingSugarKind._(1, _omitEnumNames ? '' : 'PRIMING_SUGAR_KIND_SUCROSE');
-  static const PrimingSugarKind PRIMING_SUGAR_KIND_DEXTROSE =
-      PrimingSugarKind._(
-          2, _omitEnumNames ? '' : 'PRIMING_SUGAR_KIND_DEXTROSE');
-  static const PrimingSugarKind PRIMING_SUGAR_KIND_DME =
-      PrimingSugarKind._(3, _omitEnumNames ? '' : 'PRIMING_SUGAR_KIND_DME');
-  static const PrimingSugarKind PRIMING_SUGAR_KIND_HONEY =
-      PrimingSugarKind._(4, _omitEnumNames ? '' : 'PRIMING_SUGAR_KIND_HONEY');
-  static const PrimingSugarKind PRIMING_SUGAR_KIND_CANDI =
-      PrimingSugarKind._(5, _omitEnumNames ? '' : 'PRIMING_SUGAR_KIND_CANDI');
-  static const PrimingSugarKind PRIMING_SUGAR_KIND_SYRUP =
-      PrimingSugarKind._(6, _omitEnumNames ? '' : 'PRIMING_SUGAR_KIND_SYRUP');
-  static const PrimingSugarKind PRIMING_SUGAR_KIND_OTHER =
-      PrimingSugarKind._(7, _omitEnumNames ? '' : 'PRIMING_SUGAR_KIND_OTHER');
+class CarbonationStep extends $pb.ProtobufEnum {
+  static const CarbonationStep CARBONATION_STEP_UNSPECIFIED = CarbonationStep._(
+      0, _omitEnumNames ? '' : 'CARBONATION_STEP_UNSPECIFIED');
 
-  static const $core.List<PrimingSugarKind> values = <PrimingSugarKind>[
-    PRIMING_SUGAR_KIND_UNSPECIFIED,
-    PRIMING_SUGAR_KIND_SUCROSE,
-    PRIMING_SUGAR_KIND_DEXTROSE,
-    PRIMING_SUGAR_KIND_DME,
-    PRIMING_SUGAR_KIND_HONEY,
-    PRIMING_SUGAR_KIND_CANDI,
-    PRIMING_SUGAR_KIND_SYRUP,
-    PRIMING_SUGAR_KIND_OTHER,
+  /// forceCarbonation
+  static const CarbonationStep CARBONATION_STEP_FORCE_CARBONATION =
+      CarbonationStep._(
+          1, _omitEnumNames ? '' : 'CARBONATION_STEP_FORCE_CARBONATION');
+
+  /// priming
+  static const CarbonationStep CARBONATION_STEP_PRIMING =
+      CarbonationStep._(2, _omitEnumNames ? '' : 'CARBONATION_STEP_PRIMING');
+
+  /// spunding
+  static const CarbonationStep CARBONATION_STEP_SPUNDING =
+      CarbonationStep._(3, _omitEnumNames ? '' : 'CARBONATION_STEP_SPUNDING');
+
+  /// naturalConditioning
+  static const CarbonationStep CARBONATION_STEP_NATURAL_CONDITIONING =
+      CarbonationStep._(
+          4, _omitEnumNames ? '' : 'CARBONATION_STEP_NATURAL_CONDITIONING');
+
+  static const $core.List<CarbonationStep> values = <CarbonationStep>[
+    CARBONATION_STEP_UNSPECIFIED,
+    CARBONATION_STEP_FORCE_CARBONATION,
+    CARBONATION_STEP_PRIMING,
+    CARBONATION_STEP_SPUNDING,
+    CARBONATION_STEP_NATURAL_CONDITIONING,
   ];
 
-  static final $core.List<PrimingSugarKind?> _byValue =
-      $pb.ProtobufEnum.$_initByValueList(values, 7);
-  static PrimingSugarKind? valueOf($core.int value) =>
+  static final $core.List<CarbonationStep?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 4);
+  static CarbonationStep? valueOf($core.int value) =>
       value < 0 || value >= _byValue.length ? null : _byValue[value];
 
-  const PrimingSugarKind._(super.value, super.name);
+  const CarbonationStep._(super.value, super.name);
 }
 
 const $core.bool _omitEnumNames =

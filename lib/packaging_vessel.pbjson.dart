@@ -38,28 +38,24 @@ final $typed_data.Uint8List packagingVesselUnitDescriptor = $convert.base64Decod
     'BRIfChtQQUNLQUdJTkdfVkVTU0VMX1VOSVRfT1RIRVIQBhIdChlQQUNLQUdJTkdfVkVTU0VMX1'
     'VOSVRfQ0FOEAc=');
 
-@$core.Deprecated('Use primingSugarKindDescriptor instead')
-const PrimingSugarKind$json = {
-  '1': 'PrimingSugarKind',
+@$core.Deprecated('Use carbonationStepDescriptor instead')
+const CarbonationStep$json = {
+  '1': 'CarbonationStep',
   '2': [
-    {'1': 'PRIMING_SUGAR_KIND_UNSPECIFIED', '2': 0},
-    {'1': 'PRIMING_SUGAR_KIND_SUCROSE', '2': 1},
-    {'1': 'PRIMING_SUGAR_KIND_DEXTROSE', '2': 2},
-    {'1': 'PRIMING_SUGAR_KIND_DME', '2': 3},
-    {'1': 'PRIMING_SUGAR_KIND_HONEY', '2': 4},
-    {'1': 'PRIMING_SUGAR_KIND_CANDI', '2': 5},
-    {'1': 'PRIMING_SUGAR_KIND_SYRUP', '2': 6},
-    {'1': 'PRIMING_SUGAR_KIND_OTHER', '2': 7},
+    {'1': 'CARBONATION_STEP_UNSPECIFIED', '2': 0},
+    {'1': 'CARBONATION_STEP_FORCE_CARBONATION', '2': 1},
+    {'1': 'CARBONATION_STEP_PRIMING', '2': 2},
+    {'1': 'CARBONATION_STEP_SPUNDING', '2': 3},
+    {'1': 'CARBONATION_STEP_NATURAL_CONDITIONING', '2': 4},
   ],
 };
 
-/// Descriptor for `PrimingSugarKind`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List primingSugarKindDescriptor = $convert.base64Decode(
-    'ChBQcmltaW5nU3VnYXJLaW5kEiIKHlBSSU1JTkdfU1VHQVJfS0lORF9VTlNQRUNJRklFRBAAEh'
-    '4KGlBSSU1JTkdfU1VHQVJfS0lORF9TVUNST1NFEAESHwobUFJJTUlOR19TVUdBUl9LSU5EX0RF'
-    'WFRST1NFEAISGgoWUFJJTUlOR19TVUdBUl9LSU5EX0RNRRADEhwKGFBSSU1JTkdfU1VHQVJfS0'
-    'lORF9IT05FWRAEEhwKGFBSSU1JTkdfU1VHQVJfS0lORF9DQU5ESRAFEhwKGFBSSU1JTkdfU1VH'
-    'QVJfS0lORF9TWVJVUBAGEhwKGFBSSU1JTkdfU1VHQVJfS0lORF9PVEhFUhAH');
+/// Descriptor for `CarbonationStep`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List carbonationStepDescriptor = $convert.base64Decode(
+    'Cg9DYXJib25hdGlvblN0ZXASIAocQ0FSQk9OQVRJT05fU1RFUF9VTlNQRUNJRklFRBAAEiYKIk'
+    'NBUkJPTkFUSU9OX1NURVBfRk9SQ0VfQ0FSQk9OQVRJT04QARIcChhDQVJCT05BVElPTl9TVEVQ'
+    'X1BSSU1JTkcQAhIdChlDQVJCT05BVElPTl9TVEVQX1NQVU5ESU5HEAMSKQolQ0FSQk9OQVRJT0'
+    '5fU1RFUF9OQVRVUkFMX0NPTkRJVElPTklORxAE');
 
 @$core.Deprecated('Use packagingVesselBaseDescriptor instead')
 const PackagingVesselBase$json = {
@@ -184,44 +180,13 @@ const PackagingVesselType$json = {
     },
     {'1': 'notes', '3': 12, '4': 1, '5': 9, '10': 'notes'},
     {
-      '1': 'force_carbonation',
+      '1': 'carbonation_step',
       '3': 13,
       '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ForceCarbonationStepType',
-      '9': 0,
-      '10': 'forceCarbonation'
+      '5': 14,
+      '6': '.beerproto.v1.CarbonationStep',
+      '10': 'carbonationStep'
     },
-    {
-      '1': 'priming',
-      '3': 14,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PrimingStepType',
-      '9': 0,
-      '10': 'priming'
-    },
-    {
-      '1': 'spunding',
-      '3': 15,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.SpundingStepType',
-      '9': 0,
-      '10': 'spunding'
-    },
-    {
-      '1': 'natural_conditioning',
-      '3': 16,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.NaturalConditioningStepType',
-      '9': 0,
-      '10': 'naturalConditioning'
-    },
-  ],
-  '8': [
-    {'1': 'carbonation_step'},
   ],
 };
 
@@ -239,173 +204,5 @@ final $typed_data.Uint8List packagingVesselTypeDescriptor = $convert.base64Decod
     'oPZW5kX3RlbXBlcmF0dXJlGAogASgLMh0uYmVlcnByb3RvLnYxLlRlbXBlcmF0dXJlVHlwZVIO'
     'ZW5kVGVtcGVyYXR1cmUSTAoSdGFyZ2V0X2NhcmJvbmF0aW9uGAsgASgLMh0uYmVlcnByb3RvLn'
     'YxLkNhcmJvbmF0aW9uVHlwZVIRdGFyZ2V0Q2FyYm9uYXRpb24SFAoFbm90ZXMYDCABKAlSBW5v'
-    'dGVzElUKEWZvcmNlX2NhcmJvbmF0aW9uGA0gASgLMiYuYmVlcnByb3RvLnYxLkZvcmNlQ2FyYm'
-    '9uYXRpb25TdGVwVHlwZUgAUhBmb3JjZUNhcmJvbmF0aW9uEjkKB3ByaW1pbmcYDiABKAsyHS5i'
-    'ZWVycHJvdG8udjEuUHJpbWluZ1N0ZXBUeXBlSABSB3ByaW1pbmcSPAoIc3B1bmRpbmcYDyABKA'
-    'syHi5iZWVycHJvdG8udjEuU3B1bmRpbmdTdGVwVHlwZUgAUghzcHVuZGluZxJeChRuYXR1cmFs'
-    'X2NvbmRpdGlvbmluZxgQIAEoCzIpLmJlZXJwcm90by52MS5OYXR1cmFsQ29uZGl0aW9uaW5nU3'
-    'RlcFR5cGVIAFITbmF0dXJhbENvbmRpdGlvbmluZ0ISChBjYXJib25hdGlvbl9zdGVw');
-
-@$core.Deprecated('Use forceCarbonationStepTypeDescriptor instead')
-const ForceCarbonationStepType$json = {
-  '1': 'ForceCarbonationStepType',
-  '2': [
-    {
-      '1': 'pressure',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PressureType',
-      '10': 'pressure'
-    },
-    {
-      '1': 'duration',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TimeType',
-      '10': 'duration'
-    },
-    {
-      '1': 'temperature',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TemperatureType',
-      '10': 'temperature'
-    },
-  ],
-};
-
-/// Descriptor for `ForceCarbonationStepType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List forceCarbonationStepTypeDescriptor = $convert.base64Decode(
-    'ChhGb3JjZUNhcmJvbmF0aW9uU3RlcFR5cGUSNgoIcHJlc3N1cmUYASABKAsyGi5iZWVycHJvdG'
-    '8udjEuUHJlc3N1cmVUeXBlUghwcmVzc3VyZRIyCghkdXJhdGlvbhgCIAEoCzIWLmJlZXJwcm90'
-    'by52MS5UaW1lVHlwZVIIZHVyYXRpb24SPwoLdGVtcGVyYXR1cmUYAyABKAsyHS5iZWVycHJvdG'
-    '8udjEuVGVtcGVyYXR1cmVUeXBlUgt0ZW1wZXJhdHVyZQ==');
-
-@$core.Deprecated('Use primingStepTypeDescriptor instead')
-const PrimingStepType$json = {
-  '1': 'PrimingStepType',
-  '2': [
-    {
-      '1': 'priming_sugar',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PrimingSugarType',
-      '10': 'primingSugar'
-    },
-    {
-      '1': 'beer_volume',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '10': 'beerVolume'
-    },
-  ],
-};
-
-/// Descriptor for `PrimingStepType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List primingStepTypeDescriptor = $convert.base64Decode(
-    'Cg9QcmltaW5nU3RlcFR5cGUSQwoNcHJpbWluZ19zdWdhchgBIAEoCzIeLmJlZXJwcm90by52MS'
-    '5QcmltaW5nU3VnYXJUeXBlUgxwcmltaW5nU3VnYXISOQoLYmVlcl92b2x1bWUYAiABKAsyGC5i'
-    'ZWVycHJvdG8udjEuVm9sdW1lVHlwZVIKYmVlclZvbHVtZQ==');
-
-@$core.Deprecated('Use primingSugarTypeDescriptor instead')
-const PrimingSugarType$json = {
-  '1': 'PrimingSugarType',
-  '2': [
-    {
-      '1': 'kind',
-      '3': 1,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.PrimingSugarKind',
-      '10': 'kind'
-    },
-    {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
-    {
-      '1': 'mass',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.MassType',
-      '10': 'mass'
-    },
-    {
-      '1': 'color',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ColorType',
-      '10': 'color'
-    },
-    {
-      '1': 'fermentability',
-      '3': 5,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'fermentability'
-    },
-  ],
-};
-
-/// Descriptor for `PrimingSugarType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List primingSugarTypeDescriptor = $convert.base64Decode(
-    'ChBQcmltaW5nU3VnYXJUeXBlEjIKBGtpbmQYASABKA4yHi5iZWVycHJvdG8udjEuUHJpbWluZ1'
-    'N1Z2FyS2luZFIEa2luZBISCgRuYW1lGAIgASgJUgRuYW1lEioKBG1hc3MYAyABKAsyFi5iZWVy'
-    'cHJvdG8udjEuTWFzc1R5cGVSBG1hc3MSLQoFY29sb3IYBCABKAsyFy5iZWVycHJvdG8udjEuQ2'
-    '9sb3JUeXBlUgVjb2xvchJBCg5mZXJtZW50YWJpbGl0eRgFIAEoCzIZLmJlZXJwcm90by52MS5Q'
-    'ZXJjZW50VHlwZVIOZmVybWVudGFiaWxpdHk=');
-
-@$core.Deprecated('Use spundingStepTypeDescriptor instead')
-const SpundingStepType$json = {
-  '1': 'SpundingStepType',
-  '2': [
-    {
-      '1': 'pressure',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PressureType',
-      '10': 'pressure'
-    },
-    {
-      '1': 'start_gravity',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.GravityType',
-      '10': 'startGravity'
-    },
-    {'1': 'notes', '3': 3, '4': 1, '5': 9, '10': 'notes'},
-    {
-      '1': 'additional_carbonation',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.CarbonationType',
-      '10': 'additionalCarbonation'
-    },
-  ],
-};
-
-/// Descriptor for `SpundingStepType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List spundingStepTypeDescriptor = $convert.base64Decode(
-    'ChBTcHVuZGluZ1N0ZXBUeXBlEjYKCHByZXNzdXJlGAEgASgLMhouYmVlcnByb3RvLnYxLlByZX'
-    'NzdXJlVHlwZVIIcHJlc3N1cmUSPgoNc3RhcnRfZ3Jhdml0eRgCIAEoCzIZLmJlZXJwcm90by52'
-    'MS5HcmF2aXR5VHlwZVIMc3RhcnRHcmF2aXR5EhQKBW5vdGVzGAMgASgJUgVub3RlcxJUChZhZG'
-    'RpdGlvbmFsX2NhcmJvbmF0aW9uGAQgASgLMh0uYmVlcnByb3RvLnYxLkNhcmJvbmF0aW9uVHlw'
-    'ZVIVYWRkaXRpb25hbENhcmJvbmF0aW9u');
-
-@$core.Deprecated('Use naturalConditioningStepTypeDescriptor instead')
-const NaturalConditioningStepType$json = {
-  '1': 'NaturalConditioningStepType',
-};
-
-/// Descriptor for `NaturalConditioningStepType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List naturalConditioningStepTypeDescriptor =
-    $convert.base64Decode('ChtOYXR1cmFsQ29uZGl0aW9uaW5nU3RlcFR5cGU=');
+    'dGVzEkgKEGNhcmJvbmF0aW9uX3N0ZXAYDSABKA4yHS5iZWVycHJvdG8udjEuQ2FyYm9uYXRpb2'
+    '5TdGVwUg9jYXJib25hdGlvblN0ZXA=');
