@@ -349,7 +349,6 @@ class PackagingVesselType extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $0.CarbonationType ensureTargetCarbonation() => $_ensure(10);
 
-  /// Optional notes (cask finings, venting, etc.)
   @$pb.TagNumber(12)
   $core.String get notes => $_getSZ(11);
   @$pb.TagNumber(12)
