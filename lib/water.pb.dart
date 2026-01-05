@@ -15,6 +15,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'measureable_units.pb.dart' as $0;
+import 'timing.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
@@ -376,11 +377,13 @@ class WaterAdditionType extends $pb.GeneratedMessage {
     WaterBase? base,
     $core.String? id,
     $0.VolumeType? amount,
+    $1.TimingType? timing,
   }) {
     final result = create();
     if (base != null) result.base = base;
     if (id != null) result.id = id;
     if (amount != null) result.amount = amount;
+    if (timing != null) result.timing = timing;
     return result;
   }
 
@@ -402,6 +405,8 @@ class WaterAdditionType extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'id')
     ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'amount',
         subBuilder: $0.VolumeType.create)
+    ..aOM<$1.TimingType>(4, _omitFieldNames ? '' : 'timing',
+        subBuilder: $1.TimingType.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -455,6 +460,18 @@ class WaterAdditionType extends $pb.GeneratedMessage {
   void clearAmount() => $_clearField(3);
   @$pb.TagNumber(3)
   $0.VolumeType ensureAmount() => $_ensure(2);
+
+  /// The timing object fully describes the timing of an addition with options for a basis on time, gravity, or pH at any process step
+  @$pb.TagNumber(4)
+  $1.TimingType get timing => $_getN(3);
+  @$pb.TagNumber(4)
+  set timing($1.TimingType value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasTiming() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearTiming() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $1.TimingType ensureTiming() => $_ensure(3);
 }
 
 const $core.bool _omitFieldNames =

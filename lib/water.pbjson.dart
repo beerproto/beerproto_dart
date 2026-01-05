@@ -198,6 +198,15 @@ const WaterAdditionType$json = {
       '6': '.beerproto.v1.VolumeType',
       '10': 'amount'
     },
+    {
+      '1': 'timing',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TimingType',
+      '8': {},
+      '10': 'timing'
+    },
   ],
 };
 
@@ -205,4 +214,5 @@ const WaterAdditionType$json = {
 final $typed_data.Uint8List waterAdditionTypeDescriptor = $convert.base64Decode(
     'ChFXYXRlckFkZGl0aW9uVHlwZRIzCgRiYXNlGAEgASgLMhcuYmVlcnByb3RvLnYxLldhdGVyQm'
     'FzZUIGukgDyAEBUgRiYXNlEhsKAmlkGAIgASgJQgu6SAjIAQFyA7ABAVICaWQSMAoGYW1vdW50'
-    'GAMgASgLMhguYmVlcnByb3RvLnYxLlZvbHVtZVR5cGVSBmFtb3VudA==');
+    'GAMgASgLMhguYmVlcnByb3RvLnYxLlZvbHVtZVR5cGVSBmFtb3VudBI4CgZ0aW1pbmcYBCABKA'
+    'syGC5iZWVycHJvdG8udjEuVGltaW5nVHlwZUIGukgDyAEBUgZ0aW1pbmc=');
