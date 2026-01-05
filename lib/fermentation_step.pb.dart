@@ -34,7 +34,6 @@ class FermentationStepType extends $pb.GeneratedMessage {
     $0.AcidityType? endPh,
     $core.String? vessel,
     $0.PercentType? vesselPressure,
-    $0.VolumeType? topUp,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -50,7 +49,6 @@ class FermentationStepType extends $pb.GeneratedMessage {
     if (endPh != null) result.endPh = endPh;
     if (vessel != null) result.vessel = vessel;
     if (vesselPressure != null) result.vesselPressure = vesselPressure;
-    if (topUp != null) result.topUp = topUp;
     return result;
   }
 
@@ -88,8 +86,6 @@ class FermentationStepType extends $pb.GeneratedMessage {
     ..aOS(12, _omitFieldNames ? '' : 'vessel')
     ..aOM<$0.PercentType>(13, _omitFieldNames ? '' : 'vesselPressure',
         subBuilder: $0.PercentType.create)
-    ..aOM<$0.VolumeType>(14, _omitFieldNames ? '' : 'topUp',
-        subBuilder: $0.VolumeType.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -247,17 +243,6 @@ class FermentationStepType extends $pb.GeneratedMessage {
   void clearVesselPressure() => $_clearField(13);
   @$pb.TagNumber(13)
   $0.PercentType ensureVesselPressure() => $_ensure(12);
-
-  @$pb.TagNumber(14)
-  $0.VolumeType get topUp => $_getN(13);
-  @$pb.TagNumber(14)
-  set topUp($0.VolumeType value) => $_setField(14, value);
-  @$pb.TagNumber(14)
-  $core.bool hasTopUp() => $_has(13);
-  @$pb.TagNumber(14)
-  void clearTopUp() => $_clearField(14);
-  @$pb.TagNumber(14)
-  $0.VolumeType ensureTopUp() => $_ensure(13);
 }
 
 const $core.bool _omitFieldNames =
