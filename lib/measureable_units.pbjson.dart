@@ -344,6 +344,40 @@ final $typed_data.Uint8List pressureUnitDescriptor = $convert.base64Decode(
     'JFX1VOSVRfUEFTQ0FMEAESFQoRUFJFU1NVUkVfVU5JVF9CQVIQAhIVChFQUkVTU1VSRV9VTklU'
     'X1BTSRADEhUKEVBSRVNTVVJFX1VOSVRfS1BBEAQ=');
 
+@$core.Deprecated('Use enzymeActivityUnitDescriptor instead')
+const EnzymeActivityUnit$json = {
+  '1': 'EnzymeActivityUnit',
+  '2': [
+    {'1': 'ENZYME_ACTIVITY_UNIT_UNSPECIFIED', '2': 0},
+    {'1': 'ENZYME_ACTIVITY_UNIT_DU', '2': 1},
+    {'1': 'ENZYME_ACTIVITY_UNIT_WK', '2': 2},
+    {'1': 'ENZYME_ACTIVITY_UNIT_SKB', '2': 3},
+  ],
+};
+
+/// Descriptor for `EnzymeActivityUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List enzymeActivityUnitDescriptor = $convert.base64Decode(
+    'ChJFbnp5bWVBY3Rpdml0eVVuaXQSJAogRU5aWU1FX0FDVElWSVRZX1VOSVRfVU5TUEVDSUZJRU'
+    'QQABIbChdFTlpZTUVfQUNUSVZJVFlfVU5JVF9EVRABEhsKF0VOWllNRV9BQ1RJVklUWV9VTklU'
+    'X1dLEAISHAoYRU5aWU1FX0FDVElWSVRZX1VOSVRfU0tCEAM=');
+
+@$core.Deprecated('Use enzymeTypeDescriptor instead')
+const EnzymeType$json = {
+  '1': 'EnzymeType',
+  '2': [
+    {'1': 'ENZYME_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'ENZYME_TYPE_ALPHA_AMYLASE', '2': 1},
+    {'1': 'ENZYME_TYPE_BETA_AMYLASE', '2': 2},
+    {'1': 'ENZYME_TYPE_PROTEASE', '2': 3},
+  ],
+};
+
+/// Descriptor for `EnzymeType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List enzymeTypeDescriptor = $convert.base64Decode(
+    'CgpFbnp5bWVUeXBlEhsKF0VOWllNRV9UWVBFX1VOU1BFQ0lGSUVEEAASHQoZRU5aWU1FX1RZUE'
+    'VfQUxQSEFfQU1ZTEFTRRABEhwKGEVOWllNRV9UWVBFX0JFVEFfQU1ZTEFTRRACEhgKFEVOWllN'
+    'RV9UWVBFX1BST1RFQVNFEAM=');
+
 @$core.Deprecated('Use volumeTypeDescriptor instead')
 const VolumeType$json = {
   '1': 'VolumeType',
@@ -1069,3 +1103,55 @@ const PressureType$json = {
 final $typed_data.Uint8List pressureTypeDescriptor = $convert.base64Decode(
     'CgxQcmVzc3VyZVR5cGUSFAoFdmFsdWUYASABKAFSBXZhbHVlEi4KBHVuaXQYAiABKA4yGi5iZW'
     'VycHJvdG8udjEuUHJlc3N1cmVVbml0UgR1bml0');
+
+@$core.Deprecated('Use enzymeActivityTypeDescriptor instead')
+const EnzymeActivityType$json = {
+  '1': 'EnzymeActivityType',
+  '2': [
+    {'1': 'value', '3': 1, '4': 1, '5': 1, '8': {}, '10': 'value'},
+    {
+      '1': 'unit',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.EnzymeActivityUnit',
+      '8': {},
+      '10': 'unit'
+    },
+  ],
+};
+
+/// Descriptor for `EnzymeActivityType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List enzymeActivityTypeDescriptor = $convert.base64Decode(
+    'ChJFbnp5bWVBY3Rpdml0eVR5cGUSJAoFdmFsdWUYASABKAFCDrpICxIJKQAAAAAAAAAAUgV2YW'
+    'x1ZRI8CgR1bml0GAIgASgOMiAuYmVlcnByb3RvLnYxLkVuenltZUFjdGl2aXR5VW5pdEIGukgD'
+    'yAEBUgR1bml0');
+
+@$core.Deprecated('Use enzymeActivityDescriptor instead')
+const EnzymeActivity$json = {
+  '1': 'EnzymeActivity',
+  '2': [
+    {
+      '1': 'kind',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.EnzymeType',
+      '10': 'kind'
+    },
+    {
+      '1': 'activity',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.EnzymeActivityType',
+      '10': 'activity'
+    },
+  ],
+};
+
+/// Descriptor for `EnzymeActivity`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List enzymeActivityDescriptor = $convert.base64Decode(
+    'Cg5Fbnp5bWVBY3Rpdml0eRIsCgRraW5kGAEgASgOMhguYmVlcnByb3RvLnYxLkVuenltZVR5cG'
+    'VSBGtpbmQSPAoIYWN0aXZpdHkYAiABKAsyIC5iZWVycHJvdG8udjEuRW56eW1lQWN0aXZpdHlU'
+    'eXBlUghhY3Rpdml0eQ==');

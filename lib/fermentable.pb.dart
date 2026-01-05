@@ -179,7 +179,7 @@ class FermentableType extends $pb.GeneratedMessage {
     $0.PercentType? maxInBatch,
     $core.bool? recommendMash,
     $0.PercentType? protein,
-    $core.double? alphaAmylase,
+    $0.EnzymeActivityType? alphaAmylase,
     $0.DiastaticPowerType? diastaticPower,
     $0.PercentType? moisture,
     FermentableInventoryType? inventory,
@@ -246,7 +246,8 @@ class FermentableType extends $pb.GeneratedMessage {
     ..aOB(4, _omitFieldNames ? '' : 'recommendMash')
     ..aOM<$0.PercentType>(5, _omitFieldNames ? '' : 'protein',
         subBuilder: $0.PercentType.create)
-    ..aD(11, _omitFieldNames ? '' : 'alphaAmylase')
+    ..aOM<$0.EnzymeActivityType>(11, _omitFieldNames ? '' : 'alphaAmylase',
+        subBuilder: $0.EnzymeActivityType.create)
     ..aOM<$0.DiastaticPowerType>(14, _omitFieldNames ? '' : 'diastaticPower',
         subBuilder: $0.DiastaticPowerType.create)
     ..aOM<$0.PercentType>(15, _omitFieldNames ? '' : 'moisture',
@@ -359,13 +360,15 @@ class FermentableType extends $pb.GeneratedMessage {
 
   /// Where diastatic power gives the total amount of all enzymes, alpha amylase, also known as dextrinizing units, refers to only the total amount of alpa amylase in the malted grain. A value of 25-50 is desirable for base malt.
   @$pb.TagNumber(11)
-  $core.double get alphaAmylase => $_getN(5);
+  $0.EnzymeActivityType get alphaAmylase => $_getN(5);
   @$pb.TagNumber(11)
-  set alphaAmylase($core.double value) => $_setDouble(5, value);
+  set alphaAmylase($0.EnzymeActivityType value) => $_setField(11, value);
   @$pb.TagNumber(11)
   $core.bool hasAlphaAmylase() => $_has(5);
   @$pb.TagNumber(11)
   void clearAlphaAmylase() => $_clearField(11);
+  @$pb.TagNumber(11)
+  $0.EnzymeActivityType ensureAlphaAmylase() => $_ensure(5);
 
   /// Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner is needed to self convert, while a value of 100 or more is desirable.
   @$pb.TagNumber(14)

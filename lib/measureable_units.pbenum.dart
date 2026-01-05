@@ -666,5 +666,66 @@ class PressureUnit extends $pb.ProtobufEnum {
   const PressureUnit._(super.value, super.name);
 }
 
+/// *
+///  Enzyme activity units used in brewing and cereal chemistry.
+///
+///  DU is the de-facto standard for alpha amylase in malt specs.
+class EnzymeActivityUnit extends $pb.ProtobufEnum {
+  static const EnzymeActivityUnit ENZYME_ACTIVITY_UNIT_UNSPECIFIED =
+      EnzymeActivityUnit._(
+          0, _omitEnumNames ? '' : 'ENZYME_ACTIVITY_UNIT_UNSPECIFIED');
+
+  /// Dextrinizing Units (ASBC method, most common for alpha amylase)
+  static const EnzymeActivityUnit ENZYME_ACTIVITY_UNIT_DU =
+      EnzymeActivityUnit._(1, _omitEnumNames ? '' : 'ENZYME_ACTIVITY_UNIT_DU');
+
+  /// Windisch–Kolbach units (more common in European malt specs)
+  static const EnzymeActivityUnit ENZYME_ACTIVITY_UNIT_WK =
+      EnzymeActivityUnit._(2, _omitEnumNames ? '' : 'ENZYME_ACTIVITY_UNIT_WK');
+
+  /// SKB units (Sandstedt–Kneen–Blish, older standard)
+  static const EnzymeActivityUnit ENZYME_ACTIVITY_UNIT_SKB =
+      EnzymeActivityUnit._(3, _omitEnumNames ? '' : 'ENZYME_ACTIVITY_UNIT_SKB');
+
+  static const $core.List<EnzymeActivityUnit> values = <EnzymeActivityUnit>[
+    ENZYME_ACTIVITY_UNIT_UNSPECIFIED,
+    ENZYME_ACTIVITY_UNIT_DU,
+    ENZYME_ACTIVITY_UNIT_WK,
+    ENZYME_ACTIVITY_UNIT_SKB,
+  ];
+
+  static final $core.List<EnzymeActivityUnit?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static EnzymeActivityUnit? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const EnzymeActivityUnit._(super.value, super.name);
+}
+
+class EnzymeType extends $pb.ProtobufEnum {
+  static const EnzymeType ENZYME_TYPE_UNSPECIFIED =
+      EnzymeType._(0, _omitEnumNames ? '' : 'ENZYME_TYPE_UNSPECIFIED');
+  static const EnzymeType ENZYME_TYPE_ALPHA_AMYLASE =
+      EnzymeType._(1, _omitEnumNames ? '' : 'ENZYME_TYPE_ALPHA_AMYLASE');
+  static const EnzymeType ENZYME_TYPE_BETA_AMYLASE =
+      EnzymeType._(2, _omitEnumNames ? '' : 'ENZYME_TYPE_BETA_AMYLASE');
+  static const EnzymeType ENZYME_TYPE_PROTEASE =
+      EnzymeType._(3, _omitEnumNames ? '' : 'ENZYME_TYPE_PROTEASE');
+
+  static const $core.List<EnzymeType> values = <EnzymeType>[
+    ENZYME_TYPE_UNSPECIFIED,
+    ENZYME_TYPE_ALPHA_AMYLASE,
+    ENZYME_TYPE_BETA_AMYLASE,
+    ENZYME_TYPE_PROTEASE,
+  ];
+
+  static final $core.List<EnzymeType?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static EnzymeType? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const EnzymeType._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');

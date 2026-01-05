@@ -120,79 +120,76 @@ class CultureBaseType extends $pb.ProtobufEnum {
       CultureBaseType._(
           0, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_UNSPECIFIED');
 
-  /// ale
+  /// Yeast
   static const CultureBaseType CULTURE_BASE_TYPE_ALE =
       CultureBaseType._(1, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_ALE');
+  static const CultureBaseType CULTURE_BASE_TYPE_LAGER =
+      CultureBaseType._(7, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_LAGER');
+  static const CultureBaseType CULTURE_BASE_TYPE_KVEIK =
+      CultureBaseType._(5, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_KVEIK');
+  static const CultureBaseType CULTURE_BASE_TYPE_BRETT =
+      CultureBaseType._(3, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_BRETT');
+  static const CultureBaseType CULTURE_BASE_TYPE_CHAMPAGNE =
+      CultureBaseType._(4, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_CHAMPAGNE');
+  static const CultureBaseType CULTURE_BASE_TYPE_WINE =
+      CultureBaseType._(13, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_WINE');
+  static const CultureBaseType CULTURE_BASE_TYPE_NON_SACCHAROMYCES =
+      CultureBaseType._(
+          14, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_NON_SACCHAROMYCES');
 
-  /// bacteria
+  /// Bacteria
+  static const CultureBaseType CULTURE_BASE_TYPE_LACTO =
+      CultureBaseType._(6, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_LACTO');
+  static const CultureBaseType CULTURE_BASE_TYPE_PEDIO =
+      CultureBaseType._(11, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_PEDIO');
+  static const CultureBaseType CULTURE_BASE_TYPE_MALOLACTIC = CultureBaseType._(
+      8, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_MALOLACTIC');
+  static const CultureBaseType CULTURE_BASE_TYPE_ACETIC =
+      CultureBaseType._(15, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_ACETIC');
   static const CultureBaseType CULTURE_BASE_TYPE_BACTERIA =
       CultureBaseType._(2, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_BACTERIA');
 
-  /// brett
-  static const CultureBaseType CULTURE_BASE_TYPE_BRETT =
-      CultureBaseType._(3, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_BRETT');
-
-  /// champagne
-  static const CultureBaseType CULTURE_BASE_TYPE_CHAMPAGNE =
-      CultureBaseType._(4, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_CHAMPAGNE');
-
-  /// kveik
-  static const CultureBaseType CULTURE_BASE_TYPE_KVEIK =
-      CultureBaseType._(5, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_KVEIK');
-
-  /// lacto
-  static const CultureBaseType CULTURE_BASE_TYPE_LACTO =
-      CultureBaseType._(6, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_LACTO');
-
-  /// lager
-  static const CultureBaseType CULTURE_BASE_TYPE_LAGER =
-      CultureBaseType._(7, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_LAGER');
-
-  /// malolactic
-  static const CultureBaseType CULTURE_BASE_TYPE_MALOLACTIC = CultureBaseType._(
-      8, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_MALOLACTIC');
-
-  /// mixed-culture
+  /// Mixed / process-driven
   static const CultureBaseType CULTURE_BASE_TYPE_MIXED_CULTURE =
       CultureBaseType._(
           9, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_MIXED_CULTURE');
-
-  /// other
-  static const CultureBaseType CULTURE_BASE_TYPE_OTHER =
-      CultureBaseType._(10, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_OTHER');
-
-  /// pedio
-  static const CultureBaseType CULTURE_BASE_TYPE_PEDIO =
-      CultureBaseType._(11, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_PEDIO');
-
-  /// spontaneous
   static const CultureBaseType CULTURE_BASE_TYPE_SPONTANEOUS =
       CultureBaseType._(
           12, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_SPONTANEOUS');
+  static const CultureBaseType CULTURE_BASE_TYPE_SCOBY =
+      CultureBaseType._(17, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_SCOBY');
 
-  /// wine
-  static const CultureBaseType CULTURE_BASE_TYPE_WINE =
-      CultureBaseType._(13, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_WINE');
+  /// Other biological agents
+  static const CultureBaseType CULTURE_BASE_TYPE_MOLD =
+      CultureBaseType._(16, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_MOLD');
+
+  /// Fallback
+  static const CultureBaseType CULTURE_BASE_TYPE_OTHER =
+      CultureBaseType._(10, _omitEnumNames ? '' : 'CULTURE_BASE_TYPE_OTHER');
 
   static const $core.List<CultureBaseType> values = <CultureBaseType>[
     CULTURE_BASE_TYPE_UNSPECIFIED,
     CULTURE_BASE_TYPE_ALE,
-    CULTURE_BASE_TYPE_BACTERIA,
+    CULTURE_BASE_TYPE_LAGER,
+    CULTURE_BASE_TYPE_KVEIK,
     CULTURE_BASE_TYPE_BRETT,
     CULTURE_BASE_TYPE_CHAMPAGNE,
-    CULTURE_BASE_TYPE_KVEIK,
-    CULTURE_BASE_TYPE_LACTO,
-    CULTURE_BASE_TYPE_LAGER,
-    CULTURE_BASE_TYPE_MALOLACTIC,
-    CULTURE_BASE_TYPE_MIXED_CULTURE,
-    CULTURE_BASE_TYPE_OTHER,
-    CULTURE_BASE_TYPE_PEDIO,
-    CULTURE_BASE_TYPE_SPONTANEOUS,
     CULTURE_BASE_TYPE_WINE,
+    CULTURE_BASE_TYPE_NON_SACCHAROMYCES,
+    CULTURE_BASE_TYPE_LACTO,
+    CULTURE_BASE_TYPE_PEDIO,
+    CULTURE_BASE_TYPE_MALOLACTIC,
+    CULTURE_BASE_TYPE_ACETIC,
+    CULTURE_BASE_TYPE_BACTERIA,
+    CULTURE_BASE_TYPE_MIXED_CULTURE,
+    CULTURE_BASE_TYPE_SPONTANEOUS,
+    CULTURE_BASE_TYPE_SCOBY,
+    CULTURE_BASE_TYPE_MOLD,
+    CULTURE_BASE_TYPE_OTHER,
   ];
 
   static final $core.List<CultureBaseType?> _byValue =
-      $pb.ProtobufEnum.$_initByValueList(values, 13);
+      $pb.ProtobufEnum.$_initByValueList(values, 17);
   static CultureBaseType? valueOf($core.int value) =>
       value < 0 || value >= _byValue.length ? null : _byValue[value];
 

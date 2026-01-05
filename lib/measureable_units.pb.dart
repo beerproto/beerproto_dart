@@ -2144,6 +2144,149 @@ class PressureType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+class EnzymeActivityType extends $pb.GeneratedMessage {
+  factory EnzymeActivityType({
+    $core.double? value,
+    EnzymeActivityUnit? unit,
+  }) {
+    final result = create();
+    if (value != null) result.value = value;
+    if (unit != null) result.unit = unit;
+    return result;
+  }
+
+  EnzymeActivityType._();
+
+  factory EnzymeActivityType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EnzymeActivityType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EnzymeActivityType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: create)
+    ..aD(1, _omitFieldNames ? '' : 'value')
+    ..aE<EnzymeActivityUnit>(2, _omitFieldNames ? '' : 'unit',
+        enumValues: EnzymeActivityUnit.values)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EnzymeActivityType clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EnzymeActivityType copyWith(void Function(EnzymeActivityType) updates) =>
+      super.copyWith((message) => updates(message as EnzymeActivityType))
+          as EnzymeActivityType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static EnzymeActivityType create() => EnzymeActivityType._();
+  @$core.override
+  EnzymeActivityType createEmptyInstance() => create();
+  static $pb.PbList<EnzymeActivityType> createRepeated() =>
+      $pb.PbList<EnzymeActivityType>();
+  @$core.pragma('dart2js:noInline')
+  static EnzymeActivityType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EnzymeActivityType>(create);
+  static EnzymeActivityType? _defaultInstance;
+
+  /// Numeric activity value as reported by the lab
+  @$pb.TagNumber(1)
+  $core.double get value => $_getN(0);
+  @$pb.TagNumber(1)
+  set value($core.double value) => $_setDouble(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => $_clearField(1);
+
+  /// Unit of enzyme activity
+  @$pb.TagNumber(2)
+  EnzymeActivityUnit get unit => $_getN(1);
+  @$pb.TagNumber(2)
+  set unit(EnzymeActivityUnit value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUnit() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUnit() => $_clearField(2);
+}
+
+class EnzymeActivity extends $pb.GeneratedMessage {
+  factory EnzymeActivity({
+    EnzymeType? kind,
+    EnzymeActivityType? activity,
+  }) {
+    final result = create();
+    if (kind != null) result.kind = kind;
+    if (activity != null) result.activity = activity;
+    return result;
+  }
+
+  EnzymeActivity._();
+
+  factory EnzymeActivity.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory EnzymeActivity.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EnzymeActivity',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: create)
+    ..aE<EnzymeType>(1, _omitFieldNames ? '' : 'kind',
+        enumValues: EnzymeType.values)
+    ..aOM<EnzymeActivityType>(2, _omitFieldNames ? '' : 'activity',
+        subBuilder: EnzymeActivityType.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EnzymeActivity clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  EnzymeActivity copyWith(void Function(EnzymeActivity) updates) =>
+      super.copyWith((message) => updates(message as EnzymeActivity))
+          as EnzymeActivity;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static EnzymeActivity create() => EnzymeActivity._();
+  @$core.override
+  EnzymeActivity createEmptyInstance() => create();
+  static $pb.PbList<EnzymeActivity> createRepeated() =>
+      $pb.PbList<EnzymeActivity>();
+  @$core.pragma('dart2js:noInline')
+  static EnzymeActivity getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EnzymeActivity>(create);
+  static EnzymeActivity? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  EnzymeType get kind => $_getN(0);
+  @$pb.TagNumber(1)
+  set kind(EnzymeType value) => $_setField(1, value);
+  @$pb.TagNumber(1)
+  $core.bool hasKind() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKind() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  EnzymeActivityType get activity => $_getN(1);
+  @$pb.TagNumber(2)
+  set activity(EnzymeActivityType value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasActivity() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearActivity() => $_clearField(2);
+  @$pb.TagNumber(2)
+  EnzymeActivityType ensureActivity() => $_ensure(1);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

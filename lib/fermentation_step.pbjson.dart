@@ -87,6 +87,14 @@ const FermentationStepType$json = {
       '6': '.beerproto.v1.PercentType',
       '10': 'vesselPressure'
     },
+    {
+      '1': 'top_up',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '10': 'topUp'
+    },
   ],
 };
 
@@ -104,4 +112,4 @@ final $typed_data.Uint8List fermentationStepTypeDescriptor = $convert.base64Deco
     'R1cmVUeXBlUhBzdGFydFRlbXBlcmF0dXJlEjAKBmVuZF9waBgLIAEoCzIZLmJlZXJwcm90by52'
     'MS5BY2lkaXR5VHlwZVIFZW5kUGgSFgoGdmVzc2VsGAwgASgJUgZ2ZXNzZWwSQgoPdmVzc2VsX3'
     'ByZXNzdXJlGA0gASgLMhkuYmVlcnByb3RvLnYxLlBlcmNlbnRUeXBlUg52ZXNzZWxQcmVzc3Vy'
-    'ZQ==');
+    'ZRIvCgZ0b3BfdXAYDiABKAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVHlwZVIFdG9wVXA=');

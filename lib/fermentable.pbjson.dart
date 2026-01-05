@@ -149,7 +149,14 @@ const FermentableType$json = {
       '6': '.beerproto.v1.PercentType',
       '10': 'protein'
     },
-    {'1': 'alpha_amylase', '3': 11, '4': 1, '5': 1, '10': 'alphaAmylase'},
+    {
+      '1': 'alpha_amylase',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.EnzymeActivityType',
+      '10': 'alphaAmylase'
+    },
     {
       '1': 'diastatic_power',
       '3': 14,
@@ -288,25 +295,25 @@ final $typed_data.Uint8List fermentableTypeDescriptor = $convert.base64Decode(
     'JsZUJhc2VCBrpIA8gBAVIEYmFzZRIbCgJpZBgCIAEoCUILukgIyAEBcgOwAQFSAmlkEjsKDG1h'
     'eF9pbl9iYXRjaBgDIAEoCzIZLmJlZXJwcm90by52MS5QZXJjZW50VHlwZVIKbWF4SW5CYXRjaB'
     'IlCg5yZWNvbW1lbmRfbWFzaBgEIAEoCFINcmVjb21tZW5kTWFzaBIzCgdwcm90ZWluGAUgASgL'
-    'MhkuYmVlcnByb3RvLnYxLlBlcmNlbnRUeXBlUgdwcm90ZWluEiMKDWFscGhhX2FteWxhc2UYCy'
-    'ABKAFSDGFscGhhQW15bGFzZRJJCg9kaWFzdGF0aWNfcG93ZXIYDiABKAsyIC5iZWVycHJvdG8u'
-    'djEuRGlhc3RhdGljUG93ZXJUeXBlUg5kaWFzdGF0aWNQb3dlchI1Cghtb2lzdHVyZRgPIAEoCz'
-    'IZLmJlZXJwcm90by52MS5QZXJjZW50VHlwZVIIbW9pc3R1cmUSRAoJaW52ZW50b3J5GBEgASgL'
-    'MiYuYmVlcnByb3RvLnYxLkZlcm1lbnRhYmxlSW52ZW50b3J5VHlwZVIJaW52ZW50b3J5Ej4KDW'
-    'tvbGJhY2hfaW5kZXgYEiABKAsyGS5iZWVycHJvdG8udjEuUGVyY2VudFR5cGVSDGtvbGJhY2hJ'
-    'bmRleBIxCgZnbGFzc3kYEyABKAsyGS5iZWVycHJvdG8udjEuUGVyY2VudFR5cGVSBmdsYXNzeR'
-    'IvCgVwbHVtcBgUIAEoCzIZLmJlZXJwcm90by52MS5QZXJjZW50VHlwZVIFcGx1bXASLQoEaGFs'
-    'ZhgVIAEoCzIZLmJlZXJwcm90by52MS5QZXJjZW50VHlwZVIEaGFsZhIvCgVtZWFseRgWIAEoCz'
-    'IZLmJlZXJwcm90by52MS5QZXJjZW50VHlwZVIFbWVhbHkSLQoEdGhydRgXIAEoCzIZLmJlZXJw'
-    'cm90by52MS5QZXJjZW50VHlwZVIEdGhydRI5CgpmcmlhYmlsaXR5GBggASgLMhkuYmVlcnByb3'
-    'RvLnYxLlBlcmNlbnRUeXBlUgpmcmlhYmlsaXR5Ei4KBWRpX3BoGBkgASgLMhkuYmVlcnByb3Rv'
-    'LnYxLkFjaWRpdHlUeXBlUgRkaVBoEjkKCXZpc2Nvc2l0eRgaIAEoCzIbLmJlZXJwcm90by52MS'
-    '5WaXNjb3NpdHlUeXBlUgl2aXNjb3NpdHkSNAoFZG1zX3AYGyABKAsyHy5iZWVycHJvdG8udjEu'
-    'Q29uY2VudHJhdGlvblR5cGVSBGRtc1ASMQoDZmFuGBwgASgLMh8uYmVlcnByb3RvLnYxLkNvbm'
-    'NlbnRyYXRpb25UeXBlUgNmYW4SQQoOZmVybWVudGFiaWxpdHkYHSABKAsyGS5iZWVycHJvdG8u'
-    'djEuUGVyY2VudFR5cGVSDmZlcm1lbnRhYmlsaXR5EkAKC2JldGFfZ2x1Y2FuGB4gASgLMh8uYm'
-    'VlcnByb3RvLnYxLkNvbmNlbnRyYXRpb25UeXBlUgpiZXRhR2x1Y2FuEhQKBW5vdGVzGB8gASgJ'
-    'UgVub3Rlcw==');
+    'MhkuYmVlcnByb3RvLnYxLlBlcmNlbnRUeXBlUgdwcm90ZWluEkUKDWFscGhhX2FteWxhc2UYCy'
+    'ABKAsyIC5iZWVycHJvdG8udjEuRW56eW1lQWN0aXZpdHlUeXBlUgxhbHBoYUFteWxhc2USSQoP'
+    'ZGlhc3RhdGljX3Bvd2VyGA4gASgLMiAuYmVlcnByb3RvLnYxLkRpYXN0YXRpY1Bvd2VyVHlwZV'
+    'IOZGlhc3RhdGljUG93ZXISNQoIbW9pc3R1cmUYDyABKAsyGS5iZWVycHJvdG8udjEuUGVyY2Vu'
+    'dFR5cGVSCG1vaXN0dXJlEkQKCWludmVudG9yeRgRIAEoCzImLmJlZXJwcm90by52MS5GZXJtZW'
+    '50YWJsZUludmVudG9yeVR5cGVSCWludmVudG9yeRI+Cg1rb2xiYWNoX2luZGV4GBIgASgLMhku'
+    'YmVlcnByb3RvLnYxLlBlcmNlbnRUeXBlUgxrb2xiYWNoSW5kZXgSMQoGZ2xhc3N5GBMgASgLMh'
+    'kuYmVlcnByb3RvLnYxLlBlcmNlbnRUeXBlUgZnbGFzc3kSLwoFcGx1bXAYFCABKAsyGS5iZWVy'
+    'cHJvdG8udjEuUGVyY2VudFR5cGVSBXBsdW1wEi0KBGhhbGYYFSABKAsyGS5iZWVycHJvdG8udj'
+    'EuUGVyY2VudFR5cGVSBGhhbGYSLwoFbWVhbHkYFiABKAsyGS5iZWVycHJvdG8udjEuUGVyY2Vu'
+    'dFR5cGVSBW1lYWx5Ei0KBHRocnUYFyABKAsyGS5iZWVycHJvdG8udjEuUGVyY2VudFR5cGVSBH'
+    'RocnUSOQoKZnJpYWJpbGl0eRgYIAEoCzIZLmJlZXJwcm90by52MS5QZXJjZW50VHlwZVIKZnJp'
+    'YWJpbGl0eRIuCgVkaV9waBgZIAEoCzIZLmJlZXJwcm90by52MS5BY2lkaXR5VHlwZVIEZGlQaB'
+    'I5Cgl2aXNjb3NpdHkYGiABKAsyGy5iZWVycHJvdG8udjEuVmlzY29zaXR5VHlwZVIJdmlzY29z'
+    'aXR5EjQKBWRtc19wGBsgASgLMh8uYmVlcnByb3RvLnYxLkNvbmNlbnRyYXRpb25UeXBlUgRkbX'
+    'NQEjEKA2ZhbhgcIAEoCzIfLmJlZXJwcm90by52MS5Db25jZW50cmF0aW9uVHlwZVIDZmFuEkEK'
+    'DmZlcm1lbnRhYmlsaXR5GB0gASgLMhkuYmVlcnByb3RvLnYxLlBlcmNlbnRUeXBlUg5mZXJtZW'
+    '50YWJpbGl0eRJACgtiZXRhX2dsdWNhbhgeIAEoCzIfLmJlZXJwcm90by52MS5Db25jZW50cmF0'
+    'aW9uVHlwZVIKYmV0YUdsdWNhbhIUCgVub3RlcxgfIAEoCVIFbm90ZXM=');
 
 @$core.Deprecated('Use fermentableAdditionTypeDescriptor instead')
 const FermentableAdditionType$json = {
