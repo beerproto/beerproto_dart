@@ -20,24 +20,10 @@ const PackagingProcedureType$json = {
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
     {'1': 'name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'name'},
-    {
-      '1': 'packaged_volume',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '10': 'packagedVolume'
-    },
+    {'1': 'packaged_volume', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'packagedVolume'},
     {'1': 'description', '3': 4, '4': 1, '5': 9, '10': 'description'},
     {'1': 'notes', '3': 5, '4': 1, '5': 9, '10': 'notes'},
-    {
-      '1': 'packaging_vessels',
-      '3': 6,
-      '4': 3,
-      '5': 11,
-      '6': '.beerproto.v1.PackagingVesselType',
-      '10': 'packagingVessels'
-    },
+    {'1': 'packaging_vessels', '3': 6, '4': 3, '5': 11, '6': '.beerproto.v1.PackagingVesselType', '10': 'packagingVessels'},
   ],
 };
 
@@ -49,3 +35,4 @@ final $typed_data.Uint8List packagingProcedureTypeDescriptor = $convert.base64De
     '4YBCABKAlSC2Rlc2NyaXB0aW9uEhQKBW5vdGVzGAUgASgJUgVub3RlcxJOChFwYWNrYWdpbmdf'
     'dmVzc2VscxgGIAMoCzIhLmJlZXJwcm90by52MS5QYWNrYWdpbmdWZXNzZWxUeXBlUhBwYWNrYW'
     'dpbmdWZXNzZWxz');
+

@@ -62,32 +62,11 @@ const PackagingVesselBase$json = {
   '1': 'PackagingVesselBase',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
-    {
-      '1': 'type',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.PackagingVesselUnit',
-      '10': 'type'
-    },
-    {
-      '1': 'vessel_volume',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '10': 'vesselVolume'
-    },
+    {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.PackagingVesselUnit', '10': 'type'},
+    {'1': 'vessel_volume', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'vesselVolume'},
     {'1': 'vessel_quantity', '3': 4, '4': 1, '5': 5, '10': 'vesselQuantity'},
     {'1': 'description', '3': 5, '4': 1, '5': 9, '10': 'description'},
-    {
-      '1': 'graphics',
-      '3': 6,
-      '4': 3,
-      '5': 11,
-      '6': '.beerproto.v1.PackagingGraphicType',
-      '10': 'graphics'
-    },
+    {'1': 'graphics', '3': 6, '4': 3, '5': 11, '6': '.beerproto.v1.PackagingGraphicType', '10': 'graphics'},
   ],
 };
 
@@ -104,89 +83,19 @@ final $typed_data.Uint8List packagingVesselBaseDescriptor = $convert.base64Decod
 const PackagingVesselType$json = {
   '1': 'PackagingVesselType',
   '2': [
-    {
-      '1': 'base',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PackagingVesselBase',
-      '10': 'base'
-    },
+    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.PackagingVesselBase', '10': 'base'},
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
     {'1': 'package_date', '3': 3, '4': 1, '5': 9, '10': 'packageDate'},
-    {
-      '1': 'step_time',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TimeType',
-      '10': 'stepTime'
-    },
-    {
-      '1': 'start_gravity',
-      '3': 5,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.GravityType',
-      '10': 'startGravity'
-    },
-    {
-      '1': 'end_gravity',
-      '3': 6,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.GravityType',
-      '10': 'endGravity'
-    },
-    {
-      '1': 'start_ph',
-      '3': 7,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.AcidityType',
-      '10': 'startPh'
-    },
-    {
-      '1': 'end_ph',
-      '3': 8,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.AcidityType',
-      '10': 'endPh'
-    },
-    {
-      '1': 'start_temperature',
-      '3': 9,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TemperatureType',
-      '10': 'startTemperature'
-    },
-    {
-      '1': 'end_temperature',
-      '3': 10,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TemperatureType',
-      '10': 'endTemperature'
-    },
-    {
-      '1': 'target_carbonation',
-      '3': 11,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.CarbonationType',
-      '10': 'targetCarbonation'
-    },
+    {'1': 'step_time', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '10': 'stepTime'},
+    {'1': 'start_gravity', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'startGravity'},
+    {'1': 'end_gravity', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'endGravity'},
+    {'1': 'start_ph', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'startPh'},
+    {'1': 'end_ph', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'endPh'},
+    {'1': 'start_temperature', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'startTemperature'},
+    {'1': 'end_temperature', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'endTemperature'},
+    {'1': 'target_carbonation', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.CarbonationType', '10': 'targetCarbonation'},
     {'1': 'notes', '3': 12, '4': 1, '5': 9, '10': 'notes'},
-    {
-      '1': 'carbonation_step',
-      '3': 13,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.CarbonationStep',
-      '10': 'carbonationStep'
-    },
+    {'1': 'carbonation_step', '3': 13, '4': 1, '5': 14, '6': '.beerproto.v1.CarbonationStep', '10': 'carbonationStep'},
   ],
 };
 
@@ -206,3 +115,4 @@ final $typed_data.Uint8List packagingVesselTypeDescriptor = $convert.base64Decod
     'YxLkNhcmJvbmF0aW9uVHlwZVIRdGFyZ2V0Q2FyYm9uYXRpb24SFAoFbm90ZXMYDCABKAlSBW5v'
     'dGVzEkgKEGNhcmJvbmF0aW9uX3N0ZXAYDSABKA4yHS5iZWVycHJvdG8udjEuQ2FyYm9uYXRpb2'
     '5TdGVwUg9jYXJib25hdGlvblN0ZXA=');
+

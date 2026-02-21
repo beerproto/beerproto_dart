@@ -36,48 +36,13 @@ final $typed_data.Uint8List useTypeDescriptor = $convert.base64Decode(
 const TimingType$json = {
   '1': 'TimingType',
   '2': [
-    {
-      '1': 'time',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TimeType',
-      '10': 'time'
-    },
-    {
-      '1': 'duration',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TimeType',
-      '10': 'duration'
-    },
+    {'1': 'time', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '10': 'time'},
+    {'1': 'duration', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '10': 'duration'},
     {'1': 'continuous', '3': 3, '4': 1, '5': 8, '10': 'continuous'},
-    {
-      '1': 'specific_gravity',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.GravityType',
-      '10': 'specificGravity'
-    },
-    {
-      '1': 'ph',
-      '3': 5,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.AcidityType',
-      '10': 'ph'
-    },
+    {'1': 'specific_gravity', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'specificGravity'},
+    {'1': 'ph', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'ph'},
     {'1': 'step', '3': 6, '4': 1, '5': 5, '10': 'step'},
-    {
-      '1': 'use',
-      '3': 7,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.UseType',
-      '10': 'use'
-    },
+    {'1': 'use', '3': 7, '4': 1, '5': 14, '6': '.beerproto.v1.UseType', '10': 'use'},
   ],
 };
 
@@ -89,3 +54,4 @@ final $typed_data.Uint8List timingTypeDescriptor = $convert.base64Decode(
     'IZLmJlZXJwcm90by52MS5HcmF2aXR5VHlwZVIPc3BlY2lmaWNHcmF2aXR5EikKAnBoGAUgASgL'
     'MhkuYmVlcnByb3RvLnYxLkFjaWRpdHlUeXBlUgJwaBISCgRzdGVwGAYgASgFUgRzdGVwEicKA3'
     'VzZRgHIAEoDjIVLmJlZXJwcm90by52MS5Vc2VUeXBlUgN1c2U=');
+

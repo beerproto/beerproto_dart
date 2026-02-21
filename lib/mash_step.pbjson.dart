@@ -42,91 +42,18 @@ const MashStepType$json = {
   '1': 'MashStepType',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {
-      '1': 'step_time',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TimeType',
-      '8': {},
-      '10': 'stepTime'
-    },
-    {
-      '1': 'ramp_time',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TimeType',
-      '10': 'rampTime'
-    },
-    {
-      '1': 'end_temperature',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TemperatureType',
-      '10': 'endTemperature'
-    },
+    {'1': 'step_time', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '8': {}, '10': 'stepTime'},
+    {'1': 'ramp_time', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '10': 'rampTime'},
+    {'1': 'end_temperature', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'endTemperature'},
     {'1': 'description', '3': 5, '4': 1, '5': 9, '10': 'description'},
-    {
-      '1': 'infuse_temperature',
-      '3': 6,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TemperatureType',
-      '10': 'infuseTemperature'
-    },
-    {
-      '1': 'start_ph',
-      '3': 7,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.AcidityType',
-      '10': 'startPh'
-    },
-    {
-      '1': 'end_ph',
-      '3': 8,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.AcidityType',
-      '10': 'endPh'
-    },
+    {'1': 'infuse_temperature', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'infuseTemperature'},
+    {'1': 'start_ph', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'startPh'},
+    {'1': 'end_ph', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'endPh'},
     {'1': 'name', '3': 9, '4': 1, '5': 9, '8': {}, '10': 'name'},
-    {
-      '1': 'type',
-      '3': 10,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.MashStepUnit',
-      '8': {},
-      '10': 'type'
-    },
-    {
-      '1': 'amount',
-      '3': 11,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '10': 'amount'
-    },
-    {
-      '1': 'step_temperature',
-      '3': 12,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TemperatureType',
-      '8': {},
-      '10': 'stepTemperature'
-    },
-    {
-      '1': 'water_grain_ratio',
-      '3': 13,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.SpecificVolumeType',
-      '10': 'waterGrainRatio'
-    },
+    {'1': 'type', '3': 10, '4': 1, '5': 14, '6': '.beerproto.v1.MashStepUnit', '8': {}, '10': 'type'},
+    {'1': 'amount', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'amount'},
+    {'1': 'step_temperature', '3': 12, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '8': {}, '10': 'stepTemperature'},
+    {'1': 'water_grain_ratio', '3': 13, '4': 1, '5': 11, '6': '.beerproto.v1.SpecificVolumeType', '10': 'waterGrainRatio'},
   ],
 };
 
@@ -146,3 +73,4 @@ final $typed_data.Uint8List mashStepTypeDescriptor = $convert.base64Decode(
     'ABKAsyHS5iZWVycHJvdG8udjEuVGVtcGVyYXR1cmVUeXBlQga6SAPIAQFSD3N0ZXBUZW1wZXJh'
     'dHVyZRJMChF3YXRlcl9ncmFpbl9yYXRpbxgNIAEoCzIgLmJlZXJwcm90by52MS5TcGVjaWZpY1'
     'ZvbHVtZVR5cGVSD3dhdGVyR3JhaW5SYXRpbw==');
+

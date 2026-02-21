@@ -18,41 +18,16 @@ import 'dart:typed_data' as $typed_data;
 const PackagingGraphicType$json = {
   '1': 'PackagingGraphicType',
   '2': [
-    {
-      '1': 'position',
-      '3': 1,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.PackagingGraphicType.PositionUnit',
-      '10': 'position'
-    },
-    {
-      '1': 'type',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.PackagingGraphicType.GraphicType',
-      '10': 'type'
-    },
+    {'1': 'position', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.PackagingGraphicType.PositionUnit', '10': 'position'},
+    {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.PackagingGraphicType.GraphicType', '10': 'type'},
     {'1': 'base64_data', '3': 3, '4': 1, '5': 9, '10': 'base64Data'},
     {'1': 'urls', '3': 4, '4': 3, '5': 9, '10': 'urls'},
     {'1': 'dpi', '3': 5, '4': 1, '5': 5, '10': 'dpi'},
     {'1': 'width', '3': 6, '4': 1, '5': 3, '10': 'width'},
     {'1': 'height', '3': 7, '4': 1, '5': 3, '10': 'height'},
-    {
-      '1': 'units',
-      '3': 8,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.PackagingGraphicType.UnitsType',
-      '10': 'units'
-    },
+    {'1': 'units', '3': 8, '4': 1, '5': 14, '6': '.beerproto.v1.PackagingGraphicType.UnitsType', '10': 'units'},
   ],
-  '4': [
-    PackagingGraphicType_PositionUnit$json,
-    PackagingGraphicType_GraphicType$json,
-    PackagingGraphicType_UnitsType$json
-  ],
+  '4': [PackagingGraphicType_PositionUnit$json, PackagingGraphicType_GraphicType$json, PackagingGraphicType_UnitsType$json],
 };
 
 @$core.Deprecated('Use packagingGraphicTypeDescriptor instead')
@@ -121,3 +96,4 @@ final $typed_data.Uint8List packagingGraphicTypeDescriptor = $convert.base64Deco
     'R1JBUEhJQ19UWVBFX0pQRxAKEhQKEEdSQVBISUNfVFlQRV9HSUYQCyJNCglVbml0c1R5cGUSGg'
     'oWVU5JVFNfVFlQRV9VTlNQRUNJRklFRBAAEhEKDVVOSVRTX1RZUEVfTU0QARIRCg1VTklUU19U'
     'WVBFX0lOEAI=');
+

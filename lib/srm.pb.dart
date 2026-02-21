@@ -35,28 +35,21 @@ class Color extends $pb.GeneratedMessage {
 
   Color._();
 
-  factory Color.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory Color.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory Color.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory Color.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'Color',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aI(1, _omitFieldNames ? '' : 'a', fieldType: $pb.PbFieldType.OU3)
-    ..aI(2, _omitFieldNames ? '' : 'r', fieldType: $pb.PbFieldType.OU3)
-    ..aI(3, _omitFieldNames ? '' : 'g', fieldType: $pb.PbFieldType.OU3)
-    ..aI(4, _omitFieldNames ? '' : 'b', fieldType: $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Color', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'a', $pb.PbFieldType.OU3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'r', $pb.PbFieldType.OU3)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'g', $pb.PbFieldType.OU3)
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'b', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Color clone() => deepCopy();
+  Color clone() => Color()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Color copyWith(void Function(Color) updates) =>
-      super.copyWith((message) => updates(message as Color)) as Color;
+  Color copyWith(void Function(Color) updates) => super.copyWith((message) => updates(message as Color)) as Color;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -67,8 +60,7 @@ class Color extends $pb.GeneratedMessage {
   Color createEmptyInstance() => create();
   static $pb.PbList<Color> createRepeated() => $pb.PbList<Color>();
   @$core.pragma('dart2js:noInline')
-  static Color getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Color>(create);
+  static Color getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Color>(create);
   static Color? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -109,19 +101,12 @@ class Color extends $pb.GeneratedMessage {
 }
 
 class Srm {
-  static final color = $pb.Extension<Color>(
-      _omitMessageNames ? '' : 'google.protobuf.EnumValueOptions',
-      _omitFieldNames ? '' : 'color',
-      123456783,
-      $pb.PbFieldType.OM,
-      defaultOrMaker: Color.getDefault,
-      subBuilder: Color.create);
+  static final color = $pb.Extension<Color>(_omitMessageNames ? '' : 'google.protobuf.EnumValueOptions', _omitFieldNames ? '' : 'color', 123456783, $pb.PbFieldType.OM, defaultOrMaker: Color.getDefault, subBuilder: Color.create);
   static void registerAllExtensions($pb.ExtensionRegistry registry) {
     registry.add(color);
   }
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

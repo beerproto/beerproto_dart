@@ -18,110 +18,20 @@ import 'dart:typed_data' as $typed_data;
 const WaterBase$json = {
   '1': 'WaterBase',
   '2': [
-    {
-      '1': 'calcium',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '8': {},
-      '10': 'calcium'
-    },
-    {
-      '1': 'nitrite',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '10': 'nitrite'
-    },
-    {
-      '1': 'chloride',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '8': {},
-      '10': 'chloride'
-    },
+    {'1': 'calcium', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '8': {}, '10': 'calcium'},
+    {'1': 'nitrite', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '10': 'nitrite'},
+    {'1': 'chloride', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '8': {}, '10': 'chloride'},
     {'1': 'name', '3': 5, '4': 1, '5': 9, '8': {}, '10': 'name'},
-    {
-      '1': 'potassium',
-      '3': 6,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '10': 'potassium'
-    },
-    {
-      '1': 'carbonate',
-      '3': 7,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '10': 'carbonate'
-    },
-    {
-      '1': 'iron',
-      '3': 8,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '10': 'iron'
-    },
-    {
-      '1': 'flouride',
-      '3': 9,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '10': 'flouride'
-    },
-    {
-      '1': 'sulfate',
-      '3': 10,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '8': {},
-      '10': 'sulfate'
-    },
-    {
-      '1': 'magnesium',
-      '3': 11,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '8': {},
-      '10': 'magnesium'
-    },
+    {'1': 'potassium', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '10': 'potassium'},
+    {'1': 'carbonate', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '10': 'carbonate'},
+    {'1': 'iron', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '10': 'iron'},
+    {'1': 'flouride', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '10': 'flouride'},
+    {'1': 'sulfate', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '8': {}, '10': 'sulfate'},
+    {'1': 'magnesium', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '8': {}, '10': 'magnesium'},
     {'1': 'producer', '3': 12, '4': 1, '5': 9, '10': 'producer'},
-    {
-      '1': 'bicarbonate',
-      '3': 13,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '8': {},
-      '10': 'bicarbonate'
-    },
-    {
-      '1': 'nitrate',
-      '3': 14,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '10': 'nitrate'
-    },
-    {
-      '1': 'sodium',
-      '3': 15,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '8': {},
-      '10': 'sodium'
-    },
+    {'1': 'bicarbonate', '3': 13, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '8': {}, '10': 'bicarbonate'},
+    {'1': 'nitrate', '3': 14, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '10': 'nitrate'},
+    {'1': 'sodium', '3': 15, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '8': {}, '10': 'sodium'},
   ],
 };
 
@@ -148,25 +58,10 @@ final $typed_data.Uint8List waterBaseDescriptor = $convert.base64Decode(
 const WaterType$json = {
   '1': 'WaterType',
   '2': [
-    {
-      '1': 'base',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.WaterBase',
-      '8': {},
-      '10': 'base'
-    },
+    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.WaterBase', '8': {}, '10': 'base'},
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
     {'1': 'notes', '3': 3, '4': 1, '5': 9, '10': 'notes'},
-    {
-      '1': 'ph',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.AcidityType',
-      '10': 'ph'
-    },
+    {'1': 'ph', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'ph'},
   ],
 };
 
@@ -180,33 +75,10 @@ final $typed_data.Uint8List waterTypeDescriptor = $convert.base64Decode(
 const WaterAdditionType$json = {
   '1': 'WaterAdditionType',
   '2': [
-    {
-      '1': 'base',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.WaterBase',
-      '8': {},
-      '10': 'base'
-    },
+    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.WaterBase', '8': {}, '10': 'base'},
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {
-      '1': 'amount',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '10': 'amount'
-    },
-    {
-      '1': 'timing',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TimingType',
-      '8': {},
-      '10': 'timing'
-    },
+    {'1': 'amount', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'amount'},
+    {'1': 'timing', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.TimingType', '8': {}, '10': 'timing'},
   ],
 };
 
@@ -216,3 +88,4 @@ final $typed_data.Uint8List waterAdditionTypeDescriptor = $convert.base64Decode(
     'FzZUIGukgDyAEBUgRiYXNlEhsKAmlkGAIgASgJQgu6SAjIAQFyA7ABAVICaWQSMAoGYW1vdW50'
     'GAMgASgLMhguYmVlcnByb3RvLnYxLlZvbHVtZVR5cGVSBmFtb3VudBI4CgZ0aW1pbmcYBCABKA'
     'syGC5iZWVycHJvdG8udjEuVGltaW5nVHlwZUIGukgDyAEBUgZ0aW1pbmc=');
+

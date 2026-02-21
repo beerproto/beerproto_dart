@@ -85,75 +85,48 @@ class RecipeType extends $pb.GeneratedMessage {
     if (batchSize != null) result.batchSize = batchSize;
     if (notes != null) result.notes = notes;
     if (alcoholByVolume != null) result.alcoholByVolume = alcoholByVolume;
-    if (apparentAttenuation != null)
-      result.apparentAttenuation = apparentAttenuation;
+    if (apparentAttenuation != null) result.apparentAttenuation = apparentAttenuation;
     return result;
   }
 
   RecipeType._();
 
-  factory RecipeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory RecipeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory RecipeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory RecipeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RecipeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RecipeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOM<EfficiencyType>(2, _omitFieldNames ? '' : 'efficiency',
-        subBuilder: EfficiencyType.create)
-    ..aOM<$0.RecipeStyleType>(3, _omitFieldNames ? '' : 'style',
-        subBuilder: $0.RecipeStyleType.create)
-    ..aOM<$1.IBUEstimateType>(4, _omitFieldNames ? '' : 'ibuEstimate',
-        subBuilder: $1.IBUEstimateType.create)
-    ..aOM<$2.ColorType>(5, _omitFieldNames ? '' : 'colorEstimate',
-        subBuilder: $2.ColorType.create)
-    ..aOM<$2.AcidityType>(6, _omitFieldNames ? '' : 'beerPh',
-        subBuilder: $2.AcidityType.create)
+    ..aOM<EfficiencyType>(2, _omitFieldNames ? '' : 'efficiency', subBuilder: EfficiencyType.create)
+    ..aOM<$0.RecipeStyleType>(3, _omitFieldNames ? '' : 'style', subBuilder: $0.RecipeStyleType.create)
+    ..aOM<$1.IBUEstimateType>(4, _omitFieldNames ? '' : 'ibuEstimate', subBuilder: $1.IBUEstimateType.create)
+    ..aOM<$2.ColorType>(5, _omitFieldNames ? '' : 'colorEstimate', subBuilder: $2.ColorType.create)
+    ..aOM<$2.AcidityType>(6, _omitFieldNames ? '' : 'beerPh', subBuilder: $2.AcidityType.create)
     ..aOS(7, _omitFieldNames ? '' : 'name')
-    ..aE<RecipeUnit>(8, _omitFieldNames ? '' : 'type',
-        enumValues: RecipeUnit.values)
+    ..e<RecipeUnit>(8, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: RecipeUnit.RECIPE_UNIT_UNSPECIFIED, valueOf: RecipeUnit.valueOf, enumValues: RecipeUnit.values)
     ..aOS(9, _omitFieldNames ? '' : 'coauthor')
-    ..aOM<$2.GravityType>(10, _omitFieldNames ? '' : 'originalGravity',
-        subBuilder: $2.GravityType.create)
-    ..aOM<$2.GravityType>(11, _omitFieldNames ? '' : 'finalGravity',
-        subBuilder: $2.GravityType.create)
-    ..aOM<$2.CarbonationType>(12, _omitFieldNames ? '' : 'carbonation',
-        subBuilder: $2.CarbonationType.create)
-    ..aOM<$3.FermentationProcedureType>(
-        13, _omitFieldNames ? '' : 'fermentation',
-        subBuilder: $3.FermentationProcedureType.create)
+    ..aOM<$2.GravityType>(10, _omitFieldNames ? '' : 'originalGravity', subBuilder: $2.GravityType.create)
+    ..aOM<$2.GravityType>(11, _omitFieldNames ? '' : 'finalGravity', subBuilder: $2.GravityType.create)
+    ..aOM<$2.CarbonationType>(12, _omitFieldNames ? '' : 'carbonation', subBuilder: $2.CarbonationType.create)
+    ..aOM<$3.FermentationProcedureType>(13, _omitFieldNames ? '' : 'fermentation', subBuilder: $3.FermentationProcedureType.create)
     ..aOS(14, _omitFieldNames ? '' : 'author')
-    ..aOM<IngredientsType>(15, _omitFieldNames ? '' : 'ingredients',
-        subBuilder: IngredientsType.create)
-    ..aOM<$4.MashProcedureType>(16, _omitFieldNames ? '' : 'mash',
-        subBuilder: $4.MashProcedureType.create)
-    ..aOM<$5.PackagingProcedureType>(17, _omitFieldNames ? '' : 'packaging',
-        subBuilder: $5.PackagingProcedureType.create)
-    ..aOM<$6.BoilProcedureType>(18, _omitFieldNames ? '' : 'boil',
-        subBuilder: $6.BoilProcedureType.create)
-    ..aOM<TasteType>(19, _omitFieldNames ? '' : 'taste',
-        subBuilder: TasteType.create)
-    ..aD(20, _omitFieldNames ? '' : 'caloriesPerPint')
+    ..aOM<IngredientsType>(15, _omitFieldNames ? '' : 'ingredients', subBuilder: IngredientsType.create)
+    ..aOM<$4.MashProcedureType>(16, _omitFieldNames ? '' : 'mash', subBuilder: $4.MashProcedureType.create)
+    ..aOM<$5.PackagingProcedureType>(17, _omitFieldNames ? '' : 'packaging', subBuilder: $5.PackagingProcedureType.create)
+    ..aOM<$6.BoilProcedureType>(18, _omitFieldNames ? '' : 'boil', subBuilder: $6.BoilProcedureType.create)
+    ..aOM<TasteType>(19, _omitFieldNames ? '' : 'taste', subBuilder: TasteType.create)
+    ..a<$core.double>(20, _omitFieldNames ? '' : 'caloriesPerPint', $pb.PbFieldType.OD)
     ..aOS(21, _omitFieldNames ? '' : 'created')
-    ..aOM<$2.VolumeType>(22, _omitFieldNames ? '' : 'batchSize',
-        subBuilder: $2.VolumeType.create)
+    ..aOM<$2.VolumeType>(22, _omitFieldNames ? '' : 'batchSize', subBuilder: $2.VolumeType.create)
     ..aOS(23, _omitFieldNames ? '' : 'notes')
-    ..aOM<$2.PercentType>(24, _omitFieldNames ? '' : 'alcoholByVolume',
-        subBuilder: $2.PercentType.create)
-    ..aOM<$2.PercentType>(25, _omitFieldNames ? '' : 'apparentAttenuation',
-        subBuilder: $2.PercentType.create)
-    ..hasRequiredFields = false;
+    ..aOM<$2.PercentType>(24, _omitFieldNames ? '' : 'alcoholByVolume', subBuilder: $2.PercentType.create)
+    ..aOM<$2.PercentType>(25, _omitFieldNames ? '' : 'apparentAttenuation', subBuilder: $2.PercentType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RecipeType clone() => deepCopy();
+  RecipeType clone() => RecipeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RecipeType copyWith(void Function(RecipeType) updates) =>
-      super.copyWith((message) => updates(message as RecipeType)) as RecipeType;
+  RecipeType copyWith(void Function(RecipeType) updates) => super.copyWith((message) => updates(message as RecipeType)) as RecipeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -164,8 +137,7 @@ class RecipeType extends $pb.GeneratedMessage {
   RecipeType createEmptyInstance() => create();
   static $pb.PbList<RecipeType> createRepeated() => $pb.PbList<RecipeType>();
   @$core.pragma('dart2js:noInline')
-  static RecipeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RecipeType>(create);
+  static RecipeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RecipeType>(create);
   static RecipeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -461,33 +433,21 @@ class EfficiencyType extends $pb.GeneratedMessage {
 
   EfficiencyType._();
 
-  factory EfficiencyType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory EfficiencyType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory EfficiencyType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory EfficiencyType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'EfficiencyType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<$2.PercentType>(1, _omitFieldNames ? '' : 'conversion',
-        subBuilder: $2.PercentType.create)
-    ..aOM<$2.PercentType>(2, _omitFieldNames ? '' : 'lauter',
-        subBuilder: $2.PercentType.create)
-    ..aOM<$2.PercentType>(3, _omitFieldNames ? '' : 'mash',
-        subBuilder: $2.PercentType.create)
-    ..aOM<$2.PercentType>(4, _omitFieldNames ? '' : 'brewhouse',
-        subBuilder: $2.PercentType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EfficiencyType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<$2.PercentType>(1, _omitFieldNames ? '' : 'conversion', subBuilder: $2.PercentType.create)
+    ..aOM<$2.PercentType>(2, _omitFieldNames ? '' : 'lauter', subBuilder: $2.PercentType.create)
+    ..aOM<$2.PercentType>(3, _omitFieldNames ? '' : 'mash', subBuilder: $2.PercentType.create)
+    ..aOM<$2.PercentType>(4, _omitFieldNames ? '' : 'brewhouse', subBuilder: $2.PercentType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EfficiencyType clone() => deepCopy();
+  EfficiencyType clone() => EfficiencyType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EfficiencyType copyWith(void Function(EfficiencyType) updates) =>
-      super.copyWith((message) => updates(message as EfficiencyType))
-          as EfficiencyType;
+  EfficiencyType copyWith(void Function(EfficiencyType) updates) => super.copyWith((message) => updates(message as EfficiencyType)) as EfficiencyType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -496,11 +456,9 @@ class EfficiencyType extends $pb.GeneratedMessage {
   static EfficiencyType create() => EfficiencyType._();
   @$core.override
   EfficiencyType createEmptyInstance() => create();
-  static $pb.PbList<EfficiencyType> createRepeated() =>
-      $pb.PbList<EfficiencyType>();
+  static $pb.PbList<EfficiencyType> createRepeated() => $pb.PbList<EfficiencyType>();
   @$core.pragma('dart2js:noInline')
-  static EfficiencyType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<EfficiencyType>(create);
+  static EfficiencyType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EfficiencyType>(create);
   static EfficiencyType? _defaultInstance;
 
   /// The percentage of sugar from the grain yield that is extracted and converted during the mash
@@ -561,50 +519,32 @@ class IngredientsType extends $pb.GeneratedMessage {
     $core.Iterable<$1.HopAdditionType>? hopAdditions,
   }) {
     final result = create();
-    if (miscellaneousAdditions != null)
-      result.miscellaneousAdditions.addAll(miscellaneousAdditions);
-    if (cultureAdditions != null)
-      result.cultureAdditions.addAll(cultureAdditions);
+    if (miscellaneousAdditions != null) result.miscellaneousAdditions.addAll(miscellaneousAdditions);
+    if (cultureAdditions != null) result.cultureAdditions.addAll(cultureAdditions);
     if (waterAdditions != null) result.waterAdditions.addAll(waterAdditions);
-    if (fermentableAdditions != null)
-      result.fermentableAdditions.addAll(fermentableAdditions);
+    if (fermentableAdditions != null) result.fermentableAdditions.addAll(fermentableAdditions);
     if (hopAdditions != null) result.hopAdditions.addAll(hopAdditions);
     return result;
   }
 
   IngredientsType._();
 
-  factory IngredientsType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory IngredientsType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory IngredientsType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory IngredientsType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'IngredientsType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..pPM<$7.MiscellaneousAdditionType>(
-        1, _omitFieldNames ? '' : 'miscellaneousAdditions',
-        subBuilder: $7.MiscellaneousAdditionType.create)
-    ..pPM<$8.CultureAdditionType>(2, _omitFieldNames ? '' : 'cultureAdditions',
-        subBuilder: $8.CultureAdditionType.create)
-    ..pPM<$9.WaterAdditionType>(3, _omitFieldNames ? '' : 'waterAdditions',
-        subBuilder: $9.WaterAdditionType.create)
-    ..pPM<$10.FermentableAdditionType>(
-        4, _omitFieldNames ? '' : 'fermentableAdditions',
-        subBuilder: $10.FermentableAdditionType.create)
-    ..pPM<$1.HopAdditionType>(5, _omitFieldNames ? '' : 'hopAdditions',
-        subBuilder: $1.HopAdditionType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IngredientsType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..pc<$7.MiscellaneousAdditionType>(1, _omitFieldNames ? '' : 'miscellaneousAdditions', $pb.PbFieldType.PM, subBuilder: $7.MiscellaneousAdditionType.create)
+    ..pc<$8.CultureAdditionType>(2, _omitFieldNames ? '' : 'cultureAdditions', $pb.PbFieldType.PM, subBuilder: $8.CultureAdditionType.create)
+    ..pc<$9.WaterAdditionType>(3, _omitFieldNames ? '' : 'waterAdditions', $pb.PbFieldType.PM, subBuilder: $9.WaterAdditionType.create)
+    ..pc<$10.FermentableAdditionType>(4, _omitFieldNames ? '' : 'fermentableAdditions', $pb.PbFieldType.PM, subBuilder: $10.FermentableAdditionType.create)
+    ..pc<$1.HopAdditionType>(5, _omitFieldNames ? '' : 'hopAdditions', $pb.PbFieldType.PM, subBuilder: $1.HopAdditionType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  IngredientsType clone() => deepCopy();
+  IngredientsType clone() => IngredientsType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  IngredientsType copyWith(void Function(IngredientsType) updates) =>
-      super.copyWith((message) => updates(message as IngredientsType))
-          as IngredientsType;
+  IngredientsType copyWith(void Function(IngredientsType) updates) => super.copyWith((message) => updates(message as IngredientsType)) as IngredientsType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -613,17 +553,14 @@ class IngredientsType extends $pb.GeneratedMessage {
   static IngredientsType create() => IngredientsType._();
   @$core.override
   IngredientsType createEmptyInstance() => create();
-  static $pb.PbList<IngredientsType> createRepeated() =>
-      $pb.PbList<IngredientsType>();
+  static $pb.PbList<IngredientsType> createRepeated() => $pb.PbList<IngredientsType>();
   @$core.pragma('dart2js:noInline')
-  static IngredientsType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<IngredientsType>(create);
+  static IngredientsType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<IngredientsType>(create);
   static IngredientsType? _defaultInstance;
 
   /// miscellaneous_additions collects all the miscellaneous items for use in a recipe
   @$pb.TagNumber(1)
-  $pb.PbList<$7.MiscellaneousAdditionType> get miscellaneousAdditions =>
-      $_getList(0);
+  $pb.PbList<$7.MiscellaneousAdditionType> get miscellaneousAdditions => $_getList(0);
 
   /// culture_additions collects all the culture items for use in a recipe
   @$pb.TagNumber(2)
@@ -635,8 +572,7 @@ class IngredientsType extends $pb.GeneratedMessage {
 
   /// fermentable_additions collects all the fermentable ingredients for use in a recipe
   @$pb.TagNumber(4)
-  $pb.PbList<$10.FermentableAdditionType> get fermentableAdditions =>
-      $_getList(3);
+  $pb.PbList<$10.FermentableAdditionType> get fermentableAdditions => $_getList(3);
 
   /// hop_additions collects all the hops for use in a recipe
   @$pb.TagNumber(5)
@@ -656,26 +592,19 @@ class TasteType extends $pb.GeneratedMessage {
 
   TasteType._();
 
-  factory TasteType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory TasteType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory TasteType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory TasteType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'TasteType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TasteType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'notes')
-    ..aD(2, _omitFieldNames ? '' : 'rating')
-    ..hasRequiredFields = false;
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'rating', $pb.PbFieldType.OD)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TasteType clone() => deepCopy();
+  TasteType clone() => TasteType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TasteType copyWith(void Function(TasteType) updates) =>
-      super.copyWith((message) => updates(message as TasteType)) as TasteType;
+  TasteType copyWith(void Function(TasteType) updates) => super.copyWith((message) => updates(message as TasteType)) as TasteType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -686,8 +615,7 @@ class TasteType extends $pb.GeneratedMessage {
   TasteType createEmptyInstance() => create();
   static $pb.PbList<TasteType> createRepeated() => $pb.PbList<TasteType>();
   @$core.pragma('dart2js:noInline')
-  static TasteType getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TasteType>(create);
+  static TasteType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TasteType>(create);
   static TasteType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -709,7 +637,6 @@ class TasteType extends $pb.GeneratedMessage {
   void clearRating() => $_clearField(2);
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -88,31 +88,9 @@ const HopVarietyBase$json = {
     {'1': 'product_id', '3': 3, '4': 1, '5': 9, '10': 'productId'},
     {'1': 'origin', '3': 4, '4': 1, '5': 9, '10': 'origin'},
     {'1': 'year', '3': 5, '4': 1, '5': 9, '10': 'year'},
-    {
-      '1': 'form',
-      '3': 6,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.HopVarietyBaseForm',
-      '10': 'form'
-    },
-    {
-      '1': 'alpha_acid',
-      '3': 7,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '8': {},
-      '10': 'alphaAcid'
-    },
-    {
-      '1': 'beta_acid',
-      '3': 8,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'betaAcid'
-    },
+    {'1': 'form', '3': 6, '4': 1, '5': 14, '6': '.beerproto.v1.HopVarietyBaseForm', '10': 'form'},
+    {'1': 'alpha_acid', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '8': {}, '10': 'alphaAcid'},
+    {'1': 'beta_acid', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'betaAcid'},
   ],
 };
 
@@ -129,48 +107,12 @@ final $typed_data.Uint8List hopVarietyBaseDescriptor = $convert.base64Decode(
 const VarietyInformation$json = {
   '1': 'VarietyInformation',
   '2': [
-    {
-      '1': 'base',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.HopVarietyBase',
-      '8': {},
-      '10': 'base'
-    },
+    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.HopVarietyBase', '8': {}, '10': 'base'},
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {
-      '1': 'inventory',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.HopInventoryType',
-      '10': 'inventory'
-    },
-    {
-      '1': 'type',
-      '3': 4,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.VarietyInformationType',
-      '10': 'type'
-    },
-    {
-      '1': 'oil_content',
-      '3': 5,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.OilContentType',
-      '10': 'oilContent'
-    },
-    {
-      '1': 'percent_lost',
-      '3': 6,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'percentLost'
-    },
+    {'1': 'inventory', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.HopInventoryType', '10': 'inventory'},
+    {'1': 'type', '3': 4, '4': 1, '5': 14, '6': '.beerproto.v1.VarietyInformationType', '10': 'type'},
+    {'1': 'oil_content', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.OilContentType', '10': 'oilContent'},
+    {'1': 'percent_lost', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'percentLost'},
     {'1': 'substitutes', '3': 7, '4': 1, '5': 9, '10': 'substitutes'},
     {'1': 'notes', '3': 8, '4': 1, '5': 9, '10': 'notes'},
   ],
@@ -191,43 +133,11 @@ final $typed_data.Uint8List varietyInformationDescriptor = $convert.base64Decode
 const HopAdditionType$json = {
   '1': 'HopAdditionType',
   '2': [
-    {
-      '1': 'base',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.HopVarietyBase',
-      '8': {},
-      '10': 'base'
-    },
+    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.HopVarietyBase', '8': {}, '10': 'base'},
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {
-      '1': 'timing',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TimingType',
-      '8': {},
-      '10': 'timing'
-    },
-    {
-      '1': 'mass',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.MassType',
-      '9': 0,
-      '10': 'mass'
-    },
-    {
-      '1': 'volume',
-      '3': 5,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '9': 0,
-      '10': 'volume'
-    },
+    {'1': 'timing', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.TimingType', '8': {}, '10': 'timing'},
+    {'1': 'mass', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
+    {'1': 'volume', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -247,14 +157,7 @@ final $typed_data.Uint8List hopAdditionTypeDescriptor = $convert.base64Decode(
 const IBUEstimateType$json = {
   '1': 'IBUEstimateType',
   '2': [
-    {
-      '1': 'method',
-      '3': 1,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.IBUMethodUnit',
-      '10': 'method'
-    },
+    {'1': 'method', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.IBUMethodUnit', '10': 'method'},
   ],
 };
 
@@ -267,117 +170,20 @@ final $typed_data.Uint8List iBUEstimateTypeDescriptor = $convert.base64Decode(
 const OilContentType$json = {
   '1': 'OilContentType',
   '2': [
-    {
-      '1': 'polyphenols',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'polyphenols'
-    },
-    {
-      '1': 'total_oil_ml_per_100g',
-      '3': 2,
-      '4': 1,
-      '5': 1,
-      '10': 'totalOilMlPer100g'
-    },
-    {
-      '1': 'farnesene',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'farnesene'
-    },
-    {
-      '1': 'limonene',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'limonene'
-    },
-    {
-      '1': 'nerol',
-      '3': 5,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'nerol'
-    },
-    {
-      '1': 'geraniol',
-      '3': 6,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'geraniol'
-    },
-    {
-      '1': 'b_pinene',
-      '3': 7,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'bPinene'
-    },
-    {
-      '1': 'linalool',
-      '3': 8,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'linalool'
-    },
-    {
-      '1': 'caryophyllene',
-      '3': 9,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'caryophyllene'
-    },
-    {
-      '1': 'cohumulone',
-      '3': 10,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'cohumulone'
-    },
-    {
-      '1': 'xanthohumol',
-      '3': 11,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'xanthohumol'
-    },
-    {
-      '1': 'humulene',
-      '3': 12,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'humulene'
-    },
-    {
-      '1': 'myrcene',
-      '3': 13,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'myrcene'
-    },
-    {
-      '1': 'pinene',
-      '3': 14,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'pinene'
-    },
+    {'1': 'polyphenols', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'polyphenols'},
+    {'1': 'total_oil_ml_per_100g', '3': 2, '4': 1, '5': 1, '10': 'totalOilMlPer100g'},
+    {'1': 'farnesene', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'farnesene'},
+    {'1': 'limonene', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'limonene'},
+    {'1': 'nerol', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'nerol'},
+    {'1': 'geraniol', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'geraniol'},
+    {'1': 'b_pinene', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'bPinene'},
+    {'1': 'linalool', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'linalool'},
+    {'1': 'caryophyllene', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'caryophyllene'},
+    {'1': 'cohumulone', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'cohumulone'},
+    {'1': 'xanthohumol', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'xanthohumol'},
+    {'1': 'humulene', '3': 12, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'humulene'},
+    {'1': 'myrcene', '3': 13, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'myrcene'},
+    {'1': 'pinene', '3': 14, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'pinene'},
   ],
 };
 
@@ -403,24 +209,8 @@ final $typed_data.Uint8List oilContentTypeDescriptor = $convert.base64Decode(
 const HopInventoryType$json = {
   '1': 'HopInventoryType',
   '2': [
-    {
-      '1': 'mass',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.MassType',
-      '9': 0,
-      '10': 'mass'
-    },
-    {
-      '1': 'volume',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '9': 0,
-      '10': 'volume'
-    },
+    {'1': 'mass', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
+    {'1': 'volume', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -432,3 +222,4 @@ final $typed_data.Uint8List hopInventoryTypeDescriptor = $convert.base64Decode(
     'ChBIb3BJbnZlbnRvcnlUeXBlEiwKBG1hc3MYASABKAsyFi5iZWVycHJvdG8udjEuTWFzc1R5cG'
     'VIAFIEbWFzcxIyCgZ2b2x1bWUYAiABKAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVHlwZUgAUgZ2'
     'b2x1bWVCDwoGYW1vdW50EgW6SAIIAQ==');
+

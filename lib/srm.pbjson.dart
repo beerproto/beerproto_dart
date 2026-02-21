@@ -87,3 +87,4 @@ const Color$json = {
 final $typed_data.Uint8List colorDescriptor = $convert.base64Decode(
     'CgVDb2xvchIMCgFhGAEgASgNUgFhEgwKAXIYAiABKA1SAXISDAoBZxgDIAEoDVIBZxIMCgFiGA'
     'QgASgNUgFi');
+

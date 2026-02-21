@@ -383,14 +383,7 @@ const VolumeType$json = {
   '1': 'VolumeType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.VolumeUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.VolumeUnit', '10': 'unit'},
   ],
 };
 
@@ -404,14 +397,7 @@ const MassType$json = {
   '1': 'MassType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.MassUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.MassUnit', '10': 'unit'},
   ],
 };
 
@@ -425,14 +411,7 @@ const DiastaticPowerType$json = {
   '1': 'DiastaticPowerType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.DiastaticPowerUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.DiastaticPowerUnit', '10': 'unit'},
   ],
 };
 
@@ -446,14 +425,7 @@ const TemperatureType$json = {
   '1': 'TemperatureType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.TemperatureUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.TemperatureUnit', '10': 'unit'},
   ],
 };
 
@@ -467,14 +439,7 @@ const AcidityType$json = {
   '1': 'AcidityType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.AcidityUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.AcidityUnit', '10': 'unit'},
   ],
 };
 
@@ -488,14 +453,7 @@ const TimeType$json = {
   '1': 'TimeType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 3, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.TimeUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.TimeUnit', '10': 'unit'},
   ],
 };
 
@@ -509,14 +467,7 @@ const ColorType$json = {
   '1': 'ColorType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.ColorUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.ColorUnit', '10': 'unit'},
   ],
 };
 
@@ -530,14 +481,7 @@ const CarbonationType$json = {
   '1': 'CarbonationType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.CarbonationUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.CarbonationUnit', '10': 'unit'},
   ],
 };
 
@@ -551,14 +495,7 @@ const BitternessType$json = {
   '1': 'BitternessType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.BitternessUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.BitternessUnit', '10': 'unit'},
   ],
 };
 
@@ -572,14 +509,7 @@ const GravityType$json = {
   '1': 'GravityType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.GravityUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.GravityUnit', '10': 'unit'},
   ],
 };
 
@@ -593,14 +523,7 @@ const SpecificHeatType$json = {
   '1': 'SpecificHeatType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.SpecificHeatUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.SpecificHeatUnit', '10': 'unit'},
   ],
 };
 
@@ -614,14 +537,7 @@ const ConcentrationType$json = {
   '1': 'ConcentrationType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.ConcentrationUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.ConcentrationUnit', '10': 'unit'},
   ],
 };
 
@@ -635,14 +551,7 @@ const SpecificVolumeType$json = {
   '1': 'SpecificVolumeType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.SpecificVolumeUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.SpecificVolumeUnit', '10': 'unit'},
   ],
 };
 
@@ -656,14 +565,7 @@ const UnitType$json = {
   '1': 'UnitType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.UnitUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.UnitUnit', '10': 'unit'},
   ],
 };
 
@@ -677,14 +579,7 @@ const PercentType$json = {
   '1': 'PercentType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.PercentUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.PercentUnit', '10': 'unit'},
   ],
 };
 
@@ -698,14 +593,7 @@ const ViscosityType$json = {
   '1': 'ViscosityType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.ViscosityUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.ViscosityUnit', '10': 'unit'},
   ],
 };
 
@@ -718,22 +606,8 @@ final $typed_data.Uint8List viscosityTypeDescriptor = $convert.base64Decode(
 const CarbonationRangeType$json = {
   '1': 'CarbonationRangeType',
   '2': [
-    {
-      '1': 'minimum',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.CarbonationType',
-      '10': 'minimum'
-    },
-    {
-      '1': 'maximum',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.CarbonationType',
-      '10': 'maximum'
-    },
+    {'1': 'minimum', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.CarbonationType', '10': 'minimum'},
+    {'1': 'maximum', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.CarbonationType', '10': 'maximum'},
   ],
 };
 
@@ -747,22 +621,8 @@ final $typed_data.Uint8List carbonationRangeTypeDescriptor = $convert.base64Deco
 const BitternessRangeType$json = {
   '1': 'BitternessRangeType',
   '2': [
-    {
-      '1': 'minimum',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.BitternessType',
-      '10': 'minimum'
-    },
-    {
-      '1': 'maximum',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.BitternessType',
-      '10': 'maximum'
-    },
+    {'1': 'minimum', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.BitternessType', '10': 'minimum'},
+    {'1': 'maximum', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.BitternessType', '10': 'maximum'},
   ],
 };
 
@@ -776,22 +636,8 @@ final $typed_data.Uint8List bitternessRangeTypeDescriptor = $convert.base64Decod
 const TemperatureRangeType$json = {
   '1': 'TemperatureRangeType',
   '2': [
-    {
-      '1': 'minimum',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TemperatureType',
-      '10': 'minimum'
-    },
-    {
-      '1': 'maximum',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TemperatureType',
-      '10': 'maximum'
-    },
+    {'1': 'minimum', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'minimum'},
+    {'1': 'maximum', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'maximum'},
   ],
 };
 
@@ -805,22 +651,8 @@ final $typed_data.Uint8List temperatureRangeTypeDescriptor = $convert.base64Deco
 const ColorRangeType$json = {
   '1': 'ColorRangeType',
   '2': [
-    {
-      '1': 'minimum',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ColorType',
-      '10': 'minimum'
-    },
-    {
-      '1': 'maximum',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ColorType',
-      '10': 'maximum'
-    },
+    {'1': 'minimum', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.ColorType', '10': 'minimum'},
+    {'1': 'maximum', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.ColorType', '10': 'maximum'},
   ],
 };
 
@@ -834,22 +666,8 @@ final $typed_data.Uint8List colorRangeTypeDescriptor = $convert.base64Decode(
 const GravityRangeType$json = {
   '1': 'GravityRangeType',
   '2': [
-    {
-      '1': 'minimum',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.GravityType',
-      '10': 'minimum'
-    },
-    {
-      '1': 'maximum',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.GravityType',
-      '10': 'maximum'
-    },
+    {'1': 'minimum', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'minimum'},
+    {'1': 'maximum', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'maximum'},
   ],
 };
 
@@ -863,22 +681,8 @@ final $typed_data.Uint8List gravityRangeTypeDescriptor = $convert.base64Decode(
 const PercentRangeType$json = {
   '1': 'PercentRangeType',
   '2': [
-    {
-      '1': 'minimum',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'minimum'
-    },
-    {
-      '1': 'maximum',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'maximum'
-    },
+    {'1': 'minimum', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'minimum'},
+    {'1': 'maximum', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'maximum'},
   ],
 };
 
@@ -892,22 +696,8 @@ final $typed_data.Uint8List percentRangeTypeDescriptor = $convert.base64Decode(
 const TimeRangeType$json = {
   '1': 'TimeRangeType',
   '2': [
-    {
-      '1': 'minimum',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TimeType',
-      '10': 'minimum'
-    },
-    {
-      '1': 'maximum',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TimeType',
-      '10': 'maximum'
-    },
+    {'1': 'minimum', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '10': 'minimum'},
+    {'1': 'maximum', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '10': 'maximum'},
   ],
 };
 
@@ -921,22 +711,8 @@ final $typed_data.Uint8List timeRangeTypeDescriptor = $convert.base64Decode(
 const ViscosityRangeType$json = {
   '1': 'ViscosityRangeType',
   '2': [
-    {
-      '1': 'minimum',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ViscosityType',
-      '10': 'minimum'
-    },
-    {
-      '1': 'maximum',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ViscosityType',
-      '10': 'maximum'
-    },
+    {'1': 'minimum', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.ViscosityType', '10': 'minimum'},
+    {'1': 'maximum', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.ViscosityType', '10': 'maximum'},
   ],
 };
 
@@ -950,22 +726,8 @@ final $typed_data.Uint8List viscosityRangeTypeDescriptor = $convert.base64Decode
 const DiastaticPowerRangeType$json = {
   '1': 'DiastaticPowerRangeType',
   '2': [
-    {
-      '1': 'minimum',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.DiastaticPowerType',
-      '10': 'minimum'
-    },
-    {
-      '1': 'maximum',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.DiastaticPowerType',
-      '10': 'maximum'
-    },
+    {'1': 'minimum', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.DiastaticPowerType', '10': 'minimum'},
+    {'1': 'maximum', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.DiastaticPowerType', '10': 'maximum'},
   ],
 };
 
@@ -979,22 +741,8 @@ final $typed_data.Uint8List diastaticPowerRangeTypeDescriptor = $convert.base64D
 const SpecificVolumeRangeType$json = {
   '1': 'SpecificVolumeRangeType',
   '2': [
-    {
-      '1': 'minimum',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.SpecificVolumeType',
-      '10': 'minimum'
-    },
-    {
-      '1': 'maximum',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.SpecificVolumeType',
-      '10': 'maximum'
-    },
+    {'1': 'minimum', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.SpecificVolumeType', '10': 'minimum'},
+    {'1': 'maximum', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.SpecificVolumeType', '10': 'maximum'},
   ],
 };
 
@@ -1008,22 +756,8 @@ final $typed_data.Uint8List specificVolumeRangeTypeDescriptor = $convert.base64D
 const AcidityRangeType$json = {
   '1': 'AcidityRangeType',
   '2': [
-    {
-      '1': 'minimum',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.AcidityType',
-      '10': 'minimum'
-    },
-    {
-      '1': 'maximum',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.AcidityType',
-      '10': 'maximum'
-    },
+    {'1': 'minimum', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'minimum'},
+    {'1': 'maximum', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'maximum'},
   ],
 };
 
@@ -1037,22 +771,8 @@ final $typed_data.Uint8List acidityRangeTypeDescriptor = $convert.base64Decode(
 const ConcentrationRangeType$json = {
   '1': 'ConcentrationRangeType',
   '2': [
-    {
-      '1': 'minimum',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '10': 'minimum'
-    },
-    {
-      '1': 'maximum',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ConcentrationType',
-      '10': 'maximum'
-    },
+    {'1': 'minimum', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '10': 'minimum'},
+    {'1': 'maximum', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '10': 'maximum'},
   ],
 };
 
@@ -1067,14 +787,7 @@ const RateType$json = {
   '1': 'RateType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.RateUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.RateUnit', '10': 'unit'},
   ],
 };
 
@@ -1088,14 +801,7 @@ const PressureType$json = {
   '1': 'PressureType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.PressureUnit',
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.PressureUnit', '10': 'unit'},
   ],
 };
 
@@ -1109,15 +815,7 @@ const EnzymeActivityType$json = {
   '1': 'EnzymeActivityType',
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 1, '8': {}, '10': 'value'},
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.EnzymeActivityUnit',
-      '8': {},
-      '10': 'unit'
-    },
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.EnzymeActivityUnit', '8': {}, '10': 'unit'},
   ],
 };
 
@@ -1131,22 +829,8 @@ final $typed_data.Uint8List enzymeActivityTypeDescriptor = $convert.base64Decode
 const EnzymeActivity$json = {
   '1': 'EnzymeActivity',
   '2': [
-    {
-      '1': 'kind',
-      '3': 1,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.EnzymeType',
-      '10': 'kind'
-    },
-    {
-      '1': 'activity',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.EnzymeActivityType',
-      '10': 'activity'
-    },
+    {'1': 'kind', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.EnzymeType', '10': 'kind'},
+    {'1': 'activity', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.EnzymeActivityType', '10': 'activity'},
   ],
 };
 
@@ -1155,3 +839,4 @@ final $typed_data.Uint8List enzymeActivityDescriptor = $convert.base64Decode(
     'Cg5Fbnp5bWVBY3Rpdml0eRIsCgRraW5kGAEgASgOMhguYmVlcnByb3RvLnYxLkVuenltZVR5cG'
     'VSBGtpbmQSPAoIYWN0aXZpdHkYAiABKAsyIC5iZWVycHJvdG8udjEuRW56eW1lQWN0aXZpdHlU'
     'eXBlUghhY3Rpdml0eQ==');
+

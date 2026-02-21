@@ -57,48 +57,30 @@ class MashStepType extends $pb.GeneratedMessage {
 
   MashStepType._();
 
-  factory MashStepType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory MashStepType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory MashStepType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory MashStepType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'MashStepType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MashStepType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.TimeType>(2, _omitFieldNames ? '' : 'stepTime',
-        subBuilder: $0.TimeType.create)
-    ..aOM<$0.TimeType>(3, _omitFieldNames ? '' : 'rampTime',
-        subBuilder: $0.TimeType.create)
-    ..aOM<$0.TemperatureType>(4, _omitFieldNames ? '' : 'endTemperature',
-        subBuilder: $0.TemperatureType.create)
+    ..aOM<$0.TimeType>(2, _omitFieldNames ? '' : 'stepTime', subBuilder: $0.TimeType.create)
+    ..aOM<$0.TimeType>(3, _omitFieldNames ? '' : 'rampTime', subBuilder: $0.TimeType.create)
+    ..aOM<$0.TemperatureType>(4, _omitFieldNames ? '' : 'endTemperature', subBuilder: $0.TemperatureType.create)
     ..aOS(5, _omitFieldNames ? '' : 'description')
-    ..aOM<$0.TemperatureType>(6, _omitFieldNames ? '' : 'infuseTemperature',
-        subBuilder: $0.TemperatureType.create)
-    ..aOM<$0.AcidityType>(7, _omitFieldNames ? '' : 'startPh',
-        subBuilder: $0.AcidityType.create)
-    ..aOM<$0.AcidityType>(8, _omitFieldNames ? '' : 'endPh',
-        subBuilder: $0.AcidityType.create)
+    ..aOM<$0.TemperatureType>(6, _omitFieldNames ? '' : 'infuseTemperature', subBuilder: $0.TemperatureType.create)
+    ..aOM<$0.AcidityType>(7, _omitFieldNames ? '' : 'startPh', subBuilder: $0.AcidityType.create)
+    ..aOM<$0.AcidityType>(8, _omitFieldNames ? '' : 'endPh', subBuilder: $0.AcidityType.create)
     ..aOS(9, _omitFieldNames ? '' : 'name')
-    ..aE<MashStepUnit>(10, _omitFieldNames ? '' : 'type',
-        enumValues: MashStepUnit.values)
-    ..aOM<$0.VolumeType>(11, _omitFieldNames ? '' : 'amount',
-        subBuilder: $0.VolumeType.create)
-    ..aOM<$0.TemperatureType>(12, _omitFieldNames ? '' : 'stepTemperature',
-        subBuilder: $0.TemperatureType.create)
-    ..aOM<$0.SpecificVolumeType>(13, _omitFieldNames ? '' : 'waterGrainRatio',
-        subBuilder: $0.SpecificVolumeType.create)
-    ..hasRequiredFields = false;
+    ..e<MashStepUnit>(10, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: MashStepUnit.MASH_STEP_UNIT_UNSPECIFIED, valueOf: MashStepUnit.valueOf, enumValues: MashStepUnit.values)
+    ..aOM<$0.VolumeType>(11, _omitFieldNames ? '' : 'amount', subBuilder: $0.VolumeType.create)
+    ..aOM<$0.TemperatureType>(12, _omitFieldNames ? '' : 'stepTemperature', subBuilder: $0.TemperatureType.create)
+    ..aOM<$0.SpecificVolumeType>(13, _omitFieldNames ? '' : 'waterGrainRatio', subBuilder: $0.SpecificVolumeType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MashStepType clone() => deepCopy();
+  MashStepType clone() => MashStepType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MashStepType copyWith(void Function(MashStepType) updates) =>
-      super.copyWith((message) => updates(message as MashStepType))
-          as MashStepType;
+  MashStepType copyWith(void Function(MashStepType) updates) => super.copyWith((message) => updates(message as MashStepType)) as MashStepType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -107,11 +89,9 @@ class MashStepType extends $pb.GeneratedMessage {
   static MashStepType create() => MashStepType._();
   @$core.override
   MashStepType createEmptyInstance() => create();
-  static $pb.PbList<MashStepType> createRepeated() =>
-      $pb.PbList<MashStepType>();
+  static $pb.PbList<MashStepType> createRepeated() => $pb.PbList<MashStepType>();
   @$core.pragma('dart2js:noInline')
-  static MashStepType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<MashStepType>(create);
+  static MashStepType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MashStepType>(create);
   static MashStepType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -253,7 +233,6 @@ class MashStepType extends $pb.GeneratedMessage {
   $0.SpecificVolumeType ensureWaterGrainRatio() => $_ensure(12);
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

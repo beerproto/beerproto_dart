@@ -43,35 +43,24 @@ class BoilProcedureType extends $pb.GeneratedMessage {
 
   BoilProcedureType._();
 
-  factory BoilProcedureType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory BoilProcedureType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory BoilProcedureType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory BoilProcedureType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'BoilProcedureType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BoilProcedureType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'preBoilSize',
-        subBuilder: $0.VolumeType.create)
-    ..aOM<$0.TimeType>(3, _omitFieldNames ? '' : 'boilTime',
-        subBuilder: $0.TimeType.create)
-    ..pPM<$1.BoilStepType>(4, _omitFieldNames ? '' : 'boilSteps',
-        subBuilder: $1.BoilStepType.create)
+    ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'preBoilSize', subBuilder: $0.VolumeType.create)
+    ..aOM<$0.TimeType>(3, _omitFieldNames ? '' : 'boilTime', subBuilder: $0.TimeType.create)
+    ..pc<$1.BoilStepType>(4, _omitFieldNames ? '' : 'boilSteps', $pb.PbFieldType.PM, subBuilder: $1.BoilStepType.create)
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..aOS(6, _omitFieldNames ? '' : 'description')
     ..aOS(7, _omitFieldNames ? '' : 'notes')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BoilProcedureType clone() => deepCopy();
+  BoilProcedureType clone() => BoilProcedureType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BoilProcedureType copyWith(void Function(BoilProcedureType) updates) =>
-      super.copyWith((message) => updates(message as BoilProcedureType))
-          as BoilProcedureType;
+  BoilProcedureType copyWith(void Function(BoilProcedureType) updates) => super.copyWith((message) => updates(message as BoilProcedureType)) as BoilProcedureType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -80,11 +69,9 @@ class BoilProcedureType extends $pb.GeneratedMessage {
   static BoilProcedureType create() => BoilProcedureType._();
   @$core.override
   BoilProcedureType createEmptyInstance() => create();
-  static $pb.PbList<BoilProcedureType> createRepeated() =>
-      $pb.PbList<BoilProcedureType>();
+  static $pb.PbList<BoilProcedureType> createRepeated() => $pb.PbList<BoilProcedureType>();
   @$core.pragma('dart2js:noInline')
-  static BoilProcedureType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<BoilProcedureType>(create);
+  static BoilProcedureType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BoilProcedureType>(create);
   static BoilProcedureType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -149,7 +136,6 @@ class BoilProcedureType extends $pb.GeneratedMessage {
   void clearNotes() => $_clearField(7);
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

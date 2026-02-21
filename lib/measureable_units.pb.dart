@@ -34,27 +34,19 @@ class VolumeType extends $pb.GeneratedMessage {
 
   VolumeType._();
 
-  factory VolumeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory VolumeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory VolumeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory VolumeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'VolumeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<VolumeUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: VolumeUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'VolumeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<VolumeUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: VolumeUnit.VOLUME_UNIT_UNSPECIFIED, valueOf: VolumeUnit.valueOf, enumValues: VolumeUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  VolumeType clone() => deepCopy();
+  VolumeType clone() => VolumeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  VolumeType copyWith(void Function(VolumeType) updates) =>
-      super.copyWith((message) => updates(message as VolumeType)) as VolumeType;
+  VolumeType copyWith(void Function(VolumeType) updates) => super.copyWith((message) => updates(message as VolumeType)) as VolumeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -65,8 +57,7 @@ class VolumeType extends $pb.GeneratedMessage {
   VolumeType createEmptyInstance() => create();
   static $pb.PbList<VolumeType> createRepeated() => $pb.PbList<VolumeType>();
   @$core.pragma('dart2js:noInline')
-  static VolumeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<VolumeType>(create);
+  static VolumeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VolumeType>(create);
   static VolumeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -101,27 +92,19 @@ class MassType extends $pb.GeneratedMessage {
 
   MassType._();
 
-  factory MassType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory MassType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory MassType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory MassType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'MassType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<MassUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: MassUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MassType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<MassUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: MassUnit.MASS_UNIT_UNSPECIFIED, valueOf: MassUnit.valueOf, enumValues: MassUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MassType clone() => deepCopy();
+  MassType clone() => MassType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MassType copyWith(void Function(MassType) updates) =>
-      super.copyWith((message) => updates(message as MassType)) as MassType;
+  MassType copyWith(void Function(MassType) updates) => super.copyWith((message) => updates(message as MassType)) as MassType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -132,8 +115,7 @@ class MassType extends $pb.GeneratedMessage {
   MassType createEmptyInstance() => create();
   static $pb.PbList<MassType> createRepeated() => $pb.PbList<MassType>();
   @$core.pragma('dart2js:noInline')
-  static MassType getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MassType>(create);
+  static MassType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MassType>(create);
   static MassType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -169,28 +151,19 @@ class DiastaticPowerType extends $pb.GeneratedMessage {
 
   DiastaticPowerType._();
 
-  factory DiastaticPowerType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory DiastaticPowerType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory DiastaticPowerType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory DiastaticPowerType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'DiastaticPowerType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<DiastaticPowerUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: DiastaticPowerUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DiastaticPowerType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<DiastaticPowerUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: DiastaticPowerUnit.DIASTATIC_POWER_UNIT_UNSPECIFIED, valueOf: DiastaticPowerUnit.valueOf, enumValues: DiastaticPowerUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DiastaticPowerType clone() => deepCopy();
+  DiastaticPowerType clone() => DiastaticPowerType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DiastaticPowerType copyWith(void Function(DiastaticPowerType) updates) =>
-      super.copyWith((message) => updates(message as DiastaticPowerType))
-          as DiastaticPowerType;
+  DiastaticPowerType copyWith(void Function(DiastaticPowerType) updates) => super.copyWith((message) => updates(message as DiastaticPowerType)) as DiastaticPowerType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -199,11 +172,9 @@ class DiastaticPowerType extends $pb.GeneratedMessage {
   static DiastaticPowerType create() => DiastaticPowerType._();
   @$core.override
   DiastaticPowerType createEmptyInstance() => create();
-  static $pb.PbList<DiastaticPowerType> createRepeated() =>
-      $pb.PbList<DiastaticPowerType>();
+  static $pb.PbList<DiastaticPowerType> createRepeated() => $pb.PbList<DiastaticPowerType>();
   @$core.pragma('dart2js:noInline')
-  static DiastaticPowerType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<DiastaticPowerType>(create);
+  static DiastaticPowerType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DiastaticPowerType>(create);
   static DiastaticPowerType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -238,28 +209,19 @@ class TemperatureType extends $pb.GeneratedMessage {
 
   TemperatureType._();
 
-  factory TemperatureType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory TemperatureType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory TemperatureType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory TemperatureType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'TemperatureType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<TemperatureUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: TemperatureUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TemperatureType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<TemperatureUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: TemperatureUnit.TEMPERATURE_UNIT_UNSPECIFIED, valueOf: TemperatureUnit.valueOf, enumValues: TemperatureUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TemperatureType clone() => deepCopy();
+  TemperatureType clone() => TemperatureType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TemperatureType copyWith(void Function(TemperatureType) updates) =>
-      super.copyWith((message) => updates(message as TemperatureType))
-          as TemperatureType;
+  TemperatureType copyWith(void Function(TemperatureType) updates) => super.copyWith((message) => updates(message as TemperatureType)) as TemperatureType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -268,11 +230,9 @@ class TemperatureType extends $pb.GeneratedMessage {
   static TemperatureType create() => TemperatureType._();
   @$core.override
   TemperatureType createEmptyInstance() => create();
-  static $pb.PbList<TemperatureType> createRepeated() =>
-      $pb.PbList<TemperatureType>();
+  static $pb.PbList<TemperatureType> createRepeated() => $pb.PbList<TemperatureType>();
   @$core.pragma('dart2js:noInline')
-  static TemperatureType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<TemperatureType>(create);
+  static TemperatureType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TemperatureType>(create);
   static TemperatureType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -307,28 +267,19 @@ class AcidityType extends $pb.GeneratedMessage {
 
   AcidityType._();
 
-  factory AcidityType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory AcidityType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory AcidityType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory AcidityType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'AcidityType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<AcidityUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: AcidityUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AcidityType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<AcidityUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: AcidityUnit.ACIDITY_UNIT_UNSPECIFIED, valueOf: AcidityUnit.valueOf, enumValues: AcidityUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AcidityType clone() => deepCopy();
+  AcidityType clone() => AcidityType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AcidityType copyWith(void Function(AcidityType) updates) =>
-      super.copyWith((message) => updates(message as AcidityType))
-          as AcidityType;
+  AcidityType copyWith(void Function(AcidityType) updates) => super.copyWith((message) => updates(message as AcidityType)) as AcidityType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -339,8 +290,7 @@ class AcidityType extends $pb.GeneratedMessage {
   AcidityType createEmptyInstance() => create();
   static $pb.PbList<AcidityType> createRepeated() => $pb.PbList<AcidityType>();
   @$core.pragma('dart2js:noInline')
-  static AcidityType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<AcidityType>(create);
+  static AcidityType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AcidityType>(create);
   static AcidityType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -375,27 +325,19 @@ class TimeType extends $pb.GeneratedMessage {
 
   TimeType._();
 
-  factory TimeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory TimeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory TimeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory TimeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'TimeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TimeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aInt64(1, _omitFieldNames ? '' : 'value')
-    ..aE<TimeUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: TimeUnit.values)
-    ..hasRequiredFields = false;
+    ..e<TimeUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: TimeUnit.TIME_UNIT_UNSPECIFIED, valueOf: TimeUnit.valueOf, enumValues: TimeUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TimeType clone() => deepCopy();
+  TimeType clone() => TimeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TimeType copyWith(void Function(TimeType) updates) =>
-      super.copyWith((message) => updates(message as TimeType)) as TimeType;
+  TimeType copyWith(void Function(TimeType) updates) => super.copyWith((message) => updates(message as TimeType)) as TimeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -406,8 +348,7 @@ class TimeType extends $pb.GeneratedMessage {
   TimeType createEmptyInstance() => create();
   static $pb.PbList<TimeType> createRepeated() => $pb.PbList<TimeType>();
   @$core.pragma('dart2js:noInline')
-  static TimeType getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TimeType>(create);
+  static TimeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TimeType>(create);
   static TimeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -443,27 +384,19 @@ class ColorType extends $pb.GeneratedMessage {
 
   ColorType._();
 
-  factory ColorType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory ColorType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory ColorType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory ColorType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ColorType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<ColorUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: ColorUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ColorType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<ColorUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: ColorUnit.COLOR_UNIT_UNSPECIFIED, valueOf: ColorUnit.valueOf, enumValues: ColorUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ColorType clone() => deepCopy();
+  ColorType clone() => ColorType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ColorType copyWith(void Function(ColorType) updates) =>
-      super.copyWith((message) => updates(message as ColorType)) as ColorType;
+  ColorType copyWith(void Function(ColorType) updates) => super.copyWith((message) => updates(message as ColorType)) as ColorType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -474,8 +407,7 @@ class ColorType extends $pb.GeneratedMessage {
   ColorType createEmptyInstance() => create();
   static $pb.PbList<ColorType> createRepeated() => $pb.PbList<ColorType>();
   @$core.pragma('dart2js:noInline')
-  static ColorType getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ColorType>(create);
+  static ColorType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ColorType>(create);
   static ColorType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -510,28 +442,19 @@ class CarbonationType extends $pb.GeneratedMessage {
 
   CarbonationType._();
 
-  factory CarbonationType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory CarbonationType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory CarbonationType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory CarbonationType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'CarbonationType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<CarbonationUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: CarbonationUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CarbonationType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<CarbonationUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: CarbonationUnit.CARBONATION_UNIT_UNSPECIFIED, valueOf: CarbonationUnit.valueOf, enumValues: CarbonationUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CarbonationType clone() => deepCopy();
+  CarbonationType clone() => CarbonationType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CarbonationType copyWith(void Function(CarbonationType) updates) =>
-      super.copyWith((message) => updates(message as CarbonationType))
-          as CarbonationType;
+  CarbonationType copyWith(void Function(CarbonationType) updates) => super.copyWith((message) => updates(message as CarbonationType)) as CarbonationType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -540,11 +463,9 @@ class CarbonationType extends $pb.GeneratedMessage {
   static CarbonationType create() => CarbonationType._();
   @$core.override
   CarbonationType createEmptyInstance() => create();
-  static $pb.PbList<CarbonationType> createRepeated() =>
-      $pb.PbList<CarbonationType>();
+  static $pb.PbList<CarbonationType> createRepeated() => $pb.PbList<CarbonationType>();
   @$core.pragma('dart2js:noInline')
-  static CarbonationType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<CarbonationType>(create);
+  static CarbonationType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CarbonationType>(create);
   static CarbonationType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -579,28 +500,19 @@ class BitternessType extends $pb.GeneratedMessage {
 
   BitternessType._();
 
-  factory BitternessType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory BitternessType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory BitternessType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory BitternessType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'BitternessType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<BitternessUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: BitternessUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BitternessType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<BitternessUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: BitternessUnit.BITTERNESS_UNIT_UNSPECIFIED, valueOf: BitternessUnit.valueOf, enumValues: BitternessUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BitternessType clone() => deepCopy();
+  BitternessType clone() => BitternessType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BitternessType copyWith(void Function(BitternessType) updates) =>
-      super.copyWith((message) => updates(message as BitternessType))
-          as BitternessType;
+  BitternessType copyWith(void Function(BitternessType) updates) => super.copyWith((message) => updates(message as BitternessType)) as BitternessType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -609,11 +521,9 @@ class BitternessType extends $pb.GeneratedMessage {
   static BitternessType create() => BitternessType._();
   @$core.override
   BitternessType createEmptyInstance() => create();
-  static $pb.PbList<BitternessType> createRepeated() =>
-      $pb.PbList<BitternessType>();
+  static $pb.PbList<BitternessType> createRepeated() => $pb.PbList<BitternessType>();
   @$core.pragma('dart2js:noInline')
-  static BitternessType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<BitternessType>(create);
+  static BitternessType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BitternessType>(create);
   static BitternessType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -649,28 +559,19 @@ class GravityType extends $pb.GeneratedMessage {
 
   GravityType._();
 
-  factory GravityType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory GravityType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory GravityType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory GravityType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'GravityType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<GravityUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: GravityUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GravityType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<GravityUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: GravityUnit.GRAVITY_UNIT_UNSPECIFIED, valueOf: GravityUnit.valueOf, enumValues: GravityUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GravityType clone() => deepCopy();
+  GravityType clone() => GravityType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GravityType copyWith(void Function(GravityType) updates) =>
-      super.copyWith((message) => updates(message as GravityType))
-          as GravityType;
+  GravityType copyWith(void Function(GravityType) updates) => super.copyWith((message) => updates(message as GravityType)) as GravityType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -681,8 +582,7 @@ class GravityType extends $pb.GeneratedMessage {
   GravityType createEmptyInstance() => create();
   static $pb.PbList<GravityType> createRepeated() => $pb.PbList<GravityType>();
   @$core.pragma('dart2js:noInline')
-  static GravityType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<GravityType>(create);
+  static GravityType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GravityType>(create);
   static GravityType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -717,28 +617,19 @@ class SpecificHeatType extends $pb.GeneratedMessage {
 
   SpecificHeatType._();
 
-  factory SpecificHeatType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory SpecificHeatType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory SpecificHeatType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory SpecificHeatType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SpecificHeatType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<SpecificHeatUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: SpecificHeatUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpecificHeatType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<SpecificHeatUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: SpecificHeatUnit.SPECIFIC_HEAT_UNIT_UNSPECIFIED, valueOf: SpecificHeatUnit.valueOf, enumValues: SpecificHeatUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  SpecificHeatType clone() => deepCopy();
+  SpecificHeatType clone() => SpecificHeatType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  SpecificHeatType copyWith(void Function(SpecificHeatType) updates) =>
-      super.copyWith((message) => updates(message as SpecificHeatType))
-          as SpecificHeatType;
+  SpecificHeatType copyWith(void Function(SpecificHeatType) updates) => super.copyWith((message) => updates(message as SpecificHeatType)) as SpecificHeatType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -747,11 +638,9 @@ class SpecificHeatType extends $pb.GeneratedMessage {
   static SpecificHeatType create() => SpecificHeatType._();
   @$core.override
   SpecificHeatType createEmptyInstance() => create();
-  static $pb.PbList<SpecificHeatType> createRepeated() =>
-      $pb.PbList<SpecificHeatType>();
+  static $pb.PbList<SpecificHeatType> createRepeated() => $pb.PbList<SpecificHeatType>();
   @$core.pragma('dart2js:noInline')
-  static SpecificHeatType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SpecificHeatType>(create);
+  static SpecificHeatType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpecificHeatType>(create);
   static SpecificHeatType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -786,28 +675,19 @@ class ConcentrationType extends $pb.GeneratedMessage {
 
   ConcentrationType._();
 
-  factory ConcentrationType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory ConcentrationType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory ConcentrationType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory ConcentrationType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ConcentrationType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<ConcentrationUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: ConcentrationUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConcentrationType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<ConcentrationUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: ConcentrationUnit.CONCENTRATION_UNIT_UNSPECIFIED, valueOf: ConcentrationUnit.valueOf, enumValues: ConcentrationUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ConcentrationType clone() => deepCopy();
+  ConcentrationType clone() => ConcentrationType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ConcentrationType copyWith(void Function(ConcentrationType) updates) =>
-      super.copyWith((message) => updates(message as ConcentrationType))
-          as ConcentrationType;
+  ConcentrationType copyWith(void Function(ConcentrationType) updates) => super.copyWith((message) => updates(message as ConcentrationType)) as ConcentrationType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -816,11 +696,9 @@ class ConcentrationType extends $pb.GeneratedMessage {
   static ConcentrationType create() => ConcentrationType._();
   @$core.override
   ConcentrationType createEmptyInstance() => create();
-  static $pb.PbList<ConcentrationType> createRepeated() =>
-      $pb.PbList<ConcentrationType>();
+  static $pb.PbList<ConcentrationType> createRepeated() => $pb.PbList<ConcentrationType>();
   @$core.pragma('dart2js:noInline')
-  static ConcentrationType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ConcentrationType>(create);
+  static ConcentrationType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConcentrationType>(create);
   static ConcentrationType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -855,28 +733,19 @@ class SpecificVolumeType extends $pb.GeneratedMessage {
 
   SpecificVolumeType._();
 
-  factory SpecificVolumeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory SpecificVolumeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory SpecificVolumeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory SpecificVolumeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SpecificVolumeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<SpecificVolumeUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: SpecificVolumeUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpecificVolumeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<SpecificVolumeUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: SpecificVolumeUnit.SPECIFIC_VOLUME_UNIT_UNSPECIFIED, valueOf: SpecificVolumeUnit.valueOf, enumValues: SpecificVolumeUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  SpecificVolumeType clone() => deepCopy();
+  SpecificVolumeType clone() => SpecificVolumeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  SpecificVolumeType copyWith(void Function(SpecificVolumeType) updates) =>
-      super.copyWith((message) => updates(message as SpecificVolumeType))
-          as SpecificVolumeType;
+  SpecificVolumeType copyWith(void Function(SpecificVolumeType) updates) => super.copyWith((message) => updates(message as SpecificVolumeType)) as SpecificVolumeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -885,11 +754,9 @@ class SpecificVolumeType extends $pb.GeneratedMessage {
   static SpecificVolumeType create() => SpecificVolumeType._();
   @$core.override
   SpecificVolumeType createEmptyInstance() => create();
-  static $pb.PbList<SpecificVolumeType> createRepeated() =>
-      $pb.PbList<SpecificVolumeType>();
+  static $pb.PbList<SpecificVolumeType> createRepeated() => $pb.PbList<SpecificVolumeType>();
   @$core.pragma('dart2js:noInline')
-  static SpecificVolumeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SpecificVolumeType>(create);
+  static SpecificVolumeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpecificVolumeType>(create);
   static SpecificVolumeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -925,27 +792,19 @@ class UnitType extends $pb.GeneratedMessage {
 
   UnitType._();
 
-  factory UnitType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory UnitType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory UnitType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory UnitType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'UnitType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<UnitUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: UnitUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UnitType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<UnitUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: UnitUnit.UNIT_UNIT_UNSPECIFIED, valueOf: UnitUnit.valueOf, enumValues: UnitUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UnitType clone() => deepCopy();
+  UnitType clone() => UnitType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  UnitType copyWith(void Function(UnitType) updates) =>
-      super.copyWith((message) => updates(message as UnitType)) as UnitType;
+  UnitType copyWith(void Function(UnitType) updates) => super.copyWith((message) => updates(message as UnitType)) as UnitType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -956,8 +815,7 @@ class UnitType extends $pb.GeneratedMessage {
   UnitType createEmptyInstance() => create();
   static $pb.PbList<UnitType> createRepeated() => $pb.PbList<UnitType>();
   @$core.pragma('dart2js:noInline')
-  static UnitType getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnitType>(create);
+  static UnitType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnitType>(create);
   static UnitType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -992,28 +850,19 @@ class PercentType extends $pb.GeneratedMessage {
 
   PercentType._();
 
-  factory PercentType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory PercentType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory PercentType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory PercentType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'PercentType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<PercentUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: PercentUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PercentType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<PercentUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: PercentUnit.PERCENT_UNIT_UNSPECIFIED, valueOf: PercentUnit.valueOf, enumValues: PercentUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PercentType clone() => deepCopy();
+  PercentType clone() => PercentType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PercentType copyWith(void Function(PercentType) updates) =>
-      super.copyWith((message) => updates(message as PercentType))
-          as PercentType;
+  PercentType copyWith(void Function(PercentType) updates) => super.copyWith((message) => updates(message as PercentType)) as PercentType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1024,8 +873,7 @@ class PercentType extends $pb.GeneratedMessage {
   PercentType createEmptyInstance() => create();
   static $pb.PbList<PercentType> createRepeated() => $pb.PbList<PercentType>();
   @$core.pragma('dart2js:noInline')
-  static PercentType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<PercentType>(create);
+  static PercentType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PercentType>(create);
   static PercentType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1060,28 +908,19 @@ class ViscosityType extends $pb.GeneratedMessage {
 
   ViscosityType._();
 
-  factory ViscosityType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory ViscosityType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory ViscosityType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory ViscosityType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ViscosityType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<ViscosityUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: ViscosityUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ViscosityType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<ViscosityUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: ViscosityUnit.VISCOSITY_UNIT_UNSPECIFIED, valueOf: ViscosityUnit.valueOf, enumValues: ViscosityUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ViscosityType clone() => deepCopy();
+  ViscosityType clone() => ViscosityType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ViscosityType copyWith(void Function(ViscosityType) updates) =>
-      super.copyWith((message) => updates(message as ViscosityType))
-          as ViscosityType;
+  ViscosityType copyWith(void Function(ViscosityType) updates) => super.copyWith((message) => updates(message as ViscosityType)) as ViscosityType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1090,11 +929,9 @@ class ViscosityType extends $pb.GeneratedMessage {
   static ViscosityType create() => ViscosityType._();
   @$core.override
   ViscosityType createEmptyInstance() => create();
-  static $pb.PbList<ViscosityType> createRepeated() =>
-      $pb.PbList<ViscosityType>();
+  static $pb.PbList<ViscosityType> createRepeated() => $pb.PbList<ViscosityType>();
   @$core.pragma('dart2js:noInline')
-  static ViscosityType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ViscosityType>(create);
+  static ViscosityType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ViscosityType>(create);
   static ViscosityType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1129,29 +966,19 @@ class CarbonationRangeType extends $pb.GeneratedMessage {
 
   CarbonationRangeType._();
 
-  factory CarbonationRangeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory CarbonationRangeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory CarbonationRangeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory CarbonationRangeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'CarbonationRangeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<CarbonationType>(1, _omitFieldNames ? '' : 'minimum',
-        subBuilder: CarbonationType.create)
-    ..aOM<CarbonationType>(2, _omitFieldNames ? '' : 'maximum',
-        subBuilder: CarbonationType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CarbonationRangeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<CarbonationType>(1, _omitFieldNames ? '' : 'minimum', subBuilder: CarbonationType.create)
+    ..aOM<CarbonationType>(2, _omitFieldNames ? '' : 'maximum', subBuilder: CarbonationType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CarbonationRangeType clone() => deepCopy();
+  CarbonationRangeType clone() => CarbonationRangeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CarbonationRangeType copyWith(void Function(CarbonationRangeType) updates) =>
-      super.copyWith((message) => updates(message as CarbonationRangeType))
-          as CarbonationRangeType;
+  CarbonationRangeType copyWith(void Function(CarbonationRangeType) updates) => super.copyWith((message) => updates(message as CarbonationRangeType)) as CarbonationRangeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1160,11 +987,9 @@ class CarbonationRangeType extends $pb.GeneratedMessage {
   static CarbonationRangeType create() => CarbonationRangeType._();
   @$core.override
   CarbonationRangeType createEmptyInstance() => create();
-  static $pb.PbList<CarbonationRangeType> createRepeated() =>
-      $pb.PbList<CarbonationRangeType>();
+  static $pb.PbList<CarbonationRangeType> createRepeated() => $pb.PbList<CarbonationRangeType>();
   @$core.pragma('dart2js:noInline')
-  static CarbonationRangeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<CarbonationRangeType>(create);
+  static CarbonationRangeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CarbonationRangeType>(create);
   static CarbonationRangeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1203,29 +1028,19 @@ class BitternessRangeType extends $pb.GeneratedMessage {
 
   BitternessRangeType._();
 
-  factory BitternessRangeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory BitternessRangeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory BitternessRangeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory BitternessRangeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'BitternessRangeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<BitternessType>(1, _omitFieldNames ? '' : 'minimum',
-        subBuilder: BitternessType.create)
-    ..aOM<BitternessType>(2, _omitFieldNames ? '' : 'maximum',
-        subBuilder: BitternessType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BitternessRangeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<BitternessType>(1, _omitFieldNames ? '' : 'minimum', subBuilder: BitternessType.create)
+    ..aOM<BitternessType>(2, _omitFieldNames ? '' : 'maximum', subBuilder: BitternessType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BitternessRangeType clone() => deepCopy();
+  BitternessRangeType clone() => BitternessRangeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BitternessRangeType copyWith(void Function(BitternessRangeType) updates) =>
-      super.copyWith((message) => updates(message as BitternessRangeType))
-          as BitternessRangeType;
+  BitternessRangeType copyWith(void Function(BitternessRangeType) updates) => super.copyWith((message) => updates(message as BitternessRangeType)) as BitternessRangeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1234,11 +1049,9 @@ class BitternessRangeType extends $pb.GeneratedMessage {
   static BitternessRangeType create() => BitternessRangeType._();
   @$core.override
   BitternessRangeType createEmptyInstance() => create();
-  static $pb.PbList<BitternessRangeType> createRepeated() =>
-      $pb.PbList<BitternessRangeType>();
+  static $pb.PbList<BitternessRangeType> createRepeated() => $pb.PbList<BitternessRangeType>();
   @$core.pragma('dart2js:noInline')
-  static BitternessRangeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<BitternessRangeType>(create);
+  static BitternessRangeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BitternessRangeType>(create);
   static BitternessRangeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1277,29 +1090,19 @@ class TemperatureRangeType extends $pb.GeneratedMessage {
 
   TemperatureRangeType._();
 
-  factory TemperatureRangeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory TemperatureRangeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory TemperatureRangeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory TemperatureRangeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'TemperatureRangeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<TemperatureType>(1, _omitFieldNames ? '' : 'minimum',
-        subBuilder: TemperatureType.create)
-    ..aOM<TemperatureType>(2, _omitFieldNames ? '' : 'maximum',
-        subBuilder: TemperatureType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TemperatureRangeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<TemperatureType>(1, _omitFieldNames ? '' : 'minimum', subBuilder: TemperatureType.create)
+    ..aOM<TemperatureType>(2, _omitFieldNames ? '' : 'maximum', subBuilder: TemperatureType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TemperatureRangeType clone() => deepCopy();
+  TemperatureRangeType clone() => TemperatureRangeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TemperatureRangeType copyWith(void Function(TemperatureRangeType) updates) =>
-      super.copyWith((message) => updates(message as TemperatureRangeType))
-          as TemperatureRangeType;
+  TemperatureRangeType copyWith(void Function(TemperatureRangeType) updates) => super.copyWith((message) => updates(message as TemperatureRangeType)) as TemperatureRangeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1308,11 +1111,9 @@ class TemperatureRangeType extends $pb.GeneratedMessage {
   static TemperatureRangeType create() => TemperatureRangeType._();
   @$core.override
   TemperatureRangeType createEmptyInstance() => create();
-  static $pb.PbList<TemperatureRangeType> createRepeated() =>
-      $pb.PbList<TemperatureRangeType>();
+  static $pb.PbList<TemperatureRangeType> createRepeated() => $pb.PbList<TemperatureRangeType>();
   @$core.pragma('dart2js:noInline')
-  static TemperatureRangeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<TemperatureRangeType>(create);
+  static TemperatureRangeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TemperatureRangeType>(create);
   static TemperatureRangeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1351,29 +1152,19 @@ class ColorRangeType extends $pb.GeneratedMessage {
 
   ColorRangeType._();
 
-  factory ColorRangeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory ColorRangeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory ColorRangeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory ColorRangeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ColorRangeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<ColorType>(1, _omitFieldNames ? '' : 'minimum',
-        subBuilder: ColorType.create)
-    ..aOM<ColorType>(2, _omitFieldNames ? '' : 'maximum',
-        subBuilder: ColorType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ColorRangeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<ColorType>(1, _omitFieldNames ? '' : 'minimum', subBuilder: ColorType.create)
+    ..aOM<ColorType>(2, _omitFieldNames ? '' : 'maximum', subBuilder: ColorType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ColorRangeType clone() => deepCopy();
+  ColorRangeType clone() => ColorRangeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ColorRangeType copyWith(void Function(ColorRangeType) updates) =>
-      super.copyWith((message) => updates(message as ColorRangeType))
-          as ColorRangeType;
+  ColorRangeType copyWith(void Function(ColorRangeType) updates) => super.copyWith((message) => updates(message as ColorRangeType)) as ColorRangeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1382,11 +1173,9 @@ class ColorRangeType extends $pb.GeneratedMessage {
   static ColorRangeType create() => ColorRangeType._();
   @$core.override
   ColorRangeType createEmptyInstance() => create();
-  static $pb.PbList<ColorRangeType> createRepeated() =>
-      $pb.PbList<ColorRangeType>();
+  static $pb.PbList<ColorRangeType> createRepeated() => $pb.PbList<ColorRangeType>();
   @$core.pragma('dart2js:noInline')
-  static ColorRangeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ColorRangeType>(create);
+  static ColorRangeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ColorRangeType>(create);
   static ColorRangeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1425,29 +1214,19 @@ class GravityRangeType extends $pb.GeneratedMessage {
 
   GravityRangeType._();
 
-  factory GravityRangeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory GravityRangeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory GravityRangeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory GravityRangeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'GravityRangeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<GravityType>(1, _omitFieldNames ? '' : 'minimum',
-        subBuilder: GravityType.create)
-    ..aOM<GravityType>(2, _omitFieldNames ? '' : 'maximum',
-        subBuilder: GravityType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GravityRangeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<GravityType>(1, _omitFieldNames ? '' : 'minimum', subBuilder: GravityType.create)
+    ..aOM<GravityType>(2, _omitFieldNames ? '' : 'maximum', subBuilder: GravityType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GravityRangeType clone() => deepCopy();
+  GravityRangeType clone() => GravityRangeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  GravityRangeType copyWith(void Function(GravityRangeType) updates) =>
-      super.copyWith((message) => updates(message as GravityRangeType))
-          as GravityRangeType;
+  GravityRangeType copyWith(void Function(GravityRangeType) updates) => super.copyWith((message) => updates(message as GravityRangeType)) as GravityRangeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1456,11 +1235,9 @@ class GravityRangeType extends $pb.GeneratedMessage {
   static GravityRangeType create() => GravityRangeType._();
   @$core.override
   GravityRangeType createEmptyInstance() => create();
-  static $pb.PbList<GravityRangeType> createRepeated() =>
-      $pb.PbList<GravityRangeType>();
+  static $pb.PbList<GravityRangeType> createRepeated() => $pb.PbList<GravityRangeType>();
   @$core.pragma('dart2js:noInline')
-  static GravityRangeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<GravityRangeType>(create);
+  static GravityRangeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GravityRangeType>(create);
   static GravityRangeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1499,29 +1276,19 @@ class PercentRangeType extends $pb.GeneratedMessage {
 
   PercentRangeType._();
 
-  factory PercentRangeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory PercentRangeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory PercentRangeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory PercentRangeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'PercentRangeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<PercentType>(1, _omitFieldNames ? '' : 'minimum',
-        subBuilder: PercentType.create)
-    ..aOM<PercentType>(2, _omitFieldNames ? '' : 'maximum',
-        subBuilder: PercentType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PercentRangeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<PercentType>(1, _omitFieldNames ? '' : 'minimum', subBuilder: PercentType.create)
+    ..aOM<PercentType>(2, _omitFieldNames ? '' : 'maximum', subBuilder: PercentType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PercentRangeType clone() => deepCopy();
+  PercentRangeType clone() => PercentRangeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PercentRangeType copyWith(void Function(PercentRangeType) updates) =>
-      super.copyWith((message) => updates(message as PercentRangeType))
-          as PercentRangeType;
+  PercentRangeType copyWith(void Function(PercentRangeType) updates) => super.copyWith((message) => updates(message as PercentRangeType)) as PercentRangeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1530,11 +1297,9 @@ class PercentRangeType extends $pb.GeneratedMessage {
   static PercentRangeType create() => PercentRangeType._();
   @$core.override
   PercentRangeType createEmptyInstance() => create();
-  static $pb.PbList<PercentRangeType> createRepeated() =>
-      $pb.PbList<PercentRangeType>();
+  static $pb.PbList<PercentRangeType> createRepeated() => $pb.PbList<PercentRangeType>();
   @$core.pragma('dart2js:noInline')
-  static PercentRangeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<PercentRangeType>(create);
+  static PercentRangeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PercentRangeType>(create);
   static PercentRangeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1573,29 +1338,19 @@ class TimeRangeType extends $pb.GeneratedMessage {
 
   TimeRangeType._();
 
-  factory TimeRangeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory TimeRangeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory TimeRangeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory TimeRangeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'TimeRangeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<TimeType>(1, _omitFieldNames ? '' : 'minimum',
-        subBuilder: TimeType.create)
-    ..aOM<TimeType>(2, _omitFieldNames ? '' : 'maximum',
-        subBuilder: TimeType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TimeRangeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<TimeType>(1, _omitFieldNames ? '' : 'minimum', subBuilder: TimeType.create)
+    ..aOM<TimeType>(2, _omitFieldNames ? '' : 'maximum', subBuilder: TimeType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TimeRangeType clone() => deepCopy();
+  TimeRangeType clone() => TimeRangeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TimeRangeType copyWith(void Function(TimeRangeType) updates) =>
-      super.copyWith((message) => updates(message as TimeRangeType))
-          as TimeRangeType;
+  TimeRangeType copyWith(void Function(TimeRangeType) updates) => super.copyWith((message) => updates(message as TimeRangeType)) as TimeRangeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1604,11 +1359,9 @@ class TimeRangeType extends $pb.GeneratedMessage {
   static TimeRangeType create() => TimeRangeType._();
   @$core.override
   TimeRangeType createEmptyInstance() => create();
-  static $pb.PbList<TimeRangeType> createRepeated() =>
-      $pb.PbList<TimeRangeType>();
+  static $pb.PbList<TimeRangeType> createRepeated() => $pb.PbList<TimeRangeType>();
   @$core.pragma('dart2js:noInline')
-  static TimeRangeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<TimeRangeType>(create);
+  static TimeRangeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TimeRangeType>(create);
   static TimeRangeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1647,29 +1400,19 @@ class ViscosityRangeType extends $pb.GeneratedMessage {
 
   ViscosityRangeType._();
 
-  factory ViscosityRangeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory ViscosityRangeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory ViscosityRangeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory ViscosityRangeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ViscosityRangeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<ViscosityType>(1, _omitFieldNames ? '' : 'minimum',
-        subBuilder: ViscosityType.create)
-    ..aOM<ViscosityType>(2, _omitFieldNames ? '' : 'maximum',
-        subBuilder: ViscosityType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ViscosityRangeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<ViscosityType>(1, _omitFieldNames ? '' : 'minimum', subBuilder: ViscosityType.create)
+    ..aOM<ViscosityType>(2, _omitFieldNames ? '' : 'maximum', subBuilder: ViscosityType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ViscosityRangeType clone() => deepCopy();
+  ViscosityRangeType clone() => ViscosityRangeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ViscosityRangeType copyWith(void Function(ViscosityRangeType) updates) =>
-      super.copyWith((message) => updates(message as ViscosityRangeType))
-          as ViscosityRangeType;
+  ViscosityRangeType copyWith(void Function(ViscosityRangeType) updates) => super.copyWith((message) => updates(message as ViscosityRangeType)) as ViscosityRangeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1678,11 +1421,9 @@ class ViscosityRangeType extends $pb.GeneratedMessage {
   static ViscosityRangeType create() => ViscosityRangeType._();
   @$core.override
   ViscosityRangeType createEmptyInstance() => create();
-  static $pb.PbList<ViscosityRangeType> createRepeated() =>
-      $pb.PbList<ViscosityRangeType>();
+  static $pb.PbList<ViscosityRangeType> createRepeated() => $pb.PbList<ViscosityRangeType>();
   @$core.pragma('dart2js:noInline')
-  static ViscosityRangeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ViscosityRangeType>(create);
+  static ViscosityRangeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ViscosityRangeType>(create);
   static ViscosityRangeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1721,30 +1462,19 @@ class DiastaticPowerRangeType extends $pb.GeneratedMessage {
 
   DiastaticPowerRangeType._();
 
-  factory DiastaticPowerRangeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory DiastaticPowerRangeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory DiastaticPowerRangeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory DiastaticPowerRangeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'DiastaticPowerRangeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<DiastaticPowerType>(1, _omitFieldNames ? '' : 'minimum',
-        subBuilder: DiastaticPowerType.create)
-    ..aOM<DiastaticPowerType>(2, _omitFieldNames ? '' : 'maximum',
-        subBuilder: DiastaticPowerType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DiastaticPowerRangeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<DiastaticPowerType>(1, _omitFieldNames ? '' : 'minimum', subBuilder: DiastaticPowerType.create)
+    ..aOM<DiastaticPowerType>(2, _omitFieldNames ? '' : 'maximum', subBuilder: DiastaticPowerType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DiastaticPowerRangeType clone() => deepCopy();
+  DiastaticPowerRangeType clone() => DiastaticPowerRangeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DiastaticPowerRangeType copyWith(
-          void Function(DiastaticPowerRangeType) updates) =>
-      super.copyWith((message) => updates(message as DiastaticPowerRangeType))
-          as DiastaticPowerRangeType;
+  DiastaticPowerRangeType copyWith(void Function(DiastaticPowerRangeType) updates) => super.copyWith((message) => updates(message as DiastaticPowerRangeType)) as DiastaticPowerRangeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1753,11 +1483,9 @@ class DiastaticPowerRangeType extends $pb.GeneratedMessage {
   static DiastaticPowerRangeType create() => DiastaticPowerRangeType._();
   @$core.override
   DiastaticPowerRangeType createEmptyInstance() => create();
-  static $pb.PbList<DiastaticPowerRangeType> createRepeated() =>
-      $pb.PbList<DiastaticPowerRangeType>();
+  static $pb.PbList<DiastaticPowerRangeType> createRepeated() => $pb.PbList<DiastaticPowerRangeType>();
   @$core.pragma('dart2js:noInline')
-  static DiastaticPowerRangeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<DiastaticPowerRangeType>(create);
+  static DiastaticPowerRangeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DiastaticPowerRangeType>(create);
   static DiastaticPowerRangeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1796,30 +1524,19 @@ class SpecificVolumeRangeType extends $pb.GeneratedMessage {
 
   SpecificVolumeRangeType._();
 
-  factory SpecificVolumeRangeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory SpecificVolumeRangeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory SpecificVolumeRangeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory SpecificVolumeRangeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'SpecificVolumeRangeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<SpecificVolumeType>(1, _omitFieldNames ? '' : 'minimum',
-        subBuilder: SpecificVolumeType.create)
-    ..aOM<SpecificVolumeType>(2, _omitFieldNames ? '' : 'maximum',
-        subBuilder: SpecificVolumeType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpecificVolumeRangeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<SpecificVolumeType>(1, _omitFieldNames ? '' : 'minimum', subBuilder: SpecificVolumeType.create)
+    ..aOM<SpecificVolumeType>(2, _omitFieldNames ? '' : 'maximum', subBuilder: SpecificVolumeType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  SpecificVolumeRangeType clone() => deepCopy();
+  SpecificVolumeRangeType clone() => SpecificVolumeRangeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  SpecificVolumeRangeType copyWith(
-          void Function(SpecificVolumeRangeType) updates) =>
-      super.copyWith((message) => updates(message as SpecificVolumeRangeType))
-          as SpecificVolumeRangeType;
+  SpecificVolumeRangeType copyWith(void Function(SpecificVolumeRangeType) updates) => super.copyWith((message) => updates(message as SpecificVolumeRangeType)) as SpecificVolumeRangeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1828,11 +1545,9 @@ class SpecificVolumeRangeType extends $pb.GeneratedMessage {
   static SpecificVolumeRangeType create() => SpecificVolumeRangeType._();
   @$core.override
   SpecificVolumeRangeType createEmptyInstance() => create();
-  static $pb.PbList<SpecificVolumeRangeType> createRepeated() =>
-      $pb.PbList<SpecificVolumeRangeType>();
+  static $pb.PbList<SpecificVolumeRangeType> createRepeated() => $pb.PbList<SpecificVolumeRangeType>();
   @$core.pragma('dart2js:noInline')
-  static SpecificVolumeRangeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<SpecificVolumeRangeType>(create);
+  static SpecificVolumeRangeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpecificVolumeRangeType>(create);
   static SpecificVolumeRangeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1871,29 +1586,19 @@ class AcidityRangeType extends $pb.GeneratedMessage {
 
   AcidityRangeType._();
 
-  factory AcidityRangeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory AcidityRangeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory AcidityRangeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory AcidityRangeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'AcidityRangeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<AcidityType>(1, _omitFieldNames ? '' : 'minimum',
-        subBuilder: AcidityType.create)
-    ..aOM<AcidityType>(2, _omitFieldNames ? '' : 'maximum',
-        subBuilder: AcidityType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AcidityRangeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<AcidityType>(1, _omitFieldNames ? '' : 'minimum', subBuilder: AcidityType.create)
+    ..aOM<AcidityType>(2, _omitFieldNames ? '' : 'maximum', subBuilder: AcidityType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AcidityRangeType clone() => deepCopy();
+  AcidityRangeType clone() => AcidityRangeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  AcidityRangeType copyWith(void Function(AcidityRangeType) updates) =>
-      super.copyWith((message) => updates(message as AcidityRangeType))
-          as AcidityRangeType;
+  AcidityRangeType copyWith(void Function(AcidityRangeType) updates) => super.copyWith((message) => updates(message as AcidityRangeType)) as AcidityRangeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1902,11 +1607,9 @@ class AcidityRangeType extends $pb.GeneratedMessage {
   static AcidityRangeType create() => AcidityRangeType._();
   @$core.override
   AcidityRangeType createEmptyInstance() => create();
-  static $pb.PbList<AcidityRangeType> createRepeated() =>
-      $pb.PbList<AcidityRangeType>();
+  static $pb.PbList<AcidityRangeType> createRepeated() => $pb.PbList<AcidityRangeType>();
   @$core.pragma('dart2js:noInline')
-  static AcidityRangeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<AcidityRangeType>(create);
+  static AcidityRangeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AcidityRangeType>(create);
   static AcidityRangeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1945,30 +1648,19 @@ class ConcentrationRangeType extends $pb.GeneratedMessage {
 
   ConcentrationRangeType._();
 
-  factory ConcentrationRangeType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory ConcentrationRangeType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory ConcentrationRangeType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory ConcentrationRangeType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'ConcentrationRangeType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<ConcentrationType>(1, _omitFieldNames ? '' : 'minimum',
-        subBuilder: ConcentrationType.create)
-    ..aOM<ConcentrationType>(2, _omitFieldNames ? '' : 'maximum',
-        subBuilder: ConcentrationType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConcentrationRangeType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<ConcentrationType>(1, _omitFieldNames ? '' : 'minimum', subBuilder: ConcentrationType.create)
+    ..aOM<ConcentrationType>(2, _omitFieldNames ? '' : 'maximum', subBuilder: ConcentrationType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ConcentrationRangeType clone() => deepCopy();
+  ConcentrationRangeType clone() => ConcentrationRangeType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  ConcentrationRangeType copyWith(
-          void Function(ConcentrationRangeType) updates) =>
-      super.copyWith((message) => updates(message as ConcentrationRangeType))
-          as ConcentrationRangeType;
+  ConcentrationRangeType copyWith(void Function(ConcentrationRangeType) updates) => super.copyWith((message) => updates(message as ConcentrationRangeType)) as ConcentrationRangeType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -1977,11 +1669,9 @@ class ConcentrationRangeType extends $pb.GeneratedMessage {
   static ConcentrationRangeType create() => ConcentrationRangeType._();
   @$core.override
   ConcentrationRangeType createEmptyInstance() => create();
-  static $pb.PbList<ConcentrationRangeType> createRepeated() =>
-      $pb.PbList<ConcentrationRangeType>();
+  static $pb.PbList<ConcentrationRangeType> createRepeated() => $pb.PbList<ConcentrationRangeType>();
   @$core.pragma('dart2js:noInline')
-  static ConcentrationRangeType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<ConcentrationRangeType>(create);
+  static ConcentrationRangeType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConcentrationRangeType>(create);
   static ConcentrationRangeType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -2021,27 +1711,19 @@ class RateType extends $pb.GeneratedMessage {
 
   RateType._();
 
-  factory RateType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory RateType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory RateType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory RateType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RateType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<RateUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: RateUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RateType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<RateUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: RateUnit.RATE_UNIT_UNSPECIFIED, valueOf: RateUnit.valueOf, enumValues: RateUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RateType clone() => deepCopy();
+  RateType clone() => RateType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RateType copyWith(void Function(RateType) updates) =>
-      super.copyWith((message) => updates(message as RateType)) as RateType;
+  RateType copyWith(void Function(RateType) updates) => super.copyWith((message) => updates(message as RateType)) as RateType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -2052,8 +1734,7 @@ class RateType extends $pb.GeneratedMessage {
   RateType createEmptyInstance() => create();
   static $pb.PbList<RateType> createRepeated() => $pb.PbList<RateType>();
   @$core.pragma('dart2js:noInline')
-  static RateType getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RateType>(create);
+  static RateType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RateType>(create);
   static RateType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -2088,28 +1769,19 @@ class PressureType extends $pb.GeneratedMessage {
 
   PressureType._();
 
-  factory PressureType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory PressureType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory PressureType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory PressureType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'PressureType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<PressureUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: PressureUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PressureType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<PressureUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: PressureUnit.PRESSURE_UNIT_UNSPECIFIED, valueOf: PressureUnit.valueOf, enumValues: PressureUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PressureType clone() => deepCopy();
+  PressureType clone() => PressureType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PressureType copyWith(void Function(PressureType) updates) =>
-      super.copyWith((message) => updates(message as PressureType))
-          as PressureType;
+  PressureType copyWith(void Function(PressureType) updates) => super.copyWith((message) => updates(message as PressureType)) as PressureType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -2118,11 +1790,9 @@ class PressureType extends $pb.GeneratedMessage {
   static PressureType create() => PressureType._();
   @$core.override
   PressureType createEmptyInstance() => create();
-  static $pb.PbList<PressureType> createRepeated() =>
-      $pb.PbList<PressureType>();
+  static $pb.PbList<PressureType> createRepeated() => $pb.PbList<PressureType>();
   @$core.pragma('dart2js:noInline')
-  static PressureType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<PressureType>(create);
+  static PressureType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PressureType>(create);
   static PressureType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -2157,28 +1827,19 @@ class EnzymeActivityType extends $pb.GeneratedMessage {
 
   EnzymeActivityType._();
 
-  factory EnzymeActivityType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory EnzymeActivityType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory EnzymeActivityType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory EnzymeActivityType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'EnzymeActivityType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'value')
-    ..aE<EnzymeActivityUnit>(2, _omitFieldNames ? '' : 'unit',
-        enumValues: EnzymeActivityUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EnzymeActivityType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<EnzymeActivityUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: EnzymeActivityUnit.ENZYME_ACTIVITY_UNIT_UNSPECIFIED, valueOf: EnzymeActivityUnit.valueOf, enumValues: EnzymeActivityUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EnzymeActivityType clone() => deepCopy();
+  EnzymeActivityType clone() => EnzymeActivityType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EnzymeActivityType copyWith(void Function(EnzymeActivityType) updates) =>
-      super.copyWith((message) => updates(message as EnzymeActivityType))
-          as EnzymeActivityType;
+  EnzymeActivityType copyWith(void Function(EnzymeActivityType) updates) => super.copyWith((message) => updates(message as EnzymeActivityType)) as EnzymeActivityType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -2187,11 +1848,9 @@ class EnzymeActivityType extends $pb.GeneratedMessage {
   static EnzymeActivityType create() => EnzymeActivityType._();
   @$core.override
   EnzymeActivityType createEmptyInstance() => create();
-  static $pb.PbList<EnzymeActivityType> createRepeated() =>
-      $pb.PbList<EnzymeActivityType>();
+  static $pb.PbList<EnzymeActivityType> createRepeated() => $pb.PbList<EnzymeActivityType>();
   @$core.pragma('dart2js:noInline')
-  static EnzymeActivityType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<EnzymeActivityType>(create);
+  static EnzymeActivityType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EnzymeActivityType>(create);
   static EnzymeActivityType? _defaultInstance;
 
   /// Numeric activity value as reported by the lab
@@ -2228,29 +1887,19 @@ class EnzymeActivity extends $pb.GeneratedMessage {
 
   EnzymeActivity._();
 
-  factory EnzymeActivity.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory EnzymeActivity.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory EnzymeActivity.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory EnzymeActivity.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'EnzymeActivity',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aE<EnzymeType>(1, _omitFieldNames ? '' : 'kind',
-        enumValues: EnzymeType.values)
-    ..aOM<EnzymeActivityType>(2, _omitFieldNames ? '' : 'activity',
-        subBuilder: EnzymeActivityType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EnzymeActivity', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..e<EnzymeType>(1, _omitFieldNames ? '' : 'kind', $pb.PbFieldType.OE, defaultOrMaker: EnzymeType.ENZYME_TYPE_UNSPECIFIED, valueOf: EnzymeType.valueOf, enumValues: EnzymeType.values)
+    ..aOM<EnzymeActivityType>(2, _omitFieldNames ? '' : 'activity', subBuilder: EnzymeActivityType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EnzymeActivity clone() => deepCopy();
+  EnzymeActivity clone() => EnzymeActivity()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EnzymeActivity copyWith(void Function(EnzymeActivity) updates) =>
-      super.copyWith((message) => updates(message as EnzymeActivity))
-          as EnzymeActivity;
+  EnzymeActivity copyWith(void Function(EnzymeActivity) updates) => super.copyWith((message) => updates(message as EnzymeActivity)) as EnzymeActivity;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -2259,11 +1908,9 @@ class EnzymeActivity extends $pb.GeneratedMessage {
   static EnzymeActivity create() => EnzymeActivity._();
   @$core.override
   EnzymeActivity createEmptyInstance() => create();
-  static $pb.PbList<EnzymeActivity> createRepeated() =>
-      $pb.PbList<EnzymeActivity>();
+  static $pb.PbList<EnzymeActivity> createRepeated() => $pb.PbList<EnzymeActivity>();
   @$core.pragma('dart2js:noInline')
-  static EnzymeActivity getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<EnzymeActivity>(create);
+  static EnzymeActivity getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EnzymeActivity>(create);
   static EnzymeActivity? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -2287,7 +1934,6 @@ class EnzymeActivity extends $pb.GeneratedMessage {
   EnzymeActivityType ensureActivity() => $_ensure(1);
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

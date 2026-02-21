@@ -15,45 +15,23 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class EquipmentBaseForm extends $pb.ProtobufEnum {
-  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_UNSPECIFIED =
-      EquipmentBaseForm._(
-          0, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_UNSPECIFIED');
-
+  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_UNSPECIFIED = EquipmentBaseForm._(0, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_UNSPECIFIED');
   /// HLT
-  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_HLT =
-      EquipmentBaseForm._(1, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_HLT');
-
+  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_HLT = EquipmentBaseForm._(1, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_HLT');
   /// Mash Tun
-  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_MASH_TUN =
-      EquipmentBaseForm._(
-          2, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_MASH_TUN');
-
+  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_MASH_TUN = EquipmentBaseForm._(2, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_MASH_TUN');
   /// Lauter Tun
-  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_LAUTER_TUN =
-      EquipmentBaseForm._(
-          3, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_LAUTER_TUN');
-
+  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_LAUTER_TUN = EquipmentBaseForm._(3, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_LAUTER_TUN');
   /// Brew Kettle
-  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_BREW_KETTLE =
-      EquipmentBaseForm._(
-          4, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_BREW_KETTLE');
-
+  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_BREW_KETTLE = EquipmentBaseForm._(4, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_BREW_KETTLE');
   /// Fermenter
-  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_FERMENTER =
-      EquipmentBaseForm._(
-          5, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_FERMENTER');
-
+  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_FERMENTER = EquipmentBaseForm._(5, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_FERMENTER');
   /// Aging Vessel
-  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_AGING_VESSEL =
-      EquipmentBaseForm._(
-          6, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_AGING_VESSEL');
-
+  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_AGING_VESSEL = EquipmentBaseForm._(6, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_AGING_VESSEL');
   /// Packaging Vessel
-  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_PACKAGING_VESSEL =
-      EquipmentBaseForm._(
-          7, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_PACKAGING_VESSEL');
+  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_PACKAGING_VESSEL = EquipmentBaseForm._(7, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_PACKAGING_VESSEL');
 
-  static const $core.List<EquipmentBaseForm> values = <EquipmentBaseForm>[
+  static const $core.List<EquipmentBaseForm> values = <EquipmentBaseForm> [
     EQUIPMENT_BASE_FORM_UNSPECIFIED,
     EQUIPMENT_BASE_FORM_HLT,
     EQUIPMENT_BASE_FORM_MASH_TUN,
@@ -64,13 +42,11 @@ class EquipmentBaseForm extends $pb.ProtobufEnum {
     EQUIPMENT_BASE_FORM_PACKAGING_VESSEL,
   ];
 
-  static final $core.List<EquipmentBaseForm?> _byValue =
-      $pb.ProtobufEnum.$_initByValueList(values, 7);
-  static EquipmentBaseForm? valueOf($core.int value) =>
-      value < 0 || value >= _byValue.length ? null : _byValue[value];
+  static final $core.List<EquipmentBaseForm?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 7);
+  static EquipmentBaseForm? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
 
   const EquipmentBaseForm._(super.value, super.name);
 }
 
-const $core.bool _omitEnumNames =
-    $core.bool.fromEnvironment('protobuf.omit_enum_names');
+
+const $core.bool _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

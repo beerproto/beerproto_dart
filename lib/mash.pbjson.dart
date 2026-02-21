@@ -19,25 +19,9 @@ const MashProcedureType$json = {
   '1': 'MashProcedureType',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {
-      '1': 'grain_temperature',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TemperatureType',
-      '8': {},
-      '10': 'grainTemperature'
-    },
+    {'1': 'grain_temperature', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '8': {}, '10': 'grainTemperature'},
     {'1': 'notes', '3': 3, '4': 1, '5': 9, '10': 'notes'},
-    {
-      '1': 'mash_steps',
-      '3': 4,
-      '4': 3,
-      '5': 11,
-      '6': '.beerproto.v1.MashStepType',
-      '8': {},
-      '10': 'mashSteps'
-    },
+    {'1': 'mash_steps', '3': 4, '4': 3, '5': 11, '6': '.beerproto.v1.MashStepType', '8': {}, '10': 'mashSteps'},
     {'1': 'name', '3': 5, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
@@ -49,3 +33,4 @@ final $typed_data.Uint8List mashProcedureTypeDescriptor = $convert.base64Decode(
     'yAEBUhBncmFpblRlbXBlcmF0dXJlEhQKBW5vdGVzGAMgASgJUgVub3RlcxJDCgptYXNoX3N0ZX'
     'BzGAQgAygLMhouYmVlcnByb3RvLnYxLk1hc2hTdGVwVHlwZUIIukgFkgECCAFSCW1hc2hTdGVw'
     'cxIeCgRuYW1lGAUgASgJQgq6SAfIAQFyAhADUgRuYW1l');
+

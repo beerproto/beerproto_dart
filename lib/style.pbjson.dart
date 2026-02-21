@@ -46,15 +46,7 @@ const StyleBase$json = {
     {'1': 'category_number', '3': 3, '4': 1, '5': 5, '10': 'categoryNumber'},
     {'1': 'style_letter', '3': 4, '4': 1, '5': 9, '10': 'styleLetter'},
     {'1': 'style_guide', '3': 5, '4': 1, '5': 9, '8': {}, '10': 'styleGuide'},
-    {
-      '1': 'type',
-      '3': 6,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.StyleCategories',
-      '8': {},
-      '10': 'type'
-    },
+    {'1': 'type', '3': 6, '4': 1, '5': 14, '6': '.beerproto.v1.StyleCategories', '8': {}, '10': 'type'},
   ],
 };
 
@@ -70,78 +62,22 @@ final $typed_data.Uint8List styleBaseDescriptor = $convert.base64Decode(
 const StyleType$json = {
   '1': 'StyleType',
   '2': [
-    {
-      '1': 'base',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.StyleBase',
-      '8': {},
-      '10': 'base'
-    },
+    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.StyleBase', '8': {}, '10': 'base'},
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
     {'1': 'aroma', '3': 3, '4': 1, '5': 9, '10': 'aroma'},
     {'1': 'ingredients', '3': 4, '4': 1, '5': 9, '10': 'ingredients'},
     {'1': 'notes', '3': 5, '4': 1, '5': 9, '10': 'notes'},
     {'1': 'flavor', '3': 6, '4': 1, '5': 9, '10': 'flavor'},
     {'1': 'mouthfeel', '3': 7, '4': 1, '5': 9, '10': 'mouthfeel'},
-    {
-      '1': 'final_gravity',
-      '3': 8,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.GravityRangeType',
-      '10': 'finalGravity'
-    },
-    {
-      '1': 'color',
-      '3': 9,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ColorRangeType',
-      '10': 'color'
-    },
-    {
-      '1': 'original_gravity',
-      '3': 10,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.GravityRangeType',
-      '10': 'originalGravity'
-    },
+    {'1': 'final_gravity', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.GravityRangeType', '10': 'finalGravity'},
+    {'1': 'color', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.ColorRangeType', '10': 'color'},
+    {'1': 'original_gravity', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.GravityRangeType', '10': 'originalGravity'},
     {'1': 'examples', '3': 11, '4': 1, '5': 9, '10': 'examples'},
-    {
-      '1': 'carbonation',
-      '3': 12,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.CarbonationRangeType',
-      '10': 'carbonation'
-    },
-    {
-      '1': 'alcohol_by_volume',
-      '3': 13,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentRangeType',
-      '10': 'alcoholByVolume'
-    },
-    {
-      '1': 'international_bitterness_units',
-      '3': 14,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.BitternessRangeType',
-      '10': 'internationalBitternessUnits'
-    },
+    {'1': 'carbonation', '3': 12, '4': 1, '5': 11, '6': '.beerproto.v1.CarbonationRangeType', '10': 'carbonation'},
+    {'1': 'alcohol_by_volume', '3': 13, '4': 1, '5': 11, '6': '.beerproto.v1.PercentRangeType', '10': 'alcoholByVolume'},
+    {'1': 'international_bitterness_units', '3': 14, '4': 1, '5': 11, '6': '.beerproto.v1.BitternessRangeType', '10': 'internationalBitternessUnits'},
     {'1': 'appearance', '3': 15, '4': 1, '5': 9, '10': 'appearance'},
-    {
-      '1': 'overall_impression',
-      '3': 16,
-      '4': 1,
-      '5': 9,
-      '10': 'overallImpression'
-    },
+    {'1': 'overall_impression', '3': 16, '4': 1, '5': 9, '10': 'overallImpression'},
   ],
 };
 
@@ -167,15 +103,7 @@ final $typed_data.Uint8List styleTypeDescriptor = $convert.base64Decode(
 const RecipeStyleType$json = {
   '1': 'RecipeStyleType',
   '2': [
-    {
-      '1': 'base',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.StyleBase',
-      '8': {},
-      '10': 'base'
-    },
+    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.StyleBase', '8': {}, '10': 'base'},
   ],
 };
 
@@ -183,3 +111,4 @@ const RecipeStyleType$json = {
 final $typed_data.Uint8List recipeStyleTypeDescriptor = $convert.base64Decode(
     'Cg9SZWNpcGVTdHlsZVR5cGUSMwoEYmFzZRgBIAEoCzIXLmJlZXJwcm90by52MS5TdHlsZUJhc2'
     'VCBrpIA8gBAVIEYmFzZQ==');
+

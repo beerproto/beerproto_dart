@@ -102,24 +102,8 @@ const CultureBase$json = {
   '1': 'CultureBase',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
-    {
-      '1': 'type',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.CultureBaseType',
-      '8': {},
-      '10': 'type'
-    },
-    {
-      '1': 'form',
-      '3': 3,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.CultureBaseForm',
-      '8': {},
-      '10': 'form'
-    },
+    {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.CultureBaseType', '8': {}, '10': 'type'},
+    {'1': 'form', '3': 3, '4': 1, '5': 14, '6': '.beerproto.v1.CultureBaseForm', '8': {}, '10': 'form'},
     {'1': 'producer', '3': 4, '4': 1, '5': 9, '10': 'producer'},
     {'1': 'product_id', '3': 5, '4': 1, '5': 9, '10': 'productId'},
   ],
@@ -137,77 +121,20 @@ final $typed_data.Uint8List cultureBaseDescriptor = $convert.base64Decode(
 const CultureInformation$json = {
   '1': 'CultureInformation',
   '2': [
-    {
-      '1': 'base',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.CultureBase',
-      '8': {},
-      '10': 'base'
-    },
+    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.CultureBase', '8': {}, '10': 'base'},
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {
-      '1': 'temperature_range',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TemperatureRangeType',
-      '10': 'temperatureRange'
-    },
+    {'1': 'temperature_range', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureRangeType', '10': 'temperatureRange'},
     {'1': 'notes', '3': 4, '4': 1, '5': 9, '10': 'notes'},
     {'1': 'best_for', '3': 5, '4': 1, '5': 9, '10': 'bestFor'},
-    {
-      '1': 'inventory',
-      '3': 6,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.CultureInventoryType',
-      '10': 'inventory'
-    },
-    {
-      '1': 'alcohol_tolerance',
-      '3': 8,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'alcoholTolerance'
-    },
+    {'1': 'inventory', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.CultureInventoryType', '10': 'inventory'},
+    {'1': 'alcohol_tolerance', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'alcoholTolerance'},
     {'1': 'glucoamylase', '3': 9, '4': 1, '5': 8, '10': 'glucoamylase'},
-    {
-      '1': 'type',
-      '3': 10,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.CultureBaseType',
-      '10': 'type'
-    },
-    {
-      '1': 'flocculation',
-      '3': 11,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.QualitativeRangeUnit',
-      '10': 'flocculation'
-    },
-    {
-      '1': 'attenuation_range',
-      '3': 12,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentRangeType',
-      '10': 'attenuationRange'
-    },
+    {'1': 'type', '3': 10, '4': 1, '5': 14, '6': '.beerproto.v1.CultureBaseType', '10': 'type'},
+    {'1': 'flocculation', '3': 11, '4': 1, '5': 14, '6': '.beerproto.v1.QualitativeRangeUnit', '10': 'flocculation'},
+    {'1': 'attenuation_range', '3': 12, '4': 1, '5': 11, '6': '.beerproto.v1.PercentRangeType', '10': 'attenuationRange'},
     {'1': 'max_reuse', '3': 13, '4': 1, '5': 5, '10': 'maxReuse'},
     {'1': 'pof', '3': 14, '4': 1, '5': 8, '10': 'pof'},
-    {
-      '1': 'zymocide',
-      '3': 15,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.Zymocide',
-      '10': 'zymocide'
-    },
+    {'1': 'zymocide', '3': 15, '4': 1, '5': 11, '6': '.beerproto.v1.Zymocide', '10': 'zymocide'},
   ],
 };
 
@@ -231,75 +158,16 @@ final $typed_data.Uint8List cultureInformationDescriptor = $convert.base64Decode
 const CultureAdditionType$json = {
   '1': 'CultureAdditionType',
   '2': [
-    {
-      '1': 'base',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.CultureBase',
-      '8': {},
-      '10': 'base'
-    },
+    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.CultureBase', '8': {}, '10': 'base'},
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {
-      '1': 'cell_count_billions',
-      '3': 3,
-      '4': 1,
-      '5': 5,
-      '10': 'cellCountBillions'
-    },
+    {'1': 'cell_count_billions', '3': 3, '4': 1, '5': 5, '10': 'cellCountBillions'},
     {'1': 'times_cultured', '3': 4, '4': 1, '5': 5, '10': 'timesCultured'},
-    {
-      '1': 'type',
-      '3': 5,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.CultureBaseType',
-      '10': 'type'
-    },
-    {
-      '1': 'attenuation',
-      '3': 6,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'attenuation'
-    },
-    {
-      '1': 'timing',
-      '3': 7,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TimingType',
-      '10': 'timing'
-    },
-    {
-      '1': 'mass',
-      '3': 8,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.MassType',
-      '9': 0,
-      '10': 'mass'
-    },
-    {
-      '1': 'unit',
-      '3': 9,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.UnitType',
-      '9': 0,
-      '10': 'unit'
-    },
-    {
-      '1': 'volume',
-      '3': 10,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '9': 0,
-      '10': 'volume'
-    },
+    {'1': 'type', '3': 5, '4': 1, '5': 14, '6': '.beerproto.v1.CultureBaseType', '10': 'type'},
+    {'1': 'attenuation', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'attenuation'},
+    {'1': 'timing', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.TimingType', '10': 'timing'},
+    {'1': 'mass', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
+    {'1': 'unit', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.UnitType', '9': 0, '10': 'unit'},
+    {'1': 'volume', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -323,38 +191,10 @@ final $typed_data.Uint8List cultureAdditionTypeDescriptor = $convert.base64Decod
 const CultureInventoryType$json = {
   '1': 'CultureInventoryType',
   '2': [
-    {
-      '1': 'liquid',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '10': 'liquid'
-    },
-    {
-      '1': 'dry',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.MassType',
-      '10': 'dry'
-    },
-    {
-      '1': 'slant',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '10': 'slant'
-    },
-    {
-      '1': 'culture',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '10': 'culture'
-    },
+    {'1': 'liquid', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'liquid'},
+    {'1': 'dry', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '10': 'dry'},
+    {'1': 'slant', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'slant'},
+    {'1': 'culture', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'culture'},
   ],
 };
 
@@ -382,3 +222,4 @@ final $typed_data.Uint8List zymocideDescriptor = $convert.base64Decode(
     'CghaeW1vY2lkZRIQCgNubzEYASABKAhSA25vMRIQCgNubzIYAiABKAhSA25vMhISCgRubzI4GA'
     'MgASgIUgRubzI4EhIKBGtsdXMYBCABKAhSBGtsdXMSGAoHbmV1dHJhbBgFIAEoCFIHbmV1dHJh'
     'bA==');
+

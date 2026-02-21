@@ -44,166 +44,30 @@ const RecipeType$json = {
   '1': 'RecipeType',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {
-      '1': 'efficiency',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.EfficiencyType',
-      '8': {},
-      '10': 'efficiency'
-    },
-    {
-      '1': 'style',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.RecipeStyleType',
-      '10': 'style'
-    },
-    {
-      '1': 'ibu_estimate',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.IBUEstimateType',
-      '10': 'ibuEstimate'
-    },
-    {
-      '1': 'color_estimate',
-      '3': 5,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.ColorType',
-      '10': 'colorEstimate'
-    },
-    {
-      '1': 'beer_ph',
-      '3': 6,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.AcidityType',
-      '10': 'beerPh'
-    },
+    {'1': 'efficiency', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.EfficiencyType', '8': {}, '10': 'efficiency'},
+    {'1': 'style', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.RecipeStyleType', '10': 'style'},
+    {'1': 'ibu_estimate', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.IBUEstimateType', '10': 'ibuEstimate'},
+    {'1': 'color_estimate', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.ColorType', '10': 'colorEstimate'},
+    {'1': 'beer_ph', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'beerPh'},
     {'1': 'name', '3': 7, '4': 1, '5': 9, '8': {}, '10': 'name'},
-    {
-      '1': 'type',
-      '3': 8,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.RecipeUnit',
-      '8': {},
-      '10': 'type'
-    },
+    {'1': 'type', '3': 8, '4': 1, '5': 14, '6': '.beerproto.v1.RecipeUnit', '8': {}, '10': 'type'},
     {'1': 'coauthor', '3': 9, '4': 1, '5': 9, '10': 'coauthor'},
-    {
-      '1': 'original_gravity',
-      '3': 10,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.GravityType',
-      '10': 'originalGravity'
-    },
-    {
-      '1': 'final_gravity',
-      '3': 11,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.GravityType',
-      '10': 'finalGravity'
-    },
-    {
-      '1': 'carbonation',
-      '3': 12,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.CarbonationType',
-      '10': 'carbonation'
-    },
-    {
-      '1': 'fermentation',
-      '3': 13,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.FermentationProcedureType',
-      '10': 'fermentation'
-    },
+    {'1': 'original_gravity', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'originalGravity'},
+    {'1': 'final_gravity', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'finalGravity'},
+    {'1': 'carbonation', '3': 12, '4': 1, '5': 11, '6': '.beerproto.v1.CarbonationType', '10': 'carbonation'},
+    {'1': 'fermentation', '3': 13, '4': 1, '5': 11, '6': '.beerproto.v1.FermentationProcedureType', '10': 'fermentation'},
     {'1': 'author', '3': 14, '4': 1, '5': 9, '8': {}, '10': 'author'},
-    {
-      '1': 'ingredients',
-      '3': 15,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.IngredientsType',
-      '8': {},
-      '10': 'ingredients'
-    },
-    {
-      '1': 'mash',
-      '3': 16,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.MashProcedureType',
-      '10': 'mash'
-    },
-    {
-      '1': 'packaging',
-      '3': 17,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PackagingProcedureType',
-      '10': 'packaging'
-    },
-    {
-      '1': 'boil',
-      '3': 18,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.BoilProcedureType',
-      '10': 'boil'
-    },
-    {
-      '1': 'taste',
-      '3': 19,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TasteType',
-      '10': 'taste'
-    },
-    {
-      '1': 'calories_per_pint',
-      '3': 20,
-      '4': 1,
-      '5': 1,
-      '10': 'caloriesPerPint'
-    },
+    {'1': 'ingredients', '3': 15, '4': 1, '5': 11, '6': '.beerproto.v1.IngredientsType', '8': {}, '10': 'ingredients'},
+    {'1': 'mash', '3': 16, '4': 1, '5': 11, '6': '.beerproto.v1.MashProcedureType', '10': 'mash'},
+    {'1': 'packaging', '3': 17, '4': 1, '5': 11, '6': '.beerproto.v1.PackagingProcedureType', '10': 'packaging'},
+    {'1': 'boil', '3': 18, '4': 1, '5': 11, '6': '.beerproto.v1.BoilProcedureType', '10': 'boil'},
+    {'1': 'taste', '3': 19, '4': 1, '5': 11, '6': '.beerproto.v1.TasteType', '10': 'taste'},
+    {'1': 'calories_per_pint', '3': 20, '4': 1, '5': 1, '10': 'caloriesPerPint'},
     {'1': 'created', '3': 21, '4': 1, '5': 9, '10': 'created'},
-    {
-      '1': 'batch_size',
-      '3': 22,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '8': {},
-      '10': 'batchSize'
-    },
+    {'1': 'batch_size', '3': 22, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '8': {}, '10': 'batchSize'},
     {'1': 'notes', '3': 23, '4': 1, '5': 9, '10': 'notes'},
-    {
-      '1': 'alcohol_by_volume',
-      '3': 24,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'alcoholByVolume'
-    },
-    {
-      '1': 'apparent_attenuation',
-      '3': 25,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'apparentAttenuation'
-    },
+    {'1': 'alcohol_by_volume', '3': 24, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'alcoholByVolume'},
+    {'1': 'apparent_attenuation', '3': 25, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'apparentAttenuation'},
   ],
 };
 
@@ -239,39 +103,10 @@ final $typed_data.Uint8List recipeTypeDescriptor = $convert.base64Decode(
 const EfficiencyType$json = {
   '1': 'EfficiencyType',
   '2': [
-    {
-      '1': 'conversion',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'conversion'
-    },
-    {
-      '1': 'lauter',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'lauter'
-    },
-    {
-      '1': 'mash',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '10': 'mash'
-    },
-    {
-      '1': 'brewhouse',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.PercentType',
-      '8': {},
-      '10': 'brewhouse'
-    },
+    {'1': 'conversion', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'conversion'},
+    {'1': 'lauter', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'lauter'},
+    {'1': 'mash', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'mash'},
+    {'1': 'brewhouse', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '8': {}, '10': 'brewhouse'},
   ],
 };
 
@@ -287,47 +122,11 @@ final $typed_data.Uint8List efficiencyTypeDescriptor = $convert.base64Decode(
 const IngredientsType$json = {
   '1': 'IngredientsType',
   '2': [
-    {
-      '1': 'miscellaneous_additions',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.beerproto.v1.MiscellaneousAdditionType',
-      '10': 'miscellaneousAdditions'
-    },
-    {
-      '1': 'culture_additions',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6': '.beerproto.v1.CultureAdditionType',
-      '10': 'cultureAdditions'
-    },
-    {
-      '1': 'water_additions',
-      '3': 3,
-      '4': 3,
-      '5': 11,
-      '6': '.beerproto.v1.WaterAdditionType',
-      '10': 'waterAdditions'
-    },
-    {
-      '1': 'fermentable_additions',
-      '3': 4,
-      '4': 3,
-      '5': 11,
-      '6': '.beerproto.v1.FermentableAdditionType',
-      '8': {},
-      '10': 'fermentableAdditions'
-    },
-    {
-      '1': 'hop_additions',
-      '3': 5,
-      '4': 3,
-      '5': 11,
-      '6': '.beerproto.v1.HopAdditionType',
-      '10': 'hopAdditions'
-    },
+    {'1': 'miscellaneous_additions', '3': 1, '4': 3, '5': 11, '6': '.beerproto.v1.MiscellaneousAdditionType', '10': 'miscellaneousAdditions'},
+    {'1': 'culture_additions', '3': 2, '4': 3, '5': 11, '6': '.beerproto.v1.CultureAdditionType', '10': 'cultureAdditions'},
+    {'1': 'water_additions', '3': 3, '4': 3, '5': 11, '6': '.beerproto.v1.WaterAdditionType', '10': 'waterAdditions'},
+    {'1': 'fermentable_additions', '3': 4, '4': 3, '5': 11, '6': '.beerproto.v1.FermentableAdditionType', '8': {}, '10': 'fermentableAdditions'},
+    {'1': 'hop_additions', '3': 5, '4': 3, '5': 11, '6': '.beerproto.v1.HopAdditionType', '10': 'hopAdditions'},
   ],
 };
 
@@ -355,3 +154,4 @@ const TasteType$json = {
 final $typed_data.Uint8List tasteTypeDescriptor = $convert.base64Decode(
     'CglUYXN0ZVR5cGUSHAoFbm90ZXMYASABKAlCBrpIA8gBAVIFbm90ZXMSHgoGcmF0aW5nGAIgAS'
     'gBQga6SAPIAQFSBnJhdGluZw==');
+

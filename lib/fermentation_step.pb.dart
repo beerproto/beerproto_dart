@@ -54,46 +54,30 @@ class FermentationStepType extends $pb.GeneratedMessage {
 
   FermentationStepType._();
 
-  factory FermentationStepType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory FermentationStepType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory FermentationStepType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory FermentationStepType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'FermentationStepType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FermentationStepType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'name')
-    ..aOM<$0.TemperatureType>(3, _omitFieldNames ? '' : 'endTemperature',
-        subBuilder: $0.TemperatureType.create)
-    ..aOM<$0.TimeType>(4, _omitFieldNames ? '' : 'stepTime',
-        subBuilder: $0.TimeType.create)
+    ..aOM<$0.TemperatureType>(3, _omitFieldNames ? '' : 'endTemperature', subBuilder: $0.TemperatureType.create)
+    ..aOM<$0.TimeType>(4, _omitFieldNames ? '' : 'stepTime', subBuilder: $0.TimeType.create)
     ..aOB(5, _omitFieldNames ? '' : 'freeRise')
-    ..aOM<$0.GravityType>(6, _omitFieldNames ? '' : 'startGravity',
-        subBuilder: $0.GravityType.create)
-    ..aOM<$0.GravityType>(7, _omitFieldNames ? '' : 'endGravity',
-        subBuilder: $0.GravityType.create)
-    ..aOM<$0.AcidityType>(8, _omitFieldNames ? '' : 'startPh',
-        subBuilder: $0.AcidityType.create)
+    ..aOM<$0.GravityType>(6, _omitFieldNames ? '' : 'startGravity', subBuilder: $0.GravityType.create)
+    ..aOM<$0.GravityType>(7, _omitFieldNames ? '' : 'endGravity', subBuilder: $0.GravityType.create)
+    ..aOM<$0.AcidityType>(8, _omitFieldNames ? '' : 'startPh', subBuilder: $0.AcidityType.create)
     ..aOS(9, _omitFieldNames ? '' : 'description')
-    ..aOM<$0.TemperatureType>(10, _omitFieldNames ? '' : 'startTemperature',
-        subBuilder: $0.TemperatureType.create)
-    ..aOM<$0.AcidityType>(11, _omitFieldNames ? '' : 'endPh',
-        subBuilder: $0.AcidityType.create)
+    ..aOM<$0.TemperatureType>(10, _omitFieldNames ? '' : 'startTemperature', subBuilder: $0.TemperatureType.create)
+    ..aOM<$0.AcidityType>(11, _omitFieldNames ? '' : 'endPh', subBuilder: $0.AcidityType.create)
     ..aOS(12, _omitFieldNames ? '' : 'vessel')
-    ..aOM<$0.PercentType>(13, _omitFieldNames ? '' : 'vesselPressure',
-        subBuilder: $0.PercentType.create)
-    ..hasRequiredFields = false;
+    ..aOM<$0.PercentType>(13, _omitFieldNames ? '' : 'vesselPressure', subBuilder: $0.PercentType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentationStepType clone() => deepCopy();
+  FermentationStepType clone() => FermentationStepType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentationStepType copyWith(void Function(FermentationStepType) updates) =>
-      super.copyWith((message) => updates(message as FermentationStepType))
-          as FermentationStepType;
+  FermentationStepType copyWith(void Function(FermentationStepType) updates) => super.copyWith((message) => updates(message as FermentationStepType)) as FermentationStepType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -102,11 +86,9 @@ class FermentationStepType extends $pb.GeneratedMessage {
   static FermentationStepType create() => FermentationStepType._();
   @$core.override
   FermentationStepType createEmptyInstance() => create();
-  static $pb.PbList<FermentationStepType> createRepeated() =>
-      $pb.PbList<FermentationStepType>();
+  static $pb.PbList<FermentationStepType> createRepeated() => $pb.PbList<FermentationStepType>();
   @$core.pragma('dart2js:noInline')
-  static FermentationStepType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<FermentationStepType>(create);
+  static FermentationStepType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FermentationStepType>(create);
   static FermentationStepType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -245,7 +227,6 @@ class FermentationStepType extends $pb.GeneratedMessage {
   $0.PercentType ensureVesselPressure() => $_ensure(12);
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

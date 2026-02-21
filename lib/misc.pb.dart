@@ -40,30 +40,21 @@ class MiscellaneousBase extends $pb.GeneratedMessage {
 
   MiscellaneousBase._();
 
-  factory MiscellaneousBase.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory MiscellaneousBase.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory MiscellaneousBase.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory MiscellaneousBase.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'MiscellaneousBase',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MiscellaneousBase', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'producer')
     ..aOS(3, _omitFieldNames ? '' : 'productId')
-    ..aE<MiscellaneousBaseType>(4, _omitFieldNames ? '' : 'type',
-        enumValues: MiscellaneousBaseType.values)
-    ..hasRequiredFields = false;
+    ..e<MiscellaneousBaseType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: MiscellaneousBaseType.MISCELLANEOUS_BASE_TYPE_UNSPECIFIED, valueOf: MiscellaneousBaseType.valueOf, enumValues: MiscellaneousBaseType.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MiscellaneousBase clone() => deepCopy();
+  MiscellaneousBase clone() => MiscellaneousBase()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MiscellaneousBase copyWith(void Function(MiscellaneousBase) updates) =>
-      super.copyWith((message) => updates(message as MiscellaneousBase))
-          as MiscellaneousBase;
+  MiscellaneousBase copyWith(void Function(MiscellaneousBase) updates) => super.copyWith((message) => updates(message as MiscellaneousBase)) as MiscellaneousBase;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -72,11 +63,9 @@ class MiscellaneousBase extends $pb.GeneratedMessage {
   static MiscellaneousBase create() => MiscellaneousBase._();
   @$core.override
   MiscellaneousBase createEmptyInstance() => create();
-  static $pb.PbList<MiscellaneousBase> createRepeated() =>
-      $pb.PbList<MiscellaneousBase>();
+  static $pb.PbList<MiscellaneousBase> createRepeated() => $pb.PbList<MiscellaneousBase>();
   @$core.pragma('dart2js:noInline')
-  static MiscellaneousBase getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<MiscellaneousBase>(create);
+  static MiscellaneousBase getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MiscellaneousBase>(create);
   static MiscellaneousBase? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -136,32 +125,22 @@ class MiscellaneousType extends $pb.GeneratedMessage {
 
   MiscellaneousType._();
 
-  factory MiscellaneousType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory MiscellaneousType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory MiscellaneousType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory MiscellaneousType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'MiscellaneousType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<MiscellaneousBase>(1, _omitFieldNames ? '' : 'base',
-        subBuilder: MiscellaneousBase.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MiscellaneousType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<MiscellaneousBase>(1, _omitFieldNames ? '' : 'base', subBuilder: MiscellaneousBase.create)
     ..aOS(2, _omitFieldNames ? '' : 'id')
     ..aOS(3, _omitFieldNames ? '' : 'useFor')
     ..aOS(4, _omitFieldNames ? '' : 'notes')
-    ..aOM<MiscellaneousInventoryType>(5, _omitFieldNames ? '' : 'inventory',
-        subBuilder: MiscellaneousInventoryType.create)
-    ..hasRequiredFields = false;
+    ..aOM<MiscellaneousInventoryType>(5, _omitFieldNames ? '' : 'inventory', subBuilder: MiscellaneousInventoryType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MiscellaneousType clone() => deepCopy();
+  MiscellaneousType clone() => MiscellaneousType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MiscellaneousType copyWith(void Function(MiscellaneousType) updates) =>
-      super.copyWith((message) => updates(message as MiscellaneousType))
-          as MiscellaneousType;
+  MiscellaneousType copyWith(void Function(MiscellaneousType) updates) => super.copyWith((message) => updates(message as MiscellaneousType)) as MiscellaneousType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -170,11 +149,9 @@ class MiscellaneousType extends $pb.GeneratedMessage {
   static MiscellaneousType create() => MiscellaneousType._();
   @$core.override
   MiscellaneousType createEmptyInstance() => create();
-  static $pb.PbList<MiscellaneousType> createRepeated() =>
-      $pb.PbList<MiscellaneousType>();
+  static $pb.PbList<MiscellaneousType> createRepeated() => $pb.PbList<MiscellaneousType>();
   @$core.pragma('dart2js:noInline')
-  static MiscellaneousType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<MiscellaneousType>(create);
+  static MiscellaneousType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MiscellaneousType>(create);
   static MiscellaneousType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -228,7 +205,12 @@ class MiscellaneousType extends $pb.GeneratedMessage {
   MiscellaneousInventoryType ensureInventory() => $_ensure(4);
 }
 
-enum MiscellaneousAdditionType_Amount { mass, unit, volume, notSet }
+enum MiscellaneousAdditionType_Amount {
+  mass, 
+  unit, 
+  volume, 
+  notSet
+}
 
 /// MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe
 class MiscellaneousAdditionType extends $pb.GeneratedMessage {
@@ -252,45 +234,30 @@ class MiscellaneousAdditionType extends $pb.GeneratedMessage {
 
   MiscellaneousAdditionType._();
 
-  factory MiscellaneousAdditionType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory MiscellaneousAdditionType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory MiscellaneousAdditionType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory MiscellaneousAdditionType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static const $core.Map<$core.int, MiscellaneousAdditionType_Amount>
-      _MiscellaneousAdditionType_AmountByTag = {
-    4: MiscellaneousAdditionType_Amount.mass,
-    5: MiscellaneousAdditionType_Amount.unit,
-    6: MiscellaneousAdditionType_Amount.volume,
-    0: MiscellaneousAdditionType_Amount.notSet
+  static const $core.Map<$core.int, MiscellaneousAdditionType_Amount> _MiscellaneousAdditionType_AmountByTag = {
+    4 : MiscellaneousAdditionType_Amount.mass,
+    5 : MiscellaneousAdditionType_Amount.unit,
+    6 : MiscellaneousAdditionType_Amount.volume,
+    0 : MiscellaneousAdditionType_Amount.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'MiscellaneousAdditionType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MiscellaneousAdditionType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..oo(0, [4, 5, 6])
-    ..aOM<MiscellaneousBase>(1, _omitFieldNames ? '' : 'base',
-        subBuilder: MiscellaneousBase.create)
+    ..aOM<MiscellaneousBase>(1, _omitFieldNames ? '' : 'base', subBuilder: MiscellaneousBase.create)
     ..aOS(2, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.TimingType>(3, _omitFieldNames ? '' : 'timing',
-        subBuilder: $0.TimingType.create)
-    ..aOM<$1.MassType>(4, _omitFieldNames ? '' : 'mass',
-        subBuilder: $1.MassType.create)
-    ..aOM<$1.UnitType>(5, _omitFieldNames ? '' : 'unit',
-        subBuilder: $1.UnitType.create)
-    ..aOM<$1.VolumeType>(6, _omitFieldNames ? '' : 'volume',
-        subBuilder: $1.VolumeType.create)
-    ..hasRequiredFields = false;
+    ..aOM<$0.TimingType>(3, _omitFieldNames ? '' : 'timing', subBuilder: $0.TimingType.create)
+    ..aOM<$1.MassType>(4, _omitFieldNames ? '' : 'mass', subBuilder: $1.MassType.create)
+    ..aOM<$1.UnitType>(5, _omitFieldNames ? '' : 'unit', subBuilder: $1.UnitType.create)
+    ..aOM<$1.VolumeType>(6, _omitFieldNames ? '' : 'volume', subBuilder: $1.VolumeType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MiscellaneousAdditionType clone() => deepCopy();
+  MiscellaneousAdditionType clone() => MiscellaneousAdditionType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MiscellaneousAdditionType copyWith(
-          void Function(MiscellaneousAdditionType) updates) =>
-      super.copyWith((message) => updates(message as MiscellaneousAdditionType))
-          as MiscellaneousAdditionType;
+  MiscellaneousAdditionType copyWith(void Function(MiscellaneousAdditionType) updates) => super.copyWith((message) => updates(message as MiscellaneousAdditionType)) as MiscellaneousAdditionType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -299,21 +266,12 @@ class MiscellaneousAdditionType extends $pb.GeneratedMessage {
   static MiscellaneousAdditionType create() => MiscellaneousAdditionType._();
   @$core.override
   MiscellaneousAdditionType createEmptyInstance() => create();
-  static $pb.PbList<MiscellaneousAdditionType> createRepeated() =>
-      $pb.PbList<MiscellaneousAdditionType>();
+  static $pb.PbList<MiscellaneousAdditionType> createRepeated() => $pb.PbList<MiscellaneousAdditionType>();
   @$core.pragma('dart2js:noInline')
-  static MiscellaneousAdditionType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<MiscellaneousAdditionType>(create);
+  static MiscellaneousAdditionType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MiscellaneousAdditionType>(create);
   static MiscellaneousAdditionType? _defaultInstance;
 
-  @$pb.TagNumber(4)
-  @$pb.TagNumber(5)
-  @$pb.TagNumber(6)
-  MiscellaneousAdditionType_Amount whichAmount() =>
-      _MiscellaneousAdditionType_AmountByTag[$_whichOneof(0)]!;
-  @$pb.TagNumber(4)
-  @$pb.TagNumber(5)
-  @$pb.TagNumber(6)
+  MiscellaneousAdditionType_Amount whichAmount() => _MiscellaneousAdditionType_AmountByTag[$_whichOneof(0)]!;
   void clearAmount() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -382,7 +340,12 @@ class MiscellaneousAdditionType extends $pb.GeneratedMessage {
   $1.VolumeType ensureVolume() => $_ensure(5);
 }
 
-enum MiscellaneousInventoryType_Amount { mass, unit, volume, notSet }
+enum MiscellaneousInventoryType_Amount {
+  mass, 
+  unit, 
+  volume, 
+  notSet
+}
 
 class MiscellaneousInventoryType extends $pb.GeneratedMessage {
   factory MiscellaneousInventoryType({
@@ -399,41 +362,27 @@ class MiscellaneousInventoryType extends $pb.GeneratedMessage {
 
   MiscellaneousInventoryType._();
 
-  factory MiscellaneousInventoryType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory MiscellaneousInventoryType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory MiscellaneousInventoryType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory MiscellaneousInventoryType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static const $core.Map<$core.int, MiscellaneousInventoryType_Amount>
-      _MiscellaneousInventoryType_AmountByTag = {
-    1: MiscellaneousInventoryType_Amount.mass,
-    2: MiscellaneousInventoryType_Amount.unit,
-    3: MiscellaneousInventoryType_Amount.volume,
-    0: MiscellaneousInventoryType_Amount.notSet
+  static const $core.Map<$core.int, MiscellaneousInventoryType_Amount> _MiscellaneousInventoryType_AmountByTag = {
+    1 : MiscellaneousInventoryType_Amount.mass,
+    2 : MiscellaneousInventoryType_Amount.unit,
+    3 : MiscellaneousInventoryType_Amount.volume,
+    0 : MiscellaneousInventoryType_Amount.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'MiscellaneousInventoryType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MiscellaneousInventoryType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..aOM<$1.MassType>(1, _omitFieldNames ? '' : 'mass',
-        subBuilder: $1.MassType.create)
-    ..aOM<$1.UnitType>(2, _omitFieldNames ? '' : 'unit',
-        subBuilder: $1.UnitType.create)
-    ..aOM<$1.VolumeType>(3, _omitFieldNames ? '' : 'volume',
-        subBuilder: $1.VolumeType.create)
-    ..hasRequiredFields = false;
+    ..aOM<$1.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $1.MassType.create)
+    ..aOM<$1.UnitType>(2, _omitFieldNames ? '' : 'unit', subBuilder: $1.UnitType.create)
+    ..aOM<$1.VolumeType>(3, _omitFieldNames ? '' : 'volume', subBuilder: $1.VolumeType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MiscellaneousInventoryType clone() => deepCopy();
+  MiscellaneousInventoryType clone() => MiscellaneousInventoryType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MiscellaneousInventoryType copyWith(
-          void Function(MiscellaneousInventoryType) updates) =>
-      super.copyWith(
-              (message) => updates(message as MiscellaneousInventoryType))
-          as MiscellaneousInventoryType;
+  MiscellaneousInventoryType copyWith(void Function(MiscellaneousInventoryType) updates) => super.copyWith((message) => updates(message as MiscellaneousInventoryType)) as MiscellaneousInventoryType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -442,21 +391,12 @@ class MiscellaneousInventoryType extends $pb.GeneratedMessage {
   static MiscellaneousInventoryType create() => MiscellaneousInventoryType._();
   @$core.override
   MiscellaneousInventoryType createEmptyInstance() => create();
-  static $pb.PbList<MiscellaneousInventoryType> createRepeated() =>
-      $pb.PbList<MiscellaneousInventoryType>();
+  static $pb.PbList<MiscellaneousInventoryType> createRepeated() => $pb.PbList<MiscellaneousInventoryType>();
   @$core.pragma('dart2js:noInline')
-  static MiscellaneousInventoryType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<MiscellaneousInventoryType>(create);
+  static MiscellaneousInventoryType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MiscellaneousInventoryType>(create);
   static MiscellaneousInventoryType? _defaultInstance;
 
-  @$pb.TagNumber(1)
-  @$pb.TagNumber(2)
-  @$pb.TagNumber(3)
-  MiscellaneousInventoryType_Amount whichAmount() =>
-      _MiscellaneousInventoryType_AmountByTag[$_whichOneof(0)]!;
-  @$pb.TagNumber(1)
-  @$pb.TagNumber(2)
-  @$pb.TagNumber(3)
+  MiscellaneousInventoryType_Amount whichAmount() => _MiscellaneousInventoryType_AmountByTag[$_whichOneof(0)]!;
   void clearAmount() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -493,7 +433,6 @@ class MiscellaneousInventoryType extends $pb.GeneratedMessage {
   $1.VolumeType ensureVolume() => $_ensure(2);
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

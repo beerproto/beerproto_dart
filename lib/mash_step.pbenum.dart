@@ -15,24 +15,16 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class MashStepUnit extends $pb.ProtobufEnum {
-  static const MashStepUnit MASH_STEP_UNIT_UNSPECIFIED =
-      MashStepUnit._(0, _omitEnumNames ? '' : 'MASH_STEP_UNIT_UNSPECIFIED');
-  static const MashStepUnit MASH_STEP_UNIT_INFUSION =
-      MashStepUnit._(1, _omitEnumNames ? '' : 'MASH_STEP_UNIT_INFUSION');
-  static const MashStepUnit MASH_STEP_UNIT_TEMPERATURE =
-      MashStepUnit._(2, _omitEnumNames ? '' : 'MASH_STEP_UNIT_TEMPERATURE');
-  static const MashStepUnit MASH_STEP_UNIT_DECOCTION =
-      MashStepUnit._(3, _omitEnumNames ? '' : 'MASH_STEP_UNIT_DECOCTION');
-  static const MashStepUnit MASH_STEP_UNIT_SOURING_MASH =
-      MashStepUnit._(4, _omitEnumNames ? '' : 'MASH_STEP_UNIT_SOURING_MASH');
-  static const MashStepUnit MASH_STEP_UNIT_SOURING_WORT =
-      MashStepUnit._(5, _omitEnumNames ? '' : 'MASH_STEP_UNIT_SOURING_WORT');
-  static const MashStepUnit MASH_STEP_UNIT_DRAIN_MASH_TUN =
-      MashStepUnit._(6, _omitEnumNames ? '' : 'MASH_STEP_UNIT_DRAIN_MASH_TUN');
-  static const MashStepUnit MASH_STEP_UNIT_SPARGE =
-      MashStepUnit._(7, _omitEnumNames ? '' : 'MASH_STEP_UNIT_SPARGE');
+  static const MashStepUnit MASH_STEP_UNIT_UNSPECIFIED = MashStepUnit._(0, _omitEnumNames ? '' : 'MASH_STEP_UNIT_UNSPECIFIED');
+  static const MashStepUnit MASH_STEP_UNIT_INFUSION = MashStepUnit._(1, _omitEnumNames ? '' : 'MASH_STEP_UNIT_INFUSION');
+  static const MashStepUnit MASH_STEP_UNIT_TEMPERATURE = MashStepUnit._(2, _omitEnumNames ? '' : 'MASH_STEP_UNIT_TEMPERATURE');
+  static const MashStepUnit MASH_STEP_UNIT_DECOCTION = MashStepUnit._(3, _omitEnumNames ? '' : 'MASH_STEP_UNIT_DECOCTION');
+  static const MashStepUnit MASH_STEP_UNIT_SOURING_MASH = MashStepUnit._(4, _omitEnumNames ? '' : 'MASH_STEP_UNIT_SOURING_MASH');
+  static const MashStepUnit MASH_STEP_UNIT_SOURING_WORT = MashStepUnit._(5, _omitEnumNames ? '' : 'MASH_STEP_UNIT_SOURING_WORT');
+  static const MashStepUnit MASH_STEP_UNIT_DRAIN_MASH_TUN = MashStepUnit._(6, _omitEnumNames ? '' : 'MASH_STEP_UNIT_DRAIN_MASH_TUN');
+  static const MashStepUnit MASH_STEP_UNIT_SPARGE = MashStepUnit._(7, _omitEnumNames ? '' : 'MASH_STEP_UNIT_SPARGE');
 
-  static const $core.List<MashStepUnit> values = <MashStepUnit>[
+  static const $core.List<MashStepUnit> values = <MashStepUnit> [
     MASH_STEP_UNIT_UNSPECIFIED,
     MASH_STEP_UNIT_INFUSION,
     MASH_STEP_UNIT_TEMPERATURE,
@@ -43,13 +35,11 @@ class MashStepUnit extends $pb.ProtobufEnum {
     MASH_STEP_UNIT_SPARGE,
   ];
 
-  static final $core.List<MashStepUnit?> _byValue =
-      $pb.ProtobufEnum.$_initByValueList(values, 7);
-  static MashStepUnit? valueOf($core.int value) =>
-      value < 0 || value >= _byValue.length ? null : _byValue[value];
+  static final $core.List<MashStepUnit?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 7);
+  static MashStepUnit? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
 
   const MashStepUnit._(super.value, super.name);
 }
 
-const $core.bool _omitEnumNames =
-    $core.bool.fromEnvironment('protobuf.omit_enum_names');
+
+const $core.bool _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

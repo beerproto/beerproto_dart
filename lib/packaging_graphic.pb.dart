@@ -47,37 +47,25 @@ class PackagingGraphicType extends $pb.GeneratedMessage {
 
   PackagingGraphicType._();
 
-  factory PackagingGraphicType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory PackagingGraphicType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory PackagingGraphicType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory PackagingGraphicType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'PackagingGraphicType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aE<PackagingGraphicType_PositionUnit>(
-        1, _omitFieldNames ? '' : 'position',
-        enumValues: PackagingGraphicType_PositionUnit.values)
-    ..aE<PackagingGraphicType_GraphicType>(2, _omitFieldNames ? '' : 'type',
-        enumValues: PackagingGraphicType_GraphicType.values)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PackagingGraphicType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..e<PackagingGraphicType_PositionUnit>(1, _omitFieldNames ? '' : 'position', $pb.PbFieldType.OE, defaultOrMaker: PackagingGraphicType_PositionUnit.POSITION_UNIT_UNSPECIFIED, valueOf: PackagingGraphicType_PositionUnit.valueOf, enumValues: PackagingGraphicType_PositionUnit.values)
+    ..e<PackagingGraphicType_GraphicType>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: PackagingGraphicType_GraphicType.GRAPHIC_TYPE_UNSPECIFIED, valueOf: PackagingGraphicType_GraphicType.valueOf, enumValues: PackagingGraphicType_GraphicType.values)
     ..aOS(3, _omitFieldNames ? '' : 'base64Data')
     ..pPS(4, _omitFieldNames ? '' : 'urls')
-    ..aI(5, _omitFieldNames ? '' : 'dpi')
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'dpi', $pb.PbFieldType.O3)
     ..aInt64(6, _omitFieldNames ? '' : 'width')
     ..aInt64(7, _omitFieldNames ? '' : 'height')
-    ..aE<PackagingGraphicType_UnitsType>(8, _omitFieldNames ? '' : 'units',
-        enumValues: PackagingGraphicType_UnitsType.values)
-    ..hasRequiredFields = false;
+    ..e<PackagingGraphicType_UnitsType>(8, _omitFieldNames ? '' : 'units', $pb.PbFieldType.OE, defaultOrMaker: PackagingGraphicType_UnitsType.UNITS_TYPE_UNSPECIFIED, valueOf: PackagingGraphicType_UnitsType.valueOf, enumValues: PackagingGraphicType_UnitsType.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingGraphicType clone() => deepCopy();
+  PackagingGraphicType clone() => PackagingGraphicType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingGraphicType copyWith(void Function(PackagingGraphicType) updates) =>
-      super.copyWith((message) => updates(message as PackagingGraphicType))
-          as PackagingGraphicType;
+  PackagingGraphicType copyWith(void Function(PackagingGraphicType) updates) => super.copyWith((message) => updates(message as PackagingGraphicType)) as PackagingGraphicType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -86,11 +74,9 @@ class PackagingGraphicType extends $pb.GeneratedMessage {
   static PackagingGraphicType create() => PackagingGraphicType._();
   @$core.override
   PackagingGraphicType createEmptyInstance() => create();
-  static $pb.PbList<PackagingGraphicType> createRepeated() =>
-      $pb.PbList<PackagingGraphicType>();
+  static $pb.PbList<PackagingGraphicType> createRepeated() => $pb.PbList<PackagingGraphicType>();
   @$core.pragma('dart2js:noInline')
-  static PackagingGraphicType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<PackagingGraphicType>(create);
+  static PackagingGraphicType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PackagingGraphicType>(create);
   static PackagingGraphicType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -165,7 +151,6 @@ class PackagingGraphicType extends $pb.GeneratedMessage {
   void clearUnits() => $_clearField(8);
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

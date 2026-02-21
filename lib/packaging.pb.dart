@@ -35,41 +35,29 @@ class PackagingProcedureType extends $pb.GeneratedMessage {
     if (packagedVolume != null) result.packagedVolume = packagedVolume;
     if (description != null) result.description = description;
     if (notes != null) result.notes = notes;
-    if (packagingVessels != null)
-      result.packagingVessels.addAll(packagingVessels);
+    if (packagingVessels != null) result.packagingVessels.addAll(packagingVessels);
     return result;
   }
 
   PackagingProcedureType._();
 
-  factory PackagingProcedureType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory PackagingProcedureType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory PackagingProcedureType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory PackagingProcedureType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'PackagingProcedureType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PackagingProcedureType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'name')
-    ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'packagedVolume',
-        subBuilder: $0.VolumeType.create)
+    ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'packagedVolume', subBuilder: $0.VolumeType.create)
     ..aOS(4, _omitFieldNames ? '' : 'description')
     ..aOS(5, _omitFieldNames ? '' : 'notes')
-    ..pPM<$1.PackagingVesselType>(6, _omitFieldNames ? '' : 'packagingVessels',
-        subBuilder: $1.PackagingVesselType.create)
-    ..hasRequiredFields = false;
+    ..pc<$1.PackagingVesselType>(6, _omitFieldNames ? '' : 'packagingVessels', $pb.PbFieldType.PM, subBuilder: $1.PackagingVesselType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingProcedureType clone() => deepCopy();
+  PackagingProcedureType clone() => PackagingProcedureType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingProcedureType copyWith(
-          void Function(PackagingProcedureType) updates) =>
-      super.copyWith((message) => updates(message as PackagingProcedureType))
-          as PackagingProcedureType;
+  PackagingProcedureType copyWith(void Function(PackagingProcedureType) updates) => super.copyWith((message) => updates(message as PackagingProcedureType)) as PackagingProcedureType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -78,11 +66,9 @@ class PackagingProcedureType extends $pb.GeneratedMessage {
   static PackagingProcedureType create() => PackagingProcedureType._();
   @$core.override
   PackagingProcedureType createEmptyInstance() => create();
-  static $pb.PbList<PackagingProcedureType> createRepeated() =>
-      $pb.PbList<PackagingProcedureType>();
+  static $pb.PbList<PackagingProcedureType> createRepeated() => $pb.PbList<PackagingProcedureType>();
   @$core.pragma('dart2js:noInline')
-  static PackagingProcedureType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<PackagingProcedureType>(create);
+  static PackagingProcedureType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PackagingProcedureType>(create);
   static PackagingProcedureType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -136,7 +122,6 @@ class PackagingProcedureType extends $pb.GeneratedMessage {
   $pb.PbList<$1.PackagingVesselType> get packagingVessels => $_getList(5);
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

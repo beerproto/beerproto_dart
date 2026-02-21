@@ -31,41 +31,29 @@ class FermentationProcedureType extends $pb.GeneratedMessage {
     if (id != null) result.id = id;
     if (description != null) result.description = description;
     if (notes != null) result.notes = notes;
-    if (fermentationSteps != null)
-      result.fermentationSteps.addAll(fermentationSteps);
+    if (fermentationSteps != null) result.fermentationSteps.addAll(fermentationSteps);
     if (name != null) result.name = name;
     return result;
   }
 
   FermentationProcedureType._();
 
-  factory FermentationProcedureType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory FermentationProcedureType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory FermentationProcedureType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory FermentationProcedureType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'FermentationProcedureType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FermentationProcedureType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'description')
     ..aOS(3, _omitFieldNames ? '' : 'notes')
-    ..pPM<$0.FermentationStepType>(
-        4, _omitFieldNames ? '' : 'fermentationSteps',
-        subBuilder: $0.FermentationStepType.create)
+    ..pc<$0.FermentationStepType>(4, _omitFieldNames ? '' : 'fermentationSteps', $pb.PbFieldType.PM, subBuilder: $0.FermentationStepType.create)
     ..aOS(5, _omitFieldNames ? '' : 'name')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentationProcedureType clone() => deepCopy();
+  FermentationProcedureType clone() => FermentationProcedureType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentationProcedureType copyWith(
-          void Function(FermentationProcedureType) updates) =>
-      super.copyWith((message) => updates(message as FermentationProcedureType))
-          as FermentationProcedureType;
+  FermentationProcedureType copyWith(void Function(FermentationProcedureType) updates) => super.copyWith((message) => updates(message as FermentationProcedureType)) as FermentationProcedureType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -74,11 +62,9 @@ class FermentationProcedureType extends $pb.GeneratedMessage {
   static FermentationProcedureType create() => FermentationProcedureType._();
   @$core.override
   FermentationProcedureType createEmptyInstance() => create();
-  static $pb.PbList<FermentationProcedureType> createRepeated() =>
-      $pb.PbList<FermentationProcedureType>();
+  static $pb.PbList<FermentationProcedureType> createRepeated() => $pb.PbList<FermentationProcedureType>();
   @$core.pragma('dart2js:noInline')
-  static FermentationProcedureType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<FermentationProcedureType>(create);
+  static FermentationProcedureType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FermentationProcedureType>(create);
   static FermentationProcedureType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -121,7 +107,6 @@ class FermentationProcedureType extends $pb.GeneratedMessage {
   void clearName() => $_clearField(5);
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

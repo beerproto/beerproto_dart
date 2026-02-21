@@ -15,8 +15,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class SRM extends $pb.ProtobufEnum {
-  static const SRM SRM_UNSPECIFIED =
-      SRM._(0, _omitEnumNames ? '' : 'SRM_UNSPECIFIED');
+  static const SRM SRM_UNSPECIFIED = SRM._(0, _omitEnumNames ? '' : 'SRM_UNSPECIFIED');
   static const SRM SRM_1 = SRM._(1, _omitEnumNames ? '' : 'SRM_1');
   static const SRM SRM_2 = SRM._(2, _omitEnumNames ? '' : 'SRM_2');
   static const SRM SRM_3 = SRM._(3, _omitEnumNames ? '' : 'SRM_3');
@@ -48,7 +47,7 @@ class SRM extends $pb.ProtobufEnum {
   static const SRM SRM_29 = SRM._(29, _omitEnumNames ? '' : 'SRM_29');
   static const SRM SRM_30 = SRM._(30, _omitEnumNames ? '' : 'SRM_30');
 
-  static const $core.List<SRM> values = <SRM>[
+  static const $core.List<SRM> values = <SRM> [
     SRM_UNSPECIFIED,
     SRM_1,
     SRM_2,
@@ -82,13 +81,11 @@ class SRM extends $pb.ProtobufEnum {
     SRM_30,
   ];
 
-  static final $core.List<SRM?> _byValue =
-      $pb.ProtobufEnum.$_initByValueList(values, 30);
-  static SRM? valueOf($core.int value) =>
-      value < 0 || value >= _byValue.length ? null : _byValue[value];
+  static final $core.List<SRM?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 30);
+  static SRM? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
 
   const SRM._(super.value, super.name);
 }
 
-const $core.bool _omitEnumNames =
-    $core.bool.fromEnvironment('protobuf.omit_enum_names');
+
+const $core.bool _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

@@ -48,36 +48,25 @@ class HopVarietyBase extends $pb.GeneratedMessage {
 
   HopVarietyBase._();
 
-  factory HopVarietyBase.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory HopVarietyBase.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory HopVarietyBase.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory HopVarietyBase.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'HopVarietyBase',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HopVarietyBase', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'producer')
     ..aOS(3, _omitFieldNames ? '' : 'productId')
     ..aOS(4, _omitFieldNames ? '' : 'origin')
     ..aOS(5, _omitFieldNames ? '' : 'year')
-    ..aE<HopVarietyBaseForm>(6, _omitFieldNames ? '' : 'form',
-        enumValues: HopVarietyBaseForm.values)
-    ..aOM<$0.PercentType>(7, _omitFieldNames ? '' : 'alphaAcid',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(8, _omitFieldNames ? '' : 'betaAcid',
-        subBuilder: $0.PercentType.create)
-    ..hasRequiredFields = false;
+    ..e<HopVarietyBaseForm>(6, _omitFieldNames ? '' : 'form', $pb.PbFieldType.OE, defaultOrMaker: HopVarietyBaseForm.HOP_VARIETY_BASE_FORM_UNSPECIFIED, valueOf: HopVarietyBaseForm.valueOf, enumValues: HopVarietyBaseForm.values)
+    ..aOM<$0.PercentType>(7, _omitFieldNames ? '' : 'alphaAcid', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(8, _omitFieldNames ? '' : 'betaAcid', subBuilder: $0.PercentType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  HopVarietyBase clone() => deepCopy();
+  HopVarietyBase clone() => HopVarietyBase()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  HopVarietyBase copyWith(void Function(HopVarietyBase) updates) =>
-      super.copyWith((message) => updates(message as HopVarietyBase))
-          as HopVarietyBase;
+  HopVarietyBase copyWith(void Function(HopVarietyBase) updates) => super.copyWith((message) => updates(message as HopVarietyBase)) as HopVarietyBase;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -86,11 +75,9 @@ class HopVarietyBase extends $pb.GeneratedMessage {
   static HopVarietyBase create() => HopVarietyBase._();
   @$core.override
   HopVarietyBase createEmptyInstance() => create();
-  static $pb.PbList<HopVarietyBase> createRepeated() =>
-      $pb.PbList<HopVarietyBase>();
+  static $pb.PbList<HopVarietyBase> createRepeated() => $pb.PbList<HopVarietyBase>();
   @$core.pragma('dart2js:noInline')
-  static HopVarietyBase getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<HopVarietyBase>(create);
+  static HopVarietyBase getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HopVarietyBase>(create);
   static HopVarietyBase? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -196,38 +183,25 @@ class VarietyInformation extends $pb.GeneratedMessage {
 
   VarietyInformation._();
 
-  factory VarietyInformation.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory VarietyInformation.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory VarietyInformation.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory VarietyInformation.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'VarietyInformation',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<HopVarietyBase>(1, _omitFieldNames ? '' : 'base',
-        subBuilder: HopVarietyBase.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'VarietyInformation', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<HopVarietyBase>(1, _omitFieldNames ? '' : 'base', subBuilder: HopVarietyBase.create)
     ..aOS(2, _omitFieldNames ? '' : 'id')
-    ..aOM<HopInventoryType>(3, _omitFieldNames ? '' : 'inventory',
-        subBuilder: HopInventoryType.create)
-    ..aE<VarietyInformationType>(4, _omitFieldNames ? '' : 'type',
-        enumValues: VarietyInformationType.values)
-    ..aOM<OilContentType>(5, _omitFieldNames ? '' : 'oilContent',
-        subBuilder: OilContentType.create)
-    ..aOM<$0.PercentType>(6, _omitFieldNames ? '' : 'percentLost',
-        subBuilder: $0.PercentType.create)
+    ..aOM<HopInventoryType>(3, _omitFieldNames ? '' : 'inventory', subBuilder: HopInventoryType.create)
+    ..e<VarietyInformationType>(4, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: VarietyInformationType.VARIETY_INFORMATION_TYPE_UNSPECIFIED, valueOf: VarietyInformationType.valueOf, enumValues: VarietyInformationType.values)
+    ..aOM<OilContentType>(5, _omitFieldNames ? '' : 'oilContent', subBuilder: OilContentType.create)
+    ..aOM<$0.PercentType>(6, _omitFieldNames ? '' : 'percentLost', subBuilder: $0.PercentType.create)
     ..aOS(7, _omitFieldNames ? '' : 'substitutes')
     ..aOS(8, _omitFieldNames ? '' : 'notes')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  VarietyInformation clone() => deepCopy();
+  VarietyInformation clone() => VarietyInformation()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  VarietyInformation copyWith(void Function(VarietyInformation) updates) =>
-      super.copyWith((message) => updates(message as VarietyInformation))
-          as VarietyInformation;
+  VarietyInformation copyWith(void Function(VarietyInformation) updates) => super.copyWith((message) => updates(message as VarietyInformation)) as VarietyInformation;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -236,11 +210,9 @@ class VarietyInformation extends $pb.GeneratedMessage {
   static VarietyInformation create() => VarietyInformation._();
   @$core.override
   VarietyInformation createEmptyInstance() => create();
-  static $pb.PbList<VarietyInformation> createRepeated() =>
-      $pb.PbList<VarietyInformation>();
+  static $pb.PbList<VarietyInformation> createRepeated() => $pb.PbList<VarietyInformation>();
   @$core.pragma('dart2js:noInline')
-  static VarietyInformation getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<VarietyInformation>(create);
+  static VarietyInformation getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VarietyInformation>(create);
   static VarietyInformation? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -326,7 +298,11 @@ class VarietyInformation extends $pb.GeneratedMessage {
   void clearNotes() => $_clearField(8);
 }
 
-enum HopAdditionType_Amount { mass, volume, notSet }
+enum HopAdditionType_Amount {
+  mass, 
+  volume, 
+  notSet
+}
 
 /// HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bill.
 class HopAdditionType extends $pb.GeneratedMessage {
@@ -348,41 +324,28 @@ class HopAdditionType extends $pb.GeneratedMessage {
 
   HopAdditionType._();
 
-  factory HopAdditionType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory HopAdditionType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory HopAdditionType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory HopAdditionType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static const $core.Map<$core.int, HopAdditionType_Amount>
-      _HopAdditionType_AmountByTag = {
-    4: HopAdditionType_Amount.mass,
-    5: HopAdditionType_Amount.volume,
-    0: HopAdditionType_Amount.notSet
+  static const $core.Map<$core.int, HopAdditionType_Amount> _HopAdditionType_AmountByTag = {
+    4 : HopAdditionType_Amount.mass,
+    5 : HopAdditionType_Amount.volume,
+    0 : HopAdditionType_Amount.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'HopAdditionType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HopAdditionType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..oo(0, [4, 5])
-    ..aOM<HopVarietyBase>(1, _omitFieldNames ? '' : 'base',
-        subBuilder: HopVarietyBase.create)
+    ..aOM<HopVarietyBase>(1, _omitFieldNames ? '' : 'base', subBuilder: HopVarietyBase.create)
     ..aOS(2, _omitFieldNames ? '' : 'id')
-    ..aOM<$1.TimingType>(3, _omitFieldNames ? '' : 'timing',
-        subBuilder: $1.TimingType.create)
-    ..aOM<$0.MassType>(4, _omitFieldNames ? '' : 'mass',
-        subBuilder: $0.MassType.create)
-    ..aOM<$0.VolumeType>(5, _omitFieldNames ? '' : 'volume',
-        subBuilder: $0.VolumeType.create)
-    ..hasRequiredFields = false;
+    ..aOM<$1.TimingType>(3, _omitFieldNames ? '' : 'timing', subBuilder: $1.TimingType.create)
+    ..aOM<$0.MassType>(4, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
+    ..aOM<$0.VolumeType>(5, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  HopAdditionType clone() => deepCopy();
+  HopAdditionType clone() => HopAdditionType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  HopAdditionType copyWith(void Function(HopAdditionType) updates) =>
-      super.copyWith((message) => updates(message as HopAdditionType))
-          as HopAdditionType;
+  HopAdditionType copyWith(void Function(HopAdditionType) updates) => super.copyWith((message) => updates(message as HopAdditionType)) as HopAdditionType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -391,19 +354,12 @@ class HopAdditionType extends $pb.GeneratedMessage {
   static HopAdditionType create() => HopAdditionType._();
   @$core.override
   HopAdditionType createEmptyInstance() => create();
-  static $pb.PbList<HopAdditionType> createRepeated() =>
-      $pb.PbList<HopAdditionType>();
+  static $pb.PbList<HopAdditionType> createRepeated() => $pb.PbList<HopAdditionType>();
   @$core.pragma('dart2js:noInline')
-  static HopAdditionType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<HopAdditionType>(create);
+  static HopAdditionType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HopAdditionType>(create);
   static HopAdditionType? _defaultInstance;
 
-  @$pb.TagNumber(4)
-  @$pb.TagNumber(5)
-  HopAdditionType_Amount whichAmount() =>
-      _HopAdditionType_AmountByTag[$_whichOneof(0)]!;
-  @$pb.TagNumber(4)
-  @$pb.TagNumber(5)
+  HopAdditionType_Amount whichAmount() => _HopAdditionType_AmountByTag[$_whichOneof(0)]!;
   void clearAmount() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -473,27 +429,18 @@ class IBUEstimateType extends $pb.GeneratedMessage {
 
   IBUEstimateType._();
 
-  factory IBUEstimateType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory IBUEstimateType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory IBUEstimateType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory IBUEstimateType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'IBUEstimateType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aE<IBUMethodUnit>(1, _omitFieldNames ? '' : 'method',
-        enumValues: IBUMethodUnit.values)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IBUEstimateType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..e<IBUMethodUnit>(1, _omitFieldNames ? '' : 'method', $pb.PbFieldType.OE, defaultOrMaker: IBUMethodUnit.IBU_METHOD_UNIT_UNSPECIFIED, valueOf: IBUMethodUnit.valueOf, enumValues: IBUMethodUnit.values)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  IBUEstimateType clone() => deepCopy();
+  IBUEstimateType clone() => IBUEstimateType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  IBUEstimateType copyWith(void Function(IBUEstimateType) updates) =>
-      super.copyWith((message) => updates(message as IBUEstimateType))
-          as IBUEstimateType;
+  IBUEstimateType copyWith(void Function(IBUEstimateType) updates) => super.copyWith((message) => updates(message as IBUEstimateType)) as IBUEstimateType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -502,11 +449,9 @@ class IBUEstimateType extends $pb.GeneratedMessage {
   static IBUEstimateType create() => IBUEstimateType._();
   @$core.override
   IBUEstimateType createEmptyInstance() => create();
-  static $pb.PbList<IBUEstimateType> createRepeated() =>
-      $pb.PbList<IBUEstimateType>();
+  static $pb.PbList<IBUEstimateType> createRepeated() => $pb.PbList<IBUEstimateType>();
   @$core.pragma('dart2js:noInline')
-  static IBUEstimateType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<IBUEstimateType>(create);
+  static IBUEstimateType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<IBUEstimateType>(create);
   static IBUEstimateType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -557,53 +502,31 @@ class OilContentType extends $pb.GeneratedMessage {
 
   OilContentType._();
 
-  factory OilContentType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory OilContentType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory OilContentType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory OilContentType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'OilContentType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<$0.PercentType>(1, _omitFieldNames ? '' : 'polyphenols',
-        subBuilder: $0.PercentType.create)
-    ..aD(2, _omitFieldNames ? '' : 'totalOilMlPer100g',
-        protoName: 'total_oil_ml_per_100g')
-    ..aOM<$0.PercentType>(3, _omitFieldNames ? '' : 'farnesene',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(4, _omitFieldNames ? '' : 'limonene',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(5, _omitFieldNames ? '' : 'nerol',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(6, _omitFieldNames ? '' : 'geraniol',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(7, _omitFieldNames ? '' : 'bPinene',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(8, _omitFieldNames ? '' : 'linalool',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(9, _omitFieldNames ? '' : 'caryophyllene',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(10, _omitFieldNames ? '' : 'cohumulone',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(11, _omitFieldNames ? '' : 'xanthohumol',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(12, _omitFieldNames ? '' : 'humulene',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(13, _omitFieldNames ? '' : 'myrcene',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(14, _omitFieldNames ? '' : 'pinene',
-        subBuilder: $0.PercentType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OilContentType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<$0.PercentType>(1, _omitFieldNames ? '' : 'polyphenols', subBuilder: $0.PercentType.create)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'totalOilMlPer100g', $pb.PbFieldType.OD, protoName: 'total_oil_ml_per_100g')
+    ..aOM<$0.PercentType>(3, _omitFieldNames ? '' : 'farnesene', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(4, _omitFieldNames ? '' : 'limonene', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(5, _omitFieldNames ? '' : 'nerol', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(6, _omitFieldNames ? '' : 'geraniol', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(7, _omitFieldNames ? '' : 'bPinene', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(8, _omitFieldNames ? '' : 'linalool', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(9, _omitFieldNames ? '' : 'caryophyllene', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(10, _omitFieldNames ? '' : 'cohumulone', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(11, _omitFieldNames ? '' : 'xanthohumol', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(12, _omitFieldNames ? '' : 'humulene', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(13, _omitFieldNames ? '' : 'myrcene', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(14, _omitFieldNames ? '' : 'pinene', subBuilder: $0.PercentType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  OilContentType clone() => deepCopy();
+  OilContentType clone() => OilContentType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  OilContentType copyWith(void Function(OilContentType) updates) =>
-      super.copyWith((message) => updates(message as OilContentType))
-          as OilContentType;
+  OilContentType copyWith(void Function(OilContentType) updates) => super.copyWith((message) => updates(message as OilContentType)) as OilContentType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -612,11 +535,9 @@ class OilContentType extends $pb.GeneratedMessage {
   static OilContentType create() => OilContentType._();
   @$core.override
   OilContentType createEmptyInstance() => create();
-  static $pb.PbList<OilContentType> createRepeated() =>
-      $pb.PbList<OilContentType>();
+  static $pb.PbList<OilContentType> createRepeated() => $pb.PbList<OilContentType>();
   @$core.pragma('dart2js:noInline')
-  static OilContentType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<OilContentType>(create);
+  static OilContentType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OilContentType>(create);
   static OilContentType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -773,7 +694,11 @@ class OilContentType extends $pb.GeneratedMessage {
   $0.PercentType ensurePinene() => $_ensure(13);
 }
 
-enum HopInventoryType_Amount { mass, volume, notSet }
+enum HopInventoryType_Amount {
+  mass, 
+  volume, 
+  notSet
+}
 
 class HopInventoryType extends $pb.GeneratedMessage {
   factory HopInventoryType({
@@ -788,36 +713,25 @@ class HopInventoryType extends $pb.GeneratedMessage {
 
   HopInventoryType._();
 
-  factory HopInventoryType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory HopInventoryType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory HopInventoryType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory HopInventoryType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static const $core.Map<$core.int, HopInventoryType_Amount>
-      _HopInventoryType_AmountByTag = {
-    1: HopInventoryType_Amount.mass,
-    2: HopInventoryType_Amount.volume,
-    0: HopInventoryType_Amount.notSet
+  static const $core.Map<$core.int, HopInventoryType_Amount> _HopInventoryType_AmountByTag = {
+    1 : HopInventoryType_Amount.mass,
+    2 : HopInventoryType_Amount.volume,
+    0 : HopInventoryType_Amount.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'HopInventoryType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HopInventoryType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<$0.MassType>(1, _omitFieldNames ? '' : 'mass',
-        subBuilder: $0.MassType.create)
-    ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'volume',
-        subBuilder: $0.VolumeType.create)
-    ..hasRequiredFields = false;
+    ..aOM<$0.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
+    ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  HopInventoryType clone() => deepCopy();
+  HopInventoryType clone() => HopInventoryType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  HopInventoryType copyWith(void Function(HopInventoryType) updates) =>
-      super.copyWith((message) => updates(message as HopInventoryType))
-          as HopInventoryType;
+  HopInventoryType copyWith(void Function(HopInventoryType) updates) => super.copyWith((message) => updates(message as HopInventoryType)) as HopInventoryType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -826,19 +740,12 @@ class HopInventoryType extends $pb.GeneratedMessage {
   static HopInventoryType create() => HopInventoryType._();
   @$core.override
   HopInventoryType createEmptyInstance() => create();
-  static $pb.PbList<HopInventoryType> createRepeated() =>
-      $pb.PbList<HopInventoryType>();
+  static $pb.PbList<HopInventoryType> createRepeated() => $pb.PbList<HopInventoryType>();
   @$core.pragma('dart2js:noInline')
-  static HopInventoryType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<HopInventoryType>(create);
+  static HopInventoryType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HopInventoryType>(create);
   static HopInventoryType? _defaultInstance;
 
-  @$pb.TagNumber(1)
-  @$pb.TagNumber(2)
-  HopInventoryType_Amount whichAmount() =>
-      _HopInventoryType_AmountByTag[$_whichOneof(0)]!;
-  @$pb.TagNumber(1)
-  @$pb.TagNumber(2)
+  HopInventoryType_Amount whichAmount() => _HopInventoryType_AmountByTag[$_whichOneof(0)]!;
   void clearAmount() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -864,7 +771,6 @@ class HopInventoryType extends $pb.GeneratedMessage {
   $0.VolumeType ensureVolume() => $_ensure(1);
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

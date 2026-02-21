@@ -57,50 +57,31 @@ class WaterBase extends $pb.GeneratedMessage {
 
   WaterBase._();
 
-  factory WaterBase.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory WaterBase.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory WaterBase.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory WaterBase.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'WaterBase',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<$0.ConcentrationType>(2, _omitFieldNames ? '' : 'calcium',
-        subBuilder: $0.ConcentrationType.create)
-    ..aOM<$0.ConcentrationType>(3, _omitFieldNames ? '' : 'nitrite',
-        subBuilder: $0.ConcentrationType.create)
-    ..aOM<$0.ConcentrationType>(4, _omitFieldNames ? '' : 'chloride',
-        subBuilder: $0.ConcentrationType.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'WaterBase', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<$0.ConcentrationType>(2, _omitFieldNames ? '' : 'calcium', subBuilder: $0.ConcentrationType.create)
+    ..aOM<$0.ConcentrationType>(3, _omitFieldNames ? '' : 'nitrite', subBuilder: $0.ConcentrationType.create)
+    ..aOM<$0.ConcentrationType>(4, _omitFieldNames ? '' : 'chloride', subBuilder: $0.ConcentrationType.create)
     ..aOS(5, _omitFieldNames ? '' : 'name')
-    ..aOM<$0.ConcentrationType>(6, _omitFieldNames ? '' : 'potassium',
-        subBuilder: $0.ConcentrationType.create)
-    ..aOM<$0.ConcentrationType>(7, _omitFieldNames ? '' : 'carbonate',
-        subBuilder: $0.ConcentrationType.create)
-    ..aOM<$0.ConcentrationType>(8, _omitFieldNames ? '' : 'iron',
-        subBuilder: $0.ConcentrationType.create)
-    ..aOM<$0.ConcentrationType>(9, _omitFieldNames ? '' : 'flouride',
-        subBuilder: $0.ConcentrationType.create)
-    ..aOM<$0.ConcentrationType>(10, _omitFieldNames ? '' : 'sulfate',
-        subBuilder: $0.ConcentrationType.create)
-    ..aOM<$0.ConcentrationType>(11, _omitFieldNames ? '' : 'magnesium',
-        subBuilder: $0.ConcentrationType.create)
+    ..aOM<$0.ConcentrationType>(6, _omitFieldNames ? '' : 'potassium', subBuilder: $0.ConcentrationType.create)
+    ..aOM<$0.ConcentrationType>(7, _omitFieldNames ? '' : 'carbonate', subBuilder: $0.ConcentrationType.create)
+    ..aOM<$0.ConcentrationType>(8, _omitFieldNames ? '' : 'iron', subBuilder: $0.ConcentrationType.create)
+    ..aOM<$0.ConcentrationType>(9, _omitFieldNames ? '' : 'flouride', subBuilder: $0.ConcentrationType.create)
+    ..aOM<$0.ConcentrationType>(10, _omitFieldNames ? '' : 'sulfate', subBuilder: $0.ConcentrationType.create)
+    ..aOM<$0.ConcentrationType>(11, _omitFieldNames ? '' : 'magnesium', subBuilder: $0.ConcentrationType.create)
     ..aOS(12, _omitFieldNames ? '' : 'producer')
-    ..aOM<$0.ConcentrationType>(13, _omitFieldNames ? '' : 'bicarbonate',
-        subBuilder: $0.ConcentrationType.create)
-    ..aOM<$0.ConcentrationType>(14, _omitFieldNames ? '' : 'nitrate',
-        subBuilder: $0.ConcentrationType.create)
-    ..aOM<$0.ConcentrationType>(15, _omitFieldNames ? '' : 'sodium',
-        subBuilder: $0.ConcentrationType.create)
-    ..hasRequiredFields = false;
+    ..aOM<$0.ConcentrationType>(13, _omitFieldNames ? '' : 'bicarbonate', subBuilder: $0.ConcentrationType.create)
+    ..aOM<$0.ConcentrationType>(14, _omitFieldNames ? '' : 'nitrate', subBuilder: $0.ConcentrationType.create)
+    ..aOM<$0.ConcentrationType>(15, _omitFieldNames ? '' : 'sodium', subBuilder: $0.ConcentrationType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  WaterBase clone() => deepCopy();
+  WaterBase clone() => WaterBase()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  WaterBase copyWith(void Function(WaterBase) updates) =>
-      super.copyWith((message) => updates(message as WaterBase)) as WaterBase;
+  WaterBase copyWith(void Function(WaterBase) updates) => super.copyWith((message) => updates(message as WaterBase)) as WaterBase;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -111,8 +92,7 @@ class WaterBase extends $pb.GeneratedMessage {
   WaterBase createEmptyInstance() => create();
   static $pb.PbList<WaterBase> createRepeated() => $pb.PbList<WaterBase>();
   @$core.pragma('dart2js:noInline')
-  static WaterBase getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WaterBase>(create);
+  static WaterBase getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WaterBase>(create);
   static WaterBase? _defaultInstance;
 
   /// Calcium occurs naturally in most water sources and is the principle cause of hardness.
@@ -292,30 +272,21 @@ class WaterType extends $pb.GeneratedMessage {
 
   WaterType._();
 
-  factory WaterType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory WaterType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory WaterType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory WaterType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'WaterType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<WaterBase>(1, _omitFieldNames ? '' : 'base',
-        subBuilder: WaterBase.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'WaterType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<WaterBase>(1, _omitFieldNames ? '' : 'base', subBuilder: WaterBase.create)
     ..aOS(2, _omitFieldNames ? '' : 'id')
     ..aOS(3, _omitFieldNames ? '' : 'notes')
-    ..aOM<$0.AcidityType>(4, _omitFieldNames ? '' : 'ph',
-        subBuilder: $0.AcidityType.create)
-    ..hasRequiredFields = false;
+    ..aOM<$0.AcidityType>(4, _omitFieldNames ? '' : 'ph', subBuilder: $0.AcidityType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  WaterType clone() => deepCopy();
+  WaterType clone() => WaterType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  WaterType copyWith(void Function(WaterType) updates) =>
-      super.copyWith((message) => updates(message as WaterType)) as WaterType;
+  WaterType copyWith(void Function(WaterType) updates) => super.copyWith((message) => updates(message as WaterType)) as WaterType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -326,8 +297,7 @@ class WaterType extends $pb.GeneratedMessage {
   WaterType createEmptyInstance() => create();
   static $pb.PbList<WaterType> createRepeated() => $pb.PbList<WaterType>();
   @$core.pragma('dart2js:noInline')
-  static WaterType getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WaterType>(create);
+  static WaterType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WaterType>(create);
   static WaterType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -389,32 +359,21 @@ class WaterAdditionType extends $pb.GeneratedMessage {
 
   WaterAdditionType._();
 
-  factory WaterAdditionType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory WaterAdditionType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory WaterAdditionType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory WaterAdditionType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'WaterAdditionType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<WaterBase>(1, _omitFieldNames ? '' : 'base',
-        subBuilder: WaterBase.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'WaterAdditionType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<WaterBase>(1, _omitFieldNames ? '' : 'base', subBuilder: WaterBase.create)
     ..aOS(2, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'amount',
-        subBuilder: $0.VolumeType.create)
-    ..aOM<$1.TimingType>(4, _omitFieldNames ? '' : 'timing',
-        subBuilder: $1.TimingType.create)
-    ..hasRequiredFields = false;
+    ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'amount', subBuilder: $0.VolumeType.create)
+    ..aOM<$1.TimingType>(4, _omitFieldNames ? '' : 'timing', subBuilder: $1.TimingType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  WaterAdditionType clone() => deepCopy();
+  WaterAdditionType clone() => WaterAdditionType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  WaterAdditionType copyWith(void Function(WaterAdditionType) updates) =>
-      super.copyWith((message) => updates(message as WaterAdditionType))
-          as WaterAdditionType;
+  WaterAdditionType copyWith(void Function(WaterAdditionType) updates) => super.copyWith((message) => updates(message as WaterAdditionType)) as WaterAdditionType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -423,11 +382,9 @@ class WaterAdditionType extends $pb.GeneratedMessage {
   static WaterAdditionType create() => WaterAdditionType._();
   @$core.override
   WaterAdditionType createEmptyInstance() => create();
-  static $pb.PbList<WaterAdditionType> createRepeated() =>
-      $pb.PbList<WaterAdditionType>();
+  static $pb.PbList<WaterAdditionType> createRepeated() => $pb.PbList<WaterAdditionType>();
   @$core.pragma('dart2js:noInline')
-  static WaterAdditionType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<WaterAdditionType>(create);
+  static WaterAdditionType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WaterAdditionType>(create);
   static WaterAdditionType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -474,7 +431,6 @@ class WaterAdditionType extends $pb.GeneratedMessage {
   $1.TimingType ensureTiming() => $_ensure(3);
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

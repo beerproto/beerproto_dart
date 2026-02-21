@@ -45,15 +45,7 @@ const MiscellaneousBase$json = {
     {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'producer', '3': 2, '4': 1, '5': 9, '10': 'producer'},
     {'1': 'product_id', '3': 3, '4': 1, '5': 9, '10': 'productId'},
-    {
-      '1': 'type',
-      '3': 4,
-      '4': 1,
-      '5': 14,
-      '6': '.beerproto.v1.MiscellaneousBaseType',
-      '8': {},
-      '10': 'type'
-    },
+    {'1': 'type', '3': 4, '4': 1, '5': 14, '6': '.beerproto.v1.MiscellaneousBaseType', '8': {}, '10': 'type'},
   ],
 };
 
@@ -68,26 +60,11 @@ final $typed_data.Uint8List miscellaneousBaseDescriptor = $convert.base64Decode(
 const MiscellaneousType$json = {
   '1': 'MiscellaneousType',
   '2': [
-    {
-      '1': 'base',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.MiscellaneousBase',
-      '8': {},
-      '10': 'base'
-    },
+    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.MiscellaneousBase', '8': {}, '10': 'base'},
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
     {'1': 'use_for', '3': 3, '4': 1, '5': 9, '10': 'useFor'},
     {'1': 'notes', '3': 4, '4': 1, '5': 9, '10': 'notes'},
-    {
-      '1': 'inventory',
-      '3': 5,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.MiscellaneousInventoryType',
-      '10': 'inventory'
-    },
+    {'1': 'inventory', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.MiscellaneousInventoryType', '10': 'inventory'},
   ],
 };
 
@@ -103,51 +80,12 @@ final $typed_data.Uint8List miscellaneousTypeDescriptor = $convert.base64Decode(
 const MiscellaneousAdditionType$json = {
   '1': 'MiscellaneousAdditionType',
   '2': [
-    {
-      '1': 'base',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.MiscellaneousBase',
-      '8': {},
-      '10': 'base'
-    },
+    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.MiscellaneousBase', '8': {}, '10': 'base'},
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {
-      '1': 'timing',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.TimingType',
-      '10': 'timing'
-    },
-    {
-      '1': 'mass',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.MassType',
-      '9': 0,
-      '10': 'mass'
-    },
-    {
-      '1': 'unit',
-      '3': 5,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.UnitType',
-      '9': 0,
-      '10': 'unit'
-    },
-    {
-      '1': 'volume',
-      '3': 6,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '9': 0,
-      '10': 'volume'
-    },
+    {'1': 'timing', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.TimingType', '10': 'timing'},
+    {'1': 'mass', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
+    {'1': 'unit', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.UnitType', '9': 0, '10': 'unit'},
+    {'1': 'volume', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -167,33 +105,9 @@ final $typed_data.Uint8List miscellaneousAdditionTypeDescriptor = $convert.base6
 const MiscellaneousInventoryType$json = {
   '1': 'MiscellaneousInventoryType',
   '2': [
-    {
-      '1': 'mass',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.MassType',
-      '9': 0,
-      '10': 'mass'
-    },
-    {
-      '1': 'unit',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.UnitType',
-      '9': 0,
-      '10': 'unit'
-    },
-    {
-      '1': 'volume',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.beerproto.v1.VolumeType',
-      '9': 0,
-      '10': 'volume'
-    },
+    {'1': 'mass', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
+    {'1': 'unit', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.UnitType', '9': 0, '10': 'unit'},
+    {'1': 'volume', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -206,3 +120,4 @@ final $typed_data.Uint8List miscellaneousInventoryTypeDescriptor = $convert.base
     'YxLk1hc3NUeXBlSABSBG1hc3MSLAoEdW5pdBgCIAEoCzIWLmJlZXJwcm90by52MS5Vbml0VHlw'
     'ZUgAUgR1bml0EjIKBnZvbHVtZRgDIAEoCzIYLmJlZXJwcm90by52MS5Wb2x1bWVUeXBlSABSBn'
     'ZvbHVtZUIPCgZhbW91bnQSBbpIAggB');
+

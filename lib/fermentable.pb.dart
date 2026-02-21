@@ -48,37 +48,25 @@ class FermentableBase extends $pb.GeneratedMessage {
 
   FermentableBase._();
 
-  factory FermentableBase.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory FermentableBase.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory FermentableBase.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory FermentableBase.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'FermentableBase',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aE<FermentableBaseType>(1, _omitFieldNames ? '' : 'type',
-        enumValues: FermentableBaseType.values)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FermentableBase', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..e<FermentableBaseType>(1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: FermentableBaseType.FERMENTABLE_BASE_TYPE_UNSPECIFIED, valueOf: FermentableBaseType.valueOf, enumValues: FermentableBaseType.values)
     ..aOS(2, _omitFieldNames ? '' : 'origin')
-    ..aE<GrainGroup>(3, _omitFieldNames ? '' : 'grainGroup',
-        enumValues: GrainGroup.values)
-    ..aOM<YieldType>(4, _omitFieldNames ? '' : 'yield',
-        subBuilder: YieldType.create)
-    ..aOM<$0.ColorType>(5, _omitFieldNames ? '' : 'color',
-        subBuilder: $0.ColorType.create)
+    ..e<GrainGroup>(3, _omitFieldNames ? '' : 'grainGroup', $pb.PbFieldType.OE, defaultOrMaker: GrainGroup.GRAIN_GROUP_UNSPECIFIED, valueOf: GrainGroup.valueOf, enumValues: GrainGroup.values)
+    ..aOM<YieldType>(4, _omitFieldNames ? '' : 'yield', subBuilder: YieldType.create)
+    ..aOM<$0.ColorType>(5, _omitFieldNames ? '' : 'color', subBuilder: $0.ColorType.create)
     ..aOS(6, _omitFieldNames ? '' : 'name')
     ..aOS(7, _omitFieldNames ? '' : 'producer')
     ..aOS(8, _omitFieldNames ? '' : 'productId')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentableBase clone() => deepCopy();
+  FermentableBase clone() => FermentableBase()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentableBase copyWith(void Function(FermentableBase) updates) =>
-      super.copyWith((message) => updates(message as FermentableBase))
-          as FermentableBase;
+  FermentableBase copyWith(void Function(FermentableBase) updates) => super.copyWith((message) => updates(message as FermentableBase)) as FermentableBase;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -87,11 +75,9 @@ class FermentableBase extends $pb.GeneratedMessage {
   static FermentableBase create() => FermentableBase._();
   @$core.override
   FermentableBase createEmptyInstance() => create();
-  static $pb.PbList<FermentableBase> createRepeated() =>
-      $pb.PbList<FermentableBase>();
+  static $pb.PbList<FermentableBase> createRepeated() => $pb.PbList<FermentableBase>();
   @$core.pragma('dart2js:noInline')
-  static FermentableBase getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<FermentableBase>(create);
+  static FermentableBase getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FermentableBase>(create);
   static FermentableBase? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -227,68 +213,40 @@ class FermentableType extends $pb.GeneratedMessage {
 
   FermentableType._();
 
-  factory FermentableType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory FermentableType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory FermentableType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory FermentableType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'FermentableType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<FermentableBase>(1, _omitFieldNames ? '' : 'base',
-        subBuilder: FermentableBase.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FermentableType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<FermentableBase>(1, _omitFieldNames ? '' : 'base', subBuilder: FermentableBase.create)
     ..aOS(2, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.PercentType>(3, _omitFieldNames ? '' : 'maxInBatch',
-        subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(3, _omitFieldNames ? '' : 'maxInBatch', subBuilder: $0.PercentType.create)
     ..aOB(4, _omitFieldNames ? '' : 'recommendMash')
-    ..aOM<$0.PercentType>(5, _omitFieldNames ? '' : 'protein',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.EnzymeActivityType>(11, _omitFieldNames ? '' : 'alphaAmylase',
-        subBuilder: $0.EnzymeActivityType.create)
-    ..aOM<$0.DiastaticPowerType>(14, _omitFieldNames ? '' : 'diastaticPower',
-        subBuilder: $0.DiastaticPowerType.create)
-    ..aOM<$0.PercentType>(15, _omitFieldNames ? '' : 'moisture',
-        subBuilder: $0.PercentType.create)
-    ..aOM<FermentableInventoryType>(17, _omitFieldNames ? '' : 'inventory',
-        subBuilder: FermentableInventoryType.create)
-    ..aOM<$0.PercentType>(18, _omitFieldNames ? '' : 'kolbachIndex',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(19, _omitFieldNames ? '' : 'glassy',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(20, _omitFieldNames ? '' : 'plump',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(21, _omitFieldNames ? '' : 'half',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(22, _omitFieldNames ? '' : 'mealy',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(23, _omitFieldNames ? '' : 'thru',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(24, _omitFieldNames ? '' : 'friability',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.AcidityType>(25, _omitFieldNames ? '' : 'diPh',
-        subBuilder: $0.AcidityType.create)
-    ..aOM<$0.ViscosityType>(26, _omitFieldNames ? '' : 'viscosity',
-        subBuilder: $0.ViscosityType.create)
-    ..aOM<$0.ConcentrationType>(27, _omitFieldNames ? '' : 'dmsP',
-        subBuilder: $0.ConcentrationType.create)
-    ..aOM<$0.ConcentrationType>(28, _omitFieldNames ? '' : 'fan',
-        subBuilder: $0.ConcentrationType.create)
-    ..aOM<$0.PercentType>(29, _omitFieldNames ? '' : 'fermentability',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.ConcentrationType>(30, _omitFieldNames ? '' : 'betaGlucan',
-        subBuilder: $0.ConcentrationType.create)
+    ..aOM<$0.PercentType>(5, _omitFieldNames ? '' : 'protein', subBuilder: $0.PercentType.create)
+    ..aOM<$0.EnzymeActivityType>(11, _omitFieldNames ? '' : 'alphaAmylase', subBuilder: $0.EnzymeActivityType.create)
+    ..aOM<$0.DiastaticPowerType>(14, _omitFieldNames ? '' : 'diastaticPower', subBuilder: $0.DiastaticPowerType.create)
+    ..aOM<$0.PercentType>(15, _omitFieldNames ? '' : 'moisture', subBuilder: $0.PercentType.create)
+    ..aOM<FermentableInventoryType>(17, _omitFieldNames ? '' : 'inventory', subBuilder: FermentableInventoryType.create)
+    ..aOM<$0.PercentType>(18, _omitFieldNames ? '' : 'kolbachIndex', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(19, _omitFieldNames ? '' : 'glassy', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(20, _omitFieldNames ? '' : 'plump', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(21, _omitFieldNames ? '' : 'half', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(22, _omitFieldNames ? '' : 'mealy', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(23, _omitFieldNames ? '' : 'thru', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(24, _omitFieldNames ? '' : 'friability', subBuilder: $0.PercentType.create)
+    ..aOM<$0.AcidityType>(25, _omitFieldNames ? '' : 'diPh', subBuilder: $0.AcidityType.create)
+    ..aOM<$0.ViscosityType>(26, _omitFieldNames ? '' : 'viscosity', subBuilder: $0.ViscosityType.create)
+    ..aOM<$0.ConcentrationType>(27, _omitFieldNames ? '' : 'dmsP', subBuilder: $0.ConcentrationType.create)
+    ..aOM<$0.ConcentrationType>(28, _omitFieldNames ? '' : 'fan', subBuilder: $0.ConcentrationType.create)
+    ..aOM<$0.PercentType>(29, _omitFieldNames ? '' : 'fermentability', subBuilder: $0.PercentType.create)
+    ..aOM<$0.ConcentrationType>(30, _omitFieldNames ? '' : 'betaGlucan', subBuilder: $0.ConcentrationType.create)
     ..aOS(31, _omitFieldNames ? '' : 'notes')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentableType clone() => deepCopy();
+  FermentableType clone() => FermentableType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentableType copyWith(void Function(FermentableType) updates) =>
-      super.copyWith((message) => updates(message as FermentableType))
-          as FermentableType;
+  FermentableType copyWith(void Function(FermentableType) updates) => super.copyWith((message) => updates(message as FermentableType)) as FermentableType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -297,11 +255,9 @@ class FermentableType extends $pb.GeneratedMessage {
   static FermentableType create() => FermentableType._();
   @$core.override
   FermentableType createEmptyInstance() => create();
-  static $pb.PbList<FermentableType> createRepeated() =>
-      $pb.PbList<FermentableType>();
+  static $pb.PbList<FermentableType> createRepeated() => $pb.PbList<FermentableType>();
   @$core.pragma('dart2js:noInline')
-  static FermentableType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<FermentableType>(create);
+  static FermentableType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FermentableType>(create);
   static FermentableType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -569,7 +525,11 @@ class FermentableType extends $pb.GeneratedMessage {
   void clearNotes() => $_clearField(31);
 }
 
-enum FermentableAdditionType_Amount { mass, volume, notSet }
+enum FermentableAdditionType_Amount {
+  mass, 
+  volume, 
+  notSet
+}
 
 /// FermentableAdditionType collects the attributes of each fermentable ingredient for use in a recipe fermentable bill
 class FermentableAdditionType extends $pb.GeneratedMessage {
@@ -591,42 +551,28 @@ class FermentableAdditionType extends $pb.GeneratedMessage {
 
   FermentableAdditionType._();
 
-  factory FermentableAdditionType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory FermentableAdditionType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory FermentableAdditionType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory FermentableAdditionType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static const $core.Map<$core.int, FermentableAdditionType_Amount>
-      _FermentableAdditionType_AmountByTag = {
-    4: FermentableAdditionType_Amount.mass,
-    5: FermentableAdditionType_Amount.volume,
-    0: FermentableAdditionType_Amount.notSet
+  static const $core.Map<$core.int, FermentableAdditionType_Amount> _FermentableAdditionType_AmountByTag = {
+    4 : FermentableAdditionType_Amount.mass,
+    5 : FermentableAdditionType_Amount.volume,
+    0 : FermentableAdditionType_Amount.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'FermentableAdditionType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FermentableAdditionType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..oo(0, [4, 5])
-    ..aOM<FermentableBase>(1, _omitFieldNames ? '' : 'base',
-        subBuilder: FermentableBase.create)
+    ..aOM<FermentableBase>(1, _omitFieldNames ? '' : 'base', subBuilder: FermentableBase.create)
     ..aOS(2, _omitFieldNames ? '' : 'id')
-    ..aOM<$1.TimingType>(3, _omitFieldNames ? '' : 'timing',
-        subBuilder: $1.TimingType.create)
-    ..aOM<$0.MassType>(4, _omitFieldNames ? '' : 'mass',
-        subBuilder: $0.MassType.create)
-    ..aOM<$0.VolumeType>(5, _omitFieldNames ? '' : 'volume',
-        subBuilder: $0.VolumeType.create)
-    ..hasRequiredFields = false;
+    ..aOM<$1.TimingType>(3, _omitFieldNames ? '' : 'timing', subBuilder: $1.TimingType.create)
+    ..aOM<$0.MassType>(4, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
+    ..aOM<$0.VolumeType>(5, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentableAdditionType clone() => deepCopy();
+  FermentableAdditionType clone() => FermentableAdditionType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentableAdditionType copyWith(
-          void Function(FermentableAdditionType) updates) =>
-      super.copyWith((message) => updates(message as FermentableAdditionType))
-          as FermentableAdditionType;
+  FermentableAdditionType copyWith(void Function(FermentableAdditionType) updates) => super.copyWith((message) => updates(message as FermentableAdditionType)) as FermentableAdditionType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -635,19 +581,12 @@ class FermentableAdditionType extends $pb.GeneratedMessage {
   static FermentableAdditionType create() => FermentableAdditionType._();
   @$core.override
   FermentableAdditionType createEmptyInstance() => create();
-  static $pb.PbList<FermentableAdditionType> createRepeated() =>
-      $pb.PbList<FermentableAdditionType>();
+  static $pb.PbList<FermentableAdditionType> createRepeated() => $pb.PbList<FermentableAdditionType>();
   @$core.pragma('dart2js:noInline')
-  static FermentableAdditionType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<FermentableAdditionType>(create);
+  static FermentableAdditionType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FermentableAdditionType>(create);
   static FermentableAdditionType? _defaultInstance;
 
-  @$pb.TagNumber(4)
-  @$pb.TagNumber(5)
-  FermentableAdditionType_Amount whichAmount() =>
-      _FermentableAdditionType_AmountByTag[$_whichOneof(0)]!;
-  @$pb.TagNumber(4)
-  @$pb.TagNumber(5)
+  FermentableAdditionType_Amount whichAmount() => _FermentableAdditionType_AmountByTag[$_whichOneof(0)]!;
   void clearAmount() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -716,40 +655,28 @@ class YieldType extends $pb.GeneratedMessage {
     final result = create();
     if (fineGrind != null) result.fineGrind = fineGrind;
     if (coarseGrind != null) result.coarseGrind = coarseGrind;
-    if (fineCoarseDifference != null)
-      result.fineCoarseDifference = fineCoarseDifference;
+    if (fineCoarseDifference != null) result.fineCoarseDifference = fineCoarseDifference;
     if (potential != null) result.potential = potential;
     return result;
   }
 
   YieldType._();
 
-  factory YieldType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory YieldType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory YieldType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory YieldType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'YieldType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
-    ..aOM<$0.PercentType>(1, _omitFieldNames ? '' : 'fineGrind',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(2, _omitFieldNames ? '' : 'coarseGrind',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(3, _omitFieldNames ? '' : 'fineCoarseDifference',
-        subBuilder: $0.PercentType.create)
-    ..aOM<$0.GravityType>(4, _omitFieldNames ? '' : 'potential',
-        subBuilder: $0.GravityType.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'YieldType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..aOM<$0.PercentType>(1, _omitFieldNames ? '' : 'fineGrind', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(2, _omitFieldNames ? '' : 'coarseGrind', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(3, _omitFieldNames ? '' : 'fineCoarseDifference', subBuilder: $0.PercentType.create)
+    ..aOM<$0.GravityType>(4, _omitFieldNames ? '' : 'potential', subBuilder: $0.GravityType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  YieldType clone() => deepCopy();
+  YieldType clone() => YieldType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  YieldType copyWith(void Function(YieldType) updates) =>
-      super.copyWith((message) => updates(message as YieldType)) as YieldType;
+  YieldType copyWith(void Function(YieldType) updates) => super.copyWith((message) => updates(message as YieldType)) as YieldType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -760,8 +687,7 @@ class YieldType extends $pb.GeneratedMessage {
   YieldType createEmptyInstance() => create();
   static $pb.PbList<YieldType> createRepeated() => $pb.PbList<YieldType>();
   @$core.pragma('dart2js:noInline')
-  static YieldType getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<YieldType>(create);
+  static YieldType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<YieldType>(create);
   static YieldType? _defaultInstance;
 
   /// Percentage yield compared to succrose of a fine grind. eg 80%
@@ -813,7 +739,11 @@ class YieldType extends $pb.GeneratedMessage {
   $0.GravityType ensurePotential() => $_ensure(3);
 }
 
-enum FermentableInventoryType_Amount { mass, volume, notSet }
+enum FermentableInventoryType_Amount {
+  mass, 
+  volume, 
+  notSet
+}
 
 class FermentableInventoryType extends $pb.GeneratedMessage {
   factory FermentableInventoryType({
@@ -828,37 +758,25 @@ class FermentableInventoryType extends $pb.GeneratedMessage {
 
   FermentableInventoryType._();
 
-  factory FermentableInventoryType.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory FermentableInventoryType.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  factory FermentableInventoryType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory FermentableInventoryType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static const $core.Map<$core.int, FermentableInventoryType_Amount>
-      _FermentableInventoryType_AmountByTag = {
-    1: FermentableInventoryType_Amount.mass,
-    2: FermentableInventoryType_Amount.volume,
-    0: FermentableInventoryType_Amount.notSet
+  static const $core.Map<$core.int, FermentableInventoryType_Amount> _FermentableInventoryType_AmountByTag = {
+    1 : FermentableInventoryType_Amount.mass,
+    2 : FermentableInventoryType_Amount.volume,
+    0 : FermentableInventoryType_Amount.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'FermentableInventoryType',
-      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FermentableInventoryType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<$0.MassType>(1, _omitFieldNames ? '' : 'mass',
-        subBuilder: $0.MassType.create)
-    ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'volume',
-        subBuilder: $0.VolumeType.create)
-    ..hasRequiredFields = false;
+    ..aOM<$0.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
+    ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
+    ..hasRequiredFields = false
+  ;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentableInventoryType clone() => deepCopy();
+  FermentableInventoryType clone() => FermentableInventoryType()..mergeFromMessage(this);
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentableInventoryType copyWith(
-          void Function(FermentableInventoryType) updates) =>
-      super.copyWith((message) => updates(message as FermentableInventoryType))
-          as FermentableInventoryType;
+  FermentableInventoryType copyWith(void Function(FermentableInventoryType) updates) => super.copyWith((message) => updates(message as FermentableInventoryType)) as FermentableInventoryType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
@@ -867,19 +785,12 @@ class FermentableInventoryType extends $pb.GeneratedMessage {
   static FermentableInventoryType create() => FermentableInventoryType._();
   @$core.override
   FermentableInventoryType createEmptyInstance() => create();
-  static $pb.PbList<FermentableInventoryType> createRepeated() =>
-      $pb.PbList<FermentableInventoryType>();
+  static $pb.PbList<FermentableInventoryType> createRepeated() => $pb.PbList<FermentableInventoryType>();
   @$core.pragma('dart2js:noInline')
-  static FermentableInventoryType getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<FermentableInventoryType>(create);
+  static FermentableInventoryType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FermentableInventoryType>(create);
   static FermentableInventoryType? _defaultInstance;
 
-  @$pb.TagNumber(1)
-  @$pb.TagNumber(2)
-  FermentableInventoryType_Amount whichAmount() =>
-      _FermentableInventoryType_AmountByTag[$_whichOneof(0)]!;
-  @$pb.TagNumber(1)
-  @$pb.TagNumber(2)
+  FermentableInventoryType_Amount whichAmount() => _FermentableInventoryType_AmountByTag[$_whichOneof(0)]!;
   void clearAmount() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -905,7 +816,6 @@ class FermentableInventoryType extends $pb.GeneratedMessage {
   $0.VolumeType ensureVolume() => $_ensure(1);
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
