@@ -119,6 +119,7 @@ class EquipmentItemType extends $pb.GeneratedMessage {
     $0.MassType? weight,
     $0.VolumeType? loss,
     $0.PercentType? efficiency,
+    $0.VolumeType? transferLoss,
   }) {
     final result = create();
     if (base != null) result.base = base;
@@ -131,6 +132,7 @@ class EquipmentItemType extends $pb.GeneratedMessage {
     if (weight != null) result.weight = weight;
     if (loss != null) result.loss = loss;
     if (efficiency != null) result.efficiency = efficiency;
+    if (transferLoss != null) result.transferLoss = transferLoss;
     return result;
   }
 
@@ -150,6 +152,7 @@ class EquipmentItemType extends $pb.GeneratedMessage {
     ..aOM<$0.MassType>(8, _omitFieldNames ? '' : 'weight', subBuilder: $0.MassType.create)
     ..aOM<$0.VolumeType>(9, _omitFieldNames ? '' : 'loss', subBuilder: $0.VolumeType.create)
     ..aOM<$0.PercentType>(10, _omitFieldNames ? '' : 'efficiency', subBuilder: $0.PercentType.create)
+    ..aOM<$0.VolumeType>(11, _omitFieldNames ? '' : 'transferLoss', subBuilder: $0.VolumeType.create)
     ..hasRequiredFields = false
   ;
 
@@ -280,6 +283,18 @@ class EquipmentItemType extends $pb.GeneratedMessage {
   void clearEfficiency() => $_clearField(10);
   @$pb.TagNumber(10)
   $0.PercentType ensureEfficiency() => $_ensure(9);
+
+  /// The total volume of wort lost to dead legs, hoses, and fittings during transfers between vessels.
+  @$pb.TagNumber(11)
+  $0.VolumeType get transferLoss => $_getN(10);
+  @$pb.TagNumber(11)
+  set transferLoss($0.VolumeType value) => $_setField(11, value);
+  @$pb.TagNumber(11)
+  $core.bool hasTransferLoss() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearTransferLoss() => $_clearField(11);
+  @$pb.TagNumber(11)
+  $0.VolumeType ensureTransferLoss() => $_ensure(10);
 }
 
 /// Provides necessary information for brewing equipment set

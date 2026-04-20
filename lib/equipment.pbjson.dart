@@ -26,6 +26,7 @@ const EquipmentBaseForm$json = {
     {'1': 'EQUIPMENT_BASE_FORM_FERMENTER', '2': 5},
     {'1': 'EQUIPMENT_BASE_FORM_AGING_VESSEL', '2': 6},
     {'1': 'EQUIPMENT_BASE_FORM_PACKAGING_VESSEL', '2': 7},
+    {'1': 'EQUIPMENT_BASE_FORM_WHIRLPOOL_VESSEL', '2': 8},
   ],
 };
 
@@ -36,7 +37,8 @@ final $typed_data.Uint8List equipmentBaseFormDescriptor = $convert.base64Decode(
     'U0hfVFVOEAISIgoeRVFVSVBNRU5UX0JBU0VfRk9STV9MQVVURVJfVFVOEAMSIwofRVFVSVBNRU'
     '5UX0JBU0VfRk9STV9CUkVXX0tFVFRMRRAEEiEKHUVRVUlQTUVOVF9CQVNFX0ZPUk1fRkVSTUVO'
     'VEVSEAUSJAogRVFVSVBNRU5UX0JBU0VfRk9STV9BR0lOR19WRVNTRUwQBhIoCiRFUVVJUE1FTl'
-    'RfQkFTRV9GT1JNX1BBQ0tBR0lOR19WRVNTRUwQBw==');
+    'RfQkFTRV9GT1JNX1BBQ0tBR0lOR19WRVNTRUwQBxIoCiRFUVVJUE1FTlRfQkFTRV9GT1JNX1dI'
+    'SVJMUE9PTF9WRVNTRUwQCA==');
 
 @$core.Deprecated('Use equipmentBaseDescriptor instead')
 const EquipmentBase$json = {
@@ -70,6 +72,7 @@ const EquipmentItemType$json = {
     {'1': 'weight', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '10': 'weight'},
     {'1': 'loss', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '8': {}, '10': 'loss'},
     {'1': 'efficiency', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'efficiency'},
+    {'1': 'transfer_loss', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'transferLoss'},
   ],
 };
 
@@ -85,7 +88,8 @@ final $typed_data.Uint8List equipmentItemTypeDescriptor = $convert.base64Decode(
     'YxLlNwZWNpZmljVm9sdW1lVHlwZVITZ3JhaW5BYnNvcnB0aW9uUmF0ZRIuCgZ3ZWlnaHQYCCAB'
     'KAsyFi5iZWVycHJvdG8udjEuTWFzc1R5cGVSBndlaWdodBI0CgRsb3NzGAkgASgLMhguYmVlcn'
     'Byb3RvLnYxLlZvbHVtZVR5cGVCBrpIA8gBAVIEbG9zcxI5CgplZmZpY2llbmN5GAogASgLMhku'
-    'YmVlcnByb3RvLnYxLlBlcmNlbnRUeXBlUgplZmZpY2llbmN5');
+    'YmVlcnByb3RvLnYxLlBlcmNlbnRUeXBlUgplZmZpY2llbmN5Ej0KDXRyYW5zZmVyX2xvc3MYCy'
+    'ABKAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVHlwZVIMdHJhbnNmZXJMb3Nz');
 
 @$core.Deprecated('Use equipmentTypeDescriptor instead')
 const EquipmentType$json = {

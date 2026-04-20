@@ -30,6 +30,8 @@ class EquipmentBaseForm extends $pb.ProtobufEnum {
   static const EquipmentBaseForm EQUIPMENT_BASE_FORM_AGING_VESSEL = EquipmentBaseForm._(6, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_AGING_VESSEL');
   /// Packaging Vessel
   static const EquipmentBaseForm EQUIPMENT_BASE_FORM_PACKAGING_VESSEL = EquipmentBaseForm._(7, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_PACKAGING_VESSEL');
+  /// Whirlpool Vessel
+  static const EquipmentBaseForm EQUIPMENT_BASE_FORM_WHIRLPOOL_VESSEL = EquipmentBaseForm._(8, _omitEnumNames ? '' : 'EQUIPMENT_BASE_FORM_WHIRLPOOL_VESSEL');
 
   static const $core.List<EquipmentBaseForm> values = <EquipmentBaseForm> [
     EQUIPMENT_BASE_FORM_UNSPECIFIED,
@@ -40,9 +42,10 @@ class EquipmentBaseForm extends $pb.ProtobufEnum {
     EQUIPMENT_BASE_FORM_FERMENTER,
     EQUIPMENT_BASE_FORM_AGING_VESSEL,
     EQUIPMENT_BASE_FORM_PACKAGING_VESSEL,
+    EQUIPMENT_BASE_FORM_WHIRLPOOL_VESSEL,
   ];
 
-  static final $core.List<EquipmentBaseForm?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 7);
+  static final $core.List<EquipmentBaseForm?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 8);
   static EquipmentBaseForm? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
 
   const EquipmentBaseForm._(super.value, super.name);
