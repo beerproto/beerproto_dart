@@ -414,6 +414,9 @@ class RateUnit extends $pb.ProtobufEnum {
   static const RateUnit RATE_UNIT_L_PER_HOUR = RateUnit._(1, _omitEnumNames ? '' : 'RATE_UNIT_L_PER_HOUR');
   static const RateUnit RATE_UNIT_L_PER_MINUTE = RateUnit._(2, _omitEnumNames ? '' : 'RATE_UNIT_L_PER_MINUTE');
   static const RateUnit RATE_UNIT_GAL_PER_HOUR = RateUnit._(3, _omitEnumNames ? '' : 'RATE_UNIT_GAL_PER_HOUR');
+  static const RateUnit RATE_UNIT_GAL_PER_MINUTE = RateUnit._(9, _omitEnumNames ? '' : 'RATE_UNIT_GAL_PER_MINUTE');
+  static const RateUnit RATE_UNIT_HL_PER_HOUR = RateUnit._(10, _omitEnumNames ? '' : 'RATE_UNIT_HL_PER_HOUR');
+  static const RateUnit RATE_UNIT_BBL_PER_HOUR = RateUnit._(11, _omitEnumNames ? '' : 'RATE_UNIT_BBL_PER_HOUR');
   /// Percent-based rates (useful for boil-off)
   static const RateUnit RATE_UNIT_PERCENT_PER_HOUR = RateUnit._(4, _omitEnumNames ? '' : 'RATE_UNIT_PERCENT_PER_HOUR');
   /// Mass absorption (common in brewing calculations)
@@ -428,6 +431,9 @@ class RateUnit extends $pb.ProtobufEnum {
     RATE_UNIT_L_PER_HOUR,
     RATE_UNIT_L_PER_MINUTE,
     RATE_UNIT_GAL_PER_HOUR,
+    RATE_UNIT_GAL_PER_MINUTE,
+    RATE_UNIT_HL_PER_HOUR,
+    RATE_UNIT_BBL_PER_HOUR,
     RATE_UNIT_PERCENT_PER_HOUR,
     RATE_UNIT_L_PER_KG,
     RATE_UNIT_GAL_PER_LB,
@@ -435,7 +441,7 @@ class RateUnit extends $pb.ProtobufEnum {
     RATE_UNIT_F_PER_MINUTE,
   ];
 
-  static final $core.List<RateUnit?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 8);
+  static final $core.List<RateUnit?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 11);
   static RateUnit? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
 
   const RateUnit._(super.value, super.name);
