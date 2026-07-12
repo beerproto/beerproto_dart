@@ -66,6 +66,23 @@ final $typed_data.Uint8List massUnitDescriptor = $convert.base64Decode(
     'IPCgtNQVNTX1VOSVRfRxACEhAKDE1BU1NfVU5JVF9LRxADEhAKDE1BU1NfVU5JVF9MQhAEEhAK'
     'DE1BU1NfVU5JVF9PWhAF');
 
+@$core.Deprecated('Use cellCountUnitDescriptor instead')
+const CellCountUnit$json = {
+  '1': 'CellCountUnit',
+  '2': [
+    {'1': 'CELL_COUNT_UNIT_UNSPECIFIED', '2': 0},
+    {'1': 'CELL_COUNT_UNIT_CELLS', '2': 1},
+    {'1': 'CELL_COUNT_UNIT_MILLION', '2': 2},
+    {'1': 'CELL_COUNT_UNIT_BILLION', '2': 3},
+  ],
+};
+
+/// Descriptor for `CellCountUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List cellCountUnitDescriptor = $convert.base64Decode(
+    'Cg1DZWxsQ291bnRVbml0Eh8KG0NFTExfQ09VTlRfVU5JVF9VTlNQRUNJRklFRBAAEhkKFUNFTE'
+    'xfQ09VTlRfVU5JVF9DRUxMUxABEhsKF0NFTExfQ09VTlRfVU5JVF9NSUxMSU9OEAISGwoXQ0VM'
+    'TF9DT1VOVF9VTklUX0JJTExJT04QAw==');
+
 @$core.Deprecated('Use diastaticPowerUnitDescriptor instead')
 const DiastaticPowerUnit$json = {
   '1': 'DiastaticPowerUnit',
@@ -411,6 +428,20 @@ const MassType$json = {
 final $typed_data.Uint8List massTypeDescriptor = $convert.base64Decode(
     'CghNYXNzVHlwZRIUCgV2YWx1ZRgBIAEoAVIFdmFsdWUSKgoEdW5pdBgCIAEoDjIWLmJlZXJwcm'
     '90by52MS5NYXNzVW5pdFIEdW5pdA==');
+
+@$core.Deprecated('Use cellCountTypeDescriptor instead')
+const CellCountType$json = {
+  '1': 'CellCountType',
+  '2': [
+    {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.CellCountUnit', '10': 'unit'},
+  ],
+};
+
+/// Descriptor for `CellCountType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cellCountTypeDescriptor = $convert.base64Decode(
+    'Cg1DZWxsQ291bnRUeXBlEhQKBXZhbHVlGAEgASgBUgV2YWx1ZRIvCgR1bml0GAIgASgOMhsuYm'
+    'VlcnByb3RvLnYxLkNlbGxDb3VudFVuaXRSBHVuaXQ=');
 
 @$core.Deprecated('Use diastaticPowerTypeDescriptor instead')
 const DiastaticPowerType$json = {

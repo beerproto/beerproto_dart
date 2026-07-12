@@ -100,6 +100,28 @@ class MassUnit extends $pb.ProtobufEnum {
   const MassUnit._(super.value, super.name);
 }
 
+class CellCountUnit extends $pb.ProtobufEnum {
+  static const CellCountUnit CELL_COUNT_UNIT_UNSPECIFIED = CellCountUnit._(0, _omitEnumNames ? '' : 'CELL_COUNT_UNIT_UNSPECIFIED');
+  /// cells
+  static const CellCountUnit CELL_COUNT_UNIT_CELLS = CellCountUnit._(1, _omitEnumNames ? '' : 'CELL_COUNT_UNIT_CELLS');
+  /// M (million, x10^6)
+  static const CellCountUnit CELL_COUNT_UNIT_MILLION = CellCountUnit._(2, _omitEnumNames ? '' : 'CELL_COUNT_UNIT_MILLION');
+  /// B (billion, x10^9)
+  static const CellCountUnit CELL_COUNT_UNIT_BILLION = CellCountUnit._(3, _omitEnumNames ? '' : 'CELL_COUNT_UNIT_BILLION');
+
+  static const $core.List<CellCountUnit> values = <CellCountUnit> [
+    CELL_COUNT_UNIT_UNSPECIFIED,
+    CELL_COUNT_UNIT_CELLS,
+    CELL_COUNT_UNIT_MILLION,
+    CELL_COUNT_UNIT_BILLION,
+  ];
+
+  static final $core.List<CellCountUnit?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static CellCountUnit? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const CellCountUnit._(super.value, super.name);
+}
+
 class DiastaticPowerUnit extends $pb.ProtobufEnum {
   static const DiastaticPowerUnit DIASTATIC_POWER_UNIT_UNSPECIFIED = DiastaticPowerUnit._(0, _omitEnumNames ? '' : 'DIASTATIC_POWER_UNIT_UNSPECIFIED');
   /// Lintner

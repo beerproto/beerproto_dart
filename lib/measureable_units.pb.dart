@@ -137,6 +137,65 @@ class MassType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// CellCountType represents a count of viable microorganism (yeast/bacteria) cells, used in yeast pitch-rate calculations. Pitch-rate math is done in billions; cells and millions are provided for display scaling.
+class CellCountType extends $pb.GeneratedMessage {
+  factory CellCountType({
+    $core.double? value,
+    CellCountUnit? unit,
+  }) {
+    final result = create();
+    if (value != null) result.value = value;
+    if (unit != null) result.unit = unit;
+    return result;
+  }
+
+  CellCountType._();
+
+  factory CellCountType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory CellCountType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CellCountType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<CellCountUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: CellCountUnit.CELL_COUNT_UNIT_UNSPECIFIED, valueOf: CellCountUnit.valueOf, enumValues: CellCountUnit.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CellCountType clone() => CellCountType()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CellCountType copyWith(void Function(CellCountType) updates) => super.copyWith((message) => updates(message as CellCountType)) as CellCountType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CellCountType create() => CellCountType._();
+  @$core.override
+  CellCountType createEmptyInstance() => create();
+  static $pb.PbList<CellCountType> createRepeated() => $pb.PbList<CellCountType>();
+  @$core.pragma('dart2js:noInline')
+  static CellCountType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CellCountType>(create);
+  static CellCountType? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get value => $_getN(0);
+  @$pb.TagNumber(1)
+  set value($core.double value) => $_setDouble(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  CellCountUnit get unit => $_getN(1);
+  @$pb.TagNumber(2)
+  set unit(CellCountUnit value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUnit() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUnit() => $_clearField(2);
+}
+
 /// Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner is needed to self convert, while a value of 100 or more is desirable for base malts
 class DiastaticPowerType extends $pb.GeneratedMessage {
   factory DiastaticPowerType({
