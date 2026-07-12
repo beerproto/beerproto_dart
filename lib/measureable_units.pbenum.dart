@@ -122,6 +122,22 @@ class CellCountUnit extends $pb.ProtobufEnum {
   const CellCountUnit._(super.value, super.name);
 }
 
+class PitchRateUnit extends $pb.ProtobufEnum {
+  static const PitchRateUnit PITCH_RATE_UNIT_UNSPECIFIED = PitchRateUnit._(0, _omitEnumNames ? '' : 'PITCH_RATE_UNIT_UNSPECIFIED');
+  /// M cells / mL / °Plato
+  static const PitchRateUnit PITCH_RATE_UNIT_MILLION_CELLS_PER_ML_PER_PLATO = PitchRateUnit._(1, _omitEnumNames ? '' : 'PITCH_RATE_UNIT_MILLION_CELLS_PER_ML_PER_PLATO');
+
+  static const $core.List<PitchRateUnit> values = <PitchRateUnit> [
+    PITCH_RATE_UNIT_UNSPECIFIED,
+    PITCH_RATE_UNIT_MILLION_CELLS_PER_ML_PER_PLATO,
+  ];
+
+  static final $core.List<PitchRateUnit?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 1);
+  static PitchRateUnit? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const PitchRateUnit._(super.value, super.name);
+}
+
 class DiastaticPowerUnit extends $pb.ProtobufEnum {
   static const DiastaticPowerUnit DIASTATIC_POWER_UNIT_UNSPECIFIED = DiastaticPowerUnit._(0, _omitEnumNames ? '' : 'DIASTATIC_POWER_UNIT_UNSPECIFIED');
   /// Lintner

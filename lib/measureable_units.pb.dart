@@ -196,6 +196,65 @@ class CellCountType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// PitchRateType is a yeast pitch rate — cells pitched per unit wort volume per unit gravity. There is one unit in common brewing use (million cells / mL / °Plato), so it exists mainly for type-safety and consistent display rather than conversion.
+class PitchRateType extends $pb.GeneratedMessage {
+  factory PitchRateType({
+    $core.double? value,
+    PitchRateUnit? unit,
+  }) {
+    final result = create();
+    if (value != null) result.value = value;
+    if (unit != null) result.unit = unit;
+    return result;
+  }
+
+  PitchRateType._();
+
+  factory PitchRateType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory PitchRateType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PitchRateType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<PitchRateUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: PitchRateUnit.PITCH_RATE_UNIT_UNSPECIFIED, valueOf: PitchRateUnit.valueOf, enumValues: PitchRateUnit.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PitchRateType clone() => PitchRateType()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PitchRateType copyWith(void Function(PitchRateType) updates) => super.copyWith((message) => updates(message as PitchRateType)) as PitchRateType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static PitchRateType create() => PitchRateType._();
+  @$core.override
+  PitchRateType createEmptyInstance() => create();
+  static $pb.PbList<PitchRateType> createRepeated() => $pb.PbList<PitchRateType>();
+  @$core.pragma('dart2js:noInline')
+  static PitchRateType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PitchRateType>(create);
+  static PitchRateType? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get value => $_getN(0);
+  @$pb.TagNumber(1)
+  set value($core.double value) => $_setDouble(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  PitchRateUnit get unit => $_getN(1);
+  @$pb.TagNumber(2)
+  set unit(PitchRateUnit value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUnit() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUnit() => $_clearField(2);
+}
+
 /// Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner is needed to self convert, while a value of 100 or more is desirable for base malts
 class DiastaticPowerType extends $pb.GeneratedMessage {
   factory DiastaticPowerType({

@@ -83,6 +83,20 @@ final $typed_data.Uint8List cellCountUnitDescriptor = $convert.base64Decode(
     'xfQ09VTlRfVU5JVF9DRUxMUxABEhsKF0NFTExfQ09VTlRfVU5JVF9NSUxMSU9OEAISGwoXQ0VM'
     'TF9DT1VOVF9VTklUX0JJTExJT04QAw==');
 
+@$core.Deprecated('Use pitchRateUnitDescriptor instead')
+const PitchRateUnit$json = {
+  '1': 'PitchRateUnit',
+  '2': [
+    {'1': 'PITCH_RATE_UNIT_UNSPECIFIED', '2': 0},
+    {'1': 'PITCH_RATE_UNIT_MILLION_CELLS_PER_ML_PER_PLATO', '2': 1},
+  ],
+};
+
+/// Descriptor for `PitchRateUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List pitchRateUnitDescriptor = $convert.base64Decode(
+    'Cg1QaXRjaFJhdGVVbml0Eh8KG1BJVENIX1JBVEVfVU5JVF9VTlNQRUNJRklFRBAAEjIKLlBJVE'
+    'NIX1JBVEVfVU5JVF9NSUxMSU9OX0NFTExTX1BFUl9NTF9QRVJfUExBVE8QAQ==');
+
 @$core.Deprecated('Use diastaticPowerUnitDescriptor instead')
 const DiastaticPowerUnit$json = {
   '1': 'DiastaticPowerUnit',
@@ -442,6 +456,20 @@ const CellCountType$json = {
 final $typed_data.Uint8List cellCountTypeDescriptor = $convert.base64Decode(
     'Cg1DZWxsQ291bnRUeXBlEhQKBXZhbHVlGAEgASgBUgV2YWx1ZRIvCgR1bml0GAIgASgOMhsuYm'
     'VlcnByb3RvLnYxLkNlbGxDb3VudFVuaXRSBHVuaXQ=');
+
+@$core.Deprecated('Use pitchRateTypeDescriptor instead')
+const PitchRateType$json = {
+  '1': 'PitchRateType',
+  '2': [
+    {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.PitchRateUnit', '10': 'unit'},
+  ],
+};
+
+/// Descriptor for `PitchRateType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List pitchRateTypeDescriptor = $convert.base64Decode(
+    'Cg1QaXRjaFJhdGVUeXBlEhQKBXZhbHVlGAEgASgBUgV2YWx1ZRIvCgR1bml0GAIgASgOMhsuYm'
+    'VlcnByb3RvLnYxLlBpdGNoUmF0ZVVuaXRSBHVuaXQ=');
 
 @$core.Deprecated('Use diastaticPowerTypeDescriptor instead')
 const DiastaticPowerType$json = {
