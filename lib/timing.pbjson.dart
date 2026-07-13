@@ -23,6 +23,8 @@ const UseType$json = {
     {'1': 'USE_TYPE_ADD_TO_BOIL', '2': 2},
     {'1': 'USE_TYPE_ADD_TO_FERMENTATION', '2': 3},
     {'1': 'USE_TYPE_ADD_TO_PACKAGE', '2': 4},
+    {'1': 'USE_TYPE_ADD_TO_WHIRLPOOL', '2': 5},
+    {'1': 'USE_TYPE_ADD_TO_FIRST_WORT', '2': 6},
   ],
 };
 
@@ -30,7 +32,8 @@ const UseType$json = {
 final $typed_data.Uint8List useTypeDescriptor = $convert.base64Decode(
     'CgdVc2VUeXBlEhgKFFVTRV9UWVBFX1VOU1BFQ0lGSUVEEAASGAoUVVNFX1RZUEVfQUREX1RPX0'
     '1BU0gQARIYChRVU0VfVFlQRV9BRERfVE9fQk9JTBACEiAKHFVTRV9UWVBFX0FERF9UT19GRVJN'
-    'RU5UQVRJT04QAxIbChdVU0VfVFlQRV9BRERfVE9fUEFDS0FHRRAE');
+    'RU5UQVRJT04QAxIbChdVU0VfVFlQRV9BRERfVE9fUEFDS0FHRRAEEh0KGVVTRV9UWVBFX0FERF'
+    '9UT19XSElSTFBPT0wQBRIeChpVU0VfVFlQRV9BRERfVE9fRklSU1RfV09SVBAG');
 
 @$core.Deprecated('Use timingTypeDescriptor instead')
 const TimingType$json = {

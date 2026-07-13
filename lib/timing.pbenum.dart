@@ -24,6 +24,10 @@ class UseType extends $pb.ProtobufEnum {
   static const UseType USE_TYPE_ADD_TO_FERMENTATION = UseType._(3, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_FERMENTATION');
   /// add to package
   static const UseType USE_TYPE_ADD_TO_PACKAGE = UseType._(4, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_PACKAGE');
+  /// add at or after flameout, steeped below boiling (whirlpool / hopstand); isomerization continues at a reduced, temperature-dependent rate
+  static const UseType USE_TYPE_ADD_TO_WHIRLPOOL = UseType._(5, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_WHIRLPOOL');
+  /// add to the kettle before the boil begins (first wort hopping); ~10% higher measured utilization than an equivalent full-boil addition
+  static const UseType USE_TYPE_ADD_TO_FIRST_WORT = UseType._(6, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_FIRST_WORT');
 
   static const $core.List<UseType> values = <UseType> [
     USE_TYPE_UNSPECIFIED,
@@ -31,9 +35,11 @@ class UseType extends $pb.ProtobufEnum {
     USE_TYPE_ADD_TO_BOIL,
     USE_TYPE_ADD_TO_FERMENTATION,
     USE_TYPE_ADD_TO_PACKAGE,
+    USE_TYPE_ADD_TO_WHIRLPOOL,
+    USE_TYPE_ADD_TO_FIRST_WORT,
   ];
 
-  static final $core.List<UseType?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 4);
+  static final $core.List<UseType?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 6);
   static UseType? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
 
   const UseType._(super.value, super.name);
