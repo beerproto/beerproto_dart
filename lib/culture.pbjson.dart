@@ -106,6 +106,7 @@ const CultureBase$json = {
     {'1': 'form', '3': 3, '4': 1, '5': 14, '6': '.beerproto.v1.CultureBaseForm', '8': {}, '10': 'form'},
     {'1': 'producer', '3': 4, '4': 1, '5': 9, '10': 'producer'},
     {'1': 'product_id', '3': 5, '4': 1, '5': 9, '10': 'productId'},
+    {'1': 'glucoamylase', '3': 6, '4': 1, '5': 8, '10': 'glucoamylase'},
   ],
 };
 
@@ -115,7 +116,7 @@ final $typed_data.Uint8List cultureBaseDescriptor = $convert.base64Decode(
     'ABKA4yHS5iZWVycHJvdG8udjEuQ3VsdHVyZUJhc2VUeXBlQgu6SAjIAQGCAQIgAFIEdHlwZRI+'
     'CgRmb3JtGAMgASgOMh0uYmVlcnByb3RvLnYxLkN1bHR1cmVCYXNlRm9ybUILukgIyAEBggECIA'
     'BSBGZvcm0SGgoIcHJvZHVjZXIYBCABKAlSCHByb2R1Y2VyEh0KCnByb2R1Y3RfaWQYBSABKAlS'
-    'CXByb2R1Y3RJZA==');
+    'CXByb2R1Y3RJZBIiCgxnbHVjb2FteWxhc2UYBiABKAhSDGdsdWNvYW15bGFzZQ==');
 
 @$core.Deprecated('Use cultureInformationDescriptor instead')
 const CultureInformation$json = {

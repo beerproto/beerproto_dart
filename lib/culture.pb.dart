@@ -30,6 +30,7 @@ class CultureBase extends $pb.GeneratedMessage {
     CultureBaseForm? form,
     $core.String? producer,
     $core.String? productId,
+    $core.bool? glucoamylase,
   }) {
     final result = create();
     if (name != null) result.name = name;
@@ -37,6 +38,7 @@ class CultureBase extends $pb.GeneratedMessage {
     if (form != null) result.form = form;
     if (producer != null) result.producer = producer;
     if (productId != null) result.productId = productId;
+    if (glucoamylase != null) result.glucoamylase = glucoamylase;
     return result;
   }
 
@@ -51,6 +53,7 @@ class CultureBase extends $pb.GeneratedMessage {
     ..e<CultureBaseForm>(3, _omitFieldNames ? '' : 'form', $pb.PbFieldType.OE, defaultOrMaker: CultureBaseForm.CULTURE_BASE_FORM_UNSPECIFIED, valueOf: CultureBaseForm.valueOf, enumValues: CultureBaseForm.values)
     ..aOS(4, _omitFieldNames ? '' : 'producer')
     ..aOS(5, _omitFieldNames ? '' : 'productId')
+    ..aOB(6, _omitFieldNames ? '' : 'glucoamylase')
     ..hasRequiredFields = false
   ;
 
@@ -115,6 +118,16 @@ class CultureBase extends $pb.GeneratedMessage {
   $core.bool hasProductId() => $_has(4);
   @$pb.TagNumber(5)
   void clearProductId() => $_clearField(5);
+
+  /// A glucoamylase positive culture attenuates dextrins and starches, leading to a very low FG. Carried on the base so a recipe's culture addition can drive the FG estimate toward near-complete attenuation.
+  @$pb.TagNumber(6)
+  $core.bool get glucoamylase => $_getBF(5);
+  @$pb.TagNumber(6)
+  set glucoamylase($core.bool value) => $_setBool(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasGlucoamylase() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearGlucoamylase() => $_clearField(6);
 }
 
 /// CultureInformation collects the attributes of a microbial culture

@@ -30,7 +30,7 @@ const FermentationStepType$json = {
     {'1': 'start_temperature', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'startTemperature'},
     {'1': 'end_ph', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'endPh'},
     {'1': 'vessel', '3': 12, '4': 1, '5': 9, '10': 'vessel'},
-    {'1': 'vessel_pressure', '3': 13, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'vesselPressure'},
+    {'1': 'vessel_pressure', '3': 13, '4': 1, '5': 11, '6': '.beerproto.v1.PressureType', '10': 'vesselPressure'},
   ],
 };
 
@@ -46,7 +46,7 @@ final $typed_data.Uint8List fermentationStepTypeDescriptor = $convert.base64Deco
     '90by52MS5BY2lkaXR5VHlwZVIHc3RhcnRQaBIgCgtkZXNjcmlwdGlvbhgJIAEoCVILZGVzY3Jp'
     'cHRpb24SSgoRc3RhcnRfdGVtcGVyYXR1cmUYCiABKAsyHS5iZWVycHJvdG8udjEuVGVtcGVyYX'
     'R1cmVUeXBlUhBzdGFydFRlbXBlcmF0dXJlEjAKBmVuZF9waBgLIAEoCzIZLmJlZXJwcm90by52'
-    'MS5BY2lkaXR5VHlwZVIFZW5kUGgSFgoGdmVzc2VsGAwgASgJUgZ2ZXNzZWwSQgoPdmVzc2VsX3'
-    'ByZXNzdXJlGA0gASgLMhkuYmVlcnByb3RvLnYxLlBlcmNlbnRUeXBlUg52ZXNzZWxQcmVzc3Vy'
-    'ZQ==');
+    'MS5BY2lkaXR5VHlwZVIFZW5kUGgSFgoGdmVzc2VsGAwgASgJUgZ2ZXNzZWwSQwoPdmVzc2VsX3'
+    'ByZXNzdXJlGA0gASgLMhouYmVlcnByb3RvLnYxLlByZXNzdXJlVHlwZVIOdmVzc2VsUHJlc3N1'
+    'cmU=');
 
