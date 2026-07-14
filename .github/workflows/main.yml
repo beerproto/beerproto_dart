@@ -27,6 +27,12 @@ jobs:
         working-directory: ./proto
       - name: Move beer file
         run: mv ./proto/gen/beerproto/v1/* ./lib
+      # Generated files reference well-known types (e.g. google.protobuf.Timestamp)
+      # via '../../google/protobuf/…', which assumes the beerproto/v1/ sub-path.
+      # After flattening into lib/ that must resolve as 'google/protobuf/…'
+      # (the well-known types are committed under lib/google/protobuf/).
+      - name: Fix well-known type imports after flatten
+        run: sed -i 's#\.\./\.\./google/protobuf/#google/protobuf/#g' ./lib/*.dart
       - run: rm -R ./proto
       - name: Push
         uses: actions-x/commit@v6
