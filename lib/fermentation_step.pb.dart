@@ -33,7 +33,7 @@ class FermentationStepType extends $pb.GeneratedMessage {
     $0.TemperatureType? startTemperature,
     $0.AcidityType? endPh,
     $core.String? vessel,
-    $0.PercentType? vesselPressure,
+    $0.PressureType? vesselPressure,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -70,7 +70,7 @@ class FermentationStepType extends $pb.GeneratedMessage {
     ..aOM<$0.TemperatureType>(10, _omitFieldNames ? '' : 'startTemperature', subBuilder: $0.TemperatureType.create)
     ..aOM<$0.AcidityType>(11, _omitFieldNames ? '' : 'endPh', subBuilder: $0.AcidityType.create)
     ..aOS(12, _omitFieldNames ? '' : 'vessel')
-    ..aOM<$0.PercentType>(13, _omitFieldNames ? '' : 'vesselPressure', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PressureType>(13, _omitFieldNames ? '' : 'vesselPressure', subBuilder: $0.PressureType.create)
     ..hasRequiredFields = false
   ;
 
@@ -214,17 +214,17 @@ class FermentationStepType extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearVessel() => $_clearField(12);
 
-  /// Vessel pressure indicates the pressure applied within the fermentation vessel.
+  /// Vessel pressure indicates the pressure applied within the fermentation vessel (spunding / pressure fermentation setpoint).
   @$pb.TagNumber(13)
-  $0.PercentType get vesselPressure => $_getN(12);
+  $0.PressureType get vesselPressure => $_getN(12);
   @$pb.TagNumber(13)
-  set vesselPressure($0.PercentType value) => $_setField(13, value);
+  set vesselPressure($0.PressureType value) => $_setField(13, value);
   @$pb.TagNumber(13)
   $core.bool hasVesselPressure() => $_has(12);
   @$pb.TagNumber(13)
   void clearVesselPressure() => $_clearField(13);
   @$pb.TagNumber(13)
-  $0.PercentType ensureVesselPressure() => $_ensure(12);
+  $0.PressureType ensureVesselPressure() => $_ensure(12);
 }
 
 

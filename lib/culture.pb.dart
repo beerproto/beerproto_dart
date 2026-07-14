@@ -30,6 +30,7 @@ class CultureBase extends $pb.GeneratedMessage {
     CultureBaseForm? form,
     $core.String? producer,
     $core.String? productId,
+    $core.bool? glucoamylase,
   }) {
     final result = create();
     if (name != null) result.name = name;
@@ -37,6 +38,7 @@ class CultureBase extends $pb.GeneratedMessage {
     if (form != null) result.form = form;
     if (producer != null) result.producer = producer;
     if (productId != null) result.productId = productId;
+    if (glucoamylase != null) result.glucoamylase = glucoamylase;
     return result;
   }
 
@@ -51,6 +53,7 @@ class CultureBase extends $pb.GeneratedMessage {
     ..e<CultureBaseForm>(3, _omitFieldNames ? '' : 'form', $pb.PbFieldType.OE, defaultOrMaker: CultureBaseForm.CULTURE_BASE_FORM_UNSPECIFIED, valueOf: CultureBaseForm.valueOf, enumValues: CultureBaseForm.values)
     ..aOS(4, _omitFieldNames ? '' : 'producer')
     ..aOS(5, _omitFieldNames ? '' : 'productId')
+    ..aOB(6, _omitFieldNames ? '' : 'glucoamylase')
     ..hasRequiredFields = false
   ;
 
@@ -115,6 +118,16 @@ class CultureBase extends $pb.GeneratedMessage {
   $core.bool hasProductId() => $_has(4);
   @$pb.TagNumber(5)
   void clearProductId() => $_clearField(5);
+
+  /// A glucoamylase positive culture attenuates dextrins and starches, leading to a very low FG. Carried on the base so a recipe's culture addition can drive the FG estimate toward near-complete attenuation.
+  @$pb.TagNumber(6)
+  $core.bool get glucoamylase => $_getBF(5);
+  @$pb.TagNumber(6)
+  set glucoamylase($core.bool value) => $_setBool(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasGlucoamylase() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearGlucoamylase() => $_clearField(6);
 }
 
 /// CultureInformation collects the attributes of a microbial culture
@@ -531,12 +544,16 @@ class CultureInventoryType extends $pb.GeneratedMessage {
     $0.MassType? dry,
     $0.VolumeType? slant,
     $0.VolumeType? culture,
+    $core.String? manufactureDate,
+    $core.int? generation,
   }) {
     final result = create();
     if (liquid != null) result.liquid = liquid;
     if (dry != null) result.dry = dry;
     if (slant != null) result.slant = slant;
     if (culture != null) result.culture = culture;
+    if (manufactureDate != null) result.manufactureDate = manufactureDate;
+    if (generation != null) result.generation = generation;
     return result;
   }
 
@@ -550,6 +567,8 @@ class CultureInventoryType extends $pb.GeneratedMessage {
     ..aOM<$0.MassType>(2, _omitFieldNames ? '' : 'dry', subBuilder: $0.MassType.create)
     ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'slant', subBuilder: $0.VolumeType.create)
     ..aOM<$0.VolumeType>(4, _omitFieldNames ? '' : 'culture', subBuilder: $0.VolumeType.create)
+    ..aOS(5, _omitFieldNames ? '' : 'manufactureDate')
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'generation', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -613,6 +632,30 @@ class CultureInventoryType extends $pb.GeneratedMessage {
   void clearCulture() => $_clearField(4);
   @$pb.TagNumber(4)
   $0.VolumeType ensureCulture() => $_ensure(3);
+
+  /// Yeast production / harvest date as an ISO-8601 date string (e.g.
+  /// "2026-01-15"). Drives the stock's age-based viability estimate so freshness
+  /// is visible while browsing inventory, not only at pitch time.
+  @$pb.TagNumber(5)
+  $core.String get manufactureDate => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set manufactureDate($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasManufactureDate() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearManufactureDate() => $_clearField(5);
+
+  /// Repitch generation for harvested/reused yeast: 0 = fresh from the
+  /// manufacturer/lab, 1 = first repitch, etc. Compared against the library
+  /// culture's max_reuse to warn when a slurry is past its recommended reuses.
+  @$pb.TagNumber(6)
+  $core.int get generation => $_getIZ(5);
+  @$pb.TagNumber(6)
+  set generation($core.int value) => $_setSignedInt32(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasGeneration() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearGeneration() => $_clearField(6);
 }
 
 /// Zymocide, also known as killer yeast properties, is common among wine yeast. There are also some ale and brett yeasts that are immune to some zymocidic properties, these are known as killer neutral

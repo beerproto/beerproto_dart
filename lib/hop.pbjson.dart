@@ -91,6 +91,7 @@ const HopVarietyBase$json = {
     {'1': 'form', '3': 6, '4': 1, '5': 14, '6': '.beerproto.v1.HopVarietyBaseForm', '10': 'form'},
     {'1': 'alpha_acid', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '8': {}, '10': 'alphaAcid'},
     {'1': 'beta_acid', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'betaAcid'},
+    {'1': 'percent_lost', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'percentLost'},
   ],
 };
 
@@ -101,7 +102,9 @@ final $typed_data.Uint8List hopVarietyBaseDescriptor = $convert.base64Decode(
     'b3JpZ2luGAQgASgJUgZvcmlnaW4SEgoEeWVhchgFIAEoCVIEeWVhchI0CgRmb3JtGAYgASgOMi'
     'AuYmVlcnByb3RvLnYxLkhvcFZhcmlldHlCYXNlRm9ybVIEZm9ybRJACgphbHBoYV9hY2lkGAcg'
     'ASgLMhkuYmVlcnByb3RvLnYxLlBlcmNlbnRUeXBlQga6SAPIAQFSCWFscGhhQWNpZBI2CgliZX'
-    'RhX2FjaWQYCCABKAsyGS5iZWVycHJvdG8udjEuUGVyY2VudFR5cGVSCGJldGFBY2lk');
+    'RhX2FjaWQYCCABKAsyGS5iZWVycHJvdG8udjEuUGVyY2VudFR5cGVSCGJldGFBY2lkEjwKDHBl'
+    'cmNlbnRfbG9zdBgJIAEoCzIZLmJlZXJwcm90by52MS5QZXJjZW50VHlwZVILcGVyY2VudExvc3'
+    'Q=');
 
 @$core.Deprecated('Use varietyInformationDescriptor instead')
 const VarietyInformation$json = {

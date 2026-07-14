@@ -73,6 +73,7 @@ const FermentableBase$json = {
     {'1': 'name', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'producer', '3': 7, '4': 1, '5': 9, '10': 'producer'},
     {'1': 'product_id', '3': 8, '4': 1, '5': 9, '10': 'productId'},
+    {'1': 'diastatic_power', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.DiastaticPowerType', '10': 'diastaticPower'},
   ],
 };
 
@@ -84,7 +85,9 @@ final $typed_data.Uint8List fermentableBaseDescriptor = $convert.base64Decode(
     'IKZ3JhaW5Hcm91cBI1CgV5aWVsZBgEIAEoCzIXLmJlZXJwcm90by52MS5ZaWVsZFR5cGVCBrpI'
     'A8gBAVIFeWllbGQSNQoFY29sb3IYBSABKAsyFy5iZWVycHJvdG8udjEuQ29sb3JUeXBlQga6SA'
     'PIAQFSBWNvbG9yEh4KBG5hbWUYBiABKAlCCrpIB8gBAXICEANSBG5hbWUSGgoIcHJvZHVjZXIY'
-    'ByABKAlSCHByb2R1Y2VyEh0KCnByb2R1Y3RfaWQYCCABKAlSCXByb2R1Y3RJZA==');
+    'ByABKAlSCHByb2R1Y2VyEh0KCnByb2R1Y3RfaWQYCCABKAlSCXByb2R1Y3RJZBJJCg9kaWFzdG'
+    'F0aWNfcG93ZXIYCSABKAsyIC5iZWVycHJvdG8udjEuRGlhc3RhdGljUG93ZXJUeXBlUg5kaWFz'
+    'dGF0aWNQb3dlcg==');
 
 @$core.Deprecated('Use fermentableTypeDescriptor instead')
 const FermentableType$json = {

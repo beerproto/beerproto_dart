@@ -33,6 +33,7 @@ class FermentableBase extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? producer,
     $core.String? productId,
+    $0.DiastaticPowerType? diastaticPower,
   }) {
     final result = create();
     if (type != null) result.type = type;
@@ -43,6 +44,7 @@ class FermentableBase extends $pb.GeneratedMessage {
     if (name != null) result.name = name;
     if (producer != null) result.producer = producer;
     if (productId != null) result.productId = productId;
+    if (diastaticPower != null) result.diastaticPower = diastaticPower;
     return result;
   }
 
@@ -60,6 +62,7 @@ class FermentableBase extends $pb.GeneratedMessage {
     ..aOS(6, _omitFieldNames ? '' : 'name')
     ..aOS(7, _omitFieldNames ? '' : 'producer')
     ..aOS(8, _omitFieldNames ? '' : 'productId')
+    ..aOM<$0.DiastaticPowerType>(9, _omitFieldNames ? '' : 'diastaticPower', subBuilder: $0.DiastaticPowerType.create)
     ..hasRequiredFields = false
   ;
 
@@ -155,6 +158,18 @@ class FermentableBase extends $pb.GeneratedMessage {
   $core.bool hasProductId() => $_has(7);
   @$pb.TagNumber(8)
   void clearProductId() => $_clearField(8);
+
+  /// Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner is needed to self convert, while a value of 100 or more is desirable. Carried on the base so recipe additions can compute the grist's mass-weighted diastatic power.
+  @$pb.TagNumber(9)
+  $0.DiastaticPowerType get diastaticPower => $_getN(8);
+  @$pb.TagNumber(9)
+  set diastaticPower($0.DiastaticPowerType value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasDiastaticPower() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearDiastaticPower() => $_clearField(9);
+  @$pb.TagNumber(9)
+  $0.DiastaticPowerType ensureDiastaticPower() => $_ensure(8);
 }
 
 /// FermentableType collects the attributes of a fermentable ingredient to store as record information
