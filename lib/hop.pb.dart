@@ -33,6 +33,7 @@ class HopVarietyBase extends $pb.GeneratedMessage {
     HopVarietyBaseForm? form,
     $0.PercentType? alphaAcid,
     $0.PercentType? betaAcid,
+    $0.PercentType? percentLost,
   }) {
     final result = create();
     if (name != null) result.name = name;
@@ -43,6 +44,7 @@ class HopVarietyBase extends $pb.GeneratedMessage {
     if (form != null) result.form = form;
     if (alphaAcid != null) result.alphaAcid = alphaAcid;
     if (betaAcid != null) result.betaAcid = betaAcid;
+    if (percentLost != null) result.percentLost = percentLost;
     return result;
   }
 
@@ -60,6 +62,7 @@ class HopVarietyBase extends $pb.GeneratedMessage {
     ..e<HopVarietyBaseForm>(6, _omitFieldNames ? '' : 'form', $pb.PbFieldType.OE, defaultOrMaker: HopVarietyBaseForm.HOP_VARIETY_BASE_FORM_UNSPECIFIED, valueOf: HopVarietyBaseForm.valueOf, enumValues: HopVarietyBaseForm.values)
     ..aOM<$0.PercentType>(7, _omitFieldNames ? '' : 'alphaAcid', subBuilder: $0.PercentType.create)
     ..aOM<$0.PercentType>(8, _omitFieldNames ? '' : 'betaAcid', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(9, _omitFieldNames ? '' : 'percentLost', subBuilder: $0.PercentType.create)
     ..hasRequiredFields = false
   ;
 
@@ -155,6 +158,20 @@ class HopVarietyBase extends $pb.GeneratedMessage {
   void clearBetaAcid() => $_clearField(8);
   @$pb.TagNumber(8)
   $0.PercentType ensureBetaAcid() => $_ensure(7);
+
+  /// Defined as the percentage of hop alpha lost in 6 months of storage.
+  /// Carried onto a recipe addition so IBU can be computed from age-adjusted
+  /// alpha rather than the fresh label value.
+  @$pb.TagNumber(9)
+  $0.PercentType get percentLost => $_getN(8);
+  @$pb.TagNumber(9)
+  set percentLost($0.PercentType value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasPercentLost() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearPercentLost() => $_clearField(9);
+  @$pb.TagNumber(9)
+  $0.PercentType ensurePercentLost() => $_ensure(8);
 }
 
 /// VarietyInformation collects the attributes of a hop variety to store as record information
