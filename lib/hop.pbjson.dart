@@ -214,6 +214,7 @@ const HopInventoryType$json = {
   '2': [
     {'1': 'mass', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
     {'1': 'volume', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
+    {'1': 'best_before', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -224,5 +225,6 @@ const HopInventoryType$json = {
 final $typed_data.Uint8List hopInventoryTypeDescriptor = $convert.base64Decode(
     'ChBIb3BJbnZlbnRvcnlUeXBlEiwKBG1hc3MYASABKAsyFi5iZWVycHJvdG8udjEuTWFzc1R5cG'
     'VIAFIEbWFzcxIyCgZ2b2x1bWUYAiABKAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVHlwZUgAUgZ2'
-    'b2x1bWVCDwoGYW1vdW50EgW6SAIIAQ==');
+    'b2x1bWUSOwoLYmVzdF9iZWZvcmUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUg'
+    'piZXN0QmVmb3JlQg8KBmFtb3VudBIFukgCCAE=');
 
