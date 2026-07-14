@@ -196,6 +196,8 @@ const CultureInventoryType$json = {
     {'1': 'dry', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '10': 'dry'},
     {'1': 'slant', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'slant'},
     {'1': 'culture', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'culture'},
+    {'1': 'manufacture_date', '3': 5, '4': 1, '5': 9, '10': 'manufactureDate'},
+    {'1': 'generation', '3': 6, '4': 1, '5': 5, '10': 'generation'},
   ],
 };
 
@@ -204,7 +206,9 @@ final $typed_data.Uint8List cultureInventoryTypeDescriptor = $convert.base64Deco
     'ChRDdWx0dXJlSW52ZW50b3J5VHlwZRIwCgZsaXF1aWQYASABKAsyGC5iZWVycHJvdG8udjEuVm'
     '9sdW1lVHlwZVIGbGlxdWlkEigKA2RyeRgCIAEoCzIWLmJlZXJwcm90by52MS5NYXNzVHlwZVID'
     'ZHJ5Ei4KBXNsYW50GAMgASgLMhguYmVlcnByb3RvLnYxLlZvbHVtZVR5cGVSBXNsYW50EjIKB2'
-    'N1bHR1cmUYBCABKAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVHlwZVIHY3VsdHVyZQ==');
+    'N1bHR1cmUYBCABKAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVHlwZVIHY3VsdHVyZRIpChBtYW51'
+    'ZmFjdHVyZV9kYXRlGAUgASgJUg9tYW51ZmFjdHVyZURhdGUSHgoKZ2VuZXJhdGlvbhgGIAEoBV'
+    'IKZ2VuZXJhdGlvbg==');
 
 @$core.Deprecated('Use zymocideDescriptor instead')
 const Zymocide$json = {

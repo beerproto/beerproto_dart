@@ -544,12 +544,16 @@ class CultureInventoryType extends $pb.GeneratedMessage {
     $0.MassType? dry,
     $0.VolumeType? slant,
     $0.VolumeType? culture,
+    $core.String? manufactureDate,
+    $core.int? generation,
   }) {
     final result = create();
     if (liquid != null) result.liquid = liquid;
     if (dry != null) result.dry = dry;
     if (slant != null) result.slant = slant;
     if (culture != null) result.culture = culture;
+    if (manufactureDate != null) result.manufactureDate = manufactureDate;
+    if (generation != null) result.generation = generation;
     return result;
   }
 
@@ -563,6 +567,8 @@ class CultureInventoryType extends $pb.GeneratedMessage {
     ..aOM<$0.MassType>(2, _omitFieldNames ? '' : 'dry', subBuilder: $0.MassType.create)
     ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'slant', subBuilder: $0.VolumeType.create)
     ..aOM<$0.VolumeType>(4, _omitFieldNames ? '' : 'culture', subBuilder: $0.VolumeType.create)
+    ..aOS(5, _omitFieldNames ? '' : 'manufactureDate')
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'generation', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -626,6 +632,30 @@ class CultureInventoryType extends $pb.GeneratedMessage {
   void clearCulture() => $_clearField(4);
   @$pb.TagNumber(4)
   $0.VolumeType ensureCulture() => $_ensure(3);
+
+  /// Yeast production / harvest date as an ISO-8601 date string (e.g.
+  /// "2026-01-15"). Drives the stock's age-based viability estimate so freshness
+  /// is visible while browsing inventory, not only at pitch time.
+  @$pb.TagNumber(5)
+  $core.String get manufactureDate => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set manufactureDate($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasManufactureDate() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearManufactureDate() => $_clearField(5);
+
+  /// Repitch generation for harvested/reused yeast: 0 = fresh from the
+  /// manufacturer/lab, 1 = first repitch, etc. Compared against the library
+  /// culture's max_reuse to warn when a slurry is past its recommended reuses.
+  @$pb.TagNumber(6)
+  $core.int get generation => $_getIZ(5);
+  @$pb.TagNumber(6)
+  set generation($core.int value) => $_setSignedInt32(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasGeneration() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearGeneration() => $_clearField(6);
 }
 
 /// Zymocide, also known as killer yeast properties, is common among wine yeast. There are also some ale and brett yeasts that are immune to some zymocidic properties, these are known as killer neutral
