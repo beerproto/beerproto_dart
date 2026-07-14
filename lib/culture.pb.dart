@@ -14,6 +14,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../google/protobuf/timestamp.pb.dart' as $2;
 import 'culture.pbenum.dart';
 import 'measureable_units.pb.dart' as $0;
 import 'timing.pb.dart' as $1;
@@ -546,6 +547,8 @@ class CultureInventoryType extends $pb.GeneratedMessage {
     $0.VolumeType? culture,
     $core.String? manufactureDate,
     $core.int? generation,
+    $2.Timestamp? bestBefore,
+    $0.UnitType? liquidPacks,
   }) {
     final result = create();
     if (liquid != null) result.liquid = liquid;
@@ -554,6 +557,8 @@ class CultureInventoryType extends $pb.GeneratedMessage {
     if (culture != null) result.culture = culture;
     if (manufactureDate != null) result.manufactureDate = manufactureDate;
     if (generation != null) result.generation = generation;
+    if (bestBefore != null) result.bestBefore = bestBefore;
+    if (liquidPacks != null) result.liquidPacks = liquidPacks;
     return result;
   }
 
@@ -569,6 +574,8 @@ class CultureInventoryType extends $pb.GeneratedMessage {
     ..aOM<$0.VolumeType>(4, _omitFieldNames ? '' : 'culture', subBuilder: $0.VolumeType.create)
     ..aOS(5, _omitFieldNames ? '' : 'manufactureDate')
     ..a<$core.int>(6, _omitFieldNames ? '' : 'generation', $pb.PbFieldType.O3)
+    ..aOM<$2.Timestamp>(7, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
+    ..aOM<$0.UnitType>(8, _omitFieldNames ? '' : 'liquidPacks', subBuilder: $0.UnitType.create)
     ..hasRequiredFields = false
   ;
 
@@ -656,6 +663,32 @@ class CultureInventoryType extends $pb.GeneratedMessage {
   $core.bool hasGeneration() => $_has(5);
   @$pb.TagNumber(6)
   void clearGeneration() => $_clearField(6);
+
+  /// Best-before / use-by date of this stock. Unset when unknown.
+  @$pb.TagNumber(7)
+  $2.Timestamp get bestBefore => $_getN(6);
+  @$pb.TagNumber(7)
+  set bestBefore($2.Timestamp value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasBestBefore() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearBestBefore() => $_clearField(7);
+  @$pb.TagNumber(7)
+  $2.Timestamp ensureBestBefore() => $_ensure(6);
+
+  /// Liquid yeast on hand counted in packs/vials (as opposed to the `liquid`
+  /// pool measured by volume). Recipes commonly dose liquid yeast by pack, so
+  /// this lets a pack-count requirement be confirmed and deducted.
+  @$pb.TagNumber(8)
+  $0.UnitType get liquidPacks => $_getN(7);
+  @$pb.TagNumber(8)
+  set liquidPacks($0.UnitType value) => $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasLiquidPacks() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearLiquidPacks() => $_clearField(8);
+  @$pb.TagNumber(8)
+  $0.UnitType ensureLiquidPacks() => $_ensure(7);
 }
 
 /// Zymocide, also known as killer yeast properties, is common among wine yeast. There are also some ale and brett yeasts that are immune to some zymocidic properties, these are known as killer neutral

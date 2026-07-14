@@ -14,6 +14,24 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use grainCrushDescriptor instead')
+const GrainCrush$json = {
+  '1': 'GrainCrush',
+  '2': [
+    {'1': 'GRAIN_CRUSH_UNSPECIFIED', '2': 0},
+    {'1': 'GRAIN_CRUSH_UNCRUSHED', '2': 1},
+    {'1': 'GRAIN_CRUSH_COARSE', '2': 2},
+    {'1': 'GRAIN_CRUSH_MEDIUM', '2': 3},
+    {'1': 'GRAIN_CRUSH_FINE', '2': 4},
+  ],
+};
+
+/// Descriptor for `GrainCrush`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List grainCrushDescriptor = $convert.base64Decode(
+    'CgpHcmFpbkNydXNoEhsKF0dSQUlOX0NSVVNIX1VOU1BFQ0lGSUVEEAASGQoVR1JBSU5fQ1JVU0'
+    'hfVU5DUlVTSEVEEAESFgoSR1JBSU5fQ1JVU0hfQ09BUlNFEAISFgoSR1JBSU5fQ1JVU0hfTUVE'
+    'SVVNEAMSFAoQR1JBSU5fQ1JVU0hfRklORRAE');
+
 @$core.Deprecated('Use fermentableBaseTypeDescriptor instead')
 const FermentableBaseType$json = {
   '1': 'FermentableBaseType',
@@ -194,6 +212,10 @@ const FermentableInventoryType$json = {
   '2': [
     {'1': 'mass', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
     {'1': 'volume', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
+    {'1': 'best_before', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
+    {'1': 'lot_potential', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'lotPotential'},
+    {'1': 'crush', '3': 5, '4': 1, '5': 14, '6': '.beerproto.v1.GrainCrush', '10': 'crush'},
+    {'1': 'moisture', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'moisture'},
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -204,5 +226,9 @@ const FermentableInventoryType$json = {
 final $typed_data.Uint8List fermentableInventoryTypeDescriptor = $convert.base64Decode(
     'ChhGZXJtZW50YWJsZUludmVudG9yeVR5cGUSLAoEbWFzcxgBIAEoCzIWLmJlZXJwcm90by52MS'
     '5NYXNzVHlwZUgAUgRtYXNzEjIKBnZvbHVtZRgCIAEoCzIYLmJlZXJwcm90by52MS5Wb2x1bWVU'
-    'eXBlSABSBnZvbHVtZUIPCgZhbW91bnQSBbpIAggB');
+    'eXBlSABSBnZvbHVtZRI7CgtiZXN0X2JlZm9yZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW'
+    '1lc3RhbXBSCmJlc3RCZWZvcmUSPgoNbG90X3BvdGVudGlhbBgEIAEoCzIZLmJlZXJwcm90by52'
+    'MS5HcmF2aXR5VHlwZVIMbG90UG90ZW50aWFsEi4KBWNydXNoGAUgASgOMhguYmVlcnByb3RvLn'
+    'YxLkdyYWluQ3J1c2hSBWNydXNoEjUKCG1vaXN0dXJlGAYgASgLMhkuYmVlcnByb3RvLnYxLlBl'
+    'cmNlbnRUeXBlUghtb2lzdHVyZUIPCgZhbW91bnQSBbpIAggB');
 

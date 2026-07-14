@@ -14,6 +14,27 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class GrainCrush extends $pb.ProtobufEnum {
+  static const GrainCrush GRAIN_CRUSH_UNSPECIFIED = GrainCrush._(0, _omitEnumNames ? '' : 'GRAIN_CRUSH_UNSPECIFIED');
+  static const GrainCrush GRAIN_CRUSH_UNCRUSHED = GrainCrush._(1, _omitEnumNames ? '' : 'GRAIN_CRUSH_UNCRUSHED');
+  static const GrainCrush GRAIN_CRUSH_COARSE = GrainCrush._(2, _omitEnumNames ? '' : 'GRAIN_CRUSH_COARSE');
+  static const GrainCrush GRAIN_CRUSH_MEDIUM = GrainCrush._(3, _omitEnumNames ? '' : 'GRAIN_CRUSH_MEDIUM');
+  static const GrainCrush GRAIN_CRUSH_FINE = GrainCrush._(4, _omitEnumNames ? '' : 'GRAIN_CRUSH_FINE');
+
+  static const $core.List<GrainCrush> values = <GrainCrush> [
+    GRAIN_CRUSH_UNSPECIFIED,
+    GRAIN_CRUSH_UNCRUSHED,
+    GRAIN_CRUSH_COARSE,
+    GRAIN_CRUSH_MEDIUM,
+    GRAIN_CRUSH_FINE,
+  ];
+
+  static final $core.List<GrainCrush?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 4);
+  static GrainCrush? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const GrainCrush._(super.value, super.name);
+}
+
 class FermentableBaseType extends $pb.ProtobufEnum {
   static const FermentableBaseType FERMENTABLE_BASE_TYPE_UNSPECIFIED = FermentableBaseType._(0, _omitEnumNames ? '' : 'FERMENTABLE_BASE_TYPE_UNSPECIFIED');
   /// dry extract

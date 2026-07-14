@@ -108,6 +108,7 @@ const MiscellaneousInventoryType$json = {
     {'1': 'mass', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
     {'1': 'unit', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.UnitType', '9': 0, '10': 'unit'},
     {'1': 'volume', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
+    {'1': 'best_before', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -119,5 +120,6 @@ final $typed_data.Uint8List miscellaneousInventoryTypeDescriptor = $convert.base
     'ChpNaXNjZWxsYW5lb3VzSW52ZW50b3J5VHlwZRIsCgRtYXNzGAEgASgLMhYuYmVlcnByb3RvLn'
     'YxLk1hc3NUeXBlSABSBG1hc3MSLAoEdW5pdBgCIAEoCzIWLmJlZXJwcm90by52MS5Vbml0VHlw'
     'ZUgAUgR1bml0EjIKBnZvbHVtZRgDIAEoCzIYLmJlZXJwcm90by52MS5Wb2x1bWVUeXBlSABSBn'
-    'ZvbHVtZUIPCgZhbW91bnQSBbpIAggB');
+    'ZvbHVtZRI7CgtiZXN0X2JlZm9yZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBS'
+    'CmJlc3RCZWZvcmVCDwoGYW1vdW50EgW6SAIIAQ==');
 

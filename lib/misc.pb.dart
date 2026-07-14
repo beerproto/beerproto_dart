@@ -14,6 +14,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../google/protobuf/timestamp.pb.dart' as $2;
 import 'measureable_units.pb.dart' as $1;
 import 'misc.pbenum.dart';
 import 'timing.pb.dart' as $0;
@@ -352,11 +353,13 @@ class MiscellaneousInventoryType extends $pb.GeneratedMessage {
     $1.MassType? mass,
     $1.UnitType? unit,
     $1.VolumeType? volume,
+    $2.Timestamp? bestBefore,
   }) {
     final result = create();
     if (mass != null) result.mass = mass;
     if (unit != null) result.unit = unit;
     if (volume != null) result.volume = volume;
+    if (bestBefore != null) result.bestBefore = bestBefore;
     return result;
   }
 
@@ -376,6 +379,7 @@ class MiscellaneousInventoryType extends $pb.GeneratedMessage {
     ..aOM<$1.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $1.MassType.create)
     ..aOM<$1.UnitType>(2, _omitFieldNames ? '' : 'unit', subBuilder: $1.UnitType.create)
     ..aOM<$1.VolumeType>(3, _omitFieldNames ? '' : 'volume', subBuilder: $1.VolumeType.create)
+    ..aOM<$2.Timestamp>(4, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -431,6 +435,18 @@ class MiscellaneousInventoryType extends $pb.GeneratedMessage {
   void clearVolume() => $_clearField(3);
   @$pb.TagNumber(3)
   $1.VolumeType ensureVolume() => $_ensure(2);
+
+  /// Best-before / use-by date of this stock. Unset when unknown.
+  @$pb.TagNumber(4)
+  $2.Timestamp get bestBefore => $_getN(3);
+  @$pb.TagNumber(4)
+  set bestBefore($2.Timestamp value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasBestBefore() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearBestBefore() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $2.Timestamp ensureBestBefore() => $_ensure(3);
 }
 
 

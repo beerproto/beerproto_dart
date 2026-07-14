@@ -14,6 +14,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../google/protobuf/timestamp.pb.dart' as $2;
 import 'hop.pbenum.dart';
 import 'measureable_units.pb.dart' as $0;
 import 'timing.pb.dart' as $1;
@@ -721,10 +722,12 @@ class HopInventoryType extends $pb.GeneratedMessage {
   factory HopInventoryType({
     $0.MassType? mass,
     $0.VolumeType? volume,
+    $2.Timestamp? bestBefore,
   }) {
     final result = create();
     if (mass != null) result.mass = mass;
     if (volume != null) result.volume = volume;
+    if (bestBefore != null) result.bestBefore = bestBefore;
     return result;
   }
 
@@ -742,6 +745,7 @@ class HopInventoryType extends $pb.GeneratedMessage {
     ..oo(0, [1, 2])
     ..aOM<$0.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
     ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
+    ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -786,6 +790,18 @@ class HopInventoryType extends $pb.GeneratedMessage {
   void clearVolume() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.VolumeType ensureVolume() => $_ensure(1);
+
+  /// Best-before / use-by date of this stock. Unset when unknown.
+  @$pb.TagNumber(3)
+  $2.Timestamp get bestBefore => $_getN(2);
+  @$pb.TagNumber(3)
+  set bestBefore($2.Timestamp value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasBestBefore() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBestBefore() => $_clearField(3);
+  @$pb.TagNumber(3)
+  $2.Timestamp ensureBestBefore() => $_ensure(2);
 }
 
 

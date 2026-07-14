@@ -14,6 +14,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../google/protobuf/timestamp.pb.dart' as $2;
 import 'fermentable.pbenum.dart';
 import 'measureable_units.pb.dart' as $0;
 import 'timing.pb.dart' as $1;
@@ -764,10 +765,18 @@ class FermentableInventoryType extends $pb.GeneratedMessage {
   factory FermentableInventoryType({
     $0.MassType? mass,
     $0.VolumeType? volume,
+    $2.Timestamp? bestBefore,
+    $0.GravityType? lotPotential,
+    GrainCrush? crush,
+    $0.PercentType? moisture,
   }) {
     final result = create();
     if (mass != null) result.mass = mass;
     if (volume != null) result.volume = volume;
+    if (bestBefore != null) result.bestBefore = bestBefore;
+    if (lotPotential != null) result.lotPotential = lotPotential;
+    if (crush != null) result.crush = crush;
+    if (moisture != null) result.moisture = moisture;
     return result;
   }
 
@@ -785,6 +794,10 @@ class FermentableInventoryType extends $pb.GeneratedMessage {
     ..oo(0, [1, 2])
     ..aOM<$0.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
     ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
+    ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
+    ..aOM<$0.GravityType>(4, _omitFieldNames ? '' : 'lotPotential', subBuilder: $0.GravityType.create)
+    ..e<GrainCrush>(5, _omitFieldNames ? '' : 'crush', $pb.PbFieldType.OE, defaultOrMaker: GrainCrush.GRAIN_CRUSH_UNSPECIFIED, valueOf: GrainCrush.valueOf, enumValues: GrainCrush.values)
+    ..aOM<$0.PercentType>(6, _omitFieldNames ? '' : 'moisture', subBuilder: $0.PercentType.create)
     ..hasRequiredFields = false
   ;
 
@@ -829,6 +842,54 @@ class FermentableInventoryType extends $pb.GeneratedMessage {
   void clearVolume() => $_clearField(2);
   @$pb.TagNumber(2)
   $0.VolumeType ensureVolume() => $_ensure(1);
+
+  /// Best-before / use-by date of this stock. Unset when unknown.
+  @$pb.TagNumber(3)
+  $2.Timestamp get bestBefore => $_getN(2);
+  @$pb.TagNumber(3)
+  set bestBefore($2.Timestamp value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasBestBefore() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBestBefore() => $_clearField(3);
+  @$pb.TagNumber(3)
+  $2.Timestamp ensureBestBefore() => $_ensure(2);
+
+  /// The measured extract potential of *this lot* (points per lb per gallon,
+  /// e.g. 1.037). When set, overrides the library nominal yield for OG so a
+  /// sack that assays differently from the maltster's spec is accounted for.
+  @$pb.TagNumber(4)
+  $0.GravityType get lotPotential => $_getN(3);
+  @$pb.TagNumber(4)
+  set lotPotential($0.GravityType value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasLotPotential() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearLotPotential() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $0.GravityType ensureLotPotential() => $_ensure(3);
+
+  /// How this lot is milled — affects staling rate and mash efficiency.
+  @$pb.TagNumber(5)
+  GrainCrush get crush => $_getN(4);
+  @$pb.TagNumber(5)
+  set crush(GrainCrush value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasCrush() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearCrush() => $_clearField(5);
+
+  /// Measured moisture content of this lot (percent). Informational.
+  @$pb.TagNumber(6)
+  $0.PercentType get moisture => $_getN(5);
+  @$pb.TagNumber(6)
+  set moisture($0.PercentType value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasMoisture() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearMoisture() => $_clearField(6);
+  @$pb.TagNumber(6)
+  $0.PercentType ensureMoisture() => $_ensure(5);
 }
 
 
