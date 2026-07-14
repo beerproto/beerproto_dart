@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../google/protobuf/timestamp.pb.dart' as $2;
+import 'google/protobuf/timestamp.pb.dart' as $2;
 import 'hop.pbenum.dart';
 import 'measureable_units.pb.dart' as $0;
 import 'timing.pb.dart' as $1;
