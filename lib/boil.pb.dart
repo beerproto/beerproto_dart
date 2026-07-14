@@ -29,6 +29,7 @@ class BoilProcedureType extends $pb.GeneratedMessage {
     $core.String? name,
     $core.String? description,
     $core.String? notes,
+    $0.TemperatureType? whirlpoolTemperature,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -38,6 +39,7 @@ class BoilProcedureType extends $pb.GeneratedMessage {
     if (name != null) result.name = name;
     if (description != null) result.description = description;
     if (notes != null) result.notes = notes;
+    if (whirlpoolTemperature != null) result.whirlpoolTemperature = whirlpoolTemperature;
     return result;
   }
 
@@ -54,6 +56,7 @@ class BoilProcedureType extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..aOS(6, _omitFieldNames ? '' : 'description')
     ..aOS(7, _omitFieldNames ? '' : 'notes')
+    ..aOM<$0.TemperatureType>(8, _omitFieldNames ? '' : 'whirlpoolTemperature', subBuilder: $0.TemperatureType.create)
     ..hasRequiredFields = false
   ;
 
@@ -134,6 +137,20 @@ class BoilProcedureType extends $pb.GeneratedMessage {
   $core.bool hasNotes() => $_has(6);
   @$pb.TagNumber(7)
   void clearNotes() => $_clearField(7);
+
+  /// Whirlpool / hopstand temperature. Whirlpool hop isomerization is strongly
+  /// temperature-dependent, so this drives the temperature-corrected whirlpool
+  /// IBU. Unset falls back to a typical ~85 C stand.
+  @$pb.TagNumber(8)
+  $0.TemperatureType get whirlpoolTemperature => $_getN(7);
+  @$pb.TagNumber(8)
+  set whirlpoolTemperature($0.TemperatureType value) => $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasWhirlpoolTemperature() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearWhirlpoolTemperature() => $_clearField(8);
+  @$pb.TagNumber(8)
+  $0.TemperatureType ensureWhirlpoolTemperature() => $_ensure(7);
 }
 
 

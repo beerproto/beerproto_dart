@@ -25,6 +25,7 @@ const BoilProcedureType$json = {
     {'1': 'name', '3': 5, '4': 1, '5': 9, '10': 'name'},
     {'1': 'description', '3': 6, '4': 1, '5': 9, '10': 'description'},
     {'1': 'notes', '3': 7, '4': 1, '5': 9, '10': 'notes'},
+    {'1': 'whirlpool_temperature', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'whirlpoolTemperature'},
   ],
 };
 
@@ -35,5 +36,7 @@ final $typed_data.Uint8List boilProcedureTypeDescriptor = $convert.base64Decode(
     'OwoJYm9pbF90aW1lGAMgASgLMhYuYmVlcnByb3RvLnYxLlRpbWVUeXBlQga6SAPIAQFSCGJvaW'
     'xUaW1lEjkKCmJvaWxfc3RlcHMYBCADKAsyGi5iZWVycHJvdG8udjEuQm9pbFN0ZXBUeXBlUgli'
     'b2lsU3RlcHMSEgoEbmFtZRgFIAEoCVIEbmFtZRIgCgtkZXNjcmlwdGlvbhgGIAEoCVILZGVzY3'
-    'JpcHRpb24SFAoFbm90ZXMYByABKAlSBW5vdGVz');
+    'JpcHRpb24SFAoFbm90ZXMYByABKAlSBW5vdGVzElIKFXdoaXJscG9vbF90ZW1wZXJhdHVyZRgI'
+    'IAEoCzIdLmJlZXJwcm90by52MS5UZW1wZXJhdHVyZVR5cGVSFHdoaXJscG9vbFRlbXBlcmF0dX'
+    'Jl');
 
