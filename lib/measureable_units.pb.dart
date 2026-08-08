@@ -1013,6 +1013,131 @@ class PercentType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Molar mass — the mass of one mole of a substance. Used for the brewing salt
+/// and acid chemistry, where ion contributions and neutralising power are
+/// derived from formula masses rather than tabulated.
+class MolarType extends $pb.GeneratedMessage {
+  factory MolarType({
+    $core.double? value,
+    MolarUnit? unit,
+  }) {
+    final result = create();
+    if (value != null) result.value = value;
+    if (unit != null) result.unit = unit;
+    return result;
+  }
+
+  MolarType._();
+
+  factory MolarType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory MolarType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MolarType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<MolarUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: MolarUnit.MOLAR_UNIT_UNSPECIFIED, valueOf: MolarUnit.valueOf, enumValues: MolarUnit.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MolarType clone() => MolarType()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MolarType copyWith(void Function(MolarType) updates) => super.copyWith((message) => updates(message as MolarType)) as MolarType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static MolarType create() => MolarType._();
+  @$core.override
+  MolarType createEmptyInstance() => create();
+  static $pb.PbList<MolarType> createRepeated() => $pb.PbList<MolarType>();
+  @$core.pragma('dart2js:noInline')
+  static MolarType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MolarType>(create);
+  static MolarType? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get value => $_getN(0);
+  @$pb.TagNumber(1)
+  set value($core.double value) => $_setDouble(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  MolarUnit get unit => $_getN(1);
+  @$pb.TagNumber(2)
+  set unit(MolarUnit value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUnit() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUnit() => $_clearField(2);
+}
+
+/// A dimensionless ratio expressed as parts per some power of ten.
+///
+/// Distinct from ConcentrationType, which mixes true concentrations (mg/l,
+/// mg/100g) in with ppm/ppb: this one is only ever a ratio, so it converts
+/// cleanly between its own units by powers of a thousand and never needs to know
+/// what is dissolved in what.
+class PartsPerType extends $pb.GeneratedMessage {
+  factory PartsPerType({
+    $core.double? value,
+    PartsPerUnit? unit,
+  }) {
+    final result = create();
+    if (value != null) result.value = value;
+    if (unit != null) result.unit = unit;
+    return result;
+  }
+
+  PartsPerType._();
+
+  factory PartsPerType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory PartsPerType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PartsPerType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<PartsPerUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: PartsPerUnit.PARTS_PER_UNIT_UNSPECIFIED, valueOf: PartsPerUnit.valueOf, enumValues: PartsPerUnit.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PartsPerType clone() => PartsPerType()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PartsPerType copyWith(void Function(PartsPerType) updates) => super.copyWith((message) => updates(message as PartsPerType)) as PartsPerType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static PartsPerType create() => PartsPerType._();
+  @$core.override
+  PartsPerType createEmptyInstance() => create();
+  static $pb.PbList<PartsPerType> createRepeated() => $pb.PbList<PartsPerType>();
+  @$core.pragma('dart2js:noInline')
+  static PartsPerType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PartsPerType>(create);
+  static PartsPerType? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get value => $_getN(0);
+  @$pb.TagNumber(1)
+  set value($core.double value) => $_setDouble(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  PartsPerUnit get unit => $_getN(1);
+  @$pb.TagNumber(2)
+  set unit(PartsPerUnit value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUnit() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUnit() => $_clearField(2);
+}
+
 class ViscosityType extends $pb.GeneratedMessage {
   factory ViscosityType({
     $core.double? value,

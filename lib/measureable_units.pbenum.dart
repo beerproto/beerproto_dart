@@ -424,6 +424,44 @@ class PercentUnit extends $pb.ProtobufEnum {
   const PercentUnit._(super.value, super.name);
 }
 
+class MolarUnit extends $pb.ProtobufEnum {
+  static const MolarUnit MOLAR_UNIT_UNSPECIFIED = MolarUnit._(0, _omitEnumNames ? '' : 'MOLAR_UNIT_UNSPECIFIED');
+  /// g/mol
+  static const MolarUnit MOLAR_UNIT_GMOL = MolarUnit._(1, _omitEnumNames ? '' : 'MOLAR_UNIT_GMOL');
+
+  static const $core.List<MolarUnit> values = <MolarUnit> [
+    MOLAR_UNIT_UNSPECIFIED,
+    MOLAR_UNIT_GMOL,
+  ];
+
+  static final $core.List<MolarUnit?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 1);
+  static MolarUnit? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const MolarUnit._(super.value, super.name);
+}
+
+class PartsPerUnit extends $pb.ProtobufEnum {
+  static const PartsPerUnit PARTS_PER_UNIT_UNSPECIFIED = PartsPerUnit._(0, _omitEnumNames ? '' : 'PARTS_PER_UNIT_UNSPECIFIED');
+  /// ppm — parts per million
+  static const PartsPerUnit PARTS_PER_UNIT_MILLION = PartsPerUnit._(1, _omitEnumNames ? '' : 'PARTS_PER_UNIT_MILLION');
+  /// ppb — parts per billion
+  static const PartsPerUnit PARTS_PER_UNIT_BILLION = PartsPerUnit._(2, _omitEnumNames ? '' : 'PARTS_PER_UNIT_BILLION');
+  /// ppt — parts per trillion
+  static const PartsPerUnit PARTS_PER_UNIT_TRILLION = PartsPerUnit._(3, _omitEnumNames ? '' : 'PARTS_PER_UNIT_TRILLION');
+
+  static const $core.List<PartsPerUnit> values = <PartsPerUnit> [
+    PARTS_PER_UNIT_UNSPECIFIED,
+    PARTS_PER_UNIT_MILLION,
+    PARTS_PER_UNIT_BILLION,
+    PARTS_PER_UNIT_TRILLION,
+  ];
+
+  static final $core.List<PartsPerUnit?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static PartsPerUnit? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const PartsPerUnit._(super.value, super.name);
+}
+
 class ViscosityUnit extends $pb.ProtobufEnum {
   static const ViscosityUnit VISCOSITY_UNIT_UNSPECIFIED = ViscosityUnit._(0, _omitEnumNames ? '' : 'VISCOSITY_UNIT_UNSPECIFIED');
   /// cP

@@ -316,6 +316,37 @@ final $typed_data.Uint8List percentUnitDescriptor = $convert.base64Decode(
     'CgtQZXJjZW50VW5pdBIcChhQRVJDRU5UX1VOSVRfVU5TUEVDSUZJRUQQABIdChlQRVJDRU5UX1'
     'VOSVRfUEVSQ0VOVF9TSUdOEAE=');
 
+@$core.Deprecated('Use molarUnitDescriptor instead')
+const MolarUnit$json = {
+  '1': 'MolarUnit',
+  '2': [
+    {'1': 'MOLAR_UNIT_UNSPECIFIED', '2': 0},
+    {'1': 'MOLAR_UNIT_GMOL', '2': 1},
+  ],
+};
+
+/// Descriptor for `MolarUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List molarUnitDescriptor = $convert.base64Decode(
+    'CglNb2xhclVuaXQSGgoWTU9MQVJfVU5JVF9VTlNQRUNJRklFRBAAEhMKD01PTEFSX1VOSVRfR0'
+    '1PTBAB');
+
+@$core.Deprecated('Use partsPerUnitDescriptor instead')
+const PartsPerUnit$json = {
+  '1': 'PartsPerUnit',
+  '2': [
+    {'1': 'PARTS_PER_UNIT_UNSPECIFIED', '2': 0},
+    {'1': 'PARTS_PER_UNIT_MILLION', '2': 1},
+    {'1': 'PARTS_PER_UNIT_BILLION', '2': 2},
+    {'1': 'PARTS_PER_UNIT_TRILLION', '2': 3},
+  ],
+};
+
+/// Descriptor for `PartsPerUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List partsPerUnitDescriptor = $convert.base64Decode(
+    'CgxQYXJ0c1BlclVuaXQSHgoaUEFSVFNfUEVSX1VOSVRfVU5TUEVDSUZJRUQQABIaChZQQVJUU1'
+    '9QRVJfVU5JVF9NSUxMSU9OEAESGgoWUEFSVFNfUEVSX1VOSVRfQklMTElPThACEhsKF1BBUlRT'
+    'X1BFUl9VTklUX1RSSUxMSU9OEAM=');
+
 @$core.Deprecated('Use viscosityUnitDescriptor instead')
 const ViscosityUnit$json = {
   '1': 'ViscosityUnit',
@@ -652,6 +683,34 @@ const PercentType$json = {
 final $typed_data.Uint8List percentTypeDescriptor = $convert.base64Decode(
     'CgtQZXJjZW50VHlwZRIUCgV2YWx1ZRgBIAEoAVIFdmFsdWUSLQoEdW5pdBgCIAEoDjIZLmJlZX'
     'Jwcm90by52MS5QZXJjZW50VW5pdFIEdW5pdA==');
+
+@$core.Deprecated('Use molarTypeDescriptor instead')
+const MolarType$json = {
+  '1': 'MolarType',
+  '2': [
+    {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.MolarUnit', '10': 'unit'},
+  ],
+};
+
+/// Descriptor for `MolarType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List molarTypeDescriptor = $convert.base64Decode(
+    'CglNb2xhclR5cGUSFAoFdmFsdWUYASABKAFSBXZhbHVlEisKBHVuaXQYAiABKA4yFy5iZWVycH'
+    'JvdG8udjEuTW9sYXJVbml0UgR1bml0');
+
+@$core.Deprecated('Use partsPerTypeDescriptor instead')
+const PartsPerType$json = {
+  '1': 'PartsPerType',
+  '2': [
+    {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.PartsPerUnit', '10': 'unit'},
+  ],
+};
+
+/// Descriptor for `PartsPerType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List partsPerTypeDescriptor = $convert.base64Decode(
+    'CgxQYXJ0c1BlclR5cGUSFAoFdmFsdWUYASABKAFSBXZhbHVlEi4KBHVuaXQYAiABKA4yGi5iZW'
+    'VycHJvdG8udjEuUGFydHNQZXJVbml0UgR1bml0');
 
 @$core.Deprecated('Use viscosityTypeDescriptor instead')
 const ViscosityType$json = {
