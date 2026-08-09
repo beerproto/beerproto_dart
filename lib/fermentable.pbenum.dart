@@ -88,6 +88,8 @@ class GrainGroup extends $pb.ProtobufEnum {
   static const GrainGroup GRAIN_GROUP_SMOKED = GrainGroup._(6, _omitEnumNames ? '' : 'GRAIN_GROUP_SMOKED');
   /// adjunct
   static const GrainGroup GRAIN_GROUP_ADJUNCT = GrainGroup._(7, _omitEnumNames ? '' : 'GRAIN_GROUP_ADJUNCT');
+  /// acidulated — malt soured with lactic acid, used to lower mash pH. Its own group because it sits nearly two pH units below every other speciality malt, so anything predicting mash pH from the group alone models it wildly sweet.
+  static const GrainGroup GRAIN_GROUP_ACIDULATED = GrainGroup._(8, _omitEnumNames ? '' : 'GRAIN_GROUP_ACIDULATED');
 
   static const $core.List<GrainGroup> values = <GrainGroup> [
     GRAIN_GROUP_UNSPECIFIED,
@@ -98,9 +100,10 @@ class GrainGroup extends $pb.ProtobufEnum {
     GRAIN_GROUP_SPECIALTY,
     GRAIN_GROUP_SMOKED,
     GRAIN_GROUP_ADJUNCT,
+    GRAIN_GROUP_ACIDULATED,
   ];
 
-  static final $core.List<GrainGroup?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 7);
+  static final $core.List<GrainGroup?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 8);
   static GrainGroup? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
 
   const GrainGroup._(super.value, super.name);
