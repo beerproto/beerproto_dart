@@ -35,6 +35,8 @@ class FermentableBase extends $pb.GeneratedMessage {
     $core.String? producer,
     $core.String? productId,
     $0.DiastaticPowerType? diastaticPower,
+    $0.AcidityType? diPh,
+    $0.BufferingCapacityType? bufferingCapacity,
   }) {
     final result = create();
     if (type != null) result.type = type;
@@ -46,6 +48,8 @@ class FermentableBase extends $pb.GeneratedMessage {
     if (producer != null) result.producer = producer;
     if (productId != null) result.productId = productId;
     if (diastaticPower != null) result.diastaticPower = diastaticPower;
+    if (diPh != null) result.diPh = diPh;
+    if (bufferingCapacity != null) result.bufferingCapacity = bufferingCapacity;
     return result;
   }
 
@@ -64,6 +68,8 @@ class FermentableBase extends $pb.GeneratedMessage {
     ..aOS(7, _omitFieldNames ? '' : 'producer')
     ..aOS(8, _omitFieldNames ? '' : 'productId')
     ..aOM<$0.DiastaticPowerType>(9, _omitFieldNames ? '' : 'diastaticPower', subBuilder: $0.DiastaticPowerType.create)
+    ..aOM<$0.AcidityType>(10, _omitFieldNames ? '' : 'diPh', subBuilder: $0.AcidityType.create)
+    ..aOM<$0.BufferingCapacityType>(11, _omitFieldNames ? '' : 'bufferingCapacity', subBuilder: $0.BufferingCapacityType.create)
     ..hasRequiredFields = false
   ;
 
@@ -171,6 +177,30 @@ class FermentableBase extends $pb.GeneratedMessage {
   void clearDiastaticPower() => $_clearField(9);
   @$pb.TagNumber(9)
   $0.DiastaticPowerType ensureDiastaticPower() => $_ensure(8);
+
+  /// The pH of the resultant wort for 1 lb of grain mashed in 1 gallon of distilled water. Carried on the base so recipe additions can predict mash pH without loading the full fermentable record.
+  @$pb.TagNumber(10)
+  $0.AcidityType get diPh => $_getN(9);
+  @$pb.TagNumber(10)
+  set diPh($0.AcidityType value) => $_setField(10, value);
+  @$pb.TagNumber(10)
+  $core.bool hasDiPh() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearDiPh() => $_clearField(10);
+  @$pb.TagNumber(10)
+  $0.AcidityType ensureDiPh() => $_ensure(9);
+
+  /// The acid this fermentable absorbs per kilogram to move one pH unit. Paired with di_ph to give the malt's titration behaviour: di_ph fixes where the curve sits, buffering_capacity how steeply it resists moving. Carried on the base so recipe additions can solve the grist's proton balance.
+  @$pb.TagNumber(11)
+  $0.BufferingCapacityType get bufferingCapacity => $_getN(10);
+  @$pb.TagNumber(11)
+  set bufferingCapacity($0.BufferingCapacityType value) => $_setField(11, value);
+  @$pb.TagNumber(11)
+  $core.bool hasBufferingCapacity() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearBufferingCapacity() => $_clearField(11);
+  @$pb.TagNumber(11)
+  $0.BufferingCapacityType ensureBufferingCapacity() => $_ensure(10);
 }
 
 /// FermentableType collects the attributes of a fermentable ingredient to store as record information
@@ -199,6 +229,7 @@ class FermentableType extends $pb.GeneratedMessage {
     $0.PercentType? fermentability,
     $0.ConcentrationType? betaGlucan,
     $core.String? notes,
+    $0.BufferingCapacityType? bufferingCapacity,
   }) {
     final result = create();
     if (base != null) result.base = base;
@@ -224,6 +255,7 @@ class FermentableType extends $pb.GeneratedMessage {
     if (fermentability != null) result.fermentability = fermentability;
     if (betaGlucan != null) result.betaGlucan = betaGlucan;
     if (notes != null) result.notes = notes;
+    if (bufferingCapacity != null) result.bufferingCapacity = bufferingCapacity;
     return result;
   }
 
@@ -256,6 +288,7 @@ class FermentableType extends $pb.GeneratedMessage {
     ..aOM<$0.PercentType>(29, _omitFieldNames ? '' : 'fermentability', subBuilder: $0.PercentType.create)
     ..aOM<$0.ConcentrationType>(30, _omitFieldNames ? '' : 'betaGlucan', subBuilder: $0.ConcentrationType.create)
     ..aOS(31, _omitFieldNames ? '' : 'notes')
+    ..aOM<$0.BufferingCapacityType>(32, _omitFieldNames ? '' : 'bufferingCapacity', subBuilder: $0.BufferingCapacityType.create)
     ..hasRequiredFields = false
   ;
 
@@ -539,6 +572,18 @@ class FermentableType extends $pb.GeneratedMessage {
   $core.bool hasNotes() => $_has(22);
   @$pb.TagNumber(31)
   void clearNotes() => $_clearField(31);
+
+  /// The acid this fermentable absorbs per kilogram to move one pH unit. Paired with di_ph to give the malt's titration behaviour. Maltsters rarely publish it, so consumers should fall back to a value keyed on grain_group when it is unset.
+  @$pb.TagNumber(32)
+  $0.BufferingCapacityType get bufferingCapacity => $_getN(23);
+  @$pb.TagNumber(32)
+  set bufferingCapacity($0.BufferingCapacityType value) => $_setField(32, value);
+  @$pb.TagNumber(32)
+  $core.bool hasBufferingCapacity() => $_has(23);
+  @$pb.TagNumber(32)
+  void clearBufferingCapacity() => $_clearField(32);
+  @$pb.TagNumber(32)
+  $0.BufferingCapacityType ensureBufferingCapacity() => $_ensure(23);
 }
 
 enum FermentableAdditionType_Amount {

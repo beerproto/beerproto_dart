@@ -1138,6 +1138,71 @@ class PartsPerType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// The acid or base a material absorbs per unit mass to move one pH unit — how
+/// hard it resists a change in pH.
+///
+/// Used for mash pH prediction, where each fermentable's buffering is what makes
+/// a large grist need proportionally more acid than a small one to reach the
+/// same pH. Only meaningful alongside a distilled-water pH, which fixes the
+/// point the titration curve is measured from.
+class BufferingCapacityType extends $pb.GeneratedMessage {
+  factory BufferingCapacityType({
+    $core.double? value,
+    BufferingCapacityUnit? unit,
+  }) {
+    final result = create();
+    if (value != null) result.value = value;
+    if (unit != null) result.unit = unit;
+    return result;
+  }
+
+  BufferingCapacityType._();
+
+  factory BufferingCapacityType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory BufferingCapacityType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BufferingCapacityType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<BufferingCapacityUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: BufferingCapacityUnit.BUFFERING_CAPACITY_UNIT_UNSPECIFIED, valueOf: BufferingCapacityUnit.valueOf, enumValues: BufferingCapacityUnit.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BufferingCapacityType clone() => BufferingCapacityType()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BufferingCapacityType copyWith(void Function(BufferingCapacityType) updates) => super.copyWith((message) => updates(message as BufferingCapacityType)) as BufferingCapacityType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static BufferingCapacityType create() => BufferingCapacityType._();
+  @$core.override
+  BufferingCapacityType createEmptyInstance() => create();
+  static $pb.PbList<BufferingCapacityType> createRepeated() => $pb.PbList<BufferingCapacityType>();
+  @$core.pragma('dart2js:noInline')
+  static BufferingCapacityType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BufferingCapacityType>(create);
+  static BufferingCapacityType? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get value => $_getN(0);
+  @$pb.TagNumber(1)
+  set value($core.double value) => $_setDouble(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  BufferingCapacityUnit get unit => $_getN(1);
+  @$pb.TagNumber(2)
+  set unit(BufferingCapacityUnit value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUnit() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUnit() => $_clearField(2);
+}
+
 class ViscosityType extends $pb.GeneratedMessage {
   factory ViscosityType({
     $core.double? value,

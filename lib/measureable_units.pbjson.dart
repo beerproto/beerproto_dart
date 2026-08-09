@@ -347,6 +347,20 @@ final $typed_data.Uint8List partsPerUnitDescriptor = $convert.base64Decode(
     '9QRVJfVU5JVF9NSUxMSU9OEAESGgoWUEFSVFNfUEVSX1VOSVRfQklMTElPThACEhsKF1BBUlRT'
     'X1BFUl9VTklUX1RSSUxMSU9OEAM=');
 
+@$core.Deprecated('Use bufferingCapacityUnitDescriptor instead')
+const BufferingCapacityUnit$json = {
+  '1': 'BufferingCapacityUnit',
+  '2': [
+    {'1': 'BUFFERING_CAPACITY_UNIT_UNSPECIFIED', '2': 0},
+    {'1': 'BUFFERING_CAPACITY_UNIT_MEQ_KG_PH', '2': 1},
+  ],
+};
+
+/// Descriptor for `BufferingCapacityUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List bufferingCapacityUnitDescriptor = $convert.base64Decode(
+    'ChVCdWZmZXJpbmdDYXBhY2l0eVVuaXQSJwojQlVGRkVSSU5HX0NBUEFDSVRZX1VOSVRfVU5TUE'
+    'VDSUZJRUQQABIlCiFCVUZGRVJJTkdfQ0FQQUNJVFlfVU5JVF9NRVFfS0dfUEgQAQ==');
+
 @$core.Deprecated('Use viscosityUnitDescriptor instead')
 const ViscosityUnit$json = {
   '1': 'ViscosityUnit',
@@ -711,6 +725,20 @@ const PartsPerType$json = {
 final $typed_data.Uint8List partsPerTypeDescriptor = $convert.base64Decode(
     'CgxQYXJ0c1BlclR5cGUSFAoFdmFsdWUYASABKAFSBXZhbHVlEi4KBHVuaXQYAiABKA4yGi5iZW'
     'VycHJvdG8udjEuUGFydHNQZXJVbml0UgR1bml0');
+
+@$core.Deprecated('Use bufferingCapacityTypeDescriptor instead')
+const BufferingCapacityType$json = {
+  '1': 'BufferingCapacityType',
+  '2': [
+    {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.BufferingCapacityUnit', '10': 'unit'},
+  ],
+};
+
+/// Descriptor for `BufferingCapacityType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bufferingCapacityTypeDescriptor = $convert.base64Decode(
+    'ChVCdWZmZXJpbmdDYXBhY2l0eVR5cGUSFAoFdmFsdWUYASABKAFSBXZhbHVlEjcKBHVuaXQYAi'
+    'ABKA4yIy5iZWVycHJvdG8udjEuQnVmZmVyaW5nQ2FwYWNpdHlVbml0UgR1bml0');
 
 @$core.Deprecated('Use viscosityTypeDescriptor instead')
 const ViscosityType$json = {

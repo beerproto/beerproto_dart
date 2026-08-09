@@ -462,6 +462,22 @@ class PartsPerUnit extends $pb.ProtobufEnum {
   const PartsPerUnit._(super.value, super.name);
 }
 
+class BufferingCapacityUnit extends $pb.ProtobufEnum {
+  static const BufferingCapacityUnit BUFFERING_CAPACITY_UNIT_UNSPECIFIED = BufferingCapacityUnit._(0, _omitEnumNames ? '' : 'BUFFERING_CAPACITY_UNIT_UNSPECIFIED');
+  /// mEq/(kg·pH) — milliequivalents of acid per kilogram per pH unit
+  static const BufferingCapacityUnit BUFFERING_CAPACITY_UNIT_MEQ_KG_PH = BufferingCapacityUnit._(1, _omitEnumNames ? '' : 'BUFFERING_CAPACITY_UNIT_MEQ_KG_PH');
+
+  static const $core.List<BufferingCapacityUnit> values = <BufferingCapacityUnit> [
+    BUFFERING_CAPACITY_UNIT_UNSPECIFIED,
+    BUFFERING_CAPACITY_UNIT_MEQ_KG_PH,
+  ];
+
+  static final $core.List<BufferingCapacityUnit?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 1);
+  static BufferingCapacityUnit? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const BufferingCapacityUnit._(super.value, super.name);
+}
+
 class ViscosityUnit extends $pb.ProtobufEnum {
   static const ViscosityUnit VISCOSITY_UNIT_UNSPECIFIED = ViscosityUnit._(0, _omitEnumNames ? '' : 'VISCOSITY_UNIT_UNSPECIFIED');
   /// cP

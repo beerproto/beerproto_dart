@@ -92,6 +92,8 @@ const FermentableBase$json = {
     {'1': 'producer', '3': 7, '4': 1, '5': 9, '10': 'producer'},
     {'1': 'product_id', '3': 8, '4': 1, '5': 9, '10': 'productId'},
     {'1': 'diastatic_power', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.DiastaticPowerType', '10': 'diastaticPower'},
+    {'1': 'di_ph', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'diPh'},
+    {'1': 'buffering_capacity', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.BufferingCapacityType', '10': 'bufferingCapacity'},
   ],
 };
 
@@ -105,7 +107,9 @@ final $typed_data.Uint8List fermentableBaseDescriptor = $convert.base64Decode(
     'PIAQFSBWNvbG9yEh4KBG5hbWUYBiABKAlCCrpIB8gBAXICEANSBG5hbWUSGgoIcHJvZHVjZXIY'
     'ByABKAlSCHByb2R1Y2VyEh0KCnByb2R1Y3RfaWQYCCABKAlSCXByb2R1Y3RJZBJJCg9kaWFzdG'
     'F0aWNfcG93ZXIYCSABKAsyIC5iZWVycHJvdG8udjEuRGlhc3RhdGljUG93ZXJUeXBlUg5kaWFz'
-    'dGF0aWNQb3dlcg==');
+    'dGF0aWNQb3dlchIuCgVkaV9waBgKIAEoCzIZLmJlZXJwcm90by52MS5BY2lkaXR5VHlwZVIEZG'
+    'lQaBJSChJidWZmZXJpbmdfY2FwYWNpdHkYCyABKAsyIy5iZWVycHJvdG8udjEuQnVmZmVyaW5n'
+    'Q2FwYWNpdHlUeXBlUhFidWZmZXJpbmdDYXBhY2l0eQ==');
 
 @$core.Deprecated('Use fermentableTypeDescriptor instead')
 const FermentableType$json = {
@@ -134,6 +138,7 @@ const FermentableType$json = {
     {'1': 'fermentability', '3': 29, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'fermentability'},
     {'1': 'beta_glucan', '3': 30, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '10': 'betaGlucan'},
     {'1': 'notes', '3': 31, '4': 1, '5': 9, '10': 'notes'},
+    {'1': 'buffering_capacity', '3': 32, '4': 1, '5': 11, '6': '.beerproto.v1.BufferingCapacityType', '10': 'bufferingCapacity'},
   ],
 };
 
@@ -161,7 +166,9 @@ final $typed_data.Uint8List fermentableTypeDescriptor = $convert.base64Decode(
     'NQEjEKA2ZhbhgcIAEoCzIfLmJlZXJwcm90by52MS5Db25jZW50cmF0aW9uVHlwZVIDZmFuEkEK'
     'DmZlcm1lbnRhYmlsaXR5GB0gASgLMhkuYmVlcnByb3RvLnYxLlBlcmNlbnRUeXBlUg5mZXJtZW'
     '50YWJpbGl0eRJACgtiZXRhX2dsdWNhbhgeIAEoCzIfLmJlZXJwcm90by52MS5Db25jZW50cmF0'
-    'aW9uVHlwZVIKYmV0YUdsdWNhbhIUCgVub3RlcxgfIAEoCVIFbm90ZXM=');
+    'aW9uVHlwZVIKYmV0YUdsdWNhbhIUCgVub3RlcxgfIAEoCVIFbm90ZXMSUgoSYnVmZmVyaW5nX2'
+    'NhcGFjaXR5GCAgASgLMiMuYmVlcnByb3RvLnYxLkJ1ZmZlcmluZ0NhcGFjaXR5VHlwZVIRYnVm'
+    'ZmVyaW5nQ2FwYWNpdHk=');
 
 @$core.Deprecated('Use fermentableAdditionTypeDescriptor instead')
 const FermentableAdditionType$json = {
