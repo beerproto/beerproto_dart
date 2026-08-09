@@ -570,7 +570,9 @@ class IngredientsType extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $pb.PbList<$9.WaterAdditionType> get waterAdditions => $_getList(2);
 
-  /// fermentable_additions collects all the fermentable ingredients for use in a recipe
+  /// fermentable_additions collects all the fermentable ingredients for use in a recipe.
+  /// Not required: RecipeUnit covers beverages with nothing to ferment from a
+  /// grist — a seltzer is carbonated water and minerals, and nothing else.
   @$pb.TagNumber(4)
   $pb.PbList<$10.FermentableAdditionType> get fermentableAdditions => $_getList(3);
 

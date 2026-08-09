@@ -125,7 +125,7 @@ const IngredientsType$json = {
     {'1': 'miscellaneous_additions', '3': 1, '4': 3, '5': 11, '6': '.beerproto.v1.MiscellaneousAdditionType', '10': 'miscellaneousAdditions'},
     {'1': 'culture_additions', '3': 2, '4': 3, '5': 11, '6': '.beerproto.v1.CultureAdditionType', '10': 'cultureAdditions'},
     {'1': 'water_additions', '3': 3, '4': 3, '5': 11, '6': '.beerproto.v1.WaterAdditionType', '10': 'waterAdditions'},
-    {'1': 'fermentable_additions', '3': 4, '4': 3, '5': 11, '6': '.beerproto.v1.FermentableAdditionType', '8': {}, '10': 'fermentableAdditions'},
+    {'1': 'fermentable_additions', '3': 4, '4': 3, '5': 11, '6': '.beerproto.v1.FermentableAdditionType', '10': 'fermentableAdditions'},
     {'1': 'hop_additions', '3': 5, '4': 3, '5': 11, '6': '.beerproto.v1.HopAdditionType', '10': 'hopAdditions'},
   ],
 };
@@ -136,10 +136,10 @@ final $typed_data.Uint8List ingredientsTypeDescriptor = $convert.base64Decode(
     'VycHJvdG8udjEuTWlzY2VsbGFuZW91c0FkZGl0aW9uVHlwZVIWbWlzY2VsbGFuZW91c0FkZGl0'
     'aW9ucxJOChFjdWx0dXJlX2FkZGl0aW9ucxgCIAMoCzIhLmJlZXJwcm90by52MS5DdWx0dXJlQW'
     'RkaXRpb25UeXBlUhBjdWx0dXJlQWRkaXRpb25zEkgKD3dhdGVyX2FkZGl0aW9ucxgDIAMoCzIf'
-    'LmJlZXJwcm90by52MS5XYXRlckFkZGl0aW9uVHlwZVIOd2F0ZXJBZGRpdGlvbnMSZAoVZmVybW'
+    'LmJlZXJwcm90by52MS5XYXRlckFkZGl0aW9uVHlwZVIOd2F0ZXJBZGRpdGlvbnMSWgoVZmVybW'
     'VudGFibGVfYWRkaXRpb25zGAQgAygLMiUuYmVlcnByb3RvLnYxLkZlcm1lbnRhYmxlQWRkaXRp'
-    'b25UeXBlQgi6SAWSAQIIAVIUZmVybWVudGFibGVBZGRpdGlvbnMSQgoNaG9wX2FkZGl0aW9ucx'
-    'gFIAMoCzIdLmJlZXJwcm90by52MS5Ib3BBZGRpdGlvblR5cGVSDGhvcEFkZGl0aW9ucw==');
+    'b25UeXBlUhRmZXJtZW50YWJsZUFkZGl0aW9ucxJCCg1ob3BfYWRkaXRpb25zGAUgAygLMh0uYm'
+    'VlcnByb3RvLnYxLkhvcEFkZGl0aW9uVHlwZVIMaG9wQWRkaXRpb25z');
 
 @$core.Deprecated('Use tasteTypeDescriptor instead')
 const TasteType$json = {
