@@ -21,6 +21,11 @@ export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'measureable_units.pbenum.dart';
 
+/// Canonical unit: VOLUME_UNIT_ML -- `value` is always in millilitres.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class VolumeType extends $pb.GeneratedMessage {
   factory VolumeType({
     $core.double? value,
@@ -79,6 +84,11 @@ class VolumeType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Canonical unit: MASS_UNIT_G -- `value` is always in grams.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class MassType extends $pb.GeneratedMessage {
   factory MassType({
     $core.double? value,
@@ -138,6 +148,12 @@ class MassType extends $pb.GeneratedMessage {
 }
 
 /// CellCountType represents a count of viable microorganism (yeast/bacteria) cells, used in yeast pitch-rate calculations. Pitch-rate math is done in billions; cells and millions are provided for display scaling.
+///
+/// Canonical unit: CELL_COUNT_UNIT_BILLION -- `value` is always in billions of cells.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class CellCountType extends $pb.GeneratedMessage {
   factory CellCountType({
     $core.double? value,
@@ -197,6 +213,15 @@ class CellCountType extends $pb.GeneratedMessage {
 }
 
 /// PitchRateType is a yeast pitch rate — cells pitched per unit wort volume per unit gravity. There is one unit in common brewing use (million cells / mL / °Plato), so it exists mainly for type-safety and consistent display rather than conversion.
+///
+/// Canonical unit: PITCH_RATE_UNIT_MILLION_CELLS_PER_ML_PER_PLATO -- `value` is always in million cells / ml / degPlato.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// The only real unit in the enum, so the canonical unit and the presentation
+/// unit are necessarily the same.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class PitchRateType extends $pb.GeneratedMessage {
   factory PitchRateType({
     $core.double? value,
@@ -255,7 +280,21 @@ class PitchRateType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
-/// Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner is needed to self convert, while a value of 100 or more is desirable for base malts
+/// Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner (106.5 WK) is needed to self convert, while a value of 100 Lintner (334 WK) or more is desirable for base malts
+///
+/// Canonical unit: DIASTATIC_POWER_UNIT_WK -- `value` is always in degrees Windisch-Kolbach.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// The two scales are related by an affine transform, not a scaling:
+///   degWK = (3.5 x degLintner) - 16      degLintner = (degWK + 16) / 3.5
+/// Zero does not survive that conversion -- 0 degLintner is -16 degWK -- which
+/// has two consequences. Canonical degWK values are NEGATIVE for any malt below
+/// 4.57 degLintner, so `value > 0` must never be used as a presence or validity
+/// test. And a missing diastatic power is not 0 degWK; test presence on the
+/// enclosing message.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class DiastaticPowerType extends $pb.GeneratedMessage {
   factory DiastaticPowerType({
     $core.double? value,
@@ -314,6 +353,11 @@ class DiastaticPowerType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Canonical unit: TEMPERATURE_UNIT_C -- `value` is always in degrees Celsius.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class TemperatureType extends $pb.GeneratedMessage {
   factory TemperatureType({
     $core.double? value,
@@ -372,6 +416,16 @@ class TemperatureType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Canonical unit: ACIDITY_UNIT_PH -- `value` is always in pH.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// The only real unit in the enum, so the canonical unit and the presentation
+/// unit are necessarily the same.
+///
+/// pH is a logarithmic scale; it is never rescaled, only carried.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class AcidityType extends $pb.GeneratedMessage {
   factory AcidityType({
     $core.double? value,
@@ -430,6 +484,16 @@ class AcidityType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Canonical unit: TIME_UNIT_SEC -- `value` is always in seconds.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// `value` is an int64, not a double -- the only measurement here that is.
+/// Seconds is canonical precisely because of that: minutes would make any
+/// sub-minute duration (a whirlpool rest, a short hop stand) unrepresentable,
+/// and would silently round a 30 second step up to one minute.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class TimeType extends $pb.GeneratedMessage {
   factory TimeType({
     $fixnum.Int64? value,
@@ -489,6 +553,17 @@ class TimeType extends $pb.GeneratedMessage {
 }
 
 /// ColorType supports both grain color properties, such as Lovibond, and wort color properties such as SRM and EBC
+///
+/// Canonical unit: COLOR_UNIT_EBC -- `value` is always in EBC.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// EBC and SRM are linearly related and convert losslessly. Lovibond is not a
+/// third scale to convert through: the Daniels relation
+/// SRM = 1.3546 x degL - 0.76 is a curve fit of MCU-to-SRM data, not a unit
+/// conversion, and must never be applied to an individual malt colour.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class ColorType extends $pb.GeneratedMessage {
   factory ColorType({
     $core.double? value,
@@ -547,6 +622,11 @@ class ColorType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Canonical unit: CARBONATION_UNIT_VOLS -- `value` is always in volumes of CO2.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class CarbonationType extends $pb.GeneratedMessage {
   factory CarbonationType({
     $core.double? value,
@@ -605,6 +685,14 @@ class CarbonationType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Canonical unit: BITTERNESS_UNIT_IBUS -- `value` is always in IBU.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// The only real unit in the enum, so the canonical unit and the presentation
+/// unit are necessarily the same.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class BitternessType extends $pb.GeneratedMessage {
   factory BitternessType({
     $core.double? value,
@@ -664,6 +752,18 @@ class BitternessType extends $pb.GeneratedMessage {
 }
 
 /// Gravity refers to the both the measurements of percent of sugar content, ie plato and brix, as well as relative density ie specific gravity
+///
+/// Canonical unit: GRAVITY_UNIT_SG -- `value` is always in specific gravity.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// SG and Plato are related through a cubic, so the round trip is not
+/// algebraically lossless. The error is well below hydrometer and refractometer
+/// resolution, so SG is safe as the stored form -- but extract-basis maths
+/// (attenuation, real extract) should convert to Plato explicitly and do its
+/// arithmetic there.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class GravityType extends $pb.GeneratedMessage {
   factory GravityType({
     $core.double? value,
@@ -722,6 +822,11 @@ class GravityType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Canonical unit: SPECIFIC_HEAT_UNIT_JKGK -- `value` is always in joules per kilogram-kelvin.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class SpecificHeatType extends $pb.GeneratedMessage {
   factory SpecificHeatType({
     $core.double? value,
@@ -780,6 +885,17 @@ class SpecificHeatType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Canonical unit: CONCENTRATION_UNIT_MGL -- `value` is always in milligrams per litre.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// For dilute aqueous solutions 1 mg/l is numerically 1 ppm, because a litre of
+/// brewing liquor weighs a kilogram, so this and PartsPerType interchange
+/// without arithmetic. The types stay distinct all the same: this one is a mass
+/// per volume, PartsPerType is a pure ratio, and the equivalence stops holding
+/// for anything not around 1 kg/l.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class ConcentrationType extends $pb.GeneratedMessage {
   factory ConcentrationType({
     $core.double? value,
@@ -838,6 +954,15 @@ class ConcentrationType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Canonical unit: SPECIFIC_VOLUME_UNIT_LKG -- `value` is always in litres per kilogram.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// Not SPECIFIC_VOLUME_UNIT_M3KG: the SI unit puts a mash thickness of 2.5 l/kg
+/// at 0.0025, and canonical units are chosen to keep typical values legible and
+/// near-integral.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class SpecificVolumeType extends $pb.GeneratedMessage {
   factory SpecificVolumeType({
     $core.double? value,
@@ -897,6 +1022,17 @@ class SpecificVolumeType extends $pb.GeneratedMessage {
 }
 
 /// UnitType is used where unitless amounts are required, such as 1 apple, or 1 yeast packet
+///
+/// NO canonical unit -- excluded from the canonical convention.
+///
+/// For this type `unit` DESCRIBES `value` in the ordinary self-describing way,
+/// rather than naming a presentation unit.
+///
+/// These units are discrete counts and no conversion between them exists or
+/// can exist: a package is not a number of "each". Compare values only when
+/// the units already match.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class UnitType extends $pb.GeneratedMessage {
   factory UnitType({
     $core.double? value,
@@ -955,6 +1091,14 @@ class UnitType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Canonical unit: PERCENT_UNIT_PERCENT_SIGN -- `value` is always in percent.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// The only real unit in the enum, so the canonical unit and the presentation
+/// unit are necessarily the same.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class PercentType extends $pb.GeneratedMessage {
   factory PercentType({
     $core.double? value,
@@ -1016,6 +1160,15 @@ class PercentType extends $pb.GeneratedMessage {
 /// Molar mass — the mass of one mole of a substance. Used for the brewing salt
 /// and acid chemistry, where ion contributions and neutralising power are
 /// derived from formula masses rather than tabulated.
+///
+/// Canonical unit: MOLAR_UNIT_GMOL -- `value` is always in grams per mole.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// The only real unit in the enum, so the canonical unit and the presentation
+/// unit are necessarily the same.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class MolarType extends $pb.GeneratedMessage {
   factory MolarType({
     $core.double? value,
@@ -1080,6 +1233,12 @@ class MolarType extends $pb.GeneratedMessage {
 /// mg/100g) in with ppm/ppb: this one is only ever a ratio, so it converts
 /// cleanly between its own units by powers of a thousand and never needs to know
 /// what is dissolved in what.
+///
+/// Canonical unit: PARTS_PER_UNIT_MILLION -- `value` is always in parts per million.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class PartsPerType extends $pb.GeneratedMessage {
   factory PartsPerType({
     $core.double? value,
@@ -1145,6 +1304,15 @@ class PartsPerType extends $pb.GeneratedMessage {
 /// a large grist need proportionally more acid than a small one to reach the
 /// same pH. Only meaningful alongside a distilled-water pH, which fixes the
 /// point the titration curve is measured from.
+///
+/// Canonical unit: BUFFERING_CAPACITY_UNIT_MEQ_KG_PH -- `value` is always in milliequivalents per kilogram per pH unit.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// The only real unit in the enum, so the canonical unit and the presentation
+/// unit are necessarily the same.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class BufferingCapacityType extends $pb.GeneratedMessage {
   factory BufferingCapacityType({
     $core.double? value,
@@ -1203,6 +1371,13 @@ class BufferingCapacityType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Canonical unit: VISCOSITY_UNIT_MPAS -- `value` is always in millipascal-seconds.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// 1 cP = 1 mPa-s exactly, so the choice costs nothing.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class ViscosityType extends $pb.GeneratedMessage {
   factory ViscosityType({
     $core.double? value,
@@ -2006,6 +2181,18 @@ class ConcentrationRangeType extends $pb.GeneratedMessage {
 }
 
 /// use for things like evaporation rate, grain absorption rate, lauter flow rate, etc.
+///
+/// NO canonical unit -- excluded from the canonical convention.
+///
+/// For this type `unit` DESCRIBES `value` in the ordinary self-describing way,
+/// rather than naming a presentation unit.
+///
+/// RateUnit spans four dimensions in one enum: volume flow (L_PER_HOUR,
+/// BBL_PER_HOUR), percent rate (PERCENT_PER_HOUR), specific volume (L_PER_KG)
+/// and temperature rate (C_PER_MINUTE). A single canonical unit is not
+/// meaningful.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class RateType extends $pb.GeneratedMessage {
   factory RateType({
     $core.double? value,
@@ -2064,6 +2251,11 @@ class RateType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Canonical unit: PRESSURE_UNIT_PASCAL -- `value` is always in pascals.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class PressureType extends $pb.GeneratedMessage {
   factory PressureType({
     $core.double? value,
@@ -2122,6 +2314,15 @@ class PressureType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// NO canonical unit -- excluded from the canonical convention.
+///
+/// For this type `unit` DESCRIBES `value` in the ordinary self-describing way,
+/// rather than naming a presentation unit.
+///
+/// DU, WK and SKB are three different laboratory assays, not three scalings
+/// of one quantity. There is no defensible conversion factor between them.
+///
+/// See "Canonical units" in the repository README for the full convention.
 class EnzymeActivityType extends $pb.GeneratedMessage {
   factory EnzymeActivityType({
     $core.double? value,
