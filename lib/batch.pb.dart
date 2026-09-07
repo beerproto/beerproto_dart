@@ -43,6 +43,7 @@ class Batch extends $pb.GeneratedMessage {
     $core.Iterable<Log>? logs,
     $core.String? notes,
     $core.double? rating,
+    WineStyleType? wineStyle,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -62,6 +63,7 @@ class Batch extends $pb.GeneratedMessage {
     if (logs != null) result.logs.addAll(logs);
     if (notes != null) result.notes = notes;
     if (rating != null) result.rating = rating;
+    if (wineStyle != null) result.wineStyle = wineStyle;
     return result;
   }
 
@@ -88,6 +90,7 @@ class Batch extends $pb.GeneratedMessage {
     ..pc<Log>(15, _omitFieldNames ? '' : 'logs', $pb.PbFieldType.PM, subBuilder: Log.create)
     ..aOS(16, _omitFieldNames ? '' : 'notes')
     ..a<$core.double>(17, _omitFieldNames ? '' : 'rating', $pb.PbFieldType.OD)
+    ..e<WineStyleType>(18, _omitFieldNames ? '' : 'wineStyle', $pb.PbFieldType.OE, defaultOrMaker: WineStyleType.WINE_STYLE_TYPE_UNSPECIFIED, valueOf: WineStyleType.valueOf, enumValues: WineStyleType.values)
     ..hasRequiredFields = false
   ;
 
@@ -259,6 +262,17 @@ class Batch extends $pb.GeneratedMessage {
   $core.bool hasRating() => $_has(16);
   @$pb.TagNumber(17)
   void clearRating() => $_clearField(17);
+
+  /// Which acidity target a wine is being made to. Empty for anything that is
+  /// not wine.
+  @$pb.TagNumber(18)
+  WineStyleType get wineStyle => $_getN(17);
+  @$pb.TagNumber(18)
+  set wineStyle(WineStyleType value) => $_setField(18, value);
+  @$pb.TagNumber(18)
+  $core.bool hasWineStyle() => $_has(17);
+  @$pb.TagNumber(18)
+  void clearWineStyle() => $_clearField(18);
 }
 
 /// An acid dose the brewer has committed to for this batch's mash.

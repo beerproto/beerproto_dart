@@ -14,6 +14,23 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use wineStyleTypeDescriptor instead')
+const WineStyleType$json = {
+  '1': 'WineStyleType',
+  '2': [
+    {'1': 'WINE_STYLE_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'WINE_STYLE_TYPE_RED', '2': 1},
+    {'1': 'WINE_STYLE_TYPE_WHITE', '2': 2},
+    {'1': 'WINE_STYLE_TYPE_ROSE', '2': 3},
+  ],
+};
+
+/// Descriptor for `WineStyleType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List wineStyleTypeDescriptor = $convert.base64Decode(
+    'Cg1XaW5lU3R5bGVUeXBlEh8KG1dJTkVfU1RZTEVfVFlQRV9VTlNQRUNJRklFRBAAEhcKE1dJTk'
+    'VfU1RZTEVfVFlQRV9SRUQQARIZChVXSU5FX1NUWUxFX1RZUEVfV0hJVEUQAhIYChRXSU5FX1NU'
+    'WUxFX1RZUEVfUk9TRRAD');
+
 @$core.Deprecated('Use batchStatusTypeDescriptor instead')
 const BatchStatusType$json = {
   '1': 'BatchStatusType',
@@ -107,6 +124,7 @@ const Batch$json = {
     {'1': 'logs', '3': 15, '4': 3, '5': 11, '6': '.beerproto.v1.Log', '10': 'logs'},
     {'1': 'notes', '3': 16, '4': 1, '5': 9, '10': 'notes'},
     {'1': 'rating', '3': 17, '4': 1, '5': 1, '10': 'rating'},
+    {'1': 'wine_style', '3': 18, '4': 1, '5': 14, '6': '.beerproto.v1.WineStyleType', '10': 'wineStyle'},
   ],
 };
 
@@ -126,7 +144,8 @@ final $typed_data.Uint8List batchDescriptor = $convert.base64Decode(
     'Vhc3VyZW1lbnRzGA0gASgLMhouYmVlcnByb3RvLnYxLk1lYXN1cmVtZW50c1IMbWVhc3VyZW1l'
     'bnRzEjUKCWVzdGltYXRlcxgOIAEoCzIXLmJlZXJwcm90by52MS5Fc3RpbWF0ZXNSCWVzdGltYX'
     'RlcxIlCgRsb2dzGA8gAygLMhEuYmVlcnByb3RvLnYxLkxvZ1IEbG9ncxIUCgVub3RlcxgQIAEo'
-    'CVIFbm90ZXMSFgoGcmF0aW5nGBEgASgBUgZyYXRpbmc=');
+    'CVIFbm90ZXMSFgoGcmF0aW5nGBEgASgBUgZyYXRpbmcSOgoKd2luZV9zdHlsZRgSIAEoDjIbLm'
+    'JlZXJwcm90by52MS5XaW5lU3R5bGVUeXBlUgl3aW5lU3R5bGU=');
 
 @$core.Deprecated('Use mashAcidAdditionDescriptor instead')
 const MashAcidAddition$json = {

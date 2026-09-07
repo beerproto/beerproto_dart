@@ -14,6 +14,44 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The shape of wine being made, for the sake of the acidity it is aimed at.
+///
+/// Titratable acidity is the one target where wines genuinely disagree with
+/// each other: reds sit around 5-7 g/L as tartaric and whites 6-9, which is far
+/// enough apart that a single band spanning both can only say a juice is out of
+/// range for every wine, never that it is wrong for this one.
+///
+/// Deliberately *not* a subdivision of StyleCategories, where a red/white split
+/// would sit at the wrong level (that enum names beverage classes), would leave
+/// existing WINE styles ambiguous, and would still say nothing about a recipe
+/// with no style attached — which is most of them. It is recorded per batch
+/// instead, beside WaterAdjustmentStrategyType, because it is the same kind of
+/// thing: a choice about what this batch is aiming at rather than a fact about
+/// what it is.
+///
+/// UNSPECIFIED is a usable state, not a missing one: a winemaker who has not
+/// said gets judged against a band spanning every arm below, which is what the
+/// app did before this field existed.
+class WineStyleType extends $pb.ProtobufEnum {
+  static const WineStyleType WINE_STYLE_TYPE_UNSPECIFIED = WineStyleType._(0, _omitEnumNames ? '' : 'WINE_STYLE_TYPE_UNSPECIFIED');
+  static const WineStyleType WINE_STYLE_TYPE_RED = WineStyleType._(1, _omitEnumNames ? '' : 'WINE_STYLE_TYPE_RED');
+  static const WineStyleType WINE_STYLE_TYPE_WHITE = WineStyleType._(2, _omitEnumNames ? '' : 'WINE_STYLE_TYPE_WHITE');
+  /// Short skin contact, and an acidity aimed nearer a white than a red.
+  static const WineStyleType WINE_STYLE_TYPE_ROSE = WineStyleType._(3, _omitEnumNames ? '' : 'WINE_STYLE_TYPE_ROSE');
+
+  static const $core.List<WineStyleType> values = <WineStyleType> [
+    WINE_STYLE_TYPE_UNSPECIFIED,
+    WINE_STYLE_TYPE_RED,
+    WINE_STYLE_TYPE_WHITE,
+    WINE_STYLE_TYPE_ROSE,
+  ];
+
+  static final $core.List<WineStyleType?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 3);
+  static WineStyleType? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const WineStyleType._(super.value, super.name);
+}
+
 class BatchStatusType extends $pb.ProtobufEnum {
   static const BatchStatusType BATCH_STATUS_TYPE_UNSPECIFIED = BatchStatusType._(0, _omitEnumNames ? '' : 'BATCH_STATUS_TYPE_UNSPECIFIED');
   static const BatchStatusType BATCH_STATUS_TYPE_PLANNING = BatchStatusType._(1, _omitEnumNames ? '' : 'BATCH_STATUS_TYPE_PLANNING');
