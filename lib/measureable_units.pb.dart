@@ -484,6 +484,94 @@ class AcidityType extends $pb.GeneratedMessage {
   void clearUnit() => $_clearField(2);
 }
 
+/// Canonical unit: TITRATABLE_ACIDITY_UNIT_G_PER_L_TARTARIC -- `value` is
+/// always in grams per litre expressed as tartaric acid.
+/// `unit` names the unit this measurement should be presented in and never
+/// describes `value`.
+///
+/// Titratable acidity is how much acid is actually *in* a juice, as against
+/// AcidityType's pH, which is how strongly the free protons of it are showing.
+/// The two move together but neither predicts the other: two ciders at the same
+/// pH can differ by half again in TA depending on how much potassium the fruit
+/// carried, and it is the TA that a drinker tastes as sharpness.
+///
+/// Separate from AcidityType rather than another unit inside it, because they
+/// are not the same quantity. pH is a logarithmic scale that is never rescaled;
+/// TA is a concentration. One message cannot have both as its canonical unit,
+/// and a `value` whose meaning depended on which arm of the enum was set would
+/// break the convention this file is built on.
+///
+/// The unit is "as <acid>" because a titration counts equivalents of acid and
+/// then reports them as the mass of whichever acid the trade quotes. Neither is
+/// more correct; they differ by the ratio of their equivalent weights, which is
+/// exact:
+///
+///   tartaric (150.087 g/mol, diprotic) -> 75.044 g/eq
+///   malic    (134.087 g/mol, diprotic) -> 67.044 g/eq
+///   1 g/L as malic = 1.1193 g/L as tartaric
+///
+/// Tartaric is canonical because it is the international analytical convention
+/// (OIV, and every wine lab result). Cider is quoted as malic almost
+/// everywhere, so a cider UI will display malic and convert -- which is exactly
+/// what `unit` is for.
+class TitratableAcidityType extends $pb.GeneratedMessage {
+  factory TitratableAcidityType({
+    $core.double? value,
+    TitratableAcidityUnit? unit,
+  }) {
+    final result = create();
+    if (value != null) result.value = value;
+    if (unit != null) result.unit = unit;
+    return result;
+  }
+
+  TitratableAcidityType._();
+
+  factory TitratableAcidityType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory TitratableAcidityType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TitratableAcidityType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OD)
+    ..e<TitratableAcidityUnit>(2, _omitFieldNames ? '' : 'unit', $pb.PbFieldType.OE, defaultOrMaker: TitratableAcidityUnit.TITRATABLE_ACIDITY_UNIT_UNSPECIFIED, valueOf: TitratableAcidityUnit.valueOf, enumValues: TitratableAcidityUnit.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TitratableAcidityType clone() => TitratableAcidityType()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  TitratableAcidityType copyWith(void Function(TitratableAcidityType) updates) => super.copyWith((message) => updates(message as TitratableAcidityType)) as TitratableAcidityType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TitratableAcidityType create() => TitratableAcidityType._();
+  @$core.override
+  TitratableAcidityType createEmptyInstance() => create();
+  static $pb.PbList<TitratableAcidityType> createRepeated() => $pb.PbList<TitratableAcidityType>();
+  @$core.pragma('dart2js:noInline')
+  static TitratableAcidityType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TitratableAcidityType>(create);
+  static TitratableAcidityType? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get value => $_getN(0);
+  @$pb.TagNumber(1)
+  set value($core.double value) => $_setDouble(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  TitratableAcidityUnit get unit => $_getN(1);
+  @$pb.TagNumber(2)
+  set unit(TitratableAcidityUnit value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUnit() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUnit() => $_clearField(2);
+}
+
 /// Canonical unit: TIME_UNIT_SEC -- `value` is always in seconds.
 /// `unit` names the unit this measurement should be presented in and never
 /// describes `value`.

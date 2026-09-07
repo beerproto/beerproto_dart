@@ -189,6 +189,25 @@ class AcidityUnit extends $pb.ProtobufEnum {
   const AcidityUnit._(super.value, super.name);
 }
 
+class TitratableAcidityUnit extends $pb.ProtobufEnum {
+  static const TitratableAcidityUnit TITRATABLE_ACIDITY_UNIT_UNSPECIFIED = TitratableAcidityUnit._(0, _omitEnumNames ? '' : 'TITRATABLE_ACIDITY_UNIT_UNSPECIFIED');
+  /// Grams per litre as tartaric acid -- wine convention, and canonical here.
+  static const TitratableAcidityUnit TITRATABLE_ACIDITY_UNIT_G_PER_L_TARTARIC = TitratableAcidityUnit._(1, _omitEnumNames ? '' : 'TITRATABLE_ACIDITY_UNIT_G_PER_L_TARTARIC');
+  /// Grams per litre as malic acid -- cider and perry convention.
+  static const TitratableAcidityUnit TITRATABLE_ACIDITY_UNIT_G_PER_L_MALIC = TitratableAcidityUnit._(2, _omitEnumNames ? '' : 'TITRATABLE_ACIDITY_UNIT_G_PER_L_MALIC');
+
+  static const $core.List<TitratableAcidityUnit> values = <TitratableAcidityUnit> [
+    TITRATABLE_ACIDITY_UNIT_UNSPECIFIED,
+    TITRATABLE_ACIDITY_UNIT_G_PER_L_TARTARIC,
+    TITRATABLE_ACIDITY_UNIT_G_PER_L_MALIC,
+  ];
+
+  static final $core.List<TitratableAcidityUnit?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 2);
+  static TitratableAcidityUnit? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const TitratableAcidityUnit._(super.value, super.name);
+}
+
 class TimeUnit extends $pb.ProtobufEnum {
   static const TimeUnit TIME_UNIT_UNSPECIFIED = TimeUnit._(0, _omitEnumNames ? '' : 'TIME_UNIT_UNSPECIFIED');
   /// sec

@@ -142,6 +142,22 @@ final $typed_data.Uint8List acidityUnitDescriptor = $convert.base64Decode(
     'CgtBY2lkaXR5VW5pdBIcChhBQ0lESVRZX1VOSVRfVU5TUEVDSUZJRUQQABITCg9BQ0lESVRZX1'
     'VOSVRfUEgQAQ==');
 
+@$core.Deprecated('Use titratableAcidityUnitDescriptor instead')
+const TitratableAcidityUnit$json = {
+  '1': 'TitratableAcidityUnit',
+  '2': [
+    {'1': 'TITRATABLE_ACIDITY_UNIT_UNSPECIFIED', '2': 0},
+    {'1': 'TITRATABLE_ACIDITY_UNIT_G_PER_L_TARTARIC', '2': 1},
+    {'1': 'TITRATABLE_ACIDITY_UNIT_G_PER_L_MALIC', '2': 2},
+  ],
+};
+
+/// Descriptor for `TitratableAcidityUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List titratableAcidityUnitDescriptor = $convert.base64Decode(
+    'ChVUaXRyYXRhYmxlQWNpZGl0eVVuaXQSJwojVElUUkFUQUJMRV9BQ0lESVRZX1VOSVRfVU5TUE'
+    'VDSUZJRUQQABIsCihUSVRSQVRBQkxFX0FDSURJVFlfVU5JVF9HX1BFUl9MX1RBUlRBUklDEAES'
+    'KQolVElUUkFUQUJMRV9BQ0lESVRZX1VOSVRfR19QRVJfTF9NQUxJQxAC');
+
 @$core.Deprecated('Use timeUnitDescriptor instead')
 const TimeUnit$json = {
   '1': 'TimeUnit',
@@ -557,6 +573,20 @@ const AcidityType$json = {
 final $typed_data.Uint8List acidityTypeDescriptor = $convert.base64Decode(
     'CgtBY2lkaXR5VHlwZRIUCgV2YWx1ZRgBIAEoAVIFdmFsdWUSLQoEdW5pdBgCIAEoDjIZLmJlZX'
     'Jwcm90by52MS5BY2lkaXR5VW5pdFIEdW5pdA==');
+
+@$core.Deprecated('Use titratableAcidityTypeDescriptor instead')
+const TitratableAcidityType$json = {
+  '1': 'TitratableAcidityType',
+  '2': [
+    {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
+    {'1': 'unit', '3': 2, '4': 1, '5': 14, '6': '.beerproto.v1.TitratableAcidityUnit', '10': 'unit'},
+  ],
+};
+
+/// Descriptor for `TitratableAcidityType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List titratableAcidityTypeDescriptor = $convert.base64Decode(
+    'ChVUaXRyYXRhYmxlQWNpZGl0eVR5cGUSFAoFdmFsdWUYASABKAFSBXZhbHVlEjcKBHVuaXQYAi'
+    'ABKA4yIy5iZWVycHJvdG8udjEuVGl0cmF0YWJsZUFjaWRpdHlVbml0UgR1bml0');
 
 @$core.Deprecated('Use timeTypeDescriptor instead')
 const TimeType$json = {

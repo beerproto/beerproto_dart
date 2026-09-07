@@ -320,6 +320,7 @@ const Measurements$json = {
     {'1': 'beer_ph', '3': 24, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'beerPh'},
     {'1': 'boil_time', '3': 25, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '10': 'boilTime'},
     {'1': 'carbonation_temperature', '3': 26, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'carbonationTemperature'},
+    {'1': 'titratable_acidity', '3': 27, '4': 1, '5': 11, '6': '.beerproto.v1.TitratableAcidityType', '10': 'titratableAcidity'},
   ],
 };
 
@@ -356,7 +357,9 @@ final $typed_data.Uint8List measurementsDescriptor = $convert.base64Decode(
     'bWFzaFBoEjIKB2JlZXJfcGgYGCABKAsyGS5iZWVycHJvdG8udjEuQWNpZGl0eVR5cGVSBmJlZX'
     'JQaBIzCglib2lsX3RpbWUYGSABKAsyFi5iZWVycHJvdG8udjEuVGltZVR5cGVSCGJvaWxUaW1l'
     'ElYKF2NhcmJvbmF0aW9uX3RlbXBlcmF0dXJlGBogASgLMh0uYmVlcnByb3RvLnYxLlRlbXBlcm'
-    'F0dXJlVHlwZVIWY2FyYm9uYXRpb25UZW1wZXJhdHVyZQ==');
+    'F0dXJlVHlwZVIWY2FyYm9uYXRpb25UZW1wZXJhdHVyZRJSChJ0aXRyYXRhYmxlX2FjaWRpdHkY'
+    'GyABKAsyIy5iZWVycHJvdG8udjEuVGl0cmF0YWJsZUFjaWRpdHlUeXBlUhF0aXRyYXRhYmxlQW'
+    'NpZGl0eQ==');
 
 @$core.Deprecated('Use estimatesDescriptor instead')
 const Estimates$json = {

@@ -1162,6 +1162,7 @@ class Measurements extends $pb.GeneratedMessage {
     $2.AcidityType? beerPh,
     $2.TimeType? boilTime,
     $2.TemperatureType? carbonationTemperature,
+    $2.TitratableAcidityType? titratableAcidity,
   }) {
     final result = create();
     if (boilVolume != null) result.boilVolume = boilVolume;
@@ -1190,6 +1191,7 @@ class Measurements extends $pb.GeneratedMessage {
     if (beerPh != null) result.beerPh = beerPh;
     if (boilTime != null) result.boilTime = boilTime;
     if (carbonationTemperature != null) result.carbonationTemperature = carbonationTemperature;
+    if (titratableAcidity != null) result.titratableAcidity = titratableAcidity;
     return result;
   }
 
@@ -1225,6 +1227,7 @@ class Measurements extends $pb.GeneratedMessage {
     ..aOM<$2.AcidityType>(24, _omitFieldNames ? '' : 'beerPh', subBuilder: $2.AcidityType.create)
     ..aOM<$2.TimeType>(25, _omitFieldNames ? '' : 'boilTime', subBuilder: $2.TimeType.create)
     ..aOM<$2.TemperatureType>(26, _omitFieldNames ? '' : 'carbonationTemperature', subBuilder: $2.TemperatureType.create)
+    ..aOM<$2.TitratableAcidityType>(27, _omitFieldNames ? '' : 'titratableAcidity', subBuilder: $2.TitratableAcidityType.create)
     ..hasRequiredFields = false
   ;
 
@@ -1555,6 +1558,23 @@ class Measurements extends $pb.GeneratedMessage {
   void clearCarbonationTemperature() => $_clearField(26);
   @$pb.TagNumber(26)
   $2.TemperatureType ensureCarbonationTemperature() => $_ensure(25);
+
+  /// Titratable acidity, off a titration rather than a meter.
+  ///
+  /// The counterpart to beer_ph for anything fermenting juice. pH decides
+  /// whether sulfite can protect a cider; TA decides whether it is drinkable,
+  /// and the two are not derivable from one another. Expect it empty on beer,
+  /// where nothing is titrated.
+  @$pb.TagNumber(27)
+  $2.TitratableAcidityType get titratableAcidity => $_getN(26);
+  @$pb.TagNumber(27)
+  set titratableAcidity($2.TitratableAcidityType value) => $_setField(27, value);
+  @$pb.TagNumber(27)
+  $core.bool hasTitratableAcidity() => $_has(26);
+  @$pb.TagNumber(27)
+  void clearTitratableAcidity() => $_clearField(27);
+  @$pb.TagNumber(27)
+  $2.TitratableAcidityType ensureTitratableAcidity() => $_ensure(26);
 }
 
 /// The few predicted figures a recipe has nowhere to put.
