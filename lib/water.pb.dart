@@ -19,6 +19,8 @@ import 'timing.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
+export 'water.pbenum.dart';
+
 /// WaterBase provides unique properties to identify individual records of  brewing water
 class WaterBase extends $pb.GeneratedMessage {
   factory WaterBase({

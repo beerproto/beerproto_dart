@@ -14,6 +14,41 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use acidTypeDescriptor instead')
+const AcidType$json = {
+  '1': 'AcidType',
+  '2': [
+    {'1': 'ACID_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'ACID_TYPE_LACTIC_88', '2': 1},
+    {'1': 'ACID_TYPE_LACTIC_80', '2': 2},
+    {'1': 'ACID_TYPE_PHOSPHORIC_85', '2': 3},
+    {'1': 'ACID_TYPE_PHOSPHORIC_10', '2': 4},
+    {'1': 'ACID_TYPE_ACIDULATED_MALT', '2': 5},
+  ],
+};
+
+/// Descriptor for `AcidType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List acidTypeDescriptor = $convert.base64Decode(
+    'CghBY2lkVHlwZRIZChVBQ0lEX1RZUEVfVU5TUEVDSUZJRUQQABIXChNBQ0lEX1RZUEVfTEFDVE'
+    'lDXzg4EAESFwoTQUNJRF9UWVBFX0xBQ1RJQ184MBACEhsKF0FDSURfVFlQRV9QSE9TUEhPUklD'
+    'Xzg1EAMSGwoXQUNJRF9UWVBFX1BIT1NQSE9SSUNfMTAQBBIdChlBQ0lEX1RZUEVfQUNJRFVMQV'
+    'RFRF9NQUxUEAU=');
+
+@$core.Deprecated('Use mashPhModelDescriptor instead')
+const MashPhModel$json = {
+  '1': 'MashPhModel',
+  '2': [
+    {'1': 'MASH_PH_MODEL_UNSPECIFIED', '2': 0},
+    {'1': 'MASH_PH_MODEL_BUFFERED', '2': 1},
+    {'1': 'MASH_PH_MODEL_ALKALINITY', '2': 2},
+  ],
+};
+
+/// Descriptor for `MashPhModel`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List mashPhModelDescriptor = $convert.base64Decode(
+    'CgtNYXNoUGhNb2RlbBIdChlNQVNIX1BIX01PREVMX1VOU1BFQ0lGSUVEEAASGgoWTUFTSF9QSF'
+    '9NT0RFTF9CVUZGRVJFRBABEhwKGE1BU0hfUEhfTU9ERUxfQUxLQUxJTklUWRAC');
+
 @$core.Deprecated('Use waterBaseDescriptor instead')
 const WaterBase$json = {
   '1': 'WaterBase',
