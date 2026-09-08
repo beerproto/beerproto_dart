@@ -34,6 +34,7 @@ const VolumeUnit$json = {
     {'1': 'VOLUME_UNIT_IQT', '2': 13},
     {'1': 'VOLUME_UNIT_IGAL', '2': 14},
     {'1': 'VOLUME_UNIT_IBBL', '2': 15},
+    {'1': 'VOLUME_UNIT_HL', '2': 16},
   ],
 };
 
@@ -45,7 +46,7 @@ final $typed_data.Uint8List volumeUnitDescriptor = $convert.base64Decode(
     'ISCg5WT0xVTUVfVU5JVF9QVBAHEhIKDlZPTFVNRV9VTklUX1FUEAgSEwoPVk9MVU1FX1VOSVRf'
     'R0FMEAkSEwoPVk9MVU1FX1VOSVRfQkJMEAoSFQoRVk9MVU1FX1VOSVRfSUZMT1oQCxITCg9WT0'
     'xVTUVfVU5JVF9JUFQQDBITCg9WT0xVTUVfVU5JVF9JUVQQDRIUChBWT0xVTUVfVU5JVF9JR0FM'
-    'EA4SFAoQVk9MVU1FX1VOSVRfSUJCTBAP');
+    'EA4SFAoQVk9MVU1FX1VOSVRfSUJCTBAPEhIKDlZPTFVNRV9VTklUX0hMEBA=');
 
 @$core.Deprecated('Use massUnitDescriptor instead')
 const MassUnit$json = {
@@ -57,6 +58,9 @@ const MassUnit$json = {
     {'1': 'MASS_UNIT_KG', '2': 3},
     {'1': 'MASS_UNIT_LB', '2': 4},
     {'1': 'MASS_UNIT_OZ', '2': 5},
+    {'1': 'MASS_UNIT_TONNE', '2': 6},
+    {'1': 'MASS_UNIT_SHORT_TON', '2': 7},
+    {'1': 'MASS_UNIT_LONG_TON', '2': 8},
   ],
 };
 
@@ -64,7 +68,8 @@ const MassUnit$json = {
 final $typed_data.Uint8List massUnitDescriptor = $convert.base64Decode(
     'CghNYXNzVW5pdBIZChVNQVNTX1VOSVRfVU5TUEVDSUZJRUQQABIQCgxNQVNTX1VOSVRfTUcQAR'
     'IPCgtNQVNTX1VOSVRfRxACEhAKDE1BU1NfVU5JVF9LRxADEhAKDE1BU1NfVU5JVF9MQhAEEhAK'
-    'DE1BU1NfVU5JVF9PWhAF');
+    'DE1BU1NfVU5JVF9PWhAFEhMKD01BU1NfVU5JVF9UT05ORRAGEhcKE01BU1NfVU5JVF9TSE9SVF'
+    '9UT04QBxIWChJNQVNTX1VOSVRfTE9OR19UT04QCA==');
 
 @$core.Deprecated('Use cellCountUnitDescriptor instead')
 const CellCountUnit$json = {

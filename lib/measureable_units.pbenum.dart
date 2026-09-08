@@ -46,6 +46,10 @@ class VolumeUnit extends $pb.ProtobufEnum {
   static const VolumeUnit VOLUME_UNIT_IGAL = VolumeUnit._(14, _omitEnumNames ? '' : 'VOLUME_UNIT_IGAL');
   /// ibbl
   static const VolumeUnit VOLUME_UNIT_IBBL = VolumeUnit._(15, _omitEnumNames ? '' : 'VOLUME_UNIT_IBBL');
+  /// hl -- hectolitre (100 l). The unit commercial breweries quote batch and
+  /// vessel sizes in, and the rung above the litre on the metric magnitude
+  /// ladder.
+  static const VolumeUnit VOLUME_UNIT_HL = VolumeUnit._(16, _omitEnumNames ? '' : 'VOLUME_UNIT_HL');
 
   static const $core.List<VolumeUnit> values = <VolumeUnit> [
     VOLUME_UNIT_UNSPECIFIED,
@@ -64,9 +68,10 @@ class VolumeUnit extends $pb.ProtobufEnum {
     VOLUME_UNIT_IQT,
     VOLUME_UNIT_IGAL,
     VOLUME_UNIT_IBBL,
+    VOLUME_UNIT_HL,
   ];
 
-  static final $core.List<VolumeUnit?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 15);
+  static final $core.List<VolumeUnit?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 16);
   static VolumeUnit? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
 
   const VolumeUnit._(super.value, super.name);
@@ -84,6 +89,15 @@ class MassUnit extends $pb.ProtobufEnum {
   static const MassUnit MASS_UNIT_LB = MassUnit._(4, _omitEnumNames ? '' : 'MASS_UNIT_LB');
   /// oz
   static const MassUnit MASS_UNIT_OZ = MassUnit._(5, _omitEnumNames ? '' : 'MASS_UNIT_OZ');
+  /// t -- metric tonne (1000 kg), the rung above the kilogram on the metric
+  /// magnitude ladder.
+  static const MassUnit MASS_UNIT_TONNE = MassUnit._(6, _omitEnumNames ? '' : 'MASS_UNIT_TONNE');
+  /// ton -- US short ton (2000 lb), the rung above the pound for US customary.
+  static const MassUnit MASS_UNIT_SHORT_TON = MassUnit._(7, _omitEnumNames ? '' : 'MASS_UNIT_SHORT_TON');
+  /// long ton -- UK long ton (2240 lb), the rung above the pound for British
+  /// imperial. Distinct from MASS_UNIT_SHORT_TON: the two differ by 12%, so a
+  /// single "ton" would be ambiguous between the two customary systems.
+  static const MassUnit MASS_UNIT_LONG_TON = MassUnit._(8, _omitEnumNames ? '' : 'MASS_UNIT_LONG_TON');
 
   static const $core.List<MassUnit> values = <MassUnit> [
     MASS_UNIT_UNSPECIFIED,
@@ -92,9 +106,12 @@ class MassUnit extends $pb.ProtobufEnum {
     MASS_UNIT_KG,
     MASS_UNIT_LB,
     MASS_UNIT_OZ,
+    MASS_UNIT_TONNE,
+    MASS_UNIT_SHORT_TON,
+    MASS_UNIT_LONG_TON,
   ];
 
-  static final $core.List<MassUnit?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 5);
+  static final $core.List<MassUnit?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 8);
   static MassUnit? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
 
   const MassUnit._(super.value, super.name);
