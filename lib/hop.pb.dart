@@ -723,11 +723,15 @@ class HopInventoryType extends $pb.GeneratedMessage {
     $0.MassType? mass,
     $0.VolumeType? volume,
     $2.Timestamp? bestBefore,
+    $0.PercentType? alphaAcid,
+    $0.PercentType? percentLost,
   }) {
     final result = create();
     if (mass != null) result.mass = mass;
     if (volume != null) result.volume = volume;
     if (bestBefore != null) result.bestBefore = bestBefore;
+    if (alphaAcid != null) result.alphaAcid = alphaAcid;
+    if (percentLost != null) result.percentLost = percentLost;
     return result;
   }
 
@@ -746,6 +750,8 @@ class HopInventoryType extends $pb.GeneratedMessage {
     ..aOM<$0.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
     ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
     ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
+    ..aOM<$0.PercentType>(4, _omitFieldNames ? '' : 'alphaAcid', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(5, _omitFieldNames ? '' : 'percentLost', subBuilder: $0.PercentType.create)
     ..hasRequiredFields = false
   ;
 
@@ -802,6 +808,43 @@ class HopInventoryType extends $pb.GeneratedMessage {
   void clearBestBefore() => $_clearField(3);
   @$pb.TagNumber(3)
   $2.Timestamp ensureBestBefore() => $_ensure(2);
+
+  /// The measured alpha acid of *this stock* (percent), overriding the
+  /// variety's label figure on HopVarietyBase.
+  ///
+  /// Alpha acid is assayed per lot, and it drives IBU — so two packs of one
+  /// variety that assay differently make different beer, and a bitterness
+  /// computed from the label figure describes a hop the brewery does not have.
+  /// Unset means this stock assays as the variety says, which is the honest
+  /// default for a pack that arrived without a spec sheet. A zero is treated
+  /// the same way: no hop anyone brews with assays at no alpha.
+  ///
+  /// Mirrors FermentableInventoryType.lot_potential, which is the same idea for
+  /// a sack of malt.
+  @$pb.TagNumber(4)
+  $0.PercentType get alphaAcid => $_getN(3);
+  @$pb.TagNumber(4)
+  set alphaAcid($0.PercentType value) => $_setField(4, value);
+  @$pb.TagNumber(4)
+  $core.bool hasAlphaAcid() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAlphaAcid() => $_clearField(4);
+  @$pb.TagNumber(4)
+  $0.PercentType ensureAlphaAcid() => $_ensure(3);
+
+  /// The measured alpha loss of *this stock* over six months of storage
+  /// (percent), overriding the variety's figure. Falls back the same way as
+  /// alpha_acid.
+  @$pb.TagNumber(5)
+  $0.PercentType get percentLost => $_getN(4);
+  @$pb.TagNumber(5)
+  set percentLost($0.PercentType value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasPercentLost() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPercentLost() => $_clearField(5);
+  @$pb.TagNumber(5)
+  $0.PercentType ensurePercentLost() => $_ensure(4);
 }
 
 
