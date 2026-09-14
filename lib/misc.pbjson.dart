@@ -105,21 +105,40 @@ final $typed_data.Uint8List miscellaneousAdditionTypeDescriptor = $convert.base6
 const MiscellaneousInventoryType$json = {
   '1': 'MiscellaneousInventoryType',
   '2': [
-    {'1': 'mass', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
-    {'1': 'unit', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.UnitType', '9': 0, '10': 'unit'},
-    {'1': 'volume', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
-    {'1': 'best_before', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
+    {'1': 'lots', '3': 5, '4': 3, '5': 11, '6': '.beerproto.v1.MiscellaneousLotType', '10': 'lots'},
+  ],
+};
+
+/// Descriptor for `MiscellaneousInventoryType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List miscellaneousInventoryTypeDescriptor = $convert.base64Decode(
+    'ChpNaXNjZWxsYW5lb3VzSW52ZW50b3J5VHlwZRI2CgRsb3RzGAUgAygLMiIuYmVlcnByb3RvLn'
+    'YxLk1pc2NlbGxhbmVvdXNMb3RUeXBlUgRsb3Rz');
+
+@$core.Deprecated('Use miscellaneousLotTypeDescriptor instead')
+const MiscellaneousLotType$json = {
+  '1': 'MiscellaneousLotType',
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'lot_code', '3': 2, '4': 1, '5': 9, '10': 'lotCode'},
+    {'1': 'received_on', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'receivedOn'},
+    {'1': 'note', '3': 4, '4': 1, '5': 9, '10': 'note'},
+    {'1': 'mass', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
+    {'1': 'unit', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.UnitType', '9': 0, '10': 'unit'},
+    {'1': 'volume', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
+    {'1': 'best_before', '3': 8, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
   ],
   '8': [
     {'1': 'amount', '2': {}},
   ],
 };
 
-/// Descriptor for `MiscellaneousInventoryType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List miscellaneousInventoryTypeDescriptor = $convert.base64Decode(
-    'ChpNaXNjZWxsYW5lb3VzSW52ZW50b3J5VHlwZRIsCgRtYXNzGAEgASgLMhYuYmVlcnByb3RvLn'
-    'YxLk1hc3NUeXBlSABSBG1hc3MSLAoEdW5pdBgCIAEoCzIWLmJlZXJwcm90by52MS5Vbml0VHlw'
-    'ZUgAUgR1bml0EjIKBnZvbHVtZRgDIAEoCzIYLmJlZXJwcm90by52MS5Wb2x1bWVUeXBlSABSBn'
-    'ZvbHVtZRI7CgtiZXN0X2JlZm9yZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBS'
-    'CmJlc3RCZWZvcmVCDwoGYW1vdW50EgW6SAIIAQ==');
+/// Descriptor for `MiscellaneousLotType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List miscellaneousLotTypeDescriptor = $convert.base64Decode(
+    'ChRNaXNjZWxsYW5lb3VzTG90VHlwZRIOCgJpZBgBIAEoCVICaWQSGQoIbG90X2NvZGUYAiABKA'
+    'lSB2xvdENvZGUSOwoLcmVjZWl2ZWRfb24YAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0'
+    'YW1wUgpyZWNlaXZlZE9uEhIKBG5vdGUYBCABKAlSBG5vdGUSLAoEbWFzcxgFIAEoCzIWLmJlZX'
+    'Jwcm90by52MS5NYXNzVHlwZUgAUgRtYXNzEiwKBHVuaXQYBiABKAsyFi5iZWVycHJvdG8udjEu'
+    'VW5pdFR5cGVIAFIEdW5pdBIyCgZ2b2x1bWUYByABKAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVH'
+    'lwZUgAUgZ2b2x1bWUSOwoLYmVzdF9iZWZvcmUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt'
+    'ZXN0YW1wUgpiZXN0QmVmb3JlQg8KBmFtb3VudBIFukgCCAE=');
 

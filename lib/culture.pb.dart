@@ -539,26 +539,19 @@ class CultureAdditionType extends $pb.GeneratedMessage {
   $0.VolumeType ensureVolume() => $_ensure(9);
 }
 
+/// CultureInventoryType is the stock of a culture held on hand, as the lots it
+/// was received or harvested in.
+///
+/// It carries no total. How much is on hand is the sum of the lots' amounts, and
+/// the soonest best-before is derived from the lots the same way. Every lot of
+/// one culture is held in the same one of its pools, so the lots add up without
+/// conversion.
 class CultureInventoryType extends $pb.GeneratedMessage {
   factory CultureInventoryType({
-    $0.VolumeType? liquid,
-    $0.MassType? dry,
-    $0.VolumeType? slant,
-    $0.VolumeType? culture,
-    $core.String? manufactureDate,
-    $core.int? generation,
-    $2.Timestamp? bestBefore,
-    $0.UnitType? liquidPacks,
+    $core.Iterable<CultureLotType>? lots,
   }) {
     final result = create();
-    if (liquid != null) result.liquid = liquid;
-    if (dry != null) result.dry = dry;
-    if (slant != null) result.slant = slant;
-    if (culture != null) result.culture = culture;
-    if (manufactureDate != null) result.manufactureDate = manufactureDate;
-    if (generation != null) result.generation = generation;
-    if (bestBefore != null) result.bestBefore = bestBefore;
-    if (liquidPacks != null) result.liquidPacks = liquidPacks;
+    if (lots != null) result.lots.addAll(lots);
     return result;
   }
 
@@ -568,14 +561,7 @@ class CultureInventoryType extends $pb.GeneratedMessage {
   factory CultureInventoryType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CultureInventoryType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<$0.VolumeType>(1, _omitFieldNames ? '' : 'liquid', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.MassType>(2, _omitFieldNames ? '' : 'dry', subBuilder: $0.MassType.create)
-    ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'slant', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.VolumeType>(4, _omitFieldNames ? '' : 'culture', subBuilder: $0.VolumeType.create)
-    ..aOS(5, _omitFieldNames ? '' : 'manufactureDate')
-    ..a<$core.int>(6, _omitFieldNames ? '' : 'generation', $pb.PbFieldType.O3)
-    ..aOM<$2.Timestamp>(7, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
-    ..aOM<$0.UnitType>(8, _omitFieldNames ? '' : 'liquidPacks', subBuilder: $0.UnitType.create)
+    ..pc<CultureLotType>(9, _omitFieldNames ? '' : 'lots', $pb.PbFieldType.PM, subBuilder: CultureLotType.create)
     ..hasRequiredFields = false
   ;
 
@@ -596,99 +582,242 @@ class CultureInventoryType extends $pb.GeneratedMessage {
   static CultureInventoryType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CultureInventoryType>(create);
   static CultureInventoryType? _defaultInstance;
 
-  @$pb.TagNumber(1)
-  $0.VolumeType get liquid => $_getN(0);
-  @$pb.TagNumber(1)
-  set liquid($0.VolumeType value) => $_setField(1, value);
-  @$pb.TagNumber(1)
-  $core.bool hasLiquid() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearLiquid() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $0.VolumeType ensureLiquid() => $_ensure(0);
+  /// The individual receipts this stock is made of.
+  @$pb.TagNumber(9)
+  $pb.PbList<CultureLotType> get lots => $_getList(0);
+}
 
-  @$pb.TagNumber(2)
-  $0.MassType get dry => $_getN(1);
-  @$pb.TagNumber(2)
-  set dry($0.MassType value) => $_setField(2, value);
-  @$pb.TagNumber(2)
-  $core.bool hasDry() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearDry() => $_clearField(2);
-  @$pb.TagNumber(2)
-  $0.MassType ensureDry() => $_ensure(1);
+enum CultureLotType_Amount {
+  dry, 
+  liquid, 
+  liquidPacks, 
+  slant, 
+  culture, 
+  notSet
+}
 
+/// CultureLotType is one physical receipt of culture stock: a sachet, a vial, a
+/// harvested slurry.
+///
+/// Two harvests of one strain differ in their manufacture date and repitch
+/// generation, which is what their viability is estimated from, so each is its
+/// own lot.
+class CultureLotType extends $pb.GeneratedMessage {
+  factory CultureLotType({
+    $core.String? id,
+    $core.String? lotCode,
+    $2.Timestamp? receivedOn,
+    $core.String? note,
+    $0.MassType? dry,
+    $0.VolumeType? liquid,
+    $0.UnitType? liquidPacks,
+    $0.VolumeType? slant,
+    $0.VolumeType? culture,
+    $core.String? manufactureDate,
+    $core.int? generation,
+    $2.Timestamp? bestBefore,
+  }) {
+    final result = create();
+    if (id != null) result.id = id;
+    if (lotCode != null) result.lotCode = lotCode;
+    if (receivedOn != null) result.receivedOn = receivedOn;
+    if (note != null) result.note = note;
+    if (dry != null) result.dry = dry;
+    if (liquid != null) result.liquid = liquid;
+    if (liquidPacks != null) result.liquidPacks = liquidPacks;
+    if (slant != null) result.slant = slant;
+    if (culture != null) result.culture = culture;
+    if (manufactureDate != null) result.manufactureDate = manufactureDate;
+    if (generation != null) result.generation = generation;
+    if (bestBefore != null) result.bestBefore = bestBefore;
+    return result;
+  }
+
+  CultureLotType._();
+
+  factory CultureLotType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory CultureLotType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static const $core.Map<$core.int, CultureLotType_Amount> _CultureLotType_AmountByTag = {
+    5 : CultureLotType_Amount.dry,
+    6 : CultureLotType_Amount.liquid,
+    7 : CultureLotType_Amount.liquidPacks,
+    8 : CultureLotType_Amount.slant,
+    9 : CultureLotType_Amount.culture,
+    0 : CultureLotType_Amount.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CultureLotType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..oo(0, [5, 6, 7, 8, 9])
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'lotCode')
+    ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'receivedOn', subBuilder: $2.Timestamp.create)
+    ..aOS(4, _omitFieldNames ? '' : 'note')
+    ..aOM<$0.MassType>(5, _omitFieldNames ? '' : 'dry', subBuilder: $0.MassType.create)
+    ..aOM<$0.VolumeType>(6, _omitFieldNames ? '' : 'liquid', subBuilder: $0.VolumeType.create)
+    ..aOM<$0.UnitType>(7, _omitFieldNames ? '' : 'liquidPacks', subBuilder: $0.UnitType.create)
+    ..aOM<$0.VolumeType>(8, _omitFieldNames ? '' : 'slant', subBuilder: $0.VolumeType.create)
+    ..aOM<$0.VolumeType>(9, _omitFieldNames ? '' : 'culture', subBuilder: $0.VolumeType.create)
+    ..aOS(10, _omitFieldNames ? '' : 'manufactureDate')
+    ..a<$core.int>(11, _omitFieldNames ? '' : 'generation', $pb.PbFieldType.O3)
+    ..aOM<$2.Timestamp>(12, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CultureLotType clone() => CultureLotType()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  CultureLotType copyWith(void Function(CultureLotType) updates) => super.copyWith((message) => updates(message as CultureLotType)) as CultureLotType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CultureLotType create() => CultureLotType._();
+  @$core.override
+  CultureLotType createEmptyInstance() => create();
+  static $pb.PbList<CultureLotType> createRepeated() => $pb.PbList<CultureLotType>();
+  @$core.pragma('dart2js:noInline')
+  static CultureLotType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CultureLotType>(create);
+  static CultureLotType? _defaultInstance;
+
+  CultureLotType_Amount whichAmount() => _CultureLotType_AmountByTag[$_whichOneof(0)]!;
+  void clearAmount() => $_clearField($_whichOneof(0));
+
+  /// Stable identity, so a stock movement can name the lot it drew from.
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => $_clearField(1);
+
+  /// The supplier's own lot or batch number, as printed on the pack. Free text.
+  @$pb.TagNumber(2)
+  $core.String get lotCode => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set lotCode($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasLotCode() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLotCode() => $_clearField(2);
+
+  /// When this stock arrived.
   @$pb.TagNumber(3)
-  $0.VolumeType get slant => $_getN(2);
+  $2.Timestamp get receivedOn => $_getN(2);
   @$pb.TagNumber(3)
-  set slant($0.VolumeType value) => $_setField(3, value);
+  set receivedOn($2.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
-  $core.bool hasSlant() => $_has(2);
+  $core.bool hasReceivedOn() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSlant() => $_clearField(3);
+  void clearReceivedOn() => $_clearField(3);
   @$pb.TagNumber(3)
-  $0.VolumeType ensureSlant() => $_ensure(2);
+  $2.Timestamp ensureReceivedOn() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $0.VolumeType get culture => $_getN(3);
+  $core.String get note => $_getSZ(3);
   @$pb.TagNumber(4)
-  set culture($0.VolumeType value) => $_setField(4, value);
+  set note($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
-  $core.bool hasCulture() => $_has(3);
+  $core.bool hasNote() => $_has(3);
   @$pb.TagNumber(4)
-  void clearCulture() => $_clearField(4);
-  @$pb.TagNumber(4)
-  $0.VolumeType ensureCulture() => $_ensure(3);
+  void clearNote() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $0.MassType get dry => $_getN(4);
+  @$pb.TagNumber(5)
+  set dry($0.MassType value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasDry() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDry() => $_clearField(5);
+  @$pb.TagNumber(5)
+  $0.MassType ensureDry() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $0.VolumeType get liquid => $_getN(5);
+  @$pb.TagNumber(6)
+  set liquid($0.VolumeType value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasLiquid() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearLiquid() => $_clearField(6);
+  @$pb.TagNumber(6)
+  $0.VolumeType ensureLiquid() => $_ensure(5);
+
+  /// Liquid yeast counted in packs or vials rather than measured by volume.
+  /// Recipes commonly dose liquid yeast by pack, so this lets a pack-count
+  /// requirement be confirmed and deducted.
+  @$pb.TagNumber(7)
+  $0.UnitType get liquidPacks => $_getN(6);
+  @$pb.TagNumber(7)
+  set liquidPacks($0.UnitType value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasLiquidPacks() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearLiquidPacks() => $_clearField(7);
+  @$pb.TagNumber(7)
+  $0.UnitType ensureLiquidPacks() => $_ensure(6);
+
+  @$pb.TagNumber(8)
+  $0.VolumeType get slant => $_getN(7);
+  @$pb.TagNumber(8)
+  set slant($0.VolumeType value) => $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasSlant() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearSlant() => $_clearField(8);
+  @$pb.TagNumber(8)
+  $0.VolumeType ensureSlant() => $_ensure(7);
+
+  /// Harvested or propagated culture, such as a slurry.
+  @$pb.TagNumber(9)
+  $0.VolumeType get culture => $_getN(8);
+  @$pb.TagNumber(9)
+  set culture($0.VolumeType value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasCulture() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearCulture() => $_clearField(9);
+  @$pb.TagNumber(9)
+  $0.VolumeType ensureCulture() => $_ensure(8);
 
   /// Yeast production / harvest date as an ISO-8601 date string (e.g.
-  /// "2026-01-15"). Drives the stock's age-based viability estimate so freshness
+  /// "2026-01-15"). Drives the lot's age-based viability estimate so freshness
   /// is visible while browsing inventory, not only at pitch time.
-  @$pb.TagNumber(5)
-  $core.String get manufactureDate => $_getSZ(4);
-  @$pb.TagNumber(5)
-  set manufactureDate($core.String value) => $_setString(4, value);
-  @$pb.TagNumber(5)
-  $core.bool hasManufactureDate() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearManufactureDate() => $_clearField(5);
+  @$pb.TagNumber(10)
+  $core.String get manufactureDate => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set manufactureDate($core.String value) => $_setString(9, value);
+  @$pb.TagNumber(10)
+  $core.bool hasManufactureDate() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearManufactureDate() => $_clearField(10);
 
   /// Repitch generation for harvested/reused yeast: 0 = fresh from the
   /// manufacturer/lab, 1 = first repitch, etc. Compared against the library
   /// culture's max_reuse to warn when a slurry is past its recommended reuses.
-  @$pb.TagNumber(6)
-  $core.int get generation => $_getIZ(5);
-  @$pb.TagNumber(6)
-  set generation($core.int value) => $_setSignedInt32(5, value);
-  @$pb.TagNumber(6)
-  $core.bool hasGeneration() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearGeneration() => $_clearField(6);
+  @$pb.TagNumber(11)
+  $core.int get generation => $_getIZ(10);
+  @$pb.TagNumber(11)
+  set generation($core.int value) => $_setSignedInt32(10, value);
+  @$pb.TagNumber(11)
+  $core.bool hasGeneration() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearGeneration() => $_clearField(11);
 
-  /// Best-before / use-by date of this stock. Unset when unknown.
-  @$pb.TagNumber(7)
-  $2.Timestamp get bestBefore => $_getN(6);
-  @$pb.TagNumber(7)
-  set bestBefore($2.Timestamp value) => $_setField(7, value);
-  @$pb.TagNumber(7)
-  $core.bool hasBestBefore() => $_has(6);
-  @$pb.TagNumber(7)
-  void clearBestBefore() => $_clearField(7);
-  @$pb.TagNumber(7)
-  $2.Timestamp ensureBestBefore() => $_ensure(6);
-
-  /// Liquid yeast on hand counted in packs/vials (as opposed to the `liquid`
-  /// pool measured by volume). Recipes commonly dose liquid yeast by pack, so
-  /// this lets a pack-count requirement be confirmed and deducted.
-  @$pb.TagNumber(8)
-  $0.UnitType get liquidPacks => $_getN(7);
-  @$pb.TagNumber(8)
-  set liquidPacks($0.UnitType value) => $_setField(8, value);
-  @$pb.TagNumber(8)
-  $core.bool hasLiquidPacks() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearLiquidPacks() => $_clearField(8);
-  @$pb.TagNumber(8)
-  $0.UnitType ensureLiquidPacks() => $_ensure(7);
+  /// Best-before / use-by date of this lot. Unset when unknown.
+  @$pb.TagNumber(12)
+  $2.Timestamp get bestBefore => $_getN(11);
+  @$pb.TagNumber(12)
+  set bestBefore($2.Timestamp value) => $_setField(12, value);
+  @$pb.TagNumber(12)
+  $core.bool hasBestBefore() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearBestBefore() => $_clearField(12);
+  @$pb.TagNumber(12)
+  $2.Timestamp ensureBestBefore() => $_ensure(11);
 }
 
 /// Zymocide, also known as killer yeast properties, is common among wine yeast. There are also some ale and brett yeasts that are immune to some zymocidic properties, these are known as killer neutral

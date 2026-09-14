@@ -192,27 +192,49 @@ final $typed_data.Uint8List cultureAdditionTypeDescriptor = $convert.base64Decod
 const CultureInventoryType$json = {
   '1': 'CultureInventoryType',
   '2': [
-    {'1': 'liquid', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'liquid'},
-    {'1': 'dry', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '10': 'dry'},
-    {'1': 'slant', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'slant'},
-    {'1': 'culture', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'culture'},
-    {'1': 'manufacture_date', '3': 5, '4': 1, '5': 9, '10': 'manufactureDate'},
-    {'1': 'generation', '3': 6, '4': 1, '5': 5, '10': 'generation'},
-    {'1': 'best_before', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
-    {'1': 'liquid_packs', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.UnitType', '10': 'liquidPacks'},
+    {'1': 'lots', '3': 9, '4': 3, '5': 11, '6': '.beerproto.v1.CultureLotType', '10': 'lots'},
   ],
 };
 
 /// Descriptor for `CultureInventoryType`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List cultureInventoryTypeDescriptor = $convert.base64Decode(
-    'ChRDdWx0dXJlSW52ZW50b3J5VHlwZRIwCgZsaXF1aWQYASABKAsyGC5iZWVycHJvdG8udjEuVm'
-    '9sdW1lVHlwZVIGbGlxdWlkEigKA2RyeRgCIAEoCzIWLmJlZXJwcm90by52MS5NYXNzVHlwZVID'
-    'ZHJ5Ei4KBXNsYW50GAMgASgLMhguYmVlcnByb3RvLnYxLlZvbHVtZVR5cGVSBXNsYW50EjIKB2'
-    'N1bHR1cmUYBCABKAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVHlwZVIHY3VsdHVyZRIpChBtYW51'
-    'ZmFjdHVyZV9kYXRlGAUgASgJUg9tYW51ZmFjdHVyZURhdGUSHgoKZ2VuZXJhdGlvbhgGIAEoBV'
-    'IKZ2VuZXJhdGlvbhI7CgtiZXN0X2JlZm9yZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l'
-    'c3RhbXBSCmJlc3RCZWZvcmUSOQoMbGlxdWlkX3BhY2tzGAggASgLMhYuYmVlcnByb3RvLnYxLl'
-    'VuaXRUeXBlUgtsaXF1aWRQYWNrcw==');
+    'ChRDdWx0dXJlSW52ZW50b3J5VHlwZRIwCgRsb3RzGAkgAygLMhwuYmVlcnByb3RvLnYxLkN1bH'
+    'R1cmVMb3RUeXBlUgRsb3Rz');
+
+@$core.Deprecated('Use cultureLotTypeDescriptor instead')
+const CultureLotType$json = {
+  '1': 'CultureLotType',
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'lot_code', '3': 2, '4': 1, '5': 9, '10': 'lotCode'},
+    {'1': 'received_on', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'receivedOn'},
+    {'1': 'note', '3': 4, '4': 1, '5': 9, '10': 'note'},
+    {'1': 'dry', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'dry'},
+    {'1': 'liquid', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'liquid'},
+    {'1': 'liquid_packs', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.UnitType', '9': 0, '10': 'liquidPacks'},
+    {'1': 'slant', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'slant'},
+    {'1': 'culture', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'culture'},
+    {'1': 'manufacture_date', '3': 10, '4': 1, '5': 9, '10': 'manufactureDate'},
+    {'1': 'generation', '3': 11, '4': 1, '5': 5, '10': 'generation'},
+    {'1': 'best_before', '3': 12, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
+  ],
+  '8': [
+    {'1': 'amount', '2': {}},
+  ],
+};
+
+/// Descriptor for `CultureLotType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cultureLotTypeDescriptor = $convert.base64Decode(
+    'Cg5DdWx0dXJlTG90VHlwZRIOCgJpZBgBIAEoCVICaWQSGQoIbG90X2NvZGUYAiABKAlSB2xvdE'
+    'NvZGUSOwoLcmVjZWl2ZWRfb24YAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpy'
+    'ZWNlaXZlZE9uEhIKBG5vdGUYBCABKAlSBG5vdGUSKgoDZHJ5GAUgASgLMhYuYmVlcnByb3RvLn'
+    'YxLk1hc3NUeXBlSABSA2RyeRIyCgZsaXF1aWQYBiABKAsyGC5iZWVycHJvdG8udjEuVm9sdW1l'
+    'VHlwZUgAUgZsaXF1aWQSOwoMbGlxdWlkX3BhY2tzGAcgASgLMhYuYmVlcnByb3RvLnYxLlVuaX'
+    'RUeXBlSABSC2xpcXVpZFBhY2tzEjAKBXNsYW50GAggASgLMhguYmVlcnByb3RvLnYxLlZvbHVt'
+    'ZVR5cGVIAFIFc2xhbnQSNAoHY3VsdHVyZRgJIAEoCzIYLmJlZXJwcm90by52MS5Wb2x1bWVUeX'
+    'BlSABSB2N1bHR1cmUSKQoQbWFudWZhY3R1cmVfZGF0ZRgKIAEoCVIPbWFudWZhY3R1cmVEYXRl'
+    'Eh4KCmdlbmVyYXRpb24YCyABKAVSCmdlbmVyYXRpb24SOwoLYmVzdF9iZWZvcmUYDCABKAsyGi'
+    '5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpiZXN0QmVmb3JlQg8KBmFtb3VudBIFukgCCAE=');
 
 @$core.Deprecated('Use zymocideDescriptor instead')
 const Zymocide$json = {

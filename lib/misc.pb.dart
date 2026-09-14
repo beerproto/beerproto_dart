@@ -341,25 +341,19 @@ class MiscellaneousAdditionType extends $pb.GeneratedMessage {
   $1.VolumeType ensureVolume() => $_ensure(5);
 }
 
-enum MiscellaneousInventoryType_Amount {
-  mass, 
-  unit, 
-  volume, 
-  notSet
-}
-
+/// MiscellaneousInventoryType is the stock of a miscellaneous ingredient held on
+/// hand, as the lots it was received in.
+///
+/// It carries no total. How much is on hand is the sum of the lots' amounts, and
+/// the soonest best-before is derived from the lots the same way. Every lot of
+/// one ingredient is held in the same kind — by weight, by volume or as a count
+/// — so the lots add up without conversion.
 class MiscellaneousInventoryType extends $pb.GeneratedMessage {
   factory MiscellaneousInventoryType({
-    $1.MassType? mass,
-    $1.UnitType? unit,
-    $1.VolumeType? volume,
-    $2.Timestamp? bestBefore,
+    $core.Iterable<MiscellaneousLotType>? lots,
   }) {
     final result = create();
-    if (mass != null) result.mass = mass;
-    if (unit != null) result.unit = unit;
-    if (volume != null) result.volume = volume;
-    if (bestBefore != null) result.bestBefore = bestBefore;
+    if (lots != null) result.lots.addAll(lots);
     return result;
   }
 
@@ -368,18 +362,8 @@ class MiscellaneousInventoryType extends $pb.GeneratedMessage {
   factory MiscellaneousInventoryType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
   factory MiscellaneousInventoryType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static const $core.Map<$core.int, MiscellaneousInventoryType_Amount> _MiscellaneousInventoryType_AmountByTag = {
-    1 : MiscellaneousInventoryType_Amount.mass,
-    2 : MiscellaneousInventoryType_Amount.unit,
-    3 : MiscellaneousInventoryType_Amount.volume,
-    0 : MiscellaneousInventoryType_Amount.notSet
-  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MiscellaneousInventoryType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..oo(0, [1, 2, 3])
-    ..aOM<$1.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $1.MassType.create)
-    ..aOM<$1.UnitType>(2, _omitFieldNames ? '' : 'unit', subBuilder: $1.UnitType.create)
-    ..aOM<$1.VolumeType>(3, _omitFieldNames ? '' : 'volume', subBuilder: $1.VolumeType.create)
-    ..aOM<$2.Timestamp>(4, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
+    ..pc<MiscellaneousLotType>(5, _omitFieldNames ? '' : 'lots', $pb.PbFieldType.PM, subBuilder: MiscellaneousLotType.create)
     ..hasRequiredFields = false
   ;
 
@@ -400,53 +384,172 @@ class MiscellaneousInventoryType extends $pb.GeneratedMessage {
   static MiscellaneousInventoryType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MiscellaneousInventoryType>(create);
   static MiscellaneousInventoryType? _defaultInstance;
 
-  MiscellaneousInventoryType_Amount whichAmount() => _MiscellaneousInventoryType_AmountByTag[$_whichOneof(0)]!;
+  /// The individual receipts this stock is made of.
+  @$pb.TagNumber(5)
+  $pb.PbList<MiscellaneousLotType> get lots => $_getList(0);
+}
+
+enum MiscellaneousLotType_Amount {
+  mass, 
+  unit, 
+  volume, 
+  notSet
+}
+
+/// MiscellaneousLotType is one physical receipt of a miscellaneous ingredient: a
+/// tub, a bottle, a box of tablets.
+class MiscellaneousLotType extends $pb.GeneratedMessage {
+  factory MiscellaneousLotType({
+    $core.String? id,
+    $core.String? lotCode,
+    $2.Timestamp? receivedOn,
+    $core.String? note,
+    $1.MassType? mass,
+    $1.UnitType? unit,
+    $1.VolumeType? volume,
+    $2.Timestamp? bestBefore,
+  }) {
+    final result = create();
+    if (id != null) result.id = id;
+    if (lotCode != null) result.lotCode = lotCode;
+    if (receivedOn != null) result.receivedOn = receivedOn;
+    if (note != null) result.note = note;
+    if (mass != null) result.mass = mass;
+    if (unit != null) result.unit = unit;
+    if (volume != null) result.volume = volume;
+    if (bestBefore != null) result.bestBefore = bestBefore;
+    return result;
+  }
+
+  MiscellaneousLotType._();
+
+  factory MiscellaneousLotType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory MiscellaneousLotType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static const $core.Map<$core.int, MiscellaneousLotType_Amount> _MiscellaneousLotType_AmountByTag = {
+    5 : MiscellaneousLotType_Amount.mass,
+    6 : MiscellaneousLotType_Amount.unit,
+    7 : MiscellaneousLotType_Amount.volume,
+    0 : MiscellaneousLotType_Amount.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MiscellaneousLotType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..oo(0, [5, 6, 7])
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'lotCode')
+    ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'receivedOn', subBuilder: $2.Timestamp.create)
+    ..aOS(4, _omitFieldNames ? '' : 'note')
+    ..aOM<$1.MassType>(5, _omitFieldNames ? '' : 'mass', subBuilder: $1.MassType.create)
+    ..aOM<$1.UnitType>(6, _omitFieldNames ? '' : 'unit', subBuilder: $1.UnitType.create)
+    ..aOM<$1.VolumeType>(7, _omitFieldNames ? '' : 'volume', subBuilder: $1.VolumeType.create)
+    ..aOM<$2.Timestamp>(8, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MiscellaneousLotType clone() => MiscellaneousLotType()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  MiscellaneousLotType copyWith(void Function(MiscellaneousLotType) updates) => super.copyWith((message) => updates(message as MiscellaneousLotType)) as MiscellaneousLotType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static MiscellaneousLotType create() => MiscellaneousLotType._();
+  @$core.override
+  MiscellaneousLotType createEmptyInstance() => create();
+  static $pb.PbList<MiscellaneousLotType> createRepeated() => $pb.PbList<MiscellaneousLotType>();
+  @$core.pragma('dart2js:noInline')
+  static MiscellaneousLotType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MiscellaneousLotType>(create);
+  static MiscellaneousLotType? _defaultInstance;
+
+  MiscellaneousLotType_Amount whichAmount() => _MiscellaneousLotType_AmountByTag[$_whichOneof(0)]!;
   void clearAmount() => $_clearField($_whichOneof(0));
 
+  /// Stable identity, so a stock movement can name the lot it drew from.
   @$pb.TagNumber(1)
-  $1.MassType get mass => $_getN(0);
+  $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set mass($1.MassType value) => $_setField(1, value);
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasMass() => $_has(0);
+  $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMass() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $1.MassType ensureMass() => $_ensure(0);
+  void clearId() => $_clearField(1);
 
+  /// The supplier's own lot or batch number, as printed on the pack. Free text.
   @$pb.TagNumber(2)
-  $1.UnitType get unit => $_getN(1);
+  $core.String get lotCode => $_getSZ(1);
   @$pb.TagNumber(2)
-  set unit($1.UnitType value) => $_setField(2, value);
+  set lotCode($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
-  $core.bool hasUnit() => $_has(1);
+  $core.bool hasLotCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUnit() => $_clearField(2);
-  @$pb.TagNumber(2)
-  $1.UnitType ensureUnit() => $_ensure(1);
+  void clearLotCode() => $_clearField(2);
 
+  /// When this stock arrived.
   @$pb.TagNumber(3)
-  $1.VolumeType get volume => $_getN(2);
+  $2.Timestamp get receivedOn => $_getN(2);
   @$pb.TagNumber(3)
-  set volume($1.VolumeType value) => $_setField(3, value);
+  set receivedOn($2.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
-  $core.bool hasVolume() => $_has(2);
+  $core.bool hasReceivedOn() => $_has(2);
   @$pb.TagNumber(3)
-  void clearVolume() => $_clearField(3);
+  void clearReceivedOn() => $_clearField(3);
   @$pb.TagNumber(3)
-  $1.VolumeType ensureVolume() => $_ensure(2);
+  $2.Timestamp ensureReceivedOn() => $_ensure(2);
 
-  /// Best-before / use-by date of this stock. Unset when unknown.
   @$pb.TagNumber(4)
-  $2.Timestamp get bestBefore => $_getN(3);
+  $core.String get note => $_getSZ(3);
   @$pb.TagNumber(4)
-  set bestBefore($2.Timestamp value) => $_setField(4, value);
+  set note($core.String value) => $_setString(3, value);
   @$pb.TagNumber(4)
-  $core.bool hasBestBefore() => $_has(3);
+  $core.bool hasNote() => $_has(3);
   @$pb.TagNumber(4)
-  void clearBestBefore() => $_clearField(4);
-  @$pb.TagNumber(4)
-  $2.Timestamp ensureBestBefore() => $_ensure(3);
+  void clearNote() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $1.MassType get mass => $_getN(4);
+  @$pb.TagNumber(5)
+  set mass($1.MassType value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasMass() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearMass() => $_clearField(5);
+  @$pb.TagNumber(5)
+  $1.MassType ensureMass() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $1.UnitType get unit => $_getN(5);
+  @$pb.TagNumber(6)
+  set unit($1.UnitType value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasUnit() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearUnit() => $_clearField(6);
+  @$pb.TagNumber(6)
+  $1.UnitType ensureUnit() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  $1.VolumeType get volume => $_getN(6);
+  @$pb.TagNumber(7)
+  set volume($1.VolumeType value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasVolume() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearVolume() => $_clearField(7);
+  @$pb.TagNumber(7)
+  $1.VolumeType ensureVolume() => $_ensure(6);
+
+  /// Best-before / use-by date of this lot. Unset when unknown.
+  @$pb.TagNumber(8)
+  $2.Timestamp get bestBefore => $_getN(7);
+  @$pb.TagNumber(8)
+  set bestBefore($2.Timestamp value) => $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasBestBefore() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearBestBefore() => $_clearField(8);
+  @$pb.TagNumber(8)
+  $2.Timestamp ensureBestBefore() => $_ensure(7);
 }
 
 

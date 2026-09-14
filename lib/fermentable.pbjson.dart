@@ -219,25 +219,44 @@ final $typed_data.Uint8List yieldTypeDescriptor = $convert.base64Decode(
 const FermentableInventoryType$json = {
   '1': 'FermentableInventoryType',
   '2': [
-    {'1': 'mass', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
-    {'1': 'volume', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
-    {'1': 'best_before', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
-    {'1': 'lot_potential', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'lotPotential'},
-    {'1': 'crush', '3': 5, '4': 1, '5': 14, '6': '.beerproto.v1.GrainCrush', '10': 'crush'},
-    {'1': 'moisture', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'moisture'},
+    {'1': 'lots', '3': 7, '4': 3, '5': 11, '6': '.beerproto.v1.FermentableLotType', '10': 'lots'},
+  ],
+};
+
+/// Descriptor for `FermentableInventoryType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fermentableInventoryTypeDescriptor = $convert.base64Decode(
+    'ChhGZXJtZW50YWJsZUludmVudG9yeVR5cGUSNAoEbG90cxgHIAMoCzIgLmJlZXJwcm90by52MS'
+    '5GZXJtZW50YWJsZUxvdFR5cGVSBGxvdHM=');
+
+@$core.Deprecated('Use fermentableLotTypeDescriptor instead')
+const FermentableLotType$json = {
+  '1': 'FermentableLotType',
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'lot_code', '3': 2, '4': 1, '5': 9, '10': 'lotCode'},
+    {'1': 'received_on', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'receivedOn'},
+    {'1': 'note', '3': 4, '4': 1, '5': 9, '10': 'note'},
+    {'1': 'mass', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
+    {'1': 'volume', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
+    {'1': 'best_before', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
+    {'1': 'lot_potential', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'lotPotential'},
+    {'1': 'crush', '3': 9, '4': 1, '5': 14, '6': '.beerproto.v1.GrainCrush', '10': 'crush'},
+    {'1': 'moisture', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'moisture'},
   ],
   '8': [
     {'1': 'amount', '2': {}},
   ],
 };
 
-/// Descriptor for `FermentableInventoryType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List fermentableInventoryTypeDescriptor = $convert.base64Decode(
-    'ChhGZXJtZW50YWJsZUludmVudG9yeVR5cGUSLAoEbWFzcxgBIAEoCzIWLmJlZXJwcm90by52MS'
-    '5NYXNzVHlwZUgAUgRtYXNzEjIKBnZvbHVtZRgCIAEoCzIYLmJlZXJwcm90by52MS5Wb2x1bWVU'
-    'eXBlSABSBnZvbHVtZRI7CgtiZXN0X2JlZm9yZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW'
-    '1lc3RhbXBSCmJlc3RCZWZvcmUSPgoNbG90X3BvdGVudGlhbBgEIAEoCzIZLmJlZXJwcm90by52'
-    'MS5HcmF2aXR5VHlwZVIMbG90UG90ZW50aWFsEi4KBWNydXNoGAUgASgOMhguYmVlcnByb3RvLn'
-    'YxLkdyYWluQ3J1c2hSBWNydXNoEjUKCG1vaXN0dXJlGAYgASgLMhkuYmVlcnByb3RvLnYxLlBl'
-    'cmNlbnRUeXBlUghtb2lzdHVyZUIPCgZhbW91bnQSBbpIAggB');
+/// Descriptor for `FermentableLotType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fermentableLotTypeDescriptor = $convert.base64Decode(
+    'ChJGZXJtZW50YWJsZUxvdFR5cGUSDgoCaWQYASABKAlSAmlkEhkKCGxvdF9jb2RlGAIgASgJUg'
+    'dsb3RDb2RlEjsKC3JlY2VpdmVkX29uGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt'
+    'cFIKcmVjZWl2ZWRPbhISCgRub3RlGAQgASgJUgRub3RlEiwKBG1hc3MYBSABKAsyFi5iZWVycH'
+    'JvdG8udjEuTWFzc1R5cGVIAFIEbWFzcxIyCgZ2b2x1bWUYBiABKAsyGC5iZWVycHJvdG8udjEu'
+    'Vm9sdW1lVHlwZUgAUgZ2b2x1bWUSOwoLYmVzdF9iZWZvcmUYByABKAsyGi5nb29nbGUucHJvdG'
+    '9idWYuVGltZXN0YW1wUgpiZXN0QmVmb3JlEj4KDWxvdF9wb3RlbnRpYWwYCCABKAsyGS5iZWVy'
+    'cHJvdG8udjEuR3Jhdml0eVR5cGVSDGxvdFBvdGVudGlhbBIuCgVjcnVzaBgJIAEoDjIYLmJlZX'
+    'Jwcm90by52MS5HcmFpbkNydXNoUgVjcnVzaBI1Cghtb2lzdHVyZRgKIAEoCzIZLmJlZXJwcm90'
+    'by52MS5QZXJjZW50VHlwZVIIbW9pc3R1cmVCDwoGYW1vdW50EgW6SAIIAQ==');
 

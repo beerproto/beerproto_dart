@@ -212,23 +212,42 @@ final $typed_data.Uint8List oilContentTypeDescriptor = $convert.base64Decode(
 const HopInventoryType$json = {
   '1': 'HopInventoryType',
   '2': [
-    {'1': 'mass', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
-    {'1': 'volume', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
-    {'1': 'best_before', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
-    {'1': 'alpha_acid', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'alphaAcid'},
-    {'1': 'percent_lost', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'percentLost'},
+    {'1': 'lots', '3': 6, '4': 3, '5': 11, '6': '.beerproto.v1.HopLotType', '10': 'lots'},
+  ],
+};
+
+/// Descriptor for `HopInventoryType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List hopInventoryTypeDescriptor = $convert.base64Decode(
+    'ChBIb3BJbnZlbnRvcnlUeXBlEiwKBGxvdHMYBiADKAsyGC5iZWVycHJvdG8udjEuSG9wTG90VH'
+    'lwZVIEbG90cw==');
+
+@$core.Deprecated('Use hopLotTypeDescriptor instead')
+const HopLotType$json = {
+  '1': 'HopLotType',
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'lot_code', '3': 2, '4': 1, '5': 9, '10': 'lotCode'},
+    {'1': 'received_on', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'receivedOn'},
+    {'1': 'note', '3': 4, '4': 1, '5': 9, '10': 'note'},
+    {'1': 'mass', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
+    {'1': 'volume', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
+    {'1': 'best_before', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
+    {'1': 'alpha_acid', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'alphaAcid'},
+    {'1': 'percent_lost', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'percentLost'},
   ],
   '8': [
     {'1': 'amount', '2': {}},
   ],
 };
 
-/// Descriptor for `HopInventoryType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List hopInventoryTypeDescriptor = $convert.base64Decode(
-    'ChBIb3BJbnZlbnRvcnlUeXBlEiwKBG1hc3MYASABKAsyFi5iZWVycHJvdG8udjEuTWFzc1R5cG'
-    'VIAFIEbWFzcxIyCgZ2b2x1bWUYAiABKAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVHlwZUgAUgZ2'
-    'b2x1bWUSOwoLYmVzdF9iZWZvcmUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUg'
-    'piZXN0QmVmb3JlEjgKCmFscGhhX2FjaWQYBCABKAsyGS5iZWVycHJvdG8udjEuUGVyY2VudFR5'
-    'cGVSCWFscGhhQWNpZBI8CgxwZXJjZW50X2xvc3QYBSABKAsyGS5iZWVycHJvdG8udjEuUGVyY2'
-    'VudFR5cGVSC3BlcmNlbnRMb3N0Qg8KBmFtb3VudBIFukgCCAE=');
+/// Descriptor for `HopLotType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List hopLotTypeDescriptor = $convert.base64Decode(
+    'CgpIb3BMb3RUeXBlEg4KAmlkGAEgASgJUgJpZBIZCghsb3RfY29kZRgCIAEoCVIHbG90Q29kZR'
+    'I7CgtyZWNlaXZlZF9vbhgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCnJlY2Vp'
+    'dmVkT24SEgoEbm90ZRgEIAEoCVIEbm90ZRIsCgRtYXNzGAUgASgLMhYuYmVlcnByb3RvLnYxLk'
+    '1hc3NUeXBlSABSBG1hc3MSMgoGdm9sdW1lGAYgASgLMhguYmVlcnByb3RvLnYxLlZvbHVtZVR5'
+    'cGVIAFIGdm9sdW1lEjsKC2Jlc3RfYmVmb3JlGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbW'
+    'VzdGFtcFIKYmVzdEJlZm9yZRI4CgphbHBoYV9hY2lkGAggASgLMhkuYmVlcnByb3RvLnYxLlBl'
+    'cmNlbnRUeXBlUglhbHBoYUFjaWQSPAoMcGVyY2VudF9sb3N0GAkgASgLMhkuYmVlcnByb3RvLn'
+    'YxLlBlcmNlbnRUeXBlUgtwZXJjZW50TG9zdEIPCgZhbW91bnQSBbpIAggB');
 

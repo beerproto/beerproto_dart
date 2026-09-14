@@ -800,28 +800,21 @@ class YieldType extends $pb.GeneratedMessage {
   $0.GravityType ensurePotential() => $_ensure(3);
 }
 
-enum FermentableInventoryType_Amount {
-  mass, 
-  volume, 
-  notSet
-}
-
+/// FermentableInventoryType is the stock of a fermentable held on hand, as the
+/// lots it was received in.
+///
+/// It carries no total. How much is on hand is the sum of the lots' amounts, and
+/// the soonest best-before and the blended assay are derived from the lots the
+/// same way, so there is one figure to keep right rather than a total that can
+/// drift from the stock it describes. Every lot of one fermentable is held in
+/// the same kind — by weight or by volume — so the lots add up without
+/// conversion.
 class FermentableInventoryType extends $pb.GeneratedMessage {
   factory FermentableInventoryType({
-    $0.MassType? mass,
-    $0.VolumeType? volume,
-    $2.Timestamp? bestBefore,
-    $0.GravityType? lotPotential,
-    GrainCrush? crush,
-    $0.PercentType? moisture,
+    $core.Iterable<FermentableLotType>? lots,
   }) {
     final result = create();
-    if (mass != null) result.mass = mass;
-    if (volume != null) result.volume = volume;
-    if (bestBefore != null) result.bestBefore = bestBefore;
-    if (lotPotential != null) result.lotPotential = lotPotential;
-    if (crush != null) result.crush = crush;
-    if (moisture != null) result.moisture = moisture;
+    if (lots != null) result.lots.addAll(lots);
     return result;
   }
 
@@ -830,19 +823,8 @@ class FermentableInventoryType extends $pb.GeneratedMessage {
   factory FermentableInventoryType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
   factory FermentableInventoryType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static const $core.Map<$core.int, FermentableInventoryType_Amount> _FermentableInventoryType_AmountByTag = {
-    1 : FermentableInventoryType_Amount.mass,
-    2 : FermentableInventoryType_Amount.volume,
-    0 : FermentableInventoryType_Amount.notSet
-  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FermentableInventoryType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..oo(0, [1, 2])
-    ..aOM<$0.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
-    ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
-    ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
-    ..aOM<$0.GravityType>(4, _omitFieldNames ? '' : 'lotPotential', subBuilder: $0.GravityType.create)
-    ..e<GrainCrush>(5, _omitFieldNames ? '' : 'crush', $pb.PbFieldType.OE, defaultOrMaker: GrainCrush.GRAIN_CRUSH_UNSPECIFIED, valueOf: GrainCrush.valueOf, enumValues: GrainCrush.values)
-    ..aOM<$0.PercentType>(6, _omitFieldNames ? '' : 'moisture', subBuilder: $0.PercentType.create)
+    ..pc<FermentableLotType>(7, _omitFieldNames ? '' : 'lots', $pb.PbFieldType.PM, subBuilder: FermentableLotType.create)
     ..hasRequiredFields = false
   ;
 
@@ -863,78 +845,206 @@ class FermentableInventoryType extends $pb.GeneratedMessage {
   static FermentableInventoryType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FermentableInventoryType>(create);
   static FermentableInventoryType? _defaultInstance;
 
-  FermentableInventoryType_Amount whichAmount() => _FermentableInventoryType_AmountByTag[$_whichOneof(0)]!;
+  /// The individual receipts this stock is made of.
+  @$pb.TagNumber(7)
+  $pb.PbList<FermentableLotType> get lots => $_getList(0);
+}
+
+enum FermentableLotType_Amount {
+  mass, 
+  volume, 
+  notSet
+}
+
+/// FermentableLotType is one physical receipt of fermentable stock: a sack, a
+/// single order line.
+///
+/// Two sacks of one malt bought months apart are different stock — a different
+/// best-before, and an extract potential, crush and moisture measured on that
+/// sack — so each is its own lot rather than one blended figure.
+class FermentableLotType extends $pb.GeneratedMessage {
+  factory FermentableLotType({
+    $core.String? id,
+    $core.String? lotCode,
+    $2.Timestamp? receivedOn,
+    $core.String? note,
+    $0.MassType? mass,
+    $0.VolumeType? volume,
+    $2.Timestamp? bestBefore,
+    $0.GravityType? lotPotential,
+    GrainCrush? crush,
+    $0.PercentType? moisture,
+  }) {
+    final result = create();
+    if (id != null) result.id = id;
+    if (lotCode != null) result.lotCode = lotCode;
+    if (receivedOn != null) result.receivedOn = receivedOn;
+    if (note != null) result.note = note;
+    if (mass != null) result.mass = mass;
+    if (volume != null) result.volume = volume;
+    if (bestBefore != null) result.bestBefore = bestBefore;
+    if (lotPotential != null) result.lotPotential = lotPotential;
+    if (crush != null) result.crush = crush;
+    if (moisture != null) result.moisture = moisture;
+    return result;
+  }
+
+  FermentableLotType._();
+
+  factory FermentableLotType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory FermentableLotType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static const $core.Map<$core.int, FermentableLotType_Amount> _FermentableLotType_AmountByTag = {
+    5 : FermentableLotType_Amount.mass,
+    6 : FermentableLotType_Amount.volume,
+    0 : FermentableLotType_Amount.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FermentableLotType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..oo(0, [5, 6])
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'lotCode')
+    ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'receivedOn', subBuilder: $2.Timestamp.create)
+    ..aOS(4, _omitFieldNames ? '' : 'note')
+    ..aOM<$0.MassType>(5, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
+    ..aOM<$0.VolumeType>(6, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
+    ..aOM<$2.Timestamp>(7, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
+    ..aOM<$0.GravityType>(8, _omitFieldNames ? '' : 'lotPotential', subBuilder: $0.GravityType.create)
+    ..e<GrainCrush>(9, _omitFieldNames ? '' : 'crush', $pb.PbFieldType.OE, defaultOrMaker: GrainCrush.GRAIN_CRUSH_UNSPECIFIED, valueOf: GrainCrush.valueOf, enumValues: GrainCrush.values)
+    ..aOM<$0.PercentType>(10, _omitFieldNames ? '' : 'moisture', subBuilder: $0.PercentType.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FermentableLotType clone() => FermentableLotType()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  FermentableLotType copyWith(void Function(FermentableLotType) updates) => super.copyWith((message) => updates(message as FermentableLotType)) as FermentableLotType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static FermentableLotType create() => FermentableLotType._();
+  @$core.override
+  FermentableLotType createEmptyInstance() => create();
+  static $pb.PbList<FermentableLotType> createRepeated() => $pb.PbList<FermentableLotType>();
+  @$core.pragma('dart2js:noInline')
+  static FermentableLotType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FermentableLotType>(create);
+  static FermentableLotType? _defaultInstance;
+
+  FermentableLotType_Amount whichAmount() => _FermentableLotType_AmountByTag[$_whichOneof(0)]!;
   void clearAmount() => $_clearField($_whichOneof(0));
 
+  /// Stable identity, so a stock movement can name the lot it drew from.
   @$pb.TagNumber(1)
-  $0.MassType get mass => $_getN(0);
+  $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set mass($0.MassType value) => $_setField(1, value);
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasMass() => $_has(0);
+  $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMass() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $0.MassType ensureMass() => $_ensure(0);
+  void clearId() => $_clearField(1);
 
+  /// The supplier's own lot or batch number, as printed on the sack. Free text:
+  /// every maltster numbers differently.
   @$pb.TagNumber(2)
-  $0.VolumeType get volume => $_getN(1);
+  $core.String get lotCode => $_getSZ(1);
   @$pb.TagNumber(2)
-  set volume($0.VolumeType value) => $_setField(2, value);
+  set lotCode($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
-  $core.bool hasVolume() => $_has(1);
+  $core.bool hasLotCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearVolume() => $_clearField(2);
-  @$pb.TagNumber(2)
-  $0.VolumeType ensureVolume() => $_ensure(1);
+  void clearLotCode() => $_clearField(2);
 
-  /// Best-before / use-by date of this stock. Unset when unknown.
+  /// When this stock arrived.
   @$pb.TagNumber(3)
-  $2.Timestamp get bestBefore => $_getN(2);
+  $2.Timestamp get receivedOn => $_getN(2);
   @$pb.TagNumber(3)
-  set bestBefore($2.Timestamp value) => $_setField(3, value);
+  set receivedOn($2.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
-  $core.bool hasBestBefore() => $_has(2);
+  $core.bool hasReceivedOn() => $_has(2);
   @$pb.TagNumber(3)
-  void clearBestBefore() => $_clearField(3);
+  void clearReceivedOn() => $_clearField(3);
   @$pb.TagNumber(3)
-  $2.Timestamp ensureBestBefore() => $_ensure(2);
+  $2.Timestamp ensureReceivedOn() => $_ensure(2);
 
-  /// The measured extract potential of *this lot* (points per lb per gallon,
+  @$pb.TagNumber(4)
+  $core.String get note => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set note($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasNote() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearNote() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $0.MassType get mass => $_getN(4);
+  @$pb.TagNumber(5)
+  set mass($0.MassType value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasMass() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearMass() => $_clearField(5);
+  @$pb.TagNumber(5)
+  $0.MassType ensureMass() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $0.VolumeType get volume => $_getN(5);
+  @$pb.TagNumber(6)
+  set volume($0.VolumeType value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasVolume() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearVolume() => $_clearField(6);
+  @$pb.TagNumber(6)
+  $0.VolumeType ensureVolume() => $_ensure(5);
+
+  /// Best-before / use-by date of this lot. Unset when unknown.
+  @$pb.TagNumber(7)
+  $2.Timestamp get bestBefore => $_getN(6);
+  @$pb.TagNumber(7)
+  set bestBefore($2.Timestamp value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasBestBefore() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearBestBefore() => $_clearField(7);
+  @$pb.TagNumber(7)
+  $2.Timestamp ensureBestBefore() => $_ensure(6);
+
+  /// The measured extract potential of this lot (points per lb per gallon,
   /// e.g. 1.037). When set, overrides the library nominal yield for OG so a
   /// sack that assays differently from the maltster's spec is accounted for.
-  @$pb.TagNumber(4)
-  $0.GravityType get lotPotential => $_getN(3);
-  @$pb.TagNumber(4)
-  set lotPotential($0.GravityType value) => $_setField(4, value);
-  @$pb.TagNumber(4)
-  $core.bool hasLotPotential() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearLotPotential() => $_clearField(4);
-  @$pb.TagNumber(4)
-  $0.GravityType ensureLotPotential() => $_ensure(3);
+  @$pb.TagNumber(8)
+  $0.GravityType get lotPotential => $_getN(7);
+  @$pb.TagNumber(8)
+  set lotPotential($0.GravityType value) => $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasLotPotential() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearLotPotential() => $_clearField(8);
+  @$pb.TagNumber(8)
+  $0.GravityType ensureLotPotential() => $_ensure(7);
 
   /// How this lot is milled — affects staling rate and mash efficiency.
-  @$pb.TagNumber(5)
-  GrainCrush get crush => $_getN(4);
-  @$pb.TagNumber(5)
-  set crush(GrainCrush value) => $_setField(5, value);
-  @$pb.TagNumber(5)
-  $core.bool hasCrush() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearCrush() => $_clearField(5);
+  @$pb.TagNumber(9)
+  GrainCrush get crush => $_getN(8);
+  @$pb.TagNumber(9)
+  set crush(GrainCrush value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasCrush() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearCrush() => $_clearField(9);
 
   /// Measured moisture content of this lot (percent). Informational.
-  @$pb.TagNumber(6)
-  $0.PercentType get moisture => $_getN(5);
-  @$pb.TagNumber(6)
-  set moisture($0.PercentType value) => $_setField(6, value);
-  @$pb.TagNumber(6)
-  $core.bool hasMoisture() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearMoisture() => $_clearField(6);
-  @$pb.TagNumber(6)
-  $0.PercentType ensureMoisture() => $_ensure(5);
+  @$pb.TagNumber(10)
+  $0.PercentType get moisture => $_getN(9);
+  @$pb.TagNumber(10)
+  set moisture($0.PercentType value) => $_setField(10, value);
+  @$pb.TagNumber(10)
+  $core.bool hasMoisture() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearMoisture() => $_clearField(10);
+  @$pb.TagNumber(10)
+  $0.PercentType ensureMoisture() => $_ensure(9);
 }
 
 

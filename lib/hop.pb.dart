@@ -712,26 +712,19 @@ class OilContentType extends $pb.GeneratedMessage {
   $0.PercentType ensurePinene() => $_ensure(13);
 }
 
-enum HopInventoryType_Amount {
-  mass, 
-  volume, 
-  notSet
-}
-
+/// HopInventoryType is the stock of a hop variety held on hand, as the lots it
+/// was received in.
+///
+/// It carries no total. How much is on hand is the sum of the lots' amounts, and
+/// the soonest best-before and the blended alpha are derived from the lots the
+/// same way. Every lot of one variety is held in the same kind — by weight or by
+/// volume — so the lots add up without conversion.
 class HopInventoryType extends $pb.GeneratedMessage {
   factory HopInventoryType({
-    $0.MassType? mass,
-    $0.VolumeType? volume,
-    $2.Timestamp? bestBefore,
-    $0.PercentType? alphaAcid,
-    $0.PercentType? percentLost,
+    $core.Iterable<HopLotType>? lots,
   }) {
     final result = create();
-    if (mass != null) result.mass = mass;
-    if (volume != null) result.volume = volume;
-    if (bestBefore != null) result.bestBefore = bestBefore;
-    if (alphaAcid != null) result.alphaAcid = alphaAcid;
-    if (percentLost != null) result.percentLost = percentLost;
+    if (lots != null) result.lots.addAll(lots);
     return result;
   }
 
@@ -740,18 +733,8 @@ class HopInventoryType extends $pb.GeneratedMessage {
   factory HopInventoryType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
   factory HopInventoryType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
 
-  static const $core.Map<$core.int, HopInventoryType_Amount> _HopInventoryType_AmountByTag = {
-    1 : HopInventoryType_Amount.mass,
-    2 : HopInventoryType_Amount.volume,
-    0 : HopInventoryType_Amount.notSet
-  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HopInventoryType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..oo(0, [1, 2])
-    ..aOM<$0.MassType>(1, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
-    ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
-    ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
-    ..aOM<$0.PercentType>(4, _omitFieldNames ? '' : 'alphaAcid', subBuilder: $0.PercentType.create)
-    ..aOM<$0.PercentType>(5, _omitFieldNames ? '' : 'percentLost', subBuilder: $0.PercentType.create)
+    ..pc<HopLotType>(6, _omitFieldNames ? '' : 'lots', $pb.PbFieldType.PM, subBuilder: HopLotType.create)
     ..hasRequiredFields = false
   ;
 
@@ -772,79 +755,201 @@ class HopInventoryType extends $pb.GeneratedMessage {
   static HopInventoryType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HopInventoryType>(create);
   static HopInventoryType? _defaultInstance;
 
-  HopInventoryType_Amount whichAmount() => _HopInventoryType_AmountByTag[$_whichOneof(0)]!;
+  /// The individual receipts this stock is made of.
+  @$pb.TagNumber(6)
+  $pb.PbList<HopLotType> get lots => $_getList(0);
+}
+
+enum HopLotType_Amount {
+  mass, 
+  volume, 
+  notSet
+}
+
+/// HopLotType is one physical receipt of hop stock: a vacuum pack, a single
+/// order line.
+///
+/// Alpha acid is assayed per lot and drives IBU, so two packs of one variety that
+/// assay differently make different beer. Keeping them as separate lots is what
+/// stops a bitterness figure being computed for a blended hop the brewery does
+/// not have.
+class HopLotType extends $pb.GeneratedMessage {
+  factory HopLotType({
+    $core.String? id,
+    $core.String? lotCode,
+    $2.Timestamp? receivedOn,
+    $core.String? note,
+    $0.MassType? mass,
+    $0.VolumeType? volume,
+    $2.Timestamp? bestBefore,
+    $0.PercentType? alphaAcid,
+    $0.PercentType? percentLost,
+  }) {
+    final result = create();
+    if (id != null) result.id = id;
+    if (lotCode != null) result.lotCode = lotCode;
+    if (receivedOn != null) result.receivedOn = receivedOn;
+    if (note != null) result.note = note;
+    if (mass != null) result.mass = mass;
+    if (volume != null) result.volume = volume;
+    if (bestBefore != null) result.bestBefore = bestBefore;
+    if (alphaAcid != null) result.alphaAcid = alphaAcid;
+    if (percentLost != null) result.percentLost = percentLost;
+    return result;
+  }
+
+  HopLotType._();
+
+  factory HopLotType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
+  factory HopLotType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+
+  static const $core.Map<$core.int, HopLotType_Amount> _HopLotType_AmountByTag = {
+    5 : HopLotType_Amount.mass,
+    6 : HopLotType_Amount.volume,
+    0 : HopLotType_Amount.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'HopLotType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+    ..oo(0, [5, 6])
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'lotCode')
+    ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'receivedOn', subBuilder: $2.Timestamp.create)
+    ..aOS(4, _omitFieldNames ? '' : 'note')
+    ..aOM<$0.MassType>(5, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
+    ..aOM<$0.VolumeType>(6, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
+    ..aOM<$2.Timestamp>(7, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
+    ..aOM<$0.PercentType>(8, _omitFieldNames ? '' : 'alphaAcid', subBuilder: $0.PercentType.create)
+    ..aOM<$0.PercentType>(9, _omitFieldNames ? '' : 'percentLost', subBuilder: $0.PercentType.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  HopLotType clone() => HopLotType()..mergeFromMessage(this);
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  HopLotType copyWith(void Function(HopLotType) updates) => super.copyWith((message) => updates(message as HopLotType)) as HopLotType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static HopLotType create() => HopLotType._();
+  @$core.override
+  HopLotType createEmptyInstance() => create();
+  static $pb.PbList<HopLotType> createRepeated() => $pb.PbList<HopLotType>();
+  @$core.pragma('dart2js:noInline')
+  static HopLotType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HopLotType>(create);
+  static HopLotType? _defaultInstance;
+
+  HopLotType_Amount whichAmount() => _HopLotType_AmountByTag[$_whichOneof(0)]!;
   void clearAmount() => $_clearField($_whichOneof(0));
 
+  /// Stable identity, so a stock movement can name the lot it drew from.
   @$pb.TagNumber(1)
-  $0.MassType get mass => $_getN(0);
+  $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
-  set mass($0.MassType value) => $_setField(1, value);
+  set id($core.String value) => $_setString(0, value);
   @$pb.TagNumber(1)
-  $core.bool hasMass() => $_has(0);
+  $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMass() => $_clearField(1);
-  @$pb.TagNumber(1)
-  $0.MassType ensureMass() => $_ensure(0);
+  void clearId() => $_clearField(1);
 
+  /// The supplier's own lot or batch number, as printed on the pack. Free text:
+  /// every hop merchant numbers differently.
   @$pb.TagNumber(2)
-  $0.VolumeType get volume => $_getN(1);
+  $core.String get lotCode => $_getSZ(1);
   @$pb.TagNumber(2)
-  set volume($0.VolumeType value) => $_setField(2, value);
+  set lotCode($core.String value) => $_setString(1, value);
   @$pb.TagNumber(2)
-  $core.bool hasVolume() => $_has(1);
+  $core.bool hasLotCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearVolume() => $_clearField(2);
-  @$pb.TagNumber(2)
-  $0.VolumeType ensureVolume() => $_ensure(1);
+  void clearLotCode() => $_clearField(2);
 
-  /// Best-before / use-by date of this stock. Unset when unknown.
+  /// When this stock arrived.
   @$pb.TagNumber(3)
-  $2.Timestamp get bestBefore => $_getN(2);
+  $2.Timestamp get receivedOn => $_getN(2);
   @$pb.TagNumber(3)
-  set bestBefore($2.Timestamp value) => $_setField(3, value);
+  set receivedOn($2.Timestamp value) => $_setField(3, value);
   @$pb.TagNumber(3)
-  $core.bool hasBestBefore() => $_has(2);
+  $core.bool hasReceivedOn() => $_has(2);
   @$pb.TagNumber(3)
-  void clearBestBefore() => $_clearField(3);
+  void clearReceivedOn() => $_clearField(3);
   @$pb.TagNumber(3)
-  $2.Timestamp ensureBestBefore() => $_ensure(2);
+  $2.Timestamp ensureReceivedOn() => $_ensure(2);
 
-  /// The measured alpha acid of *this stock* (percent), overriding the
-  /// variety's label figure on HopVarietyBase.
+  @$pb.TagNumber(4)
+  $core.String get note => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set note($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasNote() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearNote() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $0.MassType get mass => $_getN(4);
+  @$pb.TagNumber(5)
+  set mass($0.MassType value) => $_setField(5, value);
+  @$pb.TagNumber(5)
+  $core.bool hasMass() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearMass() => $_clearField(5);
+  @$pb.TagNumber(5)
+  $0.MassType ensureMass() => $_ensure(4);
+
+  @$pb.TagNumber(6)
+  $0.VolumeType get volume => $_getN(5);
+  @$pb.TagNumber(6)
+  set volume($0.VolumeType value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasVolume() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearVolume() => $_clearField(6);
+  @$pb.TagNumber(6)
+  $0.VolumeType ensureVolume() => $_ensure(5);
+
+  /// Best-before / use-by date of this lot. Unset when unknown.
+  @$pb.TagNumber(7)
+  $2.Timestamp get bestBefore => $_getN(6);
+  @$pb.TagNumber(7)
+  set bestBefore($2.Timestamp value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasBestBefore() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearBestBefore() => $_clearField(7);
+  @$pb.TagNumber(7)
+  $2.Timestamp ensureBestBefore() => $_ensure(6);
+
+  /// The measured alpha acid of this lot (percent), overriding the variety's
+  /// label figure on HopVarietyBase.
   ///
-  /// Alpha acid is assayed per lot, and it drives IBU — so two packs of one
-  /// variety that assay differently make different beer, and a bitterness
-  /// computed from the label figure describes a hop the brewery does not have.
-  /// Unset means this stock assays as the variety says, which is the honest
-  /// default for a pack that arrived without a spec sheet. A zero is treated
-  /// the same way: no hop anyone brews with assays at no alpha.
+  /// Unset means this lot assays as the variety says, which is the honest
+  /// default for a pack that arrived without a spec sheet. A zero is treated the
+  /// same way: no hop anyone brews with assays at no alpha.
   ///
-  /// Mirrors FermentableInventoryType.lot_potential, which is the same idea for
-  /// a sack of malt.
-  @$pb.TagNumber(4)
-  $0.PercentType get alphaAcid => $_getN(3);
-  @$pb.TagNumber(4)
-  set alphaAcid($0.PercentType value) => $_setField(4, value);
-  @$pb.TagNumber(4)
-  $core.bool hasAlphaAcid() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearAlphaAcid() => $_clearField(4);
-  @$pb.TagNumber(4)
-  $0.PercentType ensureAlphaAcid() => $_ensure(3);
+  /// Mirrors FermentableLotType.lot_potential, which is the same idea for a sack
+  /// of malt.
+  @$pb.TagNumber(8)
+  $0.PercentType get alphaAcid => $_getN(7);
+  @$pb.TagNumber(8)
+  set alphaAcid($0.PercentType value) => $_setField(8, value);
+  @$pb.TagNumber(8)
+  $core.bool hasAlphaAcid() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearAlphaAcid() => $_clearField(8);
+  @$pb.TagNumber(8)
+  $0.PercentType ensureAlphaAcid() => $_ensure(7);
 
-  /// The measured alpha loss of *this stock* over six months of storage
-  /// (percent), overriding the variety's figure. Falls back the same way as
-  /// alpha_acid.
-  @$pb.TagNumber(5)
-  $0.PercentType get percentLost => $_getN(4);
-  @$pb.TagNumber(5)
-  set percentLost($0.PercentType value) => $_setField(5, value);
-  @$pb.TagNumber(5)
-  $core.bool hasPercentLost() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearPercentLost() => $_clearField(5);
-  @$pb.TagNumber(5)
-  $0.PercentType ensurePercentLost() => $_ensure(4);
+  /// The measured alpha loss of this lot over six months of storage (percent),
+  /// overriding the variety's figure. Falls back the same way as alpha_acid.
+  @$pb.TagNumber(9)
+  $0.PercentType get percentLost => $_getN(8);
+  @$pb.TagNumber(9)
+  set percentLost($0.PercentType value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasPercentLost() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearPercentLost() => $_clearField(9);
+  @$pb.TagNumber(9)
+  $0.PercentType ensurePercentLost() => $_ensure(8);
 }
 
 
