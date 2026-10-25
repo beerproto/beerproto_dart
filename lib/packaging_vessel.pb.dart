@@ -14,6 +14,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'google/protobuf/timestamp.pb.dart' as $2;
 import 'measureable_units.pb.dart' as $0;
 import 'packaging_graphic.pb.dart' as $1;
 import 'packaging_vessel.pbenum.dart';
@@ -140,6 +141,7 @@ class PackagingVesselType extends $pb.GeneratedMessage {
     $0.CarbonationType? targetCarbonation,
     $core.String? notes,
     CarbonationStep? carbonationStep,
+    $2.Timestamp? bestBefore,
   }) {
     final result = create();
     if (base != null) result.base = base;
@@ -155,6 +157,7 @@ class PackagingVesselType extends $pb.GeneratedMessage {
     if (targetCarbonation != null) result.targetCarbonation = targetCarbonation;
     if (notes != null) result.notes = notes;
     if (carbonationStep != null) result.carbonationStep = carbonationStep;
+    if (bestBefore != null) result.bestBefore = bestBefore;
     return result;
   }
 
@@ -177,6 +180,7 @@ class PackagingVesselType extends $pb.GeneratedMessage {
     ..aOM<$0.CarbonationType>(11, _omitFieldNames ? '' : 'targetCarbonation', subBuilder: $0.CarbonationType.create)
     ..aOS(12, _omitFieldNames ? '' : 'notes')
     ..e<CarbonationStep>(13, _omitFieldNames ? '' : 'carbonationStep', $pb.PbFieldType.OE, defaultOrMaker: CarbonationStep.CARBONATION_STEP_UNSPECIFIED, valueOf: CarbonationStep.valueOf, enumValues: CarbonationStep.values)
+    ..aOM<$2.Timestamp>(14, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -333,6 +337,19 @@ class PackagingVesselType extends $pb.GeneratedMessage {
   $core.bool hasCarbonationStep() => $_has(12);
   @$pb.TagNumber(13)
   void clearCarbonationStep() => $_clearField(13);
+
+  /// When this vessel's beer is best drunk by. Unset when the brewer gave no
+  /// date. As each inventory lot's best_before.
+  @$pb.TagNumber(14)
+  $2.Timestamp get bestBefore => $_getN(13);
+  @$pb.TagNumber(14)
+  set bestBefore($2.Timestamp value) => $_setField(14, value);
+  @$pb.TagNumber(14)
+  $core.bool hasBestBefore() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearBestBefore() => $_clearField(14);
+  @$pb.TagNumber(14)
+  $2.Timestamp ensureBestBefore() => $_ensure(13);
 }
 
 

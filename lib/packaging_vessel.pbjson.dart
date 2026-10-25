@@ -96,6 +96,7 @@ const PackagingVesselType$json = {
     {'1': 'target_carbonation', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.CarbonationType', '10': 'targetCarbonation'},
     {'1': 'notes', '3': 12, '4': 1, '5': 9, '10': 'notes'},
     {'1': 'carbonation_step', '3': 13, '4': 1, '5': 14, '6': '.beerproto.v1.CarbonationStep', '10': 'carbonationStep'},
+    {'1': 'best_before', '3': 14, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
   ],
 };
 
@@ -114,5 +115,6 @@ final $typed_data.Uint8List packagingVesselTypeDescriptor = $convert.base64Decod
     'ZW5kVGVtcGVyYXR1cmUSTAoSdGFyZ2V0X2NhcmJvbmF0aW9uGAsgASgLMh0uYmVlcnByb3RvLn'
     'YxLkNhcmJvbmF0aW9uVHlwZVIRdGFyZ2V0Q2FyYm9uYXRpb24SFAoFbm90ZXMYDCABKAlSBW5v'
     'dGVzEkgKEGNhcmJvbmF0aW9uX3N0ZXAYDSABKA4yHS5iZWVycHJvdG8udjEuQ2FyYm9uYXRpb2'
-    '5TdGVwUg9jYXJib25hdGlvblN0ZXA=');
+    '5TdGVwUg9jYXJib25hdGlvblN0ZXASOwoLYmVzdF9iZWZvcmUYDiABKAsyGi5nb29nbGUucHJv'
+    'dG9idWYuVGltZXN0YW1wUgpiZXN0QmVmb3Jl');
 
