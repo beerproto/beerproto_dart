@@ -242,6 +242,7 @@ const FermentableLotType$json = {
     {'1': 'lot_potential', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'lotPotential'},
     {'1': 'crush', '3': 9, '4': 1, '5': 14, '6': '.beerproto.v1.GrainCrush', '10': 'crush'},
     {'1': 'moisture', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'moisture'},
+    {'1': 'color', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.ColorType', '10': 'color'},
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -258,5 +259,6 @@ final $typed_data.Uint8List fermentableLotTypeDescriptor = $convert.base64Decode
     '9idWYuVGltZXN0YW1wUgpiZXN0QmVmb3JlEj4KDWxvdF9wb3RlbnRpYWwYCCABKAsyGS5iZWVy'
     'cHJvdG8udjEuR3Jhdml0eVR5cGVSDGxvdFBvdGVudGlhbBIuCgVjcnVzaBgJIAEoDjIYLmJlZX'
     'Jwcm90by52MS5HcmFpbkNydXNoUgVjcnVzaBI1Cghtb2lzdHVyZRgKIAEoCzIZLmJlZXJwcm90'
-    'by52MS5QZXJjZW50VHlwZVIIbW9pc3R1cmVCDwoGYW1vdW50EgW6SAIIAQ==');
+    'by52MS5QZXJjZW50VHlwZVIIbW9pc3R1cmUSLQoFY29sb3IYCyABKAsyFy5iZWVycHJvdG8udj'
+    'EuQ29sb3JUeXBlUgVjb2xvckIPCgZhbW91bnQSBbpIAggB');
 

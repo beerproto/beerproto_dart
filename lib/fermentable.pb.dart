@@ -874,6 +874,7 @@ class FermentableLotType extends $pb.GeneratedMessage {
     $0.GravityType? lotPotential,
     GrainCrush? crush,
     $0.PercentType? moisture,
+    $0.ColorType? color,
   }) {
     final result = create();
     if (id != null) result.id = id;
@@ -886,6 +887,7 @@ class FermentableLotType extends $pb.GeneratedMessage {
     if (lotPotential != null) result.lotPotential = lotPotential;
     if (crush != null) result.crush = crush;
     if (moisture != null) result.moisture = moisture;
+    if (color != null) result.color = color;
     return result;
   }
 
@@ -911,6 +913,7 @@ class FermentableLotType extends $pb.GeneratedMessage {
     ..aOM<$0.GravityType>(8, _omitFieldNames ? '' : 'lotPotential', subBuilder: $0.GravityType.create)
     ..e<GrainCrush>(9, _omitFieldNames ? '' : 'crush', $pb.PbFieldType.OE, defaultOrMaker: GrainCrush.GRAIN_CRUSH_UNSPECIFIED, valueOf: GrainCrush.valueOf, enumValues: GrainCrush.values)
     ..aOM<$0.PercentType>(10, _omitFieldNames ? '' : 'moisture', subBuilder: $0.PercentType.create)
+    ..aOM<$0.ColorType>(11, _omitFieldNames ? '' : 'color', subBuilder: $0.ColorType.create)
     ..hasRequiredFields = false
   ;
 
@@ -1045,6 +1048,20 @@ class FermentableLotType extends $pb.GeneratedMessage {
   void clearMoisture() => $_clearField(10);
   @$pb.TagNumber(10)
   $0.PercentType ensureMoisture() => $_ensure(9);
+
+  /// The measured colour of this lot, from its certificate of analysis. When
+  /// set, overrides the library colour, as lot_potential does the yield, so a
+  /// sack that kilned darker than the maltster's spec is accounted for.
+  @$pb.TagNumber(11)
+  $0.ColorType get color => $_getN(10);
+  @$pb.TagNumber(11)
+  set color($0.ColorType value) => $_setField(11, value);
+  @$pb.TagNumber(11)
+  $core.bool hasColor() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearColor() => $_clearField(11);
+  @$pb.TagNumber(11)
+  $0.ColorType ensureColor() => $_ensure(10);
 }
 
 
