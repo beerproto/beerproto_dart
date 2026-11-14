@@ -8,7 +8,7 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -29,46 +29,62 @@ class PackagingProcedureType extends $pb.GeneratedMessage {
     $core.String? notes,
     $core.Iterable<$1.PackagingVesselType>? packagingVessels,
   }) {
-    final result = create();
+    final result = PackagingProcedureType._();
     if (id != null) result.id = id;
     if (name != null) result.name = name;
     if (packagedVolume != null) result.packagedVolume = packagedVolume;
     if (description != null) result.description = description;
     if (notes != null) result.notes = notes;
-    if (packagingVessels != null) result.packagingVessels.addAll(packagingVessels);
+    if (packagingVessels != null)
+      result.packagingVessels.addAll(packagingVessels);
     return result;
   }
 
   PackagingProcedureType._();
 
-  factory PackagingProcedureType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory PackagingProcedureType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory PackagingProcedureType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      PackagingProcedureType()..mergeFromBuffer(data, registry);
+  factory PackagingProcedureType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      PackagingProcedureType()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PackagingProcedureType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PackagingProcedureType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: PackagingProcedureType.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'name')
-    ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'packagedVolume', subBuilder: $0.VolumeType.create)
+    ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'packagedVolume',
+        subBuilder: $0.VolumeType.$_createMessage)
     ..aOS(4, _omitFieldNames ? '' : 'description')
     ..aOS(5, _omitFieldNames ? '' : 'notes')
-    ..pc<$1.PackagingVesselType>(6, _omitFieldNames ? '' : 'packagingVessels', $pb.PbFieldType.PM, subBuilder: $1.PackagingVesselType.create)
-    ..hasRequiredFields = false
-  ;
+    ..pPM<$1.PackagingVesselType>(6, _omitFieldNames ? '' : 'packagingVessels',
+        subBuilder: $1.PackagingVesselType.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingProcedureType clone() => PackagingProcedureType()..mergeFromMessage(this);
+  PackagingProcedureType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingProcedureType copyWith(void Function(PackagingProcedureType) updates) => super.copyWith((message) => updates(message as PackagingProcedureType)) as PackagingProcedureType;
+  PackagingProcedureType copyWith(
+          void Function(PackagingProcedureType) updates) =>
+      super.copyWith((message) => updates(message as PackagingProcedureType))
+          as PackagingProcedureType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated(
+      'Use PackagingProcedureType() / PackagingProcedureType.new instead')
   static PackagingProcedureType create() => PackagingProcedureType._();
+  static $pb.GeneratedMessage $_createMessage() => PackagingProcedureType._();
   @$core.override
-  PackagingProcedureType createEmptyInstance() => create();
-  static $pb.PbList<PackagingProcedureType> createRepeated() => $pb.PbList<PackagingProcedureType>();
+  PackagingProcedureType createEmptyInstance() => PackagingProcedureType._();
   @$core.pragma('dart2js:noInline')
-  static PackagingProcedureType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PackagingProcedureType>(create);
+  static PackagingProcedureType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PackagingProcedureType>(
+          PackagingProcedureType.$_createMessage);
   static PackagingProcedureType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -122,6 +138,7 @@ class PackagingProcedureType extends $pb.GeneratedMessage {
   $pb.PbList<$1.PackagingVesselType> get packagingVessels => $_getList(5);
 }
 
-
-const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

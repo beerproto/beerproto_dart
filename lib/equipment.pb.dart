@@ -8,7 +8,7 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -29,7 +29,7 @@ class EquipmentBase extends $pb.GeneratedMessage {
     EquipmentBaseForm? form,
     $0.VolumeType? maximumVolume,
   }) {
-    final result = create();
+    final result = EquipmentBase._();
     if (name != null) result.name = name;
     if (type != null) result.type = type;
     if (form != null) result.form = form;
@@ -39,32 +39,45 @@ class EquipmentBase extends $pb.GeneratedMessage {
 
   EquipmentBase._();
 
-  factory EquipmentBase.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory EquipmentBase.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory EquipmentBase.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      EquipmentBase()..mergeFromBuffer(data, registry);
+  factory EquipmentBase.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      EquipmentBase()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EquipmentBase', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EquipmentBase',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: EquipmentBase.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'type')
-    ..e<EquipmentBaseForm>(3, _omitFieldNames ? '' : 'form', $pb.PbFieldType.OE, defaultOrMaker: EquipmentBaseForm.EQUIPMENT_BASE_FORM_UNSPECIFIED, valueOf: EquipmentBaseForm.valueOf, enumValues: EquipmentBaseForm.values)
-    ..aOM<$0.VolumeType>(4, _omitFieldNames ? '' : 'maximumVolume', subBuilder: $0.VolumeType.create)
-    ..hasRequiredFields = false
-  ;
+    ..aE<EquipmentBaseForm>(3, _omitFieldNames ? '' : 'form',
+        enumValues: EquipmentBaseForm.values)
+    ..aOM<$0.VolumeType>(4, _omitFieldNames ? '' : 'maximumVolume',
+        subBuilder: $0.VolumeType.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EquipmentBase clone() => EquipmentBase()..mergeFromMessage(this);
+  EquipmentBase clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EquipmentBase copyWith(void Function(EquipmentBase) updates) => super.copyWith((message) => updates(message as EquipmentBase)) as EquipmentBase;
+  EquipmentBase copyWith(void Function(EquipmentBase) updates) =>
+      super.copyWith((message) => updates(message as EquipmentBase))
+          as EquipmentBase;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use EquipmentBase() / EquipmentBase.new instead')
   static EquipmentBase create() => EquipmentBase._();
+  static $pb.GeneratedMessage $_createMessage() => EquipmentBase._();
   @$core.override
-  EquipmentBase createEmptyInstance() => create();
-  static $pb.PbList<EquipmentBase> createRepeated() => $pb.PbList<EquipmentBase>();
+  EquipmentBase createEmptyInstance() => EquipmentBase._();
   @$core.pragma('dart2js:noInline')
-  static EquipmentBase getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EquipmentBase>(create);
+  static EquipmentBase getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EquipmentBase>(
+          EquipmentBase.$_createMessage);
   static EquipmentBase? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -121,14 +134,16 @@ class EquipmentItemType extends $pb.GeneratedMessage {
     $0.PercentType? efficiency,
     $0.VolumeType? transferLoss,
   }) {
-    final result = create();
+    final result = EquipmentItemType._();
     if (base != null) result.base = base;
     if (id != null) result.id = id;
     if (notes != null) result.notes = notes;
     if (boilRatePerHour != null) result.boilRatePerHour = boilRatePerHour;
-    if (drainRatePerMinute != null) result.drainRatePerMinute = drainRatePerMinute;
+    if (drainRatePerMinute != null)
+      result.drainRatePerMinute = drainRatePerMinute;
     if (specificHeat != null) result.specificHeat = specificHeat;
-    if (grainAbsorptionRate != null) result.grainAbsorptionRate = grainAbsorptionRate;
+    if (grainAbsorptionRate != null)
+      result.grainAbsorptionRate = grainAbsorptionRate;
     if (weight != null) result.weight = weight;
     if (loss != null) result.loss = loss;
     if (efficiency != null) result.efficiency = efficiency;
@@ -138,39 +153,60 @@ class EquipmentItemType extends $pb.GeneratedMessage {
 
   EquipmentItemType._();
 
-  factory EquipmentItemType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory EquipmentItemType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory EquipmentItemType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      EquipmentItemType()..mergeFromBuffer(data, registry);
+  factory EquipmentItemType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      EquipmentItemType()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EquipmentItemType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<EquipmentBase>(1, _omitFieldNames ? '' : 'base', subBuilder: EquipmentBase.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EquipmentItemType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: EquipmentItemType.$_createMessage)
+    ..aOM<EquipmentBase>(1, _omitFieldNames ? '' : 'base',
+        subBuilder: EquipmentBase.$_createMessage)
     ..aOS(2, _omitFieldNames ? '' : 'id')
     ..aOS(3, _omitFieldNames ? '' : 'notes')
-    ..aOM<$0.VolumeType>(4, _omitFieldNames ? '' : 'boilRatePerHour', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.VolumeType>(5, _omitFieldNames ? '' : 'drainRatePerMinute', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.SpecificHeatType>(6, _omitFieldNames ? '' : 'specificHeat', subBuilder: $0.SpecificHeatType.create)
-    ..aOM<$0.SpecificVolumeType>(7, _omitFieldNames ? '' : 'grainAbsorptionRate', subBuilder: $0.SpecificVolumeType.create)
-    ..aOM<$0.MassType>(8, _omitFieldNames ? '' : 'weight', subBuilder: $0.MassType.create)
-    ..aOM<$0.VolumeType>(9, _omitFieldNames ? '' : 'loss', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.PercentType>(10, _omitFieldNames ? '' : 'efficiency', subBuilder: $0.PercentType.create)
-    ..aOM<$0.VolumeType>(11, _omitFieldNames ? '' : 'transferLoss', subBuilder: $0.VolumeType.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$0.VolumeType>(4, _omitFieldNames ? '' : 'boilRatePerHour',
+        subBuilder: $0.VolumeType.$_createMessage)
+    ..aOM<$0.VolumeType>(5, _omitFieldNames ? '' : 'drainRatePerMinute',
+        subBuilder: $0.VolumeType.$_createMessage)
+    ..aOM<$0.SpecificHeatType>(6, _omitFieldNames ? '' : 'specificHeat',
+        subBuilder: $0.SpecificHeatType.$_createMessage)
+    ..aOM<$0.SpecificVolumeType>(
+        7, _omitFieldNames ? '' : 'grainAbsorptionRate',
+        subBuilder: $0.SpecificVolumeType.$_createMessage)
+    ..aOM<$0.MassType>(8, _omitFieldNames ? '' : 'weight',
+        subBuilder: $0.MassType.$_createMessage)
+    ..aOM<$0.VolumeType>(9, _omitFieldNames ? '' : 'loss',
+        subBuilder: $0.VolumeType.$_createMessage)
+    ..aOM<$0.PercentType>(10, _omitFieldNames ? '' : 'efficiency',
+        subBuilder: $0.PercentType.$_createMessage)
+    ..aOM<$0.VolumeType>(11, _omitFieldNames ? '' : 'transferLoss',
+        subBuilder: $0.VolumeType.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EquipmentItemType clone() => EquipmentItemType()..mergeFromMessage(this);
+  EquipmentItemType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EquipmentItemType copyWith(void Function(EquipmentItemType) updates) => super.copyWith((message) => updates(message as EquipmentItemType)) as EquipmentItemType;
+  EquipmentItemType copyWith(void Function(EquipmentItemType) updates) =>
+      super.copyWith((message) => updates(message as EquipmentItemType))
+          as EquipmentItemType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use EquipmentItemType() / EquipmentItemType.new instead')
   static EquipmentItemType create() => EquipmentItemType._();
+  static $pb.GeneratedMessage $_createMessage() => EquipmentItemType._();
   @$core.override
-  EquipmentItemType createEmptyInstance() => create();
-  static $pb.PbList<EquipmentItemType> createRepeated() => $pb.PbList<EquipmentItemType>();
+  EquipmentItemType createEmptyInstance() => EquipmentItemType._();
   @$core.pragma('dart2js:noInline')
-  static EquipmentItemType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EquipmentItemType>(create);
+  static EquipmentItemType getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EquipmentItemType>(
+          EquipmentItemType.$_createMessage);
   static EquipmentItemType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -305,42 +341,56 @@ class EquipmentType extends $pb.GeneratedMessage {
     $core.Iterable<EquipmentItemType>? equipmentItems,
     $0.PercentType? brewhouseEfficiency,
   }) {
-    final result = create();
+    final result = EquipmentType._();
     if (id != null) result.id = id;
     if (name != null) result.name = name;
     if (equipmentItems != null) result.equipmentItems.addAll(equipmentItems);
-    if (brewhouseEfficiency != null) result.brewhouseEfficiency = brewhouseEfficiency;
+    if (brewhouseEfficiency != null)
+      result.brewhouseEfficiency = brewhouseEfficiency;
     return result;
   }
 
   EquipmentType._();
 
-  factory EquipmentType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory EquipmentType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory EquipmentType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      EquipmentType()..mergeFromBuffer(data, registry);
+  factory EquipmentType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      EquipmentType()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EquipmentType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EquipmentType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: EquipmentType.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'name')
-    ..pc<EquipmentItemType>(3, _omitFieldNames ? '' : 'equipmentItems', $pb.PbFieldType.PM, subBuilder: EquipmentItemType.create)
-    ..aOM<$0.PercentType>(4, _omitFieldNames ? '' : 'brewhouseEfficiency', subBuilder: $0.PercentType.create)
-    ..hasRequiredFields = false
-  ;
+    ..pPM<EquipmentItemType>(3, _omitFieldNames ? '' : 'equipmentItems',
+        subBuilder: EquipmentItemType.$_createMessage)
+    ..aOM<$0.PercentType>(4, _omitFieldNames ? '' : 'brewhouseEfficiency',
+        subBuilder: $0.PercentType.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EquipmentType clone() => EquipmentType()..mergeFromMessage(this);
+  EquipmentType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  EquipmentType copyWith(void Function(EquipmentType) updates) => super.copyWith((message) => updates(message as EquipmentType)) as EquipmentType;
+  EquipmentType copyWith(void Function(EquipmentType) updates) =>
+      super.copyWith((message) => updates(message as EquipmentType))
+          as EquipmentType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use EquipmentType() / EquipmentType.new instead')
   static EquipmentType create() => EquipmentType._();
+  static $pb.GeneratedMessage $_createMessage() => EquipmentType._();
   @$core.override
-  EquipmentType createEmptyInstance() => create();
-  static $pb.PbList<EquipmentType> createRepeated() => $pb.PbList<EquipmentType>();
+  EquipmentType createEmptyInstance() => EquipmentType._();
   @$core.pragma('dart2js:noInline')
-  static EquipmentType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EquipmentType>(create);
+  static EquipmentType getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EquipmentType>(
+          EquipmentType.$_createMessage);
   static EquipmentType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -376,6 +426,7 @@ class EquipmentType extends $pb.GeneratedMessage {
   $0.PercentType ensureBrewhouseEfficiency() => $_ensure(3);
 }
 
-
-const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

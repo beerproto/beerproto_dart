@@ -8,7 +8,8 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names, unused_import
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -35,17 +36,80 @@ const BoilStepType$json = {
   '1': 'BoilStepType',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {'1': 'end_gravity', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'endGravity'},
-    {'1': 'chilling_type', '3': 3, '4': 1, '5': 14, '6': '.beerproto.v1.BoilStepTypeChillingType', '10': 'chillingType'},
+    {
+      '1': 'end_gravity',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.GravityType',
+      '10': 'endGravity'
+    },
+    {
+      '1': 'chilling_type',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.BoilStepTypeChillingType',
+      '10': 'chillingType'
+    },
     {'1': 'description', '3': 4, '4': 1, '5': 9, '10': 'description'},
-    {'1': 'end_temperature', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'endTemperature'},
-    {'1': 'ramp_time', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '10': 'rampTime'},
-    {'1': 'step_time', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '10': 'stepTime'},
-    {'1': 'start_gravity', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'startGravity'},
-    {'1': 'start_ph', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'startPh'},
-    {'1': 'end_ph', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'endPh'},
+    {
+      '1': 'end_temperature',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TemperatureType',
+      '10': 'endTemperature'
+    },
+    {
+      '1': 'ramp_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TimeType',
+      '10': 'rampTime'
+    },
+    {
+      '1': 'step_time',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TimeType',
+      '10': 'stepTime'
+    },
+    {
+      '1': 'start_gravity',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.GravityType',
+      '10': 'startGravity'
+    },
+    {
+      '1': 'start_ph',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.AcidityType',
+      '10': 'startPh'
+    },
+    {
+      '1': 'end_ph',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.AcidityType',
+      '10': 'endPh'
+    },
     {'1': 'name', '3': 11, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'start_temperature', '3': 12, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'startTemperature'},
+    {
+      '1': 'start_temperature',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TemperatureType',
+      '10': 'startTemperature'
+    },
   ],
 };
 
@@ -63,4 +127,3 @@ final $typed_data.Uint8List boilStepTypeDescriptor = $convert.base64Decode(
     'BlUgdzdGFydFBoEjAKBmVuZF9waBgKIAEoCzIZLmJlZXJwcm90by52MS5BY2lkaXR5VHlwZVIF'
     'ZW5kUGgSEgoEbmFtZRgLIAEoCVIEbmFtZRJKChFzdGFydF90ZW1wZXJhdHVyZRgMIAEoCzIdLm'
     'JlZXJwcm90by52MS5UZW1wZXJhdHVyZVR5cGVSEHN0YXJ0VGVtcGVyYXR1cmU=');
-

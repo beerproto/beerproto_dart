@@ -8,7 +8,8 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names, unused_import
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -21,7 +22,15 @@ const FermentationProcedureType$json = {
     {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
     {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
     {'1': 'notes', '3': 3, '4': 1, '5': 9, '10': 'notes'},
-    {'1': 'fermentation_steps', '3': 4, '4': 3, '5': 11, '6': '.beerproto.v1.FermentationStepType', '8': {}, '10': 'fermentationSteps'},
+    {
+      '1': 'fermentation_steps',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.beerproto.v1.FermentationStepType',
+      '8': {},
+      '10': 'fermentationSteps'
+    },
     {'1': 'name', '3': 5, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
@@ -33,4 +42,3 @@ final $typed_data.Uint8List fermentationProcedureTypeDescriptor = $convert.base6
     'cxJbChJmZXJtZW50YXRpb25fc3RlcHMYBCADKAsyIi5iZWVycHJvdG8udjEuRmVybWVudGF0aW'
     '9uU3RlcFR5cGVCCLpIBZIBAggBUhFmZXJtZW50YXRpb25TdGVwcxIeCgRuYW1lGAUgASgJQgq6'
     'SAfIAQFyAhADUgRuYW1l');
-

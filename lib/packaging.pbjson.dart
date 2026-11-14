@@ -8,7 +8,8 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names, unused_import
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -20,10 +21,24 @@ const PackagingProcedureType$json = {
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
     {'1': 'name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'name'},
-    {'1': 'packaged_volume', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'packagedVolume'},
+    {
+      '1': 'packaged_volume',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '10': 'packagedVolume'
+    },
     {'1': 'description', '3': 4, '4': 1, '5': 9, '10': 'description'},
     {'1': 'notes', '3': 5, '4': 1, '5': 9, '10': 'notes'},
-    {'1': 'packaging_vessels', '3': 6, '4': 3, '5': 11, '6': '.beerproto.v1.PackagingVesselType', '10': 'packagingVessels'},
+    {
+      '1': 'packaging_vessels',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.beerproto.v1.PackagingVesselType',
+      '10': 'packagingVessels'
+    },
   ],
 };
 
@@ -35,4 +50,3 @@ final $typed_data.Uint8List packagingProcedureTypeDescriptor = $convert.base64De
     '4YBCABKAlSC2Rlc2NyaXB0aW9uEhQKBW5vdGVzGAUgASgJUgVub3RlcxJOChFwYWNrYWdpbmdf'
     'dmVzc2VscxgGIAMoCzIhLmJlZXJwcm90by52MS5QYWNrYWdpbmdWZXNzZWxUeXBlUhBwYWNrYW'
     'dpbmdWZXNzZWxz');
-

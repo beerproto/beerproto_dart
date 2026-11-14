@@ -8,7 +8,8 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names, unused_import
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -45,7 +46,15 @@ const MiscellaneousBase$json = {
     {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'producer', '3': 2, '4': 1, '5': 9, '10': 'producer'},
     {'1': 'product_id', '3': 3, '4': 1, '5': 9, '10': 'productId'},
-    {'1': 'type', '3': 4, '4': 1, '5': 14, '6': '.beerproto.v1.MiscellaneousBaseType', '8': {}, '10': 'type'},
+    {
+      '1': 'type',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.MiscellaneousBaseType',
+      '8': {},
+      '10': 'type'
+    },
   ],
 };
 
@@ -60,11 +69,26 @@ final $typed_data.Uint8List miscellaneousBaseDescriptor = $convert.base64Decode(
 const MiscellaneousType$json = {
   '1': 'MiscellaneousType',
   '2': [
-    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.MiscellaneousBase', '8': {}, '10': 'base'},
+    {
+      '1': 'base',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.MiscellaneousBase',
+      '8': {},
+      '10': 'base'
+    },
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
     {'1': 'use_for', '3': 3, '4': 1, '5': 9, '10': 'useFor'},
     {'1': 'notes', '3': 4, '4': 1, '5': 9, '10': 'notes'},
-    {'1': 'inventory', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.MiscellaneousInventoryType', '10': 'inventory'},
+    {
+      '1': 'inventory',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.MiscellaneousInventoryType',
+      '10': 'inventory'
+    },
   ],
 };
 
@@ -80,12 +104,51 @@ final $typed_data.Uint8List miscellaneousTypeDescriptor = $convert.base64Decode(
 const MiscellaneousAdditionType$json = {
   '1': 'MiscellaneousAdditionType',
   '2': [
-    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.MiscellaneousBase', '8': {}, '10': 'base'},
+    {
+      '1': 'base',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.MiscellaneousBase',
+      '8': {},
+      '10': 'base'
+    },
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {'1': 'timing', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.TimingType', '10': 'timing'},
-    {'1': 'mass', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
-    {'1': 'unit', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.UnitType', '9': 0, '10': 'unit'},
-    {'1': 'volume', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
+    {
+      '1': 'timing',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TimingType',
+      '10': 'timing'
+    },
+    {
+      '1': 'mass',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.MassType',
+      '9': 0,
+      '10': 'mass'
+    },
+    {
+      '1': 'unit',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.UnitType',
+      '9': 0,
+      '10': 'unit'
+    },
+    {
+      '1': 'volume',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '9': 0,
+      '10': 'volume'
+    },
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -105,14 +168,22 @@ final $typed_data.Uint8List miscellaneousAdditionTypeDescriptor = $convert.base6
 const MiscellaneousInventoryType$json = {
   '1': 'MiscellaneousInventoryType',
   '2': [
-    {'1': 'lots', '3': 5, '4': 3, '5': 11, '6': '.beerproto.v1.MiscellaneousLotType', '10': 'lots'},
+    {
+      '1': 'lots',
+      '3': 5,
+      '4': 3,
+      '5': 11,
+      '6': '.beerproto.v1.MiscellaneousLotType',
+      '10': 'lots'
+    },
   ],
 };
 
 /// Descriptor for `MiscellaneousInventoryType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List miscellaneousInventoryTypeDescriptor = $convert.base64Decode(
-    'ChpNaXNjZWxsYW5lb3VzSW52ZW50b3J5VHlwZRI2CgRsb3RzGAUgAygLMiIuYmVlcnByb3RvLn'
-    'YxLk1pc2NlbGxhbmVvdXNMb3RUeXBlUgRsb3Rz');
+final $typed_data.Uint8List miscellaneousInventoryTypeDescriptor =
+    $convert.base64Decode(
+        'ChpNaXNjZWxsYW5lb3VzSW52ZW50b3J5VHlwZRI2CgRsb3RzGAUgAygLMiIuYmVlcnByb3RvLn'
+        'YxLk1pc2NlbGxhbmVvdXNMb3RUeXBlUgRsb3Rz');
 
 @$core.Deprecated('Use miscellaneousLotTypeDescriptor instead')
 const MiscellaneousLotType$json = {
@@ -120,12 +191,50 @@ const MiscellaneousLotType$json = {
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     {'1': 'lot_code', '3': 2, '4': 1, '5': 9, '10': 'lotCode'},
-    {'1': 'received_on', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'receivedOn'},
+    {
+      '1': 'received_on',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'receivedOn'
+    },
     {'1': 'note', '3': 4, '4': 1, '5': 9, '10': 'note'},
-    {'1': 'mass', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
-    {'1': 'unit', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.UnitType', '9': 0, '10': 'unit'},
-    {'1': 'volume', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
-    {'1': 'best_before', '3': 8, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
+    {
+      '1': 'mass',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.MassType',
+      '9': 0,
+      '10': 'mass'
+    },
+    {
+      '1': 'unit',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.UnitType',
+      '9': 0,
+      '10': 'unit'
+    },
+    {
+      '1': 'volume',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '9': 0,
+      '10': 'volume'
+    },
+    {
+      '1': 'best_before',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'bestBefore'
+    },
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -141,4 +250,3 @@ final $typed_data.Uint8List miscellaneousLotTypeDescriptor = $convert.base64Deco
     'VW5pdFR5cGVIAFIEdW5pdBIyCgZ2b2x1bWUYByABKAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVH'
     'lwZUgAUgZ2b2x1bWUSOwoLYmVzdF9iZWZvcmUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt'
     'ZXN0YW1wUgpiZXN0QmVmb3JlQg8KBmFtb3VudBIFukgCCAE=');
-

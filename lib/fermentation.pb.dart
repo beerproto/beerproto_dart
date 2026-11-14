@@ -8,7 +8,7 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -27,44 +27,62 @@ class FermentationProcedureType extends $pb.GeneratedMessage {
     $core.Iterable<$0.FermentationStepType>? fermentationSteps,
     $core.String? name,
   }) {
-    final result = create();
+    final result = FermentationProcedureType._();
     if (id != null) result.id = id;
     if (description != null) result.description = description;
     if (notes != null) result.notes = notes;
-    if (fermentationSteps != null) result.fermentationSteps.addAll(fermentationSteps);
+    if (fermentationSteps != null)
+      result.fermentationSteps.addAll(fermentationSteps);
     if (name != null) result.name = name;
     return result;
   }
 
   FermentationProcedureType._();
 
-  factory FermentationProcedureType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory FermentationProcedureType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory FermentationProcedureType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      FermentationProcedureType()..mergeFromBuffer(data, registry);
+  factory FermentationProcedureType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      FermentationProcedureType()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FermentationProcedureType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FermentationProcedureType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: FermentationProcedureType.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'description')
     ..aOS(3, _omitFieldNames ? '' : 'notes')
-    ..pc<$0.FermentationStepType>(4, _omitFieldNames ? '' : 'fermentationSteps', $pb.PbFieldType.PM, subBuilder: $0.FermentationStepType.create)
+    ..pPM<$0.FermentationStepType>(
+        4, _omitFieldNames ? '' : 'fermentationSteps',
+        subBuilder: $0.FermentationStepType.$_createMessage)
     ..aOS(5, _omitFieldNames ? '' : 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentationProcedureType clone() => FermentationProcedureType()..mergeFromMessage(this);
+  FermentationProcedureType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentationProcedureType copyWith(void Function(FermentationProcedureType) updates) => super.copyWith((message) => updates(message as FermentationProcedureType)) as FermentationProcedureType;
+  FermentationProcedureType copyWith(
+          void Function(FermentationProcedureType) updates) =>
+      super.copyWith((message) => updates(message as FermentationProcedureType))
+          as FermentationProcedureType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated(
+      'Use FermentationProcedureType() / FermentationProcedureType.new instead')
   static FermentationProcedureType create() => FermentationProcedureType._();
+  static $pb.GeneratedMessage $_createMessage() =>
+      FermentationProcedureType._();
   @$core.override
-  FermentationProcedureType createEmptyInstance() => create();
-  static $pb.PbList<FermentationProcedureType> createRepeated() => $pb.PbList<FermentationProcedureType>();
+  FermentationProcedureType createEmptyInstance() =>
+      FermentationProcedureType._();
   @$core.pragma('dart2js:noInline')
-  static FermentationProcedureType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FermentationProcedureType>(create);
+  static FermentationProcedureType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FermentationProcedureType>(
+          FermentationProcedureType.$_createMessage);
   static FermentationProcedureType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -107,6 +125,7 @@ class FermentationProcedureType extends $pb.GeneratedMessage {
   void clearName() => $_clearField(5);
 }
 
-
-const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

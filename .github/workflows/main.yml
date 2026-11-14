@@ -22,17 +22,17 @@ jobs:
       - uses: bufbuild/buf-action@v1
         with:
           setup_only: true      
+      # With this repo's template, not beerproto's: the generator version has to
+      # match the protobuf runtime in pubspec.yaml, and both live here.
       - name: Buf generate
-        run: buf generate beerprotoapis --template=buf.gen.dart.yaml
+        run: buf generate beerprotoapis --template=../buf.gen.dart.yaml
         working-directory: ./proto
+      # Replace lib/ wholesale, so a file the schema no longer produces does not
+      # linger. The well-known types come from package:protobuf, not lib/.
       - name: Move beer file
-        run: mv ./proto/gen/beerproto/v1/* ./lib
-      # Generated files reference well-known types (e.g. google.protobuf.Timestamp)
-      # via '../../google/protobuf/…', which assumes the beerproto/v1/ sub-path.
-      # After flattening into lib/ that must resolve as 'google/protobuf/…'
-      # (the well-known types are committed under lib/google/protobuf/).
-      - name: Fix well-known type imports after flatten
-        run: sed -i 's#\.\./\.\./google/protobuf/#google/protobuf/#g' ./lib/*.dart
+        run: |
+          rm -f ./lib/*.dart
+          mv ./proto/gen/beerproto/v1/* ./lib
       - run: rm -R ./proto
       - name: Push
         uses: actions-x/commit@v6

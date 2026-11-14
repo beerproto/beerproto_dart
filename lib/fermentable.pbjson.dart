@@ -8,7 +8,8 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names, unused_import
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -85,17 +86,70 @@ final $typed_data.Uint8List grainGroupDescriptor = $convert.base64Decode(
 const FermentableBase$json = {
   '1': 'FermentableBase',
   '2': [
-    {'1': 'type', '3': 1, '4': 1, '5': 14, '6': '.beerproto.v1.FermentableBaseType', '8': {}, '10': 'type'},
+    {
+      '1': 'type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.FermentableBaseType',
+      '8': {},
+      '10': 'type'
+    },
     {'1': 'origin', '3': 2, '4': 1, '5': 9, '10': 'origin'},
-    {'1': 'grain_group', '3': 3, '4': 1, '5': 14, '6': '.beerproto.v1.GrainGroup', '8': {}, '10': 'grainGroup'},
-    {'1': 'yield', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.YieldType', '8': {}, '10': 'yield'},
-    {'1': 'color', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.ColorType', '8': {}, '10': 'color'},
+    {
+      '1': 'grain_group',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.GrainGroup',
+      '8': {},
+      '10': 'grainGroup'
+    },
+    {
+      '1': 'yield',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.YieldType',
+      '8': {},
+      '10': 'yield'
+    },
+    {
+      '1': 'color',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.ColorType',
+      '8': {},
+      '10': 'color'
+    },
     {'1': 'name', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'producer', '3': 7, '4': 1, '5': 9, '10': 'producer'},
     {'1': 'product_id', '3': 8, '4': 1, '5': 9, '10': 'productId'},
-    {'1': 'diastatic_power', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.DiastaticPowerType', '10': 'diastaticPower'},
-    {'1': 'di_ph', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'diPh'},
-    {'1': 'buffering_capacity', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.BufferingCapacityType', '10': 'bufferingCapacity'},
+    {
+      '1': 'diastatic_power',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.DiastaticPowerType',
+      '10': 'diastaticPower'
+    },
+    {
+      '1': 'di_ph',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.AcidityType',
+      '10': 'diPh'
+    },
+    {
+      '1': 'buffering_capacity',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.BufferingCapacityType',
+      '10': 'bufferingCapacity'
+    },
   ],
 };
 
@@ -117,30 +171,178 @@ final $typed_data.Uint8List fermentableBaseDescriptor = $convert.base64Decode(
 const FermentableType$json = {
   '1': 'FermentableType',
   '2': [
-    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.FermentableBase', '8': {}, '10': 'base'},
+    {
+      '1': 'base',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.FermentableBase',
+      '8': {},
+      '10': 'base'
+    },
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {'1': 'max_in_batch', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'maxInBatch'},
+    {
+      '1': 'max_in_batch',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'maxInBatch'
+    },
     {'1': 'recommend_mash', '3': 4, '4': 1, '5': 8, '10': 'recommendMash'},
-    {'1': 'protein', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'protein'},
-    {'1': 'alpha_amylase', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.EnzymeActivityType', '10': 'alphaAmylase'},
-    {'1': 'diastatic_power', '3': 14, '4': 1, '5': 11, '6': '.beerproto.v1.DiastaticPowerType', '10': 'diastaticPower'},
-    {'1': 'moisture', '3': 15, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'moisture'},
-    {'1': 'inventory', '3': 17, '4': 1, '5': 11, '6': '.beerproto.v1.FermentableInventoryType', '10': 'inventory'},
-    {'1': 'kolbach_index', '3': 18, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'kolbachIndex'},
-    {'1': 'glassy', '3': 19, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'glassy'},
-    {'1': 'plump', '3': 20, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'plump'},
-    {'1': 'half', '3': 21, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'half'},
-    {'1': 'mealy', '3': 22, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'mealy'},
-    {'1': 'thru', '3': 23, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'thru'},
-    {'1': 'friability', '3': 24, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'friability'},
-    {'1': 'di_ph', '3': 25, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'diPh'},
-    {'1': 'viscosity', '3': 26, '4': 1, '5': 11, '6': '.beerproto.v1.ViscosityType', '10': 'viscosity'},
-    {'1': 'dms_p', '3': 27, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '10': 'dmsP'},
-    {'1': 'fan', '3': 28, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '10': 'fan'},
-    {'1': 'fermentability', '3': 29, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'fermentability'},
-    {'1': 'beta_glucan', '3': 30, '4': 1, '5': 11, '6': '.beerproto.v1.ConcentrationType', '10': 'betaGlucan'},
+    {
+      '1': 'protein',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'protein'
+    },
+    {
+      '1': 'alpha_amylase',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.EnzymeActivityType',
+      '10': 'alphaAmylase'
+    },
+    {
+      '1': 'diastatic_power',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.DiastaticPowerType',
+      '10': 'diastaticPower'
+    },
+    {
+      '1': 'moisture',
+      '3': 15,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'moisture'
+    },
+    {
+      '1': 'inventory',
+      '3': 17,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.FermentableInventoryType',
+      '10': 'inventory'
+    },
+    {
+      '1': 'kolbach_index',
+      '3': 18,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'kolbachIndex'
+    },
+    {
+      '1': 'glassy',
+      '3': 19,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'glassy'
+    },
+    {
+      '1': 'plump',
+      '3': 20,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'plump'
+    },
+    {
+      '1': 'half',
+      '3': 21,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'half'
+    },
+    {
+      '1': 'mealy',
+      '3': 22,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'mealy'
+    },
+    {
+      '1': 'thru',
+      '3': 23,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'thru'
+    },
+    {
+      '1': 'friability',
+      '3': 24,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'friability'
+    },
+    {
+      '1': 'di_ph',
+      '3': 25,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.AcidityType',
+      '10': 'diPh'
+    },
+    {
+      '1': 'viscosity',
+      '3': 26,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.ViscosityType',
+      '10': 'viscosity'
+    },
+    {
+      '1': 'dms_p',
+      '3': 27,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.ConcentrationType',
+      '10': 'dmsP'
+    },
+    {
+      '1': 'fan',
+      '3': 28,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.ConcentrationType',
+      '10': 'fan'
+    },
+    {
+      '1': 'fermentability',
+      '3': 29,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'fermentability'
+    },
+    {
+      '1': 'beta_glucan',
+      '3': 30,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.ConcentrationType',
+      '10': 'betaGlucan'
+    },
     {'1': 'notes', '3': 31, '4': 1, '5': 9, '10': 'notes'},
-    {'1': 'buffering_capacity', '3': 32, '4': 1, '5': 11, '6': '.beerproto.v1.BufferingCapacityType', '10': 'bufferingCapacity'},
+    {
+      '1': 'buffering_capacity',
+      '3': 32,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.BufferingCapacityType',
+      '10': 'bufferingCapacity'
+    },
   ],
 };
 
@@ -176,11 +378,42 @@ final $typed_data.Uint8List fermentableTypeDescriptor = $convert.base64Decode(
 const FermentableAdditionType$json = {
   '1': 'FermentableAdditionType',
   '2': [
-    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.FermentableBase', '8': {}, '10': 'base'},
+    {
+      '1': 'base',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.FermentableBase',
+      '8': {},
+      '10': 'base'
+    },
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {'1': 'timing', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.TimingType', '10': 'timing'},
-    {'1': 'mass', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
-    {'1': 'volume', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
+    {
+      '1': 'timing',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TimingType',
+      '10': 'timing'
+    },
+    {
+      '1': 'mass',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.MassType',
+      '9': 0,
+      '10': 'mass'
+    },
+    {
+      '1': 'volume',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '9': 0,
+      '10': 'volume'
+    },
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -200,10 +433,38 @@ final $typed_data.Uint8List fermentableAdditionTypeDescriptor = $convert.base64D
 const YieldType$json = {
   '1': 'YieldType',
   '2': [
-    {'1': 'fine_grind', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'fineGrind'},
-    {'1': 'coarse_grind', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'coarseGrind'},
-    {'1': 'fine_coarse_difference', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'fineCoarseDifference'},
-    {'1': 'potential', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'potential'},
+    {
+      '1': 'fine_grind',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'fineGrind'
+    },
+    {
+      '1': 'coarse_grind',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'coarseGrind'
+    },
+    {
+      '1': 'fine_coarse_difference',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'fineCoarseDifference'
+    },
+    {
+      '1': 'potential',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.GravityType',
+      '10': 'potential'
+    },
   ],
 };
 
@@ -219,14 +480,22 @@ final $typed_data.Uint8List yieldTypeDescriptor = $convert.base64Decode(
 const FermentableInventoryType$json = {
   '1': 'FermentableInventoryType',
   '2': [
-    {'1': 'lots', '3': 7, '4': 3, '5': 11, '6': '.beerproto.v1.FermentableLotType', '10': 'lots'},
+    {
+      '1': 'lots',
+      '3': 7,
+      '4': 3,
+      '5': 11,
+      '6': '.beerproto.v1.FermentableLotType',
+      '10': 'lots'
+    },
   ],
 };
 
 /// Descriptor for `FermentableInventoryType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List fermentableInventoryTypeDescriptor = $convert.base64Decode(
-    'ChhGZXJtZW50YWJsZUludmVudG9yeVR5cGUSNAoEbG90cxgHIAMoCzIgLmJlZXJwcm90by52MS'
-    '5GZXJtZW50YWJsZUxvdFR5cGVSBGxvdHM=');
+final $typed_data.Uint8List fermentableInventoryTypeDescriptor =
+    $convert.base64Decode(
+        'ChhGZXJtZW50YWJsZUludmVudG9yeVR5cGUSNAoEbG90cxgHIAMoCzIgLmJlZXJwcm90by52MS'
+        '5GZXJtZW50YWJsZUxvdFR5cGVSBGxvdHM=');
 
 @$core.Deprecated('Use fermentableLotTypeDescriptor instead')
 const FermentableLotType$json = {
@@ -234,15 +503,73 @@ const FermentableLotType$json = {
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     {'1': 'lot_code', '3': 2, '4': 1, '5': 9, '10': 'lotCode'},
-    {'1': 'received_on', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'receivedOn'},
+    {
+      '1': 'received_on',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'receivedOn'
+    },
     {'1': 'note', '3': 4, '4': 1, '5': 9, '10': 'note'},
-    {'1': 'mass', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '9': 0, '10': 'mass'},
-    {'1': 'volume', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '9': 0, '10': 'volume'},
-    {'1': 'best_before', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'bestBefore'},
-    {'1': 'lot_potential', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'lotPotential'},
-    {'1': 'crush', '3': 9, '4': 1, '5': 14, '6': '.beerproto.v1.GrainCrush', '10': 'crush'},
-    {'1': 'moisture', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'moisture'},
-    {'1': 'color', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.ColorType', '10': 'color'},
+    {
+      '1': 'mass',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.MassType',
+      '9': 0,
+      '10': 'mass'
+    },
+    {
+      '1': 'volume',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '9': 0,
+      '10': 'volume'
+    },
+    {
+      '1': 'best_before',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'bestBefore'
+    },
+    {
+      '1': 'lot_potential',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.GravityType',
+      '10': 'lotPotential'
+    },
+    {
+      '1': 'crush',
+      '3': 9,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.GrainCrush',
+      '10': 'crush'
+    },
+    {
+      '1': 'moisture',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'moisture'
+    },
+    {
+      '1': 'color',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.ColorType',
+      '10': 'color'
+    },
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -261,4 +588,3 @@ final $typed_data.Uint8List fermentableLotTypeDescriptor = $convert.base64Decode
     'Jwcm90by52MS5HcmFpbkNydXNoUgVjcnVzaBI1Cghtb2lzdHVyZRgKIAEoCzIZLmJlZXJwcm90'
     'by52MS5QZXJjZW50VHlwZVIIbW9pc3R1cmUSLQoFY29sb3IYCyABKAsyFy5iZWVycHJvdG8udj'
     'EuQ29sb3JUeXBlUgVjb2xvckIPCgZhbW91bnQSBbpIAggB');
-

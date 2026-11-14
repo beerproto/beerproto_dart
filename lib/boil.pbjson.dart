@@ -8,7 +8,8 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names, unused_import
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -19,13 +20,42 @@ const BoilProcedureType$json = {
   '1': 'BoilProcedureType',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {'1': 'pre_boil_size', '3': 2, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'preBoilSize'},
-    {'1': 'boil_time', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '8': {}, '10': 'boilTime'},
-    {'1': 'boil_steps', '3': 4, '4': 3, '5': 11, '6': '.beerproto.v1.BoilStepType', '10': 'boilSteps'},
+    {
+      '1': 'pre_boil_size',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '10': 'preBoilSize'
+    },
+    {
+      '1': 'boil_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TimeType',
+      '8': {},
+      '10': 'boilTime'
+    },
+    {
+      '1': 'boil_steps',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.beerproto.v1.BoilStepType',
+      '10': 'boilSteps'
+    },
     {'1': 'name', '3': 5, '4': 1, '5': 9, '10': 'name'},
     {'1': 'description', '3': 6, '4': 1, '5': 9, '10': 'description'},
     {'1': 'notes', '3': 7, '4': 1, '5': 9, '10': 'notes'},
-    {'1': 'whirlpool_temperature', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'whirlpoolTemperature'},
+    {
+      '1': 'whirlpool_temperature',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TemperatureType',
+      '10': 'whirlpoolTemperature'
+    },
   ],
 };
 
@@ -39,4 +69,3 @@ final $typed_data.Uint8List boilProcedureTypeDescriptor = $convert.base64Decode(
     'JpcHRpb24SFAoFbm90ZXMYByABKAlSBW5vdGVzElIKFXdoaXJscG9vbF90ZW1wZXJhdHVyZRgI'
     'IAEoCzIdLmJlZXJwcm90by52MS5UZW1wZXJhdHVyZVR5cGVSFHdoaXJscG9vbFRlbXBlcmF0dX'
     'Jl');
-

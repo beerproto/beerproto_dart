@@ -8,28 +8,41 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class UseType extends $pb.ProtobufEnum {
-  static const UseType USE_TYPE_UNSPECIFIED = UseType._(0, _omitEnumNames ? '' : 'USE_TYPE_UNSPECIFIED');
-  /// add to mash
-  static const UseType USE_TYPE_ADD_TO_MASH = UseType._(1, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_MASH');
-  /// add to boil
-  static const UseType USE_TYPE_ADD_TO_BOIL = UseType._(2, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_BOIL');
-  /// add to fermentation
-  static const UseType USE_TYPE_ADD_TO_FERMENTATION = UseType._(3, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_FERMENTATION');
-  /// add to package
-  static const UseType USE_TYPE_ADD_TO_PACKAGE = UseType._(4, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_PACKAGE');
-  /// add at or after flameout, steeped below boiling (whirlpool / hopstand); isomerization continues at a reduced, temperature-dependent rate
-  static const UseType USE_TYPE_ADD_TO_WHIRLPOOL = UseType._(5, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_WHIRLPOOL');
-  /// add to the kettle before the boil begins (first wort hopping); ~10% higher measured utilization than an equivalent full-boil addition
-  static const UseType USE_TYPE_ADD_TO_FIRST_WORT = UseType._(6, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_FIRST_WORT');
+  static const UseType USE_TYPE_UNSPECIFIED =
+      UseType._(0, _omitEnumNames ? '' : 'USE_TYPE_UNSPECIFIED');
 
-  static const $core.List<UseType> values = <UseType> [
+  /// add to mash
+  static const UseType USE_TYPE_ADD_TO_MASH =
+      UseType._(1, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_MASH');
+
+  /// add to boil
+  static const UseType USE_TYPE_ADD_TO_BOIL =
+      UseType._(2, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_BOIL');
+
+  /// add to fermentation
+  static const UseType USE_TYPE_ADD_TO_FERMENTATION =
+      UseType._(3, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_FERMENTATION');
+
+  /// add to package
+  static const UseType USE_TYPE_ADD_TO_PACKAGE =
+      UseType._(4, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_PACKAGE');
+
+  /// add at or after flameout, steeped below boiling (whirlpool / hopstand); isomerization continues at a reduced, temperature-dependent rate
+  static const UseType USE_TYPE_ADD_TO_WHIRLPOOL =
+      UseType._(5, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_WHIRLPOOL');
+
+  /// add to the kettle before the boil begins (first wort hopping); ~10% higher measured utilization than an equivalent full-boil addition
+  static const UseType USE_TYPE_ADD_TO_FIRST_WORT =
+      UseType._(6, _omitEnumNames ? '' : 'USE_TYPE_ADD_TO_FIRST_WORT');
+
+  static const $core.List<UseType> values = <UseType>[
     USE_TYPE_UNSPECIFIED,
     USE_TYPE_ADD_TO_MASH,
     USE_TYPE_ADD_TO_BOIL,
@@ -39,11 +52,13 @@ class UseType extends $pb.ProtobufEnum {
     USE_TYPE_ADD_TO_FIRST_WORT,
   ];
 
-  static final $core.List<UseType?> _byValue = $pb.ProtobufEnum.$_initByValueList(values, 6);
-  static UseType? valueOf($core.int value) =>  value < 0 || value >= _byValue.length ? null : _byValue[value];
+  static final $core.List<UseType?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 6);
+  static UseType? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
 
   const UseType._(super.value, super.name);
 }
 
-
-const $core.bool _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');
+const $core.bool _omitEnumNames =
+    $core.bool.fromEnvironment('protobuf.omit_enum_names');

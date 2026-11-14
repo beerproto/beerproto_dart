@@ -8,7 +8,7 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -32,7 +32,7 @@ class TimingType extends $pb.GeneratedMessage {
     $core.int? step,
     UseType? use,
   }) {
-    final result = create();
+    final result = TimingType._();
     if (time != null) result.time = time;
     if (duration != null) result.duration = duration;
     if (continuous != null) result.continuous = continuous;
@@ -45,35 +45,48 @@ class TimingType extends $pb.GeneratedMessage {
 
   TimingType._();
 
-  factory TimingType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory TimingType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory TimingType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      TimingType()..mergeFromBuffer(data, registry);
+  factory TimingType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      TimingType()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TimingType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<$0.TimeType>(1, _omitFieldNames ? '' : 'time', subBuilder: $0.TimeType.create)
-    ..aOM<$0.TimeType>(2, _omitFieldNames ? '' : 'duration', subBuilder: $0.TimeType.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TimingType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: TimingType.$_createMessage)
+    ..aOM<$0.TimeType>(1, _omitFieldNames ? '' : 'time',
+        subBuilder: $0.TimeType.$_createMessage)
+    ..aOM<$0.TimeType>(2, _omitFieldNames ? '' : 'duration',
+        subBuilder: $0.TimeType.$_createMessage)
     ..aOB(3, _omitFieldNames ? '' : 'continuous')
-    ..aOM<$0.GravityType>(4, _omitFieldNames ? '' : 'specificGravity', subBuilder: $0.GravityType.create)
-    ..aOM<$0.AcidityType>(5, _omitFieldNames ? '' : 'ph', subBuilder: $0.AcidityType.create)
-    ..a<$core.int>(6, _omitFieldNames ? '' : 'step', $pb.PbFieldType.O3)
-    ..e<UseType>(7, _omitFieldNames ? '' : 'use', $pb.PbFieldType.OE, defaultOrMaker: UseType.USE_TYPE_UNSPECIFIED, valueOf: UseType.valueOf, enumValues: UseType.values)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$0.GravityType>(4, _omitFieldNames ? '' : 'specificGravity',
+        subBuilder: $0.GravityType.$_createMessage)
+    ..aOM<$0.AcidityType>(5, _omitFieldNames ? '' : 'ph',
+        subBuilder: $0.AcidityType.$_createMessage)
+    ..aI(6, _omitFieldNames ? '' : 'step')
+    ..aE<UseType>(7, _omitFieldNames ? '' : 'use', enumValues: UseType.values)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TimingType clone() => TimingType()..mergeFromMessage(this);
+  TimingType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  TimingType copyWith(void Function(TimingType) updates) => super.copyWith((message) => updates(message as TimingType)) as TimingType;
+  TimingType copyWith(void Function(TimingType) updates) =>
+      super.copyWith((message) => updates(message as TimingType)) as TimingType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use TimingType() / TimingType.new instead')
   static TimingType create() => TimingType._();
+  static $pb.GeneratedMessage $_createMessage() => TimingType._();
   @$core.override
-  TimingType createEmptyInstance() => create();
-  static $pb.PbList<TimingType> createRepeated() => $pb.PbList<TimingType>();
+  TimingType createEmptyInstance() => TimingType._();
   @$core.pragma('dart2js:noInline')
-  static TimingType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TimingType>(create);
+  static TimingType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TimingType>(TimingType.$_createMessage);
   static TimingType? _defaultInstance;
 
   /// What time during a process step is added, eg a value of 2 days for a dry hop addition would be added 2 days into the fermentation step.
@@ -154,6 +167,7 @@ class TimingType extends $pb.GeneratedMessage {
   void clearUse() => $_clearField(7);
 }
 
-
-const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

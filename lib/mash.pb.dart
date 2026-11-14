@@ -8,7 +8,7 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -28,7 +28,7 @@ class MashProcedureType extends $pb.GeneratedMessage {
     $core.Iterable<$1.MashStepType>? mashSteps,
     $core.String? name,
   }) {
-    final result = create();
+    final result = MashProcedureType._();
     if (id != null) result.id = id;
     if (grainTemperature != null) result.grainTemperature = grainTemperature;
     if (notes != null) result.notes = notes;
@@ -39,33 +39,46 @@ class MashProcedureType extends $pb.GeneratedMessage {
 
   MashProcedureType._();
 
-  factory MashProcedureType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory MashProcedureType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory MashProcedureType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      MashProcedureType()..mergeFromBuffer(data, registry);
+  factory MashProcedureType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      MashProcedureType()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MashProcedureType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MashProcedureType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: MashProcedureType.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.TemperatureType>(2, _omitFieldNames ? '' : 'grainTemperature', subBuilder: $0.TemperatureType.create)
+    ..aOM<$0.TemperatureType>(2, _omitFieldNames ? '' : 'grainTemperature',
+        subBuilder: $0.TemperatureType.$_createMessage)
     ..aOS(3, _omitFieldNames ? '' : 'notes')
-    ..pc<$1.MashStepType>(4, _omitFieldNames ? '' : 'mashSteps', $pb.PbFieldType.PM, subBuilder: $1.MashStepType.create)
+    ..pPM<$1.MashStepType>(4, _omitFieldNames ? '' : 'mashSteps',
+        subBuilder: $1.MashStepType.$_createMessage)
     ..aOS(5, _omitFieldNames ? '' : 'name')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MashProcedureType clone() => MashProcedureType()..mergeFromMessage(this);
+  MashProcedureType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MashProcedureType copyWith(void Function(MashProcedureType) updates) => super.copyWith((message) => updates(message as MashProcedureType)) as MashProcedureType;
+  MashProcedureType copyWith(void Function(MashProcedureType) updates) =>
+      super.copyWith((message) => updates(message as MashProcedureType))
+          as MashProcedureType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use MashProcedureType() / MashProcedureType.new instead')
   static MashProcedureType create() => MashProcedureType._();
+  static $pb.GeneratedMessage $_createMessage() => MashProcedureType._();
   @$core.override
-  MashProcedureType createEmptyInstance() => create();
-  static $pb.PbList<MashProcedureType> createRepeated() => $pb.PbList<MashProcedureType>();
+  MashProcedureType createEmptyInstance() => MashProcedureType._();
   @$core.pragma('dart2js:noInline')
-  static MashProcedureType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MashProcedureType>(create);
+  static MashProcedureType getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MashProcedureType>(
+          MashProcedureType.$_createMessage);
   static MashProcedureType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -111,6 +124,7 @@ class MashProcedureType extends $pb.GeneratedMessage {
   void clearName() => $_clearField(5);
 }
 
-
-const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

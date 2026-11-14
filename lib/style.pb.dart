@@ -8,7 +8,7 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -30,7 +30,7 @@ class StyleBase extends $pb.GeneratedMessage {
     $core.String? styleGuide,
     StyleCategories? type,
   }) {
-    final result = create();
+    final result = StyleBase._();
     if (name != null) result.name = name;
     if (category != null) result.category = category;
     if (categoryNumber != null) result.categoryNumber = categoryNumber;
@@ -42,34 +42,44 @@ class StyleBase extends $pb.GeneratedMessage {
 
   StyleBase._();
 
-  factory StyleBase.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory StyleBase.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory StyleBase.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      StyleBase()..mergeFromBuffer(data, registry);
+  factory StyleBase.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      StyleBase()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'StyleBase', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StyleBase',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: StyleBase.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'name')
     ..aOS(2, _omitFieldNames ? '' : 'category')
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'categoryNumber', $pb.PbFieldType.O3)
+    ..aI(3, _omitFieldNames ? '' : 'categoryNumber')
     ..aOS(4, _omitFieldNames ? '' : 'styleLetter')
     ..aOS(5, _omitFieldNames ? '' : 'styleGuide')
-    ..e<StyleCategories>(6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: StyleCategories.STYLE_CATEGORIES_UNSPECIFIED, valueOf: StyleCategories.valueOf, enumValues: StyleCategories.values)
-    ..hasRequiredFields = false
-  ;
+    ..aE<StyleCategories>(6, _omitFieldNames ? '' : 'type',
+        enumValues: StyleCategories.values)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  StyleBase clone() => StyleBase()..mergeFromMessage(this);
+  StyleBase clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  StyleBase copyWith(void Function(StyleBase) updates) => super.copyWith((message) => updates(message as StyleBase)) as StyleBase;
+  StyleBase copyWith(void Function(StyleBase) updates) =>
+      super.copyWith((message) => updates(message as StyleBase)) as StyleBase;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use StyleBase() / StyleBase.new instead')
   static StyleBase create() => StyleBase._();
+  static $pb.GeneratedMessage $_createMessage() => StyleBase._();
   @$core.override
-  StyleBase createEmptyInstance() => create();
-  static $pb.PbList<StyleBase> createRepeated() => $pb.PbList<StyleBase>();
+  StyleBase createEmptyInstance() => StyleBase._();
   @$core.pragma('dart2js:noInline')
-  static StyleBase getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StyleBase>(create);
+  static StyleBase getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StyleBase>(StyleBase.$_createMessage);
   static StyleBase? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -147,7 +157,7 @@ class StyleType extends $pb.GeneratedMessage {
     $core.String? appearance,
     $core.String? overallImpression,
   }) {
-    final result = create();
+    final result = StyleType._();
     if (base != null) result.base = base;
     if (id != null) result.id = id;
     if (aroma != null) result.aroma = aroma;
@@ -161,7 +171,8 @@ class StyleType extends $pb.GeneratedMessage {
     if (examples != null) result.examples = examples;
     if (carbonation != null) result.carbonation = carbonation;
     if (alcoholByVolume != null) result.alcoholByVolume = alcoholByVolume;
-    if (internationalBitternessUnits != null) result.internationalBitternessUnits = internationalBitternessUnits;
+    if (internationalBitternessUnits != null)
+      result.internationalBitternessUnits = internationalBitternessUnits;
     if (appearance != null) result.appearance = appearance;
     if (overallImpression != null) result.overallImpression = overallImpression;
     return result;
@@ -169,44 +180,61 @@ class StyleType extends $pb.GeneratedMessage {
 
   StyleType._();
 
-  factory StyleType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory StyleType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory StyleType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      StyleType()..mergeFromBuffer(data, registry);
+  factory StyleType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      StyleType()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'StyleType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<StyleBase>(1, _omitFieldNames ? '' : 'base', subBuilder: StyleBase.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StyleType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: StyleType.$_createMessage)
+    ..aOM<StyleBase>(1, _omitFieldNames ? '' : 'base',
+        subBuilder: StyleBase.$_createMessage)
     ..aOS(2, _omitFieldNames ? '' : 'id')
     ..aOS(3, _omitFieldNames ? '' : 'aroma')
     ..aOS(4, _omitFieldNames ? '' : 'ingredients')
     ..aOS(5, _omitFieldNames ? '' : 'notes')
     ..aOS(6, _omitFieldNames ? '' : 'flavor')
     ..aOS(7, _omitFieldNames ? '' : 'mouthfeel')
-    ..aOM<$0.GravityRangeType>(8, _omitFieldNames ? '' : 'finalGravity', subBuilder: $0.GravityRangeType.create)
-    ..aOM<$0.ColorRangeType>(9, _omitFieldNames ? '' : 'color', subBuilder: $0.ColorRangeType.create)
-    ..aOM<$0.GravityRangeType>(10, _omitFieldNames ? '' : 'originalGravity', subBuilder: $0.GravityRangeType.create)
+    ..aOM<$0.GravityRangeType>(8, _omitFieldNames ? '' : 'finalGravity',
+        subBuilder: $0.GravityRangeType.$_createMessage)
+    ..aOM<$0.ColorRangeType>(9, _omitFieldNames ? '' : 'color',
+        subBuilder: $0.ColorRangeType.$_createMessage)
+    ..aOM<$0.GravityRangeType>(10, _omitFieldNames ? '' : 'originalGravity',
+        subBuilder: $0.GravityRangeType.$_createMessage)
     ..aOS(11, _omitFieldNames ? '' : 'examples')
-    ..aOM<$0.CarbonationRangeType>(12, _omitFieldNames ? '' : 'carbonation', subBuilder: $0.CarbonationRangeType.create)
-    ..aOM<$0.PercentRangeType>(13, _omitFieldNames ? '' : 'alcoholByVolume', subBuilder: $0.PercentRangeType.create)
-    ..aOM<$0.BitternessRangeType>(14, _omitFieldNames ? '' : 'internationalBitternessUnits', subBuilder: $0.BitternessRangeType.create)
+    ..aOM<$0.CarbonationRangeType>(12, _omitFieldNames ? '' : 'carbonation',
+        subBuilder: $0.CarbonationRangeType.$_createMessage)
+    ..aOM<$0.PercentRangeType>(13, _omitFieldNames ? '' : 'alcoholByVolume',
+        subBuilder: $0.PercentRangeType.$_createMessage)
+    ..aOM<$0.BitternessRangeType>(
+        14, _omitFieldNames ? '' : 'internationalBitternessUnits',
+        subBuilder: $0.BitternessRangeType.$_createMessage)
     ..aOS(15, _omitFieldNames ? '' : 'appearance')
     ..aOS(16, _omitFieldNames ? '' : 'overallImpression')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  StyleType clone() => StyleType()..mergeFromMessage(this);
+  StyleType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  StyleType copyWith(void Function(StyleType) updates) => super.copyWith((message) => updates(message as StyleType)) as StyleType;
+  StyleType copyWith(void Function(StyleType) updates) =>
+      super.copyWith((message) => updates(message as StyleType)) as StyleType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use StyleType() / StyleType.new instead')
   static StyleType create() => StyleType._();
+  static $pb.GeneratedMessage $_createMessage() => StyleType._();
   @$core.override
-  StyleType createEmptyInstance() => create();
-  static $pb.PbList<StyleType> createRepeated() => $pb.PbList<StyleType>();
+  StyleType createEmptyInstance() => StyleType._();
   @$core.pragma('dart2js:noInline')
-  static StyleType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StyleType>(create);
+  static StyleType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StyleType>(StyleType.$_createMessage);
   static StyleType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -341,7 +369,8 @@ class StyleType extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   $0.BitternessRangeType get internationalBitternessUnits => $_getN(13);
   @$pb.TagNumber(14)
-  set internationalBitternessUnits($0.BitternessRangeType value) => $_setField(14, value);
+  set internationalBitternessUnits($0.BitternessRangeType value) =>
+      $_setField(14, value);
   @$pb.TagNumber(14)
   $core.bool hasInternationalBitternessUnits() => $_has(13);
   @$pb.TagNumber(14)
@@ -373,36 +402,48 @@ class RecipeStyleType extends $pb.GeneratedMessage {
   factory RecipeStyleType({
     StyleBase? base,
   }) {
-    final result = create();
+    final result = RecipeStyleType._();
     if (base != null) result.base = base;
     return result;
   }
 
   RecipeStyleType._();
 
-  factory RecipeStyleType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory RecipeStyleType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory RecipeStyleType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      RecipeStyleType()..mergeFromBuffer(data, registry);
+  factory RecipeStyleType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      RecipeStyleType()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RecipeStyleType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<StyleBase>(1, _omitFieldNames ? '' : 'base', subBuilder: StyleBase.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RecipeStyleType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: RecipeStyleType.$_createMessage)
+    ..aOM<StyleBase>(1, _omitFieldNames ? '' : 'base',
+        subBuilder: StyleBase.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RecipeStyleType clone() => RecipeStyleType()..mergeFromMessage(this);
+  RecipeStyleType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RecipeStyleType copyWith(void Function(RecipeStyleType) updates) => super.copyWith((message) => updates(message as RecipeStyleType)) as RecipeStyleType;
+  RecipeStyleType copyWith(void Function(RecipeStyleType) updates) =>
+      super.copyWith((message) => updates(message as RecipeStyleType))
+          as RecipeStyleType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use RecipeStyleType() / RecipeStyleType.new instead')
   static RecipeStyleType create() => RecipeStyleType._();
+  static $pb.GeneratedMessage $_createMessage() => RecipeStyleType._();
   @$core.override
-  RecipeStyleType createEmptyInstance() => create();
-  static $pb.PbList<RecipeStyleType> createRepeated() => $pb.PbList<RecipeStyleType>();
+  RecipeStyleType createEmptyInstance() => RecipeStyleType._();
   @$core.pragma('dart2js:noInline')
-  static RecipeStyleType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RecipeStyleType>(create);
+  static RecipeStyleType getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RecipeStyleType>(
+          RecipeStyleType.$_createMessage);
   static RecipeStyleType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -417,6 +458,7 @@ class RecipeStyleType extends $pb.GeneratedMessage {
   StyleBase ensureBase() => $_ensure(0);
 }
 
-
-const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

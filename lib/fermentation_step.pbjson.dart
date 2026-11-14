@@ -8,7 +8,8 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names, unused_import
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -20,17 +21,73 @@ const FermentationStepType$json = {
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
     {'1': 'name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'name'},
-    {'1': 'end_temperature', '3': 3, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'endTemperature'},
-    {'1': 'step_time', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.TimeType', '10': 'stepTime'},
+    {
+      '1': 'end_temperature',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TemperatureType',
+      '10': 'endTemperature'
+    },
+    {
+      '1': 'step_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TimeType',
+      '10': 'stepTime'
+    },
     {'1': 'free_rise', '3': 5, '4': 1, '5': 8, '10': 'freeRise'},
-    {'1': 'start_gravity', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'startGravity'},
-    {'1': 'end_gravity', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.GravityType', '10': 'endGravity'},
-    {'1': 'start_ph', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'startPh'},
+    {
+      '1': 'start_gravity',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.GravityType',
+      '10': 'startGravity'
+    },
+    {
+      '1': 'end_gravity',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.GravityType',
+      '10': 'endGravity'
+    },
+    {
+      '1': 'start_ph',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.AcidityType',
+      '10': 'startPh'
+    },
     {'1': 'description', '3': 9, '4': 1, '5': 9, '10': 'description'},
-    {'1': 'start_temperature', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.TemperatureType', '10': 'startTemperature'},
-    {'1': 'end_ph', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.AcidityType', '10': 'endPh'},
+    {
+      '1': 'start_temperature',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.TemperatureType',
+      '10': 'startTemperature'
+    },
+    {
+      '1': 'end_ph',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.AcidityType',
+      '10': 'endPh'
+    },
     {'1': 'vessel', '3': 12, '4': 1, '5': 9, '10': 'vessel'},
-    {'1': 'vessel_pressure', '3': 13, '4': 1, '5': 11, '6': '.beerproto.v1.PressureType', '10': 'vesselPressure'},
+    {
+      '1': 'vessel_pressure',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PressureType',
+      '10': 'vesselPressure'
+    },
   ],
 };
 
@@ -49,4 +106,3 @@ final $typed_data.Uint8List fermentationStepTypeDescriptor = $convert.base64Deco
     'MS5BY2lkaXR5VHlwZVIFZW5kUGgSFgoGdmVzc2VsGAwgASgJUgZ2ZXNzZWwSQwoPdmVzc2VsX3'
     'ByZXNzdXJlGA0gASgLMhouYmVlcnByb3RvLnYxLlByZXNzdXJlVHlwZVIOdmVzc2VsUHJlc3N1'
     'cmU=');
-

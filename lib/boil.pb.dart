@@ -8,7 +8,7 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -31,7 +31,7 @@ class BoilProcedureType extends $pb.GeneratedMessage {
     $core.String? notes,
     $0.TemperatureType? whirlpoolTemperature,
   }) {
-    final result = create();
+    final result = BoilProcedureType._();
     if (id != null) result.id = id;
     if (preBoilSize != null) result.preBoilSize = preBoilSize;
     if (boilTime != null) result.boilTime = boilTime;
@@ -39,42 +39,58 @@ class BoilProcedureType extends $pb.GeneratedMessage {
     if (name != null) result.name = name;
     if (description != null) result.description = description;
     if (notes != null) result.notes = notes;
-    if (whirlpoolTemperature != null) result.whirlpoolTemperature = whirlpoolTemperature;
+    if (whirlpoolTemperature != null)
+      result.whirlpoolTemperature = whirlpoolTemperature;
     return result;
   }
 
   BoilProcedureType._();
 
-  factory BoilProcedureType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory BoilProcedureType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory BoilProcedureType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      BoilProcedureType()..mergeFromBuffer(data, registry);
+  factory BoilProcedureType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      BoilProcedureType()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BoilProcedureType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BoilProcedureType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: BoilProcedureType.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'preBoilSize', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.TimeType>(3, _omitFieldNames ? '' : 'boilTime', subBuilder: $0.TimeType.create)
-    ..pc<$1.BoilStepType>(4, _omitFieldNames ? '' : 'boilSteps', $pb.PbFieldType.PM, subBuilder: $1.BoilStepType.create)
+    ..aOM<$0.VolumeType>(2, _omitFieldNames ? '' : 'preBoilSize',
+        subBuilder: $0.VolumeType.$_createMessage)
+    ..aOM<$0.TimeType>(3, _omitFieldNames ? '' : 'boilTime',
+        subBuilder: $0.TimeType.$_createMessage)
+    ..pPM<$1.BoilStepType>(4, _omitFieldNames ? '' : 'boilSteps',
+        subBuilder: $1.BoilStepType.$_createMessage)
     ..aOS(5, _omitFieldNames ? '' : 'name')
     ..aOS(6, _omitFieldNames ? '' : 'description')
     ..aOS(7, _omitFieldNames ? '' : 'notes')
-    ..aOM<$0.TemperatureType>(8, _omitFieldNames ? '' : 'whirlpoolTemperature', subBuilder: $0.TemperatureType.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$0.TemperatureType>(8, _omitFieldNames ? '' : 'whirlpoolTemperature',
+        subBuilder: $0.TemperatureType.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BoilProcedureType clone() => BoilProcedureType()..mergeFromMessage(this);
+  BoilProcedureType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BoilProcedureType copyWith(void Function(BoilProcedureType) updates) => super.copyWith((message) => updates(message as BoilProcedureType)) as BoilProcedureType;
+  BoilProcedureType copyWith(void Function(BoilProcedureType) updates) =>
+      super.copyWith((message) => updates(message as BoilProcedureType))
+          as BoilProcedureType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use BoilProcedureType() / BoilProcedureType.new instead')
   static BoilProcedureType create() => BoilProcedureType._();
+  static $pb.GeneratedMessage $_createMessage() => BoilProcedureType._();
   @$core.override
-  BoilProcedureType createEmptyInstance() => create();
-  static $pb.PbList<BoilProcedureType> createRepeated() => $pb.PbList<BoilProcedureType>();
+  BoilProcedureType createEmptyInstance() => BoilProcedureType._();
   @$core.pragma('dart2js:noInline')
-  static BoilProcedureType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BoilProcedureType>(create);
+  static BoilProcedureType getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BoilProcedureType>(
+          BoilProcedureType.$_createMessage);
   static BoilProcedureType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -153,6 +169,7 @@ class BoilProcedureType extends $pb.GeneratedMessage {
   $0.TemperatureType ensureWhirlpoolTemperature() => $_ensure(7);
 }
 
-
-const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

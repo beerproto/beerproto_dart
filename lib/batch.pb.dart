@@ -8,13 +8,14 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:protobuf/well_known_types/google/protobuf/timestamp.pb.dart'
+    as $0;
 
-import 'google/protobuf/timestamp.pb.dart' as $0;
 import 'batch.pbenum.dart';
 import 'equipment.pb.dart' as $1;
 import 'measureable_units.pb.dart' as $2;
@@ -45,7 +46,7 @@ class Batch extends $pb.GeneratedMessage {
     $core.double? rating,
     WineStyleType? wineStyle,
   }) {
-    final result = create();
+    final result = Batch._();
     if (id != null) result.id = id;
     if (recipeId != null) result.recipeId = recipeId;
     if (name != null) result.name = name;
@@ -55,9 +56,12 @@ class Batch extends $pb.GeneratedMessage {
     if (brewStep != null) result.brewStep = brewStep;
     if (equipment != null) result.equipment = equipment;
     if (starters != null) result.starters.addAll(starters);
-    if (waterAdjustmentStrategy != null) result.waterAdjustmentStrategy = waterAdjustmentStrategy;
-    if (mashAcidAdditions != null) result.mashAcidAdditions.addAll(mashAcidAdditions);
-    if (fermentationProfile != null) result.fermentationProfile = fermentationProfile;
+    if (waterAdjustmentStrategy != null)
+      result.waterAdjustmentStrategy = waterAdjustmentStrategy;
+    if (mashAcidAdditions != null)
+      result.mashAcidAdditions.addAll(mashAcidAdditions);
+    if (fermentationProfile != null)
+      result.fermentationProfile = fermentationProfile;
     if (measurements != null) result.measurements = measurements;
     if (estimates != null) result.estimates = estimates;
     if (logs != null) result.logs.addAll(logs);
@@ -69,46 +73,67 @@ class Batch extends $pb.GeneratedMessage {
 
   Batch._();
 
-  factory Batch.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory Batch.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory Batch.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Batch()..mergeFromBuffer(data, registry);
+  factory Batch.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Batch()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Batch', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Batch',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: Batch.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'recipeId')
     ..aOS(3, _omitFieldNames ? '' : 'name')
-    ..a<$core.int>(4, _omitFieldNames ? '' : 'batch', $pb.PbFieldType.OU3)
-    ..aOM<$0.Timestamp>(5, _omitFieldNames ? '' : 'date', subBuilder: $0.Timestamp.create)
-    ..e<BatchStatusType>(6, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: BatchStatusType.BATCH_STATUS_TYPE_UNSPECIFIED, valueOf: BatchStatusType.valueOf, enumValues: BatchStatusType.values)
-    ..a<$core.int>(7, _omitFieldNames ? '' : 'brewStep', $pb.PbFieldType.OU3)
-    ..aOM<$1.EquipmentType>(8, _omitFieldNames ? '' : 'equipment', subBuilder: $1.EquipmentType.create)
-    ..pc<Starter>(9, _omitFieldNames ? '' : 'starters', $pb.PbFieldType.PM, subBuilder: Starter.create)
-    ..e<WaterAdjustmentStrategyType>(10, _omitFieldNames ? '' : 'waterAdjustmentStrategy', $pb.PbFieldType.OE, defaultOrMaker: WaterAdjustmentStrategyType.WATER_ADJUSTMENT_STRATEGY_TYPE_UNSPECIFIED, valueOf: WaterAdjustmentStrategyType.valueOf, enumValues: WaterAdjustmentStrategyType.values)
-    ..pc<MashAcidAddition>(11, _omitFieldNames ? '' : 'mashAcidAdditions', $pb.PbFieldType.PM, subBuilder: MashAcidAddition.create)
-    ..aOM<FermentationProfile>(12, _omitFieldNames ? '' : 'fermentationProfile', subBuilder: FermentationProfile.create)
-    ..aOM<Measurements>(13, _omitFieldNames ? '' : 'measurements', subBuilder: Measurements.create)
-    ..aOM<Estimates>(14, _omitFieldNames ? '' : 'estimates', subBuilder: Estimates.create)
-    ..pc<Log>(15, _omitFieldNames ? '' : 'logs', $pb.PbFieldType.PM, subBuilder: Log.create)
+    ..aI(4, _omitFieldNames ? '' : 'batch', fieldType: $pb.PbFieldType.OU3)
+    ..aOM<$0.Timestamp>(5, _omitFieldNames ? '' : 'date',
+        subBuilder: $0.Timestamp.$_createMessage)
+    ..aE<BatchStatusType>(6, _omitFieldNames ? '' : 'status',
+        enumValues: BatchStatusType.values)
+    ..aI(7, _omitFieldNames ? '' : 'brewStep', fieldType: $pb.PbFieldType.OU3)
+    ..aOM<$1.EquipmentType>(8, _omitFieldNames ? '' : 'equipment',
+        subBuilder: $1.EquipmentType.$_createMessage)
+    ..pPM<Starter>(9, _omitFieldNames ? '' : 'starters',
+        subBuilder: Starter.$_createMessage)
+    ..aE<WaterAdjustmentStrategyType>(
+        10, _omitFieldNames ? '' : 'waterAdjustmentStrategy',
+        enumValues: WaterAdjustmentStrategyType.values)
+    ..pPM<MashAcidAddition>(11, _omitFieldNames ? '' : 'mashAcidAdditions',
+        subBuilder: MashAcidAddition.$_createMessage)
+    ..aOM<FermentationProfile>(12, _omitFieldNames ? '' : 'fermentationProfile',
+        subBuilder: FermentationProfile.$_createMessage)
+    ..aOM<Measurements>(13, _omitFieldNames ? '' : 'measurements',
+        subBuilder: Measurements.$_createMessage)
+    ..aOM<Estimates>(14, _omitFieldNames ? '' : 'estimates',
+        subBuilder: Estimates.$_createMessage)
+    ..pPM<Log>(15, _omitFieldNames ? '' : 'logs',
+        subBuilder: Log.$_createMessage)
     ..aOS(16, _omitFieldNames ? '' : 'notes')
-    ..a<$core.double>(17, _omitFieldNames ? '' : 'rating', $pb.PbFieldType.OD)
-    ..e<WineStyleType>(18, _omitFieldNames ? '' : 'wineStyle', $pb.PbFieldType.OE, defaultOrMaker: WineStyleType.WINE_STYLE_TYPE_UNSPECIFIED, valueOf: WineStyleType.valueOf, enumValues: WineStyleType.values)
-    ..hasRequiredFields = false
-  ;
+    ..aD(17, _omitFieldNames ? '' : 'rating')
+    ..aE<WineStyleType>(18, _omitFieldNames ? '' : 'wineStyle',
+        enumValues: WineStyleType.values)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Batch clone() => Batch()..mergeFromMessage(this);
+  Batch clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Batch copyWith(void Function(Batch) updates) => super.copyWith((message) => updates(message as Batch)) as Batch;
+  Batch copyWith(void Function(Batch) updates) =>
+      super.copyWith((message) => updates(message as Batch)) as Batch;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use Batch() / Batch.new instead')
   static Batch create() => Batch._();
+  static $pb.GeneratedMessage $_createMessage() => Batch._();
   @$core.override
-  Batch createEmptyInstance() => create();
-  static $pb.PbList<Batch> createRepeated() => $pb.PbList<Batch>();
+  Batch createEmptyInstance() => Batch._();
   @$core.pragma('dart2js:noInline')
-  static Batch getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Batch>(create);
+  static Batch getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Batch>(Batch.$_createMessage);
   static Batch? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -199,7 +224,8 @@ class Batch extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   WaterAdjustmentStrategyType get waterAdjustmentStrategy => $_getN(9);
   @$pb.TagNumber(10)
-  set waterAdjustmentStrategy(WaterAdjustmentStrategyType value) => $_setField(10, value);
+  set waterAdjustmentStrategy(WaterAdjustmentStrategyType value) =>
+      $_setField(10, value);
   @$pb.TagNumber(10)
   $core.bool hasWaterAdjustmentStrategy() => $_has(9);
   @$pb.TagNumber(10)
@@ -295,7 +321,7 @@ class MashAcidAddition extends $pb.GeneratedMessage {
     $2.VolumeType? volume,
     $0.Timestamp? confirmed,
   }) {
-    final result = create();
+    final result = MashAcidAddition._();
     if (id != null) result.id = id;
     if (acid != null) result.acid = acid;
     if (amount != null) result.amount = amount;
@@ -309,36 +335,53 @@ class MashAcidAddition extends $pb.GeneratedMessage {
 
   MashAcidAddition._();
 
-  factory MashAcidAddition.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory MashAcidAddition.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory MashAcidAddition.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      MashAcidAddition()..mergeFromBuffer(data, registry);
+  factory MashAcidAddition.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      MashAcidAddition()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MashAcidAddition', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MashAcidAddition',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: MashAcidAddition.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..e<$3.AcidType>(2, _omitFieldNames ? '' : 'acid', $pb.PbFieldType.OE, defaultOrMaker: $3.AcidType.ACID_TYPE_UNSPECIFIED, valueOf: $3.AcidType.valueOf, enumValues: $3.AcidType.values)
-    ..a<$core.double>(3, _omitFieldNames ? '' : 'amount', $pb.PbFieldType.OD)
-    ..aOM<$2.AcidityType>(4, _omitFieldNames ? '' : 'targetPh', subBuilder: $2.AcidityType.create)
-    ..aOM<$2.AcidityType>(5, _omitFieldNames ? '' : 'fromPh', subBuilder: $2.AcidityType.create)
-    ..e<MashAcidBasis>(6, _omitFieldNames ? '' : 'basis', $pb.PbFieldType.OE, defaultOrMaker: MashAcidBasis.MASH_ACID_BASIS_UNSPECIFIED, valueOf: MashAcidBasis.valueOf, enumValues: MashAcidBasis.values)
-    ..aOM<$2.VolumeType>(7, _omitFieldNames ? '' : 'volume', subBuilder: $2.VolumeType.create)
-    ..aOM<$0.Timestamp>(8, _omitFieldNames ? '' : 'confirmed', subBuilder: $0.Timestamp.create)
-    ..hasRequiredFields = false
-  ;
+    ..aE<$3.AcidType>(2, _omitFieldNames ? '' : 'acid',
+        enumValues: $3.AcidType.values)
+    ..aD(3, _omitFieldNames ? '' : 'amount')
+    ..aOM<$2.AcidityType>(4, _omitFieldNames ? '' : 'targetPh',
+        subBuilder: $2.AcidityType.$_createMessage)
+    ..aOM<$2.AcidityType>(5, _omitFieldNames ? '' : 'fromPh',
+        subBuilder: $2.AcidityType.$_createMessage)
+    ..aE<MashAcidBasis>(6, _omitFieldNames ? '' : 'basis',
+        enumValues: MashAcidBasis.values)
+    ..aOM<$2.VolumeType>(7, _omitFieldNames ? '' : 'volume',
+        subBuilder: $2.VolumeType.$_createMessage)
+    ..aOM<$0.Timestamp>(8, _omitFieldNames ? '' : 'confirmed',
+        subBuilder: $0.Timestamp.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MashAcidAddition clone() => MashAcidAddition()..mergeFromMessage(this);
+  MashAcidAddition clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  MashAcidAddition copyWith(void Function(MashAcidAddition) updates) => super.copyWith((message) => updates(message as MashAcidAddition)) as MashAcidAddition;
+  MashAcidAddition copyWith(void Function(MashAcidAddition) updates) =>
+      super.copyWith((message) => updates(message as MashAcidAddition))
+          as MashAcidAddition;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use MashAcidAddition() / MashAcidAddition.new instead')
   static MashAcidAddition create() => MashAcidAddition._();
+  static $pb.GeneratedMessage $_createMessage() => MashAcidAddition._();
   @$core.override
-  MashAcidAddition createEmptyInstance() => create();
-  static $pb.PbList<MashAcidAddition> createRepeated() => $pb.PbList<MashAcidAddition>();
+  MashAcidAddition createEmptyInstance() => MashAcidAddition._();
   @$core.pragma('dart2js:noInline')
-  static MashAcidAddition getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MashAcidAddition>(create);
+  static MashAcidAddition getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MashAcidAddition>(
+          MashAcidAddition.$_createMessage);
   static MashAcidAddition? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -441,7 +484,7 @@ class Starter extends $pb.GeneratedMessage {
     $0.Timestamp? yeastDate,
     CulturePitchRate? pitch,
   }) {
-    final result = create();
+    final result = Starter._();
     if (id != null) result.id = id;
     if (steps != null) result.steps.addAll(steps);
     if (cultureId != null) result.cultureId = cultureId;
@@ -453,34 +496,47 @@ class Starter extends $pb.GeneratedMessage {
 
   Starter._();
 
-  factory Starter.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory Starter.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory Starter.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Starter()..mergeFromBuffer(data, registry);
+  factory Starter.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Starter()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Starter', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Starter',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: Starter.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..pc<StarterStep>(2, _omitFieldNames ? '' : 'steps', $pb.PbFieldType.PM, subBuilder: StarterStep.create)
+    ..pPM<StarterStep>(2, _omitFieldNames ? '' : 'steps',
+        subBuilder: StarterStep.$_createMessage)
     ..aOS(3, _omitFieldNames ? '' : 'cultureId')
-    ..aOM<$2.PitchRateType>(4, _omitFieldNames ? '' : 'pitchRate', subBuilder: $2.PitchRateType.create)
-    ..aOM<$0.Timestamp>(5, _omitFieldNames ? '' : 'yeastDate', subBuilder: $0.Timestamp.create)
-    ..aOM<CulturePitchRate>(6, _omitFieldNames ? '' : 'pitch', subBuilder: CulturePitchRate.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$2.PitchRateType>(4, _omitFieldNames ? '' : 'pitchRate',
+        subBuilder: $2.PitchRateType.$_createMessage)
+    ..aOM<$0.Timestamp>(5, _omitFieldNames ? '' : 'yeastDate',
+        subBuilder: $0.Timestamp.$_createMessage)
+    ..aOM<CulturePitchRate>(6, _omitFieldNames ? '' : 'pitch',
+        subBuilder: CulturePitchRate.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Starter clone() => Starter()..mergeFromMessage(this);
+  Starter clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Starter copyWith(void Function(Starter) updates) => super.copyWith((message) => updates(message as Starter)) as Starter;
+  Starter copyWith(void Function(Starter) updates) =>
+      super.copyWith((message) => updates(message as Starter)) as Starter;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use Starter() / Starter.new instead')
   static Starter create() => Starter._();
+  static $pb.GeneratedMessage $_createMessage() => Starter._();
   @$core.override
-  Starter createEmptyInstance() => create();
-  static $pb.PbList<Starter> createRepeated() => $pb.PbList<Starter>();
+  Starter createEmptyInstance() => Starter._();
   @$core.pragma('dart2js:noInline')
-  static Starter getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Starter>(create);
+  static Starter getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Starter>(Starter.$_createMessage);
   static Starter? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -549,7 +605,7 @@ class StarterStep extends $pb.GeneratedMessage {
     $2.GravityType? gravity,
     GrowthModel? model,
   }) {
-    final result = create();
+    final result = StarterStep._();
     if (id != null) result.id = id;
     if (starterSize != null) result.starterSize = starterSize;
     if (gravity != null) result.gravity = gravity;
@@ -559,32 +615,46 @@ class StarterStep extends $pb.GeneratedMessage {
 
   StarterStep._();
 
-  factory StarterStep.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory StarterStep.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory StarterStep.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      StarterStep()..mergeFromBuffer(data, registry);
+  factory StarterStep.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      StarterStep()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'StarterStep', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StarterStep',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: StarterStep.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOM<$2.VolumeType>(2, _omitFieldNames ? '' : 'starterSize', subBuilder: $2.VolumeType.create)
-    ..aOM<$2.GravityType>(3, _omitFieldNames ? '' : 'gravity', subBuilder: $2.GravityType.create)
-    ..e<GrowthModel>(4, _omitFieldNames ? '' : 'model', $pb.PbFieldType.OE, defaultOrMaker: GrowthModel.GROWTH_MODEL_UNSPECIFIED, valueOf: GrowthModel.valueOf, enumValues: GrowthModel.values)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$2.VolumeType>(2, _omitFieldNames ? '' : 'starterSize',
+        subBuilder: $2.VolumeType.$_createMessage)
+    ..aOM<$2.GravityType>(3, _omitFieldNames ? '' : 'gravity',
+        subBuilder: $2.GravityType.$_createMessage)
+    ..aE<GrowthModel>(4, _omitFieldNames ? '' : 'model',
+        enumValues: GrowthModel.values)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  StarterStep clone() => StarterStep()..mergeFromMessage(this);
+  StarterStep clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  StarterStep copyWith(void Function(StarterStep) updates) => super.copyWith((message) => updates(message as StarterStep)) as StarterStep;
+  StarterStep copyWith(void Function(StarterStep) updates) =>
+      super.copyWith((message) => updates(message as StarterStep))
+          as StarterStep;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use StarterStep() / StarterStep.new instead')
   static StarterStep create() => StarterStep._();
+  static $pb.GeneratedMessage $_createMessage() => StarterStep._();
   @$core.override
-  StarterStep createEmptyInstance() => create();
-  static $pb.PbList<StarterStep> createRepeated() => $pb.PbList<StarterStep>();
+  StarterStep createEmptyInstance() => StarterStep._();
   @$core.pragma('dart2js:noInline')
-  static StarterStep getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StarterStep>(create);
+  static StarterStep getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StarterStep>(
+          StarterStep.$_createMessage);
   static StarterStep? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -636,7 +706,7 @@ class StepRate extends $pb.GeneratedMessage {
     $2.CellCountType? endingCount,
     $2.PitchRateType? pitchRate,
   }) {
-    final result = create();
+    final result = StepRate._();
     if (dme != null) result.dme = dme;
     if (growthRate != null) result.growthRate = growthRate;
     if (endingCount != null) result.endingCount = endingCount;
@@ -646,32 +716,44 @@ class StepRate extends $pb.GeneratedMessage {
 
   StepRate._();
 
-  factory StepRate.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory StepRate.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory StepRate.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      StepRate()..mergeFromBuffer(data, registry);
+  factory StepRate.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      StepRate()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'StepRate', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<$2.MassType>(1, _omitFieldNames ? '' : 'dme', subBuilder: $2.MassType.create)
-    ..a<$core.double>(2, _omitFieldNames ? '' : 'growthRate', $pb.PbFieldType.OD)
-    ..aOM<$2.CellCountType>(3, _omitFieldNames ? '' : 'endingCount', subBuilder: $2.CellCountType.create)
-    ..aOM<$2.PitchRateType>(4, _omitFieldNames ? '' : 'pitchRate', subBuilder: $2.PitchRateType.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StepRate',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: StepRate.$_createMessage)
+    ..aOM<$2.MassType>(1, _omitFieldNames ? '' : 'dme',
+        subBuilder: $2.MassType.$_createMessage)
+    ..aD(2, _omitFieldNames ? '' : 'growthRate')
+    ..aOM<$2.CellCountType>(3, _omitFieldNames ? '' : 'endingCount',
+        subBuilder: $2.CellCountType.$_createMessage)
+    ..aOM<$2.PitchRateType>(4, _omitFieldNames ? '' : 'pitchRate',
+        subBuilder: $2.PitchRateType.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  StepRate clone() => StepRate()..mergeFromMessage(this);
+  StepRate clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  StepRate copyWith(void Function(StepRate) updates) => super.copyWith((message) => updates(message as StepRate)) as StepRate;
+  StepRate copyWith(void Function(StepRate) updates) =>
+      super.copyWith((message) => updates(message as StepRate)) as StepRate;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use StepRate() / StepRate.new instead')
   static StepRate create() => StepRate._();
+  static $pb.GeneratedMessage $_createMessage() => StepRate._();
   @$core.override
-  StepRate createEmptyInstance() => create();
-  static $pb.PbList<StepRate> createRepeated() => $pb.PbList<StepRate>();
+  StepRate createEmptyInstance() => StepRate._();
   @$core.pragma('dart2js:noInline')
-  static StepRate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StepRate>(create);
+  static StepRate getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StepRate>(StepRate.$_createMessage);
   static StepRate? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -725,8 +807,9 @@ class CulturePitchRate extends $pb.GeneratedMessage {
     $2.PitchRateType? pitchRateAsIs,
     $2.PercentType? viability,
   }) {
-    final result = create();
-    if (targetPitchRateCells != null) result.targetPitchRateCells = targetPitchRateCells;
+    final result = CulturePitchRate._();
+    if (targetPitchRateCells != null)
+      result.targetPitchRateCells = targetPitchRateCells;
     if (cellsAvailable != null) result.cellsAvailable = cellsAvailable;
     if (difference != null) result.difference = difference;
     if (pitchRateAsIs != null) result.pitchRateAsIs = pitchRateAsIs;
@@ -736,33 +819,49 @@ class CulturePitchRate extends $pb.GeneratedMessage {
 
   CulturePitchRate._();
 
-  factory CulturePitchRate.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory CulturePitchRate.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory CulturePitchRate.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      CulturePitchRate()..mergeFromBuffer(data, registry);
+  factory CulturePitchRate.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      CulturePitchRate()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CulturePitchRate', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<$2.CellCountType>(1, _omitFieldNames ? '' : 'targetPitchRateCells', subBuilder: $2.CellCountType.create)
-    ..aOM<$2.CellCountType>(2, _omitFieldNames ? '' : 'cellsAvailable', subBuilder: $2.CellCountType.create)
-    ..aOM<$2.CellCountType>(3, _omitFieldNames ? '' : 'difference', subBuilder: $2.CellCountType.create)
-    ..aOM<$2.PitchRateType>(4, _omitFieldNames ? '' : 'pitchRateAsIs', subBuilder: $2.PitchRateType.create)
-    ..aOM<$2.PercentType>(5, _omitFieldNames ? '' : 'viability', subBuilder: $2.PercentType.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CulturePitchRate',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: CulturePitchRate.$_createMessage)
+    ..aOM<$2.CellCountType>(1, _omitFieldNames ? '' : 'targetPitchRateCells',
+        subBuilder: $2.CellCountType.$_createMessage)
+    ..aOM<$2.CellCountType>(2, _omitFieldNames ? '' : 'cellsAvailable',
+        subBuilder: $2.CellCountType.$_createMessage)
+    ..aOM<$2.CellCountType>(3, _omitFieldNames ? '' : 'difference',
+        subBuilder: $2.CellCountType.$_createMessage)
+    ..aOM<$2.PitchRateType>(4, _omitFieldNames ? '' : 'pitchRateAsIs',
+        subBuilder: $2.PitchRateType.$_createMessage)
+    ..aOM<$2.PercentType>(5, _omitFieldNames ? '' : 'viability',
+        subBuilder: $2.PercentType.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CulturePitchRate clone() => CulturePitchRate()..mergeFromMessage(this);
+  CulturePitchRate clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CulturePitchRate copyWith(void Function(CulturePitchRate) updates) => super.copyWith((message) => updates(message as CulturePitchRate)) as CulturePitchRate;
+  CulturePitchRate copyWith(void Function(CulturePitchRate) updates) =>
+      super.copyWith((message) => updates(message as CulturePitchRate))
+          as CulturePitchRate;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use CulturePitchRate() / CulturePitchRate.new instead')
   static CulturePitchRate create() => CulturePitchRate._();
+  static $pb.GeneratedMessage $_createMessage() => CulturePitchRate._();
   @$core.override
-  CulturePitchRate createEmptyInstance() => create();
-  static $pb.PbList<CulturePitchRate> createRepeated() => $pb.PbList<CulturePitchRate>();
+  CulturePitchRate createEmptyInstance() => CulturePitchRate._();
   @$core.pragma('dart2js:noInline')
-  static CulturePitchRate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CulturePitchRate>(create);
+  static CulturePitchRate getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CulturePitchRate>(
+          CulturePitchRate.$_createMessage);
   static CulturePitchRate? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -835,7 +934,7 @@ class Log extends $pb.GeneratedMessage {
     $2.TemperatureType? temperature,
     Taste? taste,
   }) {
-    final result = create();
+    final result = Log._();
     if (id != null) result.id = id;
     if (date != null) result.date = date;
     if (notes != null) result.notes = notes;
@@ -848,35 +947,49 @@ class Log extends $pb.GeneratedMessage {
 
   Log._();
 
-  factory Log.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory Log.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory Log.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Log()..mergeFromBuffer(data, registry);
+  factory Log.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Log()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Log', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Log',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: Log.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'date', subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'date',
+        subBuilder: $0.Timestamp.$_createMessage)
     ..aOS(3, _omitFieldNames ? '' : 'notes')
-    ..e<BatchStatusType>(4, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: BatchStatusType.BATCH_STATUS_TYPE_UNSPECIFIED, valueOf: BatchStatusType.valueOf, enumValues: BatchStatusType.values)
-    ..aOM<$2.GravityType>(5, _omitFieldNames ? '' : 'gravity', subBuilder: $2.GravityType.create)
-    ..aOM<$2.TemperatureType>(6, _omitFieldNames ? '' : 'temperature', subBuilder: $2.TemperatureType.create)
-    ..aOM<Taste>(7, _omitFieldNames ? '' : 'taste', subBuilder: Taste.create)
-    ..hasRequiredFields = false
-  ;
+    ..aE<BatchStatusType>(4, _omitFieldNames ? '' : 'status',
+        enumValues: BatchStatusType.values)
+    ..aOM<$2.GravityType>(5, _omitFieldNames ? '' : 'gravity',
+        subBuilder: $2.GravityType.$_createMessage)
+    ..aOM<$2.TemperatureType>(6, _omitFieldNames ? '' : 'temperature',
+        subBuilder: $2.TemperatureType.$_createMessage)
+    ..aOM<Taste>(7, _omitFieldNames ? '' : 'taste',
+        subBuilder: Taste.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Log clone() => Log()..mergeFromMessage(this);
+  Log clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Log copyWith(void Function(Log) updates) => super.copyWith((message) => updates(message as Log)) as Log;
+  Log copyWith(void Function(Log) updates) =>
+      super.copyWith((message) => updates(message as Log)) as Log;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use Log() / Log.new instead')
   static Log create() => Log._();
+  static $pb.GeneratedMessage $_createMessage() => Log._();
   @$core.override
-  Log createEmptyInstance() => create();
-  static $pb.PbList<Log> createRepeated() => $pb.PbList<Log>();
+  Log createEmptyInstance() => Log._();
   @$core.pragma('dart2js:noInline')
-  static Log getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Log>(create);
+  static Log getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Log>(Log.$_createMessage);
   static Log? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -977,7 +1090,7 @@ class Taste extends $pb.GeneratedMessage {
     $core.double? body,
     $core.double? aroma,
   }) {
-    final result = create();
+    final result = Taste._();
     if (rating != null) result.rating = rating;
     if (notes != null) result.notes = notes;
     if (bitterness != null) result.bitterness = bitterness;
@@ -989,34 +1102,43 @@ class Taste extends $pb.GeneratedMessage {
 
   Taste._();
 
-  factory Taste.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory Taste.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory Taste.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Taste()..mergeFromBuffer(data, registry);
+  factory Taste.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Taste()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Taste', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..a<$core.double>(1, _omitFieldNames ? '' : 'rating', $pb.PbFieldType.OD)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Taste',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: Taste.$_createMessage)
+    ..aD(1, _omitFieldNames ? '' : 'rating')
     ..aOS(2, _omitFieldNames ? '' : 'notes')
-    ..a<$core.double>(3, _omitFieldNames ? '' : 'bitterness', $pb.PbFieldType.OD)
-    ..a<$core.double>(4, _omitFieldNames ? '' : 'sweetness', $pb.PbFieldType.OD)
-    ..a<$core.double>(5, _omitFieldNames ? '' : 'body', $pb.PbFieldType.OD)
-    ..a<$core.double>(6, _omitFieldNames ? '' : 'aroma', $pb.PbFieldType.OD)
-    ..hasRequiredFields = false
-  ;
+    ..aD(3, _omitFieldNames ? '' : 'bitterness')
+    ..aD(4, _omitFieldNames ? '' : 'sweetness')
+    ..aD(5, _omitFieldNames ? '' : 'body')
+    ..aD(6, _omitFieldNames ? '' : 'aroma')
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Taste clone() => Taste()..mergeFromMessage(this);
+  Taste clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Taste copyWith(void Function(Taste) updates) => super.copyWith((message) => updates(message as Taste)) as Taste;
+  Taste copyWith(void Function(Taste) updates) =>
+      super.copyWith((message) => updates(message as Taste)) as Taste;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use Taste() / Taste.new instead')
   static Taste create() => Taste._();
+  static $pb.GeneratedMessage $_createMessage() => Taste._();
   @$core.override
-  Taste createEmptyInstance() => create();
-  static $pb.PbList<Taste> createRepeated() => $pb.PbList<Taste>();
+  Taste createEmptyInstance() => Taste._();
   @$core.pragma('dart2js:noInline')
-  static Taste getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Taste>(create);
+  static Taste getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Taste>(Taste.$_createMessage);
   static Taste? _defaultInstance;
 
   /// Overall mark, on the same scale as beerproto.TasteType.rating so the two
@@ -1086,7 +1208,7 @@ class FermentationProfile extends $pb.GeneratedMessage {
     $0.Timestamp? fermentationStart,
     $0.Timestamp? bottlingDate,
   }) {
-    final result = create();
+    final result = FermentationProfile._();
     if (fermentationStart != null) result.fermentationStart = fermentationStart;
     if (bottlingDate != null) result.bottlingDate = bottlingDate;
     return result;
@@ -1094,30 +1216,44 @@ class FermentationProfile extends $pb.GeneratedMessage {
 
   FermentationProfile._();
 
-  factory FermentationProfile.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory FermentationProfile.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory FermentationProfile.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      FermentationProfile()..mergeFromBuffer(data, registry);
+  factory FermentationProfile.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      FermentationProfile()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FermentationProfile', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'fermentationStart', subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'bottlingDate', subBuilder: $0.Timestamp.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FermentationProfile',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: FermentationProfile.$_createMessage)
+    ..aOM<$0.Timestamp>(1, _omitFieldNames ? '' : 'fermentationStart',
+        subBuilder: $0.Timestamp.$_createMessage)
+    ..aOM<$0.Timestamp>(2, _omitFieldNames ? '' : 'bottlingDate',
+        subBuilder: $0.Timestamp.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentationProfile clone() => FermentationProfile()..mergeFromMessage(this);
+  FermentationProfile clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentationProfile copyWith(void Function(FermentationProfile) updates) => super.copyWith((message) => updates(message as FermentationProfile)) as FermentationProfile;
+  FermentationProfile copyWith(void Function(FermentationProfile) updates) =>
+      super.copyWith((message) => updates(message as FermentationProfile))
+          as FermentationProfile;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core
+      .Deprecated('Use FermentationProfile() / FermentationProfile.new instead')
   static FermentationProfile create() => FermentationProfile._();
+  static $pb.GeneratedMessage $_createMessage() => FermentationProfile._();
   @$core.override
-  FermentationProfile createEmptyInstance() => create();
-  static $pb.PbList<FermentationProfile> createRepeated() => $pb.PbList<FermentationProfile>();
+  FermentationProfile createEmptyInstance() => FermentationProfile._();
   @$core.pragma('dart2js:noInline')
-  static FermentationProfile getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FermentationProfile>(create);
+  static FermentationProfile getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FermentationProfile>(
+          FermentationProfile.$_createMessage);
   static FermentationProfile? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1178,10 +1314,11 @@ class Measurements extends $pb.GeneratedMessage {
     $2.TemperatureType? carbonationTemperature,
     $2.TitratableAcidityType? titratableAcidity,
   }) {
-    final result = create();
+    final result = Measurements._();
     if (boilVolume != null) result.boilVolume = boilVolume;
     if (preBoilVolume != null) result.preBoilVolume = preBoilVolume;
-    if (postBoilKettleVolume != null) result.postBoilKettleVolume = postBoilKettleVolume;
+    if (postBoilKettleVolume != null)
+      result.postBoilKettleVolume = postBoilKettleVolume;
     if (batchVolume != null) result.batchVolume = batchVolume;
     if (fermenterVolume != null) result.fermenterVolume = fermenterVolume;
     if (fermenterTopup != null) result.fermenterTopup = fermenterTopup;
@@ -1193,10 +1330,12 @@ class Measurements extends $pb.GeneratedMessage {
     if (postBoilGravity != null) result.postBoilGravity = postBoilGravity;
     if (originalGravity != null) result.originalGravity = originalGravity;
     if (finalGravity != null) result.finalGravity = finalGravity;
-    if (conversionEfficiency != null) result.conversionEfficiency = conversionEfficiency;
+    if (conversionEfficiency != null)
+      result.conversionEfficiency = conversionEfficiency;
     if (lauterEfficiency != null) result.lauterEfficiency = lauterEfficiency;
     if (mashEfficiency != null) result.mashEfficiency = mashEfficiency;
-    if (brewhouseEfficiency != null) result.brewhouseEfficiency = brewhouseEfficiency;
+    if (brewhouseEfficiency != null)
+      result.brewhouseEfficiency = brewhouseEfficiency;
     if (alcoholByVolume != null) result.alcoholByVolume = alcoholByVolume;
     if (attenuation != null) result.attenuation = attenuation;
     if (color != null) result.color = color;
@@ -1204,62 +1343,103 @@ class Measurements extends $pb.GeneratedMessage {
     if (mashPh != null) result.mashPh = mashPh;
     if (beerPh != null) result.beerPh = beerPh;
     if (boilTime != null) result.boilTime = boilTime;
-    if (carbonationTemperature != null) result.carbonationTemperature = carbonationTemperature;
+    if (carbonationTemperature != null)
+      result.carbonationTemperature = carbonationTemperature;
     if (titratableAcidity != null) result.titratableAcidity = titratableAcidity;
     return result;
   }
 
   Measurements._();
 
-  factory Measurements.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory Measurements.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory Measurements.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Measurements()..mergeFromBuffer(data, registry);
+  factory Measurements.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Measurements()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Measurements', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<$2.VolumeType>(1, _omitFieldNames ? '' : 'boilVolume', subBuilder: $2.VolumeType.create)
-    ..aOM<$2.VolumeType>(2, _omitFieldNames ? '' : 'preBoilVolume', subBuilder: $2.VolumeType.create)
-    ..aOM<$2.VolumeType>(3, _omitFieldNames ? '' : 'postBoilKettleVolume', subBuilder: $2.VolumeType.create)
-    ..aOM<$2.VolumeType>(4, _omitFieldNames ? '' : 'batchVolume', subBuilder: $2.VolumeType.create)
-    ..aOM<$2.VolumeType>(5, _omitFieldNames ? '' : 'fermenterVolume', subBuilder: $2.VolumeType.create)
-    ..aOM<$2.VolumeType>(6, _omitFieldNames ? '' : 'fermenterTopup', subBuilder: $2.VolumeType.create)
-    ..aOM<$2.VolumeType>(7, _omitFieldNames ? '' : 'bottlingVolume', subBuilder: $2.VolumeType.create)
-    ..aOM<$2.VolumeType>(8, _omitFieldNames ? '' : 'packagingVolume', subBuilder: $2.VolumeType.create)
-    ..aOM<$2.VolumeType>(9, _omitFieldNames ? '' : 'boilOffPerHour', subBuilder: $2.VolumeType.create)
-    ..aOM<$2.GravityType>(10, _omitFieldNames ? '' : 'firstWortGravity', subBuilder: $2.GravityType.create)
-    ..aOM<$2.GravityType>(11, _omitFieldNames ? '' : 'preBoilGravity', subBuilder: $2.GravityType.create)
-    ..aOM<$2.GravityType>(12, _omitFieldNames ? '' : 'postBoilGravity', subBuilder: $2.GravityType.create)
-    ..aOM<$2.GravityType>(13, _omitFieldNames ? '' : 'originalGravity', subBuilder: $2.GravityType.create)
-    ..aOM<$2.GravityType>(14, _omitFieldNames ? '' : 'finalGravity', subBuilder: $2.GravityType.create)
-    ..aOM<$2.PercentType>(15, _omitFieldNames ? '' : 'conversionEfficiency', subBuilder: $2.PercentType.create)
-    ..aOM<$2.PercentType>(16, _omitFieldNames ? '' : 'lauterEfficiency', subBuilder: $2.PercentType.create)
-    ..aOM<$2.PercentType>(17, _omitFieldNames ? '' : 'mashEfficiency', subBuilder: $2.PercentType.create)
-    ..aOM<$2.PercentType>(18, _omitFieldNames ? '' : 'brewhouseEfficiency', subBuilder: $2.PercentType.create)
-    ..aOM<$2.PercentType>(19, _omitFieldNames ? '' : 'alcoholByVolume', subBuilder: $2.PercentType.create)
-    ..aOM<$2.PercentType>(20, _omitFieldNames ? '' : 'attenuation', subBuilder: $2.PercentType.create)
-    ..aOM<$2.ColorType>(21, _omitFieldNames ? '' : 'color', subBuilder: $2.ColorType.create)
-    ..aOM<$2.BitternessType>(22, _omitFieldNames ? '' : 'bitterness', subBuilder: $2.BitternessType.create)
-    ..aOM<$2.AcidityType>(23, _omitFieldNames ? '' : 'mashPh', subBuilder: $2.AcidityType.create)
-    ..aOM<$2.AcidityType>(24, _omitFieldNames ? '' : 'beerPh', subBuilder: $2.AcidityType.create)
-    ..aOM<$2.TimeType>(25, _omitFieldNames ? '' : 'boilTime', subBuilder: $2.TimeType.create)
-    ..aOM<$2.TemperatureType>(26, _omitFieldNames ? '' : 'carbonationTemperature', subBuilder: $2.TemperatureType.create)
-    ..aOM<$2.TitratableAcidityType>(27, _omitFieldNames ? '' : 'titratableAcidity', subBuilder: $2.TitratableAcidityType.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Measurements',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: Measurements.$_createMessage)
+    ..aOM<$2.VolumeType>(1, _omitFieldNames ? '' : 'boilVolume',
+        subBuilder: $2.VolumeType.$_createMessage)
+    ..aOM<$2.VolumeType>(2, _omitFieldNames ? '' : 'preBoilVolume',
+        subBuilder: $2.VolumeType.$_createMessage)
+    ..aOM<$2.VolumeType>(3, _omitFieldNames ? '' : 'postBoilKettleVolume',
+        subBuilder: $2.VolumeType.$_createMessage)
+    ..aOM<$2.VolumeType>(4, _omitFieldNames ? '' : 'batchVolume',
+        subBuilder: $2.VolumeType.$_createMessage)
+    ..aOM<$2.VolumeType>(5, _omitFieldNames ? '' : 'fermenterVolume',
+        subBuilder: $2.VolumeType.$_createMessage)
+    ..aOM<$2.VolumeType>(6, _omitFieldNames ? '' : 'fermenterTopup',
+        subBuilder: $2.VolumeType.$_createMessage)
+    ..aOM<$2.VolumeType>(7, _omitFieldNames ? '' : 'bottlingVolume',
+        subBuilder: $2.VolumeType.$_createMessage)
+    ..aOM<$2.VolumeType>(8, _omitFieldNames ? '' : 'packagingVolume',
+        subBuilder: $2.VolumeType.$_createMessage)
+    ..aOM<$2.VolumeType>(9, _omitFieldNames ? '' : 'boilOffPerHour',
+        subBuilder: $2.VolumeType.$_createMessage)
+    ..aOM<$2.GravityType>(10, _omitFieldNames ? '' : 'firstWortGravity',
+        subBuilder: $2.GravityType.$_createMessage)
+    ..aOM<$2.GravityType>(11, _omitFieldNames ? '' : 'preBoilGravity',
+        subBuilder: $2.GravityType.$_createMessage)
+    ..aOM<$2.GravityType>(12, _omitFieldNames ? '' : 'postBoilGravity',
+        subBuilder: $2.GravityType.$_createMessage)
+    ..aOM<$2.GravityType>(13, _omitFieldNames ? '' : 'originalGravity',
+        subBuilder: $2.GravityType.$_createMessage)
+    ..aOM<$2.GravityType>(14, _omitFieldNames ? '' : 'finalGravity',
+        subBuilder: $2.GravityType.$_createMessage)
+    ..aOM<$2.PercentType>(15, _omitFieldNames ? '' : 'conversionEfficiency',
+        subBuilder: $2.PercentType.$_createMessage)
+    ..aOM<$2.PercentType>(16, _omitFieldNames ? '' : 'lauterEfficiency',
+        subBuilder: $2.PercentType.$_createMessage)
+    ..aOM<$2.PercentType>(17, _omitFieldNames ? '' : 'mashEfficiency',
+        subBuilder: $2.PercentType.$_createMessage)
+    ..aOM<$2.PercentType>(18, _omitFieldNames ? '' : 'brewhouseEfficiency',
+        subBuilder: $2.PercentType.$_createMessage)
+    ..aOM<$2.PercentType>(19, _omitFieldNames ? '' : 'alcoholByVolume',
+        subBuilder: $2.PercentType.$_createMessage)
+    ..aOM<$2.PercentType>(20, _omitFieldNames ? '' : 'attenuation',
+        subBuilder: $2.PercentType.$_createMessage)
+    ..aOM<$2.ColorType>(21, _omitFieldNames ? '' : 'color',
+        subBuilder: $2.ColorType.$_createMessage)
+    ..aOM<$2.BitternessType>(22, _omitFieldNames ? '' : 'bitterness',
+        subBuilder: $2.BitternessType.$_createMessage)
+    ..aOM<$2.AcidityType>(23, _omitFieldNames ? '' : 'mashPh',
+        subBuilder: $2.AcidityType.$_createMessage)
+    ..aOM<$2.AcidityType>(24, _omitFieldNames ? '' : 'beerPh',
+        subBuilder: $2.AcidityType.$_createMessage)
+    ..aOM<$2.TimeType>(25, _omitFieldNames ? '' : 'boilTime',
+        subBuilder: $2.TimeType.$_createMessage)
+    ..aOM<$2.TemperatureType>(
+        26, _omitFieldNames ? '' : 'carbonationTemperature',
+        subBuilder: $2.TemperatureType.$_createMessage)
+    ..aOM<$2.TitratableAcidityType>(
+        27, _omitFieldNames ? '' : 'titratableAcidity',
+        subBuilder: $2.TitratableAcidityType.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Measurements clone() => Measurements()..mergeFromMessage(this);
+  Measurements clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Measurements copyWith(void Function(Measurements) updates) => super.copyWith((message) => updates(message as Measurements)) as Measurements;
+  Measurements copyWith(void Function(Measurements) updates) =>
+      super.copyWith((message) => updates(message as Measurements))
+          as Measurements;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use Measurements() / Measurements.new instead')
   static Measurements create() => Measurements._();
+  static $pb.GeneratedMessage $_createMessage() => Measurements._();
   @$core.override
-  Measurements createEmptyInstance() => create();
-  static $pb.PbList<Measurements> createRepeated() => $pb.PbList<Measurements>();
+  Measurements createEmptyInstance() => Measurements._();
   @$core.pragma('dart2js:noInline')
-  static Measurements getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Measurements>(create);
+  static Measurements getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Measurements>(
+          Measurements.$_createMessage);
   static Measurements? _defaultInstance;
 
   /// Volumes, roughly in process order.
@@ -1582,7 +1762,8 @@ class Measurements extends $pb.GeneratedMessage {
   @$pb.TagNumber(27)
   $2.TitratableAcidityType get titratableAcidity => $_getN(26);
   @$pb.TagNumber(27)
-  set titratableAcidity($2.TitratableAcidityType value) => $_setField(27, value);
+  set titratableAcidity($2.TitratableAcidityType value) =>
+      $_setField(27, value);
   @$pb.TagNumber(27)
   $core.bool hasTitratableAcidity() => $_has(26);
   @$pb.TagNumber(27)
@@ -1616,7 +1797,7 @@ class Estimates extends $pb.GeneratedMessage {
     $2.AcidityType? mashPh,
     $3.MashPhModel? mashPhModel,
   }) {
-    final result = create();
+    final result = Estimates._();
     if (preBoilVolume != null) result.preBoilVolume = preBoilVolume;
     if (preBoilGravity != null) result.preBoilGravity = preBoilGravity;
     if (bitterness != null) result.bitterness = bitterness;
@@ -1627,33 +1808,47 @@ class Estimates extends $pb.GeneratedMessage {
 
   Estimates._();
 
-  factory Estimates.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory Estimates.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory Estimates.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Estimates()..mergeFromBuffer(data, registry);
+  factory Estimates.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Estimates()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Estimates', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<$2.VolumeType>(1, _omitFieldNames ? '' : 'preBoilVolume', subBuilder: $2.VolumeType.create)
-    ..aOM<$2.GravityType>(2, _omitFieldNames ? '' : 'preBoilGravity', subBuilder: $2.GravityType.create)
-    ..aOM<$2.BitternessType>(3, _omitFieldNames ? '' : 'bitterness', subBuilder: $2.BitternessType.create)
-    ..aOM<$2.AcidityType>(4, _omitFieldNames ? '' : 'mashPh', subBuilder: $2.AcidityType.create)
-    ..e<$3.MashPhModel>(5, _omitFieldNames ? '' : 'mashPhModel', $pb.PbFieldType.OE, defaultOrMaker: $3.MashPhModel.MASH_PH_MODEL_UNSPECIFIED, valueOf: $3.MashPhModel.valueOf, enumValues: $3.MashPhModel.values)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Estimates',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: Estimates.$_createMessage)
+    ..aOM<$2.VolumeType>(1, _omitFieldNames ? '' : 'preBoilVolume',
+        subBuilder: $2.VolumeType.$_createMessage)
+    ..aOM<$2.GravityType>(2, _omitFieldNames ? '' : 'preBoilGravity',
+        subBuilder: $2.GravityType.$_createMessage)
+    ..aOM<$2.BitternessType>(3, _omitFieldNames ? '' : 'bitterness',
+        subBuilder: $2.BitternessType.$_createMessage)
+    ..aOM<$2.AcidityType>(4, _omitFieldNames ? '' : 'mashPh',
+        subBuilder: $2.AcidityType.$_createMessage)
+    ..aE<$3.MashPhModel>(5, _omitFieldNames ? '' : 'mashPhModel',
+        enumValues: $3.MashPhModel.values)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Estimates clone() => Estimates()..mergeFromMessage(this);
+  Estimates clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Estimates copyWith(void Function(Estimates) updates) => super.copyWith((message) => updates(message as Estimates)) as Estimates;
+  Estimates copyWith(void Function(Estimates) updates) =>
+      super.copyWith((message) => updates(message as Estimates)) as Estimates;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use Estimates() / Estimates.new instead')
   static Estimates create() => Estimates._();
+  static $pb.GeneratedMessage $_createMessage() => Estimates._();
   @$core.override
-  Estimates createEmptyInstance() => create();
-  static $pb.PbList<Estimates> createRepeated() => $pb.PbList<Estimates>();
+  Estimates createEmptyInstance() => Estimates._();
   @$core.pragma('dart2js:noInline')
-  static Estimates getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Estimates>(create);
+  static Estimates getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Estimates>(Estimates.$_createMessage);
   static Estimates? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -1714,6 +1909,7 @@ class Estimates extends $pb.GeneratedMessage {
   void clearMashPhModel() => $_clearField(5);
 }
 
-
-const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

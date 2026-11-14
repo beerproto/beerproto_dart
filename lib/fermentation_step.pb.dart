@@ -8,7 +8,7 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -35,7 +35,7 @@ class FermentationStepType extends $pb.GeneratedMessage {
     $core.String? vessel,
     $0.PressureType? vesselPressure,
   }) {
-    final result = create();
+    final result = FermentationStepType._();
     if (id != null) result.id = id;
     if (name != null) result.name = name;
     if (endTemperature != null) result.endTemperature = endTemperature;
@@ -54,41 +54,61 @@ class FermentationStepType extends $pb.GeneratedMessage {
 
   FermentationStepType._();
 
-  factory FermentationStepType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory FermentationStepType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory FermentationStepType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      FermentationStepType()..mergeFromBuffer(data, registry);
+  factory FermentationStepType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      FermentationStepType()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FermentationStepType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FermentationStepType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: FermentationStepType.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'name')
-    ..aOM<$0.TemperatureType>(3, _omitFieldNames ? '' : 'endTemperature', subBuilder: $0.TemperatureType.create)
-    ..aOM<$0.TimeType>(4, _omitFieldNames ? '' : 'stepTime', subBuilder: $0.TimeType.create)
+    ..aOM<$0.TemperatureType>(3, _omitFieldNames ? '' : 'endTemperature',
+        subBuilder: $0.TemperatureType.$_createMessage)
+    ..aOM<$0.TimeType>(4, _omitFieldNames ? '' : 'stepTime',
+        subBuilder: $0.TimeType.$_createMessage)
     ..aOB(5, _omitFieldNames ? '' : 'freeRise')
-    ..aOM<$0.GravityType>(6, _omitFieldNames ? '' : 'startGravity', subBuilder: $0.GravityType.create)
-    ..aOM<$0.GravityType>(7, _omitFieldNames ? '' : 'endGravity', subBuilder: $0.GravityType.create)
-    ..aOM<$0.AcidityType>(8, _omitFieldNames ? '' : 'startPh', subBuilder: $0.AcidityType.create)
+    ..aOM<$0.GravityType>(6, _omitFieldNames ? '' : 'startGravity',
+        subBuilder: $0.GravityType.$_createMessage)
+    ..aOM<$0.GravityType>(7, _omitFieldNames ? '' : 'endGravity',
+        subBuilder: $0.GravityType.$_createMessage)
+    ..aOM<$0.AcidityType>(8, _omitFieldNames ? '' : 'startPh',
+        subBuilder: $0.AcidityType.$_createMessage)
     ..aOS(9, _omitFieldNames ? '' : 'description')
-    ..aOM<$0.TemperatureType>(10, _omitFieldNames ? '' : 'startTemperature', subBuilder: $0.TemperatureType.create)
-    ..aOM<$0.AcidityType>(11, _omitFieldNames ? '' : 'endPh', subBuilder: $0.AcidityType.create)
+    ..aOM<$0.TemperatureType>(10, _omitFieldNames ? '' : 'startTemperature',
+        subBuilder: $0.TemperatureType.$_createMessage)
+    ..aOM<$0.AcidityType>(11, _omitFieldNames ? '' : 'endPh',
+        subBuilder: $0.AcidityType.$_createMessage)
     ..aOS(12, _omitFieldNames ? '' : 'vessel')
-    ..aOM<$0.PressureType>(13, _omitFieldNames ? '' : 'vesselPressure', subBuilder: $0.PressureType.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$0.PressureType>(13, _omitFieldNames ? '' : 'vesselPressure',
+        subBuilder: $0.PressureType.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentationStepType clone() => FermentationStepType()..mergeFromMessage(this);
+  FermentationStepType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  FermentationStepType copyWith(void Function(FermentationStepType) updates) => super.copyWith((message) => updates(message as FermentationStepType)) as FermentationStepType;
+  FermentationStepType copyWith(void Function(FermentationStepType) updates) =>
+      super.copyWith((message) => updates(message as FermentationStepType))
+          as FermentationStepType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated(
+      'Use FermentationStepType() / FermentationStepType.new instead')
   static FermentationStepType create() => FermentationStepType._();
+  static $pb.GeneratedMessage $_createMessage() => FermentationStepType._();
   @$core.override
-  FermentationStepType createEmptyInstance() => create();
-  static $pb.PbList<FermentationStepType> createRepeated() => $pb.PbList<FermentationStepType>();
+  FermentationStepType createEmptyInstance() => FermentationStepType._();
   @$core.pragma('dart2js:noInline')
-  static FermentationStepType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FermentationStepType>(create);
+  static FermentationStepType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FermentationStepType>(
+          FermentationStepType.$_createMessage);
   static FermentationStepType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -227,6 +247,7 @@ class FermentationStepType extends $pb.GeneratedMessage {
   $0.PressureType ensureVesselPressure() => $_ensure(12);
 }
 
-
-const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

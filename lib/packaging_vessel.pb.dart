@@ -8,13 +8,14 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:protobuf/well_known_types/google/protobuf/timestamp.pb.dart'
+    as $2;
 
-import 'google/protobuf/timestamp.pb.dart' as $2;
 import 'measureable_units.pb.dart' as $0;
 import 'packaging_graphic.pb.dart' as $1;
 import 'packaging_vessel.pbenum.dart';
@@ -32,7 +33,7 @@ class PackagingVesselBase extends $pb.GeneratedMessage {
     $core.String? description,
     $core.Iterable<$1.PackagingGraphicType>? graphics,
   }) {
-    final result = create();
+    final result = PackagingVesselBase._();
     if (name != null) result.name = name;
     if (type != null) result.type = type;
     if (vesselVolume != null) result.vesselVolume = vesselVolume;
@@ -44,34 +45,49 @@ class PackagingVesselBase extends $pb.GeneratedMessage {
 
   PackagingVesselBase._();
 
-  factory PackagingVesselBase.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory PackagingVesselBase.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory PackagingVesselBase.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      PackagingVesselBase()..mergeFromBuffer(data, registry);
+  factory PackagingVesselBase.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      PackagingVesselBase()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PackagingVesselBase', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PackagingVesselBase',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: PackagingVesselBase.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<PackagingVesselUnit>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: PackagingVesselUnit.PACKAGING_VESSEL_UNIT_UNSPECIFIED, valueOf: PackagingVesselUnit.valueOf, enumValues: PackagingVesselUnit.values)
-    ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'vesselVolume', subBuilder: $0.VolumeType.create)
-    ..a<$core.int>(4, _omitFieldNames ? '' : 'vesselQuantity', $pb.PbFieldType.O3)
+    ..aE<PackagingVesselUnit>(2, _omitFieldNames ? '' : 'type',
+        enumValues: PackagingVesselUnit.values)
+    ..aOM<$0.VolumeType>(3, _omitFieldNames ? '' : 'vesselVolume',
+        subBuilder: $0.VolumeType.$_createMessage)
+    ..aI(4, _omitFieldNames ? '' : 'vesselQuantity')
     ..aOS(5, _omitFieldNames ? '' : 'description')
-    ..pc<$1.PackagingGraphicType>(6, _omitFieldNames ? '' : 'graphics', $pb.PbFieldType.PM, subBuilder: $1.PackagingGraphicType.create)
-    ..hasRequiredFields = false
-  ;
+    ..pPM<$1.PackagingGraphicType>(6, _omitFieldNames ? '' : 'graphics',
+        subBuilder: $1.PackagingGraphicType.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingVesselBase clone() => PackagingVesselBase()..mergeFromMessage(this);
+  PackagingVesselBase clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingVesselBase copyWith(void Function(PackagingVesselBase) updates) => super.copyWith((message) => updates(message as PackagingVesselBase)) as PackagingVesselBase;
+  PackagingVesselBase copyWith(void Function(PackagingVesselBase) updates) =>
+      super.copyWith((message) => updates(message as PackagingVesselBase))
+          as PackagingVesselBase;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core
+      .Deprecated('Use PackagingVesselBase() / PackagingVesselBase.new instead')
   static PackagingVesselBase create() => PackagingVesselBase._();
+  static $pb.GeneratedMessage $_createMessage() => PackagingVesselBase._();
   @$core.override
-  PackagingVesselBase createEmptyInstance() => create();
-  static $pb.PbList<PackagingVesselBase> createRepeated() => $pb.PbList<PackagingVesselBase>();
+  PackagingVesselBase createEmptyInstance() => PackagingVesselBase._();
   @$core.pragma('dart2js:noInline')
-  static PackagingVesselBase getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PackagingVesselBase>(create);
+  static PackagingVesselBase getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PackagingVesselBase>(
+          PackagingVesselBase.$_createMessage);
   static PackagingVesselBase? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -143,7 +159,7 @@ class PackagingVesselType extends $pb.GeneratedMessage {
     CarbonationStep? carbonationStep,
     $2.Timestamp? bestBefore,
   }) {
-    final result = create();
+    final result = PackagingVesselType._();
     if (base != null) result.base = base;
     if (id != null) result.id = id;
     if (packageDate != null) result.packageDate = packageDate;
@@ -163,42 +179,65 @@ class PackagingVesselType extends $pb.GeneratedMessage {
 
   PackagingVesselType._();
 
-  factory PackagingVesselType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory PackagingVesselType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory PackagingVesselType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      PackagingVesselType()..mergeFromBuffer(data, registry);
+  factory PackagingVesselType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      PackagingVesselType()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PackagingVesselType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<PackagingVesselBase>(1, _omitFieldNames ? '' : 'base', subBuilder: PackagingVesselBase.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PackagingVesselType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: PackagingVesselType.$_createMessage)
+    ..aOM<PackagingVesselBase>(1, _omitFieldNames ? '' : 'base',
+        subBuilder: PackagingVesselBase.$_createMessage)
     ..aOS(2, _omitFieldNames ? '' : 'id')
     ..aOS(3, _omitFieldNames ? '' : 'packageDate')
-    ..aOM<$0.TimeType>(4, _omitFieldNames ? '' : 'stepTime', subBuilder: $0.TimeType.create)
-    ..aOM<$0.GravityType>(5, _omitFieldNames ? '' : 'startGravity', subBuilder: $0.GravityType.create)
-    ..aOM<$0.GravityType>(6, _omitFieldNames ? '' : 'endGravity', subBuilder: $0.GravityType.create)
-    ..aOM<$0.AcidityType>(7, _omitFieldNames ? '' : 'startPh', subBuilder: $0.AcidityType.create)
-    ..aOM<$0.AcidityType>(8, _omitFieldNames ? '' : 'endPh', subBuilder: $0.AcidityType.create)
-    ..aOM<$0.TemperatureType>(9, _omitFieldNames ? '' : 'startTemperature', subBuilder: $0.TemperatureType.create)
-    ..aOM<$0.TemperatureType>(10, _omitFieldNames ? '' : 'endTemperature', subBuilder: $0.TemperatureType.create)
-    ..aOM<$0.CarbonationType>(11, _omitFieldNames ? '' : 'targetCarbonation', subBuilder: $0.CarbonationType.create)
+    ..aOM<$0.TimeType>(4, _omitFieldNames ? '' : 'stepTime',
+        subBuilder: $0.TimeType.$_createMessage)
+    ..aOM<$0.GravityType>(5, _omitFieldNames ? '' : 'startGravity',
+        subBuilder: $0.GravityType.$_createMessage)
+    ..aOM<$0.GravityType>(6, _omitFieldNames ? '' : 'endGravity',
+        subBuilder: $0.GravityType.$_createMessage)
+    ..aOM<$0.AcidityType>(7, _omitFieldNames ? '' : 'startPh',
+        subBuilder: $0.AcidityType.$_createMessage)
+    ..aOM<$0.AcidityType>(8, _omitFieldNames ? '' : 'endPh',
+        subBuilder: $0.AcidityType.$_createMessage)
+    ..aOM<$0.TemperatureType>(9, _omitFieldNames ? '' : 'startTemperature',
+        subBuilder: $0.TemperatureType.$_createMessage)
+    ..aOM<$0.TemperatureType>(10, _omitFieldNames ? '' : 'endTemperature',
+        subBuilder: $0.TemperatureType.$_createMessage)
+    ..aOM<$0.CarbonationType>(11, _omitFieldNames ? '' : 'targetCarbonation',
+        subBuilder: $0.CarbonationType.$_createMessage)
     ..aOS(12, _omitFieldNames ? '' : 'notes')
-    ..e<CarbonationStep>(13, _omitFieldNames ? '' : 'carbonationStep', $pb.PbFieldType.OE, defaultOrMaker: CarbonationStep.CARBONATION_STEP_UNSPECIFIED, valueOf: CarbonationStep.valueOf, enumValues: CarbonationStep.values)
-    ..aOM<$2.Timestamp>(14, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
-    ..hasRequiredFields = false
-  ;
+    ..aE<CarbonationStep>(13, _omitFieldNames ? '' : 'carbonationStep',
+        enumValues: CarbonationStep.values)
+    ..aOM<$2.Timestamp>(14, _omitFieldNames ? '' : 'bestBefore',
+        subBuilder: $2.Timestamp.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingVesselType clone() => PackagingVesselType()..mergeFromMessage(this);
+  PackagingVesselType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PackagingVesselType copyWith(void Function(PackagingVesselType) updates) => super.copyWith((message) => updates(message as PackagingVesselType)) as PackagingVesselType;
+  PackagingVesselType copyWith(void Function(PackagingVesselType) updates) =>
+      super.copyWith((message) => updates(message as PackagingVesselType))
+          as PackagingVesselType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core
+      .Deprecated('Use PackagingVesselType() / PackagingVesselType.new instead')
   static PackagingVesselType create() => PackagingVesselType._();
+  static $pb.GeneratedMessage $_createMessage() => PackagingVesselType._();
   @$core.override
-  PackagingVesselType createEmptyInstance() => create();
-  static $pb.PbList<PackagingVesselType> createRepeated() => $pb.PbList<PackagingVesselType>();
+  PackagingVesselType createEmptyInstance() => PackagingVesselType._();
   @$core.pragma('dart2js:noInline')
-  static PackagingVesselType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PackagingVesselType>(create);
+  static PackagingVesselType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PackagingVesselType>(
+          PackagingVesselType.$_createMessage);
   static PackagingVesselType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -352,6 +391,7 @@ class PackagingVesselType extends $pb.GeneratedMessage {
   $2.Timestamp ensureBestBefore() => $_ensure(13);
 }
 
-
-const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

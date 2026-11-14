@@ -1,0 +1,12 @@
+# The Dart generator for beerproto's schema, kept here beside the pubspec it
+# must agree with: protoc_plugin 25 writes code for the protobuf 6 runtime, so
+# bump the plugin and `protobuf` in pubspec.yaml together.
+#
+# .github/workflows/main.yml runs this from the beerproto checkout in ./proto,
+# so `out` is relative to that directory.
+version: v2
+managed:
+  enabled: true
+plugins:
+  - remote: buf.build/protocolbuffers/dart:v25.1.0
+    out: gen

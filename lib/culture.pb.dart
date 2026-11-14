@@ -8,13 +8,14 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+import 'package:protobuf/well_known_types/google/protobuf/timestamp.pb.dart'
+    as $2;
 
-import 'google/protobuf/timestamp.pb.dart' as $2;
 import 'culture.pbenum.dart';
 import 'measureable_units.pb.dart' as $0;
 import 'timing.pb.dart' as $1;
@@ -33,7 +34,7 @@ class CultureBase extends $pb.GeneratedMessage {
     $core.String? productId,
     $core.bool? glucoamylase,
   }) {
-    final result = create();
+    final result = CultureBase._();
     if (name != null) result.name = name;
     if (type != null) result.type = type;
     if (form != null) result.form = form;
@@ -45,34 +46,47 @@ class CultureBase extends $pb.GeneratedMessage {
 
   CultureBase._();
 
-  factory CultureBase.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory CultureBase.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory CultureBase.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      CultureBase()..mergeFromBuffer(data, registry);
+  factory CultureBase.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      CultureBase()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CultureBase', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CultureBase',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: CultureBase.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'name')
-    ..e<CultureBaseType>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: CultureBaseType.CULTURE_BASE_TYPE_UNSPECIFIED, valueOf: CultureBaseType.valueOf, enumValues: CultureBaseType.values)
-    ..e<CultureBaseForm>(3, _omitFieldNames ? '' : 'form', $pb.PbFieldType.OE, defaultOrMaker: CultureBaseForm.CULTURE_BASE_FORM_UNSPECIFIED, valueOf: CultureBaseForm.valueOf, enumValues: CultureBaseForm.values)
+    ..aE<CultureBaseType>(2, _omitFieldNames ? '' : 'type',
+        enumValues: CultureBaseType.values)
+    ..aE<CultureBaseForm>(3, _omitFieldNames ? '' : 'form',
+        enumValues: CultureBaseForm.values)
     ..aOS(4, _omitFieldNames ? '' : 'producer')
     ..aOS(5, _omitFieldNames ? '' : 'productId')
     ..aOB(6, _omitFieldNames ? '' : 'glucoamylase')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CultureBase clone() => CultureBase()..mergeFromMessage(this);
+  CultureBase clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CultureBase copyWith(void Function(CultureBase) updates) => super.copyWith((message) => updates(message as CultureBase)) as CultureBase;
+  CultureBase copyWith(void Function(CultureBase) updates) =>
+      super.copyWith((message) => updates(message as CultureBase))
+          as CultureBase;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use CultureBase() / CultureBase.new instead')
   static CultureBase create() => CultureBase._();
+  static $pb.GeneratedMessage $_createMessage() => CultureBase._();
   @$core.override
-  CultureBase createEmptyInstance() => create();
-  static $pb.PbList<CultureBase> createRepeated() => $pb.PbList<CultureBase>();
+  CultureBase createEmptyInstance() => CultureBase._();
   @$core.pragma('dart2js:noInline')
-  static CultureBase getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CultureBase>(create);
+  static CultureBase getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CultureBase>(
+          CultureBase.$_createMessage);
   static CultureBase? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -149,7 +163,7 @@ class CultureInformation extends $pb.GeneratedMessage {
     $core.bool? pof,
     Zymocide? zymocide,
   }) {
-    final result = create();
+    final result = CultureInformation._();
     if (base != null) result.base = base;
     if (id != null) result.id = id;
     if (temperatureRange != null) result.temperatureRange = temperatureRange;
@@ -169,42 +183,61 @@ class CultureInformation extends $pb.GeneratedMessage {
 
   CultureInformation._();
 
-  factory CultureInformation.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory CultureInformation.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory CultureInformation.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      CultureInformation()..mergeFromBuffer(data, registry);
+  factory CultureInformation.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      CultureInformation()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CultureInformation', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..aOM<CultureBase>(1, _omitFieldNames ? '' : 'base', subBuilder: CultureBase.create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CultureInformation',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: CultureInformation.$_createMessage)
+    ..aOM<CultureBase>(1, _omitFieldNames ? '' : 'base',
+        subBuilder: CultureBase.$_createMessage)
     ..aOS(2, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.TemperatureRangeType>(3, _omitFieldNames ? '' : 'temperatureRange', subBuilder: $0.TemperatureRangeType.create)
+    ..aOM<$0.TemperatureRangeType>(3, _omitFieldNames ? '' : 'temperatureRange',
+        subBuilder: $0.TemperatureRangeType.$_createMessage)
     ..aOS(4, _omitFieldNames ? '' : 'notes')
     ..aOS(5, _omitFieldNames ? '' : 'bestFor')
-    ..aOM<CultureInventoryType>(6, _omitFieldNames ? '' : 'inventory', subBuilder: CultureInventoryType.create)
-    ..aOM<$0.PercentType>(8, _omitFieldNames ? '' : 'alcoholTolerance', subBuilder: $0.PercentType.create)
+    ..aOM<CultureInventoryType>(6, _omitFieldNames ? '' : 'inventory',
+        subBuilder: CultureInventoryType.$_createMessage)
+    ..aOM<$0.PercentType>(8, _omitFieldNames ? '' : 'alcoholTolerance',
+        subBuilder: $0.PercentType.$_createMessage)
     ..aOB(9, _omitFieldNames ? '' : 'glucoamylase')
-    ..e<CultureBaseType>(10, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: CultureBaseType.CULTURE_BASE_TYPE_UNSPECIFIED, valueOf: CultureBaseType.valueOf, enumValues: CultureBaseType.values)
-    ..e<QualitativeRangeUnit>(11, _omitFieldNames ? '' : 'flocculation', $pb.PbFieldType.OE, defaultOrMaker: QualitativeRangeUnit.QUALITATIVE_RANGE_UNIT_UNSPECIFIED, valueOf: QualitativeRangeUnit.valueOf, enumValues: QualitativeRangeUnit.values)
-    ..aOM<$0.PercentRangeType>(12, _omitFieldNames ? '' : 'attenuationRange', subBuilder: $0.PercentRangeType.create)
-    ..a<$core.int>(13, _omitFieldNames ? '' : 'maxReuse', $pb.PbFieldType.O3)
+    ..aE<CultureBaseType>(10, _omitFieldNames ? '' : 'type',
+        enumValues: CultureBaseType.values)
+    ..aE<QualitativeRangeUnit>(11, _omitFieldNames ? '' : 'flocculation',
+        enumValues: QualitativeRangeUnit.values)
+    ..aOM<$0.PercentRangeType>(12, _omitFieldNames ? '' : 'attenuationRange',
+        subBuilder: $0.PercentRangeType.$_createMessage)
+    ..aI(13, _omitFieldNames ? '' : 'maxReuse')
     ..aOB(14, _omitFieldNames ? '' : 'pof')
-    ..aOM<Zymocide>(15, _omitFieldNames ? '' : 'zymocide', subBuilder: Zymocide.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<Zymocide>(15, _omitFieldNames ? '' : 'zymocide',
+        subBuilder: Zymocide.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CultureInformation clone() => CultureInformation()..mergeFromMessage(this);
+  CultureInformation clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CultureInformation copyWith(void Function(CultureInformation) updates) => super.copyWith((message) => updates(message as CultureInformation)) as CultureInformation;
+  CultureInformation copyWith(void Function(CultureInformation) updates) =>
+      super.copyWith((message) => updates(message as CultureInformation))
+          as CultureInformation;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use CultureInformation() / CultureInformation.new instead')
   static CultureInformation create() => CultureInformation._();
+  static $pb.GeneratedMessage $_createMessage() => CultureInformation._();
   @$core.override
-  CultureInformation createEmptyInstance() => create();
-  static $pb.PbList<CultureInformation> createRepeated() => $pb.PbList<CultureInformation>();
+  CultureInformation createEmptyInstance() => CultureInformation._();
   @$core.pragma('dart2js:noInline')
-  static CultureInformation getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CultureInformation>(create);
+  static CultureInformation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CultureInformation>(
+          CultureInformation.$_createMessage);
   static CultureInformation? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -353,12 +386,7 @@ class CultureInformation extends $pb.GeneratedMessage {
   Zymocide ensureZymocide() => $_ensure(13);
 }
 
-enum CultureAdditionType_Amount {
-  mass, 
-  unit, 
-  volume, 
-  notSet
-}
+enum CultureAdditionType_Amount { mass, unit, volume, notSet }
 
 /// CultureAdditionType collects the attributes of each culture ingredient for use in a recipe
 class CultureAdditionType extends $pb.GeneratedMessage {
@@ -374,7 +402,7 @@ class CultureAdditionType extends $pb.GeneratedMessage {
     $0.UnitType? unit,
     $0.VolumeType? volume,
   }) {
-    final result = create();
+    final result = CultureAdditionType._();
     if (base != null) result.base = base;
     if (id != null) result.id = id;
     if (cellCountBillions != null) result.cellCountBillions = cellCountBillions;
@@ -390,48 +418,75 @@ class CultureAdditionType extends $pb.GeneratedMessage {
 
   CultureAdditionType._();
 
-  factory CultureAdditionType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory CultureAdditionType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory CultureAdditionType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      CultureAdditionType()..mergeFromBuffer(data, registry);
+  factory CultureAdditionType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      CultureAdditionType()..mergeFromJson(json, registry);
 
-  static const $core.Map<$core.int, CultureAdditionType_Amount> _CultureAdditionType_AmountByTag = {
-    8 : CultureAdditionType_Amount.mass,
-    9 : CultureAdditionType_Amount.unit,
-    10 : CultureAdditionType_Amount.volume,
-    0 : CultureAdditionType_Amount.notSet
+  static const $core.Map<$core.int, CultureAdditionType_Amount>
+      _CultureAdditionType_AmountByTag = {
+    8: CultureAdditionType_Amount.mass,
+    9: CultureAdditionType_Amount.unit,
+    10: CultureAdditionType_Amount.volume,
+    0: CultureAdditionType_Amount.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CultureAdditionType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CultureAdditionType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: CultureAdditionType.$_createMessage)
     ..oo(0, [8, 9, 10])
-    ..aOM<CultureBase>(1, _omitFieldNames ? '' : 'base', subBuilder: CultureBase.create)
+    ..aOM<CultureBase>(1, _omitFieldNames ? '' : 'base',
+        subBuilder: CultureBase.$_createMessage)
     ..aOS(2, _omitFieldNames ? '' : 'id')
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'cellCountBillions', $pb.PbFieldType.O3)
-    ..a<$core.int>(4, _omitFieldNames ? '' : 'timesCultured', $pb.PbFieldType.O3)
-    ..e<CultureBaseType>(5, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: CultureBaseType.CULTURE_BASE_TYPE_UNSPECIFIED, valueOf: CultureBaseType.valueOf, enumValues: CultureBaseType.values)
-    ..aOM<$0.PercentType>(6, _omitFieldNames ? '' : 'attenuation', subBuilder: $0.PercentType.create)
-    ..aOM<$1.TimingType>(7, _omitFieldNames ? '' : 'timing', subBuilder: $1.TimingType.create)
-    ..aOM<$0.MassType>(8, _omitFieldNames ? '' : 'mass', subBuilder: $0.MassType.create)
-    ..aOM<$0.UnitType>(9, _omitFieldNames ? '' : 'unit', subBuilder: $0.UnitType.create)
-    ..aOM<$0.VolumeType>(10, _omitFieldNames ? '' : 'volume', subBuilder: $0.VolumeType.create)
-    ..hasRequiredFields = false
-  ;
+    ..aI(3, _omitFieldNames ? '' : 'cellCountBillions')
+    ..aI(4, _omitFieldNames ? '' : 'timesCultured')
+    ..aE<CultureBaseType>(5, _omitFieldNames ? '' : 'type',
+        enumValues: CultureBaseType.values)
+    ..aOM<$0.PercentType>(6, _omitFieldNames ? '' : 'attenuation',
+        subBuilder: $0.PercentType.$_createMessage)
+    ..aOM<$1.TimingType>(7, _omitFieldNames ? '' : 'timing',
+        subBuilder: $1.TimingType.$_createMessage)
+    ..aOM<$0.MassType>(8, _omitFieldNames ? '' : 'mass',
+        subBuilder: $0.MassType.$_createMessage)
+    ..aOM<$0.UnitType>(9, _omitFieldNames ? '' : 'unit',
+        subBuilder: $0.UnitType.$_createMessage)
+    ..aOM<$0.VolumeType>(10, _omitFieldNames ? '' : 'volume',
+        subBuilder: $0.VolumeType.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CultureAdditionType clone() => CultureAdditionType()..mergeFromMessage(this);
+  CultureAdditionType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CultureAdditionType copyWith(void Function(CultureAdditionType) updates) => super.copyWith((message) => updates(message as CultureAdditionType)) as CultureAdditionType;
+  CultureAdditionType copyWith(void Function(CultureAdditionType) updates) =>
+      super.copyWith((message) => updates(message as CultureAdditionType))
+          as CultureAdditionType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core
+      .Deprecated('Use CultureAdditionType() / CultureAdditionType.new instead')
   static CultureAdditionType create() => CultureAdditionType._();
+  static $pb.GeneratedMessage $_createMessage() => CultureAdditionType._();
   @$core.override
-  CultureAdditionType createEmptyInstance() => create();
-  static $pb.PbList<CultureAdditionType> createRepeated() => $pb.PbList<CultureAdditionType>();
+  CultureAdditionType createEmptyInstance() => CultureAdditionType._();
   @$core.pragma('dart2js:noInline')
-  static CultureAdditionType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CultureAdditionType>(create);
+  static CultureAdditionType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CultureAdditionType>(
+          CultureAdditionType.$_createMessage);
   static CultureAdditionType? _defaultInstance;
 
-  CultureAdditionType_Amount whichAmount() => _CultureAdditionType_AmountByTag[$_whichOneof(0)]!;
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
+  CultureAdditionType_Amount whichAmount() =>
+      _CultureAdditionType_AmountByTag[$_whichOneof(0)]!;
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  @$pb.TagNumber(10)
   void clearAmount() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -550,36 +605,49 @@ class CultureInventoryType extends $pb.GeneratedMessage {
   factory CultureInventoryType({
     $core.Iterable<CultureLotType>? lots,
   }) {
-    final result = create();
+    final result = CultureInventoryType._();
     if (lots != null) result.lots.addAll(lots);
     return result;
   }
 
   CultureInventoryType._();
 
-  factory CultureInventoryType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory CultureInventoryType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory CultureInventoryType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      CultureInventoryType()..mergeFromBuffer(data, registry);
+  factory CultureInventoryType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      CultureInventoryType()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CultureInventoryType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
-    ..pc<CultureLotType>(9, _omitFieldNames ? '' : 'lots', $pb.PbFieldType.PM, subBuilder: CultureLotType.create)
-    ..hasRequiredFields = false
-  ;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CultureInventoryType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: CultureInventoryType.$_createMessage)
+    ..pPM<CultureLotType>(9, _omitFieldNames ? '' : 'lots',
+        subBuilder: CultureLotType.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CultureInventoryType clone() => CultureInventoryType()..mergeFromMessage(this);
+  CultureInventoryType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CultureInventoryType copyWith(void Function(CultureInventoryType) updates) => super.copyWith((message) => updates(message as CultureInventoryType)) as CultureInventoryType;
+  CultureInventoryType copyWith(void Function(CultureInventoryType) updates) =>
+      super.copyWith((message) => updates(message as CultureInventoryType))
+          as CultureInventoryType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated(
+      'Use CultureInventoryType() / CultureInventoryType.new instead')
   static CultureInventoryType create() => CultureInventoryType._();
+  static $pb.GeneratedMessage $_createMessage() => CultureInventoryType._();
   @$core.override
-  CultureInventoryType createEmptyInstance() => create();
-  static $pb.PbList<CultureInventoryType> createRepeated() => $pb.PbList<CultureInventoryType>();
+  CultureInventoryType createEmptyInstance() => CultureInventoryType._();
   @$core.pragma('dart2js:noInline')
-  static CultureInventoryType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CultureInventoryType>(create);
+  static CultureInventoryType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CultureInventoryType>(
+          CultureInventoryType.$_createMessage);
   static CultureInventoryType? _defaultInstance;
 
   /// The individual receipts this stock is made of.
@@ -587,14 +655,7 @@ class CultureInventoryType extends $pb.GeneratedMessage {
   $pb.PbList<CultureLotType> get lots => $_getList(0);
 }
 
-enum CultureLotType_Amount {
-  dry, 
-  liquid, 
-  liquidPacks, 
-  slant, 
-  culture, 
-  notSet
-}
+enum CultureLotType_Amount { dry, liquid, liquidPacks, slant, culture, notSet }
 
 /// CultureLotType is one physical receipt of culture stock: a sachet, a vial, a
 /// harvested slurry.
@@ -617,7 +678,7 @@ class CultureLotType extends $pb.GeneratedMessage {
     $core.int? generation,
     $2.Timestamp? bestBefore,
   }) {
-    final result = create();
+    final result = CultureLotType._();
     if (id != null) result.id = id;
     if (lotCode != null) result.lotCode = lotCode;
     if (receivedOn != null) result.receivedOn = receivedOn;
@@ -635,52 +696,82 @@ class CultureLotType extends $pb.GeneratedMessage {
 
   CultureLotType._();
 
-  factory CultureLotType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory CultureLotType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory CultureLotType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      CultureLotType()..mergeFromBuffer(data, registry);
+  factory CultureLotType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      CultureLotType()..mergeFromJson(json, registry);
 
-  static const $core.Map<$core.int, CultureLotType_Amount> _CultureLotType_AmountByTag = {
-    5 : CultureLotType_Amount.dry,
-    6 : CultureLotType_Amount.liquid,
-    7 : CultureLotType_Amount.liquidPacks,
-    8 : CultureLotType_Amount.slant,
-    9 : CultureLotType_Amount.culture,
-    0 : CultureLotType_Amount.notSet
+  static const $core.Map<$core.int, CultureLotType_Amount>
+      _CultureLotType_AmountByTag = {
+    5: CultureLotType_Amount.dry,
+    6: CultureLotType_Amount.liquid,
+    7: CultureLotType_Amount.liquidPacks,
+    8: CultureLotType_Amount.slant,
+    9: CultureLotType_Amount.culture,
+    0: CultureLotType_Amount.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CultureLotType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CultureLotType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: CultureLotType.$_createMessage)
     ..oo(0, [5, 6, 7, 8, 9])
     ..aOS(1, _omitFieldNames ? '' : 'id')
     ..aOS(2, _omitFieldNames ? '' : 'lotCode')
-    ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'receivedOn', subBuilder: $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(3, _omitFieldNames ? '' : 'receivedOn',
+        subBuilder: $2.Timestamp.$_createMessage)
     ..aOS(4, _omitFieldNames ? '' : 'note')
-    ..aOM<$0.MassType>(5, _omitFieldNames ? '' : 'dry', subBuilder: $0.MassType.create)
-    ..aOM<$0.VolumeType>(6, _omitFieldNames ? '' : 'liquid', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.UnitType>(7, _omitFieldNames ? '' : 'liquidPacks', subBuilder: $0.UnitType.create)
-    ..aOM<$0.VolumeType>(8, _omitFieldNames ? '' : 'slant', subBuilder: $0.VolumeType.create)
-    ..aOM<$0.VolumeType>(9, _omitFieldNames ? '' : 'culture', subBuilder: $0.VolumeType.create)
+    ..aOM<$0.MassType>(5, _omitFieldNames ? '' : 'dry',
+        subBuilder: $0.MassType.$_createMessage)
+    ..aOM<$0.VolumeType>(6, _omitFieldNames ? '' : 'liquid',
+        subBuilder: $0.VolumeType.$_createMessage)
+    ..aOM<$0.UnitType>(7, _omitFieldNames ? '' : 'liquidPacks',
+        subBuilder: $0.UnitType.$_createMessage)
+    ..aOM<$0.VolumeType>(8, _omitFieldNames ? '' : 'slant',
+        subBuilder: $0.VolumeType.$_createMessage)
+    ..aOM<$0.VolumeType>(9, _omitFieldNames ? '' : 'culture',
+        subBuilder: $0.VolumeType.$_createMessage)
     ..aOS(10, _omitFieldNames ? '' : 'manufactureDate')
-    ..a<$core.int>(11, _omitFieldNames ? '' : 'generation', $pb.PbFieldType.O3)
-    ..aOM<$2.Timestamp>(12, _omitFieldNames ? '' : 'bestBefore', subBuilder: $2.Timestamp.create)
-    ..hasRequiredFields = false
-  ;
+    ..aI(11, _omitFieldNames ? '' : 'generation')
+    ..aOM<$2.Timestamp>(12, _omitFieldNames ? '' : 'bestBefore',
+        subBuilder: $2.Timestamp.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CultureLotType clone() => CultureLotType()..mergeFromMessage(this);
+  CultureLotType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  CultureLotType copyWith(void Function(CultureLotType) updates) => super.copyWith((message) => updates(message as CultureLotType)) as CultureLotType;
+  CultureLotType copyWith(void Function(CultureLotType) updates) =>
+      super.copyWith((message) => updates(message as CultureLotType))
+          as CultureLotType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use CultureLotType() / CultureLotType.new instead')
   static CultureLotType create() => CultureLotType._();
+  static $pb.GeneratedMessage $_createMessage() => CultureLotType._();
   @$core.override
-  CultureLotType createEmptyInstance() => create();
-  static $pb.PbList<CultureLotType> createRepeated() => $pb.PbList<CultureLotType>();
+  CultureLotType createEmptyInstance() => CultureLotType._();
   @$core.pragma('dart2js:noInline')
-  static CultureLotType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CultureLotType>(create);
+  static CultureLotType getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CultureLotType>(
+          CultureLotType.$_createMessage);
   static CultureLotType? _defaultInstance;
 
-  CultureLotType_Amount whichAmount() => _CultureLotType_AmountByTag[$_whichOneof(0)]!;
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
+  CultureLotType_Amount whichAmount() =>
+      _CultureLotType_AmountByTag[$_whichOneof(0)]!;
+  @$pb.TagNumber(5)
+  @$pb.TagNumber(6)
+  @$pb.TagNumber(7)
+  @$pb.TagNumber(8)
+  @$pb.TagNumber(9)
   void clearAmount() => $_clearField($_whichOneof(0));
 
   /// Stable identity, so a stock movement can name the lot it drew from.
@@ -829,7 +920,7 @@ class Zymocide extends $pb.GeneratedMessage {
     $core.bool? klus,
     $core.bool? neutral,
   }) {
-    final result = create();
+    final result = Zymocide._();
     if (no1 != null) result.no1 = no1;
     if (no2 != null) result.no2 = no2;
     if (no28 != null) result.no28 = no28;
@@ -840,33 +931,42 @@ class Zymocide extends $pb.GeneratedMessage {
 
   Zymocide._();
 
-  factory Zymocide.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory Zymocide.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory Zymocide.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Zymocide()..mergeFromBuffer(data, registry);
+  factory Zymocide.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      Zymocide()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Zymocide', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Zymocide',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: Zymocide.$_createMessage)
     ..aOB(1, _omitFieldNames ? '' : 'no1')
     ..aOB(2, _omitFieldNames ? '' : 'no2')
     ..aOB(3, _omitFieldNames ? '' : 'no28')
     ..aOB(4, _omitFieldNames ? '' : 'klus')
     ..aOB(5, _omitFieldNames ? '' : 'neutral')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Zymocide clone() => Zymocide()..mergeFromMessage(this);
+  Zymocide clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  Zymocide copyWith(void Function(Zymocide) updates) => super.copyWith((message) => updates(message as Zymocide)) as Zymocide;
+  Zymocide copyWith(void Function(Zymocide) updates) =>
+      super.copyWith((message) => updates(message as Zymocide)) as Zymocide;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use Zymocide() / Zymocide.new instead')
   static Zymocide create() => Zymocide._();
+  static $pb.GeneratedMessage $_createMessage() => Zymocide._();
   @$core.override
-  Zymocide createEmptyInstance() => create();
-  static $pb.PbList<Zymocide> createRepeated() => $pb.PbList<Zymocide>();
+  Zymocide createEmptyInstance() => Zymocide._();
   @$core.pragma('dart2js:noInline')
-  static Zymocide getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Zymocide>(create);
+  static Zymocide getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Zymocide>(Zymocide.$_createMessage);
   static Zymocide? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -915,6 +1015,7 @@ class Zymocide extends $pb.GeneratedMessage {
   void clearNeutral() => $_clearField(5);
 }
 
-
-const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

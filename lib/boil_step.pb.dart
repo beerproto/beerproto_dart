@@ -8,7 +8,7 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -37,7 +37,7 @@ class BoilStepType extends $pb.GeneratedMessage {
     $core.String? name,
     $0.TemperatureType? startTemperature,
   }) {
-    final result = create();
+    final result = BoilStepType._();
     if (id != null) result.id = id;
     if (endGravity != null) result.endGravity = endGravity;
     if (chillingType != null) result.chillingType = chillingType;
@@ -55,40 +55,60 @@ class BoilStepType extends $pb.GeneratedMessage {
 
   BoilStepType._();
 
-  factory BoilStepType.fromBuffer($core.List<$core.int> data, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(data, registry);
-  factory BoilStepType.fromJson($core.String json, [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(json, registry);
+  factory BoilStepType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      BoilStepType()..mergeFromBuffer(data, registry);
+  factory BoilStepType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      BoilStepType()..mergeFromJson(json, registry);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BoilStepType', package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BoilStepType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: BoilStepType.$_createMessage)
     ..aOS(1, _omitFieldNames ? '' : 'id')
-    ..aOM<$0.GravityType>(2, _omitFieldNames ? '' : 'endGravity', subBuilder: $0.GravityType.create)
-    ..e<BoilStepTypeChillingType>(3, _omitFieldNames ? '' : 'chillingType', $pb.PbFieldType.OE, defaultOrMaker: BoilStepTypeChillingType.BOIL_STEP_TYPE_CHILLING_TYPE_UNSPECIFIED, valueOf: BoilStepTypeChillingType.valueOf, enumValues: BoilStepTypeChillingType.values)
+    ..aOM<$0.GravityType>(2, _omitFieldNames ? '' : 'endGravity',
+        subBuilder: $0.GravityType.$_createMessage)
+    ..aE<BoilStepTypeChillingType>(3, _omitFieldNames ? '' : 'chillingType',
+        enumValues: BoilStepTypeChillingType.values)
     ..aOS(4, _omitFieldNames ? '' : 'description')
-    ..aOM<$0.TemperatureType>(5, _omitFieldNames ? '' : 'endTemperature', subBuilder: $0.TemperatureType.create)
-    ..aOM<$0.TimeType>(6, _omitFieldNames ? '' : 'rampTime', subBuilder: $0.TimeType.create)
-    ..aOM<$0.TimeType>(7, _omitFieldNames ? '' : 'stepTime', subBuilder: $0.TimeType.create)
-    ..aOM<$0.GravityType>(8, _omitFieldNames ? '' : 'startGravity', subBuilder: $0.GravityType.create)
-    ..aOM<$0.AcidityType>(9, _omitFieldNames ? '' : 'startPh', subBuilder: $0.AcidityType.create)
-    ..aOM<$0.AcidityType>(10, _omitFieldNames ? '' : 'endPh', subBuilder: $0.AcidityType.create)
+    ..aOM<$0.TemperatureType>(5, _omitFieldNames ? '' : 'endTemperature',
+        subBuilder: $0.TemperatureType.$_createMessage)
+    ..aOM<$0.TimeType>(6, _omitFieldNames ? '' : 'rampTime',
+        subBuilder: $0.TimeType.$_createMessage)
+    ..aOM<$0.TimeType>(7, _omitFieldNames ? '' : 'stepTime',
+        subBuilder: $0.TimeType.$_createMessage)
+    ..aOM<$0.GravityType>(8, _omitFieldNames ? '' : 'startGravity',
+        subBuilder: $0.GravityType.$_createMessage)
+    ..aOM<$0.AcidityType>(9, _omitFieldNames ? '' : 'startPh',
+        subBuilder: $0.AcidityType.$_createMessage)
+    ..aOM<$0.AcidityType>(10, _omitFieldNames ? '' : 'endPh',
+        subBuilder: $0.AcidityType.$_createMessage)
     ..aOS(11, _omitFieldNames ? '' : 'name')
-    ..aOM<$0.TemperatureType>(12, _omitFieldNames ? '' : 'startTemperature', subBuilder: $0.TemperatureType.create)
-    ..hasRequiredFields = false
-  ;
+    ..aOM<$0.TemperatureType>(12, _omitFieldNames ? '' : 'startTemperature',
+        subBuilder: $0.TemperatureType.$_createMessage)
+    ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BoilStepType clone() => BoilStepType()..mergeFromMessage(this);
+  BoilStepType clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  BoilStepType copyWith(void Function(BoilStepType) updates) => super.copyWith((message) => updates(message as BoilStepType)) as BoilStepType;
+  BoilStepType copyWith(void Function(BoilStepType) updates) =>
+      super.copyWith((message) => updates(message as BoilStepType))
+          as BoilStepType;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use BoilStepType() / BoilStepType.new instead')
   static BoilStepType create() => BoilStepType._();
+  static $pb.GeneratedMessage $_createMessage() => BoilStepType._();
   @$core.override
-  BoilStepType createEmptyInstance() => create();
-  static $pb.PbList<BoilStepType> createRepeated() => $pb.PbList<BoilStepType>();
+  BoilStepType createEmptyInstance() => BoilStepType._();
   @$core.pragma('dart2js:noInline')
-  static BoilStepType getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BoilStepType>(create);
+  static BoilStepType getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BoilStepType>(
+          BoilStepType.$_createMessage);
   static BoilStepType? _defaultInstance;
 
   @$pb.TagNumber(1)
@@ -217,6 +237,7 @@ class BoilStepType extends $pb.GeneratedMessage {
   $0.TemperatureType ensureStartTemperature() => $_ensure(11);
 }
 
-
-const $core.bool _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -8,7 +8,8 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names, unused_import
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -46,8 +47,24 @@ const EquipmentBase$json = {
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'type', '3': 2, '4': 1, '5': 9, '10': 'type'},
-    {'1': 'form', '3': 3, '4': 1, '5': 14, '6': '.beerproto.v1.EquipmentBaseForm', '8': {}, '10': 'form'},
-    {'1': 'maximum_volume', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '8': {}, '10': 'maximumVolume'},
+    {
+      '1': 'form',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.EquipmentBaseForm',
+      '8': {},
+      '10': 'form'
+    },
+    {
+      '1': 'maximum_volume',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '8': {},
+      '10': 'maximumVolume'
+    },
   ],
 };
 
@@ -62,17 +79,82 @@ final $typed_data.Uint8List equipmentBaseDescriptor = $convert.base64Decode(
 const EquipmentItemType$json = {
   '1': 'EquipmentItemType',
   '2': [
-    {'1': 'base', '3': 1, '4': 1, '5': 11, '6': '.beerproto.v1.EquipmentBase', '8': {}, '10': 'base'},
+    {
+      '1': 'base',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.EquipmentBase',
+      '8': {},
+      '10': 'base'
+    },
     {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
     {'1': 'notes', '3': 3, '4': 1, '5': 9, '10': 'notes'},
-    {'1': 'boil_rate_per_hour', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'boilRatePerHour'},
-    {'1': 'drain_rate_per_minute', '3': 5, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'drainRatePerMinute'},
-    {'1': 'specific_heat', '3': 6, '4': 1, '5': 11, '6': '.beerproto.v1.SpecificHeatType', '10': 'specificHeat'},
-    {'1': 'grain_absorption_rate', '3': 7, '4': 1, '5': 11, '6': '.beerproto.v1.SpecificVolumeType', '10': 'grainAbsorptionRate'},
-    {'1': 'weight', '3': 8, '4': 1, '5': 11, '6': '.beerproto.v1.MassType', '10': 'weight'},
-    {'1': 'loss', '3': 9, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '8': {}, '10': 'loss'},
-    {'1': 'efficiency', '3': 10, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'efficiency'},
-    {'1': 'transfer_loss', '3': 11, '4': 1, '5': 11, '6': '.beerproto.v1.VolumeType', '10': 'transferLoss'},
+    {
+      '1': 'boil_rate_per_hour',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '10': 'boilRatePerHour'
+    },
+    {
+      '1': 'drain_rate_per_minute',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '10': 'drainRatePerMinute'
+    },
+    {
+      '1': 'specific_heat',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.SpecificHeatType',
+      '10': 'specificHeat'
+    },
+    {
+      '1': 'grain_absorption_rate',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.SpecificVolumeType',
+      '10': 'grainAbsorptionRate'
+    },
+    {
+      '1': 'weight',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.MassType',
+      '10': 'weight'
+    },
+    {
+      '1': 'loss',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '8': {},
+      '10': 'loss'
+    },
+    {
+      '1': 'efficiency',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'efficiency'
+    },
+    {
+      '1': 'transfer_loss',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.VolumeType',
+      '10': 'transferLoss'
+    },
   ],
 };
 
@@ -97,8 +179,23 @@ const EquipmentType$json = {
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
     {'1': 'name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'name'},
-    {'1': 'equipment_items', '3': 3, '4': 3, '5': 11, '6': '.beerproto.v1.EquipmentItemType', '8': {}, '10': 'equipmentItems'},
-    {'1': 'brewhouse_efficiency', '3': 4, '4': 1, '5': 11, '6': '.beerproto.v1.PercentType', '10': 'brewhouseEfficiency'},
+    {
+      '1': 'equipment_items',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.beerproto.v1.EquipmentItemType',
+      '8': {},
+      '10': 'equipmentItems'
+    },
+    {
+      '1': 'brewhouse_efficiency',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PercentType',
+      '10': 'brewhouseEfficiency'
+    },
   ],
 };
 
@@ -109,4 +206,3 @@ final $typed_data.Uint8List equipmentTypeDescriptor = $convert.base64Decode(
     'dG8udjEuRXF1aXBtZW50SXRlbVR5cGVCCLpIBZIBAggBUg5lcXVpcG1lbnRJdGVtcxJMChRicm'
     'V3aG91c2VfZWZmaWNpZW5jeRgEIAEoCzIZLmJlZXJwcm90by52MS5QZXJjZW50VHlwZVITYnJl'
     'd2hvdXNlRWZmaWNpZW5jeQ==');
-
