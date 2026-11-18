@@ -651,6 +651,7 @@ class FermentableAdditionType extends $pb.GeneratedMessage {
     $1.TimingType? timing,
     $0.MassType? mass,
     $0.VolumeType? volume,
+    $0.PriceType? unitPrice,
   }) {
     final result = FermentableAdditionType._();
     if (base != null) result.base = base;
@@ -658,6 +659,7 @@ class FermentableAdditionType extends $pb.GeneratedMessage {
     if (timing != null) result.timing = timing;
     if (mass != null) result.mass = mass;
     if (volume != null) result.volume = volume;
+    if (unitPrice != null) result.unitPrice = unitPrice;
     return result;
   }
 
@@ -690,6 +692,8 @@ class FermentableAdditionType extends $pb.GeneratedMessage {
         subBuilder: $0.MassType.$_createMessage)
     ..aOM<$0.VolumeType>(5, _omitFieldNames ? '' : 'volume',
         subBuilder: $0.VolumeType.$_createMessage)
+    ..aOM<$0.PriceType>(6, _omitFieldNames ? '' : 'unitPrice',
+        subBuilder: $0.PriceType.$_createMessage)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -777,6 +781,21 @@ class FermentableAdditionType extends $pb.GeneratedMessage {
   void clearVolume() => $_clearField(5);
   @$pb.TagNumber(5)
   $0.VolumeType ensureVolume() => $_ensure(4);
+
+  /// What one canonical unit of this addition cost -- per gram, millilitre or
+  /// counted unit, whichever its amount is in. Set from the stock it was drawn
+  /// from, so a brewed batch's cost is what was paid for that stock and does not
+  /// move when prices change. Unset when unknown.
+  @$pb.TagNumber(6)
+  $0.PriceType get unitPrice => $_getN(5);
+  @$pb.TagNumber(6)
+  set unitPrice($0.PriceType value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasUnitPrice() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearUnitPrice() => $_clearField(6);
+  @$pb.TagNumber(6)
+  $0.PriceType ensureUnitPrice() => $_ensure(5);
 }
 
 /// The potential yield of the fermentable ingredient, supporting SG, or percentage. eg 1.037 or 80% are valid yield types
@@ -974,6 +993,7 @@ class FermentableLotType extends $pb.GeneratedMessage {
     GrainCrush? crush,
     $0.PercentType? moisture,
     $0.ColorType? color,
+    $0.PriceType? unitPrice,
   }) {
     final result = FermentableLotType._();
     if (id != null) result.id = id;
@@ -987,6 +1007,7 @@ class FermentableLotType extends $pb.GeneratedMessage {
     if (crush != null) result.crush = crush;
     if (moisture != null) result.moisture = moisture;
     if (color != null) result.color = color;
+    if (unitPrice != null) result.unitPrice = unitPrice;
     return result;
   }
 
@@ -1029,6 +1050,8 @@ class FermentableLotType extends $pb.GeneratedMessage {
         subBuilder: $0.PercentType.$_createMessage)
     ..aOM<$0.ColorType>(11, _omitFieldNames ? '' : 'color',
         subBuilder: $0.ColorType.$_createMessage)
+    ..aOM<$0.PriceType>(12, _omitFieldNames ? '' : 'unitPrice',
+        subBuilder: $0.PriceType.$_createMessage)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1186,6 +1209,20 @@ class FermentableLotType extends $pb.GeneratedMessage {
   void clearColor() => $_clearField(11);
   @$pb.TagNumber(11)
   $0.ColorType ensureColor() => $_ensure(10);
+
+  /// What one canonical unit of this lot cost -- per gram, millilitre or counted
+  /// unit, whichever its amount is held in. Unset when the price was not
+  /// recorded, which is not the same as free.
+  @$pb.TagNumber(12)
+  $0.PriceType get unitPrice => $_getN(11);
+  @$pb.TagNumber(12)
+  set unitPrice($0.PriceType value) => $_setField(12, value);
+  @$pb.TagNumber(12)
+  $core.bool hasUnitPrice() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearUnitPrice() => $_clearField(12);
+  @$pb.TagNumber(12)
+  $0.PriceType ensureUnitPrice() => $_ensure(11);
 }
 
 const $core.bool _omitFieldNames =

@@ -302,6 +302,14 @@ const CultureAdditionType$json = {
       '9': 0,
       '10': 'volume'
     },
+    {
+      '1': 'unit_price',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PriceType',
+      '10': 'unitPrice'
+    },
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -318,8 +326,9 @@ final $typed_data.Uint8List cultureAdditionTypeDescriptor = $convert.base64Decod
     'YxLlBlcmNlbnRUeXBlUgthdHRlbnVhdGlvbhIwCgZ0aW1pbmcYByABKAsyGC5iZWVycHJvdG8u'
     'djEuVGltaW5nVHlwZVIGdGltaW5nEiwKBG1hc3MYCCABKAsyFi5iZWVycHJvdG8udjEuTWFzc1'
     'R5cGVIAFIEbWFzcxIsCgR1bml0GAkgASgLMhYuYmVlcnByb3RvLnYxLlVuaXRUeXBlSABSBHVu'
-    'aXQSMgoGdm9sdW1lGAogASgLMhguYmVlcnByb3RvLnYxLlZvbHVtZVR5cGVIAFIGdm9sdW1lQg'
-    '8KBmFtb3VudBIFukgCCAE=');
+    'aXQSMgoGdm9sdW1lGAogASgLMhguYmVlcnByb3RvLnYxLlZvbHVtZVR5cGVIAFIGdm9sdW1lEj'
+    'YKCnVuaXRfcHJpY2UYCyABKAsyFy5iZWVycHJvdG8udjEuUHJpY2VUeXBlUgl1bml0UHJpY2VC'
+    'DwoGYW1vdW50EgW6SAIIAQ==');
 
 @$core.Deprecated('Use cultureInventoryTypeDescriptor instead')
 const CultureInventoryType$json = {
@@ -411,6 +420,14 @@ const CultureLotType$json = {
       '6': '.google.protobuf.Timestamp',
       '10': 'bestBefore'
     },
+    {
+      '1': 'unit_price',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PriceType',
+      '10': 'unitPrice'
+    },
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -428,7 +445,9 @@ final $typed_data.Uint8List cultureLotTypeDescriptor = $convert.base64Decode(
     'ZVR5cGVIAFIFc2xhbnQSNAoHY3VsdHVyZRgJIAEoCzIYLmJlZXJwcm90by52MS5Wb2x1bWVUeX'
     'BlSABSB2N1bHR1cmUSKQoQbWFudWZhY3R1cmVfZGF0ZRgKIAEoCVIPbWFudWZhY3R1cmVEYXRl'
     'Eh4KCmdlbmVyYXRpb24YCyABKAVSCmdlbmVyYXRpb24SOwoLYmVzdF9iZWZvcmUYDCABKAsyGi'
-    '5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpiZXN0QmVmb3JlQg8KBmFtb3VudBIFukgCCAE=');
+    '5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgpiZXN0QmVmb3JlEjYKCnVuaXRfcHJpY2UYDSAB'
+    'KAsyFy5iZWVycHJvdG8udjEuUHJpY2VUeXBlUgl1bml0UHJpY2VCDwoGYW1vdW50EgW6SAIIAQ'
+    '==');
 
 @$core.Deprecated('Use zymocideDescriptor instead')
 const Zymocide$json = {

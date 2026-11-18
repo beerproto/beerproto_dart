@@ -243,6 +243,7 @@ class MiscellaneousAdditionType extends $pb.GeneratedMessage {
     $1.MassType? mass,
     $1.UnitType? unit,
     $1.VolumeType? volume,
+    $1.PriceType? unitPrice,
   }) {
     final result = MiscellaneousAdditionType._();
     if (base != null) result.base = base;
@@ -251,6 +252,7 @@ class MiscellaneousAdditionType extends $pb.GeneratedMessage {
     if (mass != null) result.mass = mass;
     if (unit != null) result.unit = unit;
     if (volume != null) result.volume = volume;
+    if (unitPrice != null) result.unitPrice = unitPrice;
     return result;
   }
 
@@ -286,6 +288,8 @@ class MiscellaneousAdditionType extends $pb.GeneratedMessage {
         subBuilder: $1.UnitType.$_createMessage)
     ..aOM<$1.VolumeType>(6, _omitFieldNames ? '' : 'volume',
         subBuilder: $1.VolumeType.$_createMessage)
+    ..aOM<$1.PriceType>(7, _omitFieldNames ? '' : 'unitPrice',
+        subBuilder: $1.PriceType.$_createMessage)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -388,6 +392,21 @@ class MiscellaneousAdditionType extends $pb.GeneratedMessage {
   void clearVolume() => $_clearField(6);
   @$pb.TagNumber(6)
   $1.VolumeType ensureVolume() => $_ensure(5);
+
+  /// What one canonical unit of this addition cost -- per gram, millilitre or
+  /// counted unit, whichever its amount is in. Set from the stock it was drawn
+  /// from, so a brewed batch's cost is what was paid for that stock and does not
+  /// move when prices change. Unset when unknown.
+  @$pb.TagNumber(7)
+  $1.PriceType get unitPrice => $_getN(6);
+  @$pb.TagNumber(7)
+  set unitPrice($1.PriceType value) => $_setField(7, value);
+  @$pb.TagNumber(7)
+  $core.bool hasUnitPrice() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearUnitPrice() => $_clearField(7);
+  @$pb.TagNumber(7)
+  $1.PriceType ensureUnitPrice() => $_ensure(6);
 }
 
 /// MiscellaneousInventoryType is the stock of a miscellaneous ingredient held on
@@ -469,6 +488,7 @@ class MiscellaneousLotType extends $pb.GeneratedMessage {
     $1.UnitType? unit,
     $1.VolumeType? volume,
     $2.Timestamp? bestBefore,
+    $1.PriceType? unitPrice,
   }) {
     final result = MiscellaneousLotType._();
     if (id != null) result.id = id;
@@ -479,6 +499,7 @@ class MiscellaneousLotType extends $pb.GeneratedMessage {
     if (unit != null) result.unit = unit;
     if (volume != null) result.volume = volume;
     if (bestBefore != null) result.bestBefore = bestBefore;
+    if (unitPrice != null) result.unitPrice = unitPrice;
     return result;
   }
 
@@ -516,6 +537,8 @@ class MiscellaneousLotType extends $pb.GeneratedMessage {
         subBuilder: $1.VolumeType.$_createMessage)
     ..aOM<$2.Timestamp>(8, _omitFieldNames ? '' : 'bestBefore',
         subBuilder: $2.Timestamp.$_createMessage)
+    ..aOM<$1.PriceType>(9, _omitFieldNames ? '' : 'unitPrice',
+        subBuilder: $1.PriceType.$_createMessage)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -636,6 +659,20 @@ class MiscellaneousLotType extends $pb.GeneratedMessage {
   void clearBestBefore() => $_clearField(8);
   @$pb.TagNumber(8)
   $2.Timestamp ensureBestBefore() => $_ensure(7);
+
+  /// What one canonical unit of this lot cost -- per gram, millilitre or counted
+  /// unit, whichever its amount is held in. Unset when the price was not
+  /// recorded, which is not the same as free.
+  @$pb.TagNumber(9)
+  $1.PriceType get unitPrice => $_getN(8);
+  @$pb.TagNumber(9)
+  set unitPrice($1.PriceType value) => $_setField(9, value);
+  @$pb.TagNumber(9)
+  $core.bool hasUnitPrice() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearUnitPrice() => $_clearField(9);
+  @$pb.TagNumber(9)
+  $1.PriceType ensureUnitPrice() => $_ensure(8);
 }
 
 const $core.bool _omitFieldNames =

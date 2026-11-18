@@ -414,6 +414,14 @@ const FermentableAdditionType$json = {
       '9': 0,
       '10': 'volume'
     },
+    {
+      '1': 'unit_price',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PriceType',
+      '10': 'unitPrice'
+    },
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -426,8 +434,9 @@ final $typed_data.Uint8List fermentableAdditionTypeDescriptor = $convert.base64D
     'Zlcm1lbnRhYmxlQmFzZUIGukgDyAEBUgRiYXNlEhsKAmlkGAIgASgJQgu6SAjIAQFyA7ABAVIC'
     'aWQSMAoGdGltaW5nGAMgASgLMhguYmVlcnByb3RvLnYxLlRpbWluZ1R5cGVSBnRpbWluZxIsCg'
     'RtYXNzGAQgASgLMhYuYmVlcnByb3RvLnYxLk1hc3NUeXBlSABSBG1hc3MSMgoGdm9sdW1lGAUg'
-    'ASgLMhguYmVlcnByb3RvLnYxLlZvbHVtZVR5cGVIAFIGdm9sdW1lQg8KBmFtb3VudBIFukgCCA'
-    'E=');
+    'ASgLMhguYmVlcnByb3RvLnYxLlZvbHVtZVR5cGVIAFIGdm9sdW1lEjYKCnVuaXRfcHJpY2UYBi'
+    'ABKAsyFy5iZWVycHJvdG8udjEuUHJpY2VUeXBlUgl1bml0UHJpY2VCDwoGYW1vdW50EgW6SAII'
+    'AQ==');
 
 @$core.Deprecated('Use yieldTypeDescriptor instead')
 const YieldType$json = {
@@ -570,6 +579,14 @@ const FermentableLotType$json = {
       '6': '.beerproto.v1.ColorType',
       '10': 'color'
     },
+    {
+      '1': 'unit_price',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PriceType',
+      '10': 'unitPrice'
+    },
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -587,4 +604,5 @@ final $typed_data.Uint8List fermentableLotTypeDescriptor = $convert.base64Decode
     'cHJvdG8udjEuR3Jhdml0eVR5cGVSDGxvdFBvdGVudGlhbBIuCgVjcnVzaBgJIAEoDjIYLmJlZX'
     'Jwcm90by52MS5HcmFpbkNydXNoUgVjcnVzaBI1Cghtb2lzdHVyZRgKIAEoCzIZLmJlZXJwcm90'
     'by52MS5QZXJjZW50VHlwZVIIbW9pc3R1cmUSLQoFY29sb3IYCyABKAsyFy5iZWVycHJvdG8udj'
-    'EuQ29sb3JUeXBlUgVjb2xvckIPCgZhbW91bnQSBbpIAggB');
+    'EuQ29sb3JUeXBlUgVjb2xvchI2Cgp1bml0X3ByaWNlGAwgASgLMhcuYmVlcnByb3RvLnYxLlBy'
+    'aWNlVHlwZVIJdW5pdFByaWNlQg8KBmFtb3VudBIFukgCCAE=');

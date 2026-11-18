@@ -358,6 +358,7 @@ class HopAdditionType extends $pb.GeneratedMessage {
     $1.TimingType? timing,
     $0.MassType? mass,
     $0.VolumeType? volume,
+    $0.PriceType? unitPrice,
   }) {
     final result = HopAdditionType._();
     if (base != null) result.base = base;
@@ -365,6 +366,7 @@ class HopAdditionType extends $pb.GeneratedMessage {
     if (timing != null) result.timing = timing;
     if (mass != null) result.mass = mass;
     if (volume != null) result.volume = volume;
+    if (unitPrice != null) result.unitPrice = unitPrice;
     return result;
   }
 
@@ -397,6 +399,8 @@ class HopAdditionType extends $pb.GeneratedMessage {
         subBuilder: $0.MassType.$_createMessage)
     ..aOM<$0.VolumeType>(5, _omitFieldNames ? '' : 'volume',
         subBuilder: $0.VolumeType.$_createMessage)
+    ..aOM<$0.PriceType>(6, _omitFieldNames ? '' : 'unitPrice',
+        subBuilder: $0.PriceType.$_createMessage)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -482,6 +486,21 @@ class HopAdditionType extends $pb.GeneratedMessage {
   void clearVolume() => $_clearField(5);
   @$pb.TagNumber(5)
   $0.VolumeType ensureVolume() => $_ensure(4);
+
+  /// What one canonical unit of this addition cost -- per gram, millilitre or
+  /// counted unit, whichever its amount is in. Set from the stock it was drawn
+  /// from, so a brewed batch's cost is what was paid for that stock and does not
+  /// move when prices change. Unset when unknown.
+  @$pb.TagNumber(6)
+  $0.PriceType get unitPrice => $_getN(5);
+  @$pb.TagNumber(6)
+  set unitPrice($0.PriceType value) => $_setField(6, value);
+  @$pb.TagNumber(6)
+  $core.bool hasUnitPrice() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearUnitPrice() => $_clearField(6);
+  @$pb.TagNumber(6)
+  $0.PriceType ensureUnitPrice() => $_ensure(5);
 }
 
 /// Used to differentiate which IBU formula is being used in a recipe. If formula is modified in any way, eg to support whirlpool/flameout additions etc etc, please use `Other` for transparency
@@ -878,6 +897,7 @@ class HopLotType extends $pb.GeneratedMessage {
     $2.Timestamp? bestBefore,
     $0.PercentType? alphaAcid,
     $0.PercentType? percentLost,
+    $0.PriceType? unitPrice,
   }) {
     final result = HopLotType._();
     if (id != null) result.id = id;
@@ -889,6 +909,7 @@ class HopLotType extends $pb.GeneratedMessage {
     if (bestBefore != null) result.bestBefore = bestBefore;
     if (alphaAcid != null) result.alphaAcid = alphaAcid;
     if (percentLost != null) result.percentLost = percentLost;
+    if (unitPrice != null) result.unitPrice = unitPrice;
     return result;
   }
 
@@ -927,6 +948,8 @@ class HopLotType extends $pb.GeneratedMessage {
         subBuilder: $0.PercentType.$_createMessage)
     ..aOM<$0.PercentType>(9, _omitFieldNames ? '' : 'percentLost',
         subBuilder: $0.PercentType.$_createMessage)
+    ..aOM<$0.PriceType>(10, _omitFieldNames ? '' : 'unitPrice',
+        subBuilder: $0.PriceType.$_createMessage)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -1064,6 +1087,20 @@ class HopLotType extends $pb.GeneratedMessage {
   void clearPercentLost() => $_clearField(9);
   @$pb.TagNumber(9)
   $0.PercentType ensurePercentLost() => $_ensure(8);
+
+  /// What one canonical unit of this lot cost -- per gram, millilitre or counted
+  /// unit, whichever its amount is held in. Unset when the price was not
+  /// recorded, which is not the same as free.
+  @$pb.TagNumber(10)
+  $0.PriceType get unitPrice => $_getN(9);
+  @$pb.TagNumber(10)
+  set unitPrice($0.PriceType value) => $_setField(10, value);
+  @$pb.TagNumber(10)
+  $core.bool hasUnitPrice() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearUnitPrice() => $_clearField(10);
+  @$pb.TagNumber(10)
+  $0.PriceType ensureUnitPrice() => $_ensure(9);
 }
 
 const $core.bool _omitFieldNames =

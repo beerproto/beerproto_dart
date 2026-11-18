@@ -926,5 +926,54 @@ class EnzymeType extends $pb.ProtobufEnum {
   const EnzymeType._(super.value, super.name);
 }
 
+class PriceUnit extends $pb.ProtobufEnum {
+  static const PriceUnit PRICE_UNIT_UNSPECIFIED =
+      PriceUnit._(0, _omitEnumNames ? '' : 'PRICE_UNIT_UNSPECIFIED');
+
+  /// Mass
+  static const PriceUnit PRICE_UNIT_PER_G =
+      PriceUnit._(1, _omitEnumNames ? '' : 'PRICE_UNIT_PER_G');
+  static const PriceUnit PRICE_UNIT_PER_KG =
+      PriceUnit._(2, _omitEnumNames ? '' : 'PRICE_UNIT_PER_KG');
+  static const PriceUnit PRICE_UNIT_PER_OZ =
+      PriceUnit._(3, _omitEnumNames ? '' : 'PRICE_UNIT_PER_OZ');
+  static const PriceUnit PRICE_UNIT_PER_LB =
+      PriceUnit._(4, _omitEnumNames ? '' : 'PRICE_UNIT_PER_LB');
+
+  /// Volume
+  static const PriceUnit PRICE_UNIT_PER_ML =
+      PriceUnit._(5, _omitEnumNames ? '' : 'PRICE_UNIT_PER_ML');
+  static const PriceUnit PRICE_UNIT_PER_L =
+      PriceUnit._(6, _omitEnumNames ? '' : 'PRICE_UNIT_PER_L');
+  static const PriceUnit PRICE_UNIT_PER_US_GAL =
+      PriceUnit._(7, _omitEnumNames ? '' : 'PRICE_UNIT_PER_US_GAL');
+  static const PriceUnit PRICE_UNIT_PER_IMP_GAL =
+      PriceUnit._(8, _omitEnumNames ? '' : 'PRICE_UNIT_PER_IMP_GAL');
+
+  /// Count -- one of whatever the priced stock's UnitType counts
+  static const PriceUnit PRICE_UNIT_PER_EACH =
+      PriceUnit._(9, _omitEnumNames ? '' : 'PRICE_UNIT_PER_EACH');
+
+  static const $core.List<PriceUnit> values = <PriceUnit>[
+    PRICE_UNIT_UNSPECIFIED,
+    PRICE_UNIT_PER_G,
+    PRICE_UNIT_PER_KG,
+    PRICE_UNIT_PER_OZ,
+    PRICE_UNIT_PER_LB,
+    PRICE_UNIT_PER_ML,
+    PRICE_UNIT_PER_L,
+    PRICE_UNIT_PER_US_GAL,
+    PRICE_UNIT_PER_IMP_GAL,
+    PRICE_UNIT_PER_EACH,
+  ];
+
+  static final $core.List<PriceUnit?> _byValue =
+      $pb.ProtobufEnum.$_initByValueList(values, 9);
+  static PriceUnit? valueOf($core.int value) =>
+      value < 0 || value >= _byValue.length ? null : _byValue[value];
+
+  const PriceUnit._(super.value, super.name);
+}
+
 const $core.bool _omitEnumNames =
     $core.bool.fromEnvironment('protobuf.omit_enum_names');

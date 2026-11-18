@@ -401,6 +401,7 @@ class CultureAdditionType extends $pb.GeneratedMessage {
     $0.MassType? mass,
     $0.UnitType? unit,
     $0.VolumeType? volume,
+    $0.PriceType? unitPrice,
   }) {
     final result = CultureAdditionType._();
     if (base != null) result.base = base;
@@ -413,6 +414,7 @@ class CultureAdditionType extends $pb.GeneratedMessage {
     if (mass != null) result.mass = mass;
     if (unit != null) result.unit = unit;
     if (volume != null) result.volume = volume;
+    if (unitPrice != null) result.unitPrice = unitPrice;
     return result;
   }
 
@@ -454,6 +456,8 @@ class CultureAdditionType extends $pb.GeneratedMessage {
         subBuilder: $0.UnitType.$_createMessage)
     ..aOM<$0.VolumeType>(10, _omitFieldNames ? '' : 'volume',
         subBuilder: $0.VolumeType.$_createMessage)
+    ..aOM<$0.PriceType>(11, _omitFieldNames ? '' : 'unitPrice',
+        subBuilder: $0.PriceType.$_createMessage)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -592,6 +596,21 @@ class CultureAdditionType extends $pb.GeneratedMessage {
   void clearVolume() => $_clearField(10);
   @$pb.TagNumber(10)
   $0.VolumeType ensureVolume() => $_ensure(9);
+
+  /// What one canonical unit of this addition cost -- per gram, millilitre or
+  /// counted unit, whichever its amount is in. Set from the stock it was drawn
+  /// from, so a brewed batch's cost is what was paid for that stock and does not
+  /// move when prices change. Unset when unknown.
+  @$pb.TagNumber(11)
+  $0.PriceType get unitPrice => $_getN(10);
+  @$pb.TagNumber(11)
+  set unitPrice($0.PriceType value) => $_setField(11, value);
+  @$pb.TagNumber(11)
+  $core.bool hasUnitPrice() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearUnitPrice() => $_clearField(11);
+  @$pb.TagNumber(11)
+  $0.PriceType ensureUnitPrice() => $_ensure(10);
 }
 
 /// CultureInventoryType is the stock of a culture held on hand, as the lots it
@@ -677,6 +696,7 @@ class CultureLotType extends $pb.GeneratedMessage {
     $core.String? manufactureDate,
     $core.int? generation,
     $2.Timestamp? bestBefore,
+    $0.PriceType? unitPrice,
   }) {
     final result = CultureLotType._();
     if (id != null) result.id = id;
@@ -691,6 +711,7 @@ class CultureLotType extends $pb.GeneratedMessage {
     if (manufactureDate != null) result.manufactureDate = manufactureDate;
     if (generation != null) result.generation = generation;
     if (bestBefore != null) result.bestBefore = bestBefore;
+    if (unitPrice != null) result.unitPrice = unitPrice;
     return result;
   }
 
@@ -736,6 +757,8 @@ class CultureLotType extends $pb.GeneratedMessage {
     ..aI(11, _omitFieldNames ? '' : 'generation')
     ..aOM<$2.Timestamp>(12, _omitFieldNames ? '' : 'bestBefore',
         subBuilder: $2.Timestamp.$_createMessage)
+    ..aOM<$0.PriceType>(13, _omitFieldNames ? '' : 'unitPrice',
+        subBuilder: $0.PriceType.$_createMessage)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -909,6 +932,20 @@ class CultureLotType extends $pb.GeneratedMessage {
   void clearBestBefore() => $_clearField(12);
   @$pb.TagNumber(12)
   $2.Timestamp ensureBestBefore() => $_ensure(11);
+
+  /// What one canonical unit of this lot cost -- per gram, millilitre or counted
+  /// unit, whichever its amount is held in. Unset when the price was not
+  /// recorded, which is not the same as free.
+  @$pb.TagNumber(13)
+  $0.PriceType get unitPrice => $_getN(12);
+  @$pb.TagNumber(13)
+  set unitPrice($0.PriceType value) => $_setField(13, value);
+  @$pb.TagNumber(13)
+  $core.bool hasUnitPrice() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearUnitPrice() => $_clearField(13);
+  @$pb.TagNumber(13)
+  $0.PriceType ensureUnitPrice() => $_ensure(12);
 }
 
 /// Zymocide, also known as killer yeast properties, is common among wine yeast. There are also some ale and brett yeasts that are immune to some zymocidic properties, these are known as killer neutral

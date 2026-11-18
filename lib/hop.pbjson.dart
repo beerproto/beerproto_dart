@@ -239,6 +239,14 @@ const HopAdditionType$json = {
       '9': 0,
       '10': 'volume'
     },
+    {
+      '1': 'unit_price',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PriceType',
+      '10': 'unitPrice'
+    },
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -251,8 +259,8 @@ final $typed_data.Uint8List hopAdditionTypeDescriptor = $convert.base64Decode(
     'R5QmFzZUIGukgDyAEBUgRiYXNlEhsKAmlkGAIgASgJQgu6SAjIAQFyA7ABAVICaWQSOAoGdGlt'
     'aW5nGAMgASgLMhguYmVlcnByb3RvLnYxLlRpbWluZ1R5cGVCBrpIA8gBAVIGdGltaW5nEiwKBG'
     '1hc3MYBCABKAsyFi5iZWVycHJvdG8udjEuTWFzc1R5cGVIAFIEbWFzcxIyCgZ2b2x1bWUYBSAB'
-    'KAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVHlwZUgAUgZ2b2x1bWVCDwoGYW1vdW50EgW6SAIIAQ'
-    '==');
+    'KAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVHlwZUgAUgZ2b2x1bWUSNgoKdW5pdF9wcmljZRgGIA'
+    'EoCzIXLmJlZXJwcm90by52MS5QcmljZVR5cGVSCXVuaXRQcmljZUIPCgZhbW91bnQSBbpIAggB');
 
 @$core.Deprecated('Use iBUEstimateTypeDescriptor instead')
 const IBUEstimateType$json = {
@@ -487,6 +495,14 @@ const HopLotType$json = {
       '6': '.beerproto.v1.PercentType',
       '10': 'percentLost'
     },
+    {
+      '1': 'unit_price',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PriceType',
+      '10': 'unitPrice'
+    },
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -502,4 +518,5 @@ final $typed_data.Uint8List hopLotTypeDescriptor = $convert.base64Decode(
     'cGVIAFIGdm9sdW1lEjsKC2Jlc3RfYmVmb3JlGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbW'
     'VzdGFtcFIKYmVzdEJlZm9yZRI4CgphbHBoYV9hY2lkGAggASgLMhkuYmVlcnByb3RvLnYxLlBl'
     'cmNlbnRUeXBlUglhbHBoYUFjaWQSPAoMcGVyY2VudF9sb3N0GAkgASgLMhkuYmVlcnByb3RvLn'
-    'YxLlBlcmNlbnRUeXBlUgtwZXJjZW50TG9zdEIPCgZhbW91bnQSBbpIAggB');
+    'YxLlBlcmNlbnRUeXBlUgtwZXJjZW50TG9zdBI2Cgp1bml0X3ByaWNlGAogASgLMhcuYmVlcnBy'
+    'b3RvLnYxLlByaWNlVHlwZVIJdW5pdFByaWNlQg8KBmFtb3VudBIFukgCCAE=');

@@ -2999,6 +2999,103 @@ class EnzymeActivity extends $pb.GeneratedMessage {
   EnzymeActivityType ensureActivity() => $_ensure(1);
 }
 
+/// The price of one canonical unit of the stock it sits beside: per gram for a
+/// MassType, per millilitre for a VolumeType, per one counted unit for a
+/// UnitType (whose own unit says what is counted -- a pack, an each).
+///
+/// Canonical unit: PRICE_UNIT_PER_G, PRICE_UNIT_PER_ML or PRICE_UNIT_PER_EACH,
+/// whichever matches the quantity priced -- `value` is always the price of ONE
+/// gram, millilitre or counted unit, in `currency`'s major unit (pounds, not
+/// pence). `unit` names the unit this price should be presented per and never
+/// describes `value`: a malt at 2.50 GBP/kg is
+///
+///   PriceType { value: 0.0025, unit: PRICE_UNIT_PER_KG, currency: "GBP" }
+///
+/// A price never converts between currencies; two prices add up only when their
+/// `currency` matches.
+///
+/// See "Canonical units" in the repository README for the full convention.
+class PriceType extends $pb.GeneratedMessage {
+  factory PriceType({
+    $core.double? value,
+    PriceUnit? unit,
+    $core.String? currency,
+  }) {
+    final result = PriceType._();
+    if (value != null) result.value = value;
+    if (unit != null) result.unit = unit;
+    if (currency != null) result.currency = currency;
+    return result;
+  }
+
+  PriceType._();
+
+  factory PriceType.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      PriceType()..mergeFromBuffer(data, registry);
+  factory PriceType.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      PriceType()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PriceType',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'beerproto.v1'),
+      createEmptyInstance: PriceType.$_createMessage)
+    ..aD(1, _omitFieldNames ? '' : 'value')
+    ..aE<PriceUnit>(2, _omitFieldNames ? '' : 'unit',
+        enumValues: PriceUnit.values)
+    ..aOS(3, _omitFieldNames ? '' : 'currency')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PriceType clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  PriceType copyWith(void Function(PriceType) updates) =>
+      super.copyWith((message) => updates(message as PriceType)) as PriceType;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use PriceType() / PriceType.new instead')
+  static PriceType create() => PriceType._();
+  static $pb.GeneratedMessage $_createMessage() => PriceType._();
+  @$core.override
+  PriceType createEmptyInstance() => PriceType._();
+  @$core.pragma('dart2js:noInline')
+  static PriceType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PriceType>(PriceType.$_createMessage);
+  static PriceType? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get value => $_getN(0);
+  @$pb.TagNumber(1)
+  set value($core.double value) => $_setDouble(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  PriceUnit get unit => $_getN(1);
+  @$pb.TagNumber(2)
+  set unit(PriceUnit value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasUnit() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUnit() => $_clearField(2);
+
+  /// ISO 4217 alphabetic code, e.g. "GBP", "EUR", "USD".
+  @$pb.TagNumber(3)
+  $core.String get currency => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set currency($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasCurrency() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCurrency() => $_clearField(3);
+}
+
 const $core.bool _omitFieldNames =
     $core.bool.fromEnvironment('protobuf.omit_field_names');
 const $core.bool _omitMessageNames =

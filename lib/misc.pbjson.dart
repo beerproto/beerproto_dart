@@ -149,6 +149,14 @@ const MiscellaneousAdditionType$json = {
       '9': 0,
       '10': 'volume'
     },
+    {
+      '1': 'unit_price',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PriceType',
+      '10': 'unitPrice'
+    },
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -162,7 +170,8 @@ final $typed_data.Uint8List miscellaneousAdditionTypeDescriptor = $convert.base6
     'AQFSAmlkEjAKBnRpbWluZxgDIAEoCzIYLmJlZXJwcm90by52MS5UaW1pbmdUeXBlUgZ0aW1pbm'
     'cSLAoEbWFzcxgEIAEoCzIWLmJlZXJwcm90by52MS5NYXNzVHlwZUgAUgRtYXNzEiwKBHVuaXQY'
     'BSABKAsyFi5iZWVycHJvdG8udjEuVW5pdFR5cGVIAFIEdW5pdBIyCgZ2b2x1bWUYBiABKAsyGC'
-    '5iZWVycHJvdG8udjEuVm9sdW1lVHlwZUgAUgZ2b2x1bWVCDwoGYW1vdW50EgW6SAIIAQ==');
+    '5iZWVycHJvdG8udjEuVm9sdW1lVHlwZUgAUgZ2b2x1bWUSNgoKdW5pdF9wcmljZRgHIAEoCzIX'
+    'LmJlZXJwcm90by52MS5QcmljZVR5cGVSCXVuaXRQcmljZUIPCgZhbW91bnQSBbpIAggB');
 
 @$core.Deprecated('Use miscellaneousInventoryTypeDescriptor instead')
 const MiscellaneousInventoryType$json = {
@@ -235,6 +244,14 @@ const MiscellaneousLotType$json = {
       '6': '.google.protobuf.Timestamp',
       '10': 'bestBefore'
     },
+    {
+      '1': 'unit_price',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.beerproto.v1.PriceType',
+      '10': 'unitPrice'
+    },
   ],
   '8': [
     {'1': 'amount', '2': {}},
@@ -249,4 +266,5 @@ final $typed_data.Uint8List miscellaneousLotTypeDescriptor = $convert.base64Deco
     'Jwcm90by52MS5NYXNzVHlwZUgAUgRtYXNzEiwKBHVuaXQYBiABKAsyFi5iZWVycHJvdG8udjEu'
     'VW5pdFR5cGVIAFIEdW5pdBIyCgZ2b2x1bWUYByABKAsyGC5iZWVycHJvdG8udjEuVm9sdW1lVH'
     'lwZUgAUgZ2b2x1bWUSOwoLYmVzdF9iZWZvcmUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt'
-    'ZXN0YW1wUgpiZXN0QmVmb3JlQg8KBmFtb3VudBIFukgCCAE=');
+    'ZXN0YW1wUgpiZXN0QmVmb3JlEjYKCnVuaXRfcHJpY2UYCSABKAsyFy5iZWVycHJvdG8udjEuUH'
+    'JpY2VUeXBlUgl1bml0UHJpY2VCDwoGYW1vdW50EgW6SAIIAQ==');

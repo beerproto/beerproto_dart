@@ -482,6 +482,31 @@ final $typed_data.Uint8List enzymeTypeDescriptor = $convert.base64Decode(
     'VfQUxQSEFfQU1ZTEFTRRABEhwKGEVOWllNRV9UWVBFX0JFVEFfQU1ZTEFTRRACEhgKFEVOWllN'
     'RV9UWVBFX1BST1RFQVNFEAM=');
 
+@$core.Deprecated('Use priceUnitDescriptor instead')
+const PriceUnit$json = {
+  '1': 'PriceUnit',
+  '2': [
+    {'1': 'PRICE_UNIT_UNSPECIFIED', '2': 0},
+    {'1': 'PRICE_UNIT_PER_G', '2': 1},
+    {'1': 'PRICE_UNIT_PER_KG', '2': 2},
+    {'1': 'PRICE_UNIT_PER_OZ', '2': 3},
+    {'1': 'PRICE_UNIT_PER_LB', '2': 4},
+    {'1': 'PRICE_UNIT_PER_ML', '2': 5},
+    {'1': 'PRICE_UNIT_PER_L', '2': 6},
+    {'1': 'PRICE_UNIT_PER_US_GAL', '2': 7},
+    {'1': 'PRICE_UNIT_PER_IMP_GAL', '2': 8},
+    {'1': 'PRICE_UNIT_PER_EACH', '2': 9},
+  ],
+};
+
+/// Descriptor for `PriceUnit`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List priceUnitDescriptor = $convert.base64Decode(
+    'CglQcmljZVVuaXQSGgoWUFJJQ0VfVU5JVF9VTlNQRUNJRklFRBAAEhQKEFBSSUNFX1VOSVRfUE'
+    'VSX0cQARIVChFQUklDRV9VTklUX1BFUl9LRxACEhUKEVBSSUNFX1VOSVRfUEVSX09aEAMSFQoR'
+    'UFJJQ0VfVU5JVF9QRVJfTEIQBBIVChFQUklDRV9VTklUX1BFUl9NTBAFEhQKEFBSSUNFX1VOSV'
+    'RfUEVSX0wQBhIZChVQUklDRV9VTklUX1BFUl9VU19HQUwQBxIaChZQUklDRV9VTklUX1BFUl9J'
+    'TVBfR0FMEAgSFwoTUFJJQ0VfVU5JVF9QRVJfRUFDSBAJ');
+
 @$core.Deprecated('Use volumeTypeDescriptor instead')
 const VolumeType$json = {
   '1': 'VolumeType',
@@ -1385,3 +1410,26 @@ final $typed_data.Uint8List enzymeActivityDescriptor = $convert.base64Decode(
     'Cg5Fbnp5bWVBY3Rpdml0eRIsCgRraW5kGAEgASgOMhguYmVlcnByb3RvLnYxLkVuenltZVR5cG'
     'VSBGtpbmQSPAoIYWN0aXZpdHkYAiABKAsyIC5iZWVycHJvdG8udjEuRW56eW1lQWN0aXZpdHlU'
     'eXBlUghhY3Rpdml0eQ==');
+
+@$core.Deprecated('Use priceTypeDescriptor instead')
+const PriceType$json = {
+  '1': 'PriceType',
+  '2': [
+    {'1': 'value', '3': 1, '4': 1, '5': 1, '10': 'value'},
+    {
+      '1': 'unit',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.beerproto.v1.PriceUnit',
+      '10': 'unit'
+    },
+    {'1': 'currency', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'currency'},
+  ],
+};
+
+/// Descriptor for `PriceType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List priceTypeDescriptor = $convert.base64Decode(
+    'CglQcmljZVR5cGUSFAoFdmFsdWUYASABKAFSBXZhbHVlEisKBHVuaXQYAiABKA4yFy5iZWVycH'
+    'JvdG8udjEuUHJpY2VVbml0UgR1bml0EjAKCGN1cnJlbmN5GAMgASgJQhS6SBFyDzINXihbQS1a'
+    'XXszfSk/JFIIY3VycmVuY3k=');
